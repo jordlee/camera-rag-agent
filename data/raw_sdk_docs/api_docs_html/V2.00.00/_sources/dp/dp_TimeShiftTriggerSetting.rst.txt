@@ -1,0 +1,25 @@
+﻿.. _dp-TimeShiftTriggerSetting:
+
+CrDeviceProperty_TimeShiftTriggerSetting
+========================================
+
+Get/Set the TimeShift trigger setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTimeShiftTriggerSetting_S1AndAF
+    - | S1+AF
+
+  * - CrTimeShiftTriggerSetting_S1
+    - | S1
+
+  * - CrTimeShiftTriggerSetting_AF
+    - | AF
+

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AspectRatio.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AspectRatio:\n\nCrDeviceProperty_AspectRatio\n============================\n\nGet/Set the Aspect Ratio\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAspectRatio_3_2\n    - | 3:2\n\n  * - CrAspectRatio_16_9\n    - | 16:9\n\n  * - CrAspectRatio_4_3\n    - | 4:3\n\n  * - CrAspectRatio_1_1\n    - | 1:1",
+    "metadata": {
+        "title": "dp_AspectRatio",
+        "sdk_version": "V2.00.00"
+    }
+}

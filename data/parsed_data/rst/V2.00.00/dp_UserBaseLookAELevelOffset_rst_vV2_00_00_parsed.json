@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_UserBaseLookAELevelOffset.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-UserBaseLookAELevelOffset:\n\nCrDeviceProperty_UserBaseLookAELevelOffset\n==========================================\n\nSet/Get to UserBaseLook AE Level Offset\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - variable\n    - | AE Level Offset Value(EV)\n      | Lower 8bit is denominator, Higher 8bit is numerator.\n\n| Set \"UserBaseLook AE Level Offset\" for UserBaseLook selected in \"Select UserBaseLook to Edit\"\n|   e.g.) 0x0203 means 2/3EV\n\n| Caution:\n| There is a model where 0EV=0x0000, so please check the value when dividing.",
+    "metadata": {
+        "title": "dp_UserBaseLookAELevelOffset",
+        "sdk_version": "V2.00.00"
+    }
+}

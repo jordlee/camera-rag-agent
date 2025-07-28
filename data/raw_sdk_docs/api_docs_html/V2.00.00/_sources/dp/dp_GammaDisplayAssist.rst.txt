@@ -1,0 +1,22 @@
+﻿.. _dp-GammaDisplayAssist:
+
+CrDeviceProperty_GammaDisplayAssist
+===================================
+
+Get/Set the Gamma Display Assist
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrGammaDisplayAssist_Off
+    - | Off
+
+  * - CrGammaDisplayAssist_On
+    - | On
+

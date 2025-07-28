@@ -1,0 +1,1482 @@
+{
+    "name": "cli",
+    "kind": "namespace",
+    "functions": [
+        {
+            "name": "parse_f_number",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_f_number(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 65,
+            "definition": "std::vector< std::uint16_t > cli::parse_f_number",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_iso_sensitivity",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_iso_sensitivity(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 77,
+            "definition": "std::vector< std::uint32_t > cli::parse_iso_sensitivity",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_shutter_speed",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_shutter_speed(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 89,
+            "definition": "std::vector< std::uint32_t > cli::parse_shutter_speed",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_extended_shutter_speed",
+            "kind": "function",
+            "code": "std::vector<std::uint64_t> parse_extended_shutter_speed(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint64_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 101,
+            "definition": "std::vector< std::uint64_t > cli::parse_extended_shutter_speed",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_position_key_setting",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_position_key_setting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 113,
+            "definition": "std::vector< std::uint16_t > cli::parse_position_key_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_exposure_program_mode",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_exposure_program_mode(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 125,
+            "definition": "std::vector< std::uint32_t > cli::parse_exposure_program_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_still_capture_mode",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_still_capture_mode(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 137,
+            "definition": "std::vector< std::uint32_t > cli::parse_still_capture_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_focus_mode",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_focus_mode(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 149,
+            "definition": "std::vector< std::uint16_t > cli::parse_focus_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_focus_area",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_focus_area(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 161,
+            "definition": "std::vector< std::uint16_t > cli::parse_focus_area",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_live_view_image_quality",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_live_view_image_quality(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 173,
+            "definition": "std::vector< std::uint16_t > cli::parse_live_view_image_quality",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_media_slotx_format_enable_status",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_media_slotx_format_enable_status(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 185,
+            "definition": "std::vector< std::uint8_t > cli::parse_media_slotx_format_enable_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_white_balance",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_white_balance(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 197,
+            "definition": "std::vector< std::uint16_t > cli::parse_white_balance",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_customwb_capture_standby",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_customwb_capture_standby(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 209,
+            "definition": "std::vector< std::uint16_t > cli::parse_customwb_capture_standby",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_customwb_capture_standby_cancel",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_customwb_capture_standby_cancel(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 221,
+            "definition": "std::vector< std::uint16_t > cli::parse_customwb_capture_standby_cancel",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_customwb_capture_operation",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_customwb_capture_operation(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 233,
+            "definition": "std::vector< std::uint16_t > cli::parse_customwb_capture_operation",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_customwb_capture_execution_state",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_customwb_capture_execution_state(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 245,
+            "definition": "std::vector< std::uint16_t > cli::parse_customwb_capture_execution_state",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_zoom_operation_status",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_zoom_operation_status(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 257,
+            "definition": "std::vector< std::uint8_t > cli::parse_zoom_operation_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_zoom_setting_type",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_zoom_setting_type(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 269,
+            "definition": "std::vector< std::uint8_t > cli::parse_zoom_setting_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_zoom_types_status",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_zoom_types_status(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 281,
+            "definition": "std::vector< std::uint8_t > cli::parse_zoom_types_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_zoom_operation",
+            "kind": "function",
+            "code": "std::vector<std::int8_t> parse_zoom_operation(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::int8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 293,
+            "definition": "std::vector< std::int8_t > cli::parse_zoom_operation",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_zoom_speed_range",
+            "kind": "function",
+            "code": "std::vector<std::int8_t> parse_zoom_speed_range(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::int8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 305,
+            "definition": "std::vector< std::int8_t > cli::parse_zoom_speed_range",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_save_zoom_and_focus_position",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_save_zoom_and_focus_position(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 317,
+            "definition": "std::vector< std::uint8_t > cli::parse_save_zoom_and_focus_position",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_load_zoom_and_focus_position",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_load_zoom_and_focus_position(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 329,
+            "definition": "std::vector< std::uint8_t > cli::parse_load_zoom_and_focus_position",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_remocon_zoom_speed_type",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_remocon_zoom_speed_type(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 341,
+            "definition": "std::vector< std::uint8_t > cli::parse_remocon_zoom_speed_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_playback_media",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_playback_media(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 353,
+            "definition": "std::vector< std::uint8_t > cli::parse_playback_media",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_gain_base_sensitivity",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_gain_base_sensitivity(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 365,
+            "definition": "std::vector< std::uint8_t > cli::parse_gain_base_sensitivity",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_gain_base_iso_sensitivity",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_gain_base_iso_sensitivity(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 376,
+            "definition": "std::vector< std::uint8_t > cli::parse_gain_base_iso_sensitivity",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_monitor_lut_setting",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_monitor_lut_setting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 388,
+            "definition": "std::vector< std::uint8_t > cli::parse_monitor_lut_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_exposure_index",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_exposure_index(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 400,
+            "definition": "std::vector< std::uint16_t > cli::parse_exposure_index",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_baselook_value",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_baselook_value(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 412,
+            "definition": "std::vector< std::uint16_t > cli::parse_baselook_value",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_shutter_mode_setting",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_shutter_mode_setting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 424,
+            "definition": "std::vector< std::uint8_t > cli::parse_shutter_mode_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_iris_mode_setting",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_iris_mode_setting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 436,
+            "definition": "std::vector< std::uint8_t > cli::parse_iris_mode_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_gain_control_setting",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_gain_control_setting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 448,
+            "definition": "std::vector< std::uint8_t > cli::parse_gain_control_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_exposure_control_type",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_exposure_control_type(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 460,
+            "definition": "std::vector< std::uint8_t > cli::parse_exposure_control_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_recording_setting",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_recording_setting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 472,
+            "definition": "std::vector< std::uint16_t > cli::parse_recording_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_dispmode_candidate",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_dispmode_candidate(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 484,
+            "definition": "std::vector< std::uint32_t > cli::parse_dispmode_candidate",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_dispmode_setting",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_dispmode_setting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 496,
+            "definition": "std::vector< std::uint32_t > cli::parse_dispmode_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_dispmode",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_dispmode(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 508,
+            "definition": "std::vector< std::uint8_t > cli::parse_dispmode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_gain_db_value",
+            "kind": "function",
+            "code": "std::vector<std::int8_t> parse_gain_db_value(unsigned char const* buf, std::int32_t nval)\n{\n    using TargetType = std::int8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::int32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 520,
+            "definition": "std::vector< std::int8_t > cli::parse_gain_db_value",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_white_balance_tint",
+            "kind": "function",
+            "code": "std::vector<std::int8_t> parse_white_balance_tint(unsigned char const* buf, std::int32_t nval)\n{\n    using TargetType = std::int8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::int32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 532,
+            "definition": "std::vector< std::int8_t > cli::parse_white_balance_tint",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_white_balance_tint_step",
+            "kind": "function",
+            "code": "std::vector<std::int16_t> parse_white_balance_tint_step(unsigned char const* buf, std::int32_t nval)\n{\n    using TargetType = std::int16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::int32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 544,
+            "definition": "std::vector< std::int16_t > cli::parse_white_balance_tint_step",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_shutter_speed_value",
+            "kind": "function",
+            "code": "std::vector<std::uint64_t> parse_shutter_speed_value(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint64_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 556,
+            "definition": "std::vector< std::uint64_t > cli::parse_shutter_speed_value",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_focus_bracket_shot_num",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_focus_bracket_shot_num(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 568,
+            "definition": "std::vector< std::uint16_t > cli::parse_focus_bracket_shot_num",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_focus_bracket_focus_range",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_focus_bracket_focus_range(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 580,
+            "definition": "std::vector< std::uint8_t > cli::parse_focus_bracket_focus_range",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_image_stabilization_steady_shot",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_image_stabilization_steady_shot(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 592,
+            "definition": "std::vector< std::uint8_t > cli::parse_image_stabilization_steady_shot",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_movie_image_stabilization_steady_shot",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_movie_image_stabilization_steady_shot(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 604,
+            "definition": "std::vector< std::uint8_t > cli::parse_movie_image_stabilization_steady_shot",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_silent_mode",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_silent_mode(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 616,
+            "definition": "std::vector< std::uint8_t > cli::parse_silent_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_silent_mode_aperture_drive_in_af",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_silent_mode_aperture_drive_in_af(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 628,
+            "definition": "std::vector< std::uint8_t > cli::parse_silent_mode_aperture_drive_in_af",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_silent_mode_shutter_when_power_off",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_silent_mode_shutter_when_power_off(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 639,
+            "definition": "std::vector< std::uint8_t > cli::parse_silent_mode_shutter_when_power_off",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_silent_mode_auto_pixel_mapping",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_silent_mode_auto_pixel_mapping(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 651,
+            "definition": "std::vector< std::uint8_t > cli::parse_silent_mode_auto_pixel_mapping",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_shutter_type",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_shutter_type(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 663,
+            "definition": "std::vector< std::uint8_t > cli::parse_shutter_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_movie_shooting_mode",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_movie_shooting_mode(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 675,
+            "definition": "std::vector< std::uint16_t > cli::parse_movie_shooting_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_customwb_size_setting",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_customwb_size_setting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 687,
+            "definition": "std::vector< std::uint8_t > cli::parse_customwb_size_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_time_shift_shooting",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_time_shift_shooting(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 699,
+            "definition": "std::vector< std::uint8_t > cli::parse_time_shift_shooting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_focus_position",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_focus_position(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 711,
+            "definition": "std::vector< std::uint16_t > cli::parse_focus_position",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_movie_recording_media",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_movie_recording_media(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;   \n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 723,
+            "definition": "std::vector< std::uint16_t > cli::parse_movie_recording_media",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_recorder_main_status",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_recorder_main_status(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 735,
+            "definition": "std::vector< std::uint8_t > cli::parse_recorder_main_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_recording_state",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_recording_state(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 747,
+            "definition": "std::vector< std::uint8_t > cli::parse_recording_state",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_focus_driving_status",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_focus_driving_status(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 759,
+            "definition": "std::vector< std::uint8_t > cli::parse_focus_driving_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_zoom_distance",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_zoom_distance(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 771,
+            "definition": "std::vector< std::uint32_t > cli::parse_zoom_distance",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_slotx_rec_available",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_slotx_rec_available(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 783,
+            "definition": "std::vector< std::uint8_t > cli::parse_slotx_rec_available",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_camera_button_function",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_camera_button_function(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 795,
+            "definition": "std::vector< std::uint32_t > cli::parse_camera_button_function",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_camera_button_function_multi",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_camera_button_function_multi(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 807,
+            "definition": "std::vector< std::uint32_t > cli::parse_camera_button_function_multi",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_camera_dial_function",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_camera_dial_function(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 819,
+            "definition": "std::vector< std::uint32_t > cli::parse_camera_dial_function",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_camera_button_function_status",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_camera_button_function_status(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 831,
+            "definition": "std::vector< std::uint16_t > cli::parse_camera_button_function_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_camera_lever_function",
+            "kind": "function",
+            "code": "std::vector<std::uint32_t> parse_camera_lever_function(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint32_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 843,
+            "definition": "std::vector< std::uint32_t > cli::parse_camera_lever_function",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_zoom_position",
+            "kind": "function",
+            "code": "std::vector<std::uint16_t> parse_zoom_position(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint16_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 855,
+            "definition": "std::vector< std::uint16_t > cli::parse_zoom_position",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_tele_wide_lever_value_capability",
+            "kind": "function",
+            "code": "std::vector<std::int8_t> parse_tele_wide_lever_value_capability(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::int8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 867,
+            "definition": "std::vector< std::int8_t > cli::parse_tele_wide_lever_value_capability",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_debugmode",
+            "kind": "function",
+            "code": "std::vector<std::uint8_t> parse_debugmode(unsigned char const* buf, std::uint32_t nval)\n{\n    using TargetType = std::uint8_t;\n    constexpr std::size_t const type_size = sizeof(TargetType);\n    TargetType const* source = reinterpret_cast<TargetType const*>(buf);\n    std::vector<TargetType> result(nval);\n    for (std::uint32_t i = 0; i < nval; ++i, ++source) {\n        MemCpyEx(&result[i], source, type_size);\n    }\n    return result;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 879,
+            "definition": "std::vector< std::uint8_t > cli::parse_debugmode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_f_number",
+            "kind": "function",
+            "code": "text format_f_number(std::uint16_t f_number)\n{\n    text_stringstream ts;\n    if ((0x0000 == f_number) || (SDK::CrFnumber_Unknown == f_number)) {\n        ts << TEXT(\"--\");\n    }\n    else if(SDK::CrFnumber_Nothing == f_number) {\n        // Do nothing\n    }\n    else {\n        auto modValue = static_cast<std::uint16_t>(f_number % 100);\n        if (modValue > 0) {\n            ts << TEXT('F') << impl::Round((f_number / 100.0), 1);\n        }\n        else {\n            ts << TEXT('F') << f_number / 100;\n        }\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 891,
+            "definition": "text cli::format_f_number",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_iso_sensitivity",
+            "kind": "function",
+            "code": "text format_iso_sensitivity(std::uint32_t iso)\n{\n    text_stringstream ts;\n\n    std::uint32_t iso_ext = (iso >> 24) & 0x000000F0;  // bit 28-31\n    std::uint32_t iso_mode = (iso >> 24) & 0x0000000F; // bit 24-27\n    std::uint32_t iso_value = (iso & 0x00FFFFFF);      // bit  0-23\n\n    if (iso_mode == SDK::CrISO_MultiFrameNR) {\n        ts << TEXT(\"Multi Frame NR \");\n    }\n    else if (iso_mode == SDK::CrISO_MultiFrameNR_High) {\n        ts << TEXT(\"Multi Frame NR High \");\n    }\n\n    if (iso_value == SDK::CrISO_AUTO) {\n        ts << TEXT(\"ISO AUTO\");\n    }\n    else {\n        ts << TEXT(\"ISO \") << iso_value;\n    }\n\n    //if (iso_ext == SDK::CrISO_Ext) {\n    //    ts << TEXT(\" (EXT)\");\n    //}\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 913,
+            "definition": "text cli::format_iso_sensitivity",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_shutter_speed",
+            "kind": "function",
+            "code": "text format_shutter_speed(std::uint32_t shutter_speed)\n{\n    text_stringstream ts;\n\n    CrInt16u numerator = impl::HIWORD(shutter_speed);\n    CrInt16u denominator = impl::LOWORD(shutter_speed);\n\n    if (SDK::CrShutterSpeed_Bulb == shutter_speed) {\n        ts << TEXT(\"Bulb\");\n    }\n    else if(SDK::CrShutterSpeed_Nothing == shutter_speed) {\n        ts << TEXT(\"Nothing to display\");\n    }\n    else if (1 == numerator) {\n        ts << numerator << '/' << denominator;\n    }\n    else if (0 == numerator % denominator) {\n        ts << (numerator / denominator) << '\"';\n    }\n    else {\n        CrInt32 numdivision = numerator / denominator;\n        CrInt32 numremainder = numerator % denominator;\n        ts << numdivision << '.' << numremainder << '\"';\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 942,
+            "definition": "text cli::format_shutter_speed",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_extended_shutter_speed",
+            "kind": "function",
+            "code": "text format_extended_shutter_speed(std::uint64_t extended_shutter_speed)\n{\n    text_stringstream ts;\n\n    CrInt32u numerator = impl::HIWORD64(extended_shutter_speed);\n    CrInt32u denominator = impl::LOWORD64(extended_shutter_speed);\n\n    if (SDK::CrExtendedShutterSpeed_Bulb == extended_shutter_speed) {\n        ts << TEXT(\"Bulb\");\n    }\n    else if(SDK::CrExtendedShutterSpeed_Nothing == extended_shutter_speed) {\n        ts << TEXT(\"Nothing to display\");\n    }\n    else if (1 == numerator) {\n        ts << numerator << '/' << denominator;\n    }\n    else if (0 == numerator % denominator) {\n        ts << (numerator / denominator) << '\"';\n    }\n    else {\n        CrInt32 numdivision = numerator / denominator;\n        CrInt32 numremainder = numerator % denominator;\n        ts << numdivision << '.' << numremainder << '\"';\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 969,
+            "definition": "text cli::format_extended_shutter_speed",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_position_key_setting",
+            "kind": "function",
+            "code": "text format_position_key_setting(std::uint16_t position_key_setting)\n{\n    text_stringstream ts;\n\n    switch (position_key_setting) {\n    case SDK::CrPriorityKeySettings::CrPriorityKey_CameraPosition:\n        ts << \"Camera Position\";\n        break;\n    case SDK::CrPriorityKeySettings::CrPriorityKey_PCRemote:\n        ts << \"PC Remote Setting\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 996,
+            "definition": "text cli::format_position_key_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_exposure_program_mode",
+            "kind": "function",
+            "code": "text format_exposure_program_mode(std::uint32_t exposure_program_mode)\n{\n    text_stringstream ts;\n\n    switch (exposure_program_mode) {\n    case SDK::CrExposureProgram::CrExposure_M_Manual:\n        ts << \"M_Manual\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_P_Auto:\n        ts << \"P_Auto\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_A_AperturePriority:\n        ts << \"A_AperturePriority\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_S_ShutterSpeedPriority:\n        ts << \"S_ShutterSpeedPriority\";\n        break;\n     case SDK::CrExposureProgram::CrExposure_Program_Creative:\n         ts << \"ProgramCreative\";\n         break;\n     case SDK::CrExposureProgram::CrExposure_Program_Action:\n         ts << \"ProgramAction\";\n         break;\n    case SDK::CrExposureProgram::CrExposure_Portrait:\n        ts << \"Portrait\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Auto:\n        ts << \"Auto\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Auto_Plus:\n        ts << \"Auto_Plus\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_P_A:\n        ts << \"P_A\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_P_S:\n        ts << \"P_S\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Sports_Action:\n        ts << \"Sports_Action\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Sunset:\n        ts << \"Sunset\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Night:\n        ts << \"Night\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Landscape:\n        ts << \"Landscape\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Macro:\n        ts << \"Macro\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_HandheldTwilight:\n        ts << \"HandheldTwilight\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_NightPortrait:\n        ts << \"NightPortrait\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_AntiMotionBlur:\n        ts << \"AntiMotionBlur\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Pet:\n        ts << \"Pet\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Gourmet:\n        ts << \"Gourmet\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Fireworks:\n        ts << \"Fireworks\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_HighSensitivity:\n        ts << \"HighSensitivity\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_MemoryRecall:\n        ts << \"MemoryRecall\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_ContinuousPriority_AE_8pics:\n        ts << \"ContinuousPriority_AE_8pics\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_ContinuousPriority_AE_10pics:\n        ts << \"ContinuousPriority_AE_10pics\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_ContinuousPriority_AE_12pics:\n        ts << \"ContinuousPriority_AE_12pics\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_3D_SweepPanorama:\n        ts << \"3D_SweepPanorama\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_SweepPanorama:\n        ts << \"SweepPanorama\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_P:\n        ts << \"Movie_P\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_A:\n        ts << \"Movie_A\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_S:\n        ts << \"Movie_S\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_M:\n        ts << \"Movie_M\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_Auto:\n        ts << \"Movie_Auto\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_F:\n        ts << \"Movie_F\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_SQMotion_P:\n        ts << \"Movie_SQMotion_P\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_SQMotion_A:\n        ts << \"Movie_SQMotion_A\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_SQMotion_S:\n        ts << \"Movie_SQMotion_S\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_SQMotion_M:\n        ts << \"Movie_SQMotion_M\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_SQMotion_AUTO:\n        ts << \"Movie_SQMotion_AUTO\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_SQMotion_F:\n        ts << \"Movie_SQMotion_F\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Flash_Off:\n         ts << \"FlashOff\";\n         break;\n     case SDK::CrExposureProgram::CrExposure_PictureEffect:\n         ts << \"PictureEffect\";\n         break;\n    case SDK::CrExposureProgram::CrExposure_HiFrameRate_P:\n        ts << \"HiFrameRate_P\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_HiFrameRate_A:\n        ts << \"HiFrameRate_A\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_HiFrameRate_S:\n        ts << \"HiFrameRate_S\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_HiFrameRate_M:\n        ts << \"HiFrameRate_M\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_SQMotion_P:\n        ts << \"SQMotion_P\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_SQMotion_A:\n        ts << \"SQMotion_A\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_SQMotion_S:\n        ts << \"SQMotion_S\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_SQMotion_M:\n        ts << \"SQMotion_M\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_MOVIE:\n        ts << \"MOVIE\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_STILL:\n        ts << \"STILL\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_F_MovieOrSQMotion:\n        ts << \"F(Movie or S&Q)\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_IntervalRec_F:\n        ts << \"Movie_IntervalRec_F\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_IntervalRec_P:\n        ts << \"Movie_IntervalRec_P\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_IntervalRec_A:\n        ts << \"Movie_IntervalRec_A\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_IntervalRec_S:\n        ts << \"Movie_IntervalRec_S\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_IntervalRec_M:\n        ts << \"Movie_IntervalRec_M\";\n        break;\n    case SDK::CrExposureProgram::CrExposure_Movie_IntervalRec_AUTO:\n        ts << \"Movie_IntervalRec_AUTO\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1014,
+            "definition": "text cli::format_exposure_program_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_still_capture_mode",
+            "kind": "function",
+            "code": "text format_still_capture_mode(std::uint32_t still_capture_mode)\n{\n    text_stringstream ts;\n    switch (still_capture_mode) {\n    case SDK::CrDriveMode::CrDrive_Single:\n        ts << \"CrDrive_Single\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Hi:\n        ts << \"CrDrive_Continuous_Hi\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Hi_Plus:\n        ts << \"CrDrive_Continuous_Hi_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Hi_Live:\n        ts << \"CrDrive_Continuous_Hi_Live\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Lo:\n        ts << \"CrDrive_Continuous_Lo\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous:\n        ts << \"CrDrive_Continuous\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_SpeedPriority:\n        ts << \"CrDrive_Continuous_SpeedPriority\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Mid:\n        ts << \"CrDrive_Continuous_Mid\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Mid_Live:\n        ts << \"CrDrive_Continuous_Mid_Live\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Lo_Live:\n        ts << \"CrDrive_Continuous_Lo_Live\";\n        break;\n    case SDK::CrDriveMode::CrDrive_SingleBurstShooting_lo:\n        ts << \"CrDrive_SingleBurstShooting_lo\";\n        break;\n    case SDK::CrDriveMode::CrDrive_SingleBurstShooting_mid:\n        ts << \"CrDrive_SingleBurstShooting_mid\";\n        break;\n    case SDK::CrDriveMode::CrDrive_SingleBurstShooting_hi:\n        ts << \"CrDrive_SingleBurstShooting_hi\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Timelapse:\n        ts << \"CrDrive_Timelapse\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Timer_2s:\n        ts << \"CrDrive_Timer_2s\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Timer_5s:\n        ts << \"CrDrive_Timer_5s\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Timer_10s:\n        ts << \"CrDrive_Timer_10s\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_03Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_03Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_03Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_03Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_03Ev_9pics:\n        ts << \"CrDrive_Continuous_Bracket_03Ev_9pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_05Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_05Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_05Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_05Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_05Ev_9pics:\n        ts << \"CrDrive_Continuous_Bracket_05Ev_9pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_07Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_07Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_07Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_07Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_07Ev_9pics:\n        ts << \"CrDrive_Continuous_Bracket_07Ev_9pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_10Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_10Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_10Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_10Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_10Ev_9pics:\n        ts << \"CrDrive_Continuous_Bracket_10Ev_9pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_20Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_20Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_20Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_20Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_30Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_30Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_30Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_30Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_03Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_03Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_03Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_03Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_03Ev_7pics:\n        ts << \"CrDrive_Continuous_Bracket_03Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_05Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_05Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_05Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_05Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_05Ev_7pics:\n        ts << \"CrDrive_Continuous_Bracket_05Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_07Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_07Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_07Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_07Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_07Ev_7pics:\n        ts << \"CrDrive_Continuous_Bracket_07Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_10Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_10Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_10Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_10Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_10Ev_7pics:\n        ts << \"CrDrive_Continuous_Bracket_10Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_13Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_13Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_13Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_13Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_13Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_13Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_13Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_13Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_13Ev_7pics:\n        ts << \"CrDrive_Continuous_Bracket_13Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_15Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_15Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_15Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_15Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_15Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_15Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_15Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_15Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_15Ev_7pics:\n        ts << \"CrDrive_Continuous_Bracket_15Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_17Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_17Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_17Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_17Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_17Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_17Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_17Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_17Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_17Ev_7pics:\n        ts << \"CrDrive_Continuous_Bracket_17Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_20Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_20Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_20Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_20Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_20Ev_7pics:\n        ts << \"CrDrive_Continuous_Bracket_20Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_23Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_23Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_23Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_23Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_23Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_23Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_23Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_23Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_25Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_25Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_25Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_25Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_25Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_25Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_25Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_25Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_27Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_27Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_27Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_27Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_27Ev_3pics:\n        ts << \"CrDrive_Continuous_Bracket_27Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_27Ev_5pics:\n        ts << \"CrDrive_Continuous_Bracket_27Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_30Ev_2pics_Plus:\n        ts << \"CrDrive_Continuous_Bracket_30Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Bracket_30Ev_2pics_Minus:\n        ts << \"CrDrive_Continuous_Bracket_30Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_03Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_03Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_03Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_03Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_03Ev_9pics:\n        ts << \"CrDrive_Single_Bracket_03Ev_9pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_05Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_05Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_05Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_05Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_05Ev_9pics:\n        ts << \"CrDrive_Single_Bracket_05Ev_9pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_07Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_07Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_07Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_07Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_07Ev_9pics:\n        ts << \"CrDrive_Single_Bracket_07Ev_9pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_10Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_10Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_10Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_10Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_10Ev_9pics:\n        ts << \"CrDrive_Single_Bracket_10Ev_9pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_20Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_20Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_20Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_20Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_30Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_30Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_30Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_30Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_03Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_03Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_03Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_03Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_03Ev_7pics:\n        ts << \"CrDrive_Single_Bracket_03Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_05Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_05Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_05Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_05Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_05Ev_7pics:\n        ts << \"CrDrive_Single_Bracket_05Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_07Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_07Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_07Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_07Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_07Ev_7pics:\n        ts << \"CrDrive_Single_Bracket_07Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_10Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_10Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_10Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_10Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_10Ev_7pics:\n        ts << \"CrDrive_Single_Bracket_10Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_13Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_13Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_13Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_13Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_13Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_13Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_13Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_13Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_13Ev_7pics:\n        ts << \"CrDrive_Single_Bracket_13Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_15Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_15Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_15Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_15Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_15Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_15Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_15Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_15Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_15Ev_7pics:\n        ts << \"CrDrive_Single_Bracket_15Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_17Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_17Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_17Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_17Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_17Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_17Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_17Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_17Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_17Ev_7pics:\n        ts << \"CrDrive_Single_Bracket_17Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_20Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_20Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_20Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_20Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_20Ev_7pics:\n        ts << \"CrDrive_Single_Bracket_20Ev_7pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_23Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_23Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_23Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_23Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_23Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_23Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_23Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_23Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_25Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_25Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_25Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_25Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_25Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_25Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_25Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_25Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_27Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_27Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_27Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_27Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_27Ev_3pics:\n        ts << \"CrDrive_Single_Bracket_27Ev_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_27Ev_5pics:\n        ts << \"CrDrive_Single_Bracket_27Ev_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_30Ev_2pics_Plus:\n        ts << \"CrDrive_Single_Bracket_30Ev_2pics_Plus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Single_Bracket_30Ev_2pics_Minus:\n        ts << \"CrDrive_Single_Bracket_30Ev_2pics_Minus\";\n        break;\n    case SDK::CrDriveMode::CrDrive_WB_Bracket_Lo:\n        ts << \"CrDrive_WB_Bracket_Lo\";\n        break;\n    case SDK::CrDriveMode::CrDrive_WB_Bracket_Hi:\n        ts << \"CrDrive_WB_Bracket_Hi\";\n        break;\n    case SDK::CrDriveMode::CrDrive_DRO_Bracket_Lo:\n        ts << \"CrDrive_DRO_Bracket_Lo\";\n        break;\n    case SDK::CrDriveMode::CrDrive_DRO_Bracket_Hi:\n        ts << \"CrDrive_DRO_Bracket_Hi\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Timer_3pics:\n        ts << \"CrDrive_Continuous_Timer_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Timer_5pics:\n        ts << \"CrDrive_Continuous_Timer_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Timer_2s_3pics:\n        ts << \"CrDrive_Continuous_Timer_2s_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Timer_2s_5pics:\n        ts << \"CrDrive_Continuous_Timer_2s_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Timer_5s_3pics:\n        ts << \"CrDrive_Continuous_Timer_5s_3pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_Continuous_Timer_5s_5pics:\n        ts << \"CrDrive_Continuous_Timer_5s_5pics\";\n        break;\n    case SDK::CrDriveMode::CrDrive_LPF_Bracket:\n        ts << \"CrDrive_LPF_Bracket\";\n        break;\n    case SDK::CrDriveMode::CrDrive_RemoteCommander:\n        ts << \"CrDrive_RemoteCommander\";\n        break;\n    case SDK::CrDriveMode::CrDrive_MirrorUp:\n        ts << \"CrDrive_MirrorUp\";\n        break;\n    case SDK::CrDriveMode::CrDrive_SelfPortrait_1:\n        ts << \"CrDrive_SelfPortrait_1\";\n        break;\n    case SDK::CrDriveMode::CrDrive_SelfPortrait_2:\n        ts << \"CrDrive_SelfPortrait_2\";\n        break;\n    case SDK::CrDriveMode::CrDrive_FocusBracket:\n        ts << \"CrDrive_FocusBracket\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1206,
+            "definition": "text cli::format_still_capture_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_focus_mode",
+            "kind": "function",
+            "code": "text format_focus_mode(std::uint16_t focus_mode)\n{\n    text_stringstream ts;\n\n    switch (focus_mode) {\n    case SDK::CrFocusMode::CrFocus_MF:\n        ts << \"MF\";\n        break;\n    case SDK::CrFocusMode::CrFocus_AF_S:\n        ts << \"AF_S\";\n        break;\n    case SDK::CrFocusMode::CrFocus_AF_C:\n        ts << \"AF_C\";\n        break;\n    case SDK::CrFocusMode::CrFocus_AF_A:\n        ts << \"AF_A\";\n        break;\n    case SDK::CrFocusMode::CrFocus_DMF:\n        ts << \"DMF\";\n        break;\n    case SDK::CrFocusMode::CrFocus_AF_D:\n        ts << \"AF_D\";\n        break;\n    case SDK::CrFocusMode::CrFocus_PF:\n        ts << \"PF\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1675,
+            "definition": "text cli::format_focus_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_focus_area",
+            "kind": "function",
+            "code": "text format_focus_area(std::uint16_t focus_area)\n{\n    text_stringstream ts;\n\n    switch (focus_area) {\n    case SDK::CrFocusArea::CrFocusArea_Unknown:\n        ts << \"Unknown\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Wide:\n        ts << \"Wide\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Zone:\n        ts << \"Zone\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Center:\n        ts << \"Center\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot_S:\n        ts << \"Flexible Spot S\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot_M:\n        ts << \"Flexible Spot M\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot_L:\n        ts << \"Flexible Spot L\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Expand_Flexible_Spot:\n        ts << \"Expand Flexible Spot\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot:\n        ts << \"Flexible Spot\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Wide:\n        ts << \"Tracking Wide\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Zone:\n        ts << \"Tracking Zone\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Center:\n        ts << \"Tracking Center\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot_S:\n        ts << \"Tracking Flexible Spot S\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot_M:\n        ts << \"Tracking Flexible Spot M\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot_L:\n        ts << \"Tracking Flexible Spot L\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Expand_Flexible_Spot:\n        ts << \"Tracking Expand Flexible Spot\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot:\n        ts << \"Tracking Flexible Spot\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot_XS:\n        ts << \"Flexible Spot XS\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot_XL:\n        ts << \"Flexible Spot XL\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot_FreeSize1:\n        ts << \"Flexible Spot FreeSize1\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot_FreeSize2:\n        ts << \"Flexible Spot FreeSize2\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Flexible_Spot_FreeSize3:\n        ts << \"Flexible Spot FreeSize3\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot_XS:\n        ts << \"Tracking Flexible Spot XS\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot_XL:\n        ts << \"Tracking Flexible Spot XL\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot_FreeSize1:\n        ts << \"Tracking Flexible Spot FreeSize1\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot_FreeSize2:\n        ts << \"Tracking Flexible Spot FreeSize2\";\n        break;\n    case SDK::CrFocusArea::CrFocusArea_Tracking_Flexible_Spot_FreeSize3:\n        ts << \"Tracking Flexible Spot FreeSize3\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1708,
+            "definition": "text cli::format_focus_area",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_live_view_image_quality",
+            "kind": "function",
+            "code": "text format_live_view_image_quality(std::uint16_t live_view_image_quality)\n{\n    text_stringstream ts;\n\n    switch (live_view_image_quality) {\n    case SDK::CrPropertyLiveViewImageQuality::CrPropertyLiveViewImageQuality_High:\n        ts << \"High\";\n        break;\n    case SDK::CrPropertyLiveViewImageQuality::CrPropertyLiveViewImageQuality_Low:\n        ts << \"Low\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1801,
+            "definition": "text cli::format_live_view_image_quality",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_media_slotx_format_enable_status",
+            "kind": "function",
+            "code": "text format_media_slotx_format_enable_status(std::uint8_t media_slotx_format_enable_status)\n{\n    text_stringstream ts;\n\n    switch (media_slotx_format_enable_status) {\n    case SDK::CrMediaFormat::CrMediaFormat_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrMediaFormat::CrMediaFormat_Enable:\n        ts << \"Enabled\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1819,
+            "definition": "text cli::format_media_slotx_format_enable_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_white_balance",
+            "kind": "function",
+            "code": "text format_white_balance(std::uint16_t value)\n{\n    text_stringstream ts;\n\n    switch (value) {\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_AWB:\n        ts << \"AWB\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Underwater_Auto:\n        ts << \"Underwater_Auto\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Daylight:\n        ts << \"Daylight\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Shadow:\n        ts << \"Shadow\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Cloudy:\n        ts << \"Cloudy\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Tungsten:\n        ts << \"Tungsten\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Fluorescent:\n        ts << \"Fluorescent\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Fluorescent_WarmWhite:\n        ts << \"Fluorescent_WarmWhite\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Fluorescent_CoolWhite:\n        ts << \"Fluorescent_CoolWhite\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Fluorescent_DayWhite:\n        ts << \"Fluorescent_DayWhite\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Fluorescent_Daylight:\n        ts << \"Fluorescent_Daylight\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Flush:\n        ts << \"Flush\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_ColorTemp:\n        ts << \"ColorTemp\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Custom_1:\n        ts << \"Custom_1\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Custom_2:\n        ts << \"Custom_2\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Custom_3:\n        ts << \"Custom_3\";\n        break;\n    case SDK::CrWhiteBalanceSetting::CrWhiteBalance_Custom:\n        ts << \"Custom\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1836,
+            "definition": "text cli::format_white_balance",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_customwb_capture_standby",
+            "kind": "function",
+            "code": "text format_customwb_capture_standby(std::uint16_t customwb_capture_standby)\n{\n    text_stringstream ts;\n\n    switch (customwb_capture_standby) {\n    case SDK::CrPropertyCustomWBOperation::CrPropertyCustomWBOperation_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrPropertyCustomWBOperation::CrPropertyCustomWBOperation_Enable:\n        ts << \"Enable\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1899,
+            "definition": "text cli::format_customwb_capture_standby",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_customwb_capture_standby_cancel",
+            "kind": "function",
+            "code": "text format_customwb_capture_standby_cancel(std::uint16_t customwb_capture_standby_cancel)\n{\n    text_stringstream ts;\n\n    switch (customwb_capture_standby_cancel) {\n    case SDK::CrPropertyCustomWBOperation::CrPropertyCustomWBOperation_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrPropertyCustomWBOperation::CrPropertyCustomWBOperation_Enable:\n        ts << \"Enable\";\n        break;\n\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1917,
+            "definition": "text cli::format_customwb_capture_standby_cancel",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_customwb_capture_operation",
+            "kind": "function",
+            "code": "text format_customwb_capture_operation(std::uint16_t customwb_capture_operation)\n{\n    text_stringstream ts;\n\n    switch (customwb_capture_operation) {\n    case SDK::CrPropertyCustomWBOperation::CrPropertyCustomWBOperation_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrPropertyCustomWBOperation::CrPropertyCustomWBOperation_Enable:\n        ts << \"Enabled\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1936,
+            "definition": "text cli::format_customwb_capture_operation",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_customwb_capture_execution_state",
+            "kind": "function",
+            "code": "text format_customwb_capture_execution_state(std::uint16_t customwb_capture_execution_state)\n{\n    text_stringstream ts;\n\n    switch (customwb_capture_execution_state) {\n    case SDK::CrPropertyCustomWBExecutionState::CrPropertyCustomWBExecutionState_Invalid:\n        ts << \"Invalid\";\n        break;\n    case SDK::CrPropertyCustomWBExecutionState::CrPropertyCustomWBExecutionState_Standby:\n        ts << \"Standby\";\n        break;\n    case SDK::CrPropertyCustomWBExecutionState::CrPropertyCustomWBExecutionState_Capturing:\n        ts << \"Capturing\";\n        break;\n    case SDK::CrPropertyCustomWBExecutionState::CrPropertyCustomWBExecutionState_OperatingCamera:\n        ts << \"OperatingCamera\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1954,
+            "definition": "text cli::format_customwb_capture_execution_state",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_zoom_operation_status",
+            "kind": "function",
+            "code": "text format_zoom_operation_status(std::uint8_t zoom_operation_status)\n{\n    text_stringstream ts;\n\n    switch (zoom_operation_status) {\n    case SDK::CrZoomOperationEnableStatus::CrZoomOperationEnableStatus_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrZoomOperationEnableStatus::CrZoomOperationEnableStatus_Enable:\n        ts << \"Enable\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1978,
+            "definition": "text cli::format_zoom_operation_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_zoom_setting_type",
+            "kind": "function",
+            "code": "text format_zoom_setting_type(std::uint8_t zoom_setting_type)\n{\n    text_stringstream ts;\n\n    switch (zoom_setting_type) {\n    case SDK::CrZoomSettingType::CrZoomSetting_OpticalZoomOnly:\n        ts << \"OpticalZoom\";\n        break;\n    case SDK::CrZoomSettingType::CrZoomSetting_SmartZoomOnly:\n        ts << \"SmartZoom\";\n        break;\n    case SDK::CrZoomSettingType::CrZoomSetting_On_ClearImageZoom:\n        ts << \"ClearImageZoom\";\n        break;\n    case SDK::CrZoomSettingType::CrZoomSetting_On_DigitalZoom:\n        ts << \"DigitalZoom\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 1996,
+            "definition": "text cli::format_zoom_setting_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_zoom_types_status",
+            "kind": "function",
+            "code": "text format_zoom_types_status(std::uint8_t zoom_types_status)\n{\n    text_stringstream ts;\n\n    switch (zoom_types_status) {\n    case SDK::CrZoomTypeStatus::CrZoomTypeStatus_OpticalZoom:\n        ts << \"OpticalZoom\";\n        break;\n    case SDK::CrZoomTypeStatus::CrZoomTypeStatus_SmartZoom:\n        ts << \"SmartZoom\";\n        break;\n    case SDK::CrZoomTypeStatus::CrZoomTypeStatus_ClearImageZoom:\n        ts << \"ClearImageZoom\";\n        break;\n    case SDK::CrZoomTypeStatus::CrZoomTypeStatus_DigitalZoom:\n        ts << \"DigitalZoom\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2020,
+            "definition": "text cli::format_zoom_types_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_remocon_zoom_speed_type",
+            "kind": "function",
+            "code": "text format_remocon_zoom_speed_type(std::uint8_t remocon_zoom_speed_type)\n{\n    text_stringstream ts;\n\n    switch (remocon_zoom_speed_type) {\n    case SDK::CrRemoconZoomSpeedType::CrRemoconZoomSpeedType_Invalid:\n        ts << \"Invalid\";\n        break;\n    case SDK::CrRemoconZoomSpeedType::CrRemoconZoomSpeedType_Variable:\n        ts << \"Variable\";\n        break;\n    case SDK::CrRemoconZoomSpeedType::CrRemoconZoomSpeedType_Fixed:\n        ts << \"Fixed\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2044,
+            "definition": "text cli::format_remocon_zoom_speed_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_camera_setting_save_operation",
+            "kind": "function",
+            "code": "text format_camera_setting_save_operation(std::uint16_t camera_setting_save_operation)\n{\n    text_stringstream ts;\n\n    switch (camera_setting_save_operation) {\n    case SDK::CrCameraSettingSaveOperation::CrCameraSettingSaveOperation_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrCameraSettingSaveOperation::CrCameraSettingSaveOperation_Enable:\n        ts << \"Enabled\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2065,
+            "definition": "text cli::format_camera_setting_save_operation",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_camera_setting_read_operation",
+            "kind": "function",
+            "code": "text format_camera_setting_read_operation(std::uint16_t camera_setting_read_operation)\n{\n    text_stringstream ts;\n\n    switch (camera_setting_read_operation) {\n    case SDK::CrCameraSettingReadOperation::CrCameraSettingReadOperation_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrCameraSettingReadOperation::CrCameraSettingReadOperation_Enable:\n        ts << \"Enabled\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2082,
+            "definition": "text cli::format_camera_setting_read_operation",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_camera_setting_save_read_state",
+            "kind": "function",
+            "code": "text format_camera_setting_save_read_state(std::uint8_t camera_setting_save_read_state)\n{\n    text_stringstream ts;\n\n    switch (camera_setting_save_read_state) {\n    case SDK::CrCameraSettingSaveReadState::CrCameraSettingSaveReadState_Idle:\n        ts << \"Idle\";\n        break;\n    case SDK::CrCameraSettingSaveReadState::CrCameraSettingSaveReadState_Reading:\n        ts << \"Reading\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2099,
+            "definition": "text cli::format_camera_setting_save_read_state",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_aps_c_or_full_switching_setting",
+            "kind": "function",
+            "code": "text format_aps_c_or_full_switching_setting(std::uint8_t aps_c_or_full_switching_setting)\n{\n    text_stringstream ts;\n\n    switch (aps_c_or_full_switching_setting) {\n    case SDK::CrAPS_C_or_Full_SwitchingSetting::CrAPS_C_or_Full_SwitchingSetting_Full:\n        ts << \"Full\";\n        break;\n    case SDK::CrAPS_C_or_Full_SwitchingSetting::CrAPS_C_or_Full_SwitchingSetting_APS_C:\n        ts << \"APS-C\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2117,
+            "definition": "text cli::format_aps_c_or_full_switching_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_aps_c_or_full_switching_enable_status",
+            "kind": "function",
+            "code": "text format_aps_c_or_full_switching_enable_status(std::uint8_t aps_c_or_full_switching_enable_status)\n{\n    text_stringstream ts;\n\n    switch (aps_c_or_full_switching_enable_status) {\n    case SDK::CrAPS_C_or_Full_SwitchingEnableStatus::CrAPS_C_or_Full_Switching_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrAPS_C_or_Full_SwitchingEnableStatus::CrAPS_C_or_Full_Switching_Enable:\n        ts << \"Enable\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2134,
+            "definition": "text cli::format_aps_c_or_full_switching_enable_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_playback_media",
+            "kind": "function",
+            "code": "text format_playback_media(std::uint8_t playback_media)\n{\n    text_stringstream ts;\n\n    switch (playback_media) {\n    case SDK::CrPlaybackMedia::CrPlaybackMedia_Slot1:\n        ts << \"Slot1\";\n        break;\n    case SDK::CrPlaybackMedia::CrPlaybackMedia_Slot2:\n        ts << \"Slot2\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2151,
+            "definition": "text cli::format_playback_media",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_camera_setting_reset_enable_status",
+            "kind": "function",
+            "code": "text format_camera_setting_reset_enable_status(std::uint8_t camera_setting_reset_enable_status)\n{\n    text_stringstream ts;\n\n    switch (camera_setting_reset_enable_status) {\n    case SDK::CrCameraSettingsResetEnableStatus::CrCameraSettingsReset_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrCameraSettingsResetEnableStatus::CrCameraSettingsReset_Enable:\n        ts << \"Enable\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2169,
+            "definition": "text cli::format_camera_setting_reset_enable_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_gain_base_sensitivity",
+            "kind": "function",
+            "code": "text format_gain_base_sensitivity(std::uint8_t gain_base)\n{\n    text_stringstream ts;\n\n    switch (gain_base) {\n    case SDK::CrGainBaseSensitivity::CrGainBaseSensitivity_High:\n        ts << \"High Level\";\n        break;\n    case SDK::CrGainBaseSensitivity::CrGainBaseSensitivity_Low:\n        ts << \"Low Level\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2186,
+            "definition": "text cli::format_gain_base_sensitivity",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_gain_base_iso_sensitivity",
+            "kind": "function",
+            "code": "text format_gain_base_iso_sensitivity(std::uint8_t gain_base_iso)\n{\n    text_stringstream ts;\n\n    switch (gain_base_iso) {\n    case SDK::CrGainBaseIsoSensitivity::CrGainBaseIsoSensitivity_High:\n        ts << \"High Level\";\n        break;\n    case SDK::CrGainBaseIsoSensitivity::CrGainBaseIsoSensitivity_Low:\n        ts << \"Low Level\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2203,
+            "definition": "text cli::format_gain_base_iso_sensitivity",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_monitor_lut_setting",
+            "kind": "function",
+            "code": "text format_monitor_lut_setting(std::uint8_t monitor_setup)\n{\n    text_stringstream ts;\n\n    switch (monitor_setup) {\n    case SDK::CrMonitorLUTSetting::CrMonitorLUT_OFF:\n        ts << \"OFF\";\n        break;\n    case SDK::CrMonitorLUTSetting::CrMonitorLUT_ON:\n        ts << \"ON\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2221,
+            "definition": "text cli::format_monitor_lut_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_baselook_value",
+            "kind": "function",
+            "code": "text format_baselook_value(std::uint8_t baselook_value)\n{\n    text_stringstream ts;\n\n    switch (baselook_value) {\n    case SDK::CrBaseLookValueSetter::CrBaseLookValue_Preset:\n        ts << \"(Preset)\";\n        break;\n    case SDK::CrBaseLookValueSetter::CrBaseLookValue_User:\n        ts << \"(User)\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2238,
+            "definition": "text cli::format_baselook_value",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_shutter_mode_setting",
+            "kind": "function",
+            "code": "text format_shutter_mode_setting(std::uint8_t shutter_mode_setting)\n{\n    text_stringstream ts;\n\n    switch (shutter_mode_setting) {\n    case SDK::CrShutterModeSetting::CrShutterMode_Automatic:\n        ts << \"Automatic\";\n        break;\n    case SDK::CrShutterModeSetting::CrShutterMode_Manual:\n        ts << \"Manual\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2255,
+            "definition": "text cli::format_shutter_mode_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_iris_mode_setting",
+            "kind": "function",
+            "code": "text format_iris_mode_setting(std::uint8_t iris_mode_setting)\n{\n    text_stringstream ts;\n\n    switch (iris_mode_setting) {\n    case SDK::CrIrisModeSetting::CrIrisMode_Automatic:\n        ts << \"Automatic\";\n        break;\n    case SDK::CrIrisModeSetting::CrIrisMode_Manual:\n        ts << \"Manual\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2273,
+            "definition": "text cli::format_iris_mode_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_exposure_control_type",
+            "kind": "function",
+            "code": "text format_exposure_control_type(std::uint8_t exposure_control_type)\n{\n    text_stringstream ts;\n\n    switch (exposure_control_type) {\n    case SDK::CrExposureCtrlType::CrExposureCtrlType_PASMMode:\n        ts << \"P/A/S/M Mode\";\n        break;\n    case SDK::CrExposureCtrlType::CrExposureCtrlType_FlexibleExposureMode:\n        ts << \"Flexible Exposure Mode\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2291,
+            "definition": "text cli::format_exposure_control_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_gain_control_setting",
+            "kind": "function",
+            "code": "text format_gain_control_setting(std::uint8_t gain_control_setting)\n{\n    text_stringstream ts;\n\n    switch (gain_control_setting) {\n    case SDK::CrGainControlSetting::CrGainControl_Automatic:\n        ts << \"Automatic\";\n        break;\n    case SDK::CrGainControlSetting::CrGainControl_Manual:\n        ts << \"Manual\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2309,
+            "definition": "text cli::format_gain_control_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_recording_setting",
+            "kind": "function",
+            "code": "text format_recording_setting(std::uint16_t recording_setting)\n{\n    //SDK::CrRecordingSettingMovie\n    text_stringstream ts;\n    switch (recording_setting)\n    {\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_60p_50M:\n        ts << \"60p 50M / XAVC S\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_30p_50M:\n        ts << \"30p 50M / XAVC S\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_24p_50M:\n        ts << \"24p 50M / XAVC S\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_50p_50M:\n        ts << \"50p 50M / XAVC S\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_25p_50M:\n        ts << \"25p 50M / XAVC S\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_60i_24M:\n        ts << \"60i 24M(FX) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_50i_24M_FX:\n        ts << \"50i 24M(FX) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_60i_17M_FH:\n        ts << \"60i 17M(FH) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_50i_17M_FH:\n        ts << \"50i 17M(FH) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_60p_28M_PS:\n        ts << \"60p 28M(PS) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_50p_28M_PS:\n        ts << \"50p 28M(PS) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_24p_24M_FX:\n        ts << \"24p 24M(FX) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_25p_24M_FX:\n        ts << \"25p 24M(FX) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_24p_17M_FH:\n        ts << \"24p 17M(FH) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_25p_17M_FH:\n        ts << \"25p 17M(FH) / AVCHD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_120p_50M_1280x720:\n        ts << \"120p 50M (1280x720) / XAVC S\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_100p_50M_1280x720:\n        ts << \"100p 50M (1280x720) / XAVC S\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_1920x1080_30p_16M:\n        ts << \"1920x1080 30p 16M / MP4\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_1920x1080_25p_16M:\n        ts << \"1920x1080 25p 16M / MP4\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_1280x720_30p_6M:\n        ts << \"1280x720 30p 6M / MP4\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_1280x720_25p_6M:\n        ts << \"1280x720 25p 6M / MP4\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_1920x1080_60p_28M:\n        ts << \"1920x1080 60p 28M / MP4\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_1920x1080_50p_28M:\n        ts << \"1920x1080 50p 28M / MP4\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_60p_25M_XAVC_S_HD:\n        ts << \"60p 25M / XAVC S HD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_50p_25M_XAVC_S_HD:\n        ts << \"50p 25M / XAVC S HD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_30p_16M_XAVC_S_HD:\n        ts << \"30p 16M / XAVC S HD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_25p_16M_XAVC_S_HD:\n        ts << \"25p 16M / XAVC S HD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_120p_100M_1920x1080_XAVC_S_HD:\n        ts << \"120p 100M (1920x1080)  / XAVC S HD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_100p_100M_1920x1080_XAVC_S_HD:\n        ts << \"100p 100M (1920x1080)  / XAVC S HD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_120p_60M_1920x1080_XAVC_S_HD:\n        ts << \"120p 60M (1920x1080) / XAVC S HD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_100p_60M_1920x1080_XAVC_S_HD:\n        ts << \"100p 60M (1920x1080) / XAVC S HD\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_30p_100M_XAVC_S_4K:\n        ts << \"30p 100M / XAVC S 4K\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_25p_100M_XAVC_S_4K:\n        ts << \"25p 100M / XAVC S 4K\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_24p_100M_XAVC_S_4K:\n        ts << \"24p 100M / XAVC S 4K\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_30p_60M_XAVC_S_4K:\n        ts << \"30p 60M / XAVC S 4K\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_25p_60M_XAVC_S_4K:\n        ts << \"25p 60M / XAVC S 4K\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_24p_60M_XAVC_S_4K:\n        ts << \"24p 60M / XAVC S 4K\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_600M_422_10bit:\n        ts << \"600M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_500M_422_10bit:\n        ts << \"500M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_400M_420_10bit:\n        ts << \"400M 420 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_300M_422_10bit:\n        ts << \"300M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_280M_422_10bit:\n        ts << \"280M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_250M_422_10bit:\n        ts << \"250M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_240M_422_10bit:\n        ts << \"240M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_222M_422_10bit:\n        ts << \"222M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_200M_422_10bit:\n        ts << \"200M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_200M_420_10bit:\n        ts << \"200M 420 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_200M_420_8bit:\n        ts << \"200M 420 8bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_185M_422_10bit:\n        ts << \"185M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_150M_420_10bit:\n        ts << \"150M 420 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_150M_420_8bit:\n        ts << \"150M 420 8bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_140M_422_10bit:\n        ts << \"140M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_111M_422_10bit:\n        ts << \"111M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_100M_422_10bit:\n        ts << \"100M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_100M_420_10bit:\n        ts << \"100M 420 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_100M_420_8bit:\n        ts << \"100M 420 8bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_93M_422_10bit:\n        ts << \"93M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_89M_422_10bit:\n        ts << \"89M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_75M_420_10bit:\n        ts << \"75M 420 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_60M_420_8bit:\n        ts << \"60M 420 8bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_50M_422_10bit:\n        ts << \"50M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_50M_420_10bit:\n        ts << \"50M 420 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_50M_420_8bit:\n        ts << \"50M 420 8bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_45M_420_10bit:\n        ts << \"45M 420 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_30M_420_10bit:\n        ts << \"30M 420 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_25M_420_8bit:\n        ts << \"25M 420 8bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_16M_420_8bit:\n        ts << \"16M 420 8bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_520M_422_10bit:\n        ts << \"520M 422 10bit\";\n        break;\n    case SDK::CrRecordingSettingMovie::CrRecordingSettingMovie_260M_422_10bit:\n        ts << \"260M 422 10bit\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2327,
+            "definition": "text cli::format_recording_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_dispmode",
+            "kind": "function",
+            "code": "text format_dispmode(std::uint8_t dispmode)\n{\n    text_stringstream ts;\n    switch (dispmode)\n    {\n    case SDK::CrDispMode::CrDispMode_GraphicDisplay:\n        ts << \"Graphic Display\";\n        break;\n    case SDK::CrDispMode::CrDispMode_DisplayAllInfo:\n        ts << \"Display All Information\";\n        break;\n    case SDK::CrDispMode::CrDispMode_NoDispInfo:\n        ts << \"No Display Information\";\n        break;\n    case SDK::CrDispMode::CrDispMode_Histogram:\n        ts << \"Histogram\";\n        break;\n    case SDK::CrDispMode::CrDispMode_Level:\n        ts << \"Level\";\n        break;\n    case SDK::CrDispMode::CrDispMode_ForViewFinder:\n        ts << \"For viewfinder\";\n        break;\n    case SDK::CrDispMode::CrDispMode_MonitorOff:\n        ts << \"Monitor Off\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2547,
+            "definition": "text cli::format_dispmode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_movie_rec_button_toggle_enable_status",
+            "kind": "function",
+            "code": "text format_movie_rec_button_toggle_enable_status(std::uint8_t movie_rec_button_toggle_enable_status)\n{\n    text_stringstream ts;\n\n    switch (movie_rec_button_toggle_enable_status) {\n    case SDK::CrMovieRecButtonToggleEnableStatus::CrMovieRecButtonToggle_Disable:\n        ts << \"Disable\";\n        break;\n    case SDK::CrMovieRecButtonToggleEnableStatus::CrMovieRecButtonToggle_Enable:\n        ts << \"Enable\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2579,
+            "definition": "text cli::format_movie_rec_button_toggle_enable_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_shutter_speed_value",
+            "kind": "function",
+            "code": "text format_shutter_speed_value(std::uint64_t shutter_speed_value)\n{\n    text_stringstream ts;\n\n    CrInt32u numerator = (CrInt32u)(shutter_speed_value >> 32);\n    CrInt32u denominator = (CrInt32u)(shutter_speed_value & 0x0000FFFF);\n    ts << numerator << '/' << denominator;\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2596,
+            "definition": "text cli::format_shutter_speed_value",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_media_slotx_status",
+            "kind": "function",
+            "code": "text format_media_slotx_status(std::uint8_t media_slotx_status)\n{\n    text_stringstream ts;\n\n    switch (media_slotx_status) {\n    case SDK::CrSlotStatus::CrSlotStatus_OK:\n        ts << \"OK\";\n        break;\n    case SDK::CrSlotStatus::CrSlotStatus_NoCard:\n        ts << \"No Card\";\n        break;\n    case SDK::CrSlotStatus::CrSlotStatus_CardError:\n        ts << \"Card Error\";\n        break;\n    case SDK::CrSlotStatus::CrSlotStatus_RecognizingOrLockedError:\n        ts << \"Recognizing Or LockedError\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2606,
+            "definition": "text cli::format_media_slotx_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_image_stabilization_steady_shot",
+            "kind": "function",
+            "code": "text format_image_stabilization_steady_shot(std::uint8_t image_stabilization_steady_shot)\n{\n    text_stringstream ts;\n\n    switch (image_stabilization_steady_shot) {\n    case SDK::CrImageStabilizationSteadyShot::CrImageStabilizationSteadyShot_Off:\n        ts << \"OFF\";\n        break;\n    case SDK::CrImageStabilizationSteadyShot::CrImageStabilizationSteadyShot_On:\n        ts << \"ON\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2629,
+            "definition": "text cli::format_image_stabilization_steady_shot",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_movie_image_stabilization_steady_shot",
+            "kind": "function",
+            "code": "text format_movie_image_stabilization_steady_shot(std::uint8_t movie_image_stabilization_steady_shot)\n{\n    text_stringstream ts;\n\n    switch (movie_image_stabilization_steady_shot) {\n    case SDK::CrImageStabilizationSteadyShotMovie::CrImageStabilizationSteadyShotMovie_Off:\n        ts << \"OFF\";\n        break;\n    case SDK::CrImageStabilizationSteadyShotMovie::CrImageStabilizationSteadyShotMovie_Standard:\n        ts << \"Standard\";\n        break;\n    case SDK::CrImageStabilizationSteadyShotMovie::CrImageStabilizationSteadyShotMovie_Active:\n        ts << \"Active\";\n        break;\n    case SDK::CrImageStabilizationSteadyShotMovie::CrImageStabilizationSteadyShotMovie_DynamicActive:\n        ts << \"Dynamic active\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2646,
+            "definition": "text cli::format_movie_image_stabilization_steady_shot",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_silent_mode",
+            "kind": "function",
+            "code": "text format_silent_mode(std::uint8_t silent_mode)\n{\n    text_stringstream ts;\n\n    switch (silent_mode) {\n    case SDK::CrSilentMode::CrSilentMode_Off:\n        ts << \"OFF\";\n        break;\n    case SDK::CrSilentMode::CrSilentMode_On:\n        ts << \"ON\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2669,
+            "definition": "text cli::format_silent_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_silent_mode_aperture_drive_in_af",
+            "kind": "function",
+            "code": "text format_silent_mode_aperture_drive_in_af(std::uint8_t aperture_drive_in_af)\n{\n    text_stringstream ts;\n\n    switch (aperture_drive_in_af) {\n    case SDK::CrSilentModeApertureDriveInAF::CrSilentModeApertureDriveInAF_NotTarget:\n        ts << \"Not Target\";\n        break;\n    case SDK::CrSilentModeApertureDriveInAF::CrSilentModeApertureDriveInAF_Standard:\n        ts << \"Standard\";\n        break;\n    case SDK::CrSilentModeApertureDriveInAF::CrSilentModeApertureDriveInAF_SilentPriority:\n        ts << \"Silent Priority\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2686,
+            "definition": "text cli::format_silent_mode_aperture_drive_in_af",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_silent_mode_shutter_when_power_off",
+            "kind": "function",
+            "code": "text format_silent_mode_shutter_when_power_off(std::uint8_t when_power_off)\n{\n    text_stringstream ts;\n\n    switch (when_power_off) {\n    case SDK::CrSilentModeShutterWhenPowerOff::CrSilentModeShutterWhenPowerOff_NotTarget:\n        ts << \"Not Target\";\n        break;\n    case SDK::CrSilentModeShutterWhenPowerOff::CrSilentModeShutterWhenPowerOff_Off:\n        ts << \"OFF\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2706,
+            "definition": "text cli::format_silent_mode_shutter_when_power_off",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_silent_mode_auto_pixel_mapping",
+            "kind": "function",
+            "code": "text format_silent_mode_auto_pixel_mapping(std::uint8_t auto_pixel_mapping)\n{\n    text_stringstream ts;\n\n    switch (auto_pixel_mapping) {\n    case SDK::CrSilentModeAutoPixelMapping::CrSilentModeAutoPixelMapping_NotTarget:\n        ts << \"Not Target\";\n        break;\n    case SDK::CrSilentModeAutoPixelMapping::CrSilentModeAutoPixelMapping_Off:\n        ts << \"OFF\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2722,
+            "definition": "text cli::format_silent_mode_auto_pixel_mapping",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_shutter_type",
+            "kind": "function",
+            "code": "text format_shutter_type(std::uint8_t shutter_type)\n{\n    text_stringstream ts;\n\n    switch (shutter_type) {\n    case SDK::CrShutterType::CrShutterType_Auto:\n        ts << \"Auto\";\n        break;\n    case SDK::CrShutterType::CrShutterType_MechanicalShutter:\n        ts << \"Mechanical Shutter\";\n        break;\n    case SDK::CrShutterType::CrShutterType_ElectronicShutter:\n        ts << \"Electronic Shutter\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2739,
+            "definition": "text cli::format_shutter_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_movie_shooting_mode",
+            "kind": "function",
+            "code": "text format_movie_shooting_mode(std::uint16_t movie_shooting_mode)\n{\n    text_stringstream ts;\n\n    switch (movie_shooting_mode) {\n    case SDK::CrMovieShootingMode::CrMovieShootingMode_Off:\n        ts << \"OFF\";\n        break;\n    case SDK::CrMovieShootingMode::CrMovieShootingMode_CineEI:\n        ts << \"Cine EI\";\n        break;\n    case SDK::CrMovieShootingMode::CrMovieShootingMode_CineEIQuick:\n        ts << \"Cine EI Quick\";\n        break;\n    case SDK::CrMovieShootingMode::CrMovieShootingMode_Custom:\n        ts << \"Custom\";\n        break;\n    case SDK::CrMovieShootingMode::CrMovieShootingMode_FlexibleISO:\n        ts << \"Flexible ISO\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2759,
+            "definition": "text cli::format_movie_shooting_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_customwb_size_setting",
+            "kind": "function",
+            "code": "text format_customwb_size_setting(std::uint8_t customwb_size_setting)\n{\n    text_stringstream ts;\n\n    switch (customwb_size_setting) {\n    case SDK::CrCustomWBSizeSetting::CrCustomWBSizeSetting_S:\n        ts << \"S\";\n        break;\n    case SDK::CrCustomWBSizeSetting::CrCustomWBSizeSetting_M:\n        ts << \"M\";\n        break;\n    case SDK::CrCustomWBSizeSetting::CrCustomWBSizeSetting_L:\n        ts << \"L\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2785,
+            "definition": "text cli::format_customwb_size_setting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_time_shift_shooting",
+            "kind": "function",
+            "code": "text format_time_shift_shooting(std::uint8_t time_shift_shooting)\n{\n    text_stringstream ts;\n\n    switch (time_shift_shooting) {\n    case SDK::CrTimeShiftShooting::CrTimeShiftShooting_Off:\n        ts << \"OFF\";\n        break;\n    case SDK::CrTimeShiftShooting::CrTimeShiftShooting_On:\n        ts << \"ON\";\n        break;\n    default:\n        break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2806,
+            "definition": "text cli::format_time_shift_shooting",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_focus_driving_status",
+            "kind": "function",
+            "code": "text format_focus_driving_status(std::uint8_t focus_driving_status)\n{\n    text_stringstream ts;\n\n    switch (focus_driving_status) {\n    case SDK::CrFocusDrivingStatus::CrFocusDrivingStatus_NotDriving:\n        ts << \"Not Driving\";\n        break;\n    case SDK::CrFocusDrivingStatus::CrFocusDrivingStatus_Driving:\n        ts << \"Driving\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2824,
+            "definition": "text cli::format_focus_driving_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_media_slotx_rec_available",
+            "kind": "function",
+            "code": "text format_media_slotx_rec_available(std::uint8_t rec_available)\n{\n    text_stringstream ts;\n\n    switch (rec_available) {\n    case SDK::CrMediaSlotRecordingAvailableType::CrMediaSlotRecordingAvailableType_None:\n        ts << \"None\";\n        break;\n    case SDK::CrMediaSlotRecordingAvailableType::CrMediaSlotRecordingAvailableType_Main:\n        ts << \"Main\";\n        break;\n    case SDK::CrMediaSlotRecordingAvailableType::CrMediaSlotRecordingAvailableType_Proxy:\n        ts << \"Proxy\";\n        break;\n    case SDK::CrMediaSlotRecordingAvailableType::CrMediaSlotRecordingAvailableType_MainAndProxy:\n        ts << \"Main and Proxy\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2841,
+            "definition": "text cli::format_media_slotx_rec_available",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_monitoring_is_delivery",
+            "kind": "function",
+            "code": "text format_monitoring_is_delivery(std::uint8_t sts)\n{\n    text_stringstream ts;\n\n    switch (sts) {\n    case SDK::CrMonitoringIsDelivering::CrMonitoringIsDelivering_False:\n        ts << \"False\";\n        break;\n    case SDK::CrMonitoringIsDelivering::CrMonitoringIsDelivering_True:\n        ts << \"True\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2864,
+            "definition": "text cli::format_monitoring_is_delivery",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_camera_button_function_status",
+            "kind": "function",
+            "code": "text format_camera_button_function_status(std::uint8_t status)\n{\n    text_stringstream ts;\n\n    switch (status)\n    {\n    case SDK::CrCameraButtonFunctionStatus::CrCameraButtonFunctionStatus_Idle:\n        ts << \"Idle\";\n        break;\n    case SDK::CrCameraButtonFunctionStatus::CrCameraButtonFunctionStatus_AnyKeyOn:\n        ts << \"Any Key On\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2881,
+            "definition": "text cli::format_camera_button_function_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_camera_button_function",
+            "kind": "function",
+            "code": "text format_camera_button_function(std::uint32_t camera_button_function)\n{\n    text_stringstream ts;\n\n    switch (camera_button_function) {\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_UpButton:\n        ts << \"Up button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_DownButton:\n        ts << \"Down button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_LeftButton:\n        ts << \"Left button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_RightButton:\n        ts << \"Right button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_EnterButton:\n        ts << \"ENTER button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MenuButton:\n        ts << \"MENU button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorUp:\n        ts << \"Multi-selector Up\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorDown:\n        ts << \"Multi-selector Down\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorLeft:\n        ts << \"Multi-selector Left\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorRight:\n        ts << \"Multi-selector Right\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorEnter:\n        ts << \"Multi-selector Enter\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorRightUp:\n        ts << \"Multi-selector Right Up\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorRightDown:\n        ts << \"Multi-selector Right Down\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorLeftUp:\n        ts << \"Multi-selector Left Up\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MultiSelectorLeftDown:\n        ts << \"Multi-selector Left Down\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_FnButton:\n        ts << \"Fn button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_PlaybackButton:\n        ts << \"Playback button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_DeleteButton:\n        ts << \"Delete button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_ModeButton:\n        ts << \"Mode button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_C1Button:\n        ts << \"C1 button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_C2Button:\n        ts << \"C2 button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_C3Button:\n        ts << \"C3 button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_C4Button:\n        ts << \"C4 button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_C5Button:\n        ts << \"C5 button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_C6Button:\n        ts << \"C6 button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_MovieButton:\n        ts << \"MOVIE button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_AELButton:\n        ts << \"AEL button\";\n        break;\n    case SDK::CrCameraButtonFunction::CrCameraButtonFunction_AFOnButton:\n        ts << \"AF-ON button\";\n        break;\n    case SDK::CrCameraButtonFunction_HomeButton:\n        ts << \"Home button\";\n        break;\n    case SDK::CrCameraButtonFunction_ClipsButton:\n        ts << \"CLIPS button\";\n        break;\n    case SDK::CrCameraButtonFunction_SlotSelectButton:\n        ts << \"Slot Select button\";\n        break;\n    case SDK::CrCameraButtonFunction_DisplayButton:\n        ts << \"Display button\";\n        break;\n    case SDK::CrCameraButtonFunction_C7Button:\n        ts << \"C7 button\";\n        break;\n     case SDK::CrCameraButtonFunction_CancelBackButton:\n        ts << \"Cancel/Back button\";\n        break;\n    case SDK::CrCameraButtonFunction_ThumbnailButton:\n        ts << \"Thumbnail button\";\n        break;\n   default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 2899,
+            "definition": "text cli::format_camera_button_function",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_camera_dial_function",
+            "kind": "function",
+            "code": "text format_camera_dial_function(std::uint32_t camera_dial_function)\n{\n    text_stringstream ts;\n\n    switch (camera_dial_function) {\n    case SDK::CrCameraDialFunction::CrCameraDialFunction_ControlWheel:\n        ts << \"Control wheel\";\n        break;\n    case SDK::CrCameraDialFunction::CrCameraDialFunction_FrontDial:\n        ts << \"Front dial\";\n        break;\n    case SDK::CrCameraDialFunction::CrCameraDialFunction_RearDialL:\n        ts << \"Rear dial L\";\n        break;\n    case SDK::CrCameraDialFunction::CrCameraDialFunction_RearDialR:\n        ts << \"Rear dial R\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3015,
+            "definition": "text cli::format_camera_dial_function",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_camera_lever_function",
+            "kind": "function",
+            "code": "text format_camera_lever_function(std::uint32_t camera_lever_function)\n{\n    text_stringstream ts;\n\n    switch (camera_lever_function) {\n    case SDK::CrCameraLeverFunction::CrCameraLeverFunction_TeleWideLever:\n        ts << \"Tele/Wide Lever\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3038,
+            "definition": "text cli::format_camera_lever_function",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_zoom_driving_status",
+            "kind": "function",
+            "code": "text format_zoom_driving_status(std::uint8_t zoom_driving_status)\n{\n    text_stringstream ts;\n\n    switch (zoom_driving_status) {\n    case SDK::CrZoomDrivingStatus::CrZoomDrivingStatus_NotDriving:\n        ts << \"Not Driving\";\n        break;\n    case SDK::CrZoomDrivingStatus::CrZoomDrivingStatus_Driving:\n        ts << \"Driving\";\n        break;\n    default:\n        break;\n    }\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3052,
+            "definition": "text cli::format_zoom_driving_status",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_info_content_type",
+            "kind": "function",
+            "code": "text format_contents_info_content_type(std::uint32_t content_type)\n{\n    text_stringstream ts;\n\n    switch (content_type) {\n        case SDK::CrContentsInfo_ContentType::CrContentsInfo_ContentType_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsInfo_ContentType::CrContentsInfo_ContentType_Dcf:\n            ts << \"DCF\";\n            break;\n        case SDK::CrContentsInfo_ContentType::CrContentsInfo_ContentType_M4style:\n            ts << \"M4STYLE\";\n            break;\n        case SDK::CrContentsInfo_ContentType::CrContentsInfo_ContentType_Xdstyle:\n            ts << \"XDSTYLE\";\n            break;\n        case SDK::CrContentsInfo_ContentType::CrContentsInfo_ContentType_Pxstyle:\n            ts << \"PXSTYLE\";\n            break;\n        default:\n            ts << \"UNKNOWN\";\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3069,
+            "definition": "text cli::format_contents_info_content_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_info_group_type",
+            "kind": "function",
+            "code": "text format_contents_info_group_type(std::uint32_t group_type)\n{\n    text_stringstream ts;\n    switch (group_type) {\n        case SDK::CrContentsInfo_GroupType::CrContentsInfo_GroupType_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsInfo_GroupType::CrContentsInfo_GroupType_Continuation:\n            ts << \"CONTINUATION\";\n            break;\n        case SDK::CrContentsInfo_GroupType::CrContentsInfo_GroupType_Timelapse:\n            ts << \"TIMELAPSE\";\n            break;\n        case SDK::CrContentsInfo_GroupType::CrContentsInfo_GroupType_Bracket:\n            ts << \"BRACKET\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3097,
+            "definition": "text cli::format_contents_info_group_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_info_rating",
+            "kind": "function",
+            "code": "text format_contents_info_rating(std::int32_t rating)\n{\n    text_stringstream ts;\n    switch (rating) {\n        case SDK::CrContentsInfo_Rating::CrContentsInfo_Rating_NotRequired:\n            ts << \"Rating Not Required\";\n            break;\n        case SDK::CrContentsInfo_Rating::CrContentsInfo_Rating_Nothing:\n            ts << \"Rating Nothing\";\n            break;\n        case SDK::CrContentsInfo_Rating::CrContentsInfo_Rating_1:\n            ts << \"Rating1\";\n            break;\n        case SDK::CrContentsInfo_Rating::CrContentsInfo_Rating_2:\n            ts << \"Rating2\";\n            break;\n        case SDK::CrContentsInfo_Rating::CrContentsInfo_Rating_3:\n            ts << \"Rating3\";\n            break;\n        case SDK::CrContentsInfo_Rating::CrContentsInfo_Rating_4:\n            ts << \"Rating4\";\n            break;\n        case SDK::CrContentsInfo_Rating::CrContentsInfo_Rating_5:\n            ts << \"Rating5\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3120,
+            "definition": "text cli::format_contents_info_rating",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_file_format",
+            "kind": "function",
+            "code": "text format_contents_file_file_format(std::uint32_t file_format)\n{\n    text_stringstream ts;\n    switch (file_format) {\n        case SDK::CrContentsFile_FileFormat::CrContentsFile_FileFormat_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_FileFormat::CrContentsFile_FileFormat_Jpeg:\n            ts << \"JPEG\";\n            break;\n        case SDK::CrContentsFile_FileFormat::CrContentsFile_FileFormat_Raw:\n            ts << \"RAW\";\n            break;\n        case SDK::CrContentsFile_FileFormat::CrContentsFile_FileFormat_Heif:\n            ts << \"HEIF\";\n            break;\n        case SDK::CrContentsFile_FileFormat::CrContentsFile_FileFormat_Wav:\n            ts << \"WAV\";\n            break;\n        case SDK::CrContentsFile_FileFormat::CrContentsFile_FileFormat_Mp4:\n            ts << \"MP4\";\n            break;\n        case SDK::CrContentsFile_FileFormat::CrContentsFile_FileFormat_Xml:\n            ts << \"XML\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3152,
+            "definition": "text cli::format_contents_file_file_format",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_video_codec",
+            "kind": "function",
+            "code": "text format_contents_file_video_codec(std::uint32_t video_codec)\n{\n    text_stringstream ts;\n    switch (video_codec) {\n        case SDK::CrContentsFile_VideoCodec::CrContentsFile_VideoCodec_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_VideoCodec::CrContentsFile_VideoCodec_Avc:\n            ts << \"AVC(H264)\";\n            break;\n        case SDK::CrContentsFile_VideoCodec::CrContentsFile_VideoCodec_Hevc:\n            ts << \"HEVC(H265)\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3184,
+            "definition": "text cli::format_contents_file_video_codec",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_gop_structure",
+            "kind": "function",
+            "code": "text format_contents_file_gop_structure(std::uint32_t gop_structure)\n{\n    text_stringstream ts;\n    switch (gop_structure) {\n        case SDK::CrContentsFile_GopStructure::CrContentsFile_GopStructure_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_GopStructure::CrContentsFile_GopStructure_LongGop:\n            ts << \"Long GOP\";\n            break;\n        case SDK::CrContentsFile_GopStructure::CrContentsFile_GopStructure_IntraFrame:\n            ts << \"Intra frame\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3204,
+            "definition": "text cli::format_contents_file_gop_structure",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_aspect_ratio",
+            "kind": "function",
+            "code": "text format_contents_file_aspect_ratio(std::uint32_t aspect_ratio)\n{\n    text_stringstream ts;\n    switch (aspect_ratio) {\n        case SDK::CrContentsFile_AspectRatio::CrContentsFile_AspectRatio_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_AspectRatio::CrContentsFile_AspectRatio_4_3:\n            ts << \"4:3\";\n            break;\n        case SDK::CrContentsFile_AspectRatio::CrContentsFile_AspectRatio_16_9:\n            ts << \"16:9\";\n            break;\n        case SDK::CrContentsFile_AspectRatio::CrContentsFile_AspectRatio_3_2:\n            ts << \"3:2\";\n            break;\n        case SDK::CrContentsFile_AspectRatio::CrContentsFile_AspectRatio_1_1:\n            ts << \"1:1\";\n            break;\n        case SDK::CrContentsFile_AspectRatio::CrContentsFile_AspectRatio_17_9:\n            ts << \"17:9\";\n            break;\n        case SDK::CrContentsFile_AspectRatio::CrContentsFile_AspectRatio_256_135:\n            ts << \"256:135 for 4096x2160, 2048x1080\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3224,
+            "definition": "text cli::format_contents_file_aspect_ratio",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_color_format",
+            "kind": "function",
+            "code": "text format_contents_file_color_format(std::uint32_t color_format)\n{\n    text_stringstream ts;\n    switch (color_format) {\n        case SDK::CrContentsFile_ColorFormat::CrContentsFile_ColorFormat_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_ColorFormat::CrContentsFile_ColorFormat_YCbCr420:\n            ts << \"YCbCr420(YC420)\";\n            break;\n        case SDK::CrContentsFile_ColorFormat::CrContentsFile_ColorFormat_YCbCr411:\n            ts << \"YCbCr411(YC411)\";\n            break;\n        case SDK::CrContentsFile_ColorFormat::CrContentsFile_ColorFormat_YCbCr422:\n            ts << \"YCbCr422(YC422)\";\n            break;\n        case SDK::CrContentsFile_ColorFormat::CrContentsFile_ColorFormat_RGB444:\n            ts << \"RGB444\";\n            break;\n        case SDK::CrContentsFile_ColorFormat::CrContentsFile_ColorFormat_RGBA4444:\n            ts << \"RGBA4444\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3256,
+            "definition": "text cli::format_contents_file_color_format",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_scan_type",
+            "kind": "function",
+            "code": "text format_contents_file_scan_type(std::uint32_t scan_type)\n{\n    text_stringstream ts;\n    switch (scan_type) {\n        case SDK::CrContentsFile_ScanType::CrContentsFile_ScanType_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_ScanType::CrContentsFile_ScanType_Interlace:\n            ts << \"Interlace\";\n            break;\n        case SDK::CrContentsFile_ScanType::CrContentsFile_ScanType_Progressive:\n            ts << \"Progressive\";\n            break;\n        case SDK::CrContentsFile_ScanType::CrContentsFile_ScanType_PseudoProgressive:\n            ts << \"PseudoProgressive\";\n            break;\n        case SDK::CrContentsFile_ScanType::CrContentsFile_ScanType_RealProgressive:\n            ts << \"RealProgressive\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3285,
+            "definition": "text cli::format_contents_file_scan_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_profile_indication",
+            "kind": "function",
+            "code": "text format_contents_file_profile_indication(std::uint32_t profile_indication)\n{\n    text_stringstream ts;\n    switch (profile_indication) {\n        case SDK::CrContentsFile_ProfileIndication::CrContentsFile_ProfileIndication_High:\n            ts << \"High\";\n            break;\n        case SDK::CrContentsFile_ProfileIndication::CrContentsFile_ProfileIndication_Main:\n            ts << \"Main\";\n            break;\n        case SDK::CrContentsFile_ProfileIndication::CrContentsFile_ProfileIndication_StereoHigh:\n            ts << \"Stereo High\";\n            break;\n        case SDK::CrContentsFile_ProfileIndication::CrContentsFile_ProfileIndication_High422:\n            ts << \"High422\";\n            break;\n        case SDK::CrContentsFile_ProfileIndication::CrContentsFile_ProfileIndication_Main10:\n            ts << \"Main10\";\n            break;\n        case SDK::CrContentsFile_ProfileIndication::CrContentsFile_ProfileIndication_Main422_10:\n            ts << \"Main422 10\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3311,
+            "definition": "text cli::format_contents_file_profile_indication",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_rdd18meta_capture_gamma_equation",
+            "kind": "function",
+            "code": "text format_contents_file_rdd18meta_capture_gamma_equation(std::uint32_t rdd18meta_capture_gamma_equation)\n{\n    text_stringstream ts;\n    switch (rdd18meta_capture_gamma_equation) {\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_Cine1:\n            ts << \"CINE1\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_Cine2:\n            ts << \"CINE2\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_Cine3:\n            ts << \"CINE3\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_Cine4:\n            ts << \"CINE4\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_SLog:\n            ts << \"S-Log\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_R709_800per:\n            ts << \"R709 800%\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_SLog2:\n            ts << \"S-Log2\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_ReproducedUnknownLabel:\n            ts << \"Reproduced Unknown Label\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_ItuRRecBt709:\n            ts << \"ITU-R Rec. BT.709\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_UserDefinedCurve9:\n            ts << \"User Defined Curve 9\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_NxcamStandard:\n            ts << \"NXCAM Standard\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_NxcamStillCameraLike:\n            ts << \"NXCAM Still Camera Like\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_Xvycc:\n            ts << \"xvYCC (IEC 61966-2-4)\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_SLog3_SGamut3:\n            ts << \"S-Log3/S-Gamut3\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_SLog3_SGamut3Cine:\n            ts << \"S-Log3/S-Gamut3.Cine\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_ItuRRecBt2020:\n            ts << \"ITU-R Rec. BT.2020\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_ItuRRecBt2100HybridLogGamma:\n            ts << \"ITU-R Rec. BT.2100 Hybrid Log-Gamma\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_NxcamCinematone1:\n            ts << \"NXCAM Cinematone1\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_NxcamCinematone2:\n            ts << \"NXCAM Cinematone2\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_StillsRgb:\n            ts << \"Still sRGB\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCaptureGammaEquation::CrContentsFile_CaptureGammaEquation_InvalidValue:\n            ts << \"Invalid value\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3340,
+            "definition": "text cli::format_contents_file_rdd18meta_capture_gamma_equation",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_rdd18meta_color_primaries",
+            "kind": "function",
+            "code": "text format_contents_file_rdd18meta_color_primaries(std::uint32_t rdd18meta_color_primaries)\n{\n    text_stringstream ts;\n    switch (rdd18meta_color_primaries) {\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_DeterminedByTheOtherProperties:\n            ts << \"Determined by the Other Properties\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_ItuRBtRec709ColorPrimaries:\n            ts << \"ITU-R BT.Rec. 709 Color Primaries\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_ItuRBtRec2020ColorPrimaries:\n            ts << \"ITU-R BT.Rec. 2020 Color Primaries\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_SonyGamutForSLog:\n            ts << \"Sony Gamut for S-Log\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_SonyGamut3ForSLog3:\n            ts << \"Sony Gamut3 for S-Log3\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_SonyGamut3forR709_DciP3:\n            ts << \"Sony Gamut3 for R709/DCI-P3\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_UnknownStandard:\n            ts << \"Unknown Standard\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_StillsRgb:\n            ts << \"Still sRGB\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaColorPrimaries::CrContentsFile_ColorPrimaries_InvalidValue:\n            ts << \"Invalid value\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3417,
+            "definition": "text cli::format_contents_file_rdd18meta_color_primaries",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_rdd18meta_coding_equations",
+            "kind": "function",
+            "code": "text format_contents_file_rdd18meta_coding_equations(std::uint32_t rdd18meta_coding_equations)\n{\n    text_stringstream ts;\n    switch (rdd18meta_coding_equations) {\n        case SDK::CrContentsFile_Rdd18metaCodingEquations::CrContentsFile_CodingEquations_DeterminedByColorPrimariesProperties:\n            ts << \"Determined by Color Primaries Properties\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCodingEquations::CrContentsFile_CodingEquations_ItuRRecBt601CodingEquations:\n            ts << \"ITU-R BT.Rec. 601 Coding Equations\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCodingEquations::CrContentsFile_CodingEquations_ItuRRecBt709CodingEquations:\n            ts << \"ITU-R BT.Rec. 709 Coding Equations\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCodingEquations::CrContentsFile_CodingEquations_ItuRRecBt2020NonConstantLuminunce:\n            ts << \"ITU-R BT.Rec. 2020 Non-Constant Luminunce\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCodingEquations::CrContentsFile_CodingEquations_UnknownStandard:\n            ts << \"Unknown Standard\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCodingEquations::CrContentsFile_CodingEquations_StillsRgb:\n            ts << \"Still sRGB\";\n            break;\n        case SDK::CrContentsFile_Rdd18metaCodingEquations::CrContentsFile_CodingEquations_InvalidValue:\n            ts << \"Invalid value\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3455,
+            "definition": "text cli::format_contents_file_rdd18meta_coding_equations",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_audio_codec",
+            "kind": "function",
+            "code": "text format_contents_file_audio_codec(std::uint32_t audio_codec)\n{\n    text_stringstream ts;\n    switch (audio_codec) {\n        case SDK::CrContentsFile_AudioCodec::CrContentsFile_AudioCodec_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_AudioCodec::CrContentsFile_AudioCodec_LinearPcm:\n            ts << \"Linear PCM\";\n            break;\n        case SDK::CrContentsFile_AudioCodec::CrContentsFile_AudioCodec_AacLc:\n            ts << \"AAC LC\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3487,
+            "definition": "text cli::format_contents_file_audio_codec",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_contents_file_number_of_channels",
+            "kind": "function",
+            "code": "text format_contents_file_number_of_channels(std::uint32_t number_of_channels)\n{\n    text_stringstream ts;\n    switch (number_of_channels) {\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_Unspecified:\n            ts << \"UNSPECIFIED\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_Mono:\n            ts << \"Mono (1 channel)\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_Stereo:\n            ts << \"Stereo (2 channels)\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_2_1_Channels:\n            ts << \"2.1 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_3_Channels:\n            ts << \"3 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_3_1_Channels:\n            ts << \"3.1 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_4_Channels:\n            ts << \"4 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_4_1_Channels:\n            ts << \"4.1 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_5_Channels:\n            ts << \"5 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_5_1_Channels:\n            ts << \"5.1 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_5_2_Channels:\n            ts << \"5.2 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_6_Channels:\n            ts << \"6 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_6_1_Channels:\n            ts << \"6.1 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_6_2_Channels:\n            ts << \"6.2 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_7_Channels:\n            ts << \"7 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_7_1_Channels:\n            ts << \"7.1 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_7_2_Channels:\n            ts << \"7.2 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_8_Channels:\n            ts << \"8 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_8_1_Channels:\n            ts << \"8.1 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_8_2_Channels:\n            ts << \"8.2 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_9_Channels:\n            ts << \"9 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_9_1_Channels:\n            ts << \"9.1 channels\";\n            break;\n        case SDK::CrContentsFile_NumberOfChannels::CrContentsFile_NumberOfChannels_9_2_Channels:\n            ts << \"9.2 channels\";\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3507,
+            "definition": "text cli::format_contents_file_number_of_channels",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "format_debug_mode",
+            "kind": "function",
+            "code": "text format_debug_mode(std::uint8_t debug_mode)\n{\n    text_stringstream ts;\n\n    switch (debug_mode) {\n        case SDK::CrDebugMode_OFF:\n            ts << TEXT(\"OFF \");\n            break;\n        case SDK::CrDebugMode_Pseudo_update_with_Fake_Firmware:\n            ts << TEXT(\"Pseudo_update_with_Fake_Firmware \");\n            break;\n        default:\n            break;\n    }\n\n    return ts.str();\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 3587,
+            "definition": "text cli::format_debug_mode",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp"
+        },
+        {
+            "name": "parse_connection_type",
+            "kind": "function",
+            "code": "ConnectionType parse_connection_type(text conn_type)\n{\n    ConnectionType type(ConnectionType::UNKNOWN);\n\n    if (TEXT(\"IP\") == conn_type) {\n        type = ConnectionType::NETWORK;\n    }\n    else if (TEXT(\"USB\") == conn_type) {\n        type = ConnectionType::USB;\n    }\n    return type;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 9,
+            "definition": "ConnectionType cli::parse_connection_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.cpp"
+        },
+        {
+            "name": "get_message_desc",
+            "kind": "function",
+            "code": "text get_message_desc(CrInt32u code)\n    {\n        text retMsg = TEXT(\"\"); // return value\n        try\n        {\n            std::unordered_map<CrInt32u, text>::const_iterator itr; // use twice\n\n            // details\n            text str2 = TEXT(\"\");\n            itr = map_ERR_DETAIL.find(code);\n            if (itr != map_ERR_DETAIL.end()) {\n                str2.append(itr->second);\n            }\n            else\n            {\n                return retMsg; // return the blank\n            }\n\n            // category\n            text str1 = TEXT(\"-\"); // default\n            CrInt32u maskCat = code & 0xFF00;\n            itr = map_ERR_CAT.find(maskCat);\n            if (itr != map_ERR_CAT.end())\n            {\n                str1.clear(); // remove hyphen\n                str1.append(itr->second);\n            }\n\n            // result\n            retMsg.append(TEXT(\"[CAT: \")).append(str1).append(TEXT(\"] [DETAILS: \")).append(str2).append(TEXT(\"]\"));\n\n        }\n        catch (std::out_of_range) \n        {\n            //tout << std::endl << \"Exception Error: 0x\" << std::hex << error << std::dec;\n        }\n        return retMsg;\n    }",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 6,
+            "definition": "text cli::get_message_desc",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.cpp"
+        }
+    ],
+    "other_snippets": [
+        {
+            "name": "tin",
+            "kind": "variable",
+            "code": "std::basic_istream<text_char>& tin  = std::cin;\nstd::basic_ostream<text_char>& tout = std::cout;\n#endif\n} // namespace cli",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 10,
+            "definition": "std::basic_istream< text_char > & cli::tin",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/Text.cpp"
+        },
+        {
+            "name": "tout",
+            "kind": "variable",
+            "code": "std::basic_ostream<text_char>& tout = std::cout;\n#endif\n} // namespace cli",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 11,
+            "definition": "std::basic_ostream< text_char > & cli::tout",
+            "source_file": "data/raw_sdk_docs/sdk_source/v2.00.00/Text.cpp"
+        }
+    ],
+    "metadata": {
+        "title": "cli",
+        "sdk_version": "V2.00.00"
+    }
+}

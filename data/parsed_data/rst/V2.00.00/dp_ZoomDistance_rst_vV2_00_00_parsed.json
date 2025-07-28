@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ZoomDistance.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ZoomDistance:\n\nCrDeviceProperty_ZoomDistance\n=============================\n\nGet/Set the Zoom Distance\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - Variable\n    - step\n\n| Focal length information. Units of 0.001mm.\n| min/max/CurrentValue should be set in units of “step”.\n| Ex.) min: 18000, max: 55000, step: 1000, value: 20000 (min = 18mm, max = 55mm, value = 20mm)\n| The maximum value as a protocol is 4294967 mm.\n\n| Note:\n| Indicates the distance when :ref:`CrDeviceProperty_ZoomDistanceUnitSetting<dp-ZoomDistanceUnitSetting>` is CrZoomDistanceUnitSetting_mm. When :ref:`CrDeviceProperty_ZoomDistanceUnitSetting<dp-ZoomDistanceUnitSetting>` is CrZoomDistanceUnitSetting_percent, refer to :ref:`CrDeviceProperty_Zoom_Bar_Information<dp-Zoom_Bar_Information>`.",
+    "metadata": {
+        "title": "dp_ZoomDistance",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classcli_1_1_c_r_folder_infos" kind="class" language="C++" prot="public">
+    <compoundname>cli::CRFolderInfos</compoundname>
+    <includes refid="_camera_device_8h" local="no">CameraDevice.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcli_1_1_c_r_folder_infos_1a87d6b73ba5127432c880351e0e2b80fc" prot="public" static="no" mutable="no">
+        <type>SCRSDK::CrMtpFolderInfo *</type>
+        <definition>SCRSDK::CrMtpFolderInfo* cli::CRFolderInfos::pFolder</definition>
+        <argsstring></argsstring>
+        <name>pFolder</name>
+        <qualifiedname>cli::CRFolderInfos::pFolder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CameraDevice.h" line="45" column="29" bodyfile="data/raw_sdk_docs/sdk_source/CameraDevice.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcli_1_1_c_r_folder_infos_1a161461fa0718bb27b87ba7143badaa88" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t cli::CRFolderInfos::numOfContents</definition>
+        <argsstring></argsstring>
+        <name>numOfContents</name>
+        <qualifiedname>cli::CRFolderInfos::numOfContents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CameraDevice.h" line="46" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CameraDevice.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcli_1_1_c_r_folder_infos_1abec31845a4e3fe04031223a29276746a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cli::CRFolderInfos::CRFolderInfos</definition>
+        <argsstring>(SCRSDK::CrMtpFolderInfo *info, int32_t nums)</argsstring>
+        <name>CRFolderInfos</name>
+        <qualifiedname>cli::CRFolderInfos::CRFolderInfos</qualifiedname>
+        <param>
+          <type>SCRSDK::CrMtpFolderInfo *</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>nums</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CameraDevice.h" line="33" column="5" bodyfile="data/raw_sdk_docs/sdk_source/CameraDevice.h" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classcli_1_1_c_r_folder_infos_1a13992e2d9518576631de19f9943779a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cli::CRFolderInfos::~CRFolderInfos</definition>
+        <argsstring>()</argsstring>
+        <name>~CRFolderInfos</name>
+        <qualifiedname>cli::CRFolderInfos::~CRFolderInfos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CameraDevice.h" line="37" column="5" bodyfile="data/raw_sdk_docs/sdk_source/CameraDevice.h" bodystart="37" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/CameraDevice.h" line="30" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CameraDevice.h" bodystart="31" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classcli_1_1_c_r_folder_infos_1abec31845a4e3fe04031223a29276746a" prot="public" virt="non-virtual"><scope>cli::CRFolderInfos</scope><name>CRFolderInfos</name></member>
+      <member refid="classcli_1_1_c_r_folder_infos_1a161461fa0718bb27b87ba7143badaa88" prot="public" virt="non-virtual"><scope>cli::CRFolderInfos</scope><name>numOfContents</name></member>
+      <member refid="classcli_1_1_c_r_folder_infos_1a87d6b73ba5127432c880351e0e2b80fc" prot="public" virt="non-virtual"><scope>cli::CRFolderInfos</scope><name>pFolder</name></member>
+      <member refid="classcli_1_1_c_r_folder_infos_1a13992e2d9518576631de19f9943779a3" prot="public" virt="non-virtual"><scope>cli::CRFolderInfos</scope><name>~CRFolderInfos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

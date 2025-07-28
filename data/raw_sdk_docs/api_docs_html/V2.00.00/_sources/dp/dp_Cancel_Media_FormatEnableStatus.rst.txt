@@ -1,0 +1,24 @@
+﻿.. _dp-Cancel_Media_FormatEnableStatus:
+
+CrDeviceProperty_Cancel_Media_FormatEnableStatus
+================================================
+
+Get the status of whether the media format is cancelable or not.
+
+| This property changes during Full formatting.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCancelMediaFormat_Disable
+    - | Disable
+
+  * - CrCancelMediaFormat_Enable
+    - | Enable
+

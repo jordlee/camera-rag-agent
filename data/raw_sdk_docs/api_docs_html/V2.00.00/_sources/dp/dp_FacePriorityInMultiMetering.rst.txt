@@ -1,0 +1,22 @@
+﻿.. _dp-FacePriorityInMultiMetering:
+
+CrDeviceProperty_FacePriorityInMultiMetering
+============================================
+
+Get/Set the Face Priority in Multi Metering
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFacePriorityInMultiMetering_Off
+    - | Off
+
+  * - CrFacePriorityInMultiMetering_On
+    - | On
+

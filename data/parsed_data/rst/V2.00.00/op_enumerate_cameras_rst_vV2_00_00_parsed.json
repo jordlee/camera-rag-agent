@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_enumerate_cameras.rst.txt",
+    "file_type": "rst",
+    "content": ".. _op-enumerate-cameras:\n\nEnumerate Cameras\n=================\n\nEnumCameraObjects() enumerates all connectable cameras that are physically connected to the PC. Returned ICrEnumCameraObjectInfo has the list of the cameras. The ICrEnumCameraObjectInfo object is created in Camera Remote SDK, if no camera is found, the returned pEnum is NULL.\n\nExample:\n\n.. code-block:: cpp\n\n    void Enumerate() {\n        CrError err = SCRSDK::EnumCameraObjects(&pEnum); \n\t    if (pEnum == NULL) { \n\t\t    // no cameras found \n\t\t    return; \n\t    }\n        CrInt32u cntOfCamera = pEnum->GetCount(); // get number of cameras\n        for (CrInt32u n = 0; n < cntOfCamera; n++) {\n            ICrCameraObjectInfo *pobj = pEnum->GetCameraObjectInfo(n);\n            // get connected camera information\n        }\n        :\n        pEnum->Release(); // use Release() function of ICrEnumCameraObjectInfo\n..\n\nThis enumeration function makes the list of “connectable” cameras. A Sony camera, which does not have PC remote control features or is not compatible with this Camera Remote SDK, is not listed. Refer to the supported model list of this Camera Remote SDK.\n\nNote that ICrCameraObjectInfo \\*pobj in the sample code is the object owned by ICrEnumCameraObjectInfo. It means calling ICrEnumCameraObjectInfo::Release() frees the memory of ICrCameraObjectInfo that you get from the enumerator. It can no longer be accessed.",
+    "metadata": {
+        "title": "op_enumerate_cameras",
+        "sdk_version": "V2.00.00"
+    }
+}

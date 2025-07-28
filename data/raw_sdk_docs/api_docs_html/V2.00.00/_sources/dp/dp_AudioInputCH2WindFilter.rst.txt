@@ -1,0 +1,22 @@
+﻿.. _dp-AudioInputCH2WindFilter:
+
+CrDeviceProperty_AudioInputCH2WindFilter
+========================================
+
+Get/Set the audio input CH2 wind filter.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAudioInputCHWindFilter_Off
+    - | Off
+
+  * - CrAudioInputCHWindFilter_On
+    - | On
+

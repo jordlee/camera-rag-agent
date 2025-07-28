@@ -1,0 +1,22 @@
+﻿.. _dp-CameraEframing:
+
+CrDeviceProperty_CameraEframing
+===============================
+
+Get/Set the Camera Eframing 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCameraEframing_Off
+    - | Off
+
+  * - CrCameraEframing_On
+    - | On
+

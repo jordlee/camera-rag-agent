@@ -1,0 +1,25 @@
+﻿.. _command-MediaFormat:
+
+CrCommandId_MediaFormat
+=============================================
+
+Formatting the media. refs Selected Media Format.
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCommandParam_Up 
+    - | Specify when initializing the media in SLOT1
+      | Ex. “CrCommandId_MediaFormat” with “CrCommandParam_Up”
+
+  * - CrCommandParam_Down 
+    - | Specify when initializing the media in SLOT2
+      | Ex. “CrCommandId_MediaFormat” with “CrCommandParam_Down”
+
+**Related API**
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`CrCommandId_MediaFormat, CrCommandId_MediaQuickFormat, CrCommandId_CancelMediaFormat callback<cb-MediaFormat>`

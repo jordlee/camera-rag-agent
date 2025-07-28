@@ -1,0 +1,57 @@
+
+    PROJECT_NAME     = "SDK Documentation - V2.0.0"
+    PROJECT_BRIEF    = "Parsed C++ SDK API for RAG - V2.0.0"
+    PROJECT_LOGO     = ""
+    OUTPUT_DIRECTORY = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/doxygen_xml_output/V2.0.0"
+    GENERATE_XML     = YES
+    GENERATE_HTML    = NO
+    GENERATE_LATEX   = NO
+    GENERATE_RTF     = NO
+    GENERATE_MAN     = NO
+    GENERATE_XML     = YES
+    XML_OUTPUT       = "xml" # Doxygen will create a 'xml' subfolder in OUTPUT_DIRECTORY
+
+    # Input settings
+    # Set INPUT to the top-level SDK_SOURCE_DIR to capture all headers recursively
+    INPUT            = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V2.0.0"
+    # Only process header files (*.h, *.hpp)
+    FILE_PATTERNS    = *.h *.hpp
+    RECURSIVE        = YES # Recurse within SDK_SOURCE_DIR and its subdirectories
+
+    # Explicitly add include paths for resolving types.
+    # Keep both source_dir and crsdk_path as include paths.
+    INCLUDE_PATH     = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V2.0.0" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V2.0.0/CRSDK"
+
+    # Exclude directories (e.g., OpenCV, build folders, etc.)
+    EXCLUDE_PATTERNS = */opencv2/* */build/* */temp/* */test/* */examples/*
+
+    # Extract all details, even private members and static functions
+    EXTRACT_ALL      = YES
+    EXTRACT_STATIC   = YES
+    EXTRACT_PRIVATE  = YES
+    EXTRACT_LOCAL_CLASSES = YES
+    EXTRACT_LOCAL_METHODS = YES
+    SHOW_INCLUDE_FILES = YES
+    INLINE_SIMPLE_STRUCTS = YES
+
+    # Preprocessor settings (Doxygen's internal preprocessor)
+    ENABLE_PREPROCESSING = YES
+    MACRO_EXPANSION = YES
+    EXPAND_ONLY_PREDEF = NO
+    # --- IMPORTANT: Define SCRSDK_API and TEXT() to empty strings for Doxygen ---
+    # This helps Doxygen parse declarations using these macros.
+    PREDEFINED = SCRSDK_API= TEXT(x)=x
+
+    # Force Doxygen to parse .h files as C++
+    EXTENSION_MAPPING = .h=C++
+
+    # Source code Browse
+    SOURCE_BROWSER   = YES
+    VERBATIM_HEADERS = NO
+
+    # Warnings and messages - KEEP ON FOR NOW FOR DEBUGGING!
+    QUIET            = NO
+    WARNINGS         = YES
+    WARN_IF_UNDOCUMENTED = NO
+    WARN_NO_PARAMDOC = NO
+    

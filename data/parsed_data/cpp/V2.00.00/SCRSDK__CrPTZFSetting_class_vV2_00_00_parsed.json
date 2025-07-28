@@ -1,0 +1,54 @@
+{
+    "refid": "class_s_c_r_s_d_k_1_1_cr_p_t_z_f_setting",
+    "kind": "class",
+    "name": "SCRSDK::CrPTZFSetting",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_p_t_z_f_setting_1a9e6d98b92acc1decaaf5baa92062a740",
+            "kind": "variable",
+            "name": "pan",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrDrivePanSetting SCRSDK::CrPTZFSetting::pan",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_p_t_z_f_setting_1ada80986d83193a3d613cd92394a128a5",
+            "kind": "variable",
+            "name": "tilt",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrDriveTiltSetting SCRSDK::CrPTZFSetting::tilt",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_p_t_z_f_setting_1ad3508ef156ed2e6699be37e35066a06b",
+            "kind": "function",
+            "name": "CrPTZFSetting",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrPTZFSetting::CrPTZFSetting",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrPTZFSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

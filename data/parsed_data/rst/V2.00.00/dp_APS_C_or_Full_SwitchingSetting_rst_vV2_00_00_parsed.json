@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_APS_C_or_Full_SwitchingSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-APS_C_or_Full_SwitchingSetting:\n\nCrDeviceProperty_APS_C_or_Full_SwitchingSetting\n===============================================\n\nGet the APS-C or Full Switching Setting\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAPS_C_or_Full_SwitchingSetting_Full\n    - | Full\n\n  * - CrAPS_C_or_Full_SwitchingSetting_APS_C\n    - | APS-C",
+    "metadata": {
+        "title": "dp_APS_C_or_Full_SwitchingSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

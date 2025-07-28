@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_NDFilterOpticalDensityValue.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-NDFilterOpticalDensityValue:\n\nCrDeviceProperty_NDFilterOpticalDensityValue\n============================================\n\nGet/Set the ND Filter Optical Density Value\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrNDFilterOpticalDensityValue_Nothing\n    - | Nothing to display\n\n  * - Other than above values\n    - | 100 times the real value of ND Filter Value\n      | e.g.) 0x00D2 = 210/100 = 2.1\n\n| This value expressed in optical density.",
+    "metadata": {
+        "title": "dp_NDFilterOpticalDensityValue",
+        "sdk_version": "V2.00.00"
+    }
+}

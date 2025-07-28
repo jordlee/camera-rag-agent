@@ -1,0 +1,738 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrVideoStreamSetting</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aab92029f7da7b49012741e9cd87c0846" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aa083aebc97521536cba5e0f7fb944c8a" kindref="member">CrVideoStreamSettingProtocol</ref></type>
+        <definition>CrVideoStreamSettingProtocol SCRSDK::CrVideoStreamSetting::protocol</definition>
+        <argsstring></argsstring>
+        <name>protocol</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::protocol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6728" column="34" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a3917d27337737b45d60cb91a0546282b" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrVideoStreamSetting::protocolPermission</definition>
+        <argsstring></argsstring>
+        <name>protocolPermission</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::protocolPermission</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6729" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6729" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ad33765a610bc072dfbbd02c7b87797ef" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrVideoStreamSetting::urlLength</definition>
+        <argsstring></argsstring>
+        <name>urlLength</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::urlLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6730" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6730" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a77700bf918650a799fcb8d652484ff20" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrVideoStreamSetting::url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::url</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6731" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6731" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ae9af61b17424ad932d7a2986e4db1fed" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::portExists</definition>
+        <argsstring></argsstring>
+        <name>portExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::portExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6732" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a1f93f828696c61a16eb727244f0adfeb" prot="private" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrVideoStreamSetting::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::port</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6733" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6733" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aa6d1437375d29cacea86661c775eee75" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::keyExists</definition>
+        <argsstring></argsstring>
+        <name>keyExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::keyExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6734" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6734" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aac78c027833ef2105d5a22e1415e809d" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrVideoStreamSetting::keyLength</definition>
+        <argsstring></argsstring>
+        <name>keyLength</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::keyLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6735" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6735" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1af74a0aed4fb9be7b15eafe23e2cc11a2" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrVideoStreamSetting::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6736" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6736" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a0c06801402191828b5e83b46fdb79453" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::latencyExists</definition>
+        <argsstring></argsstring>
+        <name>latencyExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::latencyExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6737" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6737" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a79bd2458db358c8cf701538cc0554b4c" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrVideoStreamSetting::latency</definition>
+        <argsstring></argsstring>
+        <name>latency</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::latency</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6738" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6738" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a50d7e6538c2a9ad00833de8d7d1ee544" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::ttlExists</definition>
+        <argsstring></argsstring>
+        <name>ttlExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::ttlExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6739" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6739" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a8bcaa351e675b42d2b3d693e8fae4cca" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrVideoStreamSetting::ttl</definition>
+        <argsstring></argsstring>
+        <name>ttl</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::ttl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6740" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6740" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a8212ea11593e08730004d2b8801cc51a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::cipherExists</definition>
+        <argsstring></argsstring>
+        <name>cipherExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::cipherExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6741" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6741" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a351261d9b409ae1f38de0ebda21c8f43" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ab38f70c94bea09a62fbb00a0e8b71428" kindref="member">CrStreamCipherType</ref></type>
+        <definition>CrStreamCipherType SCRSDK::CrVideoStreamSetting::cipherType</definition>
+        <argsstring></argsstring>
+        <name>cipherType</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::cipherType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6742" column="24" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6742" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a65a6b3354685fa30d286ad4dc7f89af7" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrVideoStreamSetting::cipherKeyLength</definition>
+        <argsstring></argsstring>
+        <name>cipherKeyLength</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::cipherKeyLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6743" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6743" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a3143e5248539498d0b8bbf3de41a8b04" prot="private" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrVideoStreamSetting::cipherKey</definition>
+        <argsstring></argsstring>
+        <name>cipherKey</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::cipherKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6744" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6744" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ae7944fad5fb25bdccb2e58c4d19bb885" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::modeExists</definition>
+        <argsstring></argsstring>
+        <name>modeExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::modeExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6745" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6745" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aa5d88e9df85fe7b62653e42fa7588ccc" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ab95e8a28318d1a148ca5f11ce9ad41da" kindref="member">CrStreamModeSetting</ref></type>
+        <definition>CrStreamModeSetting SCRSDK::CrVideoStreamSetting::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6746" column="25" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6746" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ade86749c313f35d455659ddaaee37619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrVideoStreamSetting::CrVideoStreamSetting</definition>
+        <argsstring>()</argsstring>
+        <name>CrVideoStreamSetting</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::CrVideoStreamSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6697" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a4ade7b249c327138d8a8c322457858fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrVideoStreamSetting::CrVideoStreamSetting</definition>
+        <argsstring>(const CrVideoStreamSetting &amp;ref)</argsstring>
+        <name>CrVideoStreamSetting</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::CrVideoStreamSetting</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting" kindref="compound">CrVideoStreamSetting</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6698" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ab20deb36b3aa244227057e8842f7e3b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrVideoStreamSetting::~CrVideoStreamSetting</definition>
+        <argsstring>()</argsstring>
+        <name>~CrVideoStreamSetting</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::~CrVideoStreamSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6700" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a352d5cc4ccd427e1eeb8cd73200b3f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting" kindref="compound">CrVideoStreamSetting</ref> &amp;</type>
+        <definition>CrVideoStreamSetting &amp; SCRSDK::CrVideoStreamSetting::operator=</definition>
+        <argsstring>(const CrVideoStreamSetting &amp;ref)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting" kindref="compound">CrVideoStreamSetting</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6702" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aeb4ad91ce66cbc2b40aae96cf71d26f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SCRSDK::CrVideoStreamSetting::SetRTMPParameter</definition>
+        <argsstring>(CrInt16u urlLength, const CrInt8u *url, CrInt16u keyLength, const CrInt8u *key)</argsstring>
+        <name>SetRTMPParameter</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::SetRTMPParameter</qualifiedname>
+        <param>
+          <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+          <declname>urlLength</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+          <declname>keyLength</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6704" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ab8fd7b06126d67cfec8201c60ff8da15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SCRSDK::CrVideoStreamSetting::SetSRTParameter</definition>
+        <argsstring>(CrInt16u urlLength, const CrInt8u *url, CrInt32u port, CrInt16u latency, CrInt8u ttl, CrStreamCipherType cipherType, CrInt8u cipherKeyLength, const CrInt8u *cipherKey, CrStreamModeSetting mode)</argsstring>
+        <name>SetSRTParameter</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::SetSRTParameter</qualifiedname>
+        <param>
+          <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+          <declname>urlLength</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+          <declname>latency</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+          <declname>ttl</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1ab38f70c94bea09a62fbb00a0e8b71428" kindref="member">CrStreamCipherType</ref></type>
+          <declname>cipherType</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+          <declname>cipherKeyLength</declname>
+        </param>
+        <param>
+          <type>const <ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+          <declname>cipherKey</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1ab95e8a28318d1a148ca5f11ce9ad41da" kindref="member">CrStreamModeSetting</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6705" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1afda8cccfb0276ca29ca7d1f56321f941" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aa083aebc97521536cba5e0f7fb944c8a" kindref="member">CrVideoStreamSettingProtocol</ref></type>
+        <definition>CrVideoStreamSettingProtocol SCRSDK::CrVideoStreamSetting::GetProtocol</definition>
+        <argsstring>() const</argsstring>
+        <name>GetProtocol</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetProtocol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6707" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a7da1893bc2eafa8149a5defcdd31ad6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrVideoStreamSetting::GetProtocolPermission</definition>
+        <argsstring>() const</argsstring>
+        <name>GetProtocolPermission</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetProtocolPermission</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6708" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a6ca159a33be6ac4721a60929612e105b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrVideoStreamSetting::GetURLLength</definition>
+        <argsstring>() const</argsstring>
+        <name>GetURLLength</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetURLLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6709" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aad111228b0ac2a74e69bce75dd19837a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>const CrInt8u * SCRSDK::CrVideoStreamSetting::GetURL</definition>
+        <argsstring>() const</argsstring>
+        <name>GetURL</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetURL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6710" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ada0812acf8516f3120e6938d4f7edb2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::IsPortExists</definition>
+        <argsstring>() const</argsstring>
+        <name>IsPortExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::IsPortExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6711" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a1c64e8df143dd8b1376ecb1fc75d2109" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrVideoStreamSetting::GetPort</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPort</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetPort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6712" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a11931da60f943f6d74633e3ccbef83e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrVideoStreamSetting::GetKeyLength</definition>
+        <argsstring>() const</argsstring>
+        <name>GetKeyLength</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetKeyLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6713" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ae01f084c5686789cb16710eb0533b7a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::IsKeyExists</definition>
+        <argsstring>() const</argsstring>
+        <name>IsKeyExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::IsKeyExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6714" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a83fc516ab7f0f582cb561e2236187425" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>const CrInt8u * SCRSDK::CrVideoStreamSetting::GetKey</definition>
+        <argsstring>() const</argsstring>
+        <name>GetKey</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6715" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a457fef44965644b6cdfc7a0fc7e774be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::IsLatencyExists</definition>
+        <argsstring>() const</argsstring>
+        <name>IsLatencyExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::IsLatencyExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6716" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a31f854bfce3ecbf9fac5018b04c47127" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrVideoStreamSetting::GetLatency</definition>
+        <argsstring>() const</argsstring>
+        <name>GetLatency</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetLatency</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6717" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a159dc86e141c8b6917007ca9cf284063" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::IsTTLExists</definition>
+        <argsstring>() const</argsstring>
+        <name>IsTTLExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::IsTTLExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6718" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ac68b7aac4c535f2255ff71bc6707d3e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrVideoStreamSetting::GetTTL</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTTL</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetTTL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6719" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a97c2957ba74be100304261e9b43a4d18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::IsCipherExists</definition>
+        <argsstring>() const</argsstring>
+        <name>IsCipherExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::IsCipherExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6720" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a8fd2077873eb95d8731f921818766f64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ab38f70c94bea09a62fbb00a0e8b71428" kindref="member">CrStreamCipherType</ref></type>
+        <definition>CrStreamCipherType SCRSDK::CrVideoStreamSetting::GetCipherType</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCipherType</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetCipherType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6721" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a70864d35f4464988b57101d0378e353d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrVideoStreamSetting::GetCipherKeyLength</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCipherKeyLength</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetCipherKeyLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6722" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a11b5207c37cda1c97c84bb204775b84c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>const CrInt8u * SCRSDK::CrVideoStreamSetting::GetCipherKey</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCipherKey</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetCipherKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6723" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a9387e2f34583398f14b43a57f62c008d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrVideoStreamSetting::IsModeExists</definition>
+        <argsstring>() const</argsstring>
+        <name>IsModeExists</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::IsModeExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6724" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a895b5c5e1a4c3cdc3aa51905b927d80c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ab95e8a28318d1a148ca5f11ce9ad41da" kindref="member">CrStreamModeSetting</ref></type>
+        <definition>CrStreamModeSetting SCRSDK::CrVideoStreamSetting::GetMode</definition>
+        <argsstring>() const</argsstring>
+        <name>GetMode</name>
+        <qualifiedname>SCRSDK::CrVideoStreamSetting::GetMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6725" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6694" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6695" bodyend="6747"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a8212ea11593e08730004d2b8801cc51a" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>cipherExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a3143e5248539498d0b8bbf3de41a8b04" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>cipherKey</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a65a6b3354685fa30d286ad4dc7f89af7" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>cipherKeyLength</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a351261d9b409ae1f38de0ebda21c8f43" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>cipherType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ade86749c313f35d455659ddaaee37619" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>CrVideoStreamSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a4ade7b249c327138d8a8c322457858fd" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>CrVideoStreamSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a11b5207c37cda1c97c84bb204775b84c" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetCipherKey</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a70864d35f4464988b57101d0378e353d" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetCipherKeyLength</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a8fd2077873eb95d8731f921818766f64" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetCipherType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a83fc516ab7f0f582cb561e2236187425" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetKey</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a11931da60f943f6d74633e3ccbef83e6" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetKeyLength</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a31f854bfce3ecbf9fac5018b04c47127" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetLatency</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a895b5c5e1a4c3cdc3aa51905b927d80c" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetMode</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a1c64e8df143dd8b1376ecb1fc75d2109" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetPort</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1afda8cccfb0276ca29ca7d1f56321f941" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetProtocol</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a7da1893bc2eafa8149a5defcdd31ad6a" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetProtocolPermission</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ac68b7aac4c535f2255ff71bc6707d3e6" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetTTL</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aad111228b0ac2a74e69bce75dd19837a" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetURL</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a6ca159a33be6ac4721a60929612e105b" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>GetURLLength</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a97c2957ba74be100304261e9b43a4d18" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>IsCipherExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ae01f084c5686789cb16710eb0533b7a9" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>IsKeyExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a457fef44965644b6cdfc7a0fc7e774be" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>IsLatencyExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a9387e2f34583398f14b43a57f62c008d" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>IsModeExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ada0812acf8516f3120e6938d4f7edb2b" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>IsPortExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a159dc86e141c8b6917007ca9cf284063" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>IsTTLExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1af74a0aed4fb9be7b15eafe23e2cc11a2" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>key</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aa6d1437375d29cacea86661c775eee75" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>keyExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aac78c027833ef2105d5a22e1415e809d" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>keyLength</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a79bd2458db358c8cf701538cc0554b4c" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>latency</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a0c06801402191828b5e83b46fdb79453" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>latencyExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aa5d88e9df85fe7b62653e42fa7588ccc" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>mode</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ae7944fad5fb25bdccb2e58c4d19bb885" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>modeExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a352d5cc4ccd427e1eeb8cd73200b3f05" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>operator=</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a1f93f828696c61a16eb727244f0adfeb" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>port</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ae9af61b17424ad932d7a2986e4db1fed" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>portExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aab92029f7da7b49012741e9cd87c0846" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>protocol</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a3917d27337737b45d60cb91a0546282b" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>protocolPermission</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1aeb4ad91ce66cbc2b40aae96cf71d26f5" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>SetRTMPParameter</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ab8fd7b06126d67cfec8201c60ff8da15" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>SetSRTParameter</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a8bcaa351e675b42d2b3d693e8fae4cca" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>ttl</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a50d7e6538c2a9ad00833de8d7d1ee544" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>ttlExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1a77700bf918650a799fcb8d652484ff20" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>url</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ad33765a610bc072dfbbd02c7b87797ef" prot="private" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>urlLength</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_video_stream_setting_1ab20deb36b3aa244227057e8842f7e3b7" prot="public" virt="non-virtual"><scope>SCRSDK::CrVideoStreamSetting</scope><name>~CrVideoStreamSetting</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,25 @@
+﻿.. _dp-EframingScaleAuto:
+
+CrDeviceProperty_EframingScaleAuto
+==================================
+
+Get/Set the Eframing Scale(Auto) 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrEframingScaleAuto_Low
+    - | Low
+
+  * - CrEframingScaleAuto_Mid
+    - | Mid
+
+  * - CrEframingScaleAuto_High
+    - | High
+

@@ -1,0 +1,62 @@
+
+    PROJECT_NAME     = "SDK Documentation"
+    PROJECT_BRIEF    = "Parsed C++ SDK API for RAG"
+    PROJECT_LOGO     = ""
+    OUTPUT_DIRECTORY = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/doxygen_xml_output"
+    GENERATE_XML     = YES
+    GENERATE_HTML    = NO
+    GENERATE_LATEX   = NO
+    GENERATE_RTF     = NO
+    GENERATE_MAN     = NO
+    GENERATE_XML     = YES
+    XML_OUTPUT       = "xml" # Doxygen will create a 'xml' subfolder in OUTPUT_DIRECTORY
+
+    # Input settings
+    INPUT            = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source"
+    FILE_PATTERNS    = *.h *.hpp *.cpp *.cc
+    RECURSIVE        = YES
+
+    # Explicitly add include paths, especially for project-internal headers
+    # This is often critical for Doxygen to resolve types.
+    INCLUDE_PATH     = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/CRSDK"
+
+    # Exclude directories (e.g., OpenCV, build folders, etc.)
+    EXCLUDE_PATTERNS = */opencv2/* */build/* */temp/* */test/* */examples/*
+
+    # Extract all details, even private members and static functions
+    EXTRACT_ALL      = YES
+    EXTRACT_STATIC   = YES
+    EXTRACT_PRIVATE  = YES
+    EXTRACT_LOCAL_CLASSES = YES
+    EXTRACT_LOCAL_METHODS = YES
+    SHOW_INCLUDE_FILES = YES
+    # INLINE_INHERITED = YES # Removed: This tag was causing a warning.
+    INLINE_SIMPLE_STRUCTS = YES
+
+    # Preprocessor settings (Doxygen's internal preprocessor)
+    ENABLE_PREPROCESSING = YES
+    MACRO_EXPANSION = YES
+    EXPAND_ONLY_PREDEF = NO
+    # --- IMPORTANT: Define SCRSDK_API and TEXT() to empty strings for Doxygen ---
+    # This helps Doxygen parse declarations using these macros.
+    PREDEFINED = SCRSDK_API= TEXT(x)=x
+    # Add other common platform-specific macros if your code relies on them
+    # For example, for Windows SDKs:
+    # PREDEFINED = _WIN32 WIN32 _MSC_VER __cplusplus=201703L
+
+    # Force Doxygen to parse .h files as C++
+    # CORRECTED FORMAT: .ext=language
+    EXTENSION_MAPPING = .h=C++
+
+    # Source code Browse
+    SOURCE_BROWSER   = YES
+    VERBATIM_HEADERS = NO
+
+    # Warnings and messages - KEEP ON FOR NOW FOR DEBUGGING!
+    QUIET            = NO # Temporarily set to NO to see Doxygen's output and warnings
+    WARNINGS         = YES # Temporarily set to YES to see Doxygen's warnings
+    WARN_IF_UNDOCUMENTED = NO
+    WARN_NO_PARAMDOC = NO
+
+    # CLANG_ASSISTED_PARSING = YES # Removed: This tag was causing a warning as it's not enabled in your Doxygen build.
+    

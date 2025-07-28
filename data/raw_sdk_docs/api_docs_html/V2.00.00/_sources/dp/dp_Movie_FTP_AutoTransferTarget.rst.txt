@@ -1,0 +1,25 @@
+﻿.. _dp-Movie_FTP_AutoTransferTarget:
+
+CrDeviceProperty_Movie_FTP_AutoTransferTarget
+=============================================
+
+Get/Set the FTP Auto Transfer Target(Movie)
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPAutoTransferTargetMovie_All
+    - | All
+
+  * - CrFTPAutoTransferTargetMovie_OnlyShotMark
+    - | Only Shot Mark
+
+  * - CrFTPAutoTransferTargetMovie_ProtectOnly
+    - | Protect Only
+

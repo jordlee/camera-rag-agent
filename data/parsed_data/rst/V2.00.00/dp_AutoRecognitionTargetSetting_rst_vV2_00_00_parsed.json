@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AutoRecognitionTargetSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AutoRecognitionTargetSetting:\n\nCrDeviceProperty_AutoRecognitionTargetSetting\n=============================================\n\nGet/Set the auto recognition target setting\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000001\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 0x00000001\n    - step\n\n| Use the available Auto Recognition Target value obtained by :ref:`CrDeviceProperty_AutoRecognitionTargetCandidates<dp-AutoRecognitionTargetCandidates>` for OR operation.\n| Multiple values could be set using OR operation. Thus, at least one option must be set.\n\n| e.g.) 0x00000003=Person & Animal\n|         0x00000018=Insect & Car/Train\n|         0x0000002C=Bird & Insect & Plane",
+    "metadata": {
+        "title": "dp_AutoRecognitionTargetSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

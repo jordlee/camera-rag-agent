@@ -1,0 +1,194 @@
+{
+    "refid": "_cr_device_property_8h",
+    "kind": "file",
+    "name": "CrDeviceProperty.h",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "_cr_device_property_8h_1a30b37cb2389da8524deac22190a04691",
+            "kind": "define",
+            "name": "CrLensVersionNumber_Untaken",
+            "visibility": "define",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "_cr_device_property_8h_1aac0c0c0aaf4d55f7cbca4dff836b9857",
+            "kind": "define",
+            "name": "CrEFRAMING_AREAINFO_MAX",
+            "visibility": "define",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [
+        {
+            "refid": "union_s_c_r_s_d_k_1_1_cr_monitoring_format",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_device_property",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_live_view_property",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_mtp_contents_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_level_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_focus_frame_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_face_frame_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_tracking_frame_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_framing_frame_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_display_string_list_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_media_profile_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_lens_information",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_operation_result_supported_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_zoom_and_focus_preset_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_capture_date",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_contents_file___image_param",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_contents_file___audio_param",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_contents_file",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_contents_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_drive_pan_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_drive_tilt_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_p_t_z_f_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_time_zone_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_daylight_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_eframing_rectangle",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_eframing_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_video_stream_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member",
+            "prot": "public"
+        }
+    ],
+    "metadata": {
+        "title": "CrDeviceProperty.h",
+        "sdk_version": "V2.00.00"
+    }
+}

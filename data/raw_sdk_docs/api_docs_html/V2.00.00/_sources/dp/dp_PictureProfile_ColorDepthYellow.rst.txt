@@ -1,0 +1,27 @@
+﻿.. _dp-PictureProfile_ColorDepthYellow:
+
+CrDeviceProperty_PictureProfile_ColorDepthYellow
+================================================
+
+Get/Set the Picture Profile Color Depth Yellow
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Color Depth Yellow for Picture Profile
+

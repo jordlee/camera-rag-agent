@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ExposureCtrlType.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ExposureCtrlType:\n\nCrDeviceProperty_ExposureCtrlType\n=================================\n\nGet/Set the Exposure Control Type\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrExposureCtrlType_PASMMode\n    - | P/A/S/M Mode\n\n  * - CrExposureCtrlType_FlexibleExposureMode\n    - | Flexible Exposure Mode",
+    "metadata": {
+        "title": "dp_ExposureCtrlType",
+        "sdk_version": "V2.00.00"
+    }
+}

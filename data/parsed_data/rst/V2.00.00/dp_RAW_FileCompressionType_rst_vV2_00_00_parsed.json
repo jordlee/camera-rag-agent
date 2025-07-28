@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RAW_FileCompressionType.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RAW_FileCompressionType:\n\nCrDeviceProperty_RAW_FileCompressionType\n========================================\n\nGet/Set the compression type of RAW file\n\n| This setting is related to “:ref:`CrDeviceProperty_CompressionFileFormatStill<dp-CompressionFileFormatStill>`”.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRAWFile_Compression\n    - | Compression\n\n  * - CrRAWFile_LossLessL\n    - | LosslessL\n\n  * - CrRAWFile_LossLessM\n    - | LosslessM\n\n  * - CrRAWFile_LossLessS\n    - | LosslessS\n\n  * - CrRAWFile_Uncompression\n    - | Uncompression\n\n  * - CrRAWFile_LossLess\n    - | Lossless Compression",
+    "metadata": {
+        "title": "dp_RAW_FileCompressionType",
+        "sdk_version": "V2.00.00"
+    }
+}

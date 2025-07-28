@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusDrivingStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FocusDrivingStatus:\n\nCrDeviceProperty_FocusDrivingStatus\n===================================\n\nGet the Focus Driving Status(Absolute)\n\n| This value changes only when the :ref:`CrDeviceProperty_FocusPositionSetting<dp-FocusPositionSetting>` operation.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFocusDrivingStatus_NotDriving\n    - | Not Driving\n\n  * - CrFocusDrivingStatus_Driving\n    - | Driving\n\n| “Driving (0x02)” is set for this device property throughout the short Focus Driving period.\n| “Not Driving (0x01)” is set for this device property except during the short Focus Driving period.\n| “Driving (0x02)” may be set for this device property during the period from  the time when the Focus Driving request is received to the time when the focus acutually drives.\n| This device property only reflects the Focus Driving Status derived from “Load Zoom and Focus Position” and from “Focus Position Setting.”",
+    "metadata": {
+        "title": "dp_FocusDrivingStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

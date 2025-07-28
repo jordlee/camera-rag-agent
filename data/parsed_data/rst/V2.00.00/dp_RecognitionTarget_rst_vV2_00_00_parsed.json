@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecognitionTarget.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RecognitionTarget:\n\nCrDeviceProperty_RecognitionTarget\n==================================\n\nGet/Set the Recognition Target\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRecognitionTarget_Person\n    - | Person\n\n  * - CrRecognitionTarget_AnimalBird\n    - | Animal + Bird\n\n  * - CrRecognitionTarget_Animal\n    - | Animal\n\n  * - CrRecognitionTarget_Bird\n    - | Bird\n\n  * - CrRecognitionTarget_Insect\n    - | Insect\n\n  * - CrRecognitionTarget_CarTrain\n    - | Car/Train\n\n  * - CrRecognitionTarget_Plane\n    - | Plane\n\n  * - CrRecognitionTarget_Auto\n    - | Auto",
+    "metadata": {
+        "title": "dp_RecognitionTarget",
+        "sdk_version": "V2.00.00"
+    }
+}

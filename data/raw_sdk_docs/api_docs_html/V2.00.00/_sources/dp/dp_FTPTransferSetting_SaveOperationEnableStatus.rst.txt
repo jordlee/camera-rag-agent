@@ -1,0 +1,22 @@
+﻿.. _dp-FTPTransferSetting_SaveOperationEnableStatus:
+
+CrDeviceProperty_FTPTransferSetting_SaveOperationEnableStatus
+=============================================================
+
+Get the FTP Transfer Setting Save Operation Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPTransferSettingSaveOperation_Disable
+    - | Disable
+
+  * - CrFTPTransferSettingSaveOperation_Enable
+    - | Enable
+

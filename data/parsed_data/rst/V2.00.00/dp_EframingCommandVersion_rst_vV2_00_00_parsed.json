@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_EframingCommandVersion.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-EframingCommandVersion:\n\nCrDeviceProperty_EframingCommandVersion\n=======================================\n\nGet the enabled status and eframing command version.\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - variable\n    - | EFraming Command Version\n\n| ex) The Version is 0x00000064. (0d100) \n| When Eframing feature can not be excuted, enableFlag is Disable.",
+    "metadata": {
+        "title": "dp_EframingCommandVersion",
+        "sdk_version": "V2.00.00"
+    }
+}

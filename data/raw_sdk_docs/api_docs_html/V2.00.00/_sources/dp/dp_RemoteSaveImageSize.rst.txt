@@ -1,0 +1,22 @@
+﻿.. _dp-RemoteSaveImageSize:
+
+CrDeviceProperty_RemoteSaveImageSize
+====================================
+
+Get/Set the Remote Save Image Size
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRemoteSaveImageSize_LargeSize
+    - | Large Size
+
+  * - CrRemoteSaveImageSize_SmallSize
+    - | Small Size
+

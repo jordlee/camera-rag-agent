@@ -1,0 +1,22 @@
+﻿.. _dp-EframingAutoFraming:
+
+CrDeviceProperty_EframingAutoFraming
+====================================
+
+Get/Set the eframing auto framing
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrEframingAutoFraming_Off
+    - | Off
+
+  * - CrEframingAutoFraming_On
+    - | On
+

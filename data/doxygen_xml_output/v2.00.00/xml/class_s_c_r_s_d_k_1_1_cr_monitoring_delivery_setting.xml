@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrMonitoringDeliverySetting</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1ab74aebec7ca6e5f9bef178d6550d55cd" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrMonitoringDeliverySetting::reserved1</definition>
+        <argsstring></argsstring>
+        <name>reserved1</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::reserved1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6137" column="26" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1aebd0c2bf208f821964722fc636bde4db" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a7ee4e1cb4462977438ffcd72f10ee119" kindref="member">CrMonitoringDeliveryType</ref></type>
+        <definition>CrMonitoringDeliveryType SCRSDK::CrMonitoringDeliverySetting::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6138" column="26" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1ac15558d3047c98347277e2d9bad4dc78" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrMonitoringDeliverySetting::reserved2</definition>
+        <argsstring></argsstring>
+        <name>reserved2</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::reserved2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6139" column="26" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1ac9e971172148c3730b5aa4dd1e229439" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMonitoringDeliverySetting::ipAddress</definition>
+        <argsstring></argsstring>
+        <name>ipAddress</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::ipAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6140" column="25" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a8fa95f69376389b43dfa3b6c66919567" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMonitoringDeliverySetting::downTime</definition>
+        <argsstring></argsstring>
+        <name>downTime</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::downTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6141" column="26" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1aad404ca045193a2e089b88ac598739ae" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMonitoringDeliverySetting::videoPort</definition>
+        <argsstring></argsstring>
+        <name>videoPort</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::videoPort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6142" column="26" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a293337235465bb89ec883061f9e2bd4d" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMonitoringDeliverySetting::metaPort</definition>
+        <argsstring></argsstring>
+        <name>metaPort</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::metaPort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6143" column="26" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a90b818ab612810e157a97688561dbcca" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1acdd8712d2a724129089a4d6d4f688237" kindref="member">CrMonitoringFormat_DeliveryImageQualityLevel</ref></type>
+        <definition>CrMonitoringFormat_DeliveryImageQualityLevel SCRSDK::CrMonitoringDeliverySetting::deliveryImageQualityLevel</definition>
+        <argsstring></argsstring>
+        <name>deliveryImageQualityLevel</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::deliveryImageQualityLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6144" column="46" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1aa7089825b0ecadbb99f7213d5bb9243f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a868c08754ae6bb52443d45faad08abf7" kindref="member">CrMonitoringTransportProtocol</ref></type>
+        <definition>CrMonitoringTransportProtocol SCRSDK::CrMonitoringDeliverySetting::transportProtocol</definition>
+        <argsstring></argsstring>
+        <name>transportProtocol</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::transportProtocol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6145" column="31" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6145" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1ae3aa6597b8c7837aece3d4f1dedf4846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMonitoringDeliverySetting::CrMonitoringDeliverySetting</definition>
+        <argsstring>()</argsstring>
+        <name>CrMonitoringDeliverySetting</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::CrMonitoringDeliverySetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1acdd2e515bf14c1183460eaffbc490397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMonitoringDeliverySetting::~CrMonitoringDeliverySetting</definition>
+        <argsstring>()</argsstring>
+        <name>~CrMonitoringDeliverySetting</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::~CrMonitoringDeliverySetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a3466e7eea5ad64b2411d2f3de80e36f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMonitoringDeliverySetting::CrMonitoringDeliverySetting</definition>
+        <argsstring>(const CrMonitoringDeliverySetting &amp;ref)</argsstring>
+        <name>CrMonitoringDeliverySetting</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::CrMonitoringDeliverySetting</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting" kindref="compound">CrMonitoringDeliverySetting</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1aa6a6ac8650a27721c08a7a7ae4cea850" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ae5ec7c235a391ea7d34702af08d3bd5f" kindref="member">CrError</ref></type>
+        <definition>CrError SCRSDK::CrMonitoringDeliverySetting::SetIpAddress</definition>
+        <argsstring>(const char *_ipAddress)</argsstring>
+        <name>SetIpAddress</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::SetIpAddress</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>_ipAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6134" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6134" bodyend="6134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a6e5c2b9b7c634d2610fb442fa9b8d5f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrMonitoringDeliverySetting::GetIpAddress</definition>
+        <argsstring>()</argsstring>
+        <name>GetIpAddress</name>
+        <qualifiedname>SCRSDK::CrMonitoringDeliverySetting::GetIpAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6135" column="12" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6135" bodyend="6135"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6126" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6127" bodyend="6146"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1ae3aa6597b8c7837aece3d4f1dedf4846" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>CrMonitoringDeliverySetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a3466e7eea5ad64b2411d2f3de80e36f2" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>CrMonitoringDeliverySetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a90b818ab612810e157a97688561dbcca" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>deliveryImageQualityLevel</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a8fa95f69376389b43dfa3b6c66919567" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>downTime</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a6e5c2b9b7c634d2610fb442fa9b8d5f0" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>GetIpAddress</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1ac9e971172148c3730b5aa4dd1e229439" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>ipAddress</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1a293337235465bb89ec883061f9e2bd4d" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>metaPort</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1ab74aebec7ca6e5f9bef178d6550d55cd" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>reserved1</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1ac15558d3047c98347277e2d9bad4dc78" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>reserved2</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1aa6a6ac8650a27721c08a7a7ae4cea850" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>SetIpAddress</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1aa7089825b0ecadbb99f7213d5bb9243f" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>transportProtocol</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1aebd0c2bf208f821964722fc636bde4db" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>type</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1aad404ca045193a2e089b88ac598739ae" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>videoPort</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_monitoring_delivery_setting_1acdd2e515bf14c1183460eaffbc490397" prot="public" virt="non-virtual"><scope>SCRSDK::CrMonitoringDeliverySetting</scope><name>~CrMonitoringDeliverySetting</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+﻿.. _dp-S1:
+
+CrDeviceProperty_S1
+=============================================
+
+Control shutter half-release (S1) button.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrLockIndicator_Unlocked
+    - | Unlock
+
+  * - CrLockIndicator_Locked 
+    - | Lock
+

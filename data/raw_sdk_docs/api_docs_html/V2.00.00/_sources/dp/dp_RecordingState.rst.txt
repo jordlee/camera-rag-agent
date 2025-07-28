@@ -1,0 +1,27 @@
+﻿.. _dp-RecordingState:
+
+CrDeviceProperty_RecordingState
+===============================
+
+Get the Movie Recording State
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x00
+    - Not Recording
+
+  * - 0x01
+    - Recording
+
+  * - 0x02
+    - Recording Failed
+
+| “Waiting Record” (0x03) is not record during “Interval REC (movie)” recording.
+

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusBracketRecordingFolder.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FocusBracketRecordingFolder:\n\nCrDeviceProperty_FocusBracketRecordingFolder\n============================================\n\nGet/Set the Focus Bracket Recording Folder\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFocusBracketRecordingFolder_CurrentFolder\n    - | Current Folder\n\n  * - CrFocusBracketRecordingFolder_NewFolder\n    - | New Folder",
+    "metadata": {
+        "title": "dp_FocusBracketRecordingFolder",
+        "sdk_version": "V2.00.00"
+    }
+}

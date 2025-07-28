@@ -1,0 +1,24 @@
+﻿.. _dp-LensInformationEnableStatus:
+
+CrDeviceProperty_LensInformationEnableStatus
+============================================
+
+Get the Lens Information Enable Status
+
+| Valid only in movie mode.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrLensInformation_Disable
+    - | Disable
+
+  * - CrLensInformation_Enable
+    - | Enable
+

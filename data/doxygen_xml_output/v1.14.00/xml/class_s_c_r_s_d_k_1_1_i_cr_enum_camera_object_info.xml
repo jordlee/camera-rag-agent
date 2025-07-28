@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SCRSDK::ICrEnumCameraObjectInfo</compoundname>
+    <includes refid="_i_cr_camera_object_info_8h" local="no">ICrCameraObjectInfo.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1a53b04efcbd7ed6024d5d1c27645d42d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>CrInt32u</type>
+        <definition>virtual CrInt32u SCRSDK::ICrEnumCameraObjectInfo::GetCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetCount</name>
+        <qualifiedname>SCRSDK::ICrEnumCameraObjectInfo::GetCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/ICrCameraObjectInfo.h" line="65" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1af3b7e8317ec9cd976f13f2855f277fa4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const <ref refid="class_s_c_r_s_d_k_1_1_i_cr_camera_object_info" kindref="compound">ICrCameraObjectInfo</ref> *</type>
+        <definition>virtual const ICrCameraObjectInfo * SCRSDK::ICrEnumCameraObjectInfo::GetCameraObjectInfo</definition>
+        <argsstring>(CrInt32u index) const =0</argsstring>
+        <name>GetCameraObjectInfo</name>
+        <qualifiedname>SCRSDK::ICrEnumCameraObjectInfo::GetCameraObjectInfo</qualifiedname>
+        <param>
+          <type>CrInt32u</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/ICrCameraObjectInfo.h" line="66" column="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1a6dbcb1d446b4be7f6f376409a926282c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::ICrEnumCameraObjectInfo::Release</definition>
+        <argsstring>()=0</argsstring>
+        <name>Release</name>
+        <qualifiedname>SCRSDK::ICrEnumCameraObjectInfo::Release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/ICrCameraObjectInfo.h" line="68" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/ICrCameraObjectInfo.h" line="62" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/ICrCameraObjectInfo.h" bodystart="63" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1af3b7e8317ec9cd976f13f2855f277fa4" prot="public" virt="pure-virtual"><scope>SCRSDK::ICrEnumCameraObjectInfo</scope><name>GetCameraObjectInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1a53b04efcbd7ed6024d5d1c27645d42d9" prot="public" virt="pure-virtual"><scope>SCRSDK::ICrEnumCameraObjectInfo</scope><name>GetCount</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1a6dbcb1d446b4be7f6f376409a926282c" prot="public" virt="pure-virtual"><scope>SCRSDK::ICrEnumCameraObjectInfo</scope><name>Release</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

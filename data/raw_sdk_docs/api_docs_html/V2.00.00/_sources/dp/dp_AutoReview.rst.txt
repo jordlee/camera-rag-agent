@@ -1,0 +1,22 @@
+﻿.. _dp-AutoReview:
+
+CrDeviceProperty_AutoReview
+===========================
+
+Get/Set the Auto Review 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAutoReview_Off
+    - | Off
+
+  * - Other than above values
+    - | The real value of Auto Review time in seconds.
+

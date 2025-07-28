@@ -1,0 +1,24 @@
+﻿.. _dp-RecordingSelfTimerStatus:
+
+CrDeviceProperty_RecordingSelfTimerStatus
+=========================================
+
+Get the Movie Recording Self timer Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieRecordingSelfTimerStatus_Idle
+    - | Idle
+
+  * - CrMovieRecordingSelfTimerStatus_CountingDown
+    - | Counting down
+
+| When “Movie Rec Self timer” is Off, the IsEnable Field is disabled.
+

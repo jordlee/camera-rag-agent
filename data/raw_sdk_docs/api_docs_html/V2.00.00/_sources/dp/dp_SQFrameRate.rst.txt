@@ -1,0 +1,24 @@
+﻿.. _dp-SQFrameRate:
+
+CrDeviceProperty_SQFrameRate
+============================
+
+Get/Set the S&Q Frame Rate
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSQFrameRate_Invalid
+    - | Invalid
+
+  * - Other than above values
+    - | The range of frame rate is 1fps ~ 60fps, and 100fps / 120fps / 150fps / 180fps / 200fps / 240fps.
+
+| The range of frame rate is 1 fps to 60 fps, and 100 fps / 120 fps / 150 fps / 180 fps / 200 fps / 240 fps.
+

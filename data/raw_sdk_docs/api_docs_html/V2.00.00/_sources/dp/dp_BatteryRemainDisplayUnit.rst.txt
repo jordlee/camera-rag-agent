@@ -1,0 +1,25 @@
+﻿.. _dp-BatteryRemainDisplayUnit:
+
+CrDeviceProperty_BatteryRemainDisplayUnit
+=========================================
+
+Get/Set the Battery Remain Display Unit
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrBatteryRemainDisplayUnit_minute
+    - | minute
+
+  * - CrBatteryRemainDisplayUnit_percent
+    - | percent
+
+  * - CrBatteryRemainDisplayUnit_voltage
+    - | voltage
+

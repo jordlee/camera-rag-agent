@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting" kind="struct" language="C++" prot="public">
+    <compoundname>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting_1a3266418e015f4a021c043a4bb48a973e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aa15edf97a767b188cf8cc6228227c891" kindref="member">CrTimeZoneSettingExists</ref></type>
+        <definition>CrTimeZoneSettingExists SCRSDK::CrTimeZoneSetting::CrDateTimeSetting::exists</definition>
+        <argsstring></argsstring>
+        <name>exists</name>
+        <qualifiedname>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting::exists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6598" column="25" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting_1abb9031eb223a0c6da0496b13a934ec08" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char SCRSDK::CrTimeZoneSetting::CrDateTimeSetting::dateTime[18]</definition>
+        <argsstring>[18]</argsstring>
+        <name>dateTime</name>
+        <qualifiedname>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting::dateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6599" column="6" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6599" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting_1a2125906b3bdef52b0090be1d9a5202fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting::CrDateTimeSetting</definition>
+        <argsstring>()</argsstring>
+        <name>CrDateTimeSetting</name>
+        <qualifiedname>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting::CrDateTimeSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6594" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6594" bodyend="6597"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6592" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6593" bodyend="6600"/>
+    <listofallmembers>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting_1a2125906b3bdef52b0090be1d9a5202fc" prot="public" virt="non-virtual"><scope>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting</scope><name>CrDateTimeSetting</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting_1abb9031eb223a0c6da0496b13a934ec08" prot="public" virt="non-virtual"><scope>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting</scope><name>dateTime</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting_1a3266418e015f4a021c043a4bb48a973e" prot="public" virt="non-virtual"><scope>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting</scope><name>exists</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

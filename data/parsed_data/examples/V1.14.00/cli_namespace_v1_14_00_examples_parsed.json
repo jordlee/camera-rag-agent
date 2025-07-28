@@ -1,0 +1,42 @@
+{
+    "name": "cli",
+    "kind": "namespace",
+    "functions": [
+        {
+            "name": "parse_connection_type",
+            "kind": "function",
+            "code": "ConnectionType parse_connection_type(text conn_type)\n{\n    ConnectionType type(ConnectionType::UNKNOWN);\n\n    if (TEXT(\"IP\") == conn_type) {\n        type = ConnectionType::NETWORK;\n    }\n    else if (TEXT(\"USB\") == conn_type) {\n        type = ConnectionType::USB;\n    }\n    return type;\n}",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 9,
+            "definition": "ConnectionType cli::parse_connection_type",
+            "source_file": "data/raw_sdk_docs/sdk_source/v1.14.00/ConnectionInfo.cpp"
+        }
+    ],
+    "other_snippets": [
+        {
+            "name": "tin",
+            "kind": "variable",
+            "code": "std::basic_istream<text_char>& tin  = std::cin;\nstd::basic_ostream<text_char>& tout = std::cout;\n#endif\n} // namespace cli",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 10,
+            "definition": "std::basic_istream< text_char > & cli::tin",
+            "source_file": "data/raw_sdk_docs/sdk_source/v1.14.00/Text.cpp"
+        },
+        {
+            "name": "tout",
+            "kind": "variable",
+            "code": "std::basic_ostream<text_char>& tout = std::cout;\n#endif\n} // namespace cli",
+            "brief_comment": "",
+            "detailed_comment": "",
+            "start_line": 11,
+            "definition": "std::basic_ostream< text_char > & cli::tout",
+            "source_file": "data/raw_sdk_docs/sdk_source/v1.14.00/Text.cpp"
+        }
+    ],
+    "metadata": {
+        "title": "cli",
+        "sdk_version": "V1.14.00"
+    }
+}

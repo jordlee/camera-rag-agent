@@ -1,0 +1,21 @@
+﻿.. _dp-TotalBatteryLevel:
+
+CrDeviceProperty_TotalBatteryLevel
+==================================
+
+Get the Total Battery Level Indicator
+
+    CrDataType: `CrDataType_UInt32Rage`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - --
+    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_BatteryLevel<dp-BatteryLevel>`
+
+| The command is used for calculating the total battery level indicator when multiply batteries are attached. 
+

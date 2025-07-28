@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SnapshotInfo.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SnapshotInfo:\n\nCrDeviceProperty_SnapshotInfo\n=============================\n\nGet the Shooting File Info\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x0000\n    - min\n\n  * - 0xFFFF\n    - max\n\n  * - 0x0001\n    - step\n\n| 0x0000:transferable file doesn't exit\n| 0x0001-0x7FFF:exist file\n| If the value is over 0x8001(MSB is 0b01), it is possible to get the Shot files.",
+    "metadata": {
+        "title": "dp_SnapshotInfo",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,22 @@
+﻿.. _dp-FlickerScanEnableStatus:
+
+CrDeviceProperty_FlickerScanEnableStatus
+========================================
+
+Get the Flicker Scan Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFlickerScan_Disable
+    - | Disable
+
+  * - CrFlickerScan_Enable
+    - | Enable
+

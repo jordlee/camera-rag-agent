@@ -1,0 +1,19 @@
+.. _op-disconnect-a-camera:
+
+Disconnect a Camera 
+===================
+
+Call the Disconnect() function to disconnect the camera. The function needs one parameter for the DeviceHandle to disconnect.
+
+Example:
+
+.. code-block:: cpp
+
+    void Disconnect(CrDeviceHandle handle) {
+    	SCRSDK::Disconnect(handle);
+
+If the handle is not valid, Disconnect() returns an error. 
+
+Disconnect() is also an asynchronous process. The return from Disconnect() does not mean that the camera has been disconnected. At the time of the OnDisconnected() callback function is called, the camera has been disconnected from the Camera Remote SDK.
+
+See the table on the next page for the connection status of the camera and Camera Remote SDK.

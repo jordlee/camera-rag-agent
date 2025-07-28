@@ -1,0 +1,23 @@
+﻿.. _dp-NDFilterPreset1Value:
+
+CrDeviceProperty_NDFilterPreset1Value
+=====================================
+
+Get/Set the ND filter preset 1 value.
+
+    CrDataType: `CrDataType_UInt64Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrNDFilterPresetValue_Nothing
+    - | nothing to display.
+
+  * - Other than above values
+    - | The real value of ND Filter (Upper four bytes: numerator, Lower four bytes: denominator)
+
+

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_get_the_liveview_properties.rst.txt",
+    "file_type": "rst",
+    "content": ".. _op-get-the-liveview-properties:\n\nGet the Live View Properties\n============================\n\nSome camera properties cannot be acquired by the GetDeviceProperties() function. The properties that are defined in CrLiveViewPropertyCode are independent from the device property list, and must use the GetLiveViewProperties() function, because those properties are strongly related to the live view image.\n\nThe function interface and the usage are similar to GetDeviceProperties(). \n\nSimilar to the device properties, the memory object returned from GetLiveViewProperties() must also be freed by ReleaseLiveViewProperties().\n\nExample:\n\n.. code-block:: cpp\n\n    CrLiveViewProperty *pProperties = NULL;\n\tCrInt32 numofProperties = 0;\n\tSCRSDK::GetLiveViewProperties(handle, &pProperties, &numofProperties);\n\tif (pProperties) {\t// the property list is received successfully\n        for (CrInt32 n = 0; n < numofProperties; n++) {\n\t    \tswitch (pProperties[n].GetCode()) {\n\t\t    case CrLiveViewProperty_AF_Area_Position: \n    \t\t// code to parse the properties...\n\t:\n\t    }\n    \tSCRSDK::ReleaseLiveViewProperties(handle, pProperties); \n\t}",
+    "metadata": {
+        "title": "op_get_the_liveview_properties",
+        "sdk_version": "V2.00.00"
+    }
+}

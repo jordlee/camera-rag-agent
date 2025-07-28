@@ -1,0 +1,80 @@
+{
+    "refid": "class_s_c_r_s_d_k_1_1_cr_time_zone_setting",
+    "kind": "class",
+    "name": "SCRSDK::CrTimeZoneSetting",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a2ce01658fc80e1073b17b774bda3b8f9",
+            "kind": "variable",
+            "name": "dateTimeSetting",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrDateTimeSetting SCRSDK::CrTimeZoneSetting::dateTimeSetting",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a9adeaf1c96b6b4721feb2c2d416bb1ea",
+            "kind": "variable",
+            "name": "areaSetting",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrAreaSetting SCRSDK::CrTimeZoneSetting::areaSetting",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a73cdc8592ac6b7fc76cd2e0e5933668e",
+            "kind": "variable",
+            "name": "daylightSetting",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrDaylightSetting SCRSDK::CrTimeZoneSetting::daylightSetting",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a63bc5bb4a6d59ec3c9edc0184db38ab9",
+            "kind": "function",
+            "name": "CrTimeZoneSetting",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrTimeZoneSetting::CrTimeZoneSetting",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting",
+            "prot": "public"
+        },
+        {
+            "refid": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_daylight_setting",
+            "prot": "public"
+        }
+    ],
+    "metadata": {
+        "title": "SCRSDK::CrTimeZoneSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

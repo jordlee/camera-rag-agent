@@ -1,0 +1,54 @@
+{
+    "refid": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting",
+    "kind": "struct",
+    "name": "SCRSDK::CrTimeZoneSetting::CrAreaSetting",
+    "source_file": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting_1af6935d1591b906f8bd28007bbb1722d4",
+            "kind": "variable",
+            "name": "exists",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrTimeZoneSettingExists SCRSDK::CrTimeZoneSetting::CrAreaSetting::exists",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting_1a24f6ed8e0bbc399194e453efb96d2166",
+            "kind": "variable",
+            "name": "area",
+            "visibility": "public-attrib",
+            "type": "char",
+            "definition": "char SCRSDK::CrTimeZoneSetting::CrAreaSetting::area[6]",
+            "argsstring": "[6]",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting_1aaf8d626a6523688841e8a550adc26dfb",
+            "kind": "function",
+            "name": "CrAreaSetting",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrTimeZoneSetting::CrAreaSetting::CrAreaSetting",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrTimeZoneSetting::CrAreaSetting",
+        "sdk_version": "V1.14.00"
+    }
+}

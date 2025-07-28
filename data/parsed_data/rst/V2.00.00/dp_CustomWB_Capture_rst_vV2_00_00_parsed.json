@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CustomWB_Capture.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-CustomWB_Capture:\n\nCrDeviceProperty_CustomWB_Capture\n=================================\n\nExecute the Custom WB Capture\n\n    CrDataType: `CrDataType_UInt32`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000000\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 1\n    - step\n\n\n| The x coordinate is set in the upper two bytes and the y coordinate is set in the lower two bytes.\n| The enable range can be obtained from \"Custom WB Capturable Area\". \n| The settable area is more inside by half the Frame Size than “Custom WB Capturable Area\". \n| Note: \n|   The settable range varies depending on the model and aspect setting\n|  \n| Fig. Relationship between capture frame size and settable position \n\n.. image:: /_images/dp_CustomWB_Capture_fig.png\n  :width: 50%\n\n**Related API**\n  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`\n    | See: :ref:`CrDeviceProperty_CustomWB_Capture callback<cb-CustomWB_Capture>`",
+    "metadata": {
+        "title": "dp_CustomWB_Capture",
+        "sdk_version": "V2.00.00"
+    }
+}

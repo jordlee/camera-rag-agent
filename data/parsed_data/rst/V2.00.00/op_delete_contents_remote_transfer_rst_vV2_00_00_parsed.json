@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_delete_contents_remote_transfer.rst.txt",
+    "file_type": "rst",
+    "content": ".. _op-delete-contents-remote-transfer:\n\nDelete Contents from Media by Contents Transfer with remote control mode\n========================================================================\n\nTo delete contents from Media, call SCRSDK:::ref:`DeleteRemoteTransferContentsFile()<api-delete-remote-transfer-contents-file>`.\nDeleteRemoteTransferContentsFile() needs three parameters.\n\nExample:\n\n.. code-block:: cpp\n\n    SCRSDK::CrSlotNumber slotNumber = SCRSDK::CrSlotNumber_Slot1;\n    SCRSDK::CrError ret = SCRSDK::DeleteRemoteTransferContentsFile(handle, slotNumber, contentId);\n    if (CR_FAILED(ret))\n    {\n        printf(\"fail create ptzf preset.\\n\");\n        return;\n    }",
+    "metadata": {
+        "title": "op_delete_contents_remote_transfer",
+        "sdk_version": "V2.00.00"
+    }
+}

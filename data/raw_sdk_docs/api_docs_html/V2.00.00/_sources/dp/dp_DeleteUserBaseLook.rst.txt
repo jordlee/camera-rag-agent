@@ -1,0 +1,29 @@
+﻿.. _dp-DeleteUserBaseLook:
+
+CrDeviceProperty_DeleteUserBaseLook
+===================================
+
+Set/Get to Delete UserBaseLook
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrDeleteUserBaseLook_Invalid
+    - | Invalid
+
+  * - CrDeleteUserBaseLook_All
+    - | All
+
+  * - Other than above values
+    - | The value of UserBaseLookNumber
+
+
+| It may increase or decrease because it varies depending on the model and setting status.
+| See the :ref:`GetDisplayStringList<api-get-display-string-list>` for display character.
+

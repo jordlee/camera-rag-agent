@@ -1,0 +1,19 @@
+﻿.. _dp-BaseLookNameofPlayback:
+
+CrDeviceProperty_BaseLookNameofPlayback
+=======================================
+
+Get the BaseLook name of playback.
+
+    CrDataType: `CrDataType_STR`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - String
+    - BaseLook Name (Max Length: 255)
+

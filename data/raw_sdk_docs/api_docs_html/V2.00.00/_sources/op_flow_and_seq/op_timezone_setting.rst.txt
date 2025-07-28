@@ -1,0 +1,67 @@
+.. _op-timezone-setting:
+
+Set/Get the TimeZone Setting
+============================
+
+.. _op-set-timezone-setting:
+
+Set TimeZone Setting
+--------------------
+
+To set TimeZone Setting, call SCRSDK:::ref:`SetTimeZoneSetting()<api-header-set-timezone-setting>`.
+SetTimeZoneSetting() needs two parameter.
+
+Example:
+
+.. code-block:: cpp
+
+    // Setting for DateTime/Area/Daylight
+    SCRSDK::CrTimeZoneSetting timezoneSetting;
+    // for DateTime
+    timezoneSetting.dateTimeSetting.exists = SCRSDK::CrTimeZoneSettingExists_True;
+    // DateTime format is “YYYYMMDDThhmmss.s” by utf-8
+    const char* date = "20251231T153000.0";
+    memcpy(timezoneSetting.dateTimeSetting.dateTime,date,strlen(date));
+    // for Area
+    timezoneSetting.areaSetting.exists = SCRSDK::CrTimeZoneSettingExists_True;
+    // Area format is “±hhmm” by utf-8
+    const char* area = "+0300";
+    memcpy(timezoneSetting.areaSetting.area, area, strlen(area));
+    // for Daylight
+    timezoneSetting.daylightSetting.exists = SCRSDK::CrTimeZoneSettingExists_True;
+    timezoneSetting.daylightSetting.daylight = SCRSDK::CrDaylightSavings_On;
+
+    SCRSDK::CrError ret = SCRSDK::SetTimeZoneSetting(handle, timezoneSetting);
+    if (CR_FAILED(ret))
+    {
+        printf("fail set timezone setting.\n");
+        return;
+    }
+
+
+.. _op-get-timezone-setting:
+
+Get TimeZone Setting
+--------------------
+
+| To get TimeZone Setting, call SCRSDK:::ref:`RequestTimeZoneSetting()<api-header-request-timezone-setting>` and :ref:`GetTimeZoneSetting()<api-header-get-timezone-setting>`.
+| GetTimeZoneSetting() needs two parameter.
+
+Example:
+
+.. code-block:: cpp
+
+    SCRSDK::RequestTimeZoneSetting(handle);
+
+    // sleep until the following occurs.
+    // - CrNotify_TimeZoneSetting_Request_Success
+    // - CrWarning_TimeZoneSetting_Request_Fail
+    // - CrWarning_TimeZoneSetting_Request_DeviceBusy
+
+    SCRSDK::CrTimeZoneSetting timezoneSetting{};
+    SCRSDK::CrError ret = SCRSDK::GetTimeZoneSetting(handle, timezoneSetting);
+    if (CR_FAILED(ret))
+    {
+        printf("fail set timezone setting.\n");
+        return;
+    }

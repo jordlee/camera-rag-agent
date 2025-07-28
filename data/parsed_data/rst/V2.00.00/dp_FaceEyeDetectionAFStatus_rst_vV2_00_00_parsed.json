@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FaceEyeDetectionAFStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FaceEyeDetectionAFStatus:\n\nCrDeviceProperty_FaceEyeDetectionAFStatus\n=========================================\n\nGet face eye detection AF status.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFaceEyeDetectionAFStatus_FaceEyeOnlyAFStop\n    - | Face/Eye Only AF Stop\n\n  * - CrFaceEyeDetectionAFStatus_FaceEyeOnlyAF\n    - | Face/Eye Only AF\n\n  * - CrFaceEyeDetectionAFStatus_FaceEyePriorityAF\n    - | Face/Eye Priority AF",
+    "metadata": {
+        "title": "dp_FaceEyeDetectionAFStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

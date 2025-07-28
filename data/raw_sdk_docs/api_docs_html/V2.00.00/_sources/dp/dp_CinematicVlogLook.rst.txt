@@ -1,0 +1,82 @@
+﻿.. _dp-CinematicVlogLook:
+
+CrDeviceProperty_CinematicVlogLook
+==================================
+
+Get/Set the cinematic vlog look.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCinematicVlogLook_Classic
+    - | Classic
+
+  * - CrCinematicVlogLook_S_Cinetone
+    - | S-cinetone
+
+  * - CrCinematicVlogLook_Clean
+    - | Clean
+
+  * - CrCinematicVlogLook_Chic
+    - | Chic
+
+  * - CrCinematicVlogLook_Fresh
+    - | Fresh
+
+  * - CrCinematicVlogLook_Mono
+    - | Mono
+
+  * - CrCinematicVlogLook_User1
+    - | User1
+
+  * - CrCinematicVlogLook_User2
+    - | User2
+
+  * - CrCinematicVlogLook_User3
+    - | User3
+
+  * - CrCinematicVlogLook_User4
+    - | User4
+
+  * - CrCinematicVlogLook_User5
+    - | User5
+
+  * - CrCinematicVlogLook_User6
+    - | User6
+
+  * - CrCinematicVlogLook_User7
+    - | User7
+
+  * - CrCinematicVlogLook_User8
+    - | User8
+
+  * - CrCinematicVlogLook_User9
+    - | User9
+
+  * - CrCinematicVlogLook_User10
+    - | User10
+
+  * - CrCinematicVlogLook_User11
+    - | User11
+
+  * - CrCinematicVlogLook_User12
+    - | User12
+
+  * - CrCinematicVlogLook_User13
+    - | User13
+
+  * - CrCinematicVlogLook_User14
+    - | User14
+
+  * - CrCinematicVlogLook_User15
+    - | User15
+
+  * - CrCinematicVlogLook_User16
+    - | User16
+

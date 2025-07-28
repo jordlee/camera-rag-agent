@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PaintLookKneeSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PaintLookKneeSetting:\n\nCrDeviceProperty_PaintLookKneeSetting\n=====================================\n\nGet/Set the paint/look knee setting.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPaintLookKneeSetting_Off\n    - | Off\n\n  * - CrPaintLookKneeSetting_On\n    - | On",
+    "metadata": {
+        "title": "dp_PaintLookKneeSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

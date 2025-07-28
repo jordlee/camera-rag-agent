@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusOperationWithInt16.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FocusOperationWithInt16:\n\nCrDeviceProperty_FocusOperationWithInt16\n========================================\n\nExecute focus operation by specifying direction and speed.\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - -32768\n    - min\n\n  * - 32767\n    - max\n\n  * - 1\n    - step\n\n\n| This Control Code can be executed only when the device property \":ref:`Focus Operation with INT16 Enable Status<dp-FocusOperationWithInt16EnableStatus>`\" is Enable (0x01).\n| EX) value 0x0001(slow) 0x7FFF(fast) ： Far focus\n|      value 0xFFFF(slow) 0x8000(fast) ： Near focus\n|      value 0x0000 ： Stop focus",
+    "metadata": {
+        "title": "dp_FocusOperationWithInt16",
+        "sdk_version": "V2.00.00"
+    }
+}

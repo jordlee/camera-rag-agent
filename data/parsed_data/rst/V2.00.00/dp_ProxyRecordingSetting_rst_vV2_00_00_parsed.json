@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ProxyRecordingSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ProxyRecordingSetting:\n\nCrDeviceProperty_ProxyRecordingSetting\n======================================\n\nGet/Set the Proxy Record Setting\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrProxyRecordingSetting_Invalid\n    - | Invalid\n\n  * - CrProxyRecordingSetting_16M_420_10bit\n    - | 16M 420 10bit\n\n  * - CrProxyRecordingSetting_9M_420_10bit\n    - | 9M 420 10bit\n\n  * - CrProxyRecordingSetting_6M_420_8bit\n    - | 6M 420 8bit",
+    "metadata": {
+        "title": "dp_ProxyRecordingSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

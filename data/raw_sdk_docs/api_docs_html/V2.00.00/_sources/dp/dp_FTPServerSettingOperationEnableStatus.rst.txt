@@ -1,0 +1,22 @@
+﻿.. _dp-FTPServerSettingOperationEnableStatus:
+
+CrDeviceProperty_FTPServerSettingOperationEnableStatus
+======================================================
+
+Get the FTP Server Setting Operation Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPServerSettingOperation_Disable
+    - | Disable
+
+  * - CrFTPServerSettingOperation_Enable
+    - | Enable
+

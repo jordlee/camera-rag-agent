@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FTP_AutoTransferTarget.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FTP_AutoTransferTarget:\n\nCrDeviceProperty_FTP_AutoTransferTarget\n=======================================\n\nGet/Set the FTP Auto Transfer Target FileType (Still/Movie)\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFTPAutoTransferTarget_StillOnly\n    - | Still\n\n  * - CrFTPAutoTransferTarget_MovieOnly\n    - | Movie\n\n  * - CrFTPAutoTransferTarget_StillAndMovie\n    - | Still and Movie",
+    "metadata": {
+        "title": "dp_FTP_AutoTransferTarget",
+        "sdk_version": "V2.00.00"
+    }
+}

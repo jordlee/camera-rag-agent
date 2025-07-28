@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecordingSettingFileName.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RecordingSettingFileName:\n\nCrDeviceProperty_RecordingSettingFileName\n=========================================\n\nGet/Set the Recording Setting File Name\n\n    CrDataType: `CrDataType_STR`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - String\n    - Filel Name\n\n| If the character size is invalid, EventCode: SDIE_OperationResults \"Character size error\" is notified.\n| If invalid value is set, EventCode:SDIE_OperationResults \"Invalid parameter error\" is notified.\n\n| Notify with OnWarningExt callback when update fails.\n|    - CrWarningExt_OperationResultsParam_CharacterSizeError\n|    - CrWarningExt_OperationResultsParam_InvalidParameterError",
+    "metadata": {
+        "title": "dp_RecordingSettingFileName",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DRO.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-DRO:\n\nCrDeviceProperty_DRO\n====================\n\nGet/Set the Dynamic Range Optimizer\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrDRangeOptimizer_Off\n    - | DRO OFF\n\n  * - CrDRangeOptimizer_On\n    - | DRO\n\n  * - CrDRangeOptimizer_Plus\n    - | DRO+\n\n  * - CrDRangeOptimizer_Plus_Manual_1\n    - | DRO + Manual1\n\n  * - CrDRangeOptimizer_Plus_Manual_2\n    - | DRO + Manual2\n\n  * - CrDRangeOptimizer_Plus_Manual_3\n    - | DRO + Manual3\n\n  * - CrDRangeOptimizer_Plus_Manual_4\n    - | DRO + Manual4\n\n  * - CrDRangeOptimizer_Plus_Manual_5\n    - | DRO + Manual5\n\n  * - CrDRangeOptimizer_Auto\n    - | DRO AUTO\n\n  * - CrDRangeOptimizer_HDR_Auto\n    - | HDR AUTO\n\n  * - CrDRangeOptimizer_HDR_10Ev\n    - | HDR 1.0Ev\n\n  * - CrDRangeOptimizer_HDR_20Ev\n    - | HDR 2.0Ev\n\n  * - CrDRangeOptimizer_HDR_30Ev\n    - | HDR 3.0Ev\n\n  * - CrDRangeOptimizer_HDR_40Ev\n    - | HDR 4.0Ev\n\n  * - CrDRangeOptimizer_HDR_50Ev\n    - | HDR 5.0Ev\n\n  * - CrDRangeOptimizer_HDR_60Ev\n    - | HDR 6.0Ev",
+    "metadata": {
+        "title": "dp_DRO",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,22 @@
+﻿.. _command-PowerOff:
+
+CrCommandId_PowerOff
+=============================================
+
+Execute power off.
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCommandParam_Down
+    - | Specify "Down" to turn off the power.
+
+| Note:
+| To turn on the power after the power is turned off, please operate the camera's ON/OFF (Power) switch or input the shutter trigger signal via USB.
+| The camera will not start up even if the main power of the camera is turned on after the camera is turned off by this command while power is supplied via USB. In this case, please input the shutter trigger signal via USB to start the camera.
+| "Auto Pixel Mapping" is not performed with this function. It is recommended to perform CrCommandId_PixelMapping periodically.
+

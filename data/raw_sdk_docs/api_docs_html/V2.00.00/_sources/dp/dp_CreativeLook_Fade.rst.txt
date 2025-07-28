@@ -1,0 +1,27 @@
+﻿.. _dp-CreativeLook_Fade:
+
+CrDeviceProperty_CreativeLook_Fade
+==================================
+
+Get/Set the Creative Look Fade
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Fade for Creative Look
+

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FTP_TransferTarget.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FTP_TransferTarget:\n\nCrDeviceProperty_FTP_TransferTarget\n===================================\n\nGet/Set the FTP Transfer Target(Still)\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFTPTransferTargetStill_JpegHeifOnly\n    - | JPEG/HEIF Only\n\n  * - CrFTPTransferTargetStill_RawOnly\n    - | RAW Only\n\n  * - CrFTPTransferTargetStill_RawAndJpegHeif\n    - | RAW & JPEG/HEIF",
+    "metadata": {
+        "title": "dp_FTP_TransferTarget",
+        "sdk_version": "V2.00.00"
+    }
+}

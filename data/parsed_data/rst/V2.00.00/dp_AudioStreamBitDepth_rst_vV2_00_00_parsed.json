@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AudioStreamBitDepth.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AudioStreamBitDepth:\n\nCrDeviceProperty_AudioStreamBitDepth\n====================================\n\nGet/Set the streaming audio bit depth.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAudioStreamBitDepth_16bit\n    - | 16bit\n\n  * - CrAudioStreamBitDepth_24bit\n    - | 24bit\n\n  * - CrAudioStreamBitDepth_32bit\n    - | 32bit",
+    "metadata": {
+        "title": "dp_AudioStreamBitDepth",
+        "sdk_version": "V2.00.00"
+    }
+}

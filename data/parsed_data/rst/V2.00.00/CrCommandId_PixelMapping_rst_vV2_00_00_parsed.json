@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/command/CrCommandId_PixelMapping.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _command-PixelMapping:\n\nCrCommandId_PixelMapping\n=============================================\n\nExecute pixel mapping.\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCommandParam_Down\n    - | Specify \"Down\" when you want to image sensor optimization(Pixel Mapping).\n      | Valid when :ref:`CrDeviceProperty_PixelMappingEnableStatus<dp-PixelMappingEnableStatus>` is Enable. When the Pixel Mapping is finished, the camera restart.\n\n| Note:\n| \"Auto Pixel Mapping\" is not performed with this function. It is recommended to perform CrCommandId_PixelMapping periodically.",
+    "metadata": {
+        "title": "CrCommandId_PixelMapping",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,19 @@
+﻿.. _dp-LensModelName:
+
+CrDeviceProperty_LensModelName
+==============================
+
+Get the Lens Model Name
+
+    CrDataType: `CrDataType_STR`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - String
+    - Lens Model Name
+

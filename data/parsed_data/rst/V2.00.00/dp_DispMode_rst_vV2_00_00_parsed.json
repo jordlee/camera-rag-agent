@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DispMode.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-DispMode:\n\nCrDeviceProperty_DispMode\n=========================\n\nGet/Set the Monitor DISP(Screen Display) Mode\n\n| You can select one of the items enabled in :ref:`CrDeviceProperty_DispModeSetting<dp-DispModeSetting>`.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrDispMode_GraphicDisplay\n    - | Graphic Display\n\n  * - CrDispMode_DisplayAllInfo\n    - | Display All Information\n\n  * - CrDispMode_NoDispInfo\n    - | No Display Information\n\n  * - CrDispMode_Histogram\n    - | Histogram\n\n  * - CrDispMode_Level\n    - | Level\n\n  * - CrDispMode_ForViewFinder\n    - | For Viewfinder\n\n  * - CrDispMode_MonitorOff\n    - | Monitor Off",
+    "metadata": {
+        "title": "dp_DispMode",
+        "sdk_version": "V2.00.00"
+    }
+}

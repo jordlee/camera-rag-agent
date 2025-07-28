@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PushAutoIris.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PushAutoIris:\n\nCrDeviceProperty_PushAutoIris\n=============================\n\nGet/Set the push auto iris.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPushAutoIris_Up\n    - | Up\n\n  * - CrPushAutoIris_Down\n    - | Down",
+    "metadata": {
+        "title": "dp_PushAutoIris",
+        "sdk_version": "V2.00.00"
+    }
+}

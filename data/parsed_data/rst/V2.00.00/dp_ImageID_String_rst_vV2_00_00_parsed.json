@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ImageID_String.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ImageID_String:\n\nCrDeviceProperty_ImageID_String\n===============================\n\nGet/Set the Image ID(String)\n\n| See \"GPS information and shooting image link\" in Tips / Trouble shooting for how to use it.\n\n    CrDataType: `CrDataType_STR`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - String\n    - Image ID (String)\n\n\n| By specifying a value in this property before shooting, the value specified in the Exif tag of the image file shot after that will be saved.\n| Please set the string in UTF16BE.\n| The maximum number of characters that can be specified depends on whether :ref:`CrDeviceProperty_MaximumSizeOfImageIDString<dp-MaximumSizeOfImageIDString>` can be obtained.\n|   When CrDeviceProperty_MaximumSizeOfImageIDString can be obtained: Look at the value of CrDeviceProperty_MaximumSizeOfImageIDString.\n|   When CrDeviceProperty_MaximumSizeOfImageIDString cannot be obtained: The maximum number of characters is 64.\n| If blank (\"\") is set, Exif tags are not save in the image.\n| Note:\n| The Exif tag for Image ID (String) is 0x2043.",
+    "metadata": {
+        "title": "dp_ImageID_String",
+        "sdk_version": "V2.00.00"
+    }
+}

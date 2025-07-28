@@ -1,0 +1,22 @@
+﻿.. _dp-WirelessFlash:
+
+CrDeviceProperty_WirelessFlash
+==============================
+
+Get/Set the Wireless Flash Setting
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrWirelessFlash_Off
+    - | Off
+
+  * - CrWirelessFlash_On
+    - | On
+

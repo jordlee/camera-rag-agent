@@ -1,0 +1,30 @@
+﻿.. _dp-WhiteBalanceTintStep:
+
+CrDeviceProperty_WhiteBalanceTintStep
+=============================================
+
+Set the white balance tint.
+
+| Manipulating this device property updates the CurrentValue of :ref:`CrDeviceProperty_WhiteBalanceTint<dp-WhiteBalanceTint>`.
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - -198
+    - min
+
+  * - 198
+    - max
+
+  * - 1
+    - step
+
+| The CurrentValue of this device property is always zero.
+| This device property is used to update :ref:`CrDeviceProperty_WhiteBalanceTint<dp-WhiteBalanceTint>`.
+

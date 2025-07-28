@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecordablePowerSources.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RecordablePowerSources:\n\nCrDeviceProperty_RecordablePowerSources\n=======================================\n\nGet all power source kinds on which the recording function is available.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRecordablePowerSources_DC\n    - | DC\n\n  * - CrRecordablePowerSources_Battery\n    - | Battery\n\n  * - CrRecordablePowerSources_PoE\n    - | PoE\n\n| The supported values of this device property tell on which power source your camera can record internally.\n| Refer to the device property \":ref:`CrDeviceProperty_PowerSource<dp-PowerSource>`\" to know the current power source.",
+    "metadata": {
+        "title": "dp_RecordablePowerSources",
+        "sdk_version": "V2.00.00"
+    }
+}

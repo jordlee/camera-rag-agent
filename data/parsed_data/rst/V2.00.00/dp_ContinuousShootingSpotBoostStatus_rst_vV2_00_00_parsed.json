@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ContinuousShootingSpotBoostStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ContinuousShootingSpotBoostStatus:\n\nCrDeviceProperty_ContinuousShootingSpotBoostStatus\n==================================================\n\nGet the Spot Boost Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrContinuousShootingSpotBoostStatus_NotSpotBoosting\n    - | Not SpotBoosting\n\n  * - CrContinuousShootingSpotBoostStatus_SpotBoosting\n    - | SpotBoosting",
+    "metadata": {
+        "title": "dp_ContinuousShootingSpotBoostStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

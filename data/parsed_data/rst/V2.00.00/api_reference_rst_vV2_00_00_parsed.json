@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/api_reference/api_reference.rst.txt",
+    "file_type": "rst",
+    "content": ".. _api-reference:\n\nAPI Reference\n=============\n\nThis chapter provides the detailed API specification of Camera Remote SDK using the below format.\n\n.. toctree::\n   :maxdepth: 1\n   :hidden:\n\n   /api_reference/initialize\n   /api_reference/release\n   /api_reference/camera_object\n   /api_reference/connection\n   /api_reference/device\n   /api_reference/device_property\n   /api_reference/send_command\n   /api_reference/liveview\n   /api_reference/device_setting\n   /api_reference/sdk_version\n   /api_reference/sdk_serial_number\n   /api_reference/update_sdk_information\n   /api_reference/contents_transfer\n   /api_reference/contents_transfer_with_remote_control\n   /api_reference/display_string\n   /api_reference/setting_file\n   /api_reference/media_profile\n   /api_reference/lens_information\n   /api_reference/ftp_information_for_ILME_FX6_MPC_2610_PXW_Z200_and_HXR-NX800\n   /api_reference/ftp_information_for_other_models\n   /api_reference/operation_result_information\n   /api_reference/monitoring\n   /api_reference/movie_playback\n   /api_reference/remote_firmware_update\n   /api_reference/control_pan_tilt\n   /api_reference/preset_ptzf_clear\n   /api_reference/preset_ptzf_set\n   /api_reference/set_timezone_setting\n   /api_reference/request_timezone_setting\n   /api_reference/get_timezone_setting\n   /api_reference/eframing\n   /api_reference/stream_setting\n   /api_reference/scene_file\n   /api_reference/upload_custom_grid_line_file",
+    "metadata": {
+        "title": "api_reference",
+        "sdk_version": "V2.00.00"
+    }
+}

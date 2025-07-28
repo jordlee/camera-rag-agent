@@ -1,0 +1,25 @@
+﻿.. _dp-LiveViewStatus:
+
+CrDeviceProperty_LiveViewStatus
+===============================
+
+LiveView Status
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrLiveView_Disable
+    - | LiveView Support but Disable just now :If this value is set, the host should not get the LiveView Image.
+
+  * - CrLiveView_Enable
+    - | LiveView Support and Enable :The host can get the LiveView Image and activate LiveView button if have.
+
+  * - CrLiveView_NotSupport
+    - | LiveView Not Support :Just definition, If the camera doesn't support Liveview, the host can't get this property by any operation.
+

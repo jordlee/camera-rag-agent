@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_cr_types_8h" kind="file" language="C++">
+    <compoundname>CrTypes.h</compoundname>
+    <includedby refid="_camera_remote___s_d_k_8h" local="yes">data/raw_sdk_docs/sdk_source/CRSDK/CameraRemote_SDK.h</includedby>
+    <includedby refid="_cr_command_data_8h" local="yes">data/raw_sdk_docs/sdk_source/CRSDK/CrCommandData.h</includedby>
+    <includedby refid="_cr_defines_8h" local="yes">data/raw_sdk_docs/sdk_source/CRSDK/CrDefines.h</includedby>
+    <includedby refid="_i_cr_camera_object_info_8h" local="yes">data/raw_sdk_docs/sdk_source/CRSDK/ICrCameraObjectInfo.h</includedby>
+    <includedby refid="_cr_debug_string_8h" local="no">data/raw_sdk_docs/sdk_source/CrDebugString.h</includedby>
+    <includedby refid="_message_define_8h" local="yes">data/raw_sdk_docs/sdk_source/MessageDefine.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/CameraRemote_SDK.h</label>
+        <link refid="_camera_remote___s_d_k_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/CrCommandData.h</label>
+        <link refid="_cr_command_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/CrDefines.h</label>
+        <link refid="_cr_defines_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h</label>
+        <link refid="_cr_device_property_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h</label>
+        <link refid="_cr_image_data_block_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h</label>
+        <link refid="_cr_types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/ICrCameraObjectInfo.h</label>
+        <link refid="_i_cr_camera_object_info_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h</label>
+        <link refid="_i_device_callback_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>data/raw_sdk_docs/sdk_source/CameraDevice.h</label>
+        <link refid="_camera_device_8h"/>
+      </node>
+      <node id="6">
+        <label>data/raw_sdk_docs/sdk_source/CrDebugString.h</label>
+        <link refid="_cr_debug_string_8h"/>
+      </node>
+      <node id="13">
+        <label>data/raw_sdk_docs/sdk_source/MessageDefine.h</label>
+        <link refid="_message_define_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>data/raw_sdk_docs/sdk_source/OpenCVWrapper.h</label>
+        <link refid="_open_c_v_wrapper_8h"/>
+      </node>
+      <node id="4">
+        <label>data/raw_sdk_docs/sdk_source/PropertyValueTable.h</label>
+        <link refid="_property_value_table_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_cr_types_8h_1a598066bd180f8bb7e269d02788cd060b" prot="public" static="no">
+        <type>char</type>
+        <definition>typedef char CrInt8</definition>
+        <argsstring></argsstring>
+        <name>CrInt8</name>
+        <briefdescription>
+<para>8bit signed integer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" line="39" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char CrInt8u</definition>
+        <argsstring></argsstring>
+        <name>CrInt8u</name>
+        <briefdescription>
+<para>8bit unsigned integer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" line="40" column="22" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_cr_types_8h_1a030642d16c15caffcb3b362ee17d5d39" prot="public" static="no">
+        <type>short</type>
+        <definition>typedef short CrInt16</definition>
+        <argsstring></argsstring>
+        <name>CrInt16</name>
+        <briefdescription>
+<para>16bit signed integer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" line="41" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short CrInt16u</definition>
+        <argsstring></argsstring>
+        <name>CrInt16u</name>
+        <briefdescription>
+<para>16bit unsigned integer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" line="42" column="23" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_cr_types_8h_1aceebc03a6f78ac2f1ccdabc87a8580a2" prot="public" static="no">
+        <type>char</type>
+        <definition>typedef char CrAChar</definition>
+        <argsstring></argsstring>
+        <name>CrAChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" line="43" column="13" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_cr_types_8h_1acd8f79fa1a85134e8d9119f23cc39474" prot="public" static="no">
+        <type>wchar_t</type>
+        <definition>typedef wchar_t CrWChar</definition>
+        <argsstring></argsstring>
+        <name>CrWChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" line="44" column="16" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" prot="public" static="no">
+        <type><ref refid="_cr_types_8h_1aceebc03a6f78ac2f1ccdabc87a8580a2" kindref="member">CrAChar</ref></type>
+        <definition>typedef CrAChar CrChar</definition>
+        <argsstring></argsstring>
+        <name>CrChar</name>
+        <briefdescription>
+<para>Platform native character type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" line="48" column="16" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CRTYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CRTYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;tchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#define<sp/>__T(x)<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__APPLE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SIZE_T_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt32;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>u_int32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt32u;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt64;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>u_int64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt64u;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_WIN32)<sp/>||<sp/>defined(_WIN64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>__int32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt32;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>__int32<sp/><sp/><sp/><sp/>CrInt32u;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>__int64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt64;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>__int64<sp/><sp/><sp/><sp/>CrInt64u;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__linux__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt32;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>u_int32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt32u;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt64;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>u_int64_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CrInt64u;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>__APPLE__,<sp/>not<sp/>_WIN32,<sp/>not<sp/>_WIN64,<sp/>and<sp/>not<sp/>__linux__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>Unsupported<sp/>platform.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>__APPLE__,<sp/>not<sp/>_WIN32,<sp/>not<sp/>_WIN64,<sp/>and<sp/>not<sp/>__linux__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_cr_types_8h_1a598066bd180f8bb7e269d02788cd060b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_cr_types_8h_1a598066bd180f8bb7e269d02788cd060b" kindref="member">CrInt8</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="_cr_types_8h_1a030642d16c15caffcb3b362ee17d5d39" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_cr_types_8h_1a030642d16c15caffcb3b362ee17d5d39" kindref="member">CrInt16</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="_cr_types_8h_1aceebc03a6f78ac2f1ccdabc87a8580a2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_cr_types_8h_1aceebc03a6f78ac2f1ccdabc87a8580a2" kindref="member">CrAChar</ref>;</highlight></codeline>
+<codeline lineno="44" refid="_cr_types_8h_1acd8f79fa1a85134e8d9119f23cc39474" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_cr_types_8h_1acd8f79fa1a85134e8d9119f23cc39474" kindref="member">CrWChar</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_UNICODE)<sp/>||<sp/>defined(UNICODE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_cr_types_8h_1acd8f79fa1a85134e8d9119f23cc39474" kindref="member">CrWChar</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_cr_types_8h_1aceebc03a6f78ac2f1ccdabc87a8580a2" kindref="member">CrAChar</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//CRTYPES_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrTypes.h"/>
+  </compounddef>
+</doxygen>

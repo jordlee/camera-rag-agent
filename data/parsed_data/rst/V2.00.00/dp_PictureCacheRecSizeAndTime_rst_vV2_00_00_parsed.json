@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PictureCacheRecSizeAndTime.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PictureCacheRecSizeAndTime:\n\nCrDeviceProperty_PictureCacheRecSizeAndTime\n===========================================\n\nGet/Set the picture cache recording size and time.\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - 0x00000000 ～0xFFFFFFFF\n    - | The cache size [Upper 8bits] | cache rec time(1/100sec) [Lower 24bits]\n\n| The cache size is set in the upper 8bits, the cache rec time is set in the lower 24bits.\n| if cache size is \"Short\" and cache rec time is 5sec, set 0x010001F4. 0x01 = \"Short\", 0x0001F4 = 500/100 = 5.00sec\n| If cache size is unused and only the cache rec time is set, set 0x00 in the upper 8bits.\n| The value of cache size is \"None(0x00)\"、\"Short (0x01)\", \"Middle (0x02)\", \"Long (0x03)\", \"Max (0x04)\". 0x05 to 0xFF is the reserve value.",
+    "metadata": {
+        "title": "dp_PictureCacheRecSizeAndTime",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ContentsTransferProgress.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ContentsTransferProgress:\n\nCrDeviceProperty_ContentsTransferProgress\n=============================================\n\nGets the handle and progress of the content during transfer\n\n    CrDataType: `CrDataType_UInt64`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - 63-32bit\n    - | CrContentHandle\n      | Content handle during transfer processing\n\n  * - 31-0bit\n    - | 0-100\n      | Transfer progress rate. Unit is percent(%)\n\n| Content with a large file size is acquired in multiple steps.\n| The acquisition time changes depending on the size of the file size. With this progress rate, you can predict that the transfer of the specified content will be completed.",
+    "metadata": {
+        "title": "dp_ContentsTransferProgress",
+        "sdk_version": "V2.00.00"
+    }
+}

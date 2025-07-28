@@ -1,0 +1,28 @@
+﻿.. _dp-TCUBDisplaySetting:
+
+CrDeviceProperty_TCUBDisplaySetting
+===================================
+
+Get/Set the TC/UB Display Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTCUBDisplaySetting_Counter
+    - | Counter
+
+  * - CrTCUBDisplaySetting_TC
+    - | Time Code
+
+  * - CrTCUBDisplaySetting_UB
+    - | User Bit
+
+  * - CrTCUBDisplaySetting_Duration
+    - | Duration
+

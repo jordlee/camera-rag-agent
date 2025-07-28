@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/command/CrCommandId_SensorCleaning.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _command-SensorCleaning:\n\nCrCommandId_SensorCleaning\n=============================================\n\nExecute sensor cleaning.\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCommandParam_Down\n    - | Specify \"Down\" when you want to Sensor Cleaning.\n      | Valid when :ref:`CrDeviceProperty_SensorCleaningEnableStatus<dp-SensorCleaningEnableStatus>` is Enable. When the Sensor Cleaning is finished, the camera restart.\n\n| This Control Code can be executed only when the device property \"Sensor Cleaning Enable Status\" is Enable (0x01).",
+    "metadata": {
+        "title": "CrCommandId_SensorCleaning",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,22 @@
+﻿.. _dp-ShutterMode:
+
+CrDeviceProperty_ShutterMode
+============================
+
+Get/Set the Shutter Mode
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrShutterMode_Speed
+    - | Speed
+
+  * - CrShutterMode_Angle
+    - | Angle
+

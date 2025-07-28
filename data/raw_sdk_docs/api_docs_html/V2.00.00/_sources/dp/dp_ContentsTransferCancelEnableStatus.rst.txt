@@ -1,0 +1,22 @@
+﻿.. _dp-ContentsTransferCancelEnableStatus:
+
+CrDeviceProperty_ContentsTransferCancelEnableStatus
+===================================================
+
+Get the cancelability status of content transfer.
+
+    CrDataType: `CrDataType_UInt16`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCancelContentsTransfer_Disable
+    - | Disable
+
+  * - CrCancelContentsTransfer_Enable
+    - | Enable
+

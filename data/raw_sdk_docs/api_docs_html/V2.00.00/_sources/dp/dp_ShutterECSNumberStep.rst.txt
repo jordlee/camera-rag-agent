@@ -1,0 +1,28 @@
+﻿.. _dp-ShutterECSNumberStep:
+
+CrDeviceProperty_ShutterECSNumberStep
+=============================================
+
+Set the shutter ECS number.
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - -32768
+    - min
+
+  * - 32767
+    - max
+
+  * - 1
+    - step
+
+| The CurrentValue of this device property is always zero.
+| Updating this property will be reflected in :ref:`CrDeviceProperty_ShutterECSNumber<dp-ShutterECSNumber>`.
+

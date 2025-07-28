@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Movie_Recording_FrameRateSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-Movie_Recording_FrameRateSetting:\n\nCrDeviceProperty_Movie_Recording_FrameRateSetting\n=================================================\n\nGet/Set the Recording Frame Rate Setting(Movie) \n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRecordingFrameRateSettingMovie_120p\n    - | 120p\n      | Actual frequency might be 119.88.\n\n  * - CrRecordingFrameRateSettingMovie_100p\n    - | 100p\n\n  * - CrRecordingFrameRateSettingMovie_60p\n    - | 60p\n      | Actual frequency might be 59.94.\n\n  * - CrRecordingFrameRateSettingMovie_50p\n    - | 50p\n\n  * - CrRecordingFrameRateSettingMovie_30p\n    - | 30p\n      | Actual frequency might be 29.97.\n\n  * - CrRecordingFrameRateSettingMovie_25p\n    - | 25p\n\n  * - CrRecordingFrameRateSettingMovie_24p\n    - | 24p\n      | Actual frequency might be 23.98 except ILME-FX6/MPC-2610/ PXW-Z200/HXR-NX800.\n\n  * - CrRecordingFrameRateSettingMovie_23_98p\n    - | 23.98p\n\n  * - CrRecordingFrameRateSettingMovie_29_97p\n    - | 29.97p\n\n  * - CrRecordingFrameRateSettingMovie_59_94p\n    - | 59.94p\n\n  * - CrRecordingFrameRateSettingMovie_24_00p\n    - | 24.00p\n\n  * - CrRecordingFrameRateSettingMovie_119_88p\n    - | 119.88p\n\n| The value of this Device Property has been changed since version 1.08.00 to be expressed as an exact value.\n| When using these models, please refer to the table and replace the definitions.\n\n.. include:: ./dp_Movie_Recording_FrameRateSetting.inc",
+    "metadata": {
+        "title": "dp_Movie_Recording_FrameRateSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

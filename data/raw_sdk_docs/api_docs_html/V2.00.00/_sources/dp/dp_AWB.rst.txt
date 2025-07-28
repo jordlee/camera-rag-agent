@@ -1,0 +1,22 @@
+﻿.. _dp-AWB:
+
+CrDeviceProperty_AWB
+====================
+
+Get/Set the AWB
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAWB_Up
+    - | Up
+
+  * - CrAWB_Down
+    - | Down
+

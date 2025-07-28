@@ -1,0 +1,34 @@
+﻿.. _dp-MediaSLOT2_ImageQuality:
+
+CrDeviceProperty_MediaSLOT2_ImageQuality
+========================================
+
+Get/Set the Image Quality of media(SLOT2)
+
+| This property is effective when Recording Media for still images is set to "Sort Recording", and :ref:`CrDeviceProperty_MediaSLOT2_FileType<dp-MediaSLOT2_FileType>` is set to "CrFileType_Jpeg" or "CrFileType_Heif".
+
+| For ILCE-1 : MENU > Shooting > Image Quality > Image Quality Settings > JPEG Quality/HEIF Quality
+
+| This setting is related to “CrDeviceProperty_CompressionFileFormatStill”.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrImageQuality_ExFine (CrJpegQuality_ExFine)
+    - | Extra fine
+
+  * - CrImageQuality_Fine (CrJpegQuality_Fine)
+    - | Fine
+
+  * - CrImageQuality_Standard (CrJpegQuality_Standard)
+    - | Standard
+
+  * - CrImageQuality_Light (CrJpegQuality_Light)
+    - | Light
+

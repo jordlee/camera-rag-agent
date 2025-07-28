@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AFAreaPositionAF_C.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AFAreaPositionAF_C:\n\nCrDeviceProperty_AFAreaPositionAF_C\n===================================\n\nGet/Set the AF area position (x,y) for AF-C.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000000\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 1\n    - step\n\n| Upper two bytes: The x coordinate.\n| Lower two bytes: The y coordinate.\n|  e.g.) (x, y) = (150, 100) : 0x00960064",
+    "metadata": {
+        "title": "dp_AFAreaPositionAF_C",
+        "sdk_version": "V2.00.00"
+    }
+}

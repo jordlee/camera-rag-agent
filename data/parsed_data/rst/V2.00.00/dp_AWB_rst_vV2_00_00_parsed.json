@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AWB.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AWB:\n\nCrDeviceProperty_AWB\n====================\n\nGet/Set the AWB\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAWB_Up\n    - | Up\n\n  * - CrAWB_Down\n    - | Down",
+    "metadata": {
+        "title": "dp_AWB",
+        "sdk_version": "V2.00.00"
+    }
+}

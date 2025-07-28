@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_LensVersionNumber.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-LensVersionNumber:\n\nCrDeviceProperty_LensVersionNumber\n==================================\n\nGet the Lens Version Number\n\n    CrDataType: `CrDataType_STR`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - String\n    - Lens Version Number\n\n| For example, when the major number of the lens version is 1, \"01\" is set.\n| CrLensVersionNumber_Untaken(blank) if the lens version cannot be obtained.\n| For example, this gets `01` for the major number 1.",
+    "metadata": {
+        "title": "dp_LensVersionNumber",
+        "sdk_version": "V2.00.00"
+    }
+}

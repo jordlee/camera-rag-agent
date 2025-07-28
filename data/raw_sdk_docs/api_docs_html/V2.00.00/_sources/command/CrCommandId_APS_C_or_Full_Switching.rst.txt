@@ -1,0 +1,25 @@
+﻿.. _command-APS_C_or_Full_Switching:
+
+CrCommandId_APS_C_or_Full_Switching
+===================================
+
+Switch the image sensor to APS-C or Full.
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCommandParam_Up
+    - | Be sure to specify "Up" after specifying "Down".
+
+  * - CrCommandParam_Down
+    - | Specify “Down” to switch between APS-C and Full.
+
+| Execute APS-C or FULL switching control of the camera
+
+| Valid when :ref:`CrDeviceProperty_APS_C_or_Full_SwitchingEnableStatus<dp-APS_C_or_Full_SwitchingEnableStatus>` is Enable. Each time you execute a command, the image sensor of the camera switches between APS-C size and full size. 
+| You can check the current value with :ref:`CrDeviceProperty_APS_C_or_Full_SwitchingSetting<dp-APS_C_or_Full_SwitchingSetting>`.
+

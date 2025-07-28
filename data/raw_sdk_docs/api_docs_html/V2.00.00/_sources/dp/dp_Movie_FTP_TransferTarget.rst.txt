@@ -1,0 +1,25 @@
+﻿.. _dp-Movie_FTP_TransferTarget:
+
+CrDeviceProperty_Movie_FTP_TransferTarget
+=========================================
+
+Get/Set the FTP Transfer Target(Movie)
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPTransferTargetMovie_ProxyOnly
+    - | Proxy Only
+
+  * - CrFTPTransferTargetMovie_OriginalOnly
+    - | Original Only
+
+  * - CrFTPTransferTargetMovie_OriginalAndProxy
+    - | Proxy & Original
+

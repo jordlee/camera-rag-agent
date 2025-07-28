@@ -1,0 +1,21 @@
+﻿.. _command-ForcedFileNumberReset:
+
+CrCommandId_ForcedFileNumberReset
+=============================================
+
+Execute forced file number reset.
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCommandParam_Up
+    - | Be sure to specify "Up" after specifying "Down".
+
+  * - CrCommandParam_Down
+    - | Specify "Down" when you want to reset forcibly file number.
+      | Valid when :ref:`CrDeviceProperty_ForcedFileNumberResetEnableStatus<dp-ForcedFileNumberResetEnableStatus>` is Enable.
+

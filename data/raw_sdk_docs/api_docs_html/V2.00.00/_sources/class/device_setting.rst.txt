@@ -1,0 +1,131 @@
+.. _device-setting:
+
+Device Setting
+==============
+
+.. _device-setting-setting-key:
+
+SettingKey
+----------
+
+Enumerate of Setting key.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+
+  * - Setting_Key_EnableLiveView
+    - | Controls whether or not the Live View image capturing function is enabled.
+      | Use the :ref:`CrDeviceSetting<cr-device-setting>` defined in CrDefines.h.
+      | The default value is "Enable". Note that if GetLiveViewImage() is called after the change to "Disable",
+      | the Live View image retrieved from the camera immediately before the change to "Disable" will be returned.
+
+  * - Setting_Key_PartialBuffer
+    - | Controls the data transfer size when saving captured images (or contents) to the host PC.
+      | Use the :ref:`CrPartialFile<cr-partial-file>` defined in CrDefines.h.
+      | About the default value, see :ref:`Partial transfer size setting<tips-partial-transfer-size_setting>`.
+      |
+      | The advantage of partial transfer via USB connection is that SDK processing is not dominated by the transfer of captured images.
+      |
+      | Live View images are designed to be displayed at a maximum of 30 fps, but if the batch transfer of captured image data takes time,
+      | the interval between Live View image acquisition processes will increase, resulting in a drop in fps.
+      | If the Live View image does not display smoothly when shooting via USB connection, consider adjusting the transfer size in this setting.
+      |
+      | However, please note that the smaller the specified size, the longer the total time required to complete the transfer of one captured image.
+  * - Setting_Key_GetOSDImage_IntervalTime
+    - | Controls the interval time of get OSD image from camera.
+      |
+      | Use the CrGetOSDImageIntervalTimeType defined in CrDefines.h
+      |
+      | The default value is “High”.
+      | Please set “Low” if you want to give priority to camera performance when use get OSD function.
+  * - Setting_Key_EnablePostView
+    - | Controls post view function enable status.
+      | Only support when connection mode is “RemoteTransferMode”.
+      |
+      | Use the :ref:`CrDeviceSetting<cr-device-setting>` defined in CrDefines.h.
+      |
+      | The default value is “Disable”.
+      | Please set “Enable” if you want to get captured image automaticity when shutter release by OnCompleteDownload().
+      |
+      | OnCompleteDownload() is not called if this setting value is “Disable”.
+      |
+      | Note that this value is reset default value when reconnect camera at “RemoteTransferMode”.
+.. _cr-device-setting:
+
+CrDeviceSetting
+---------------
+
+Setting value enumerator.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrDeviceSetting_Disable
+    - Disable
+  * - CrDeviceSetting_Enable
+    - Enable
+
+.. _cr-partial-file:
+
+CrPartialFile
+-------------
+
+Enumerate of Partial size.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrPartialFile_Default
+    - | Default
+      |   USB:       CrPartialFile_NotPartial (Windows, macOS), 16 (Linux)
+      |   Ethernet: CrPartialFile_Min
+  * - CrPartialFile_NotPartial
+    - | Not Partial
+      |   USB only, Cannot be used with Ethernet.
+  * - CrPartialFile_Min 
+    - Minimum
+  * - CrPartialFile_Max
+    - Maximum
+  * - CrPartialFile_Step
+    - Step
+
+.. _cr-get-osd-image-interval-time-type:
+
+CrGetOSDImageIntervalTimeType
+-----------------------------
+
+Enumerate of Interval time about get OSD image from camera.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrGetOSDImageIntervalTimeType_High
+    - Interval time is short.
+  * - CrGetOSDImageIntervalTimeType_Middle
+    - Interval time is medium.
+  * - CrGetOSDImageIntervalTimeType_Low
+    - Interval time is long.

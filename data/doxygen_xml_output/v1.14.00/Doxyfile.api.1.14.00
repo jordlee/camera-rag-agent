@@ -1,0 +1,45 @@
+
+    PROJECT_NAME     = "SDK Documentation v1.14.00"
+    PROJECT_BRIEF    = "Parsed C++ SDK API for RAG v1.14.00"
+    PROJECT_LOGO     = ""
+    OUTPUT_DIRECTORY = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/doxygen_xml_output/v1.14.00"
+    GENERATE_XML     = YES
+    GENERATE_HTML    = NO
+    GENERATE_LATEX   = NO
+    GENERATE_RTF     = NO
+    GENERATE_MAN     = NO
+    GENERATE_XML     = YES
+    XML_OUTPUT       = "xml" # Doxygen will create a 'xml' subfolder in OUTPUT_DIRECTORY
+
+    # Input settings
+    INPUT            = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/CRSDK"
+    FILE_PATTERNS    = *.h *.hpp
+    RECURSIVE        = YES
+
+    INCLUDE_PATH     = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/CRSDK" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/CRSDK/CRSDK"
+
+    EXCLUDE_PATTERNS = */opencv2/* */build/* */temp/* */test/* */examples/*
+
+    EXTRACT_ALL      = YES
+    EXTRACT_STATIC   = YES
+    EXTRACT_PRIVATE  = YES
+    EXTRACT_LOCAL_CLASSES = YES
+    EXTRACT_LOCAL_METHODS = YES
+    SHOW_INCLUDE_FILES = YES
+    INLINE_SIMPLE_STRUCTS = YES
+
+    ENABLE_PREPROCESSING = YES
+    MACRO_EXPANSION = YES
+    EXPAND_ONLY_PREDEF = NO
+    PREDEFINED = SCRSDK_API= TEXT(x)=x
+
+    EXTENSION_MAPPING = .h=C++
+
+    SOURCE_BROWSER   = YES
+    VERBATIM_HEADERS = NO
+
+    QUIET            = NO
+    WARNINGS         = YES
+    WARN_IF_UNDOCUMENTED = NO
+    WARN_NO_PARAMDOC = NO
+    

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ButtonAssignmentAssignable6.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ButtonAssignmentAssignable6:\n\nCrDeviceProperty_ButtonAssignmentAssignable6\n============================================\n\nGet/Set the Button Assignment Assignable 6\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Variable(0x00 ~ 0xFF)\n    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_ButtonAssignmentAssignable1<dp-ButtonAssignmentAssignable1>`.\n\n\n| It may increase or decrease because it varies depending on the model and setting status.\n| See the :ref:`GetDisplayStringList<api-get-display-string-list>` for display character.",
+    "metadata": {
+        "title": "dp_ButtonAssignmentAssignable6",
+        "sdk_version": "V2.00.00"
+    }
+}

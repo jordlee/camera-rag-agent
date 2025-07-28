@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_EframingType.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-EframingType:\n\nCrDeviceProperty_EframingType\n=============================\n\nGet the eframing type.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrEframingType_None\n    - | None\n\n  * - CrEframingType_Auto\n    - | Auto\n\n  * - CrEframingType_Single\n    - | Single\n\n  * - CrEframingType_PTZ\n    - | PTZ\n\n  * - CrEframingType_HoldCurrentPosition\n    - | Hold Current Position\n\n  * - CrEframingType_ForceZoomOut\n    - | Force Zoom Out",
+    "metadata": {
+        "title": "dp_EframingType",
+        "sdk_version": "V2.00.00"
+    }
+}

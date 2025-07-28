@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecorderSaveDestination.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RecorderSaveDestination:\n\nCrDeviceProperty_RecorderSaveDestination\n========================================\n\nGet the information of Recorder Save Destination\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRecorderSaveDestination_External\n    - | External\n\n  * - CrRecorderSaveDestination_Internal\n    - | Internal\n\n  * - CrRecorderSaveDestination_ExternalAndInternal\n    - | External & Internal\n\n| “External” is only external output. It does not matter whether it is saved or not.",
+    "metadata": {
+        "title": "dp_RecorderSaveDestination",
+        "sdk_version": "V2.00.00"
+    }
+}

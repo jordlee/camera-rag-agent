@@ -1,0 +1,25 @@
+﻿.. _dp-AudioInputCH2Level:
+
+CrDeviceProperty_AudioInputCH2Level
+===================================
+
+Get/Set the audio input CH2 level.
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+

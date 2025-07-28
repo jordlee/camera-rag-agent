@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecordingSelfTimerStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RecordingSelfTimerStatus:\n\nCrDeviceProperty_RecordingSelfTimerStatus\n=========================================\n\nGet the Movie Recording Self timer Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMovieRecordingSelfTimerStatus_Idle\n    - | Idle\n\n  * - CrMovieRecordingSelfTimerStatus_CountingDown\n    - | Counting down\n\n| When “Movie Rec Self timer” is Off, the IsEnable Field is disabled.",
+    "metadata": {
+        "title": "dp_RecordingSelfTimerStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SdkControlMode.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SdkControlMode:\n\nCrDeviceProperty_SdkControlMode\n===============================\n\nGet the Sdk Control Mode.\n\n    CrDataType: `CrDataType_UInt32`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSdkControlMode_Remote\n    - | Remote Control Mode\n      | The default mode when connected to the camera.\n      | This mode is for shooting remotely. It is possible to change device properties for shooting such as shutter speed and ISO value.\n      | If you do not specify openMode of the connect function, connect in this mode.\n\n  * - CrSdkControlMode_ContentsTransfer\n    - | Contents Transfer Mode\n      | This mode is for pulling out the contents of the media inserted in the camera slot.\n\n  * - CrSdkControlMode_RemoteTransfer\n    - | Remote Transfer Mode\n      | This mode is combination of “Remote” and “ContentsTransfer”.\n      | You can transfer contents in media during remote control.\n      | This mode is disabling Live View function and Post View function at default.\n      | Please enable them by Device Setting if you need.\n\n| See “Supporting physical layer” for models that support each mode.",
+    "metadata": {
+        "title": "dp_SdkControlMode",
+        "sdk_version": "V2.00.00"
+    }
+}

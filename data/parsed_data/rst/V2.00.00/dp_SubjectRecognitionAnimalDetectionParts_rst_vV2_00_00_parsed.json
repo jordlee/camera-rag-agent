@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SubjectRecognitionAnimalDetectionParts.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SubjectRecognitionAnimalDetectionParts:\n\nCrDeviceProperty_SubjectRecognitionAnimalDetectionParts\n=======================================================\n\nGet/Set the Subject Recognition Animal(Still) Detection Parts\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSubjectRecognitionAnimalBirdDetectionParts_EyeHeadBody\n    - | Eye + Head + Body\n\n  * - CrSubjectRecognitionAnimalBirdDetectionParts_EyeHead\n    - | Eye + Head\n\n  * - CrSubjectRecognitionAnimalBirdDetectionParts_Eye\n    - | Eye",
+    "metadata": {
+        "title": "dp_SubjectRecognitionAnimalDetectionParts",
+        "sdk_version": "V2.00.00"
+    }
+}

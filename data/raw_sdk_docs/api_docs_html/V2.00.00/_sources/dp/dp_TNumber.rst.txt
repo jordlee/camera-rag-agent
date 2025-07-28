@@ -1,0 +1,29 @@
+﻿.. _dp-TNumber:
+
+CrDeviceProperty_TNumber
+========================
+
+Get/Set the T-Number
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTnumber_IrisClose
+    - | Iris Close
+
+  * - CrTnumber_Unknown
+    - | Display "--"
+
+  * - CrTnumber_Nothing
+    - | Nothing to display
+
+  * - Other than above values
+    - | 100 times the real value of T-Number
+      | e.g.) 0x01C2= 450 /100 = 4.5
+

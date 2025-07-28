@@ -1,0 +1,24 @@
+﻿.. _dp-ExposureStep:
+
+CrDeviceProperty_ExposureStep
+=============================
+
+Get/Set the exposure step width.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrExposureStep_Invalid
+    - | Invalid
+
+  * - Other than above values
+    - | 100 times the real value of Exposure Step Width
+      | e.g.) 0x001E = 30/100 = 0.3 EV
+      | e.g.) 0x0032 = 50/100 = 0.5 EV
+

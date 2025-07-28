@@ -1,0 +1,1402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structcli_1_1_property_value_table" kind="struct" language="C++" prot="public">
+    <compoundname>cli::PropertyValueTable</compoundname>
+    <includes refid="_property_value_table_8h" local="no">PropertyValueTable.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a77a302a07482be9d504765ddd5adf0db" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::sdk_mode</definition>
+        <argsstring></argsstring>
+        <name>sdk_mode</name>
+        <qualifiedname>cli::PropertyValueTable::sdk_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="28" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ace80faf94175d3cf6cc059a3c658868d" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::f_number</definition>
+        <argsstring></argsstring>
+        <name>f_number</name>
+        <qualifiedname>cli::PropertyValueTable::f_number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="29" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a6372d6b5fced2814b9dabee38d1c4a0c" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::iso_sensitivity</definition>
+        <argsstring></argsstring>
+        <name>iso_sensitivity</name>
+        <qualifiedname>cli::PropertyValueTable::iso_sensitivity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="30" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a9e1473a1f6d21bd2caf1d9119c8b154a" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::shutter_speed</definition>
+        <argsstring></argsstring>
+        <name>shutter_speed</name>
+        <qualifiedname>cli::PropertyValueTable::shutter_speed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="31" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1af040337ff2d6ff786aaaab05536a8e2d" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::position_key_setting</definition>
+        <argsstring></argsstring>
+        <name>position_key_setting</name>
+        <qualifiedname>cli::PropertyValueTable::position_key_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="32" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a7e5b9f2a2d43127433076e0dec179286" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::exposure_program_mode</definition>
+        <argsstring></argsstring>
+        <name>exposure_program_mode</name>
+        <qualifiedname>cli::PropertyValueTable::exposure_program_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="33" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a3537828f29972f1a6a3db4b0b02dd62b" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::still_capture_mode</definition>
+        <argsstring></argsstring>
+        <name>still_capture_mode</name>
+        <qualifiedname>cli::PropertyValueTable::still_capture_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="34" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1adb0d9700b15461c8e32f1bc1c39be0e4" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::focus_mode</definition>
+        <argsstring></argsstring>
+        <name>focus_mode</name>
+        <qualifiedname>cli::PropertyValueTable::focus_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="35" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a62080c3fcd970419afb97a38ba74aa9f" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::focus_area</definition>
+        <argsstring></argsstring>
+        <name>focus_area</name>
+        <qualifiedname>cli::PropertyValueTable::focus_area</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="36" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1aa0dacb314be734a976652ffa97e28ec2" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::live_view_image_quality</definition>
+        <argsstring></argsstring>
+        <name>live_view_image_quality</name>
+        <qualifiedname>cli::PropertyValueTable::live_view_image_quality</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="37" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a74e2f4376b733a18b2e192deb0a24d91" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::media_slot1_full_format_enable_status</definition>
+        <argsstring></argsstring>
+        <name>media_slot1_full_format_enable_status</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot1_full_format_enable_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="38" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a6f022c7990843cc317df23813c8023f5" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::media_slot2_full_format_enable_status</definition>
+        <argsstring></argsstring>
+        <name>media_slot2_full_format_enable_status</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot2_full_format_enable_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="39" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ace83f044fa73dc2d05d33a5a3d1e5532" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::media_slot1_quick_format_enable_status</definition>
+        <argsstring></argsstring>
+        <name>media_slot1_quick_format_enable_status</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot1_quick_format_enable_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="40" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a4c724c4174a9c5a46268b63ab1a3a873" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::media_slot2_quick_format_enable_status</definition>
+        <argsstring></argsstring>
+        <name>media_slot2_quick_format_enable_status</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot2_quick_format_enable_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="41" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1aa4be1d94104a842fde506f6532bd7e37" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::white_balance</definition>
+        <argsstring></argsstring>
+        <name>white_balance</name>
+        <qualifiedname>cli::PropertyValueTable::white_balance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="42" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ae52c416dbafaeb486e57aa96f00b78a3" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::customwb_capture_standby</definition>
+        <argsstring></argsstring>
+        <name>customwb_capture_standby</name>
+        <qualifiedname>cli::PropertyValueTable::customwb_capture_standby</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="43" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ab36e5b4dc6bd97bf4557a4d1110717fd" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::customwb_capture_standby_cancel</definition>
+        <argsstring></argsstring>
+        <name>customwb_capture_standby_cancel</name>
+        <qualifiedname>cli::PropertyValueTable::customwb_capture_standby_cancel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="44" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ae35df7d94482a4f03ef030ae4c4d4efe" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::customwb_capture_operation</definition>
+        <argsstring></argsstring>
+        <name>customwb_capture_operation</name>
+        <qualifiedname>cli::PropertyValueTable::customwb_capture_operation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="45" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ad329497d564272133e9dbce7a8bcc820" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::customwb_capture_execution_state</definition>
+        <argsstring></argsstring>
+        <name>customwb_capture_execution_state</name>
+        <qualifiedname>cli::PropertyValueTable::customwb_capture_execution_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="46" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a077d29aacc48ba8ebcba2d8ebe208ac8" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::zoom_operation_status</definition>
+        <argsstring></argsstring>
+        <name>zoom_operation_status</name>
+        <qualifiedname>cli::PropertyValueTable::zoom_operation_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="47" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ab6ec72fde3e0e41a8f1ec0b875d68760" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::zoom_setting_type</definition>
+        <argsstring></argsstring>
+        <name>zoom_setting_type</name>
+        <qualifiedname>cli::PropertyValueTable::zoom_setting_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="48" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a1c51fa6eddccb2a6e5ae52630e51c128" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::zoom_types_status</definition>
+        <argsstring></argsstring>
+        <name>zoom_types_status</name>
+        <qualifiedname>cli::PropertyValueTable::zoom_types_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="49" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ae33c8032ef3870c0154f0fbb186382d4" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::int8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::int8_t&gt; cli::PropertyValueTable::zoom_speed_range</definition>
+        <argsstring></argsstring>
+        <name>zoom_speed_range</name>
+        <qualifiedname>cli::PropertyValueTable::zoom_speed_range</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="50" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1aff0be202c265fd62dd0721539aad191b" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::save_zoom_and_focus_position</definition>
+        <argsstring></argsstring>
+        <name>save_zoom_and_focus_position</name>
+        <qualifiedname>cli::PropertyValueTable::save_zoom_and_focus_position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="51" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ad9efcc3d5d07fefff3f9ff6359431546" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::load_zoom_and_focus_position</definition>
+        <argsstring></argsstring>
+        <name>load_zoom_and_focus_position</name>
+        <qualifiedname>cli::PropertyValueTable::load_zoom_and_focus_position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="52" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a19e346c405de00100fa41ed79a70512f" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::remocon_zoom_speed_type</definition>
+        <argsstring></argsstring>
+        <name>remocon_zoom_speed_type</name>
+        <qualifiedname>cli::PropertyValueTable::remocon_zoom_speed_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="53" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ada806498326239d3bd5af16b94837979" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::aps_c_of_full_switching_setting</definition>
+        <argsstring></argsstring>
+        <name>aps_c_of_full_switching_setting</name>
+        <qualifiedname>cli::PropertyValueTable::aps_c_of_full_switching_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="54" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a847af6db4b1c941853c1c33a0e82af86" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::aps_c_of_full_switching_enable_status</definition>
+        <argsstring></argsstring>
+        <name>aps_c_of_full_switching_enable_status</name>
+        <qualifiedname>cli::PropertyValueTable::aps_c_of_full_switching_enable_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="55" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a93510fab8b92471df7fc20b91d12b2f0" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::camera_setting_save_read_state</definition>
+        <argsstring></argsstring>
+        <name>camera_setting_save_read_state</name>
+        <qualifiedname>cli::PropertyValueTable::camera_setting_save_read_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="56" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a34a6fa9e73bc1cc2259778002e653e49" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::camera_setting_save_operation</definition>
+        <argsstring></argsstring>
+        <name>camera_setting_save_operation</name>
+        <qualifiedname>cli::PropertyValueTable::camera_setting_save_operation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="57" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1accc0b7c59ccaba48b9f81a31f38c5837" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::camera_setting_read_operation</definition>
+        <argsstring></argsstring>
+        <name>camera_setting_read_operation</name>
+        <qualifiedname>cli::PropertyValueTable::camera_setting_read_operation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="58" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a392ed3ed48c3eba18b2652479267824f" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::camera_setting_reset_enable_status</definition>
+        <argsstring></argsstring>
+        <name>camera_setting_reset_enable_status</name>
+        <qualifiedname>cli::PropertyValueTable::camera_setting_reset_enable_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="59" column="25" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a664bb6a87f86a518698b204f37e29d90" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::gain_base_sensitivity</definition>
+        <argsstring></argsstring>
+        <name>gain_base_sensitivity</name>
+        <qualifiedname>cli::PropertyValueTable::gain_base_sensitivity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="60" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a4cbb34efd714b3cf66b331003ea34cb4" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::gain_base_iso_sensitivity</definition>
+        <argsstring></argsstring>
+        <name>gain_base_iso_sensitivity</name>
+        <qualifiedname>cli::PropertyValueTable::gain_base_iso_sensitivity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="61" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a62b6383c8707a0e4191dabc4b690a2c2" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::monitor_lut_setting</definition>
+        <argsstring></argsstring>
+        <name>monitor_lut_setting</name>
+        <qualifiedname>cli::PropertyValueTable::monitor_lut_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="62" column="25" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a65cd4e89b409952e69b9b63b480c46e2" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::exposure_index</definition>
+        <argsstring></argsstring>
+        <name>exposure_index</name>
+        <qualifiedname>cli::PropertyValueTable::exposure_index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="63" column="25" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1abb48433141cbc677f8e238c8fa9a512d" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::baselook_value</definition>
+        <argsstring></argsstring>
+        <name>baselook_value</name>
+        <qualifiedname>cli::PropertyValueTable::baselook_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="64" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a2c4fcefe3ab68e5bfdc1e378740b5a0b" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::playback_media</definition>
+        <argsstring></argsstring>
+        <name>playback_media</name>
+        <qualifiedname>cli::PropertyValueTable::playback_media</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="65" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1aba986d2747a4b70c3a44bd6f817371ab" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::iris_mode_setting</definition>
+        <argsstring></argsstring>
+        <name>iris_mode_setting</name>
+        <qualifiedname>cli::PropertyValueTable::iris_mode_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="66" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a0879e371313ac7fd1e46278eec9df291" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::shutter_mode_setting</definition>
+        <argsstring></argsstring>
+        <name>shutter_mode_setting</name>
+        <qualifiedname>cli::PropertyValueTable::shutter_mode_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="67" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a7d93ffa558724b595d0bc8a64976a311" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::gain_control_setting</definition>
+        <argsstring></argsstring>
+        <name>gain_control_setting</name>
+        <qualifiedname>cli::PropertyValueTable::gain_control_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="68" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a5a6da90a4dee1916ca7d4d915ae088e1" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::exposure_control_type</definition>
+        <argsstring></argsstring>
+        <name>exposure_control_type</name>
+        <qualifiedname>cli::PropertyValueTable::exposure_control_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="69" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a736a9f75a57f30a4c5ee52377266e16f" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::iso_current_sensitivity</definition>
+        <argsstring></argsstring>
+        <name>iso_current_sensitivity</name>
+        <qualifiedname>cli::PropertyValueTable::iso_current_sensitivity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="70" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a97800d1382017ec00d84c75165a143a4" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::recording_setting</definition>
+        <argsstring></argsstring>
+        <name>recording_setting</name>
+        <qualifiedname>cli::PropertyValueTable::recording_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="71" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a3a3ede08ef7a400d61e08f8f9a0be757" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::dispmode_candidate</definition>
+        <argsstring></argsstring>
+        <name>dispmode_candidate</name>
+        <qualifiedname>cli::PropertyValueTable::dispmode_candidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="72" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a5f415b9bb79fe62098cae5d982d774dd" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::dispmode_setting</definition>
+        <argsstring></argsstring>
+        <name>dispmode_setting</name>
+        <qualifiedname>cli::PropertyValueTable::dispmode_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="73" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a74d0d8956ef669468545e7df02c22cce" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::dispmode</definition>
+        <argsstring></argsstring>
+        <name>dispmode</name>
+        <qualifiedname>cli::PropertyValueTable::dispmode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="74" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a26ccb82b9dacc4aa594c7cdc53507af2" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::int8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::int8_t&gt; cli::PropertyValueTable::gain_db_value</definition>
+        <argsstring></argsstring>
+        <name>gain_db_value</name>
+        <qualifiedname>cli::PropertyValueTable::gain_db_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="75" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1abac7157d9f6ce91d60131842893828ee" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::int8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::int8_t&gt; cli::PropertyValueTable::white_balance_tint</definition>
+        <argsstring></argsstring>
+        <name>white_balance_tint</name>
+        <qualifiedname>cli::PropertyValueTable::white_balance_tint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="76" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a70fddbc3afe95ee16857c904812c6f9a" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::int16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::int16_t&gt; cli::PropertyValueTable::white_balance_tint_step</definition>
+        <argsstring></argsstring>
+        <name>white_balance_tint_step</name>
+        <qualifiedname>cli::PropertyValueTable::white_balance_tint_step</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="77" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a580f2f499877eb14f7c5827e374b858c" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint64_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint64_t&gt; cli::PropertyValueTable::shutter_speed_value</definition>
+        <argsstring></argsstring>
+        <name>shutter_speed_value</name>
+        <qualifiedname>cli::PropertyValueTable::shutter_speed_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="78" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a48a0dc5c124ef388a3e2cd646873ad08" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::movie_rec_button_toggle_enable_status</definition>
+        <argsstring></argsstring>
+        <name>movie_rec_button_toggle_enable_status</name>
+        <qualifiedname>cli::PropertyValueTable::movie_rec_button_toggle_enable_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="79" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a7d0578084595fd382545e44b3c2e64e8" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::media_slot1_status</definition>
+        <argsstring></argsstring>
+        <name>media_slot1_status</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot1_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="80" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a2831ed75276fb7bb74cfb6a581ea1ef0" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::media_slot2_status</definition>
+        <argsstring></argsstring>
+        <name>media_slot2_status</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot2_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="81" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ad9c20c8c42ed1266374a9458422a1da0" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::media_slot3_status</definition>
+        <argsstring></argsstring>
+        <name>media_slot3_status</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot3_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="82" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a673ab91cc1137b5bafc5d62669c5bc35" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::focus_bracket_shot_num</definition>
+        <argsstring></argsstring>
+        <name>focus_bracket_shot_num</name>
+        <qualifiedname>cli::PropertyValueTable::focus_bracket_shot_num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="83" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a85b3a18ace0516d730f88648dd7ecea0" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::focus_bracket_focus_range</definition>
+        <argsstring></argsstring>
+        <name>focus_bracket_focus_range</name>
+        <qualifiedname>cli::PropertyValueTable::focus_bracket_focus_range</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="84" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1abe2d89fc0ebd9aa7a960e49c3813d73b" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::image_stabilization_steady_shot</definition>
+        <argsstring></argsstring>
+        <name>image_stabilization_steady_shot</name>
+        <qualifiedname>cli::PropertyValueTable::image_stabilization_steady_shot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="85" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a9f1863853371b45f96ee973f12aecbdb" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::movie_image_stabilization_steady_shot</definition>
+        <argsstring></argsstring>
+        <name>movie_image_stabilization_steady_shot</name>
+        <qualifiedname>cli::PropertyValueTable::movie_image_stabilization_steady_shot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="86" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a05b3c90faae1ba89d35bbf05af0345c0" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::silent_mode</definition>
+        <argsstring></argsstring>
+        <name>silent_mode</name>
+        <qualifiedname>cli::PropertyValueTable::silent_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="87" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a12e0473641eaa6567ed7c19f68c8bbb0" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::silent_mode_aperture_drive_in_af</definition>
+        <argsstring></argsstring>
+        <name>silent_mode_aperture_drive_in_af</name>
+        <qualifiedname>cli::PropertyValueTable::silent_mode_aperture_drive_in_af</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="88" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a5236f7ea17ff3fecc8518d3380fd831e" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::silent_mode_shutter_when_power_off</definition>
+        <argsstring></argsstring>
+        <name>silent_mode_shutter_when_power_off</name>
+        <qualifiedname>cli::PropertyValueTable::silent_mode_shutter_when_power_off</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="89" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ad5e12d10d04c6541abb9940e705d9fd0" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::silent_mode_auto_pixel_mapping</definition>
+        <argsstring></argsstring>
+        <name>silent_mode_auto_pixel_mapping</name>
+        <qualifiedname>cli::PropertyValueTable::silent_mode_auto_pixel_mapping</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="90" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a9b96e11886dff80f1dd058533b669907" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::shutter_type</definition>
+        <argsstring></argsstring>
+        <name>shutter_type</name>
+        <qualifiedname>cli::PropertyValueTable::shutter_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="91" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1af03a3dc4583089223d6bfc3efa185ef7" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::movie_shooting_mode</definition>
+        <argsstring></argsstring>
+        <name>movie_shooting_mode</name>
+        <qualifiedname>cli::PropertyValueTable::movie_shooting_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="92" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1adaee14118a65d3ea183bd93794143f41" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::focus_position_setting</definition>
+        <argsstring></argsstring>
+        <name>focus_position_setting</name>
+        <qualifiedname>cli::PropertyValueTable::focus_position_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="93" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1aad2b6e5526f419be43178396a08db680" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::focus_position_current_value</definition>
+        <argsstring></argsstring>
+        <name>focus_position_current_value</name>
+        <qualifiedname>cli::PropertyValueTable::focus_position_current_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="94" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1acdfd57bcf4c2d380f3d572d9b906c612" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::focus_driving_status</definition>
+        <argsstring></argsstring>
+        <name>focus_driving_status</name>
+        <qualifiedname>cli::PropertyValueTable::focus_driving_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="95" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ad4199863cead21577bb143934d524f69" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::zoom_distance</definition>
+        <argsstring></argsstring>
+        <name>zoom_distance</name>
+        <qualifiedname>cli::PropertyValueTable::zoom_distance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="96" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a15f43cf479998af5a0b8fedb6bb0fa99" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::customwb_size_setting</definition>
+        <argsstring></argsstring>
+        <name>customwb_size_setting</name>
+        <qualifiedname>cli::PropertyValueTable::customwb_size_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="97" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a9fb55cfcc2a8fa819aec1bbcdaca9272" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::time_shift_shooting</definition>
+        <argsstring></argsstring>
+        <name>time_shift_shooting</name>
+        <qualifiedname>cli::PropertyValueTable::time_shift_shooting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="98" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a529658591c8e8f81bde8c590536bc194" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint64_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint64_t&gt; cli::PropertyValueTable::extended_shutter_speed</definition>
+        <argsstring></argsstring>
+        <name>extended_shutter_speed</name>
+        <qualifiedname>cli::PropertyValueTable::extended_shutter_speed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="99" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a3de4dd4e9451e8c6c4b6c490f542f11c" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::media_slot1_recording_available_type</definition>
+        <argsstring></argsstring>
+        <name>media_slot1_recording_available_type</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot1_recording_available_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="100" column="21" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a1e5f5fff644ef91fd376758874b0cdde" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::media_slot2_recording_available_type</definition>
+        <argsstring></argsstring>
+        <name>media_slot2_recording_available_type</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot2_recording_available_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="101" column="25" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ae7898a8b4bdbddef109f2233e2cc88cf" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::media_slot3_recording_available_type</definition>
+        <argsstring></argsstring>
+        <name>media_slot3_recording_available_type</name>
+        <qualifiedname>cli::PropertyValueTable::media_slot3_recording_available_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="102" column="25" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a57cef024871c24b3a1368b040ee431e6" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::camera_button_function</definition>
+        <argsstring></argsstring>
+        <name>camera_button_function</name>
+        <qualifiedname>cli::PropertyValueTable::camera_button_function</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="103" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a7352dee32f18f9127b3dcd129a6d836b" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::camera_button_function_multi</definition>
+        <argsstring></argsstring>
+        <name>camera_button_function_multi</name>
+        <qualifiedname>cli::PropertyValueTable::camera_button_function_multi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="104" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a130048da4a5658e3314c5de576ccf55f" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::camera_dial_function</definition>
+        <argsstring></argsstring>
+        <name>camera_dial_function</name>
+        <qualifiedname>cli::PropertyValueTable::camera_dial_function</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="105" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1af969376555b702b7b79a126ded619629" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::camera_button_function_status</definition>
+        <argsstring></argsstring>
+        <name>camera_button_function_status</name>
+        <qualifiedname>cli::PropertyValueTable::camera_button_function_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="106" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ac05d1244c714f3803af310e22decd71a" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint32_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint32_t&gt; cli::PropertyValueTable::camera_lever_function</definition>
+        <argsstring></argsstring>
+        <name>camera_lever_function</name>
+        <qualifiedname>cli::PropertyValueTable::camera_lever_function</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="107" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ae39e8f00b85cb83905929d26bb8ce81d" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::zoom_position_setting</definition>
+        <argsstring></argsstring>
+        <name>zoom_position_setting</name>
+        <qualifiedname>cli::PropertyValueTable::zoom_position_setting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="108" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ac3b2b650e137c4825246fd26c309d40f" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::zoom_position_current_value</definition>
+        <argsstring></argsstring>
+        <name>zoom_position_current_value</name>
+        <qualifiedname>cli::PropertyValueTable::zoom_position_current_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="109" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a08828ca61ae2e61fe19feb2dae0f8934" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::zoom_driving_status</definition>
+        <argsstring></argsstring>
+        <name>zoom_driving_status</name>
+        <qualifiedname>cli::PropertyValueTable::zoom_driving_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="110" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a24e4866c72bd9a905ede1b7821a739e5" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint16_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint16_t&gt; cli::PropertyValueTable::movie_recording_media</definition>
+        <argsstring></argsstring>
+        <name>movie_recording_media</name>
+        <qualifiedname>cli::PropertyValueTable::movie_recording_media</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="111" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1af7e92c66c271fe358ade27d0b82ae7d4" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::recorder_main_status</definition>
+        <argsstring></argsstring>
+        <name>recorder_main_status</name>
+        <qualifiedname>cli::PropertyValueTable::recorder_main_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="112" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1a9bdd6c4bbc066f3a2af5f0ebc182b30b" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::recording_state</definition>
+        <argsstring></argsstring>
+        <name>recording_state</name>
+        <qualifiedname>cli::PropertyValueTable::recording_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="113" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcli_1_1_property_value_table_1ab45ba4baa79f6b4986c75049d435319d" prot="public" static="no" mutable="no">
+        <type><ref refid="structcli_1_1_property_value_entry" kindref="compound">PropertyValueEntry</ref>&lt; std::uint8_t &gt;</type>
+        <definition>PropertyValueEntry&lt;std::uint8_t&gt; cli::PropertyValueTable::debug_mode</definition>
+        <argsstring></argsstring>
+        <name>debug_mode</name>
+        <qualifiedname>cli::PropertyValueTable::debug_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="114" column="24" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>cli::PropertyValueEntry&lt; std::int16_t &gt;</label>
+        <link refid="structcli_1_1_property_value_entry"/>
+      </node>
+      <node id="5">
+        <label>cli::PropertyValueEntry&lt; std::int8_t &gt;</label>
+        <link refid="structcli_1_1_property_value_entry"/>
+      </node>
+      <node id="3">
+        <label>cli::PropertyValueEntry&lt; std::uint16_t &gt;</label>
+        <link refid="structcli_1_1_property_value_entry"/>
+      </node>
+      <node id="2">
+        <label>cli::PropertyValueEntry&lt; std::uint32_t &gt;</label>
+        <link refid="structcli_1_1_property_value_entry"/>
+      </node>
+      <node id="7">
+        <label>cli::PropertyValueEntry&lt; std::uint64_t &gt;</label>
+        <link refid="structcli_1_1_property_value_entry"/>
+      </node>
+      <node id="4">
+        <label>cli::PropertyValueEntry&lt; std::uint8_t &gt;</label>
+        <link refid="structcli_1_1_property_value_entry"/>
+      </node>
+      <node id="1">
+        <label>cli::PropertyValueTable</label>
+        <link refid="structcli_1_1_property_value_table"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>camera_button_function</edgelabel>
+          <edgelabel>camera_button_function_multi</edgelabel>
+          <edgelabel>camera_dial_function</edgelabel>
+          <edgelabel>camera_lever_function</edgelabel>
+          <edgelabel>dispmode_candidate</edgelabel>
+          <edgelabel>dispmode_setting</edgelabel>
+          <edgelabel>exposure_program_mode</edgelabel>
+          <edgelabel>iso_current_sensitivity</edgelabel>
+          <edgelabel>iso_sensitivity</edgelabel>
+          <edgelabel>sdk_mode</edgelabel>
+          <edgelabel>  ...</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>baselook_value</edgelabel>
+          <edgelabel>camera_button_function_status</edgelabel>
+          <edgelabel>customwb_capture_execution_state</edgelabel>
+          <edgelabel>customwb_capture_operation</edgelabel>
+          <edgelabel>customwb_capture_standby</edgelabel>
+          <edgelabel>customwb_capture_standby_cancel</edgelabel>
+          <edgelabel>exposure_index</edgelabel>
+          <edgelabel>f_number</edgelabel>
+          <edgelabel>focus_area</edgelabel>
+          <edgelabel>focus_bracket_shot_num</edgelabel>
+          <edgelabel>  ...</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>aps_c_of_full_switching_enable_status</edgelabel>
+          <edgelabel>aps_c_of_full_switching_setting</edgelabel>
+          <edgelabel>camera_setting_read_operation</edgelabel>
+          <edgelabel>camera_setting_reset_enable_status</edgelabel>
+          <edgelabel>camera_setting_save_operation</edgelabel>
+          <edgelabel>camera_setting_save_read_state</edgelabel>
+          <edgelabel>customwb_size_setting</edgelabel>
+          <edgelabel>debug_mode</edgelabel>
+          <edgelabel>dispmode</edgelabel>
+          <edgelabel>exposure_control_type</edgelabel>
+          <edgelabel>  ...</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>gain_db_value</edgelabel>
+          <edgelabel>white_balance_tint</edgelabel>
+          <edgelabel>zoom_speed_range</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>white_balance_tint_step</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>extended_shutter_speed</edgelabel>
+          <edgelabel>shutter_speed_value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" line="26" column="1" bodyfile="data/raw_sdk_docs/sdk_source/PropertyValueTable.h" bodystart="27" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structcli_1_1_property_value_table_1a847af6db4b1c941853c1c33a0e82af86" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>aps_c_of_full_switching_enable_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1ada806498326239d3bd5af16b94837979" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>aps_c_of_full_switching_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1abb48433141cbc677f8e238c8fa9a512d" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>baselook_value</name></member>
+      <member refid="structcli_1_1_property_value_table_1a57cef024871c24b3a1368b040ee431e6" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_button_function</name></member>
+      <member refid="structcli_1_1_property_value_table_1a7352dee32f18f9127b3dcd129a6d836b" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_button_function_multi</name></member>
+      <member refid="structcli_1_1_property_value_table_1af969376555b702b7b79a126ded619629" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_button_function_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a130048da4a5658e3314c5de576ccf55f" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_dial_function</name></member>
+      <member refid="structcli_1_1_property_value_table_1ac05d1244c714f3803af310e22decd71a" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_lever_function</name></member>
+      <member refid="structcli_1_1_property_value_table_1accc0b7c59ccaba48b9f81a31f38c5837" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_setting_read_operation</name></member>
+      <member refid="structcli_1_1_property_value_table_1a392ed3ed48c3eba18b2652479267824f" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_setting_reset_enable_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a34a6fa9e73bc1cc2259778002e653e49" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_setting_save_operation</name></member>
+      <member refid="structcli_1_1_property_value_table_1a93510fab8b92471df7fc20b91d12b2f0" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>camera_setting_save_read_state</name></member>
+      <member refid="structcli_1_1_property_value_table_1ad329497d564272133e9dbce7a8bcc820" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>customwb_capture_execution_state</name></member>
+      <member refid="structcli_1_1_property_value_table_1ae35df7d94482a4f03ef030ae4c4d4efe" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>customwb_capture_operation</name></member>
+      <member refid="structcli_1_1_property_value_table_1ae52c416dbafaeb486e57aa96f00b78a3" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>customwb_capture_standby</name></member>
+      <member refid="structcli_1_1_property_value_table_1ab36e5b4dc6bd97bf4557a4d1110717fd" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>customwb_capture_standby_cancel</name></member>
+      <member refid="structcli_1_1_property_value_table_1a15f43cf479998af5a0b8fedb6bb0fa99" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>customwb_size_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1ab45ba4baa79f6b4986c75049d435319d" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>debug_mode</name></member>
+      <member refid="structcli_1_1_property_value_table_1a74d0d8956ef669468545e7df02c22cce" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>dispmode</name></member>
+      <member refid="structcli_1_1_property_value_table_1a3a3ede08ef7a400d61e08f8f9a0be757" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>dispmode_candidate</name></member>
+      <member refid="structcli_1_1_property_value_table_1a5f415b9bb79fe62098cae5d982d774dd" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>dispmode_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1a5a6da90a4dee1916ca7d4d915ae088e1" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>exposure_control_type</name></member>
+      <member refid="structcli_1_1_property_value_table_1a65cd4e89b409952e69b9b63b480c46e2" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>exposure_index</name></member>
+      <member refid="structcli_1_1_property_value_table_1a7e5b9f2a2d43127433076e0dec179286" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>exposure_program_mode</name></member>
+      <member refid="structcli_1_1_property_value_table_1a529658591c8e8f81bde8c590536bc194" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>extended_shutter_speed</name></member>
+      <member refid="structcli_1_1_property_value_table_1ace80faf94175d3cf6cc059a3c658868d" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>f_number</name></member>
+      <member refid="structcli_1_1_property_value_table_1a62080c3fcd970419afb97a38ba74aa9f" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>focus_area</name></member>
+      <member refid="structcli_1_1_property_value_table_1a85b3a18ace0516d730f88648dd7ecea0" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>focus_bracket_focus_range</name></member>
+      <member refid="structcli_1_1_property_value_table_1a673ab91cc1137b5bafc5d62669c5bc35" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>focus_bracket_shot_num</name></member>
+      <member refid="structcli_1_1_property_value_table_1acdfd57bcf4c2d380f3d572d9b906c612" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>focus_driving_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1adb0d9700b15461c8e32f1bc1c39be0e4" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>focus_mode</name></member>
+      <member refid="structcli_1_1_property_value_table_1aad2b6e5526f419be43178396a08db680" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>focus_position_current_value</name></member>
+      <member refid="structcli_1_1_property_value_table_1adaee14118a65d3ea183bd93794143f41" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>focus_position_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1a4cbb34efd714b3cf66b331003ea34cb4" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>gain_base_iso_sensitivity</name></member>
+      <member refid="structcli_1_1_property_value_table_1a664bb6a87f86a518698b204f37e29d90" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>gain_base_sensitivity</name></member>
+      <member refid="structcli_1_1_property_value_table_1a7d93ffa558724b595d0bc8a64976a311" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>gain_control_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1a26ccb82b9dacc4aa594c7cdc53507af2" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>gain_db_value</name></member>
+      <member refid="structcli_1_1_property_value_table_1abe2d89fc0ebd9aa7a960e49c3813d73b" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>image_stabilization_steady_shot</name></member>
+      <member refid="structcli_1_1_property_value_table_1aba986d2747a4b70c3a44bd6f817371ab" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>iris_mode_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1a736a9f75a57f30a4c5ee52377266e16f" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>iso_current_sensitivity</name></member>
+      <member refid="structcli_1_1_property_value_table_1a6372d6b5fced2814b9dabee38d1c4a0c" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>iso_sensitivity</name></member>
+      <member refid="structcli_1_1_property_value_table_1aa0dacb314be734a976652ffa97e28ec2" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>live_view_image_quality</name></member>
+      <member refid="structcli_1_1_property_value_table_1ad9efcc3d5d07fefff3f9ff6359431546" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>load_zoom_and_focus_position</name></member>
+      <member refid="structcli_1_1_property_value_table_1a74e2f4376b733a18b2e192deb0a24d91" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot1_full_format_enable_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1ace83f044fa73dc2d05d33a5a3d1e5532" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot1_quick_format_enable_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a3de4dd4e9451e8c6c4b6c490f542f11c" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot1_recording_available_type</name></member>
+      <member refid="structcli_1_1_property_value_table_1a7d0578084595fd382545e44b3c2e64e8" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot1_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a6f022c7990843cc317df23813c8023f5" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot2_full_format_enable_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a4c724c4174a9c5a46268b63ab1a3a873" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot2_quick_format_enable_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a1e5f5fff644ef91fd376758874b0cdde" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot2_recording_available_type</name></member>
+      <member refid="structcli_1_1_property_value_table_1a2831ed75276fb7bb74cfb6a581ea1ef0" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot2_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1ae7898a8b4bdbddef109f2233e2cc88cf" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot3_recording_available_type</name></member>
+      <member refid="structcli_1_1_property_value_table_1ad9c20c8c42ed1266374a9458422a1da0" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>media_slot3_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a62b6383c8707a0e4191dabc4b690a2c2" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>monitor_lut_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1a9f1863853371b45f96ee973f12aecbdb" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>movie_image_stabilization_steady_shot</name></member>
+      <member refid="structcli_1_1_property_value_table_1a48a0dc5c124ef388a3e2cd646873ad08" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>movie_rec_button_toggle_enable_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a24e4866c72bd9a905ede1b7821a739e5" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>movie_recording_media</name></member>
+      <member refid="structcli_1_1_property_value_table_1af03a3dc4583089223d6bfc3efa185ef7" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>movie_shooting_mode</name></member>
+      <member refid="structcli_1_1_property_value_table_1a2c4fcefe3ab68e5bfdc1e378740b5a0b" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>playback_media</name></member>
+      <member refid="structcli_1_1_property_value_table_1af040337ff2d6ff786aaaab05536a8e2d" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>position_key_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1af7e92c66c271fe358ade27d0b82ae7d4" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>recorder_main_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a97800d1382017ec00d84c75165a143a4" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>recording_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1a9bdd6c4bbc066f3a2af5f0ebc182b30b" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>recording_state</name></member>
+      <member refid="structcli_1_1_property_value_table_1a19e346c405de00100fa41ed79a70512f" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>remocon_zoom_speed_type</name></member>
+      <member refid="structcli_1_1_property_value_table_1aff0be202c265fd62dd0721539aad191b" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>save_zoom_and_focus_position</name></member>
+      <member refid="structcli_1_1_property_value_table_1a77a302a07482be9d504765ddd5adf0db" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>sdk_mode</name></member>
+      <member refid="structcli_1_1_property_value_table_1a0879e371313ac7fd1e46278eec9df291" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>shutter_mode_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1a9e1473a1f6d21bd2caf1d9119c8b154a" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>shutter_speed</name></member>
+      <member refid="structcli_1_1_property_value_table_1a580f2f499877eb14f7c5827e374b858c" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>shutter_speed_value</name></member>
+      <member refid="structcli_1_1_property_value_table_1a9b96e11886dff80f1dd058533b669907" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>shutter_type</name></member>
+      <member refid="structcli_1_1_property_value_table_1a05b3c90faae1ba89d35bbf05af0345c0" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>silent_mode</name></member>
+      <member refid="structcli_1_1_property_value_table_1a12e0473641eaa6567ed7c19f68c8bbb0" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>silent_mode_aperture_drive_in_af</name></member>
+      <member refid="structcli_1_1_property_value_table_1ad5e12d10d04c6541abb9940e705d9fd0" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>silent_mode_auto_pixel_mapping</name></member>
+      <member refid="structcli_1_1_property_value_table_1a5236f7ea17ff3fecc8518d3380fd831e" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>silent_mode_shutter_when_power_off</name></member>
+      <member refid="structcli_1_1_property_value_table_1a3537828f29972f1a6a3db4b0b02dd62b" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>still_capture_mode</name></member>
+      <member refid="structcli_1_1_property_value_table_1a9fb55cfcc2a8fa819aec1bbcdaca9272" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>time_shift_shooting</name></member>
+      <member refid="structcli_1_1_property_value_table_1aa4be1d94104a842fde506f6532bd7e37" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>white_balance</name></member>
+      <member refid="structcli_1_1_property_value_table_1abac7157d9f6ce91d60131842893828ee" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>white_balance_tint</name></member>
+      <member refid="structcli_1_1_property_value_table_1a70fddbc3afe95ee16857c904812c6f9a" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>white_balance_tint_step</name></member>
+      <member refid="structcli_1_1_property_value_table_1ad4199863cead21577bb143934d524f69" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>zoom_distance</name></member>
+      <member refid="structcli_1_1_property_value_table_1a08828ca61ae2e61fe19feb2dae0f8934" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>zoom_driving_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1a077d29aacc48ba8ebcba2d8ebe208ac8" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>zoom_operation_status</name></member>
+      <member refid="structcli_1_1_property_value_table_1ac3b2b650e137c4825246fd26c309d40f" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>zoom_position_current_value</name></member>
+      <member refid="structcli_1_1_property_value_table_1ae39e8f00b85cb83905929d26bb8ce81d" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>zoom_position_setting</name></member>
+      <member refid="structcli_1_1_property_value_table_1ab6ec72fde3e0e41a8f1ec0b875d68760" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>zoom_setting_type</name></member>
+      <member refid="structcli_1_1_property_value_table_1ae33c8032ef3870c0154f0fbb186382d4" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>zoom_speed_range</name></member>
+      <member refid="structcli_1_1_property_value_table_1a1c51fa6eddccb2a6e5ae52630e51c128" prot="public" virt="non-virtual"><scope>cli::PropertyValueTable</scope><name>zoom_types_status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

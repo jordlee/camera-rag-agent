@@ -1,0 +1,244 @@
+.. _api-header-setting-file:
+
+Setting file
+============
+
+.. _api-download-setting-file:
+
+DownloadSettingFile
+-------------------
+
+**Overview**
+    Save (download) the camera settings as a file on the host PC or a storage device connected to the host PC.
+
+		By uploading the file saved by this API to the camera with :ref:`UploadSettingFile()<api-upload-setting-file>`, it is also possible to restore the camera settings.
+
+		Before executing this API, please make sure that the media is inserted in the slot of the camera. This is due to the specifications of the camera.
+
+**Definition**
+	`CrError DownloadSettingFile(CrDeviceHandle deviceHandle, CrDownloadSettingFileType type, CrChar* filePath = 0, CrChar* fileName = 0, const char* password = 0);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrDownloadSettingFileType
+    - | type
+      | Specifies the type of file to download.
+  * - CrChar*
+    - | filePath
+      | This parameter is optional.
+      | If not specified, the path specified in the second parameter of SetSaveInfo will be used. To do this, use SetSaveInfo to change the save destination path in advance. If a path that does not exist in this parameter is specified, or if this parameter is not specified and SetSaveInfo is not used, there is no guarantee that this API will be successful.
+  * - CrChar*
+    - | fileName
+      | This parameter is optional. The extension is fixed to "DAT".
+      | If this parameter is not specified, the file will be saved with the default name.
+      | CrDownloadSettingFileType_Setup :
+      |   "Camera model name + _CUMSET.DAT"
+      | CrDownloadSettingFileType_FTPTransferSetting : 
+      |   "Camera model name + _FTPSET.DAT"
+      |
+      | If the file name conflicts with an existing file, an additional number is appended after the file name like ILCE-1_FTPSET(1).DAT.
+  * - const char*
+    - | password
+      | This parameter is required for download(save) and upload(read) FTP Transfer Setting file.
+      | The password you enter here will be the password used for the UploadSettingFile(). If you forget it, you will not be able to upload the file.
+      | The FTP Server password is not included in the downloaded FTP Transfer Setting file.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_File_StorageFull  Insufficient storage capacity on the host.
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`IDeviceCallback::OnCompleteDownload<callback-interface>`
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`DownloadSettingFile (Setup) callback<cb-download-setting-file-setup>`
+    | See: :ref:`DownloadSettingFile (FTPTransfer) callback<cb-download-setting-file-ftp>`
+  - :ref:`UploadSettingFile<api-upload-setting-file>`
+
+**Special note (details)**
+  This API can be executed when :ref:`CrDeviceProperty_CameraSetting_SaveOperationEnableStatus<dp-CameraSetting_SaveOperationEnableStatus>` / :ref:`CrDeviceProperty_FTPTransferSetting_SaveOperationEnableStatus<dp-FTPTransferSetting_SaveOperationEnableStatus>` is Enable.
+
+  The result will be notified by OnWarning() or OnCompleteDownload().
+
+  If the save is successful, the file name and file type saved by OnCompleteDownload() will be notified.
+
+  If saving fails, OnWarning() will notify you of the cause of the failure.
+
+  CrDownloadSettingFileType_Setup :
+    CrWarning_CameraSettings_Save_Result_NG
+  CrDownloadSettingFileType_FTPTransferSetting :
+    CrError codes beginning with “CrWarning_FTPTransferSetting_Save_Result\_”
+
+  This API does not support all models.
+
+  Saving the setting file can also be realized by operating the camera body without using the API. In that case, the save destination of the file is the "memory card" inserted in the media slot of the camera body.
+    For ILCE-1 : MENU > Setup > Reset/Set Settings > Save/Load Settings > Save
+
+.. _api-upload-setting-file:
+
+UploadSettingFile
+-----------------
+
+**Overview**
+  It is possible to upload the setting file saved in the host PC etc. with DownloadSettingFile() to the camera with this API and restore the setting state.
+
+  By using DownloadSettingFile() and UploadSettingFile(), you can manage the camera settings according to the shooting scene, and make it possible to restore the settings at any time. It also allows multiple cameras (same model) to share the setting status.
+
+  Before executing this API, please make sure that the media is inserted in the slot of the camera. This is due to the specifications of the camera.
+
+  After this operation, the camera reboots itself. The connection will be disconnected by restarting the camera. If CrReconnecting_OFF is specified for the fifth parameter of Connect(), execute Connect() again to establish a connection.
+
+**Definition**
+  `CrError UploadSettingFile(CrDeviceHandle deviceHandle, CrUploadSettingFileType type, CrChar* fileName, const char* password = 0);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrUploadSettingFileType
+    - | type
+      | Specifies the type of file to upload.
+  * - CrChar*
+    - | fileName
+      | Path of the file to be uploaded.
+      | The extension is fixed to "DAT".
+  * - const char*
+    - | password
+      | This parameter is required for download(save) and upload(read) FTP Transfer Setting file.
+      | Specify the password used during DownloadSettingFile().
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`UploadSettingFile (Setup) callback<cb-upload-setting-file-setup>`
+  - :ref:`DownloadSettingFile<api-download-setting-file>`
+
+**Special note (details)**
+  This API can be executed when :ref:`CrDeviceProperty_CameraSetting_ReadOperationEnableStatus<dp-CameraSetting_ReadOperationEnableStatus>` / :ref:`CrDeviceProperty_FTPTransferSetting_ReadOperationEnableStatus<dp-FTPTransferSetting_ReadOperationEnableStatus>` is Enable.
+
+  The result will be notified by OnWarning().
+  
+  If the upload is successful, CrWarning_CameraSettings_Read_Result_OK / CrWarning_FTPTransferSetting_Read_Result_OK will be notified by OnWarning().
+
+  If the upload fails, OnWarning() will notify you of the cause of the failure.
+
+  This API does not support all models.
+
+  You can also read(upload) the setting file by operating the camera body without using the API. In that case, the file stored in the "memory card" inserted in the media slot of the camera body will be uploaded.
+    For ILCE-1 : MENU > Setup > Reset/Save Settings > Save/Load Settings > Load
+
+.. _api-import-lut-file:
+
+ImportLUTFile
+-------------
+
+**Overview**
+  Using this API, you can import(upload) the cube file(LUT data) you wish to use to the camera.
+
+  Before executing this API, please make sure that the media is inserted in the slot of the camera. This is due to the specifications of the camera.
+
+  Please prepare cube files in advance by downloading them from the respective sites etc.
+
+**Definition**
+  `CrError ImportLUTFile(CrDeviceHandle deviceHandle, CrChar* fileName, CrBaseLookNumber baseLookNumber);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrChar*
+    - | fileName
+      | Path of the file to be uploaded.
+      | The file to be specified must meet the following conditions
+      | - The first character of the file name must begin with other than .(period)
+      | - Characters available for file name
+      |   single-byte alphanumeric characters, single-byte spaces, #, $, %, &, ',  (, ), +, ,(comma), -(Hyphen or minus sign), .(period), ;, =, @, [, ], ^, \`, {, }, ~, _(Underscore)
+      | - The extension is fixed to "cube" or "cub"
+      | - File name must be 63 characters or less, including the file extension
+      | - File size is less than 3 MB
+  * - CrBaseLookNumber
+    - | baseLookNumber
+      | Baselook number you want to update
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`ImportLUTFile callback<cb-import-lut-file>`
+
+**Special note (details)**
+  This API can be executed when :ref:`CrDeviceProperty_BaseLookImportOperationEnableStatus<dp-BaseLookImportOperationEnableStatus>` is Enable.
+
+  LUT file import is possible even when Log shooting is disabled.
+
+  The result will be notified by OnWarning().
+
+  If the upload is successful, CrWarning_ImportLUTFile_Result_OK will be notified by OnWarning().
+
+  If the upload fails, OnWarning() will notify you of the cause of the failure.
+
+  This API does not support all models.

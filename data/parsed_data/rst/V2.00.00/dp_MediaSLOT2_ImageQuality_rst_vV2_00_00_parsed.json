@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MediaSLOT2_ImageQuality.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MediaSLOT2_ImageQuality:\n\nCrDeviceProperty_MediaSLOT2_ImageQuality\n========================================\n\nGet/Set the Image Quality of media(SLOT2)\n\n| This property is effective when Recording Media for still images is set to \"Sort Recording\", and :ref:`CrDeviceProperty_MediaSLOT2_FileType<dp-MediaSLOT2_FileType>` is set to \"CrFileType_Jpeg\" or \"CrFileType_Heif\".\n\n| For ILCE-1 : MENU > Shooting > Image Quality > Image Quality Settings > JPEG Quality/HEIF Quality\n\n| This setting is related to “CrDeviceProperty_CompressionFileFormatStill”.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrImageQuality_ExFine (CrJpegQuality_ExFine)\n    - | Extra fine\n\n  * - CrImageQuality_Fine (CrJpegQuality_Fine)\n    - | Fine\n\n  * - CrImageQuality_Standard (CrJpegQuality_Standard)\n    - | Standard\n\n  * - CrImageQuality_Light (CrJpegQuality_Light)\n    - | Light",
+    "metadata": {
+        "title": "dp_MediaSLOT2_ImageQuality",
+        "sdk_version": "V2.00.00"
+    }
+}

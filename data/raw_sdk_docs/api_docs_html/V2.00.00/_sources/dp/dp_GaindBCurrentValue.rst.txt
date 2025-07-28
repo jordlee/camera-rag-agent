@@ -1,0 +1,27 @@
+﻿.. _dp-GaindBCurrentValue:
+
+CrDeviceProperty_GaindBCurrentValue
+===================================
+
+Get the Gain dB Current Value
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| Current value when Gain dB auto.
+

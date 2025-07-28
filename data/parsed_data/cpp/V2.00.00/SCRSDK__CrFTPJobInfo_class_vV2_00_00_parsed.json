@@ -1,0 +1,248 @@
+{
+    "refid": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info",
+    "kind": "class",
+    "name": "SCRSDK::CrFTPJobInfo",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1af8f8587b17c3d885b92a9caba8fe2519",
+            "kind": "variable",
+            "name": "serverId",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrFTPJobInfo::serverId",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1aeabd9acef5ef6a7d2fd160e77c37dea9",
+            "kind": "variable",
+            "name": "jobId",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrFTPJobInfo::jobId",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a13528e97080a1216e76a1b29e760b597",
+            "kind": "variable",
+            "name": "slotId",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrFTPJobSlotId SCRSDK::CrFTPJobInfo::slotId",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a4106b6c69530c8f61c73b6735a2f7025",
+            "kind": "variable",
+            "name": "jobStatus",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrFTPJobStatus SCRSDK::CrFTPJobInfo::jobStatus",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a45dde69329b0b28d136b1c26f1e11ae8",
+            "kind": "variable",
+            "name": "chunkNum",
+            "visibility": "public-attrib",
+            "type": "CrInt32",
+            "definition": "CrInt32 SCRSDK::CrFTPJobInfo::chunkNum",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1acbd08f053adaf478c5b8992335867c39",
+            "kind": "variable",
+            "name": "fileSize",
+            "visibility": "public-attrib",
+            "type": "CrInt64u",
+            "definition": "CrInt64u SCRSDK::CrFTPJobInfo::fileSize",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a04388bf67bfd164e6b5f8ba82812b7a0",
+            "kind": "variable",
+            "name": "transferSize",
+            "visibility": "public-attrib",
+            "type": "CrInt64u",
+            "definition": "CrInt64u SCRSDK::CrFTPJobInfo::transferSize",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a3ffcaa867871dd24f1616216fbdc6faf",
+            "kind": "variable",
+            "name": "clipName",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrInt8u* SCRSDK::CrFTPJobInfo::clipName",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a3c50d495b2c65348a7a45ad69285b618",
+            "kind": "variable",
+            "name": "mainName",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrInt8u* SCRSDK::CrFTPJobInfo::mainName",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1afc2050888c371486730c53c4977ce788",
+            "kind": "variable",
+            "name": "metaName",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrInt8u* SCRSDK::CrFTPJobInfo::metaName",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a1b8026b1ae74ee51b5290c1d23bb5aa8",
+            "kind": "function",
+            "name": "CrFTPJobInfo",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrFTPJobInfo::CrFTPJobInfo",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1aff4519af9860269d499352abae5b5e1a",
+            "kind": "function",
+            "name": "~CrFTPJobInfo",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrFTPJobInfo::~CrFTPJobInfo",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1ae35c9ea2e4e7f41d5b740f60de98bfe7",
+            "kind": "function",
+            "name": "CrFTPJobInfo",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrFTPJobInfo::CrFTPJobInfo",
+            "argsstring": "(const CrFTPJobInfo &ref)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": [
+                {
+                    "type": "const CrFTPJobInfo &",
+                    "name": "ref",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a224932281b3441564f299493f00f47be",
+            "kind": "function",
+            "name": "operator=",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "CrFTPJobInfo & SCRSDK::CrFTPJobInfo::operator=",
+            "argsstring": "(const CrFTPJobInfo &ref)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": [
+                {
+                    "type": "const CrFTPJobInfo &",
+                    "name": "ref",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a7ce2b0f184a2988a7449d516cf3f1802",
+            "kind": "function",
+            "name": "GetClipName",
+            "visibility": "public-func",
+            "type": "const char *",
+            "definition": "const char * SCRSDK::CrFTPJobInfo::GetClipName",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1af7549476ec0b16d054540a394461ecad",
+            "kind": "function",
+            "name": "GetMainName",
+            "visibility": "public-func",
+            "type": "const char *",
+            "definition": "const char * SCRSDK::CrFTPJobInfo::GetMainName",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a203bb4b6717e51f84b92d72b8f0a51cf",
+            "kind": "function",
+            "name": "GetMetaName",
+            "visibility": "public-func",
+            "type": "const char *",
+            "definition": "const char * SCRSDK::CrFTPJobInfo::GetMetaName",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrFTPJobInfo",
+        "sdk_version": "V2.00.00"
+    }
+}

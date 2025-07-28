@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_get_the_media_profile.rst.txt",
+    "file_type": "rst",
+    "content": ".. _op-get-the-media-profile:\n\nGet the MediaProfile\n====================\n\nIt is an API to get the MediaProfile stored in the media of the camera.\n\nIn ILME-FX6/MPC-2610/PXW-Z200/HXR-NX800, meta information such as recorded content is called \"MediaProfile\".\n\nWith this API you can only get MediaProfile about the content. Not an API to get content files.\n\nThe second parameter specifies the Slot for which you want to get the MediaProfile. The third parameter is a pointer to which the list information of the acquired MediaProfile is written. The fourth parameter is set to the number of acquired MediaProfile and returns.\n\nExample:\n\n.. code-block:: cpp\n\n  CrInt32u numOfList= 0;\n  SCRSDK:: CrMediaProfileInfo* mediaList;\n  CrError err = SCRSDK:: GetMediaProfile (\n    handle,\n    SCRSDK::CrMediaProfile_Slot1,\n    &mediaList,\n    &numOfList);\n  if (CR_SUCCEEDED(err) && 0 < numOfList) {\n    //  etc.\n    // release of list pointer\n    SCRSDK:: ReleaseMediaProfile(handle, mediaList);\n  }\n\nFor example, there is \"contentUrl\" in the information obtained by this API. If you enter those URLs in browser software (Chrome, Safari, etc.) that supports streaming playback, you can play the content.\n\n.. image:: /_images/op_seq_get_the_media_profile.png\n  :width: 50%",
+    "metadata": {
+        "title": "op_get_the_media_profile",
+        "sdk_version": "V2.00.00"
+    }
+}

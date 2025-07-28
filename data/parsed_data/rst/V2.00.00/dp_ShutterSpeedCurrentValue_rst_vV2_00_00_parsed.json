@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ShutterSpeedCurrentValue.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ShutterSpeedCurrentValue:\n\nCrDeviceProperty_ShutterSpeedCurrentValue\n=========================================\n\nGet the Shutter Speed Current Value\n\n    CrDataType: `CrDataType_UInt64Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Variable\n    - | Upper four bytes: numerator, Lower four bytes: denominator",
+    "metadata": {
+        "title": "dp_ShutterSpeedCurrentValue",
+        "sdk_version": "V2.00.00"
+    }
+}

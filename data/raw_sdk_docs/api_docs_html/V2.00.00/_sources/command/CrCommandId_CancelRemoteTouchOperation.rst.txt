@@ -1,0 +1,25 @@
+﻿.. _command-CancelRemoteTouchOperation:
+
+CrCommandId_CancelRemoteTouchOperation
+=============================================
+
+Execute cancel remote touch operation.
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCommandParam_Up
+    - | Be sure to specify "Up" after specifying "Down".
+
+  * - CrCommandParam_Down
+    - | Specify when canceling the Remote Touch Operation
+
+| This Control Code can be executed only when the device property “Cancel Remote Touch Operation Enable Status” is Enabled (0x01).
+| Execute when the control value is Up (0x0001).
+
+| Check the :ref:`CrDeviceProperty_CancelRemoteTouchOperationEnableStatus<dp-CancelRemoteTouchOperationEnableStatus>` status to see if you can cancel or not.
+

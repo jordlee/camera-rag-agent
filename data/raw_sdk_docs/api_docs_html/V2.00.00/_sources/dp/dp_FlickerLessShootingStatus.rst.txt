@@ -1,0 +1,24 @@
+﻿.. _dp-FlickerLessShootingStatus:
+
+CrDeviceProperty_FlickerLessShootingStatus
+==========================================
+
+Get the Flicker Less Shooting Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFlickerLessShootingStatus_NotDetected
+    - | NotDetected
+
+  * - CrFlickerLessShootingStatus_Detected
+    - | Detected
+
+| "NotDetected(0x00)" means that Idle(Detector is not active) and NotDetected(Detector is active but flicker is not detected) 
+

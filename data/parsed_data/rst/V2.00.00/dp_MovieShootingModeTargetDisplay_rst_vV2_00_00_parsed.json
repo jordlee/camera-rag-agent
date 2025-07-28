@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MovieShootingModeTargetDisplay.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MovieShootingModeTargetDisplay:\n\nCrDeviceProperty_MovieShootingModeTargetDisplay\n===============================================\n\nGet/Set the Movie Shooting Mode Target Display\n\n| See “:ref:`Get the menu display string<op-get-the-menu-display-string>`” for menu display characters.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMovieShootingModeTargetDisplay_BT709\n    - | BT.709\n\n  * - CrMovieShootingModeTargetDisplay_BT2020\n    - | BT.2020",
+    "metadata": {
+        "title": "dp_MovieShootingModeTargetDisplay",
+        "sdk_version": "V2.00.00"
+    }
+}

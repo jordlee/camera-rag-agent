@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PrioritySetInAF_S.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PrioritySetInAF_S:\n\nCrDeviceProperty_PrioritySetInAF_S\n==================================\n\nGet/Set the Priority Set in AF-S\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPrioritySetInAF_AF\n    - | AF\n\n  * - CrPrioritySetInAF_Release\n    - | Release\n\n  * - CrPrioritySetInAF_BalancedEmphasis\n    - | Balanced Emphasis",
+    "metadata": {
+        "title": "dp_PrioritySetInAF_S",
+        "sdk_version": "V2.00.00"
+    }
+}

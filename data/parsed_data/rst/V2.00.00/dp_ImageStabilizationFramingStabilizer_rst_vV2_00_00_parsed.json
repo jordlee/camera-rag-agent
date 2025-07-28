@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ImageStabilizationFramingStabilizer.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ImageStabilizationFramingStabilizer:\n\nCrDeviceProperty_ImageStabilizationFramingStabilizer\n====================================================\n\nGet/Set the Image Stabilization Framing Stabilizer\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrImageStabilizationFramingStabilizer_OFF\n    - | OFF\n\n  * - CrImageStabilizationFramingStabilizer_ON_Manual\n    - | ON:Manual\n\n  * - CrImageStabilizationFramingStabilizer_ON_Center\n    - | ON:Center",
+    "metadata": {
+        "title": "dp_ImageStabilizationFramingStabilizer",
+        "sdk_version": "V2.00.00"
+    }
+}

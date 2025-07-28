@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_cr_debug_string_8h" kind="file" language="C++">
+    <compoundname>CrDebugString.h</compoundname>
+    <includes local="no">CrTypes.h</includes>
+    <includes local="no">CrError.h</includes>
+    <includes local="no">CrDeviceProperty.h</includes>
+    <includes local="no">CrCommandData.h</includes>
+    <includedby refid="_camera_device_8cpp" local="yes">data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.cpp</includedby>
+    <includedby refid="_cr_debug_string_8cpp" local="yes">data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h</label>
+        <link refid="_cr_debug_string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CrCommandData.h</label>
+      </node>
+      <node id="4">
+        <label>CrDeviceProperty.h</label>
+      </node>
+      <node id="3">
+        <label>CrError.h</label>
+      </node>
+      <node id="2">
+        <label>CrTypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.cpp</label>
+        <link refid="_camera_device_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp</label>
+        <link refid="_cr_debug_string_8cpp"/>
+      </node>
+      <node id="1">
+        <label>data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h</label>
+        <link refid="_cr_debug_string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_cr_debug_string_8h_1aacc66038e1dc245929a021800ad5d88c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CrErrorString</definition>
+        <argsstring>(SCRSDK::CrError error)</argsstring>
+        <name>CrErrorString</name>
+        <param>
+          <type>SCRSDK::CrError</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" line="11" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp" bodystart="1226" bodyend="1229" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" declline="11" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_cr_debug_string_8h_1aebe253f0f313de6b47e8eba9eddd7516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CrWarningExtString</definition>
+        <argsstring>(SCRSDK::CrError error, CrInt32 param1, CrInt32 param2, CrInt32 param3)</argsstring>
+        <name>CrWarningExtString</name>
+        <param>
+          <type>SCRSDK::CrError</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>param2</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>param3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" line="12" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp" bodystart="1417" bodyend="1436" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" declline="12" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_cr_debug_string_8h_1a574784d0114703bf03ca72757b3aa5f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CrCommandIdString</definition>
+        <argsstring>(SCRSDK::CrCommandId id)</argsstring>
+        <name>CrCommandIdString</name>
+        <param>
+          <type>SCRSDK::CrCommandId</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" line="14" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp" bodystart="82" bodyend="85" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" declline="14" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_cr_debug_string_8h_1a7b062296d085260bf3ae4f8021b01bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CrDevicePropertyString</definition>
+        <argsstring>(SCRSDK::CrDevicePropertyCode code)</argsstring>
+        <name>CrDevicePropertyString</name>
+        <param>
+          <type><ref refid="_cr_debug_string_8cpp_1ad6c7d3de82453242bb6b350fa31f1b02" kindref="member">SCRSDK::CrDevicePropertyCode</ref></type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" line="15" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp" bodystart="895" bodyend="898" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" declline="15" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_cr_debug_string_8h_1a6f5598187f3cb928136e695207c16e12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SCRSDK::CrCommandId</type>
+        <definition>SCRSDK::CrCommandId CrCommandIdCode</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>CrCommandIdCode</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" line="17" column="21" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp" bodystart="87" bodyend="90" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" declline="17" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="_cr_debug_string_8h_1ad6c7d3de82453242bb6b350fa31f1b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SCRSDK::CrDevicePropertyCode</type>
+        <definition>SCRSDK::CrDevicePropertyCode CrDevicePropertyCode</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>CrDevicePropertyCode</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" line="18" column="30" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp" bodystart="900" bodyend="903" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h" declline="18" declcolumn="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>get<sp/>enum<sp/>string<sp/>from<sp/>enum<sp/>value<sp/>for<sp/>debug<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CRERRORSTRING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CRERRORSTRING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;CrTypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;CrError.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;CrDeviceProperty.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;CrCommandData.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">std::string<sp/><ref refid="_cr_debug_string_8h_1aacc66038e1dc245929a021800ad5d88c" kindref="member">CrErrorString</ref>(SCRSDK::CrError<sp/>error);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">std::string<sp/><ref refid="_cr_debug_string_8h_1aebe253f0f313de6b47e8eba9eddd7516" kindref="member">CrWarningExtString</ref>(SCRSDK::CrError<sp/>error,<sp/>CrInt32<sp/>param1,<sp/>CrInt32<sp/>param2,<sp/>CrInt32<sp/>param3);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">std::string<sp/><ref refid="_cr_debug_string_8h_1a574784d0114703bf03ca72757b3aa5f7" kindref="member">CrCommandIdString</ref>(SCRSDK::CrCommandId<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">std::string<sp/><ref refid="_cr_debug_string_8h_1a7b062296d085260bf3ae4f8021b01bfb" kindref="member">CrDevicePropertyString</ref>(SCRSDK::CrDevicePropertyCode<sp/>code);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">SCRSDK::CrCommandId<sp/><ref refid="_cr_debug_string_8h_1a6f5598187f3cb928136e695207c16e12" kindref="member">CrCommandIdCode</ref>(std::string<sp/>name);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">SCRSDK::CrDevicePropertyCode<sp/><ref refid="_cr_debug_string_8h_1ad6c7d3de82453242bb6b350fa31f1b02" kindref="member">CrDevicePropertyCode</ref>(std::string<sp/>name);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CRERRORSTRING_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h"/>
+  </compounddef>
+</doxygen>

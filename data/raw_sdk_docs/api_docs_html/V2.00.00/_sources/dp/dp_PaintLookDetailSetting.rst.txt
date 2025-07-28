@@ -1,0 +1,22 @@
+﻿.. _dp-PaintLookDetailSetting:
+
+CrDeviceProperty_PaintLookDetailSetting
+=======================================
+
+Get/Set the paint/look detail setting.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPaintLookDetailSetting_Off
+    - | Off
+
+  * - CrPaintLookDetailSetting_On
+    - | On
+

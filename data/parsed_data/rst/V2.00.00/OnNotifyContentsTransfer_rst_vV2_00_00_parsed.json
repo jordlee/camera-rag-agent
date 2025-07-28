@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/status_code_error/OnNotifyContentsTransfer.rst.txt",
+    "file_type": "rst",
+    "content": ".. _on-notify-contents-transfer:\n\nOnNotifyContentsTransfer\n========================\n  | Called when content transfer starts and ends, or when transfer fails.\n  | see :ref:`Pull out content stored on media in ContentsTransferMode<op-pull-out-content-stored-on-media-in-contents-transfer-mode>`\n\n**Definition**\n  void OnNotifyContentsTransfer(CrInt32u notify, CrContentHandle handle, CrChar* filename);\n\n.. 0x921B\n.. _cb-PullContentsFile:\n.. _cb-pullcontentsfile-canceled-by-camera-event:\n\n:ref:`PullContentsFile<api-pull-contents-file>` callback\n--------------------------------------------------------\n\n**notify**\n  .. list-table::\n      :widths: auto\n      :header-rows: 1\n\n      * - notify code\n        - Explanation\n\n      * - CrNotify_ContentsTransfer_Start\n        - When content data acquisition starts \n\n      * - CrNotify_ContentsTransfer_Complete\n        - Notify by callback of content data acquisition completion. filename is set.\n\n      * - CrError_xx\n        - Notify by callback of acquisition failure. See :ref:`Status code & Error<status-code-error>`\n\n\n      * - CrWarning_ContentsTransferMode_CanceledFromCamera\n        - PullContentsFile was canceled on the LCD screen of the camera body\n\n\n**handle**\n  content Handle\n\n**filename**\n  | The name (including path) of the content that will be set when the content transfer is complete.\n  | filename is not set when content transfer is started or when content transfer fails.",
+    "metadata": {
+        "title": "OnNotifyContentsTransfer",
+        "sdk_version": "V2.00.00"
+    }
+}

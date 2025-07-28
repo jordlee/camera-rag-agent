@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_capture_date" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrCaptureDate</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a0b7a3ba5baff178a524f7b0e8cf7e5c0" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrCaptureDate::year</definition>
+        <argsstring></argsstring>
+        <name>year</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::year</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6201" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1ad712782de6a948e347356db989d2dbbd" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrCaptureDate::month</definition>
+        <argsstring></argsstring>
+        <name>month</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::month</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6202" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a77f80a71df963760749357f33a5999d5" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrCaptureDate::day</definition>
+        <argsstring></argsstring>
+        <name>day</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::day</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6203" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a67e99869a02b6643625a0c69b9d216a8" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrCaptureDate::hour</definition>
+        <argsstring></argsstring>
+        <name>hour</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::hour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6204" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a8a894e263ea69109a1d8960faaf5859e" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrCaptureDate::minute</definition>
+        <argsstring></argsstring>
+        <name>minute</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::minute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6205" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a35991deeb0a7dcb3ad0f826c8747df16" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrCaptureDate::sec</definition>
+        <argsstring></argsstring>
+        <name>sec</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::sec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6206" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a72d31ca9fe7a71820b912e788569950e" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrCaptureDate::msec</definition>
+        <argsstring></argsstring>
+        <name>msec</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::msec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6207" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6207" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a033caaba01f4be235aeb92e42b11d564" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrCaptureDate::CrCaptureDate</definition>
+        <argsstring>()</argsstring>
+        <name>CrCaptureDate</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::CrCaptureDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6193" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1abee89f6c82b9b3d8855d1ce74393e658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrCaptureDate::~CrCaptureDate</definition>
+        <argsstring>()</argsstring>
+        <name>~CrCaptureDate</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::~CrCaptureDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6194" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1afbced5ee673e173918aeaf99296766fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrCaptureDate::CrCaptureDate</definition>
+        <argsstring>(const CrInt64u &amp;unixTime)</argsstring>
+        <name>CrCaptureDate</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::CrCaptureDate</qualifiedname>
+        <param>
+          <type>const CrInt64u &amp;</type>
+          <declname>unixTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a70d0da719010f53cd2bb56384ed63737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrCaptureDate::CrCaptureDate</definition>
+        <argsstring>(const CrCaptureDate &amp;ref)</argsstring>
+        <name>CrCaptureDate</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::CrCaptureDate</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_capture_date" kindref="compound">CrCaptureDate</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1a0e8c9cf32b9d51c9a42a808f61e2cfc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_capture_date" kindref="compound">CrCaptureDate</ref> &amp;</type>
+        <definition>CrCaptureDate &amp; SCRSDK::CrCaptureDate::operator=</definition>
+        <argsstring>(const CrCaptureDate &amp;ref)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_capture_date" kindref="compound">CrCaptureDate</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6197" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_capture_date_1ae8b6a082700d5477e7590631cba46599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrCaptureDate::operator==</definition>
+        <argsstring>(const CrCaptureDate &amp;ref)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>SCRSDK::CrCaptureDate::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_capture_date" kindref="compound">CrCaptureDate</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6198" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6190" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6191" bodyend="6208"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a033caaba01f4be235aeb92e42b11d564" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>CrCaptureDate</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1afbced5ee673e173918aeaf99296766fc" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>CrCaptureDate</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a70d0da719010f53cd2bb56384ed63737" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>CrCaptureDate</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a77f80a71df963760749357f33a5999d5" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>day</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a67e99869a02b6643625a0c69b9d216a8" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>hour</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a8a894e263ea69109a1d8960faaf5859e" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>minute</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1ad712782de6a948e347356db989d2dbbd" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>month</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a72d31ca9fe7a71820b912e788569950e" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>msec</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a0e8c9cf32b9d51c9a42a808f61e2cfc3" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>operator=</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1ae8b6a082700d5477e7590631cba46599" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>operator==</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a35991deeb0a7dcb3ad0f826c8747df16" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>sec</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1a0b7a3ba5baff178a524f7b0e8cf7e5c0" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>year</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_capture_date_1abee89f6c82b9b3d8855d1ce74393e658" prot="public" virt="non-virtual"><scope>SCRSDK::CrCaptureDate</scope><name>~CrCaptureDate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

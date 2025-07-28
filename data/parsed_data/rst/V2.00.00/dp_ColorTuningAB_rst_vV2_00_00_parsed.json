@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ColorTuningAB.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ColorTuningAB:\n\nCrDeviceProperty_ColorTuningAB\n==============================\n\nGet/Set the Biaxial Fine Tuning A-B Direction\n\n    CrDataType: `CrDataType_UInt8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x9C (B9_00)\n    - min\n\n  * - 0xE4 (A9_00)\n    - max\n\n  * - 0x01 (0.25)\n    - step\n\n\n| AB value sent to PC App from camera corresponds to one of the following patterns.\n| AB number is BY or AY, where Y is decimal from 0.00 to 9.00 and increments by 0.25.\n| Ex.) B9.00(0x9C),  B8.75(0x9D),  ...,\n|        A8.75(0xE3), A9.00(0xE4).\n| Note:\n| There may be parameter scope differences due to model differences.",
+    "metadata": {
+        "title": "dp_ColorTuningAB",
+        "sdk_version": "V2.00.00"
+    }
+}

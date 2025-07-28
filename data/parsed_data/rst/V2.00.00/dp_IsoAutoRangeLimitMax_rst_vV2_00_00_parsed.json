@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_IsoAutoRangeLimitMax.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-IsoAutoRangeLimitMax:\n\nCrDeviceProperty_IsoAutoRangeLimitMax\n=====================================\n\nGet/Set the ISO Auto Range Limit(Max)\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - --\n    - | The value is same as :ref:`CrDeviceProperty_IsoSensitivity<dp-IsoSensitivity>`.\n      | If the maximum value is less than the minimum value, the minimum is set equal to the maximum.",
+    "metadata": {
+        "title": "dp_IsoAutoRangeLimitMax",
+        "sdk_version": "V2.00.00"
+    }
+}

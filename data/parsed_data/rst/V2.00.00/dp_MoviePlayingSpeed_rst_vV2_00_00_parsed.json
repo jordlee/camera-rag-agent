@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MoviePlayingSpeed.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MoviePlayingSpeed:\n\nCrDeviceProperty_MoviePlayingSpeed\n==================================\n\nGet Movie Playing Speed\n\n    CrDataType: `CrDataType_UInt64Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMoviePlayingSpeed_Nothing\n    - | nothing to display.\n\n  * - Other than above values\n    - | The real value of Clip Playing Speed (Upper four bytes: numerator, Lower four bytes: denominator)\n\n| The numerator is int32_t type and the denominator is uint32_t type.",
+    "metadata": {
+        "title": "dp_MoviePlayingSpeed",
+        "sdk_version": "V2.00.00"
+    }
+}

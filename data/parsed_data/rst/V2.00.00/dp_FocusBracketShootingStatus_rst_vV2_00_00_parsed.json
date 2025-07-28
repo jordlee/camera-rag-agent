@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusBracketShootingStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FocusBracketShootingStatus:\n\nCrDeviceProperty_FocusBracketShootingStatus\n===========================================\n\nGet the Focus Bracket Shooting Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFocusBracket_NotShooting\n    - | Not Shooting\n\n  * - CrFocusBracket_Shooting\n    - | Shooting\n\n| “Shooting” (0x01) is set for this device property during the focus bracket shooting period.\n| “Not Shooting” (0x00) is set for this device property except during the focus bracket shooting period.",
+    "metadata": {
+        "title": "dp_FocusBracketShootingStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

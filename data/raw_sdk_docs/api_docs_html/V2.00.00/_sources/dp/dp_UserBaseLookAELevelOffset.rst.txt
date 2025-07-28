@@ -1,0 +1,26 @@
+﻿.. _dp-UserBaseLookAELevelOffset:
+
+CrDeviceProperty_UserBaseLookAELevelOffset
+==========================================
+
+Set/Get to UserBaseLook AE Level Offset
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - variable
+    - | AE Level Offset Value(EV)
+      | Lower 8bit is denominator, Higher 8bit is numerator.
+
+| Set "UserBaseLook AE Level Offset" for UserBaseLook selected in "Select UserBaseLook to Edit"
+|   e.g.) 0x0203 means 2/3EV
+
+| Caution:
+| There is a model where 0EV=0x0000, so please check the value when dividing.
+

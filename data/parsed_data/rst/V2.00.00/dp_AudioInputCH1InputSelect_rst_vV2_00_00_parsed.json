@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AudioInputCH1InputSelect.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AudioInputCH1InputSelect:\n\nCrDeviceProperty_AudioInputCH1InputSelect\n=========================================\n\nGet/Set the audio input CH1 input select.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAudioInputCHInputSelect_Off\n    - | Off\n\n  * - CrAudioInputCHInputSelect_INPUT1\n    - | INPUT1\n\n  * - CrAudioInputCHInputSelect_INPUT2\n    - | INPUT2\n\n  * - CrAudioInputCHInputSelect_InternalMIC\n    - | Internal MIC\n\n  * - CrAudioInputCHInputSelect_ShoeCH1\n    - | Shoe CH1\n\n  * - CrAudioInputCHInputSelect_ShoeCH2\n    - | Shoe CH2\n\n  * - CrAudioInputCHInputSelect_StereoMicJackL\n    - | Stereo Mic Jack (L)\n\n  * - CrAudioInputCHInputSelect_StereoMicJackR\n    - | Stereo Mic Jack (R)",
+    "metadata": {
+        "title": "dp_AudioInputCH1InputSelect",
+        "sdk_version": "V2.00.00"
+    }
+}

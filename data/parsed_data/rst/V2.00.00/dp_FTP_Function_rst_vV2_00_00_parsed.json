@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FTP_Function.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FTP_Function:\n\nCrDeviceProperty_FTP_Function\n=============================\n\nGet/Set the FTP Function\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFTPFunction_Off\n    - | Off\n\n  * - CrFTPFunction_On\n    - | On",
+    "metadata": {
+        "title": "dp_FTP_Function",
+        "sdk_version": "V2.00.00"
+    }
+}

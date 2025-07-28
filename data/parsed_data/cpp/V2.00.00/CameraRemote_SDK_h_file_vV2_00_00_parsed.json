@@ -1,0 +1,28 @@
+{
+    "refid": "_camera_remote___s_d_k_8h",
+    "kind": "file",
+    "name": "CameraRemote_SDK.h",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CameraRemote_SDK.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "_camera_remote___s_d_k_8h_1a5743c8f8da33b963c9497c2eb044e481",
+            "kind": "define",
+            "name": "__T",
+            "visibility": "define",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CameraRemote_SDK.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "CameraRemote_SDK.h",
+        "sdk_version": "V2.00.00"
+    }
+}

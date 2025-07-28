@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrFTPServerSetting</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a95587efb5e6a8174db0b77218b5663fc" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrFTPServerSetting::serverId</definition>
+        <argsstring></argsstring>
+        <name>serverId</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::serverId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6016" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6016" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a8ce79e6433f125f666d2fbfc985753a4" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrFTPServerSetting::displayName</definition>
+        <argsstring></argsstring>
+        <name>displayName</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::displayName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6017" column="39" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6017" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a062d460cb0703c8db6833d3154084bc4" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a4fc300af60ed754c41201f6d548124d1" kindref="member">CrFTPServerServiceType</ref></type>
+        <definition>CrFTPServerServiceType SCRSDK::CrFTPServerSetting::serviceType</definition>
+        <argsstring></argsstring>
+        <name>serviceType</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::serviceType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6018" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6018" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1af59662e9010b2e80b80388d59b321946" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrFTPServerSetting::hostName</definition>
+        <argsstring></argsstring>
+        <name>hostName</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::hostName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6019" column="39" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6019" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a74e088779862f5ac3485d8e62bcd2a9b" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+        <definition>CrInt16u SCRSDK::CrFTPServerSetting::portNumber</definition>
+        <argsstring></argsstring>
+        <name>portNumber</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::portNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6020" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6020" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a9e52370f30bf95e9d95e620b95079a10" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrFTPServerSetting::userName</definition>
+        <argsstring></argsstring>
+        <name>userName</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::userName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6021" column="39" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6021" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a6ca6d7b4d18ec92e2bf3f11d528f2e35" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aba112fe7f962437c95c934bb7e7f7b53" kindref="member">CrFTPServerPasswordExists</ref></type>
+        <definition>CrFTPServerPasswordExists SCRSDK::CrFTPServerSetting::passwordExists</definition>
+        <argsstring></argsstring>
+        <name>passwordExists</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::passwordExists</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6022" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6022" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1ab7e47c16babb5e3a01ba1b5e8fefab26" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrFTPServerSetting::password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::password</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6023" column="39" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6023" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1ae0bee974ff6767da420e4e813fc64ad3" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ae9ea36f619119fbe580a52eb4e135539" kindref="member">CrFTPServerPassiveMode</ref></type>
+        <definition>CrFTPServerPassiveMode SCRSDK::CrFTPServerSetting::passiveMode</definition>
+        <argsstring></argsstring>
+        <name>passiveMode</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::passiveMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6024" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6024" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a06f916ba15b8278cadbf05220fc6d8b6" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrFTPServerSetting::destinationDir</definition>
+        <argsstring></argsstring>
+        <name>destinationDir</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::destinationDir</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6025" column="39" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6025" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a5dcc56697bfab6ebbd0ba6626aa6e62c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a5780ebf5ed8cf72b45f655c7ac054a0b" kindref="member">CrFTPServerUsingSecureProtocol</ref></type>
+        <definition>CrFTPServerUsingSecureProtocol SCRSDK::CrFTPServerSetting::secureProtocol</definition>
+        <argsstring></argsstring>
+        <name>secureProtocol</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::secureProtocol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6026" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6026" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a2bb0a8364a75892ce196f42dcc8f7953" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a563a98c045d2d6cc733b11cbd9b8b82f" kindref="member">CrFTPServerDirectoryHierarchyType</ref></type>
+        <definition>CrFTPServerDirectoryHierarchyType SCRSDK::CrFTPServerSetting::directoryHierarchyType</definition>
+        <argsstring></argsstring>
+        <name>directoryHierarchyType</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::directoryHierarchyType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6027" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6027" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a781a902d88a976fcd6f5617dbad0f271" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1abfa7faeb875cbd692d8fe82e4fa6a23e" kindref="member">CrFTPServerSameNameFileOverwriteType</ref></type>
+        <definition>CrFTPServerSameNameFileOverwriteType SCRSDK::CrFTPServerSetting::overwriteType</definition>
+        <argsstring></argsstring>
+        <name>overwriteType</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::overwriteType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6028" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6028" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1afb8a56918594ad074d22e4b564087bc8" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a9d2175f54e535e999a3e21612031a650" kindref="member">CrFTPServerRootCertificateErrorSetting</ref></type>
+        <definition>CrFTPServerRootCertificateErrorSetting SCRSDK::CrFTPServerSetting::rootCertificateErrorSetting</definition>
+        <argsstring></argsstring>
+        <name>rootCertificateErrorSetting</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::rootCertificateErrorSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6029" column="40" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6029" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a04a6d3eced592319628281e9ae70ffea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFTPServerSetting::CrFTPServerSetting</definition>
+        <argsstring>()</argsstring>
+        <name>CrFTPServerSetting</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::CrFTPServerSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5989" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a590f05d0bc937baac08d65540e0a677a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFTPServerSetting::CrFTPServerSetting</definition>
+        <argsstring>(CrInt16u serverId, CrFTPServerServiceType serviceType, const char *displayName, const char *hostName, CrInt16u portNumber, const char *userName, CrFTPServerPasswordExists passwordExists, const char *password, CrFTPServerPassiveMode passiveMode, const char *destinationDir, CrFTPServerUsingSecureProtocol secureProtocol, CrFTPServerDirectoryHierarchyType directoryHierarchyType, CrFTPServerSameNameFileOverwriteType overwriteType, CrFTPServerRootCertificateErrorSetting rootCertificateErrorSetting)</argsstring>
+        <name>CrFTPServerSetting</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::CrFTPServerSetting</qualifiedname>
+        <param>
+          <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+          <declname>serverId</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1a4fc300af60ed754c41201f6d548124d1" kindref="member">CrFTPServerServiceType</ref></type>
+          <declname>serviceType</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>displayName</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>hostName</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></type>
+          <declname>portNumber</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>userName</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1aba112fe7f962437c95c934bb7e7f7b53" kindref="member">CrFTPServerPasswordExists</ref></type>
+          <declname>passwordExists</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1ae9ea36f619119fbe580a52eb4e135539" kindref="member">CrFTPServerPassiveMode</ref></type>
+          <declname>passiveMode</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>destinationDir</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1a5780ebf5ed8cf72b45f655c7ac054a0b" kindref="member">CrFTPServerUsingSecureProtocol</ref></type>
+          <declname>secureProtocol</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1a563a98c045d2d6cc733b11cbd9b8b82f" kindref="member">CrFTPServerDirectoryHierarchyType</ref></type>
+          <declname>directoryHierarchyType</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1abfa7faeb875cbd692d8fe82e4fa6a23e" kindref="member">CrFTPServerSameNameFileOverwriteType</ref></type>
+          <declname>overwriteType</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1a9d2175f54e535e999a3e21612031a650" kindref="member">CrFTPServerRootCertificateErrorSetting</ref></type>
+          <declname>rootCertificateErrorSetting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5990" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a3c1f1caf7b3aaaa8bac48eb183aa0cb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFTPServerSetting::~CrFTPServerSetting</definition>
+        <argsstring>()</argsstring>
+        <name>~CrFTPServerSetting</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::~CrFTPServerSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6005" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1ab0c9814354aca7b25e737bc7cc5578af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFTPServerSetting::CrFTPServerSetting</definition>
+        <argsstring>(const CrFTPServerSetting &amp;ref)</argsstring>
+        <name>CrFTPServerSetting</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::CrFTPServerSetting</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting" kindref="compound">CrFTPServerSetting</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6006" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1aa96fa259ac3dce69fe1b0e6a693c504b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting" kindref="compound">CrFTPServerSetting</ref> &amp;</type>
+        <definition>CrFTPServerSetting &amp; SCRSDK::CrFTPServerSetting::operator=</definition>
+        <argsstring>(const CrFTPServerSetting &amp;ref)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting" kindref="compound">CrFTPServerSetting</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6007" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a59ec4122f3169a3479b3539820ef23fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrFTPServerSetting::GetDisplayName</definition>
+        <argsstring>()</argsstring>
+        <name>GetDisplayName</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::GetDisplayName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6009" column="12" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6009" bodyend="6009"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a0f7ae0da7a5cb671b6604c77cc732c8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrFTPServerSetting::GetHostName</definition>
+        <argsstring>()</argsstring>
+        <name>GetHostName</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::GetHostName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6010" column="12" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6010" bodyend="6010"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1ac942a61c3c9a90014aadc1f9294120c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrFTPServerSetting::GetUserName_</definition>
+        <argsstring>()</argsstring>
+        <name>GetUserName_</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::GetUserName_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6011" column="12" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6011" bodyend="6011"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1af69d3db15b338b0db91addf2cde65836" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrFTPServerSetting::GetPassword</definition>
+        <argsstring>()</argsstring>
+        <name>GetPassword</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::GetPassword</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6012" column="12" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6012" bodyend="6012"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a63ac9c2a63a3b71067c6a580e2e8da5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrFTPServerSetting::GetDestinationDir</definition>
+        <argsstring>()</argsstring>
+        <name>GetDestinationDir</name>
+        <qualifiedname>SCRSDK::CrFTPServerSetting::GetDestinationDir</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6013" column="12" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6013" bodyend="6013"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5986" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5987" bodyend="6030"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a04a6d3eced592319628281e9ae70ffea" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>CrFTPServerSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a590f05d0bc937baac08d65540e0a677a" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>CrFTPServerSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1ab0c9814354aca7b25e737bc7cc5578af" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>CrFTPServerSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a06f916ba15b8278cadbf05220fc6d8b6" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>destinationDir</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a2bb0a8364a75892ce196f42dcc8f7953" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>directoryHierarchyType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a8ce79e6433f125f666d2fbfc985753a4" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>displayName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a63ac9c2a63a3b71067c6a580e2e8da5b" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>GetDestinationDir</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a59ec4122f3169a3479b3539820ef23fb" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>GetDisplayName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a0f7ae0da7a5cb671b6604c77cc732c8e" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>GetHostName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1af69d3db15b338b0db91addf2cde65836" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>GetPassword</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1ac942a61c3c9a90014aadc1f9294120c3" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>GetUserName_</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1af59662e9010b2e80b80388d59b321946" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>hostName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1aa96fa259ac3dce69fe1b0e6a693c504b" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>operator=</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a781a902d88a976fcd6f5617dbad0f271" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>overwriteType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1ae0bee974ff6767da420e4e813fc64ad3" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>passiveMode</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1ab7e47c16babb5e3a01ba1b5e8fefab26" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>password</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a6ca6d7b4d18ec92e2bf3f11d528f2e35" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>passwordExists</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a74e088779862f5ac3485d8e62bcd2a9b" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>portNumber</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1afb8a56918594ad074d22e4b564087bc8" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>rootCertificateErrorSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a5dcc56697bfab6ebbd0ba6626aa6e62c" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>secureProtocol</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a95587efb5e6a8174db0b77218b5663fc" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>serverId</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a062d460cb0703c8db6833d3154084bc4" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>serviceType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a9e52370f30bf95e9d95e620b95079a10" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>userName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_server_setting_1a3c1f1caf7b3aaaa8bac48eb183aa0cb7" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPServerSetting</scope><name>~CrFTPServerSetting</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

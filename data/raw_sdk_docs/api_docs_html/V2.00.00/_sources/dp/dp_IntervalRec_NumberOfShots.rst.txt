@@ -1,0 +1,27 @@
+﻿.. _dp-IntervalRec_NumberOfShots:
+
+CrDeviceProperty_IntervalRec_NumberOfShots
+==========================================
+
+Get/Set the IntervalREC(Still) Number of Shots
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| Number of shots.
+

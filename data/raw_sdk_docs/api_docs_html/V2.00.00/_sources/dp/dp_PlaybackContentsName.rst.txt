@@ -1,0 +1,20 @@
+﻿.. _dp-PlaybackContentsName:
+
+CrDeviceProperty_PlaybackContentsName
+=====================================
+
+Get the playback contents name.
+
+    CrDataType: `CrDataType_STR`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - String
+    - Contents Name
+
+

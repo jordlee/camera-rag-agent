@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AudioInputCH4Level.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AudioInputCH4Level:\n\nCrDeviceProperty_AudioInputCH4Level\n===================================\n\nGet/Set the audio input CH4 level.\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step",
+    "metadata": {
+        "title": "dp_AudioInputCH4Level",
+        "sdk_version": "V2.00.00"
+    }
+}

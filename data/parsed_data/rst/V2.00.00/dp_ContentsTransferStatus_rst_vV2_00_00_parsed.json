@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ContentsTransferStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ContentsTransferStatus:\n\nCrDeviceProperty_ContentsTransferStatus\n=======================================\n\nGet the content transfer status\n\n    CrDataType: `CrDataType_UInt16`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrContentsTransfer_OFF\n    - | OFF\n      | The state in which the camera cannot transfer content\n\n  * - CrContentsTransfer_ON\n    - | ON",
+    "metadata": {
+        "title": "dp_ContentsTransferStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

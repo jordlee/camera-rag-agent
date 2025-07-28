@@ -1,0 +1,32 @@
+﻿.. _dp-IsoAutoMinShutterSpeedManual:
+
+CrDeviceProperty_IsoAutoMinShutterSpeedManual
+=============================================
+
+Get/Set the Iso Auto Min Shutter Speed Manual
+
+    CrDataType: `CrDataType_UInt64Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrIsoAutoMinShutterSpeedManual_Invalid
+    - | Invalid
+
+  * - Other than above values
+    - | Upper four bytes: numerator, 
+      | Lower four bytes: denominator
+
+| In the case of the shutter speed is displayed as "Real Number" on the camera, the denominator is fixed 0x0000000A.
+| e.g.) 0x0000000F0000000A:
+|         0x0000000F (15) / 0x00000000A (10)
+|         = 1.5"
+| In the case of the shutter speed is displayed as "Fraction Number" on the camera, the numerator is fixed 0x00000001.
+| e.g.) 0x00000001000003E8: 
+|         0x00000001 (1) / 0x000003E8 (1000)
+|         = 1/1000
+

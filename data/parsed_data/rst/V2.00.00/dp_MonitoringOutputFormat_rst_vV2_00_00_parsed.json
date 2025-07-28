@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitoringOutputFormat.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MonitoringOutputFormat:\n\nCrDeviceProperty_MonitoringOutputFormat\n=======================================\n\nGet/Set the monitoring output format.\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMonitoringOutputFormat_None\n    - | None\n\n  * - CrMonitoringOutputFormat_59_94_720x480P\n    - | 59.94:720x480p\n\n  * - CrMonitoringOutputFormat_50_00_720x576P\n    - | 50.00:720x576p\n\n  * - CrMonitoringOutputFormat_1920x1080i\n    - | 1920x1080i\n\n  * - CrMonitoringOutputFormat_1920x1080i_PsF\n    - | 1920x1080i(PsF)\n\n  * - CrMonitoringOutputFormat_1920x1080P\n    - | 1920x1080p\n\n  * - CrMonitoringOutputFormat_1920x1080P_LevelA\n    - | 1920x1080p(Level A)\n\n  * - CrMonitoringOutputFormat_1920x1080P_LevelB\n    - | 1920x1080p(Level B)\n\n  * - CrMonitoringOutputFormat_3840x2160P\n    - | 3840x2160p\n\n  * - CrMonitoringOutputFormat_4096x2160P\n    - | 4096x2160p\n\n  * - CrMonitoringOutputFormat_1280x720P\n    - | 1280x720p\n\n\n.. include:: ./dp_MonitoringOutputFormat.inc",
+    "metadata": {
+        "title": "dp_MonitoringOutputFormat",
+        "sdk_version": "V2.00.00"
+    }
+}

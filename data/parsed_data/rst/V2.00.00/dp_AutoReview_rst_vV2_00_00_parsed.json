@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AutoReview.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AutoReview:\n\nCrDeviceProperty_AutoReview\n===========================\n\nGet/Set the Auto Review \n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAutoReview_Off\n    - | Off\n\n  * - Other than above values\n    - | The real value of Auto Review time in seconds.",
+    "metadata": {
+        "title": "dp_AutoReview",
+        "sdk_version": "V2.00.00"
+    }
+}

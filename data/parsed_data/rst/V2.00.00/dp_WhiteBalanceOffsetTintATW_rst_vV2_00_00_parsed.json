@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_WhiteBalanceOffsetTintATW.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-WhiteBalanceOffsetTintATW:\n\nCrDeviceProperty_WhiteBalanceOffsetTintATW\n==========================================\n\nGet/Set the offset tint for ATW mode.\n\n    CrDataType: `CrDataType_Int8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - -128\n    - min\n\n  * - 127\n    - max\n\n  * - 1\n    - step",
+    "metadata": {
+        "title": "dp_WhiteBalanceOffsetTintATW",
+        "sdk_version": "V2.00.00"
+    }
+}

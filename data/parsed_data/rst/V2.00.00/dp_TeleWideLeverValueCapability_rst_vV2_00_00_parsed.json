@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_TeleWideLeverValueCapability.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-TeleWideLeverValueCapability:\n\nCrDeviceProperty_TeleWideLeverValueCapability\n=============================================\n\nGet the tele/wide lever value capability.\n\n    CrDataType: `CrDataType_Int8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Valiable\n    - min\n\n  * - Valiable\n    - max\n\n  * - Valiable\n    - step",
+    "metadata": {
+        "title": "dp_TeleWideLeverValueCapability",
+        "sdk_version": "V2.00.00"
+    }
+}

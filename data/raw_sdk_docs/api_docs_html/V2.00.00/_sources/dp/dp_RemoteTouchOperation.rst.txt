@@ -1,0 +1,33 @@
+﻿.. _dp-RemoteTouchOperation:
+
+CrDeviceProperty_RemoteTouchOperation
+=====================================
+
+Execute remote touch operation (x, y).
+
+    CrDataType: `CrDataType_UInt32`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x00000000
+    - min
+
+  * - 0xFFFFFFFF
+    - max
+
+  * - 1
+    - step
+
+
+| The CurrentValue of this property is always zero.
+| For ILCE-7SM3 and ILCE-7C, only available in movie mode.
+| Note:
+| This property can only be executed if :ref:`CrDeviceProperty_RemoteTouchOperationEnableStatus<dp-RemoteTouchOperationEnableStatus>` is Enable.
+| The x coordinate is set in the upper two bytes and the y coordinate is set in the lower two bytes
+| The range of X is 0 ~ 639 (0x027F), and the range of Y is 0 ~ 479 (0x01DF).
+

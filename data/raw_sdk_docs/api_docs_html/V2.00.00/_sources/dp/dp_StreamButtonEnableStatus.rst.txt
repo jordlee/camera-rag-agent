@@ -1,0 +1,22 @@
+﻿.. _dp-StreamButtonEnableStatus:
+
+CrDeviceProperty_StreamButtonEnableStatus
+=========================================
+
+Get the stream button enabled status.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrStreamButtonEnableStatus_Disable
+    - | Disable
+
+  * - CrStreamButtonEnableStatus_Enable
+    - | Enable
+

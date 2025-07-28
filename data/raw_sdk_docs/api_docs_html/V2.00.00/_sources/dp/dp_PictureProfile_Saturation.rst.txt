@@ -1,0 +1,27 @@
+﻿.. _dp-PictureProfile_Saturation:
+
+CrDeviceProperty_PictureProfile_Saturation
+==========================================
+
+Get/Set the Picture Profile Saturation
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Saturation for Picture Profile
+

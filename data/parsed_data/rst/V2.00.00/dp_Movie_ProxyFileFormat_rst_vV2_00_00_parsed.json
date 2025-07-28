@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Movie_ProxyFileFormat.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-Movie_ProxyFileFormat:\n\nCrDeviceProperty_Movie_ProxyFileFormat\n======================================\n\nGet/Set the Proxy File Format(Movie)\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFileFormatMovie_XAVC_S_HD\n    - | XAVC S HD\n\n  * - CrFileFormatMovie_XAVC_HS_HD\n    - | XAVC HS HD\n\n  * - CrFileFormatMovie_XAVC_S_I_DCI_4K\n    - | XAVC S-I DCI 4K\n\n  * - CrFileFormatMovie_XAVC_Proxy\n    - | XAVC Proxy",
+    "metadata": {
+        "title": "dp_Movie_ProxyFileFormat",
+        "sdk_version": "V2.00.00"
+    }
+}

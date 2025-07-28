@@ -1,0 +1,28 @@
+﻿.. _dp-SubjectRecognitionBirdDetectionParts:
+
+CrDeviceProperty_SubjectRecognitionBirdDetectionParts
+=====================================================
+
+Get/Set the Subject Recognition Bird Detection Parts
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSubjectRecognitionAnimalBirdDetectionParts_EyeHeadBody
+    - | Eye + Head + Body
+
+  * - CrSubjectRecognitionAnimalBirdDetectionParts_EyeHead
+    - | Eye + Head
+
+  * - CrSubjectRecognitionAnimalBirdDetectionParts_Eye
+    - | Eye
+
+  * - CrSubjectRecognitionAnimalBirdDetectionParts_FollowIndividualSetting 
+    - | FollowIndividualSetting
+

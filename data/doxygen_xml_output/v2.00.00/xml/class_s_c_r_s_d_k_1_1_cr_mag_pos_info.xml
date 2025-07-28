@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrMagPosInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1aa027af9908752a08b830de8a6b998171" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMagPosInfo::xNumerator</definition>
+        <argsstring></argsstring>
+        <name>xNumerator</name>
+        <qualifiedname>SCRSDK::CrMagPosInfo::xNumerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5909" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5909" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a3bac7fa69cd4e4be0b3877b8ebb990eb" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMagPosInfo::xDenominator</definition>
+        <argsstring></argsstring>
+        <name>xDenominator</name>
+        <qualifiedname>SCRSDK::CrMagPosInfo::xDenominator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5910" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5910" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a7098c2a3f52188f61db5d99316b83860" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMagPosInfo::yNumerator</definition>
+        <argsstring></argsstring>
+        <name>yNumerator</name>
+        <qualifiedname>SCRSDK::CrMagPosInfo::yNumerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5911" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5911" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1af9cc294c709abd91c4a98bbb4461ec16" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMagPosInfo::yDenominator</definition>
+        <argsstring></argsstring>
+        <name>yDenominator</name>
+        <qualifiedname>SCRSDK::CrMagPosInfo::yDenominator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5912" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5912" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a4a1c53c611db6b965477520936730538" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMagPosInfo::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>SCRSDK::CrMagPosInfo::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5913" column="14" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5913" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a59be3c11b385bad6581a7e0692d069b7" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMagPosInfo::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>SCRSDK::CrMagPosInfo::height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5914" column="14" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5914" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a4ab74562a4c62a4cba7d991dd79aee4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMagPosInfo::CrMagPosInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrMagPosInfo</name>
+        <qualifiedname>SCRSDK::CrMagPosInfo::CrMagPosInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5897" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5897" bodyend="5904"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1adc7b12cc7c3d1e9a5d807bace925f6a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMagPosInfo::~CrMagPosInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrMagPosInfo</name>
+        <qualifiedname>SCRSDK::CrMagPosInfo::~CrMagPosInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5905" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5905" bodyend="5906"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5894" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5895" bodyend="5915"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a4ab74562a4c62a4cba7d991dd79aee4f" prot="public" virt="non-virtual"><scope>SCRSDK::CrMagPosInfo</scope><name>CrMagPosInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a59be3c11b385bad6581a7e0692d069b7" prot="public" virt="non-virtual"><scope>SCRSDK::CrMagPosInfo</scope><name>height</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a4a1c53c611db6b965477520936730538" prot="public" virt="non-virtual"><scope>SCRSDK::CrMagPosInfo</scope><name>width</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a3bac7fa69cd4e4be0b3877b8ebb990eb" prot="public" virt="non-virtual"><scope>SCRSDK::CrMagPosInfo</scope><name>xDenominator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1aa027af9908752a08b830de8a6b998171" prot="public" virt="non-virtual"><scope>SCRSDK::CrMagPosInfo</scope><name>xNumerator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1af9cc294c709abd91c4a98bbb4461ec16" prot="public" virt="non-virtual"><scope>SCRSDK::CrMagPosInfo</scope><name>yDenominator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a7098c2a3f52188f61db5d99316b83860" prot="public" virt="non-virtual"><scope>SCRSDK::CrMagPosInfo</scope><name>yNumerator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1adc7b12cc7c3d1e9a5d807bace925f6a6" prot="public" virt="non-virtual"><scope>SCRSDK::CrMagPosInfo</scope><name>~CrMagPosInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,39 @@
+﻿.. _dp-AF_Area_Position:
+
+CrDeviceProperty_AF_Area_Position
+=================================
+
+Set the AF Area Position(x,y)
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x00000000
+    - min
+
+  * - 0xFFFFFFFF
+    - max
+
+  * - 1
+    - step
+
+
+| Set the center position of the AF frame.
+| The x coordinate is set in the upper two bytes and the y coordinate is set in the lower two bytes
+| The range of X is 0 ~ 639 (0x027F), and the range of Y is 0 ~ 479 (0x01DF).
+| AF frame size is acquired by :ref:`CrFocusFrameInfo<cr-focus-frame-info>`.
+| CrFocusFrameInfo is in :ref:`LiveViewProperty<op-get-the-liveview-properties>`.
+| The settable area is more inside by half the frame size than CrFocusFrameInfo.xDenominator/yDenominator.
+|  
+| Note:
+|  The range in which the coordinates can be specified varies depending on the model, aspect setting, and AF setting.
+|  
+| Fig.Relationship between CrFocusframeInfo and settable area
+
+.. image:: /_images/dp_AF_Area_Position_fig.png
+  :width: 50%
+

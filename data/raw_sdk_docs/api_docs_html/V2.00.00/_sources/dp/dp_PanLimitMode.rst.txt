@@ -1,0 +1,22 @@
+﻿.. _dp-PanLimitMode:
+
+CrDeviceProperty_PanLimitMode
+=============================
+
+Get/Set the Pan Limit Mode
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPanLimitMode_Off
+    - | Off
+
+  * - CrPanLimitMode_On
+    - | On
+

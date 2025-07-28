@@ -1,0 +1,27 @@
+﻿.. _dp-MonitoringOutputDisplaySettingDestAssign:
+
+CrDeviceProperty_MonitoringOutputDisplaySettingDestAssign
+=========================================================
+
+Get the Monitoring Output Display Dest Assign
+
+    CrDataType: `CrDataType_UInt64Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Any
+    - | The value changes depending on the current operation request status.
+      | e.g.) 0x00000101= Monitoring Output Display Setting1 (SDI1)
+      |       0x00000E02= Monitoring Output Display Setting2 (SDI2/HDMI/Stream)
+
+
+.. include:: ./dp_MonitoringOutputDisplaySettingDestAssign.inc
+
+| Monitoring Output Display Setting Dest information is set in the list of form flags.
+| Superimposes on screen displays such as menus and status on the output signal.
+

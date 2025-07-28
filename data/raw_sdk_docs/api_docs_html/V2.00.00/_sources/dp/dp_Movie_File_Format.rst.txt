@@ -1,0 +1,99 @@
+﻿.. _dp-Movie_File_Format:
+
+CrDeviceProperty_Movie_File_Format
+==================================
+
+Get/Set the File Format(Movie)
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFileFormatMovie_AVCHD 
+    - | AVCHD
+
+  * - CrFileFormatMovie_MP4 
+    - | MP4
+
+  * - CrFileFormatMovie_XAVC_S_4K 
+    - | XAVC S 4K
+
+  * - CrFileFormatMovie_XAVC_S_HD 
+    - | XAVC S HD
+
+  * - CrFileFormatMovie_XAVC_HS_8K
+    - | XAVC HS 8K
+
+  * - CrFileFormatMovie_XAVC_HS_4K
+    - | XAVC HS 4K
+
+  * - CrFileFormatMovie_XAVC_S_L_4K
+    - | XAVC S-L 4K
+
+  * - CrFileFormatMovie_XAVC_S_L_HD
+    - | XAVC S-L HD
+
+  * - CrFileFormatMovie_XAVC_S_I_4K
+    - | XAVC S-I 4K
+
+  * - CrFileFormatMovie_XAVC_S_I_HD
+    - | XAVC S-I HD
+
+  * - CrFileFormatMovie_XAVC_I
+    - | XAVC I
+
+  * - CrFileFormatMovie_XAVC_L
+    - | XAVC L
+
+  * - CrFileFormatMovie_XAVC_Proxy
+    - | XAVC Proxy
+
+  * - CrFileFormatMovie_XAVC_HS_HD
+    - | XAVC HS HD
+
+  * - CrFileFormatMovie_XAVC_S_I_DCI_4K
+    - | XAVC S-I DCI 4K
+
+  * - CrFileFormatMovie_XAVC_H_I_HQ
+    - | XAVC H I HQ
+
+  * - CrFileFormatMovie_XAVC_H_I_SQ
+    - | XAVC H I SQ
+
+  * - CrFileFormatMovie_XAVC_H_L
+    - | XAVC H L
+
+  * - CrFileFormatMovie_X_OCN_XT
+    - | X OCN XT
+
+  * - CrFileFormatMovie_X_OCN_ST
+    - | X OCN ST
+
+  * - CrFileFormatMovie_X_OCN_LT
+    - | X OCN LT
+
+  * - CrFileFormatMovie_XAVC_HS_L_422
+    - | XAVC HS-L 422
+
+  * - CrFileFormatMovie_XAVC_HS_L_420
+    - | XAVC HS-L 420
+
+  * - CrFileFormatMovie_XAVC_S_L_422
+    - | XAVC S-L 422
+
+  * - CrFileFormatMovie_XAVC_S_L_420
+    - | XAVC S-L 420
+
+  * - CrFileFormatMovie_XAVC_S_I_422
+    - | XAVC S-I 422
+
+  * - CrFileFormatMovie_MPEG_HD_422
+    - | MPEG HD 422
+
+| Note: In some models, “XAVC S-L xx” is displayed as “XAVC S xx” in their menu.   
+

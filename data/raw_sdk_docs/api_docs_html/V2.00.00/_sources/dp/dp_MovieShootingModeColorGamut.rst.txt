@@ -1,0 +1,25 @@
+﻿.. _dp-MovieShootingModeColorGamut:
+
+CrDeviceProperty_MovieShootingModeColorGamut
+============================================
+
+Get/Set the Movie Shooting Mode Color Gamut
+
+| See “:ref:`Get the menu display string<op-get-the-menu-display-string>`” for menu display characters.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieShootingModeColorGamut_S_Gamut3_Cine
+    - | S-Gamut3.Cine
+
+  * - CrMovieShootingModeColorGamut_S_Gamut3
+    - | S-Gamut3
+
+

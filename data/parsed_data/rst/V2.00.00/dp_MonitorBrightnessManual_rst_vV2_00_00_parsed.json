@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitorBrightnessManual.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MonitorBrightnessManual:\n\nCrDeviceProperty_MonitorBrightnessManual\n========================================\n\nGet/Set the Monitor Brightness Manual\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variables\n    - min\n\n  * - variables\n    - max\n\n  * - variables\n    - step",
+    "metadata": {
+        "title": "dp_MonitorBrightnessManual",
+        "sdk_version": "V2.00.00"
+    }
+}

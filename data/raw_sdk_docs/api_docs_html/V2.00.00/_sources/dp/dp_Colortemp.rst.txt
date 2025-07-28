@@ -1,0 +1,37 @@
+﻿.. _dp-Colortemp:
+
+CrDeviceProperty_Colortemp
+==========================
+
+Get/Set the Color Temperature
+
+| For models that support :ref:`CrDeviceProperty_ColortempStep<dp-ColortempStep>`, the CurrentValue of this device property is also updated by manipulating :ref:`CrDeviceProperty_ColortempStep<dp-ColortempStep>`.
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+
+| The resolution of the CurrentValue is the step value.
+| The CurrentValue increases or decreases with each step value.
+| Ex.)
+| If min = 1000, max = 1500, step = 100, you can set 6 values of 1000, 1100, 1200, 1300, 1400, 1500 to CurrentValue.
+| The special CurrentValue are following.
+| - 0x0000 means less than min.
+| - 0xFFFF means greater than max.
+| These values are not included the value of Range. (It is only used as CurrentValue.)
+

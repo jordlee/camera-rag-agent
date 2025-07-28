@@ -1,0 +1,122 @@
+.. _api-header-operation-result-information:
+
+OperationResult information
+===========================
+
+.. _api-get-crsdk-operation-results-supported:
+
+GetCRSDKOperationResultsSupported
+---------------------------------
+
+**Overview**
+  For some DeviceProperty, SetDeviceProperty() or SendCommand() will notify the user of the update result using a new callback called OnWarningExt().
+  This API can acquire a list of CrDevicePropertyCode and CrCommandId to be notified by OnWarningExt().
+
+**Definition**
+  `CrError GetCRSDKOperationResultsSupported(CrDeviceHandle deviceHandle, CrOperationResultSupportedInfo** opeResSupportInfo,  CrInt32u* numOfInfo);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrOperationResultSupportedInfo**
+    - | opeResSupportInfo
+      | The :ref:`CrOperationResultSupportedInfo<cr-OperationResultSupportedInfo>` list pointer. Developers should pass the address of a modifiable CrOperationResultSupportedInfo pointer.
+  * - CrInt32u*
+    - | numOfInfo
+      | An integer pointer that indicates the number of CrOperationResultSupportedInfo returned by the list pointer.
+      | Developers should pass the address of a modifiable CrInt32u variable.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`ReleaseCRSDKOperationResultsSupported<api-release-crsdk-operation-results-supported>`
+  - :ref:`IDeviceCallback::OnWarningExt<callback-interface>`
+
+**Special note (details)**
+  OK events are not notified for the following Operations. When OK (NG was not notified), Check the result of the operation with the respective CrDeviceProperty.
+
+  - :ref:`CrDeviceProperty_NearFar<dp-NearFar>`
+    If you want to check "Focus Driving Completed", use CrDeviceProperty_FocusPositionSetting and CrWarning_FocusPosition_Result_OK.
+  - :ref:`CrDeviceProperty_Zoom_Operation<dp-Zoom_Operation>`
+  - :ref:`CrDeviceProperty_RemoteTouchOperation<dp-RemoteTouchOperation>`
+  - :ref:`CrCommandId_APS_C_or_Full_Switching<command-APS_C_or_Full_Switching>`
+  - :ref:`CrCommandId_FlickerScan<command-FlickerScan>`
+
+.. _api-release-crsdk-operation-results-supported:
+
+ReleaseCRSDKOperationResultsSupported
+-------------------------------------
+
+**Overview**
+  This function releases the CrOperationResultSupportedInfo allocated by GetCRSDKOperationResultsSupported().
+
+**Definition**
+  `CrError ReleaseCRSDKOperationResultsSupported(CrDeviceHandle deviceHandle, CrOperationResultSupportedInfo* opeResSupportInfo);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrOperationResultSupportedInfo*
+    - | opeResSupportInfo
+      | CrOperationResultSupportedInfo list pointer to release.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the list is released successfully
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetCRSDKOperationResultsSupported<api-get-crsdk-operation-results-supported>`
+
+**Special note (details)**
+  None in particular

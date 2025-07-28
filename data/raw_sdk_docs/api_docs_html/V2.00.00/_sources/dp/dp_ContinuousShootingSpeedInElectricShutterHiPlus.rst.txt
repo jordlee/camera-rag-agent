@@ -1,0 +1,22 @@
+﻿.. _dp-ContinuousShootingSpeedInElectricShutterHiPlus:
+
+CrDeviceProperty_ContinuousShootingSpeedInElectricShutterHiPlus
+===============================================================
+
+Get/Set the Continuous Shooting Speed in Electric Shutter(Hi+)
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrContinuousShootingSpeedInElectricShutter_Invalid
+    - | Invalid
+
+  * - Other than above values
+    - | The real value of shutter speed in pictures/second.
+

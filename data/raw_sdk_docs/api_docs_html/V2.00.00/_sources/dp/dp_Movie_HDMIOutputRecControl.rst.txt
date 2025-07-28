@@ -1,0 +1,22 @@
+﻿.. _dp-Movie_HDMIOutputRecControl:
+
+CrDeviceProperty_Movie_HDMIOutputRecControl
+===========================================
+
+Get/Set the HDMI Output REC Control(Movie) 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrHDMIOutputRecControlMovie_Off
+    - | Off
+
+  * - CrHDMIOutputRecControlMovie_On
+    - | On
+

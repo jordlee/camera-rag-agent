@@ -1,0 +1,22 @@
+﻿.. _dp-Still_Image_Trans_Size:
+
+CrDeviceProperty_Still_Image_Trans_Size
+=======================================
+
+Get/Set the Still Image Trans Size
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPropertyStillImageTransSize_Original
+    - | Original
+
+  * - CrPropertyStillImageTransSize_SmallSize
+    - | Small Size JPEG/HEIF
+

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SetPresetPTZFBinaryVersion.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SetPresetPTZFBinaryVersion:\n\nCrDeviceProperty_SetPresetPTZFBinaryVersion\n===========================================\n\nGet the enabled status and SetPresetPTZF command binary version.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - variable\n    - | SetPresetPTZF Binary Version\n\n| ex) The Binary Version is 1.00, the value is 0x0064. (0d100)\n| When SetPresetPTZF feature is invalid, IsEnable field is Disable.",
+    "metadata": {
+        "title": "dp_SetPresetPTZFBinaryVersion",
+        "sdk_version": "V2.00.00"
+    }
+}

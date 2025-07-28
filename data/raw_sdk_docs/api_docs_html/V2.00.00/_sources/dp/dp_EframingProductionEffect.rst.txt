@@ -1,0 +1,25 @@
+﻿.. _dp-EframingProductionEffect:
+
+CrDeviceProperty_EframingProductionEffect
+=========================================
+
+Get/Set the eframing production effect
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrEframingProductionEffect_Off
+    - | Off
+
+  * - CrEframingProductionEffect_IntervalZoomInOut_15sec
+    - | Interval Zoom In/Out (15sec)
+
+  * - CrEframingProductionEffect_IntervalZoomInOut_30sec
+    - | Interval Zoom In/Out (30sec)
+

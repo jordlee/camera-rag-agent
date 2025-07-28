@@ -1,0 +1,45 @@
+.. _api-header-sdk-version:
+
+SDK Version
+===========
+
+.. _api-get-sdk-version:
+
+GetSDKVersion
+-------------
+
+**Overview**
+  This function returns the SDK version number.
+
+**Definition**
+  `CrInt32u GetSDKVersion();`
+
+**Input parameters**
+  None
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrInt32u
+    - | The SDK Version is represented as a 4-byte unsigned integer constant.
+      | The first 3 bytes contain the SDK version. The last byte is reserved by the SDK for future use.
+
+**Error Codes**
+  No Error
+
+**Related API**
+  - :ref:`GetSDKSerial<api-get-sdk-serial>`
+
+**Special note (details)**
+  The SDK version number is set at build time.
+
+  This version number will be updated if the SDK API is changed.

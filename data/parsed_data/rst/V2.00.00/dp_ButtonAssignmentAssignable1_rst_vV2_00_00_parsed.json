@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ButtonAssignmentAssignable1.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ButtonAssignmentAssignable1:\n\nCrDeviceProperty_ButtonAssignmentAssignable1\n============================================\n\nGet/Set the Button Assignment Assignable 1\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Variable(0x00 ~ 0xFF)\n    - | Assign a certain function to :ref:`CrDeviceProperty_AssignableButton1<dp-AssignableButton1>` so that the function can be executed by button operation.\n      | GetValues() contains a list of function-code that can be assigned to :ref:`CrDeviceProperty_AssignableButton1<dp-AssignableButton1>`.\n      | Function-code are 8-bit values, and the number (number of functions) varies depending on the model and setting status. You can use GetDisplayStringList() to get a list of assignable function names.\n      | See “:ref:`Get the menu display string<op-get-the-menu-display-string>`”",
+    "metadata": {
+        "title": "dp_ButtonAssignmentAssignable1",
+        "sdk_version": "V2.00.00"
+    }
+}

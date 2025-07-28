@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_TimeCodePreset.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-TimeCodePreset:\n\nCrDeviceProperty_TimeCodePreset\n===============================\n\nGet/Set the Time Code Preset\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000000\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 0x00000001\n    - step\n\n| Bit24-Bit31 : hour\n| Bit16-Bit23 : minute\n| Bit8-Bit15 : second\n| Bit0-Bit7 : frame\n\n| The time code can be set between the following range.\n| - When [60p] is selected: 00:00:00.00 to 23:59:59.29\n| - When [24p] is selected, you can select the last two digits of the time code in multiples of four from 00 to 23 frames.\n| - When [50p] is selected: 00:00:00.00 to 23:59:59.24",
+    "metadata": {
+        "title": "dp_TimeCodePreset",
+        "sdk_version": "V2.00.00"
+    }
+}

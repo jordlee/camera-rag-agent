@@ -1,0 +1,25 @@
+﻿.. _dp-FocusBracketShootingStatus:
+
+CrDeviceProperty_FocusBracketShootingStatus
+===========================================
+
+Get the Focus Bracket Shooting Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusBracket_NotShooting
+    - | Not Shooting
+
+  * - CrFocusBracket_Shooting
+    - | Shooting
+
+| “Shooting” (0x01) is set for this device property during the focus bracket shooting period.
+| “Not Shooting” (0x00) is set for this device property except during the focus bracket shooting period.
+

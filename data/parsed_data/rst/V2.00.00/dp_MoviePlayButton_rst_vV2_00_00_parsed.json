@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MoviePlayButton.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MoviePlayButton:\n\nCrDeviceProperty_MoviePlayButton\n================================\n\nGet/Set the Movie Play button\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMovieXButton_Up\n    - | Be sure to specify \"Up\" after specifying \"Down\".\n\n  * - CrMovieXButton_Down\n    - | Specify \"Down\" when you start movie play.",
+    "metadata": {
+        "title": "dp_MoviePlayButton",
+        "sdk_version": "V2.00.00"
+    }
+}

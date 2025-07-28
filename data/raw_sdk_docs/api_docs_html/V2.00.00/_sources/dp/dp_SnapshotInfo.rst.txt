@@ -1,0 +1,29 @@
+﻿.. _dp-SnapshotInfo:
+
+CrDeviceProperty_SnapshotInfo
+=============================
+
+Get the Shooting File Info
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x0000
+    - min
+
+  * - 0xFFFF
+    - max
+
+  * - 0x0001
+    - step
+
+| 0x0000:transferable file doesn't exit
+| 0x0001-0x7FFF:exist file
+| If the value is over 0x8001(MSB is 0b01), it is possible to get the Shot files.
+

@@ -1,0 +1,29 @@
+﻿.. _dp-Focus_Speed_Range:
+
+CrDeviceProperty_Focus_Speed_Range
+==================================
+
+Get the Focus Speed Range
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - 1
+    - step
+
+| A value that can be used for Focus Operation.
+| For example, when min is -5 and max is +5, it means that the focus drive speed can be specified in 5 steps. The higher the number, the faster the focus drive speed.
+| The CurrentValue of this device property is always zero.
+

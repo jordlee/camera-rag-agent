@@ -1,0 +1,27 @@
+﻿.. _dp-GaindBValue:
+
+CrDeviceProperty_GaindBValue
+============================
+
+Get/Set the Gain dB Value 
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| Gain dB value.
+

@@ -1,0 +1,282 @@
+.. _api-header-remote-firmware-update:
+
+Remote Firmware Update
+======================
+
+.. _api-pre-check-firmware-update:
+
+PrecheckFirmwareUpdate
+----------------------
+
+**Overview**
+  Precheck firmware update.
+
+  See ":ref:`Remote Firmware Update<op-remote-firmware-update>`” for usage instructions.
+
+**Definition**
+  `CrError PrecheckFirmwareUpdate(CrDeviceHandle deviceHandle, CrInt64u fwFileSize);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrInt64u
+    - | fwFileSize
+      | Specify size of firmware file that will update firmware.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`UploadPartialFile<api-upload-partial-file>`
+  - :ref:`StartFirmwareUpdate<api-start-firmware-update>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteFirmwareUpdateResult<callback-interface>`
+    | See: :ref:`PrecheckFirmwareUpdate callback<cb-PrecheckFirmwareUpdate>`
+
+**Special note (details)**
+  The result of this API will be notified by OnNotifyRemoteFirmwareUpdateResult(). You can get the result by callback argument.
+
+.. _api-upload-partial-file:
+
+UploadPartialFile
+-----------------
+
+**Overview**
+  Upload file by split to camera.
+
+  See ":ref:`Remote Firmware Update<op-remote-firmware-update>`” for usage instructions.
+
+**Definition**
+  `CrError UploadPartialFile(CrDeviceHandle deviceHandle, CrUploadPartialDataType type, CrChar* filePath);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrUploadPartialDataType
+    - | type
+      | Upload file type.
+      | See: :ref:`CrUploadPartialDataType<cr-UploadPartialDataType>`
+  * - CrChar*
+    - | filePath
+      | Specify file path of upload target.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`CancelFirmwareUpload<api-cancel-firmware-upload>`
+  - :ref:`RequestFirmwareUpdaterInfo<api-request-firmware-updater-info>`
+  - :ref:`StartFirmwareUpdate<api-start-firmware-update>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteFirmwareUpdateResult<callback-interface>`
+    | See: :ref:`UploadPartialFile, CancelFirmwareUpload callback<cb-UploadPartialFile>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-cancel-firmware-upload:
+
+CancelFirmwareUpload
+--------------------
+
+**Overview**
+  Cancel firmware upload by :ref:`UploadPartialFile()<api-upload-partial-file>`.
+  
+  See ":ref:`Remote Firmware Update<op-remote-firmware-update>`” for usage instructions.
+
+**Definition**
+  `CrError CancelFirmwareUpload(CrDeviceHandle deviceHandle);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`UploadPartialFile<api-upload-partial-file>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteFirmwareUpdateResult<callback-interface>`
+    | See: :ref:`UploadPartialFile, CancelFirmwareUpload callback<cb-CancelFirmwareUpload>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-request-firmware-updater-info:
+
+RequestFirmwareUpdaterInfo
+--------------------------
+
+**Overview**
+  Request firmware updater info of uploaded to camera by :ref:`UploadPartialFile()<api-upload-partial-file>`.
+
+  See ":ref:`Remote Firmware Update<op-remote-firmware-update>`” for usage instructions.
+
+**Definition**
+  `CrError RequestFirmwareUpdaterInfo(CrDeviceHandle deviceHandle);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`UploadPartialFile<api-upload-partial-file>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteFirmwareUpdateResult<callback-interface>`
+    | See: :ref:`RequestFirmwareUpdaterInfo callback<cb-request-firmware-updater-info>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-start-firmware-update:
+
+StartFirmwareUpdate
+-------------------
+
+**Overview**
+  Start firmware update.
+
+  See ":ref:`Remote Firmware Update<op-remote-firmware-update>`” for usage instructions.
+
+**Definition**
+  `CrError StartFirmwareUpdate(CrDeviceHandle deviceHandle);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`UploadPartialFile<api-upload-partial-file>`
+  - :ref:`RequestFirmwareUpdaterInfo<api-request-firmware-updater-info>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteFirmwareUpdateResult<callback-interface>`
+    | See: :ref:`StartFirmwareUpdate callback<cb-StartFirmwareUpdate>`
+
+**Special note (details)**
+  None in particular 
+
+.. _cr-UploadPartialDataType:
+
+CrUploadPartialDataType
+-----------------------
+
+Enumerate of kind of partial upload.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrUploadPartialDataType_FirmwareData
+    - Used for remote firmware update

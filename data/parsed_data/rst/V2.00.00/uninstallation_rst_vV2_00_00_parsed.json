@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/other/uninstallation.rst.txt",
+    "file_type": "rst",
+    "content": "Uninstallation\n==============\n\n**Delete All related folders and files.**\n-----------------------------------------\n\nWhen uninstalling your application which uses Camera Remote SDK, delete the following folders and files , or delete the information stored in the files with :ref:`EditSDKInfo<api-edit-sdk-info>`.\n\nOS common:\n    - ``..\\CrAdapter\\*.*``\n    - ``..\\*.*``\n\nWin:\n    - ``..\\Users\\<User Name>\\AppData\\Roaming\\Camera Remote SDK\\*.*``\nMac:\n    - ``../Users/<User Name>/Library/Preferences/Camera Remote SDK/*.*``\nLinux : \n    - ``../home/<User Name>/Camera Remote SDK/*.*``",
+    "metadata": {
+        "title": "uninstallation",
+        "sdk_version": "V2.00.00"
+    }
+}

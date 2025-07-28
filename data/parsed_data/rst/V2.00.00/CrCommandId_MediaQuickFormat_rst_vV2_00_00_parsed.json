@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/command/CrCommandId_MediaQuickFormat.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _command-MediaQuickFormat:\n\nCrCommandId_MediaQuickFormat\n=============================================\n\nQuick formatting the media\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCommandParam_Up \n    - | Specify when quick and simple initializing the media in SLOT1\n      | Ex. “CrCommandId_MediaQuickFormat” with “CrCommandParam_Up”\n\n  * - CrCommandParam_Down \n    - | Specify when quick and simple initializing the media in SLOT2\n      | Ex. “CrCommandId_MediaQuickFormat” with “CrCommandParam_Down”\n\n**Related API**\n  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`\n    | See: :ref:`CrCommandId_MediaFormat, CrCommandId_MediaQuickFormat, CrCommandId_CancelMediaFormat callback<cb-MediaFormat>`",
+    "metadata": {
+        "title": "CrCommandId_MediaQuickFormat",
+        "sdk_version": "V2.00.00"
+    }
+}

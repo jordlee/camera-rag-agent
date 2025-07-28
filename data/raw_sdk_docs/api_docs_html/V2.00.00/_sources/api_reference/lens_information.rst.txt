@@ -1,0 +1,341 @@
+.. _api-header-lens-information:
+
+Lens information
+================
+
+.. _api-request-lens-information:
+
+RequestLensInformation
+----------------------
+
+**Overview**
+  You can use this API and :ref:`GetLensInformation()<api-get-lens-information>` to get Lens information. It is valid only when a compatible lens is attached.
+
+  If you want to use the Lens information, first request the acquisition of the Lens information with this API. Then get information on GetLensInformation() after that.
+
+  - See to “:ref:`How to use LensInformation<op-how-to-use-lens-information>`” in Tips / Trouble shooting for how to use it.
+
+**Definition**
+  `CrError RequestLensInformation(CrDeviceHandle deviceHandle);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetLensInformation<api-get-lens-information>`
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`RequestLensInformation callback<cb-request-lens-information>`
+
+**Special note (details)**
+  This API can be executed when :ref:`CrDeviceProperty_LensInformationEnableStatus<dp-LensInformationEnableStatus>` is Enable.
+
+  The result of this API will be notified by OnWarning(). When OnWarning notifies you of "CrWarning_RequestLensInformation_Result_Success", you can get Lens information with GetLensInformation().
+
+  If you are notified of anything other than success, it is possible that the Lens is not attached or that the Lens for which Lens information cannot be obtained is attached.
+
+  When the Lens information is updated due to Lens replacement etc., “CrWarning_LensInformationChanged” is notified by OnWarning(). If you want to use the Lens information of the replaced Lens, execute this API and GetLensInformation() to get the Lens information again.
+
+.. _api-get-lens-information:
+
+GetLensInformation
+------------------
+
+**Overview**
+  It is an API to get the Lens information of the attached Lens. It can only be executed if :ref:`RequestLensInformation()<api-request-lens-information>` is successful.
+  - See to “How to use LensInformation” in Tips / Trouble shooting for how to use it.
+
+**Definition**
+  `CrError GetLensInformation(CrDeviceHandle deviceHandle, CrLensInformation** list,  CrInt32u* numOfList);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrLensInformation**
+    - | list
+      | The :ref:`CrLensInformation<cr-lens-information>` list pointer. Developers should pass the address of a modifiable CrLensInformation pointer. The value of this pointer should be initialized to nullptr. Copy the Lens information stored inside the SDK-internal after the success of RequestLensInformation() to this pointer.
+  * - CrInt32u*
+    - | numOfList
+      | An integer pointer that indicates the number of CrLensInformation returned by the list pointer.
+      | Developers should pass the address of a modifiable CrInt32u variable.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_Api_NoApplicableInformation  If numOfList is returned as zero, Make sure that Lens that can acquire Lens information is attached. If this error is returned even though the Lens for which lens information can be acquired is attached, RequestLensInformation() may not have been executed. Please do RequestLensInformation().
+
+**Related API**
+  - :ref:`RequestLensInformation<api-request-lens-information>`
+  - :ref:`ReleaseLensInformation<api-release-lens-information>`
+  - :ref:`IDeviceCallback::OnWarning<callback-interface>`
+
+**Special note (details)**
+  When the Lens information is updated due to Lens replacement etc., “CrWarning_LensInformationChanged” is notified by OnWarning(). If you want to use the Lens information of the replaced Lens, execute this API and GetLensInformation() to get the Lens information again.
+
+  This API can be executed only once. If you want to get the Lens information after this API, please request again to get the Lens information from the camera with RequestLensInformation().
+
+.. _api-release-lens-information:
+
+ReleaseLensInformation
+----------------------
+
+**Overview**
+  This function releases the CrLensInformation allocated by GetLensInformation().
+
+**Definition**
+  `CrError ReleaseLensInformation(CrDeviceHandle deviceHandle, CrLensInformation* list);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrLensInformation*
+    - | list 
+      | :ref:`CrLensInformation<cr-lens-information>` list pointer to release.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the list is released successfully
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetLensInformation<api-get-lens-information>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-request-zoom-and-focus-preset:
+
+RequestZoomAndFocusPreset
+-------------------------
+
+**Overview**
+  You can use this API and :ref:`GetZoomAndFocusPreset()<api-get-zoom-and-focus-preset>` to get Preset information.
+
+  If you want to use the Zoom&Focus Preset information, first request the acquisition of the Preset information with this API. Then get information on GetZoomAndFocusPreset() after that.
+
+**Definition**
+  `CrError RequestZoomAndFocusPreset(CrDeviceHandle deviceHandle);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetZoomAndFocusPreset<api-get-zoom-and-focus-preset>`
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`RequestZoomAndFocusPreset callback<cb-request-zoom-and-focus-preset>`
+
+**Special note (details)**
+  This API can be executed when CrDeviceProperty_ZoomAndFocusPresetDataVersion exists and CrPropertyEnableFlag of CrDeviceProperty_ZoomAndFocusPresetDataVersion is CrEnableValue_DisplayOnly.
+
+  The result of this API will be notified by OnWarning(). When OnWarning notifies you of "CrWarning_RequestZoomAndFocusPreset_Result_Success", you can get Preset information with GetZoomAndFocusPreset().
+
+  When the Zoom&Focus Preset information is updated, “CrWarning_ZoomAndFocusPresetChanged” is notified by OnWarning(). After receiving the notification, execute this API and GetZoomAndFocusPreset() as necessary to get the Preset information again.
+
+.. _api-get-zoom-and-focus-preset:
+
+GetZoomAndFocusPreset
+---------------------
+
+**Overview**
+  It is an API to get the Zoom&Focus Preset information. It can only be executed if :ref:`RequestZoomAndFocusPreset()<api-request-zoom-and-focus-preset>` is successful.
+
+**Definition**
+  `CrError GetZoomAndFocusPreset(CrDeviceHandle deviceHandle, CrZoomAndFocusPresetInfo** list,  CrInt32u* numOfList);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrZoomAndFocusPresetInfo**
+    - | list
+      | The :ref:`CrZoomAndFocusPresetInfo<cr-zoom-and-focus-preset-info>` list pointer. Developers should pass the address of a modifiable CrZoomAndFocusPresetInfo pointer. The value of this pointer should be initialized to nullptr. Copy the Zoom&Focus Preset information stored inside the SDK-internal after the success of RequestZoomAndFocusPreset() to this pointer.
+  * - CrInt32u*
+    - | numOfList
+      | An integer pointer that indicates the number of CrZoomAndFocusPresetInfo returned by the list pointer.
+      | Developers should pass the address of a modifiable CrInt32u variable.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_Api_NoApplicableInformation  RequestZoomAndFocusPreset() may not have been executed. Please do RequestZoomAndFocusPreset().
+
+**Related API**
+  - :ref:`RequestZoomAndFocusPreset<api-request-zoom-and-focus-preset>`
+  - :ref:`ReleaseZoomAndFocusPreset<api-release-zoom-and-focus-preset>`
+  - :ref:`IDeviceCallback::OnWarning<callback-interface>`
+
+**Special note (details)**
+  When the Zoom&Focus Preset information is updated, “CrWarning_ZoomAndFocusPresetChanged” is notified by OnWarning(). After receiving the notification, execute RequestZoomAndFocusPreset() and this API as necessary to get the Preset information again.
+  
+  This API can be executed only once. If you want to get the Zoom&Focus Preset information after this API, please request again to get the Preset information from the camera with RequestZoomAndFocusPreset().
+
+.. _api-release-zoom-and-focus-preset:
+
+ReleaseZoomAndFocusPreset
+-------------------------
+
+**Overview**
+  This function releases the CrZoomAndFocusPresetInfo allocated by :ref:`GetZoomAndFocusPreset()<api-get-zoom-and-focus-preset>`.
+
+**Definition**
+  `CrError ReleaseZoomAndFocusPreset(CrDeviceHandle deviceHandle, CrZoomAndFocusPresetInfo* list);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrZoomAndFocusPresetInfo*
+    - | list 
+      | :ref:`CrZoomAndFocusPresetInfo<cr-zoom-and-focus-preset-info>` list pointer to release.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the list is released successfully
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetZoomAndFocusPreset<api-get-zoom-and-focus-preset>`
+
+**Special note (details)**
+  None in particular

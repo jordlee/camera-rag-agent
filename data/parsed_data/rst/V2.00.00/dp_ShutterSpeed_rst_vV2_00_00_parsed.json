@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ShutterSpeed.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ShutterSpeed:\n\nCrDeviceProperty_ShutterSpeed\n=============================\n\nGet/Set the Shutter Speed\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrShutterSpeed_Bulb\n    - | BULB\n\n  * - CrShutterSpeed_Nothing\n    - | nothing to display\n\n  * - Other than above values \n    - | The real value of shutter speed (Upper two bytes: numerator, Lower two bytes: denominator)\n      | In the case of the shutter speed is displayed as \"Real Number\" on the camera, the denominator is fixed 0x000A.\n      | e.g.) 0x000F000A: 0x000F (means 15) / 0x0000A (means 10) = 1.5\"\n      | In the case of the shutter speed is displayed as \"Fraction Number\" on the camera, the numerator is fixed 0x0001.\n      | e.g.) 0x000103E8: 0x0001 (means 1) / 0x03E8 (means 1000) = 1/1000",
+    "metadata": {
+        "title": "dp_ShutterSpeed",
+        "sdk_version": "V2.00.00"
+    }
+}

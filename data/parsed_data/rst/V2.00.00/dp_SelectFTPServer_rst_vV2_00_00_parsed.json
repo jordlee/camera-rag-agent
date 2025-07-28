@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SelectFTPServer.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SelectFTPServer:\n\nCrDeviceProperty_SelectFTPServer\n================================\n\nGet/Set the Select FTP Server\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Value\n    - | The real value of Server ID(1~)\n      | Changing it will disconnect IP network communication. Reconnection may take some time\n\n| When this device properties changed, the following device properties are changed.\n| CrDeviceProperty_FTP_ConnectionStatus\n| CrDeviceProperty_FTP_ConnectionErrorInfo",
+    "metadata": {
+        "title": "dp_SelectFTPServer",
+        "sdk_version": "V2.00.00"
+    }
+}

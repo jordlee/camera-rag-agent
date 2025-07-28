@@ -1,0 +1,129 @@
+﻿.. _dp-Movie_IntervalRec_IntervalTime:
+
+CrDeviceProperty_Movie_IntervalRec_IntervalTime
+===============================================
+
+Get/Set the IntervalREC(Movie) Time
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrIntervalRecTimeMovie_1sec
+    - | 1 sec
+
+  * - CrIntervalRecTimeMovie_2sec
+    - | 2 sec
+
+  * - CrIntervalRecTimeMovie_3sec
+    - | 3 sec
+
+  * - CrIntervalRecTimeMovie_4sec
+    - | 4 sec
+
+  * - CrIntervalRecTimeMovie_5sec
+    - | 5 sec
+
+  * - CrIntervalRecTimeMovie_6sec
+    - | 6 sec
+
+  * - CrIntervalRecTimeMovie_7sec
+    - | 7 sec
+
+  * - CrIntervalRecTimeMovie_8sec
+    - | 8 sec
+
+  * - CrIntervalRecTimeMovie_9sec
+    - | 9 sec
+
+  * - CrIntervalRecTimeMovie_10sec
+    - | 10 sec
+
+  * - CrIntervalRecTimeMovie_15sec
+    - | 15 sec
+
+  * - CrIntervalRecTimeMovie_20sec
+    - | 20 sec
+
+  * - CrIntervalRecTimeMovie_30sec
+    - | 30 sec
+
+  * - CrIntervalRecTimeMovie_40sec
+    - | 40 sec
+
+  * - CrIntervalRecTimeMovie_50sec
+    - | 50 sec
+
+  * - CrIntervalRecTimeMovie_1min
+    - | 1 min
+
+  * - CrIntervalRecTimeMovie_2min
+    - | 2 min
+
+  * - CrIntervalRecTimeMovie_3min
+    - | 3 min
+
+  * - CrIntervalRecTimeMovie_4min
+    - | 4 min
+
+  * - CrIntervalRecTimeMovie_5min
+    - | 5 min
+
+  * - CrIntervalRecTimeMovie_6min
+    - | 6 min
+
+  * - CrIntervalRecTimeMovie_7min
+    - | 7 min
+
+  * - CrIntervalRecTimeMovie_8min
+    - | 8 min
+
+  * - CrIntervalRecTimeMovie_9min
+    - | 9 min
+
+  * - CrIntervalRecTimeMovie_10min
+    - | 10 min
+
+  * - CrIntervalRecTimeMovie_15min
+    - | 15 min
+
+  * - CrIntervalRecTimeMovie_20min
+    - | 20 min
+
+  * - CrIntervalRecTimeMovie_30min
+    - | 30 min
+
+  * - CrIntervalRecTimeMovie_40min
+    - | 40 min
+
+  * - CrIntervalRecTimeMovie_50min
+    - | 50 min
+
+  * - CrIntervalRecTimeMovie_1hour
+    - | 1 hour
+
+  * - CrIntervalRecTimeMovie_2hour
+    - | 2 hour
+
+  * - CrIntervalRecTimeMovie_3hour
+    - | 3 hour
+
+  * - CrIntervalRecTimeMovie_4hour
+    - | 4 hour
+
+  * - CrIntervalRecTimeMovie_6hour
+    - | 6 hour
+
+  * - CrIntervalRecTimeMovie_12hour
+    - | 12 hour
+
+  * - CrIntervalRecTimeMovie_24hour
+    - | 24 hour
+
+| The real value of interval recording time. 
+

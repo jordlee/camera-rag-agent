@@ -1,0 +1,29 @@
+﻿.. _dp-WhiteBalanceTint:
+
+CrDeviceProperty_WhiteBalanceTint
+=================================
+
+Get/Set the White Balance Tint
+
+| This device property can also be updated by :ref:`CrDeviceProperty_WhiteBalanceTintStep<dp-WhiteBalanceTintStep>`.
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - -99
+    - min
+
+  * - 99
+    - max
+
+  * - 1
+    - step
+
+| White Balance Tint<A/B> setting value, A and B can be switched by SW to control the CurrentValue remotely.
+

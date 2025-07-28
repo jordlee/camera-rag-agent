@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ProgramShiftStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ProgramShiftStatus:\n\nCrDeviceProperty_ProgramShiftStatus\n===================================\n\nGet the Program Shift Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrProgramShiftStatus_Idle\n    - | Idle\n\n  * - CrProgramShiftStatus_ProgramShift\n    - | Program Shift",
+    "metadata": {
+        "title": "dp_ProgramShiftStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

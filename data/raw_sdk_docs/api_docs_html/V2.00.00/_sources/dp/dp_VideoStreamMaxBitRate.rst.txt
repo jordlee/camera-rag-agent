@@ -1,0 +1,27 @@
+﻿.. _dp-VideoStreamMaxBitRate:
+
+CrDeviceProperty_VideoStreamMaxBitRate
+======================================
+
+Get/Set the Video Stream Max Bit Rate
+
+    CrDataType: `CrDataType_UInt64Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Unit is kbps. Set the max value of the bit rate when VBR Mode is Bit Rate Limit. 
+

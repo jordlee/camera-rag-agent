@@ -1,0 +1,27 @@
+﻿.. _dp-CompressionFileFormatStill:
+
+CrDeviceProperty_CompressionFileFormatStill
+===========================================
+
+Get/Set the Compression File Format(Still)
+
+| Depends on this setting, available settings vary at :ref:`CrDeviceProperty_FileType<dp-FileType>`.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCompressionFileFormat_JPEG
+    - | JPEG
+
+  * - CrCompressionFileFormat_HEIF_422
+    - | HEIF (4:2:2)
+
+  * - CrCompressionFileFormat_HEIF_420
+    - | HEIF (4:2:0)
+

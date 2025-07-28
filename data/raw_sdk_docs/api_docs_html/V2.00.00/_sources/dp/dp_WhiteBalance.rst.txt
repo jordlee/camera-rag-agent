@@ -1,0 +1,67 @@
+﻿.. _dp-WhiteBalance:
+
+CrDeviceProperty_WhiteBalance
+=============================
+
+Get/Set the WhiteBalance
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrWhiteBalance_AWB
+    - | AWB
+
+  * - CrWhiteBalance_Daylight
+    - | Daylight
+
+  * - CrWhiteBalance_Fluorescent
+    - | Fluorescent
+
+  * - CrWhiteBalance_Tungsten
+    - | Tungsten (Incandescent)
+
+  * - CrWhiteBalance_Flush
+    - | Flash
+
+  * - CrWhiteBalance_Fluorescent_WarmWhite 
+    - | Fluor.: Warm White (-1)
+
+  * - CrWhiteBalance_Fluorescent_CoolWhite
+    - | Fluor.: Cool White (0)
+
+  * - CrWhiteBalance_Fluorescent_DayWhite
+    - | Fluor.: Day White (+1)
+
+  * - CrWhiteBalance_Fluorescent_Daylight
+    - | Fluor.: Daylight White (+2)
+
+  * - CrWhiteBalance_Cloudy
+    - | Cloudy
+
+  * - CrWhiteBalance_Shadow
+    - | Shade
+
+  * - CrWhiteBalance_ColorTemp
+    - | C.Temp.
+
+  * - CrWhiteBalance_Custom_1
+    - | Custom 1
+
+  * - CrWhiteBalance_Custom_2
+    - | Custom 2
+
+  * - CrWhiteBalance_Custom_3
+    - | Custom 3
+
+  * - CrWhiteBalance_Custom
+    - | Custom
+
+  * - CrWhiteBalance_Underwater_Auto
+    - | Underwater Auto
+

@@ -1,0 +1,119 @@
+{
+    "refid": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member",
+    "kind": "struct",
+    "name": "SCRSDK::CrMonitoringFormat.member",
+    "source_file": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member_1a35e8d861c1a429a7216920eb2c84625f",
+            "kind": "variable",
+            "name": "deliveryImageQualityLevel",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member_1a83f750dad796991600637176c1082775",
+            "kind": "variable",
+            "name": "videoCodec",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member_1ab7e164b34ff76b1cda93a058604190da",
+            "kind": "variable",
+            "name": "resolution",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member_1a46d8797d82ef724269cb8e089a38e110",
+            "kind": "variable",
+            "name": "frameRate",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member_1ad3694d50a158a4cf5ea5a1225a792ced",
+            "kind": "variable",
+            "name": "bitRate",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member_1a75ca123be8b6685ff9536b50b978385c",
+            "kind": "variable",
+            "name": "resolutionVariableFlag",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member_1aff18dd8670600ce99a023f57c80fdfca",
+            "kind": "variable",
+            "name": "reserve1",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_monitoring_format_8member_1aa902001a49e9f2d9652da81961e50272",
+            "kind": "variable",
+            "name": "reserve2",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrMonitoringFormat.member",
+        "sdk_version": "V1.14.00"
+    }
+}

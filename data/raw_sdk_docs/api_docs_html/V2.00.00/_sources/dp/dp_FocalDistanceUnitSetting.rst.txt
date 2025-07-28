@@ -1,0 +1,22 @@
+﻿.. _dp-FocalDistanceUnitSetting:
+
+CrDeviceProperty_FocalDistanceUnitSetting
+=========================================
+
+Get/Set the Focal Distance Unit Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocalDistanceUnitSetting_Meter
+    - | Meter
+
+  * - CrFocalDistanceUnitSetting_Feet
+    - | Feet
+

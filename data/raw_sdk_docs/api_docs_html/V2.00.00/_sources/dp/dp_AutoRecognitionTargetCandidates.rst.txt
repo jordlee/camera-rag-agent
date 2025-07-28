@@ -1,0 +1,36 @@
+﻿.. _dp-AutoRecognitionTargetCandidates:
+
+CrDeviceProperty_AutoRecognitionTargetCandidates
+================================================
+
+Get the auto recognition target candidates.
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAutoRecognitionTargetCandidate_Person
+    - | Person
+
+  * - CrAutoRecognitionTargetCandidate_Animal
+    - | Animal
+
+  * - CrAutoRecognitionTargetCandidate_Bird
+    - | Bird
+
+  * - CrAutoRecognitionTargetCandidate_Insect
+    - | Insect
+
+  * - CrAutoRecognitionTargetCandidate_CarTrain
+    - | Car/Train
+
+  * - CrAutoRecognitionTargetCandidate_Plane
+    - | Plane
+
+| This bit-assigned available Auto Recognition Target values can be used to set “Auto Recognition Target Setting” by OR operation.
+

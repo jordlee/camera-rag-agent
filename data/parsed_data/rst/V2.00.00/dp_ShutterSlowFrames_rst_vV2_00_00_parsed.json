@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ShutterSlowFrames.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ShutterSlowFrames:\n\nCrDeviceProperty_ShutterSlowFrames\n==================================\n\nGet/Set the Shutter Slow Frames\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrShutterSlowFrames_Disable\n    - | -\n\n  * - Other than above values\n    - | Shutter Slow Frames Value",
+    "metadata": {
+        "title": "dp_ShutterSlowFrames",
+        "sdk_version": "V2.00.00"
+    }
+}

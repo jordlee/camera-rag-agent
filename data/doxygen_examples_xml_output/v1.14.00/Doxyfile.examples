@@ -1,0 +1,11 @@
+
+PROJECT_NAME     = "SDK Examples"
+INPUT            = /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/ConnectionInfo.cpp /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/Text.cpp /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/Text.h /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/CrDebugString.cpp /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/RemoteCli.cpp /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/CrDebugString.h /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/ConnectionInfo.h /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/CameraDevice.h /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/PropertyValueTable.h /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V1.14.00/CameraDevice.cpp
+GENERATE_XML     = YES
+XML_OUTPUT       = xml
+QUIET            = YES
+WARNINGS         = NO
+OUTPUT_DIRECTORY = /Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/doxygen_examples_xml_output/V1.14.00
+EXTRACT_ALL      = YES
+EXTRACT_STATIC   = YES
+RECURSIVE        = YES

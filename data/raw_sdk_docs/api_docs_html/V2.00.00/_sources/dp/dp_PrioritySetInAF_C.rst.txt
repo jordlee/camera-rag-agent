@@ -1,0 +1,25 @@
+﻿.. _dp-PrioritySetInAF_C:
+
+CrDeviceProperty_PrioritySetInAF_C
+==================================
+
+Get/Set the Priority Set in AF-C
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPrioritySetInAF_AF
+    - | AF
+
+  * - CrPrioritySetInAF_Release
+    - | Release
+
+  * - CrPrioritySetInAF_BalancedEmphasis
+    - | Balanced Emphasis
+

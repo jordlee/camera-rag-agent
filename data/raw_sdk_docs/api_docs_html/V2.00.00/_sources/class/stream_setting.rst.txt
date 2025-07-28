@@ -1,0 +1,109 @@
+.. _stream-setting:
+
+Stream Setting
+==============
+
+.. _cr-VideoStreamSetting:
+
+CrVideoStreamSetting
+--------------------
+
+Class describing video stream settings.
+
+Has a video stream settings. This is used to set/get the video stream settings.
+
+Member Variables
+
+  None
+
+Member Functions
+
+.. list-table::
+  :widths: 1 10
+  :header-rows: 1
+
+  * - Signature
+    - Description
+
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+  * - Copy Constructor
+    - \-
+  * - void SetRTMPParameter(CrInt16u urlLength, const CrInt8u* url, CrInt16u keyLength, const CrInt8u* key)
+    - | Set the RTMP parameter.
+      | urlLength and keyLength must include null-terminate.
+      | Specify 1 or more characters, and the maximum number of characters for the url and key, including the null-terminate, is 255.
+      | url and key must not contain size information.
+  * - | void SetSRTParameter(
+      |   CrInt16u urlLength, const CrInt8u* url, CrInt32u port, CrInt16u latency,
+      |   CrInt8u ttl, CrStreamCipherType cipherType,
+      |   CrInt8u cipherKeyLength, const CrInt8u* cipherKey, CrStreamModeSetting mode)
+    - | Set the SRT parameter.
+      | urlLength and cipherKeyLength must include null-terminate.
+      | Specify 1 or more characters.
+      | The maximum number of characters for the url, including the null-terminate, is 255.
+      | The maximum number of characters for the cipherKey, including the null-terminate, is 80.
+      | url and cipherKey must not contain size information.
+  * - CrVideoStreamSettingProtocol GetProtocol() const
+    - Get the protocol.
+  * - CrInt8u GetProtocolPermission() const
+    - Get the protocol permission.
+  * - CrInt16u GetURLLength() const
+    - Get the url length.
+  * - const CrInt8u* GetURL() const
+    - Get the url.
+  * - bool IsPortExists() const
+    - true: port exists.
+  * - CrInt32u GetPort() const
+    - Get the port.
+  * - CrInt16u GetKeyLength() const
+    - Get the key length.
+  * - bool IsKeyExists() const
+    - true: key exists.
+  * - const CrInt8u* GetKey() const
+    - Get the key.
+  * - bool IsLatencyExists() const
+    - true: latency exists.
+  * - CrInt16u GetLatency() const
+    - Get the latency.
+  * - bool IsTTLExists() const
+    - true: TTL exists.
+  * - CrInt8u GetTTL() const
+    - Get the TTL.
+  * - bool IsCipherExists() const
+    - true: cipher exists.
+  * - CrStreamCipherType GetCipherType() const
+    - Get the cipher type.
+  * - CrInt8u GetCipherKeyLength() const
+    - Get the cipher key length.
+  * - const CrInt8u* GetCipherKey() const
+    - Get the cipher key.
+  * - bool IsModeExists() const
+    - true: mode exists.
+  * - CrStreamModeSetting GetMode() const
+    - Get the mode.
+
+.. _cr-VideoStreamSettingProtocol:
+
+CrVideoStreamSettingProtocol
+----------------------------
+
+Enumerate of kind of video stream setting protocol.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrVideoStreamSettingProtocol_None
+    - None
+  * - CrVideoStreamSettingProtocol_RTMP
+    - RTMP
+  * - CrVideoStreamSettingProtocol_SRT
+    - SRT

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_VideoRecordingFormatBitrateSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-VideoRecordingFormatBitrateSetting:\n\nCrDeviceProperty_VideoRecordingFormatBitrateSetting\n===================================================\n\nGet/Set the video recording format bitrate setting.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrVideoRecordingFormatBitrateSetting_None\n    - | None\n\n  * - Other than above values\n    - | The real value of Video Rec Format Bitrate (Mbps).\n\n\n| e.g) 0x0023(35Mbps)\n| 0x0032(50Mbps)\n| 0x0064(100Mbps)\n| 0x0096(150Mbps)\n| 0x00C8(200Mbps)\n| 0x0258(600Mbps)",
+    "metadata": {
+        "title": "dp_VideoRecordingFormatBitrateSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

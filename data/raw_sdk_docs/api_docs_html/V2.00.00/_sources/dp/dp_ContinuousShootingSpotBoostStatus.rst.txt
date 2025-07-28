@@ -1,0 +1,22 @@
+﻿.. _dp-ContinuousShootingSpotBoostStatus:
+
+CrDeviceProperty_ContinuousShootingSpotBoostStatus
+==================================================
+
+Get the Spot Boost Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrContinuousShootingSpotBoostStatus_NotSpotBoosting
+    - | Not SpotBoosting
+
+  * - CrContinuousShootingSpotBoostStatus_SpotBoosting
+    - | SpotBoosting
+

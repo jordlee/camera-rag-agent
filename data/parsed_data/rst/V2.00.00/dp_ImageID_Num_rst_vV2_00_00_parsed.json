@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ImageID_Num.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ImageID_Num:\n\nCrDeviceProperty_ImageID_Num\n============================\n\nGet/Set the Image ID(Numerical Value)\n\n| See \"GPS information and shooting image link\" in Tips / Trouble shooting for how to use it.\n\n    CrDataType: `CrDataType_UInt64Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x0000000000000000\n    - min\n\n  * - 0xFFFFFFFFFFFFFFFF\n    - max\n\n  * - 0x0000000000000001\n    - step\n\n| This device property is refrected only when the device property “Image ID (Numerical Value) Setting” is ON (0x02).\n\n| By specifying a value in this property before shooting, the value specified in the Exif tag of the image file shot after that will be saved.\n| Save the value in the Exif tag of the image file only if :ref:`CrDeviceProperty_ImageID_Num_Setting<dp-ImageID_Num_Setting>` is CrImageIDNumSetting_On.\n| If you shoot immediately after setting, it may not be recorded in Exif. Be sure to Get and make sure that the set value and the Get value match before shooting.\n| Note:\n| The Exif tag for Image ID (Numerical Value) is 0x2042.",
+    "metadata": {
+        "title": "dp_ImageID_Num",
+        "sdk_version": "V2.00.00"
+    }
+}

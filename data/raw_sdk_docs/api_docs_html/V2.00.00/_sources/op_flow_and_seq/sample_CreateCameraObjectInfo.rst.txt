@@ -1,0 +1,15 @@
+.. _sample-CreateCameraObjectInfo:
+
+sample code - "CreateCameraObjectInfo"
+======================================
+
+.. code-block:: cpp
+
+    usage:usb <model> <usb serial>
+          ip  <model> <ipaddress> [userid] [pass]
+
+Save the following code as "RemoteCli.cpp", replace "app/RemoteCli.cpp" in the SDK, then build.
+
+.. literalinclude:: /_static/CreateCameraObjectInfo.cpp
+   :language: cpp
+   :linenos:

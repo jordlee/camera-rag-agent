@@ -1,0 +1,26 @@
+﻿.. _dp-TouchOperation:
+
+CrDeviceProperty_TouchOperation
+===============================
+
+Get/Set the Touch Operation Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTouchOperation_Off
+    - | Off
+
+  * - CrTouchOperation_On
+    - | On
+
+  * - CrTouchOperation_PlaybackOnly
+    - | On: Playback only
+
+

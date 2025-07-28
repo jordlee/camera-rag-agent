@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_level_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrLevelInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_level_info_1a47b43ad0ac3054d8681840d357407e37" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aca3f57a9782bab5ec7ffdc6c2fe45e78" kindref="member">CrLevelState</ref></type>
+        <definition>CrLevelState SCRSDK::CrLevelInfo::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>SCRSDK::CrLevelInfo::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5765" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_level_info_1a57af1c3ba8c285bca182692739300280" prot="public" static="no" mutable="no">
+        <type>CrInt32</type>
+        <definition>CrInt32 SCRSDK::CrLevelInfo::reserved</definition>
+        <argsstring></argsstring>
+        <name>reserved</name>
+        <qualifiedname>SCRSDK::CrLevelInfo::reserved</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5766" column="9" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5766" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_level_info_1a86ba1175ccd315c4e53764086044944a" prot="public" static="no" mutable="no">
+        <type>CrInt32</type>
+        <definition>CrInt32 SCRSDK::CrLevelInfo::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>SCRSDK::CrLevelInfo::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5767" column="9" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_level_info_1aee151513f48383ad5bc880d70d05b471" prot="public" static="no" mutable="no">
+        <type>CrInt32</type>
+        <definition>CrInt32 SCRSDK::CrLevelInfo::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>SCRSDK::CrLevelInfo::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5768" column="9" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5768" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_level_info_1aa5cb1afef2392948abed389f6c382ff9" prot="public" static="no" mutable="no">
+        <type>CrInt32</type>
+        <definition>CrInt32 SCRSDK::CrLevelInfo::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>SCRSDK::CrLevelInfo::z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5769" column="9" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5769" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_level_info_1a553fddd4b9b0d20a3b7db412e83cc611" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrLevelInfo::CrLevelInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrLevelInfo</name>
+        <qualifiedname>SCRSDK::CrLevelInfo::CrLevelInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5755" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5755" bodyend="5761"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_level_info_1a38febd5ebd7ffb90f6a89991d02c9b8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrLevelInfo::~CrLevelInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrLevelInfo</name>
+        <qualifiedname>SCRSDK::CrLevelInfo::~CrLevelInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5762" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5762" bodyend="5763"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5752" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5753" bodyend="5770"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_level_info_1a553fddd4b9b0d20a3b7db412e83cc611" prot="public" virt="non-virtual"><scope>SCRSDK::CrLevelInfo</scope><name>CrLevelInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_level_info_1a57af1c3ba8c285bca182692739300280" prot="public" virt="non-virtual"><scope>SCRSDK::CrLevelInfo</scope><name>reserved</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_level_info_1a47b43ad0ac3054d8681840d357407e37" prot="public" virt="non-virtual"><scope>SCRSDK::CrLevelInfo</scope><name>state</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_level_info_1a86ba1175ccd315c4e53764086044944a" prot="public" virt="non-virtual"><scope>SCRSDK::CrLevelInfo</scope><name>x</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_level_info_1aee151513f48383ad5bc880d70d05b471" prot="public" virt="non-virtual"><scope>SCRSDK::CrLevelInfo</scope><name>y</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_level_info_1aa5cb1afef2392948abed389f6c382ff9" prot="public" virt="non-virtual"><scope>SCRSDK::CrLevelInfo</scope><name>z</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_level_info_1a38febd5ebd7ffb90f6a89991d02c9b8a" prot="public" virt="non-virtual"><scope>SCRSDK::CrLevelInfo</scope><name>~CrLevelInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

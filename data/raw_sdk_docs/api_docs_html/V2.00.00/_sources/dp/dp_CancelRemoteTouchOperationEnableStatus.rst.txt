@@ -1,0 +1,22 @@
+﻿.. _dp-CancelRemoteTouchOperationEnableStatus:
+
+CrDeviceProperty_CancelRemoteTouchOperationEnableStatus
+=======================================================
+
+Get the Cancel Remote Touch Operation Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCancelRemoteTouchOperation_Disable
+    - | Disable
+
+  * - CrCancelRemoteTouchOperation_Enable
+    - | Enable
+

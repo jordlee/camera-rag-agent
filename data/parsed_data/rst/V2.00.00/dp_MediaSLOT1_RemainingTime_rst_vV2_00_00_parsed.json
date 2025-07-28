@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MediaSLOT1_RemainingTime.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MediaSLOT1_RemainingTime:\n\nCrDeviceProperty_MediaSLOT1_RemainingTime\n=========================================\n\nGet the Remaining shooting time of Media (SLOT1)\n\n| Please set the function of camera “Rec. Media Settings: Recording Mode” to Standard when using ILCE-7RM4 and ILCE-7RM4A.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000000\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 0x00000001\n    - step\n\n| Unit is second, the remaining time of movie recording.",
+    "metadata": {
+        "title": "dp_MediaSLOT1_RemainingTime",
+        "sdk_version": "V2.00.00"
+    }
+}

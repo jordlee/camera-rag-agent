@@ -1,0 +1,35 @@
+.. _sample-getSetDeviceProperty:
+
+sample code - "get/set device property, send command"
+=====================================================
+
+.. code-block:: cpp
+
+    usage:
+       set <DP name> <param> [1-blocking,0-no blocking]
+       get <DP name>
+       info <DP name>
+       send <command name> <param>
+    To exit, please enter 'q'.
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - argument
+      - example
+
+    * - DP name
+      - **FNumber** for CrDeviceProperty_FNumber.
+
+    * - command name
+      - **Release** for CrCommandId_Release.
+
+    * - param
+      - **80, 0x50** (numeric value)
+
+Save the following code as "RemoteCli.cpp", replace "app/RemoteCli.cpp" in the SDK, then build.
+
+.. literalinclude:: /_static/getSetDeviceProperty.cpp
+   :language: cpp
+   :linenos:

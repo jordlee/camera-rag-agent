@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SceneFileUploadOperationEnableStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SceneFileUploadOperationEnableStatus:\n\nCrDeviceProperty_SceneFileUploadOperationEnableStatus\n=====================================================\n\nGet the SceneFile upload operation enabled status.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSceneFileOperationEnableStatus_Disable\n    - | Disable\n\n  * - CrSceneFileOperationEnableStatus_Enable\n    - | Enable",
+    "metadata": {
+        "title": "dp_SceneFileUploadOperationEnableStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

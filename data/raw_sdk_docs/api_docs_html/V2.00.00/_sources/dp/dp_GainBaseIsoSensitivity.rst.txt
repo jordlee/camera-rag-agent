@@ -1,0 +1,22 @@
+﻿.. _dp-GainBaseIsoSensitivity:
+
+CrDeviceProperty_GainBaseIsoSensitivity
+=======================================
+
+Get/Set the Gain Base ISO Sensitivity
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrGainBaseIsoSensitivity_High
+    - | High Level
+
+  * - CrGainBaseIsoSensitivity_Low
+    - | Low Level
+

@@ -1,0 +1,25 @@
+﻿.. _dp-MonitoringTransportProtocol:
+
+CrDeviceProperty_MonitoringTransportProtocol
+============================================
+
+Get the Monitoring Transport Protocol
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMonitoringTransportProtocol_Invalid
+    - | Invalid
+
+  * - CrMonitoringTransportProtocol_UDP
+    - | UDP
+
+  * - CrMonitoringTransportProtocol_TCP
+    - | TCP
+

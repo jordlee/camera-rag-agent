@@ -1,0 +1,22 @@
+﻿.. _dp-EframingHDMICrop:
+
+CrDeviceProperty_EframingHDMICrop
+=================================
+
+Get/Set the Eframing HDMI Crop 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrEframingHDMICrop_Off
+    - | Off
+
+  * - CrEframingHDMICrop_On
+    - | On
+

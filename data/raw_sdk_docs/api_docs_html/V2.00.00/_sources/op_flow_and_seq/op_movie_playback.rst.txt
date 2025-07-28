@@ -1,0 +1,124 @@
+.. _op-movie-playback:
+
+Movie Playback
+==============
+
+Execute movie playback in media by using streaming.
+
+Without transferring the video file to a computer, users can review any section of the video remotely.
+
+This function is only enable in “RemoteTransferMode”.
+
+To use this function, you need an OS that supports H.265.
+
+How to play the streaming data, refer following document in providing package.
+    refs: Appendix_MoviePlayback_Streaming.pdf
+
+A dedicated library is required to use this function. The storage location of the library differs depending on the OS. Please refer to the following link to set up your environment.
+refs: :ref:`Library files used for ControlMonitoring and MoviePlayback<library-files-used-for-control-monitoring-and-movie-playback>`
+
+You specify the content that want to playback by contentsId and fileId.
+
+ContentsId is member of class “:ref:`CrContentsInfo<cr-contents-info>`”.
+FileId is member of class “:ref:`CrContentsFile<cr-contents-file>`”.
+Please see :ref:`Pull out content stored on media in RemoteTransferMode<op-pull-out-content-stored-on-media-in-remote-transfer-mode>` how to get these parameters.
+
+Example:
+
+.. code-block:: cpp
+
+  SCRSDK::CrMoviePlaybackSetting setting;
+  std::string hostIp = "192.168.0.123";
+  int ipLen = hostIp.length() + 1 + sizeof(CrInt16u); // +1 = Null-terminate
+              // sizeof(CrInt16u) = String length
+  setting.ipAddress = new CrInt8u[ipLen];
+  memset(setting->ipAddress, 0, ipLen);
+  CrInt16u* strLen = (CrInt16u*)setting.ipAddress; // pointer cast
+  *strLen = (CrInt16)hostIp.length() + 1; // String length, include Null-terminate
+  for (int i = 0; i < ipLen; i++) {
+    setting.ipAddress[sizeof(CrInt16u) + i] = (CrInt8u)hostIp[i];
+  }
+  setting.downTime = 5000; // 5 sec
+  setting.videoPort = 0; // If zero, the default value (55001) is used.
+  setting.audioPort = 0; // If zero, the default value (55003) is used.
+  setting.metaPort = 0;  // If zero, the default value (55005) is used.
+
+  // Set target content info.
+  setting.slotId = SCRSDK::CrSlotNumber_Slot1;
+  setting.contentsId = contentsInfo.contentId;
+  setting.fileId = contentsFile.fileId;
+
+  // Set
+  CrError err = SCRSDK::SetMoviePlaybackSetting(handle, &setting, 1);
+  if (CR_FAILED(err)) {
+    printf("Return SetMoviePlaybackSetting err(%x)", err);
+  }
+
+  delete[] setting.ipAddress;
+
+After setting up the conditions, request the start streaming.
+
+Example:
+
+.. code-block:: cpp
+
+  // Start
+  CrError err = SCRSDK::ControlMoviePlayback(handle, SCRSDK::CrMoviePlaybackControlType_Start, 0);
+  if (CR_FAILED(err)) {
+    printf("Start request err(%x)", err);
+  }
+
+Receive callback “CrNotify_Playback_StatusChanged” by OnWarning() when camera completed the prepare at streaming.
+
+After receive that, you can receive streaming data by callback “:ref:`IDeviceCallback::OnReceivePlaybackData()<callback-interface>`”.
+
+And you can receive time-code by callback “:ref:`IDeviceCallback::OnReceivePlaybackTimeCode()<callback-interface>`”.
+
+First, playback status is pause. So you need request the play operation.
+
+Example:
+
+.. code-block:: cpp
+
+  // Start
+  CrError err = SCRSDK::ControlMoviePlayback(handle, SCRSDK::CrMoviePlaybackControlType_Play, 0);
+  if (CR_FAILED(err)) {
+    printf("Start request err(%x)", err);
+  }
+
+If failed to control operation, the failure result is notified in the OnWarning() callback.
+
+You can get the status of playback by :ref:`RequestMoviePlaybackStatus()<api-request-movie-playback-status>`.
+
+The result will be notified by OnWarning(). 
+
+When OnWarning notifies you of "CrNotify_PlayBack_Result_PlaybackInfo_Success", you can get the status with :ref:`GetMoviePlaybackStatus()<api-get-movie-playback-status>`.
+
+Example:
+
+.. code-block:: cpp
+
+  CrError err = SCRSDK::RequestMoviePlaybackStatus(handle);
+  if (CR_FAILED(err)) {
+    if (err == SCRSDK::CrError_Api_InvalidCalled) {
+      // Movie playback function is not executing.
+      printf("playback function is not start yet.");
+    } else {
+      printf("failed request err(%x)", err);
+    }
+  }
+
+  class MyDeviceCallback : public IDeviceCallback {
+    void OnWarning(CrInt32u warning) {
+      if (CrNotify_Playback_Result_PlaybackInfo_Success == warning) {
+        // complete request. You can get status by GetMoviePlaybackStatus().
+      else if (CrWarning_Playback_Result_PlaybackInfo_Error == warning) {
+        // failed request.
+      else
+        : // Other warning
+
+Please set LiveViewEnable status to disable if it set enable.
+See :ref:`SetDeviceSetting()<api-set-device-setting>` for details.
+
+Please stop monitoring function if you execute it.
+See :ref:`Monitoring<api-header-monitoring>` for details.

@@ -1,0 +1,22 @@
+﻿.. _dp-CreativeLookResetEnableStatus:
+
+CrDeviceProperty_CreativeLookResetEnableStatus
+==============================================
+
+Get the Creative Look Reset Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCreativeLookReset_Disable
+    - | Disable
+
+  * - CrCreativeLookReset_Enable
+    - | Enable
+

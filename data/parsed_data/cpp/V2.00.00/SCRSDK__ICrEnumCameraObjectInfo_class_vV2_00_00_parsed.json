@@ -1,0 +1,60 @@
+{
+    "refid": "class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info",
+    "kind": "class",
+    "name": "SCRSDK::ICrEnumCameraObjectInfo",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/ICrCameraObjectInfo.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1a53b04efcbd7ed6024d5d1c27645d42d9",
+            "kind": "function",
+            "name": "GetCount",
+            "visibility": "public-func",
+            "type": "CrInt32u",
+            "definition": "virtual CrInt32u SCRSDK::ICrEnumCameraObjectInfo::GetCount",
+            "argsstring": "() const =0",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/ICrCameraObjectInfo.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1af3b7e8317ec9cd976f13f2855f277fa4",
+            "kind": "function",
+            "name": "GetCameraObjectInfo",
+            "visibility": "public-func",
+            "type": "const ICrCameraObjectInfo *",
+            "definition": "virtual const ICrCameraObjectInfo * SCRSDK::ICrEnumCameraObjectInfo::GetCameraObjectInfo",
+            "argsstring": "(CrInt32u index) const =0",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/ICrCameraObjectInfo.h",
+            "params": [
+                {
+                    "type": "CrInt32u",
+                    "name": "index",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_i_cr_enum_camera_object_info_1a6dbcb1d446b4be7f6f376409a926282c",
+            "kind": "function",
+            "name": "Release",
+            "visibility": "public-func",
+            "type": "void",
+            "definition": "virtual void SCRSDK::ICrEnumCameraObjectInfo::Release",
+            "argsstring": "()=0",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/ICrCameraObjectInfo.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::ICrEnumCameraObjectInfo",
+        "sdk_version": "V2.00.00"
+    }
+}

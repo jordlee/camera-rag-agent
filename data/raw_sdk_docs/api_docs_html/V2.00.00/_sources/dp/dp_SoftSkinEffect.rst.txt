@@ -1,0 +1,28 @@
+﻿.. _dp-SoftSkinEffect:
+
+CrDeviceProperty_SoftSkinEffect
+===============================
+
+Get/Set the Soft Skin Effect
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSoftSkinEffect_Off
+    - | Off
+
+  * - CrSoftSkinEffect_Low
+    - | Low
+
+  * - CrSoftSkinEffect_Mid
+    - | Mid
+
+  * - CrSoftSkinEffect_High
+    - | High
+

@@ -1,0 +1,27 @@
+﻿.. _dp-PictureProfile_ColorDepthRed:
+
+CrDeviceProperty_PictureProfile_ColorDepthRed
+=============================================
+
+Get/Set the Picture Profile Color Depth Red
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Color Depth Red for Picture Profile
+

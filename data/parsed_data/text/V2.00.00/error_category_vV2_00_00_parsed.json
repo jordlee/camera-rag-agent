@@ -1,0 +1,11 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_static/error_category.csv",
+    "file_type": "csv",
+    "content": "| Name                   | Summary                                        |\n|:-----------------------|:-----------------------------------------------|\n| CrError_None           | No error                                       |\n| CrError_Generic        | Uncategorized errors                           |\n| CrError_File           | File errors                                    |\n| CrError_Connect        | Communication errors                           |\n| CrError_Memory         | Memory errors                                  |\n| CrError_Api            | API errors                                     |\n| CrError_Init           | Initialization errors                          |\n| CrError_Polling        | Polling errors                                 |\n| CrError_Adaptor        | Adapter errors                                 |\n| CrError_Device         | Device errors                                  |\n| CrError_Contents       | Content transfer errors                        |\n| CrError_RemoteTransfer | Content transfer in RemoteTransfer Mode errors |\n| CrError_Monitoring     | Monitoring errors                              |\n| CrError_Playback       | Playback errors                                |",
+    "metadata": {
+        "title": "error_category",
+        "sdk_version": "V2.00.00",
+        "num_rows": 14,
+        "num_columns": 2
+    }
+}

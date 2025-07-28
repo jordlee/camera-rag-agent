@@ -1,0 +1,22 @@
+﻿.. _dp-Interval_Rec_Status:
+
+CrDeviceProperty_Interval_Rec_Status
+====================================
+
+Get the Interval REC Status
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrIntervalRecStatus_WaitingStart
+    - | Waiting Start
+
+  * - CrIntervalRecStatus_IntervalShooting
+    - | Interval Shooting
+

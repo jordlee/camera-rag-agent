@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MovieNextButton.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MovieNextButton:\n\nCrDeviceProperty_MovieNextButton\n================================\n\nGet/Set the Movie Next button\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMovieXButton_Up\n    - | Moves to the top of the next movie.\n\n  * - CrMovieXButton_Down\n    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_MoviePlayButton<dp-MoviePlayButton>`.",
+    "metadata": {
+        "title": "dp_MovieNextButton",
+        "sdk_version": "V2.00.00"
+    }
+}

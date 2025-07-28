@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DepthOfFieldAdjustmentMode.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-DepthOfFieldAdjustmentMode:\n\nCrDeviceProperty_DepthOfFieldAdjustmentMode\n===========================================\n\nGet/Set the Depth of Field Adjustment Mode\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrDepthOfFieldAdjustmentMode_OFF\n    - | OFF\n\n  * - CrDepthOfFieldAdjustmentMode_ON\n    - | ON",
+    "metadata": {
+        "title": "dp_DepthOfFieldAdjustmentMode",
+        "sdk_version": "V2.00.00"
+    }
+}

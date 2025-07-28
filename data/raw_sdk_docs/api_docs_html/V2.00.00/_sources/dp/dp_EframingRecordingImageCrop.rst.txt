@@ -1,0 +1,22 @@
+﻿.. _dp-EframingRecordingImageCrop:
+
+CrDeviceProperty_EframingRecordingImageCrop
+===========================================
+
+Get/Set the Eframing Recording Image Crop 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrEframingRecordingImageCrop_Off
+    - | Off
+
+  * - CrEframingRecordingImageCrop_On
+    - | On
+

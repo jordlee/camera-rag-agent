@@ -1,0 +1,22 @@
+﻿.. _dp-MediaSLOT1_WritingState:
+
+CrDeviceProperty_MediaSLOT1_WritingState
+========================================
+
+Get the Media SLOT1 Writing State
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMediaSlotWritingState_NotWriting
+    - | Not writing
+
+  * - CrMediaSlotWritingState_ContentsWriting
+    - | Contents writing
+

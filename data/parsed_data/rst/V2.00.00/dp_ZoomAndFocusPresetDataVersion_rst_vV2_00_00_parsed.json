@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ZoomAndFocusPresetDataVersion.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ZoomAndFocusPresetDataVersion:\n\nCrDeviceProperty_ZoomAndFocusPresetDataVersion\n==============================================\n\nGet the Zoom&Focus Preset Data Version\n\n    CrDataType: `CrDataType_UInt16`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - --\n    - | 100 times value\n      |  e.g.) 0x0065 = 101 (version 1.01)",
+    "metadata": {
+        "title": "dp_ZoomAndFocusPresetDataVersion",
+        "sdk_version": "V2.00.00"
+    }
+}

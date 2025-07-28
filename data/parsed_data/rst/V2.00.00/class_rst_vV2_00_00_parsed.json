@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/class/class.rst.txt",
+    "file_type": "rst",
+    "content": ".. _class:\n\nClass\n=====\n\n* :ref:`Device Property<device-property>`\n\n  * :ref:`CrDeviceProperty<device-property>`\n\n.. toctree::\n   :maxdepth: 2\n\n   live_view\n   osd_image\n   device_setting\n   contents_transfer\n   contents_transfer_with_remote_control\n   display_string\n   media_profile\n   lens_information\n   ftp_information\n   operation_result_information\n   monitoring\n   movie_playback\n   control_pan_tilt\n   timezone_setting\n   eframing\n   stream_setting",
+    "metadata": {
+        "title": "class",
+        "sdk_version": "V2.00.00"
+    }
+}

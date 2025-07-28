@@ -1,0 +1,22 @@
+﻿.. _dp-FocusBracketExposureLock1stImg:
+
+CrDeviceProperty_FocusBracketExposureLock1stImg
+===============================================
+
+Get/Set the Focus Bracket Exposure Lock 1st Image 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusBracketExposureLock1stImg_Off
+    - | Off
+
+  * - CrFocusBracketExposureLock1stImg_On
+    - | On
+

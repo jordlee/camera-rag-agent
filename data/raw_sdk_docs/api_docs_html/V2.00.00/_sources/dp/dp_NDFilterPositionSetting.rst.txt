@@ -1,0 +1,28 @@
+﻿.. _dp-NDFilterPositionSetting:
+
+CrDeviceProperty_NDFilterPositionSetting
+========================================
+
+Get/Set the the nd filter position with a absolute value.
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| The transmittance of ND filter can be calculated as follows.
+| transmittance = 2 ^ ( ( （Value） - 0x7FFF ) / 0x1000 )
+

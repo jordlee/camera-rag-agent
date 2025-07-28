@@ -1,0 +1,22 @@
+﻿.. _dp-EmbedLUTFile:
+
+CrDeviceProperty_EmbedLUTFile
+=============================
+
+Get/Set the Embed LUT File
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrEmbedLUTFile_Off
+    - | Off
+
+  * - CrEmbedLUTFile_On
+    - | On
+

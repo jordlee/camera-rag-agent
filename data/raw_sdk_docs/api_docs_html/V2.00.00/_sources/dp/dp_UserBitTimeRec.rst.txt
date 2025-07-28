@@ -1,0 +1,22 @@
+﻿.. _dp-UserBitTimeRec:
+
+CrDeviceProperty_UserBitTimeRec
+===============================
+
+Get/Set the User Bit Time Rec
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrUserBitTimeRec_Off
+    - | Off
+
+  * - CrUserBitTimeRec_On
+    - | On
+

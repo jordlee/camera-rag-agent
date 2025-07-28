@@ -1,0 +1,98 @@
+.. _status-code-error:
+
+.. raw:: html
+
+    <style type="text/css">
+        /* 縦横スクロールの為に既存のスタイルを上書き */
+        .wy-table-responsive {
+            margin-bottom: 24px;
+            overflow: visible;
+        }
+        #theTableBlock{
+            /*スクロールバー表示*/
+            width: 100%;
+            overflow: scroll;
+            height: 95vh;
+        }
+        #theTableBlock table th {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    </style>
+
+Error & Event Code
+==================
+
+Major status codes are below. The "error" member is defined as [error_code, error_message]. 
+
+The error_message may vary depending on the camera models.
+
+.. _error-code:
+
+Error Code
+----------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   /status_code_error/ErrorCode
+
+.. _event-list:
+
+Event List
+----------
+
+.. raw:: html
+
+    <div id="theTableBlock">
+
+.. csv-table::
+    :class: filter-table
+    :file: /_static/event_category.csv
+    :header-rows: 1
+    :delim: tab
+
+.. raw:: html
+
+    </div>
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   /status_code_error/OnWarning_api
+   /status_code_error/OnWarning_camera_event
+   /status_code_error/OnWarning_other
+   /status_code_error/OnNotifyContentsTransfer
+   /status_code_error/OnNotifyFTPTransferResult
+   /status_code_error/OnNotifyRemoteFirmwareUpdateResult
+   /status_code_error/OnNotifyRemoteTransferContentsListChanged
+   /status_code_error/OnNotifyRemoteTransferResult
+
+.. _event-ext-list:
+
+Event List - OnWarningExt
+-------------------------
+
+.. raw:: html
+
+    <div id="theTableBlock">
+
+.. csv-table::
+    :class: filter-table
+    :file: /_static/event_ext_category.csv
+    :header-rows: 1
+    :delim: tab
+
+.. raw:: html
+
+    </div>
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   /status_code_error/OnWarningExt

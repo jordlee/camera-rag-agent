@@ -1,0 +1,209 @@
+{
+    "refid": "class_s_c_r_s_d_k_1_1_cr_image_data_block",
+    "kind": "class",
+    "name": "SCRSDK::CrImageDataBlock",
+    "source_file": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1ae2eabc2b3e2b3979576328b637b0cba7",
+            "kind": "variable",
+            "name": "frameNo",
+            "visibility": "private-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrImageDataBlock::frameNo",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1aeea5b4fc3852717797aeed2188bb5bfd",
+            "kind": "variable",
+            "name": "size",
+            "visibility": "private-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrImageDataBlock::size",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1ae180a1bf9aec28c13f8b603e4de3e962",
+            "kind": "variable",
+            "name": "pData",
+            "visibility": "private-attrib",
+            "type": "",
+            "definition": "CrInt8u* SCRSDK::CrImageDataBlock::pData",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1aba19acf09092dbcaabb8794c69f3b120",
+            "kind": "variable",
+            "name": "imageSize",
+            "visibility": "private-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrImageDataBlock::imageSize",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1a506a4d2adc20331a0673a25d41324db6",
+            "kind": "variable",
+            "name": "timeCode",
+            "visibility": "private-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrImageDataBlock::timeCode",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1a4191bfb27f872e8d4a3f293a86d98b3b",
+            "kind": "function",
+            "name": "CrImageDataBlock",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrImageDataBlock::CrImageDataBlock",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1ab9a20594b2fe7d31bdf5d47f6accffd1",
+            "kind": "function",
+            "name": "~CrImageDataBlock",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrImageDataBlock::~CrImageDataBlock",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1abe66db0bb49788f33373f87570093508",
+            "kind": "function",
+            "name": "GetFrameNo",
+            "visibility": "public-func",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrImageDataBlock::GetFrameNo",
+            "argsstring": "() const",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1ad88c5e6765b0e01b67a281eeb361afbe",
+            "kind": "function",
+            "name": "SetSize",
+            "visibility": "public-func",
+            "type": "void",
+            "definition": "void SCRSDK::CrImageDataBlock::SetSize",
+            "argsstring": "(CrInt32u size)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": [
+                {
+                    "type": "CrInt32u",
+                    "name": "size",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1ac212f3f2a8e77d901cc189d71f0e9d94",
+            "kind": "function",
+            "name": "GetSize",
+            "visibility": "public-func",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrImageDataBlock::GetSize",
+            "argsstring": "() const",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1a341f3065d178cb053572421680f99e87",
+            "kind": "function",
+            "name": "SetData",
+            "visibility": "public-func",
+            "type": "void",
+            "definition": "void SCRSDK::CrImageDataBlock::SetData",
+            "argsstring": "(CrInt8u *data)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": [
+                {
+                    "type": "",
+                    "name": "data",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1af88864362e85106607d079891d3768a7",
+            "kind": "function",
+            "name": "GetImageSize",
+            "visibility": "public-func",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrImageDataBlock::GetImageSize",
+            "argsstring": "() const",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1aaa1dd48c680873e931f1044d94a5b81f",
+            "kind": "function",
+            "name": "GetImageData",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "CrInt8u * SCRSDK::CrImageDataBlock::GetImageData",
+            "argsstring": "() const",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_image_data_block_1ae5d5c7fc595dfc35ce555142bc25ba6e",
+            "kind": "function",
+            "name": "GetTimeCode",
+            "visibility": "public-func",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrImageDataBlock::GetTimeCode",
+            "argsstring": "() const",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrImageDataBlock",
+        "sdk_version": "V1.14.00"
+    }
+}

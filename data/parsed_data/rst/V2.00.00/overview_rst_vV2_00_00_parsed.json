@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/other/overview.rst.txt",
+    "file_type": "rst",
+    "content": "Overview\n========\n\n**About this document**\n\n   The purpose of this document is to list the API specifications for the Camera Remote SDK provided by Sony Corporation.\n\n**Document conventions**\n\n    The keywords \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in IETF RFC 2119.\n\n    http://www.ietf.org/rfc/rfc2119.txt\n    \n    For information regarding the latest Camera Remote SDK updates, go to the web site at\n    \n    http://www.sony.net/CameraRemoteSDK/\n\n.. - All the commands currently implemented can be found under :doc:`../api/commands`.\n.. - All the properties currently implemented can be found under :doc:`../api/properties`.",
+    "metadata": {
+        "title": "overview",
+        "sdk_version": "V2.00.00"
+    }
+}

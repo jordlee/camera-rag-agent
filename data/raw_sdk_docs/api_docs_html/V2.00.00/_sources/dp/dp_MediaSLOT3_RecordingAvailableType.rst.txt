@@ -1,0 +1,28 @@
+﻿.. _dp-MediaSLOT3_RecordingAvailableType:
+
+CrDeviceProperty_MediaSLOT3_RecordingAvailableType
+==================================================
+
+Get the Media SLOT3 Recording Available Type
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMediaSlotRecordingAvailableType_None
+    - | None
+
+  * - CrMediaSlotRecordingAvailableType_Main
+    - | Main
+
+  * - CrMediaSlotRecordingAvailableType_Proxy
+    - | Proxy
+
+  * - CrMediaSlotRecordingAvailableType_MainAndProxy
+    - | Main + Proxy
+

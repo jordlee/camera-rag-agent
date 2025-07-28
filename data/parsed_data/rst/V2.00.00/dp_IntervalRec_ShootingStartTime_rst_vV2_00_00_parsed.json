@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_IntervalRec_ShootingStartTime.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-IntervalRec_ShootingStartTime:\n\nCrDeviceProperty_IntervalRec_ShootingStartTime\n==============================================\n\nGet/Set the IntervalREC(Still) Shooting Start Time\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| Unit is second.\n| e.g.) 0x0003 = 3 sec\n| e.g.) 0x0005 = 5 sec\n| The max value is 6553.5(0xFFFF)seconds≒1092minutes≒18hours.",
+    "metadata": {
+        "title": "dp_IntervalRec_ShootingStartTime",
+        "sdk_version": "V2.00.00"
+    }
+}

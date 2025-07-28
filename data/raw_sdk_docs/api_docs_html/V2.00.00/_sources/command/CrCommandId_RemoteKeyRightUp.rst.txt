@@ -1,0 +1,22 @@
+﻿.. _command-RemoteKeyRightUp:
+
+CrCommandId_RemoteKeyRightUp
+============================
+
+Execute remote key RIGHT UP.
+
+    CrDataType: `CrDataType_UInt16`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCommandParam_Up
+    - | Up
+
+  * - CrCommandParam_Down
+    - | Down
+

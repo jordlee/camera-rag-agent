@@ -1,0 +1,64 @@
+.. _op-get-the-menu-display-string:
+
+Get the menu display string
+===========================
+
+Information (character string and value) related to the menu display of the camera body can be acquired. It is assumed that the acquired information will be used in each user application.
+
+First, request the SDK to get the display string information from the camera body with RequestDisplayStringList(). The result will be notified by a OnWarning().
+
+If the request is successful, you will be able to know the types of information that can be obtained with GetDisplayStringTypes(), and you will be able to get the information with GetDisplayStringList(). It is recommended to check the types that can be referenced by GetDisplayStringTypes() before doing GetDisplayStringList().
+
+.. image:: /_images/op_seq_get_the_menu_display_string.png
+	:width: 50%
+
+Example:
+
+.. code-block:: cpp
+
+  std::map<int, std::string> m_baseIsoList;
+	
+  CrError err = SCRSDK::RequestDisplayStringList(
+		handle,
+		SCRSDK::CrDisplayStringType_Camera_Gain_BaseISO_Display);
+
+  // When the OnWarning callback notifies you of success:
+	CrInt32u numOfTypes = 0;
+	SCRSDK::CrDisplayStringType* types = nullptr;
+	CrError err = SCRSDK::GetDisplayStringTypes(
+		handle,
+		&types,
+		&numOfTypes);
+	if (CR_SUCCEEDED(err) && 0 < numOfTypes) {
+	    CrInt32u numOfList = 0;
+	    CrDisplayStringListInfo * list = nullptr;
+	    err = SCRSDK::GetDisplayStringList(
+		handle,
+		types[0],
+		&list,
+		&numOfList);
+	    if (CR_SUCCEEDED(err) && 0 < numOfList) {
+	        // update menu variable   etc.
+	        std::string str((char*)list[i].displayString);
+	        m_baseIsoList.insert(std::pair<int, std::string>(
+		(int)list[i].value, str));
+  ....
+	        // release of list pointer
+	        SCRSDK::ReleaseDisplayStringList(handle, list);
+	     }
+	    // release of types pointer
+	    SCRSDK:: ReleaseDisplayStringTypes(handle, types);
+	}
+
+The Gain BaseISO name obtained by GetDisplayStringList corresponds to the string displayed in the menu.
+
+Example:
+
+.. code-block:: cpp
+
+  for (auto item = m_baseIsoList.begin(); item != m_baseIsoList.end(); ++item) {
+		printf("[%d] %s\n", item->first, item->second);
+ 	}
+
+.. image:: /_images/op_seq_get_the_menu_display_string2.png
+	:width: 50%

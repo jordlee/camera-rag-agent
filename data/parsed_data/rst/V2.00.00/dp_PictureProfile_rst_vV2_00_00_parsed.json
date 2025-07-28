@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PictureProfile.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PictureProfile:\n\nCrDeviceProperty_PictureProfile\n===============================\n\nGet/Set the Picture Profile\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPictureProfile_Off\n    - | Picture Profile Off\n\n  * - CrPictureProfile_Number1\n    - | Picture Profile number 1\n\n  * - CrPictureProfile_Number2\n    - | Picture Profile number 2\n\n  * - CrPictureProfile_Number3\n    - | Picture Profile number 3\n\n  * - CrPictureProfile_Number4\n    - | Picture Profile number 4\n\n  * - CrPictureProfile_Number5\n    - | Picture Profile number 5\n\n  * - CrPictureProfile_Number6\n    - | Picture Profile number 6\n\n  * - CrPictureProfile_Number7\n    - | Picture Profile number 7\n\n  * - CrPictureProfile_Number8\n    - | Picture Profile number 8\n\n  * - CrPictureProfile_Number9\n    - | Picture Profile number 9\n\n  * - CrPictureProfile_Number10\n    - | Picture Profile number 10\n\n  * - CrPictureProfile_Number11\n    - | Picture Profile number 11\n\n  * - CrPictureProfile_LUT_Number1\n    - | Picture Profile LUT number 1\n\n  * - CrPictureProfile_LUT_Number2\n    - | Picture Profile LUT number 2\n\n  * - CrPictureProfile_LUT_Number3\n    - | Picture Profile LUT number 3\n\n  * - CrPictureProfile_LUT_Number4\n    - | Picture Profile LUT number 4",
+    "metadata": {
+        "title": "dp_PictureProfile",
+        "sdk_version": "V2.00.00"
+    }
+}

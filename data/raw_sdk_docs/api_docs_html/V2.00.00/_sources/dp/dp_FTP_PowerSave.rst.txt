@@ -1,0 +1,22 @@
+﻿.. _dp-FTP_PowerSave:
+
+CrDeviceProperty_FTP_PowerSave
+==============================
+
+Get/Set the FTP Power Save
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPPowerSave_Off
+    - | Off
+
+  * - CrFTPPowerSave_On
+    - | On
+

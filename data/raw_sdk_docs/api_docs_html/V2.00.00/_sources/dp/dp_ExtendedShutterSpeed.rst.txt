@@ -1,0 +1,31 @@
+﻿.. _dp-ExtendedShutterSpeed:
+
+CrDeviceProperty_ExtendedShutterSpeed
+=====================================
+
+Get/Set the Extended Shutter Speed
+
+    CrDataType: `CrDataType_UInt64Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrExtendedShutterSpeed_Bulb
+    - | BULB
+
+  * - CrExtendedShutterSpeed_Nothing
+    - | nothing to display
+
+  * - Other than above values 
+    - | The real value of shutter speed (Upper four bytes: numerator, Lower four bytes: denominator)
+
+| Extended command for "Shutter Speed"setting.
+
+| The representation size of the denominator and numerator of :ref:`CrDeviceProperty_ShutterSpeed<dp-ShutterSpeed>` is doubled. The usage is the same as :ref:`CrDeviceProperty_ShutterSpeed<dp-ShutterSpeed>`.
+| e.g.) 0x0000000F0000000A: 
+| 0x0000000F (means 15) / 0x00000000A (means 10) = 1.5"
+

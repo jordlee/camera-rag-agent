@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecordingFolderFormat.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RecordingFolderFormat:\n\nCrDeviceProperty_RecordingFolderFormat\n======================================\n\nGet/Set the Recording Folder Format\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRecordingFolderFormat_Standard\n    - | Standard format\n\n  * - CrRecordingFolderFormat_Date\n    - | Date format",
+    "metadata": {
+        "title": "dp_RecordingFolderFormat",
+        "sdk_version": "V2.00.00"
+    }
+}

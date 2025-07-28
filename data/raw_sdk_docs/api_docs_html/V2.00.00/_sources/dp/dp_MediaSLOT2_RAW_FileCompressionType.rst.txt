@@ -1,0 +1,38 @@
+﻿.. _dp-MediaSLOT2_RAW_FileCompressionType:
+
+CrDeviceProperty_MediaSLOT2_RAW_FileCompressionType
+===================================================
+
+Get/Set the compression type of RAW file in media(SLOT2)
+
+| This property is effective when Recording Media for still images is set to "Sort Recording", and :ref:`CrDeviceProperty_MediaSLOT2_FileType<dp-MediaSLOT2_FileType>` is set to "CrFileType_Raw".
+
+| For ILCE-1 : MENU > Shooting > Image Quality > Image Quality Settings > File Format/RAW File Type
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRAWFile_Compression
+    - | Compression
+
+  * - CrRAWFile_LossLessL
+    - | LosslessL
+
+  * - CrRAWFile_LossLessM
+    - | LosslessM
+
+  * - CrRAWFile_LossLessS
+    - | LosslessS
+
+  * - CrRAWFile_Uncompression
+    - | Uncompression
+
+  * - CrRAWFile_LossLess
+    - | Lossless Compression
+

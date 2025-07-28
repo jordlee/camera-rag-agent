@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitorBrightnessType.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MonitorBrightnessType:\n\nCrDeviceProperty_MonitorBrightnessType\n======================================\n\nGet/Set the Monitor Brightness Type\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMonitorBrightnessType_Manual\n    - | Manual\n\n  * - CrMonitorBrightnessType_SunnyWeather\n    - | Sunny Weather",
+    "metadata": {
+        "title": "dp_MonitorBrightnessType",
+        "sdk_version": "V2.00.00"
+    }
+}

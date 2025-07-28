@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SubjectRecognitionAnimalTrackingSubjectShiftRange.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SubjectRecognitionAnimalTrackingSubjectShiftRange:\n\nCrDeviceProperty_SubjectRecognitionAnimalTrackingSubjectShiftRange\n==================================================================\n\nGet/Set the Subject Recognition Animal(Still) Tracking Subject Shift Range\n\n    CrDataType: `CrDataType_UInt8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| min(Narrow) to max(Wide)",
+    "metadata": {
+        "title": "dp_SubjectRecognitionAnimalTrackingSubjectShiftRange",
+        "sdk_version": "V2.00.00"
+    }
+}

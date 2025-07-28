@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_LensSerialNumber.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-LensSerialNumber:\n\nCrDeviceProperty_LensSerialNumber\n=================================\n\nGet the lens serial number.\n\n    CrDataType: `CrDataType_STR`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - String\n    - Lens Serial Number",
+    "metadata": {
+        "title": "dp_LensSerialNumber",
+        "sdk_version": "V2.00.00"
+    }
+}

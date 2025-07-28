@@ -1,0 +1,22 @@
+﻿.. _dp-ShutterECSSetting:
+
+CrDeviceProperty_ShutterECSSetting
+==================================
+
+Get/Set the Shutter ECS Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrShutterECSSetting_OFF
+    - | OFF
+
+  * - CrShutterECSSetting_ON
+    - | ON
+

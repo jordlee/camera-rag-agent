@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_IsoAutoMinShutterSpeedManual.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-IsoAutoMinShutterSpeedManual:\n\nCrDeviceProperty_IsoAutoMinShutterSpeedManual\n=============================================\n\nGet/Set the Iso Auto Min Shutter Speed Manual\n\n    CrDataType: `CrDataType_UInt64Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrIsoAutoMinShutterSpeedManual_Invalid\n    - | Invalid\n\n  * - Other than above values\n    - | Upper four bytes: numerator, \n      | Lower four bytes: denominator\n\n| In the case of the shutter speed is displayed as \"Real Number\" on the camera, the denominator is fixed 0x0000000A.\n| e.g.) 0x0000000F0000000A:\n|         0x0000000F (15) / 0x00000000A (10)\n|         = 1.5\"\n| In the case of the shutter speed is displayed as \"Fraction Number\" on the camera, the numerator is fixed 0x00000001.\n| e.g.) 0x00000001000003E8: \n|         0x00000001 (1) / 0x000003E8 (1000)\n|         = 1/1000",
+    "metadata": {
+        "title": "dp_IsoAutoMinShutterSpeedManual",
+        "sdk_version": "V2.00.00"
+    }
+}

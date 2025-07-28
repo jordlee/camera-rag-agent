@@ -1,0 +1,25 @@
+﻿.. _dp-FunctionOfRemoteTouchOperation:
+
+CrDeviceProperty_FunctionOfRemoteTouchOperation
+===============================================
+
+Get/Set the Function of Remote Touch Operation
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFunctionOfRemoteTouchOperation_Tracking_AF
+    - | Tracking AF
+
+  * - CrFunctionOfRemoteTouchOperation_Spot_AF
+    - | Spot AF
+
+  * - CrFunctionOfRemoteTouchOperation_AFAreaSelect
+    - | AF Area Select
+

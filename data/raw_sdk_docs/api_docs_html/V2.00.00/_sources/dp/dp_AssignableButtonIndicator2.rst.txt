@@ -1,0 +1,22 @@
+﻿.. _dp-AssignableButtonIndicator2:
+
+CrDeviceProperty_AssignableButtonIndicator2
+===========================================
+
+Get the Assignable Button Indicator 2
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAssignableButtonIndicator_Off
+    - | OFF
+
+  * - CrAssignableButtonIndicator_On
+    - | ON
+

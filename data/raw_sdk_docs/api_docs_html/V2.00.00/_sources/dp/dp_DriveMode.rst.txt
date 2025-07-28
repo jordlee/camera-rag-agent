@@ -1,0 +1,475 @@
+﻿.. _dp-DriveMode:
+
+CrDeviceProperty_DriveMode
+==========================
+
+Get/Set the Drive Mode (Still Capture Mode)
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrDrive_Single
+    - | Normal
+
+  * - CrDrive_Continuous_Hi
+    - | Continuous Shooting hi
+
+  * - CrDrive_Continuous_Hi_Plus
+    - | Continuous Shooting Hi+
+
+  * - CrDrive_Continuous_Hi_Live
+    - | Continuous Shooting Hi-Live
+
+  * - CrDrive_Continuous_Lo
+    - | Continuous Shooting lo
+
+  * - CrDrive_Continuous
+    - | Continuous Shooting
+
+  * - CrDrive_Continuous_SpeedPriority
+    - | Continuous Shooting Speed Priority
+
+  * - CrDrive_Continuous_Mid
+    - | Continuous Shooting mid
+
+  * - CrDrive_Continuous_Mid_Live
+    - | Continuous Shooting Mid-Live
+
+  * - CrDrive_Continuous_Lo_Live
+    - | Continuous Shooting Lo-Live
+
+  * - CrDrive_Timelapse
+    - | Timelapse
+
+  * - CrDrive_Timer_5s
+    - | Self Timer 5 Sec.
+
+  * - CrDrive_Timer_10s
+    - | Self Timer 10 Sec.
+
+  * - CrDrive_Timer_2s
+    - | Self Timer 2 Sec.
+
+  * - CrDrive_Continuous_Bracket_03Ev_2pics_Plus
+    - | Continuous Bracket 0.3 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_03Ev_2pics_Minus
+    - | Continuous Bracket 0.3 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_03Ev_3pics
+    - | Continuous Bracket 0.3 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_03Ev_5pics
+    - | Continuous Bracket 0.3 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_03Ev_7pics
+    - | Continuous Bracket 0.3 EV 7 Img.
+
+  * - CrDrive_Continuous_Bracket_03Ev_9pics
+    - | Continuous Bracket 0.3 EV 9 Img.
+
+  * - CrDrive_Continuous_Bracket_05Ev_2pics_Plus
+    - | Continuous Bracket 0.5 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_05Ev_2pics_Minus
+    - | Continuous Bracket 0.5 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_05Ev_3pics
+    - | Continuous Bracket 0.5 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_05Ev_5pics
+    - | Continuous Bracket 0.5 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_05Ev_7pics
+    - | Continuous Bracket 0.5 EV 7 Img.
+
+  * - CrDrive_Continuous_Bracket_05Ev_9pics
+    - | Continuous Bracket 0.5 EV 9 Img.
+
+  * - CrDrive_Continuous_Bracket_07Ev_2pics_Plus
+    - | Continuous Bracket 0.7 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_07Ev_2pics_Minus
+    - | Continuous Bracket 0.7 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_07Ev_3pics
+    - | Continuous Bracket 0.7 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_07Ev_5pics
+    - | Continuous Bracket 0.7 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_07Ev_7pics
+    - | Continuous Bracket 0.7 EV 7 Img.
+
+  * - CrDrive_Continuous_Bracket_07Ev_9pics
+    - | Continuous Bracket 0.7 EV 9 Img.
+
+  * - CrDrive_Continuous_Bracket_10Ev_2pics_Plus
+    - | Continuous Bracket 1.0 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_10Ev_2pics_Minus
+    - | Continuous Bracket 1.0 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_10Ev_3pics
+    - | Continuous Bracket 1.0 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_10Ev_5pics
+    - | Continuous Bracket 1.0 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_10Ev_7pics
+    - | Continuous Bracket 1.0 EV 7 Img.
+
+  * - CrDrive_Continuous_Bracket_10Ev_9pics
+    - | Continuous Bracket 1.0 EV 9 Img.
+
+  * - CrDrive_Continuous_Bracket_13Ev_2pics_Plus
+    - | Continuous Bracket 1.3 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_13Ev_2pics_Minus
+    - | Continuous Bracket 1.3 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_13Ev_3pics
+    - | Continuous Bracket 1.3 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_13Ev_5pics
+    - | Continuous Bracket 1.3 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_13Ev_7pics
+    - | Continuous Bracket 1.3 EV 7 Img.
+
+  * - CrDrive_Continuous_Bracket_15Ev_2pics_Plus
+    - | Continuous Bracket 1.5 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_15Ev_2pics_Minus
+    - | Continuous Bracket 1.5 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_15Ev_3pics
+    - | Continuous Bracket 1.5 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_15Ev_5pics
+    - | Continuous Bracket 1.5 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_15Ev_7pics
+    - | Continuous Bracket 1.5 EV 7 Img.
+
+  * - CrDrive_Continuous_Bracket_17Ev_2pics_Plus
+    - | Continuous Bracket 1.7 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_17Ev_2pics_Minus
+    - | Continuous Bracket 1.7 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_17Ev_3pics
+    - | Continuous Bracket 1.7 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_17Ev_5pics
+    - | Continuous Bracket 1.7 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_17Ev_7pics
+    - | Continuous Bracket 1.7 EV 7 Img.
+
+  * - CrDrive_Continuous_Bracket_20Ev_2pics_Plus
+    - | Continuous Bracket 2.0 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_20Ev_2pics_Minus
+    - | Continuous Bracket 2.0 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_20Ev_3pics
+    - | Continuous Bracket 2.0 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_20Ev_5pics
+    - | Continuous Bracket 2.0 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_20Ev_7pics
+    - | Continuous Bracket 2.0 EV 7 Img.
+
+  * - CrDrive_Continuous_Bracket_23Ev_2pics_Plus
+    - | Continuous Bracket 2.3 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_23Ev_2pics_Minus
+    - | Continuous Bracket 2.3 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_23Ev_3pics
+    - | Continuous Bracket 2.3 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_23Ev_5pics
+    - | Continuous Bracket 2.3 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_25Ev_2pics_Plus
+    - | Continuous Bracket 2.5 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_25Ev_2pics_Minus
+    - | Continuous Bracket 2.5 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_25Ev_3pics
+    - | Continuous Bracket 2.5 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_25Ev_5pics
+    - | Continuous Bracket 2.5 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_27Ev_2pics_Plus
+    - | Continuous Bracket 2.7 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_27Ev_2pics_Minus
+    - | Continuous Bracket 2.7 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_27Ev_3pics
+    - | Continuous Bracket 2.7 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_27Ev_5pics
+    - | Continuous Bracket 2.7 EV 5 Img.
+
+  * - CrDrive_Continuous_Bracket_30Ev_2pics_Plus
+    - | Continuous Bracket 3.0 EV 2 Img. +
+
+  * - CrDrive_Continuous_Bracket_30Ev_2pics_Minus
+    - | Continuous Bracket 3.0 EV 2 Img. -
+
+  * - CrDrive_Continuous_Bracket_30Ev_3pics
+    - | Continuous Bracket 3.0 EV 3 Img.
+
+  * - CrDrive_Continuous_Bracket_30Ev_5pics
+    - | Continuous Bracket 3.0 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_03Ev_2pics_Plus
+    - | Single Bracket 0.3 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_03Ev_2pics_Minus
+    - | Single Bracket 0.3 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_03Ev_3pics
+    - | Single Bracket 0.3 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_03Ev_5pics
+    - | Single Bracket 0.3 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_03Ev_7pics
+    - | Single Bracket 0.3 EV 7 Img.
+
+  * - CrDrive_Single_Bracket_03Ev_9pics
+    - | Single Bracket 0.3 EV 9 Img.
+
+  * - CrDrive_Single_Bracket_05Ev_2pics_Plus
+    - | Single Bracket 0.5 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_05Ev_2pics_Minus
+    - | Single Bracket 0.5 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_05Ev_3pics
+    - | Single Bracket 0.5 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_05Ev_5pics
+    - | Single Bracket 0.5 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_05Ev_7pics
+    - | Single Bracket 0.5 EV 7 Img.
+
+  * - CrDrive_Single_Bracket_05Ev_9pics
+    - | Single Bracket 0.5 EV 9 Img.
+
+  * - CrDrive_Single_Bracket_07Ev_2pics_Plus
+    - | Single Bracket 0.7 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_07Ev_2pics_Minus
+    - | Single Bracket 0.7 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_07Ev_3pics
+    - | Single Bracket 0.7 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_07Ev_5pics
+    - | Single Bracket 0.7 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_07Ev_7pics
+    - | Single Bracket 0.7 EV 7 Img.
+
+  * - CrDrive_Single_Bracket_07Ev_9pics
+    - | Single Bracket 0.7 EV 9 Img.
+
+  * - CrDrive_Single_Bracket_10Ev_2pics_Plus
+    - | Single Bracket 1.0 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_10Ev_2pics_Minus
+    - | Single Bracket 1.0 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_10Ev_3pics
+    - | Single Bracket 1.0 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_10Ev_5pics
+    - | Single Bracket 1.0 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_10Ev_7pics
+    - | Single Bracket 1.0 EV 7 Img.
+
+  * - CrDrive_Single_Bracket_10Ev_9pics
+    - | Single Bracket 1.0 EV 9 Img.
+
+  * - CrDrive_Single_Bracket_13Ev_2pics_Plus
+    - | Single Bracket 1.3 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_13Ev_2pics_Minus
+    - | Single Bracket 1.3 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_13Ev_3pics
+    - | Single Bracket 1.3 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_13Ev_5pics
+    - | Single Bracket 1.3 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_13Ev_7pics
+    - | Single Bracket 1.3 EV 7 Img.
+
+  * - CrDrive_Single_Bracket_15Ev_2pics_Plus
+    - | Single Bracket 1.5 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_15Ev_2pics_Minus
+    - | Single Bracket 1.5 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_15Ev_3pics
+    - | Single Bracket 1.5 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_15Ev_5pics
+    - | Single Bracket 1.5 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_15Ev_7pics
+    - | Single Bracket 1.5 EV 7 Img.
+
+  * - CrDrive_Single_Bracket_17Ev_2pics_Plus
+    - | Single Bracket 1.7 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_17Ev_2pics_Minus
+    - | Single Bracket 1.7 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_17Ev_3pics
+    - | Single Bracket 1.7 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_17Ev_5pics
+    - | Single Bracket 1.7 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_17Ev_7pics
+    - | Single Bracket 1.7 EV 7 Img.
+
+  * - CrDrive_Single_Bracket_20Ev_2pics_Plus
+    - | Single Bracket 2.0 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_20Ev_2pics_Minus
+    - | Single Bracket 2.0 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_20Ev_3pics
+    - | Single Bracket 2.0 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_20Ev_5pics
+    - | Single Bracket 2.0 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_20Ev_7pics
+    - | Single Bracket 2.0 EV 7 Img.
+
+  * - CrDrive_Single_Bracket_23Ev_2pics_Plus
+    - | Single Bracket 2.3 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_23Ev_2pics_Minus
+    - | Single Bracket 2.3 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_23Ev_3pics
+    - | Single Bracket 2.3 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_23Ev_5pics
+    - | Single Bracket 2.3 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_25Ev_2pics_Plus
+    - | Single Bracket 2.5 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_25Ev_2pics_Minus
+    - | Single Bracket 2.5 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_25Ev_3pics
+    - | Single Bracket 2.5 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_25Ev_5pics
+    - | Single Bracket 2.5 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_27Ev_2pics_Plus
+    - | Single Bracket 2.7 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_27Ev_2pics_Minus
+    - | Single Bracket 2.7 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_27Ev_3pics
+    - | Single Bracket 2.7 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_27Ev_5pics
+    - | Single Bracket 2.7 EV 5 Img.
+
+  * - CrDrive_Single_Bracket_30Ev_2pics_Plus
+    - | Single Bracket 3.0 EV 2 Img. +
+
+  * - CrDrive_Single_Bracket_30Ev_2pics_Minus
+    - | Single Bracket 3.0 EV 2 Img. -
+
+  * - CrDrive_Single_Bracket_30Ev_3pics
+    - | Single Bracket 3.0 EV 3 Img.
+
+  * - CrDrive_Single_Bracket_30Ev_5pics
+    - | Single Bracket 3.0 EV 5 Img.
+
+  * - CrDrive_WB_Bracket_Lo
+    - | White Balance Bracket Lo
+
+  * - CrDrive_WB_Bracket_Hi
+    - | White Balance Bracket Hi
+
+  * - CrDrive_DRO_Bracket_Lo
+    - | DRO Bracket Lo
+
+  * - CrDrive_DRO_Bracket_Hi
+    - | DRO Bracket Hi
+
+  * - CrDrive_LPF_Bracket
+    - | LPF Bracket
+
+  * - CrDrive_RemoteCommander
+    - | Remote Commander
+
+  * - CrDrive_MirrorUp
+    - | Mirror Up
+
+  * - CrDrive_SelfPortrait_1
+    - | Self Portrait 1 Person
+
+  * - CrDrive_SelfPortrait_2
+    - | Self Portrait 2 People
+
+  * - CrDrive_Continuous_Timer_3pics
+    - | Continuous Self Timer 3 Img.
+
+  * - CrDrive_Continuous_Timer_5pics
+    - | Continuous Self Timer 5 Img.
+
+  * - CrDrive_Continuous_Timer_5s_3pics
+    - | Continuous Self Timer 3 Img. 5 Sec.
+
+  * - CrDrive_Continuous_Timer_5s_5pics
+    - | Continuous Self Timer 5 Img. 5 Sec.
+
+  * - CrDrive_Continuous_Timer_2s_3pics
+    - | Continuous Self Timer 3 Img. 2 Sec.
+
+  * - CrDrive_Continuous_Timer_2s_5pics
+    - | Continuous Self Timer 5 Img. 2 Sec.
+
+  * - CrDrive_SingleBurstShooting_lo
+    - | Spot Burst Shooting Lo
+
+  * - CrDrive_SingleBurstShooting_mid
+    - | Spot Burst Shooting Mid
+
+  * - CrDrive_SingleBurstShooting_hi
+    - | Spot Burst Shooting Hi
+
+  * - CrDrive_FocusBracket
+    - | Focus Bracket
+

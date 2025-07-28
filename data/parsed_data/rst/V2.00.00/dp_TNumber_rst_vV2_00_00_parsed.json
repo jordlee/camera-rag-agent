@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_TNumber.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-TNumber:\n\nCrDeviceProperty_TNumber\n========================\n\nGet/Set the T-Number\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrTnumber_IrisClose\n    - | Iris Close\n\n  * - CrTnumber_Unknown\n    - | Display \"--\"\n\n  * - CrTnumber_Nothing\n    - | Nothing to display\n\n  * - Other than above values\n    - | 100 times the real value of T-Number\n      | e.g.) 0x01C2= 450 /100 = 4.5",
+    "metadata": {
+        "title": "dp_TNumber",
+        "sdk_version": "V2.00.00"
+    }
+}

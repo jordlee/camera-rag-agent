@@ -1,0 +1,20 @@
+﻿.. _dp-MonitoringFormatSupportInformation:
+
+CrDeviceProperty_MonitoringFormatSupportInformation
+===================================================
+
+Get the format Support Information
+
+    CrDataType: `CrDataType_UInt64Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Variable
+    - | This device property gets the delivery format candidate value.
+      | Value is the same as :ref:`CrDeviceProperty_MonitoringAvailableFormat<dp-MonitoringAvailableFormat>`
+

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_LiveView_Image_Quality.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-LiveView_Image_Quality:\n\nCrDeviceProperty_LiveView_Image_Quality\n=======================================\n\nGet/Set the LiveView Image Quality\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPropertyLiveViewImageQuality_Low \n    - | Low\n      |   Width : 640pixel\n      |   Height : Changes according to the aspect ratio\n\n  * - CrPropertyLiveViewImageQuality_High\n    - | High\n      |   Width : 1024pixel\n      |   Height : Changes according to the aspect ratio",
+    "metadata": {
+        "title": "dp_LiveView_Image_Quality",
+        "sdk_version": "V2.00.00"
+    }
+}

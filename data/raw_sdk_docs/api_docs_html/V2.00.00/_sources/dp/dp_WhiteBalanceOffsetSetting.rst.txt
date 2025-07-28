@@ -1,0 +1,22 @@
+﻿.. _dp-WhiteBalanceOffsetSetting:
+
+CrDeviceProperty_WhiteBalanceOffsetSetting
+==========================================
+
+Get/Set the white balance offset setting.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrWhiteBalanceOffsetSetting_Off
+    - | Off
+
+  * - CrWhiteBalanceOffsetSetting_On
+    - | On
+

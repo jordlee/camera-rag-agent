@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RightLeftEyeSelect.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RightLeftEyeSelect:\n\nCrDeviceProperty_RightLeftEyeSelect\n===================================\n\nGet/Set the Right/Left Eye Select\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRightLeftEyeSelect_Auto\n    - | Auto\n\n  * - CrRightLeftEyeSelect_RightEye\n    - | Right Eye\n\n  * - CrRightLeftEyeSelect_LeftEye\n    - | Left Eye",
+    "metadata": {
+        "title": "dp_RightLeftEyeSelect",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,22 @@
+﻿.. _dp-FocusModeSetting:
+
+CrDeviceProperty_FocusModeSetting
+=================================
+
+Get/Set the Focus Mode Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusModeSetting_Automatic
+    - | Automatic
+
+  * - CrFocusModeSetting_Manual
+    - | Manual
+

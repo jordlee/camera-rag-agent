@@ -1,0 +1,32 @@
+﻿.. _dp-ColorTuningGM:
+
+CrDeviceProperty_ColorTuningGM
+==============================
+
+Get/Set the Biaxial Fine Tuning G-M Direction
+
+    CrDataType: `CrDataType_UInt8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x9C(M9_00)
+    - min
+
+  * - 0xE4(G9_00)
+    - max
+
+  * - 0x01(0.25)
+    - step
+
+| GM value sent to PC App from camera corresponds to one of the following patterns.
+| GM number is MX or GX, where X is decimal from 0.00 to 9.00 and increments by 0.25.
+| Ex.) M9.00(0x9C), M8.75(0x9D), ...,
+|        G8.75(0xE3), G9.00(0xE4).
+| Note:
+| There may be parameter differences due to model differences.
+

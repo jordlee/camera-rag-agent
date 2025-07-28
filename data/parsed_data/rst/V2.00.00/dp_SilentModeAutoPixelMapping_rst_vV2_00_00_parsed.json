@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SilentModeAutoPixelMapping.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SilentModeAutoPixelMapping:\n\nCrDeviceProperty_SilentModeAutoPixelMapping\n===========================================\n\nGet/Set the Silent Mode Auto Pixel Mapping\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSilentModeAutoPixelMapping_NotTarget\n    - | Not Target\n\n  * - CrSilentModeAutoPixelMapping_Off\n    - | Off",
+    "metadata": {
+        "title": "dp_SilentModeAutoPixelMapping",
+        "sdk_version": "V2.00.00"
+    }
+}

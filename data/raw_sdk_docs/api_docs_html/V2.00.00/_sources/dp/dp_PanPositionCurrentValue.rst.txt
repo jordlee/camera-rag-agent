@@ -1,0 +1,25 @@
+﻿.. _dp-PanPositionCurrentValue:
+
+CrDeviceProperty_PanPositionCurrentValue
+========================================
+
+Get the pan position current value.
+
+    CrDataType: `CrDataType_Int32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+

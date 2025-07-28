@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PictureProfile_DetailAdjustVHBalance.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PictureProfile_DetailAdjustVHBalance:\n\nCrDeviceProperty_PictureProfile_DetailAdjustVHBalance\n=====================================================\n\nGet/Set the Picture Profile Detail Adjust V/H Balance\n\n    CrDataType: `CrDataType_Int8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - Variable\n    - step\n\n| Detail Adjust V/H Balance for Picture Profile",
+    "metadata": {
+        "title": "dp_PictureProfile_DetailAdjustVHBalance",
+        "sdk_version": "V2.00.00"
+    }
+}

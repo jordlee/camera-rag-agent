@@ -1,0 +1,22 @@
+﻿.. _dp-MovieNextButton:
+
+CrDeviceProperty_MovieNextButton
+================================
+
+Get/Set the Movie Next button
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieXButton_Up
+    - | Moves to the top of the next movie.
+
+  * - CrMovieXButton_Down
+    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_MoviePlayButton<dp-MoviePlayButton>`.
+

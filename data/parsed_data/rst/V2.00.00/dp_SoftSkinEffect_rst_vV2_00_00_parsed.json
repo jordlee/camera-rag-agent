@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SoftSkinEffect.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SoftSkinEffect:\n\nCrDeviceProperty_SoftSkinEffect\n===============================\n\nGet/Set the Soft Skin Effect\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSoftSkinEffect_Off\n    - | Off\n\n  * - CrSoftSkinEffect_Low\n    - | Low\n\n  * - CrSoftSkinEffect_Mid\n    - | Mid\n\n  * - CrSoftSkinEffect_High\n    - | High",
+    "metadata": {
+        "title": "dp_SoftSkinEffect",
+        "sdk_version": "V2.00.00"
+    }
+}

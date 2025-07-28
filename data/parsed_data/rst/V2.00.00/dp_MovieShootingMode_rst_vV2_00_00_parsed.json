@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MovieShootingMode.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MovieShootingMode:\n\nCrDeviceProperty_MovieShootingMode\n==================================\n\nGet/Set the Movie Shooting Mode\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMovieShootingMode_Off\n    - | OFF\n\n  * - CrMovieShootingMode_CineEI\n    - | CineEI\n\n  * - CrMovieShootingMode_CineEIQuick\n    - | CineEI Quick\n\n  * - CrMovieShootingMode_Custom\n    - | Custom\n\n  * - CrMovieShootingMode_FlexibleISO\n    - | Flexible ISO",
+    "metadata": {
+        "title": "dp_MovieShootingMode",
+        "sdk_version": "V2.00.00"
+    }
+}

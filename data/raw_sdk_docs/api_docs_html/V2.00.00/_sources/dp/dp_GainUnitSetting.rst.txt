@@ -1,0 +1,22 @@
+﻿.. _dp-GainUnitSetting:
+
+CrDeviceProperty_GainUnitSetting
+================================
+
+Get/Set the Gain Unit Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrGainUnitSetting_dB
+    - | dB
+
+  * - CrGainUnitSetting_ISO
+    - | ISO
+

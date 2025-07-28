@@ -1,0 +1,255 @@
+.. _display-string:
+
+Display string
+==============
+
+.. _cr-display-string-list-info:
+
+CrDisplayStringListInfo
+-----------------------
+
+Class describing display information.
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Summary
+
+    * - dataType
+      - CrDataType
+      - Type of value
+    * - listType
+      - CrDisplayStringType
+      - Type of display string
+    * - value
+      - CrInt64u
+      - Value that means a display string
+    * - displayStringSize
+      - CrInt32u
+      - Length of display string
+    * - displayString
+      - CrInt8u*
+      - Display string
+
+Member Functions
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Signature
+      - Description
+
+    * - Constructor
+      - \-
+    * - Destructor
+      - \-
+    * - Copy Constructor
+      - \-
+    * - void Alloc(const CrInt32u size)
+      - It cannot be used.
+
+.. _cr-display-string-type:
+
+CrDisplayStringType
+-------------------
+
+Enumerate the kind of list-type.
+
+Member Enumerations
+
+.. raw:: html
+
+  <table class="docutils align-default">
+    <tr>
+      <th>Definition</th>
+      <th colspan="2">Summary</th>
+    </tr>
+    <tr>
+      <th></hd>
+      <th>
+        ILME-FX6/MPC-2610<br>
+        PXW-Z200<br>
+        HXR-NX800<br>
+      </th>
+      <th>
+        Other Models
+      </th>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_AllList</td>
+      <td colspan="2">Request all list types</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_BaseLook_AELevelOffset_ExposureValue</td>
+      <td>Rightmost column of Menu > Paint/Look > Base Look > Select</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_BaseLook_Input_Display</td>
+      <td>Input column of Menu > Paint/Look > Base Look > Select</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_BaseLook_Name_Display</td>
+      <td>Base Look Name column of Menu > Paint/Look > Base Look > Select</td>
+      <td>Table of Menu > Exposure/Color > Color/Tone > Select LUT</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_BaseLook_Output_Display</td>
+      <td>Output column of Menu > Paint/Look > Base Look > Select</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_SceneFile_Name_Display</td>
+      <td>Base Look Name column of Menu > Paint/Look > Scene File > Recall when Menu > Project > Base Setting > Shooting Mode is “Custom”</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_ShootingMode_Cinema_ColorGamut_Display</td>
+      <td>Menu > Project > Cine EI Setting > Color Gamut</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_ShootingMode_TargetDisplay_Display</td>
+      <td>Menu > Project > Base Setting > Target Display</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_Camera_Gain_BaseISO_Display</td>
+      <td>Menu > Shooting > ISO/Gain/EI > BaseISO</td>
+      <td>Menu > Exposure/Color > Exposure > Base ISO</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_Video_EIGain_Display</td>
+      <td>Menu > Shooting > ISO/Gain/EI > Exposure Index&lt;H&gt;, &lt;M&gt;, &lt;L&gt; when Menu > Project > Base Setting > Shooting Mode is “Cine EI”</td>
+      <td>Menu > Exposure/Color > Exposure > Exposure Index</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_Button_Assign_Display</td>
+      <td>Menu > Project > Assignable Button</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_Button_Assign_ShortDisplay</td>
+      <td>Abbreviation string for Menu > Project > Assignable Button.<br>
+    This menu is not in the camera body.<br>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_CreativeLook_Name_Display</td>
+      <td>-</td>
+      <td>Menu > Exposure/Color > Color/Tone > Creative Look > Look</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_FTP_ServerName_Display</td>
+      <td>
+        Menu > <br>
+        File Transfer > <br>
+        ServerSettings n > <br>
+        Display Name<br>
+      </td>
+      <td>
+        Menu > <br>
+        Network > <br>
+        FTP Transfer > <br>
+        FTP Transfer Func. > <br>
+        Server Setting <br>
+      </td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_FTP_UpLoadDirectory_Display</td>
+      <td>
+        Menu > <br>
+        File Transfer ><br>
+        ServerSettings n ><br>
+        Destination Directory<br>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_FTP_JobStatus_Display</td>
+      <td>
+        Menu > <br>
+        File Transfer ><br>
+        View Job List<br>
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_ExposureIndex_Preset1_Display</td>
+      <td>
+        
+      </td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_IPTC_Metadata_Display</td>
+      <td>-</td>
+      <td>
+        Menu > Shooting ><br>
+        File > IPTC Info
+      </td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_SubjectRecognitionAF_Display</td>
+      <td>
+        Menu > User > <br>
+        Focus > <br>
+        Subject Recognition AF
+      </td>
+      <td>
+        -<br>
+        Not supported.
+      </td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_Target_StreamingDestinationSelect_Display</td>
+      <td>
+        Menu > Network > <br>
+        Stream > <br>
+        RTMP/RTMPS1 ~ RTMP/RTMPS3 and SRT-Caller1 ~ SRT-Caller3<br>
+      </td>
+      <td>
+        -<br>
+        Not supported.
+      </td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_Camera_Button_Function_Capability_Display</td>
+      <td colspan="2">
+        Physical button name that can use at CrDeviceProperty_CameraButtonFunction and CrDeviceProperty_CameraButtonFunctionMulti.<br>
+        Value of member at CrDisplayStringListInfo and Value of CrCameraButtonFunction are linked.
+      </td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_Camera_Lever_Function_Capability_Display</td>
+      <td colspan="2">
+        Physical button name that can use at CrDeviceProperty_CameraLeverFunction.<br>
+        Value of member at CrDisplayStringListInfo and Value of CrCameraLeverFunction are linked.
+      </td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_Camera_Dial_Function_Capability_Display</td>
+      <td colspan="2">
+        Physical button name that can use at CrDeviceProperty_CameraDialFunction.<br>
+        Value of member at CrDisplayStringListInfo and Value of CrCameraDialFunction are linked.
+      </td>
+    </tr>
+    <tr>
+      <td>CrDisplayStringType_CustomGridLine_FileName_Display</td>
+      <td>
+        *A license is required to use this feature. Without a license, this feature is not available.<br>
+        The sales policy for this license varies by region.<br>
+        Details: <a href="https://helpguide.sony.net/di/gridline_2420/v1/h_zz/index.html">https://helpguide.sony.net/di/gridline_2420/v1/h_zz/index.html</a><br>
+      </td>
+      <td>
+        -<br>
+        Not supported.
+      </td>
+    </tr>
+  </table>

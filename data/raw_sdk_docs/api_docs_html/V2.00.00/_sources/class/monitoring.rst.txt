@@ -1,0 +1,309 @@
+.. _monitoring:
+
+Monitoring
+==========
+
+.. _cr-monitoring-delivery-setting:
+
+CrMonitoringDeliverySetting
+---------------------------
+
+Class describing Monitoring setting information.
+
+Member Variables
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Name
+      - Type([#f1]_)
+      - Summary
+
+    * - type
+      - CrMonitoringDeliveryType
+      - Type of delivery format
+    * - ipAddress
+      - CrInt8u*  (16:10-18)
+      - IP address of host device.
+    * - downTime
+      - CrInt32u
+      - | Time to check for no delivery data received.
+        | Unit is milliseconds.
+        | For example, if 5000 is set, the OnWarning() callback will notify “CrWarning_ControlMonitoring_LostReceiving” if it detects that the live view image will not be delivered for more than 5 seconds.
+        | When 0 is specified, no delivery check is performed.
+    * - videoPort
+      - CrInt32u
+      - | Receive port number for image data.
+        |
+        | Specify a number between 0 or 49152~65535(Range of ports that users can use for socket communication).
+        | 0 means default value specification. In that case, it will be replaced by 55001.
+        | Note:
+        | 55003 and 55005 are unavailable due to reserved ports.
+    * - metaPort
+      - CrInt32u
+      - | Receive port number for meta data at received image data.
+        |
+        | Support from setting version is 1.01 at CrDeviceProperty_MonitoringSettingVersion.
+        | Specify a number between 0 or 49152~65535(Range of ports that users can use for socket communication).
+        | 0 means default value specification. In that case, it will be replaced by 55005.
+        | Note:
+        | 55001 and 55003 are unavailable due to reserved ports.
+    * - deliveryImageQualityLevel
+      - CrMonitoringFormat_DeliveryImageQualityLevel
+      - | Select quality level of delivery image.
+        | Support from setting version is 1.01 at CrDeviceProperty_MonitoringSettingVersion.
+    * - transportProtocol
+      - CrMonitoringTransportProtocol
+      - | Select transport protocol.
+        | See: 
+        | :ref:`CrDeviceProperty_MonitoringTransportProtocol<dp-MonitoringTransportProtocol>`
+
+.. rubric:: FootNotes
+
+.. [#f1] String member. Must be set to the number of characters including the null-terminator in the first 2 bytes. The value to the left in parentheses is the maximum number of characters including null terminators.And the right value of the colon is the minimum and maximum number of bytes for each member. If omitted, nullptr is fine. For example, when setting one character of 'A‘, the first 2 bytes + 'A‘ + null-terminator, totaling 4 bytes, should be prepared.
+
+Member Functions
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Signature
+      - Description
+
+    * - Constructor
+      - \-
+    * - Destructor
+      - \-
+    * - CrError SetIpAddress(const char* _ipAddress)
+      - Set the ipAddress. String argument must not contain size information.
+    * - const char* GetIpAddress()
+      - Get the ipAddress.
+
+.. _cr-monitoring-delivery-type:
+
+CrMonitoringDeliveryType
+------------------------
+
+Enumerate the type of delivery format.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrMonitoringDeliveryType_None
+    - \-
+  * - CrMonitoringDeliveryType_Jpeg
+    - Jpeg
+
+.. _cr-monitoring-operation:
+
+CrMonitoringOperation
+---------------------
+
+Enumerate the type of operation.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrMonitoringOperation_Stop
+    - Stop
+  * - CrMonitoringOperation_Start
+    - Start
+
+.. _cr-monitoring-format-delivery-image-quality-level:
+
+CrMonitoringFormat_DeliveryImageQualityLevel
+--------------------------------------------
+
+Enumerate the type of delivery image quality level.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+  
+  * - Definition
+    - Summary
+  
+  * - CrMonitoringFormat_DeliveryImageQualityLevel_Invalid
+    - Invalid
+  * - CrMonitoringFormat_DeliveryImageQualityLevel_Level1
+    - Level 1
+  * - CrMonitoringFormat_DeliveryImageQualityLevel_Level2
+    - Level 2
+  * - CrMonitoringFormat_DeliveryImageQualityLevel_Level3
+    - Level 3
+
+.. _cr-monitoring-format:
+
+CrMonitoringFormat
+------------------
+
+Struct describing monitoring avairable format.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - deliveryImageQualityLevel
+    - CrMonitoringFormat_DeliveryImageQualityLevel
+    - | Image quality level.
+      | See: :ref:`CrMonitoringFormat_DeliveryImageQualityLevel<cr-monitoring-format-delivery-image-quality-level>`
+  * - videoCodec
+    - CrMonitoringFormat_VideoCodec
+    - | Video codec.
+      | See: :ref:`CrMonitoringFormat_VideoCodec<cr-monitoring-format-video-codec>`
+  * - resolution
+    - CrMonitoringFormat_Resolution
+    - | Resolution.
+      | See: :ref:`CrMonitoringFormat_Resolution<cr-monitoring-format-resolution>`
+  * - framerate
+    - CrMonitoringFormat_FrameRate
+    - | Frame rate.
+      | See: :ref:`CrMonitoringFormat_FrameRate<cr-monitoring-format-frame-rate>`
+  * - bitRate
+    - CrInt16u
+    - | Bitrate.
+      | 100 times the real value.
+  * - resolutionVariableFlag
+    - CrInt8u
+    - If this value is 0b1, resolution is variable. (resolution is not enumerate in CrMonitoringFormat_Resolution)
+
+Example of CrMonitoringFormat:
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - deliveryImageQualityLevel
+    - videoCodec
+    - resolution
+    - framerate
+    - bitRate
+    - resolutionVariableFlag
+
+  * - Level 1
+    - JPEG
+    - 640x360
+    - 7.5p
+    - 2Mbps
+    - Not Variable
+  * - Level 2
+    - JPEG
+    - 640x360
+    - 30p
+    - 8Mbps
+    - Not Variable
+  * - Level 3
+    - JPEG
+    - 1024x576
+    - 30p
+    - 24Mbps
+    - Not Variable
+
+.. _cr-monitoring-format-video-codec:
+
+CrMonitoringFormat_VideoCodec
+-----------------------------
+
+Enumerate the type of video codec in CrMonitoringFormat.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrMonitoringFormat_VideoCodec_Jpeg
+    - Jpeg
+  * - CrMonitoringFormat_VideoCodec_H264
+    - H.264
+  * - CrMonitoringFormat_VideoCodec_H265
+    - H.265
+
+.. _cr-monitoring-format-resolution:
+
+CrMonitoringFormat_Resolution
+-----------------------------
+
+Enumerate the type of resolution in CrMonitoringFormat.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrMonitoringFormat_Resolution_480x270
+    - 480x270
+  * - CrMonitoringFormat_Resolution_640x336
+    - 640x336
+  * - CrMonitoringFormat_Resolution_640x360
+    - 640x360
+  * - CrMonitoringFormat_Resolution_1024x544
+    - 1024x544
+  * - CrMonitoringFormat_Resolution_1024x576
+    - 1024x576
+  * - CrMonitoringFormat_Resolution_1280x720
+    - 1280x720
+  * - CrMonitoringFormat_Resolution_1920x1080
+    - 1920x1080
+  * - CrMonitoringFormat_Resolution_640x480
+    - 640x480
+  * - CrMonitoringFormat_Resolution_1024x768
+    - 1024x768
+
+.. _cr-monitoring-format-frame-rate:
+
+CrMonitoringFormat_FrameRate
+----------------------------
+
+Enumerate the type of frame rate in CrMonitoringFormat.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrMonitoringFormat_FrameRate_7_50fps
+    - 7.50 fps
+  * - CrMonitoringFormat_FrameRate_23_98fps
+    - 23.98 fps
+  * - CrMonitoringFormat_FrameRate_24_00fps
+    - 24.00 fps
+  * - CrMonitoringFormat_FrameRate_25_00fps
+    - 25.00 fps
+  * - CrMonitoringFormat_FrameRate_29_97fps
+    - 29.97 fps
+  * - CrMonitoringFormat_FrameRate_30_00fps
+    - 30.00 fps

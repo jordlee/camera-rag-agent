@@ -1,0 +1,45 @@
+{
+    "refid": "_cr_image_data_block_8h",
+    "kind": "file",
+    "name": "CrImageDataBlock.h",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrImageDataBlock.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "_cr_image_data_block_8h_1a6f81352e8ec92400aee7415976c12810",
+            "kind": "define",
+            "name": "CR_OSD_IMAGE_MAX_SIZE",
+            "visibility": "define",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrImageDataBlock.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_image_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_image_data_block",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info",
+            "prot": "public"
+        },
+        {
+            "refid": "class_s_c_r_s_d_k_1_1_cr_o_s_d_image_data_block",
+            "prot": "public"
+        }
+    ],
+    "metadata": {
+        "title": "CrImageDataBlock.h",
+        "sdk_version": "V2.00.00"
+    }
+}

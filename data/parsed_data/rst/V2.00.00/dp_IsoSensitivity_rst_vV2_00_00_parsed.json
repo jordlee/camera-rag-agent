@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_IsoSensitivity.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-IsoSensitivity:\n\nCrDeviceProperty_IsoSensitivity\n===============================\n\nGet/Set the ISO Sensitivity\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - value\n    - | bit 28-31 extension, bit 24-27 ISO mode , bit 0-23 ISO value.\n      | Real ISO value : when bits 0-23 are other than CrISO_AUTO(0xFFFFFF).\n      | e.g.) 0x00000140 = 320",
+    "metadata": {
+        "title": "dp_IsoSensitivity",
+        "sdk_version": "V2.00.00"
+    }
+}

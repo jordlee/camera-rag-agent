@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitoringDeliveryTypeSupportInfo.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MonitoringDeliveryTypeSupportInfo:\n\nCrDeviceProperty_MonitoringDeliveryTypeSupportInfo\n==================================================\n\nGet the Monitoring Delivery Type Support Information\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMonitoringDeliveryType_None\n    - | This parameter is not used\n\n  * - CrMonitoringDeliveryType_Jpeg\n    - | JPEG\n\n| This device property gets the delivery type candidate value.",
+    "metadata": {
+        "title": "dp_MonitoringDeliveryTypeSupportInfo",
+        "sdk_version": "V2.00.00"
+    }
+}

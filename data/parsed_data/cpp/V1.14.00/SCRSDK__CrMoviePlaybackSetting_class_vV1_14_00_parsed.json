@@ -1,0 +1,235 @@
+{
+    "refid": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting",
+    "kind": "class",
+    "name": "SCRSDK::CrMoviePlaybackSetting",
+    "source_file": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1af027a5c739f990eab1326a9279e0f796",
+            "kind": "variable",
+            "name": "reserved1",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrInt16u SCRSDK::CrMoviePlaybackSetting::reserved1",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1aeeb1d0a746f889fbe643fbbe2ea34e79",
+            "kind": "variable",
+            "name": "slotId",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrSlotNumber SCRSDK::CrMoviePlaybackSetting::slotId",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1ac3b61801ec3823d3c3fb79652056c8c4",
+            "kind": "variable",
+            "name": "contentsId",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMoviePlaybackSetting::contentsId",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a637054fe4953c4d5cf3d626582362843",
+            "kind": "variable",
+            "name": "fileId",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMoviePlaybackSetting::fileId",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a311143843801b1964e1055e6e7591920",
+            "kind": "variable",
+            "name": "ipAddress",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrInt8u* SCRSDK::CrMoviePlaybackSetting::ipAddress",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a056f858823b20f0e033411ce27e0c056",
+            "kind": "variable",
+            "name": "downTime",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMoviePlaybackSetting::downTime",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a5d971297a38986a34cdccddba4560a15",
+            "kind": "variable",
+            "name": "videoPort",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMoviePlaybackSetting::videoPort",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a0570641697ff71af462b174cb9fcc74d",
+            "kind": "variable",
+            "name": "audioPort",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMoviePlaybackSetting::audioPort",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a9f1472b4f55eeab3d41255e769bb1703",
+            "kind": "variable",
+            "name": "metaPort",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMoviePlaybackSetting::metaPort",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a52313faf512ab49d097bb271cb937f88",
+            "kind": "variable",
+            "name": "reserved2",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrInt8u SCRSDK::CrMoviePlaybackSetting::reserved2",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a2f15c56298d28302bf8049aefbe67c09",
+            "kind": "variable",
+            "name": "reserved3",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrInt8u SCRSDK::CrMoviePlaybackSetting::reserved3",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1ad328a470a1a4bd3133a742d267dd70e3",
+            "kind": "function",
+            "name": "CrMoviePlaybackSetting",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrMoviePlaybackSetting::CrMoviePlaybackSetting",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a7a9f5cc965ac1075b416957163e9d2ec",
+            "kind": "function",
+            "name": "~CrMoviePlaybackSetting",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrMoviePlaybackSetting::~CrMoviePlaybackSetting",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a74a4990671176b7279a52e45d914f07f",
+            "kind": "function",
+            "name": "CrMoviePlaybackSetting",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrMoviePlaybackSetting::CrMoviePlaybackSetting",
+            "argsstring": "(const CrMoviePlaybackSetting &ref)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": [
+                {
+                    "type": "const CrMoviePlaybackSetting &",
+                    "name": "ref",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1a33c2d7e2e3978cf4efe5eb0d21044eef",
+            "kind": "function",
+            "name": "SetIpAddress",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "CrError SCRSDK::CrMoviePlaybackSetting::SetIpAddress",
+            "argsstring": "(const char *_ipAddress)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": [
+                {
+                    "type": "const char *",
+                    "name": "_ipAddress",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_movie_playback_setting_1ae64fa12ee3721179ff0b6c2613f312a6",
+            "kind": "function",
+            "name": "GetIpAddress",
+            "visibility": "public-func",
+            "type": "const char *",
+            "definition": "const char * SCRSDK::CrMoviePlaybackSetting::GetIpAddress",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrMoviePlaybackSetting",
+        "sdk_version": "V1.14.00"
+    }
+}

@@ -1,0 +1,22 @@
+﻿.. _dp-CameraSetting_SaveRead_State:
+
+CrDeviceProperty_CameraSetting_SaveRead_State
+=============================================
+
+Get the Camera-Setting Save/Read State
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCameraSettingSaveReadState_Idle
+    - | Idle
+
+  * - CrCameraSettingSaveReadState_Reading
+    - | Reading
+

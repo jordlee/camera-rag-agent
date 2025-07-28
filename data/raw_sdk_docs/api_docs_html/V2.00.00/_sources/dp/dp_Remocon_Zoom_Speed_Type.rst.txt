@@ -1,0 +1,27 @@
+﻿.. _dp-Remocon_Zoom_Speed_Type:
+
+CrDeviceProperty_Remocon_Zoom_Speed_Type
+========================================
+
+Get/Set the Remocon Zoom Speed Type.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRemoconZoomSpeedType_Invalid
+    - | Invalid
+
+  * - CrRemoconZoomSpeedType_Variable
+    - | Variable
+
+  * - CrRemoconZoomSpeedType_Fixed
+    - | Fixed
+
+| Related to :ref:`CrDeviceProperty_Zoom_Operation<dp-Zoom_Operation>` and :ref:`CrDeviceProperty_Zoom_Speed_Range<dp-Zoom_Speed_Range>`.
+

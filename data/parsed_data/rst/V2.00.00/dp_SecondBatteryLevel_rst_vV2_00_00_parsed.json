@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SecondBatteryLevel.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SecondBatteryLevel:\n\nCrDeviceProperty_SecondBatteryLevel\n===================================\n\nGet the Second Battery Level Indicator\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - --\n    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_BatteryLevel<dp-BatteryLevel>`",
+    "metadata": {
+        "title": "dp_SecondBatteryLevel",
+        "sdk_version": "V2.00.00"
+    }
+}

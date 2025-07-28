@@ -1,0 +1,36 @@
+﻿.. _dp-StreamStatus:
+
+CrDeviceProperty_StreamStatus
+=============================
+
+Get the streaming status.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrStreamStatus_Inactive
+    - | Inactive
+
+  * - CrStreamStatus_Idle
+    - | Idle
+
+  * - CrStreamStatus_Streaming
+    - | Streaming
+
+  * - CrStreamStatus_Error
+    - | Error
+
+  * - CrStreamStatus_Ready
+    - | Ready
+
+| Inactive: Streaming functionality is turned off or not available.
+| Idle: Not connected to a streaming server or client.
+| Ready: Connected to a streaming server or client but not streaming.
+| Streaming: Streaming video to a streaming server or client.
+

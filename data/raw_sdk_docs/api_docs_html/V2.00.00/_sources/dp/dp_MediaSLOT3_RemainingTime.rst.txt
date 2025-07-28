@@ -1,0 +1,28 @@
+﻿.. _dp-MediaSLOT3_RemainingTime:
+
+CrDeviceProperty_MediaSLOT3_RemainingTime
+=========================================
+
+Get the Remaining shooting time of Media (SLOT3)
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x00000000
+    - min
+
+  * - 0xFFFFFFFF
+    - max
+
+  * - 0x00000001
+    - step
+
+| Unit is second, the remaining time of movie recording.
+| This value is expressed in hexadecimal.
+

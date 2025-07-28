@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AudioInputCH3LevelControl.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AudioInputCH3LevelControl:\n\nCrDeviceProperty_AudioInputCH3LevelControl\n==========================================\n\nGet/Set the audio input CH3 level control.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAudioInputCHLevelControl_Auto\n    - | Auto\n\n  * - CrAudioInputCHLevelControl_Manual\n    - | Manual",
+    "metadata": {
+        "title": "dp_AudioInputCH3LevelControl",
+        "sdk_version": "V2.00.00"
+    }
+}

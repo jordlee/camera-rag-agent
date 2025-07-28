@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CameraSetting_SaveRead_State.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-CameraSetting_SaveRead_State:\n\nCrDeviceProperty_CameraSetting_SaveRead_State\n=============================================\n\nGet the Camera-Setting Save/Read State\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCameraSettingSaveReadState_Idle\n    - | Idle\n\n  * - CrCameraSettingSaveReadState_Reading\n    - | Reading",
+    "metadata": {
+        "title": "dp_CameraSetting_SaveRead_State",
+        "sdk_version": "V2.00.00"
+    }
+}

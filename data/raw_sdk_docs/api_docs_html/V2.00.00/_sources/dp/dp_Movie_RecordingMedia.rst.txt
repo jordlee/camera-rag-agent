@@ -1,0 +1,25 @@
+﻿.. _dp-Movie_RecordingMedia:
+
+CrDeviceProperty_Movie_RecordingMedia
+=====================================
+
+Get/Set the Recording Media (Movie)
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRecordingMediaMovie_Slot1
+    - | Slot 1
+
+  * - CrRecordingMediaMovie_Slot2
+    - | Slot 2
+
+  * - CrRecordingMediaMovie_SimultaneousRecording
+    - | Simultaneous Recording
+

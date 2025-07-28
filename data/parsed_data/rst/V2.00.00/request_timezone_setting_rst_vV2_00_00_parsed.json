@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/api_reference/request_timezone_setting.rst.txt",
+    "file_type": "rst",
+    "content": ".. _api-header-request-timezone-setting:\n\nRequestTimeZoneSetting\n======================\n\n**Overview**\n    | Request Timezone Settings\n    | The Function is invalid when not exist :ref:`CrDeviceProperty_AreaTimeZoneSettingVersion<dp-AreaTimeZoneSettingVersion>`.\n\n\n**Definition**\n\n  `CrError RequestTimeZoneSetting(CrDeviceHandle deviceHandle);`\n\n**Input Parameters**\n\n.. list-table::\n    :widths: auto\n    :header-rows: 1\n\n    * - Type\n      - Explanation\n\n    * - CrDeviceHandle\n      - | deviceHandle\n        | The handle of the connected camera is returned in the variable. This must be set 0 before calling Connect().\n\n**Output parameters**\n\n.. list-table::\n    :widths: auto\n    :header-rows: 1\n\n    * - Type\n      - Explanation\n\n    * - \\-\n      - \\-\n\n**Return values**\n\n.. list-table::\n    :widths: auto\n    :header-rows: 1\n\n    * - Type\n      - Explanation\n\n    * - CrError\n      - | CrError_None on Success\n        | CrError_Init if the SDK is uninitialized\n        | CrError_Generic_InvalidHandle if the handle is invalid\n        | Other than errors above, see :ref:`Status code & Error<status-code-error>`\n\n**Related API**\n  - :ref:`IDeviceCallback::OnWarningExt<callback-interface>`\n  - :ref:`SetTimeZoneSetting<api-header-set-timezone-setting>`\n  - :ref:`GetTimeZoneSetting<api-header-get-timezone-setting>`\n\n**Special note (details)**\n  None in particular",
+    "metadata": {
+        "title": "request_timezone_setting",
+        "sdk_version": "V2.00.00"
+    }
+}

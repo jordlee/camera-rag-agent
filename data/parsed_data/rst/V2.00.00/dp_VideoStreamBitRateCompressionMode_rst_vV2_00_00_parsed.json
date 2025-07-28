@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_VideoStreamBitRateCompressionMode.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-VideoStreamBitRateCompressionMode:\n\nCrDeviceProperty_VideoStreamBitRateCompressionMode\n==================================================\n\nGet/Set the video stream bit rate compression mode.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrVideoStreamBitRateCompressionMode_ConstantBitRate_CBR\n    - | Constant Bit Rate (CBR)\n\n  * - CrVideoStreamBitRateCompressionMode_VariableBitRate_VBR\n    - | Variable Bit Rate (VBR)",
+    "metadata": {
+        "title": "dp_VideoStreamBitRateCompressionMode",
+        "sdk_version": "V2.00.00"
+    }
+}

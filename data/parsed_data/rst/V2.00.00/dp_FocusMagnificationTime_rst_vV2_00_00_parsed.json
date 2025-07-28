@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusMagnificationTime.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FocusMagnificationTime:\n\nCrDeviceProperty_FocusMagnificationTime\n=======================================\n\nGet/Set the Focus Magnification Time\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Other than above values\n    - | Unit is second\n      | e.g.) 0x05 = 5 sec\n\n  * - CrFocusMagnificationTime_NoLimit\n    - | No limit\n\n| The Value gets/sets shooting magnification time in seconds.",
+    "metadata": {
+        "title": "dp_FocusMagnificationTime",
+        "sdk_version": "V2.00.00"
+    }
+}

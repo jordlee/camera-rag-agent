@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_WhiteBalanceModeSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-WhiteBalanceModeSetting:\n\nCrDeviceProperty_WhiteBalanceModeSetting\n========================================\n\nGet/Set the White Balance Mode Setting\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrWhiteBalanceModeSetting_Automatic\n    - | Automatic\n\n  * - CrWhiteBalanceModeSetting_Manual\n    - | Manual",
+    "metadata": {
+        "title": "dp_WhiteBalanceModeSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

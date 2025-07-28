@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DeSqueezeDisplayRatio.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-DeSqueezeDisplayRatio:\n\nCrDeviceProperty_DeSqueezeDisplayRatio\n======================================\n\nGet/Set the De-Squeeze Display Ratio\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Variable\n    - | The value is obtained by multiplying a real De-Squeeze display ratio value by 1000.\n      | e.g.) 0x03E8 = 1000 (x1.0)\n      | 0x0514 = 1300 (x1.3)\n      | 0x05DC = 1500 (x1.5)\n      | 0x07D0 = 2000 (x2.0)",
+    "metadata": {
+        "title": "dp_DeSqueezeDisplayRatio",
+        "sdk_version": "V2.00.00"
+    }
+}

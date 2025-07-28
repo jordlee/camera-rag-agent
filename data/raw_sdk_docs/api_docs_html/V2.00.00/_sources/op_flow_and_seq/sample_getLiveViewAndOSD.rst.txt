@@ -1,0 +1,19 @@
+.. _sample-getLiveViewAndOSD:
+
+sample code - "get Live view and OSD image"
+===========================================
+
+.. code-block:: cpp
+
+    usage:
+       p <1(Main),2(httpLV)> - set live view protocol
+       l                     - get live view
+       t                     - turn On OSD image
+       o                     - get OSD image
+    To exit, please enter 'q'.
+
+Save the following code as "RemoteCli.cpp", replace "app/RemoteCli.cpp" in the SDK, then build.
+
+.. literalinclude:: /_static/getLiveViewAndOSD.cpp
+   :language: cpp
+   :linenos:

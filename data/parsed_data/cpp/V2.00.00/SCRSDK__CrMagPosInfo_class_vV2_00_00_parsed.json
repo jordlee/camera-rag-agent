@@ -1,0 +1,119 @@
+{
+    "refid": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info",
+    "kind": "class",
+    "name": "SCRSDK::CrMagPosInfo",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1aa027af9908752a08b830de8a6b998171",
+            "kind": "variable",
+            "name": "xNumerator",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMagPosInfo::xNumerator",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a3bac7fa69cd4e4be0b3877b8ebb990eb",
+            "kind": "variable",
+            "name": "xDenominator",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMagPosInfo::xDenominator",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a7098c2a3f52188f61db5d99316b83860",
+            "kind": "variable",
+            "name": "yNumerator",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMagPosInfo::yNumerator",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1af9cc294c709abd91c4a98bbb4461ec16",
+            "kind": "variable",
+            "name": "yDenominator",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMagPosInfo::yDenominator",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a4a1c53c611db6b965477520936730538",
+            "kind": "variable",
+            "name": "width",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMagPosInfo::width",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a59be3c11b385bad6581a7e0692d069b7",
+            "kind": "variable",
+            "name": "height",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMagPosInfo::height",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1a4ab74562a4c62a4cba7d991dd79aee4f",
+            "kind": "function",
+            "name": "CrMagPosInfo",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrMagPosInfo::CrMagPosInfo",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mag_pos_info_1adc7b12cc7c3d1e9a5d807bace925f6a6",
+            "kind": "function",
+            "name": "~CrMagPosInfo",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrMagPosInfo::~CrMagPosInfo",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrMagPosInfo",
+        "sdk_version": "V2.00.00"
+    }
+}

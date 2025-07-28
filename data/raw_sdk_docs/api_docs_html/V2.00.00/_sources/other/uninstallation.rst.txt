@@ -1,0 +1,18 @@
+Uninstallation
+==============
+
+**Delete All related folders and files.**
+-----------------------------------------
+
+When uninstalling your application which uses Camera Remote SDK, delete the following folders and files , or delete the information stored in the files with :ref:`EditSDKInfo<api-edit-sdk-info>`.
+
+OS common:
+    - ``..\CrAdapter\*.*``
+    - ``..\*.*``
+
+Win:
+    - ``..\Users\<User Name>\AppData\Roaming\Camera Remote SDK\*.*``
+Mac:
+    - ``../Users/<User Name>/Library/Preferences/Camera Remote SDK/*.*``
+Linux : 
+    - ``../home/<User Name>/Camera Remote SDK/*.*``

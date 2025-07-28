@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PictureProfile_DetailAdjustBWBalance.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PictureProfile_DetailAdjustBWBalance:\n\nCrDeviceProperty_PictureProfile_DetailAdjustBWBalance\n=====================================================\n\nGet/Set the Picture Profile Detail Adjust B/W Balance\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Variable\n    - | Detail Adjust B/W Balance for Picture Profile\n\n| It may increase or decrease because it varies depending on the model and setting status.\n| Set detail adjust B/W balance for the picture profile selected in “Picture Profile.”",
+    "metadata": {
+        "title": "dp_PictureProfile_DetailAdjustBWBalance",
+        "sdk_version": "V2.00.00"
+    }
+}

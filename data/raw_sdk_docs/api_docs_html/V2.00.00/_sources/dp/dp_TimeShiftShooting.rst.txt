@@ -1,0 +1,22 @@
+﻿.. _dp-TimeShiftShooting:
+
+CrDeviceProperty_TimeShiftShooting
+==================================
+
+Get/Set the TimeShift shooting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTimeShiftShooting_Off
+    - | Off
+
+  * - CrTimeShiftShooting_On
+    - | On
+

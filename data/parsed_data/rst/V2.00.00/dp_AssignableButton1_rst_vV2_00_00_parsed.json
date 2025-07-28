@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AssignableButton1.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AssignableButton1:\n\nCrDeviceProperty_AssignableButton1\n==================================\n\nGet/Set the Assignable Button 1\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAssignableButton_Up\n    - | Be sure to specify \"Up\" after specifying \"Down\".\n\n  * - CrAssignableButton_Down\n    - | Specify \"Down\" and execute the function assigned to :ref:`CrDeviceProperty_ButtonAssignmentAssignable1<dp-ButtonAssignmentAssignable1>`.\n      | It stays in the Down state (hold down the button) until CrAssignableButton_Up is set.",
+    "metadata": {
+        "title": "dp_AssignableButton1",
+        "sdk_version": "V2.00.00"
+    }
+}

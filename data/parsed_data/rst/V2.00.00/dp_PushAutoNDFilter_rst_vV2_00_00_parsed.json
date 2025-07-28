@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PushAutoNDFilter.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PushAutoNDFilter:\n\nCrDeviceProperty_PushAutoNDFilter\n=================================\n\nGet/Set the push auto ND filter.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPushAutoNDFilter_Up\n    - | Up\n\n  * - CrPushAutoNDFilter_Down\n    - | Down",
+    "metadata": {
+        "title": "dp_PushAutoNDFilter",
+        "sdk_version": "V2.00.00"
+    }
+}

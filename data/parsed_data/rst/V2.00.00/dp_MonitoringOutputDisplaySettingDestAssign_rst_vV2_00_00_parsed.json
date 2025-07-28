@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitoringOutputDisplaySettingDestAssign.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MonitoringOutputDisplaySettingDestAssign:\n\nCrDeviceProperty_MonitoringOutputDisplaySettingDestAssign\n=========================================================\n\nGet the Monitoring Output Display Dest Assign\n\n    CrDataType: `CrDataType_UInt64Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Any\n    - | The value changes depending on the current operation request status.\n      | e.g.) 0x00000101= Monitoring Output Display Setting1 (SDI1)\n      |       0x00000E02= Monitoring Output Display Setting2 (SDI2/HDMI/Stream)\n\n\n.. include:: ./dp_MonitoringOutputDisplaySettingDestAssign.inc\n\n| Monitoring Output Display Setting Dest information is set in the list of form flags.\n| Superimposes on screen displays such as menus and status on the output signal.",
+    "metadata": {
+        "title": "dp_MonitoringOutputDisplaySettingDestAssign",
+        "sdk_version": "V2.00.00"
+    }
+}

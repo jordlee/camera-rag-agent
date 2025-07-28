@@ -1,0 +1,24 @@
+﻿.. _dp-PictureCacheRecSizeAndTime:
+
+CrDeviceProperty_PictureCacheRecSizeAndTime
+===========================================
+
+Get/Set the picture cache recording size and time.
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - 0x00000000 ～0xFFFFFFFF
+    - | The cache size [Upper 8bits] | cache rec time(1/100sec) [Lower 24bits]
+
+| The cache size is set in the upper 8bits, the cache rec time is set in the lower 24bits.
+| if cache size is "Short" and cache rec time is 5sec, set 0x010001F4. 0x01 = "Short", 0x0001F4 = 500/100 = 5.00sec
+| If cache size is unused and only the cache rec time is set, set 0x00 in the upper 8bits.
+| The value of cache size is "None(0x00)"、"Short (0x01)", "Middle (0x02)", "Long (0x03)", "Max (0x04)". 0x05 to 0xFF is the reserve value.
+

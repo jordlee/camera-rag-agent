@@ -1,0 +1,25 @@
+﻿.. _dp-LensCompensationShading:
+
+CrDeviceProperty_LensCompensationShading
+========================================
+
+Get/Set the Lens Compensation Shading
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrLensCompensationShading_Off
+    - | Off
+
+  * - CrLensCompensationShading_Auto
+    - | Auto
+
+  * - CrLensCompensationShading_Low
+    - | Low
+

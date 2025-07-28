@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitorLUTSettingOutputDestAssign.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MonitorLUTSettingOutputDestAssign:\n\nCrDeviceProperty_MonitorLUTSettingOutputDestAssign\n==================================================\n\nGet the Monitor LUT Setting Output Dest Assign\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Any\n    - | The value changes depending on the current operation request status.\n      | e.g.) 0x00001801= Monitor LUT Setting1 (SDI/HDMI)\n      |       0x00002602= Monitor LUT Setting2 (VF/Proxy/LiveView)\n      |       0x00008003= Monitor LUT Setting3 (Internal Rec)\n\n\n.. include:: ./dp_MonitorLUTSettingOutputDestAssign.inc\n| Monitor LUT Setting Output Dest information is set in the list of form flags.",
+    "metadata": {
+        "title": "dp_MonitorLUTSettingOutputDestAssign",
+        "sdk_version": "V2.00.00"
+    }
+}

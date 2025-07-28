@@ -1,0 +1,53 @@
+.. _api-header-update-sdk-information:
+
+Update SDK Information
+======================
+
+.. _api-edit-sdk-info:
+
+EditSDKInfo
+-----------
+
+**Overview**
+    Edit the information about the SDK stored in the config file.
+
+**Definition**
+    `CrError EditSDKInfo(CrInt16u infotype);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrInt16u
+    - | A constant that means the information to update.
+      | The constant values are in the SDKInfoType enumeration.
+      |
+      | It is possible to delete camera-specific information with the following values.
+      | SDKINFO_AUTHINFO
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_Api_Insufficient if the update fails
+
+**Related API**
+  None
+
+**Special note (details)**
+  None in particular

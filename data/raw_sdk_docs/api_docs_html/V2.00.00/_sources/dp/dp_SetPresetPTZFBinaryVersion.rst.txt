@@ -1,0 +1,22 @@
+﻿.. _dp-SetPresetPTZFBinaryVersion:
+
+CrDeviceProperty_SetPresetPTZFBinaryVersion
+===========================================
+
+Get the enabled status and SetPresetPTZF command binary version.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - variable
+    - | SetPresetPTZF Binary Version
+
+| ex) The Binary Version is 1.00, the value is 0x0064. (0d100)
+| When SetPresetPTZF feature is invalid, IsEnable field is Disable.
+

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ExtendedShutterSpeed.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ExtendedShutterSpeed:\n\nCrDeviceProperty_ExtendedShutterSpeed\n=====================================\n\nGet/Set the Extended Shutter Speed\n\n    CrDataType: `CrDataType_UInt64Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrExtendedShutterSpeed_Bulb\n    - | BULB\n\n  * - CrExtendedShutterSpeed_Nothing\n    - | nothing to display\n\n  * - Other than above values \n    - | The real value of shutter speed (Upper four bytes: numerator, Lower four bytes: denominator)\n\n| Extended command for \"Shutter Speed\"setting.\n\n| The representation size of the denominator and numerator of :ref:`CrDeviceProperty_ShutterSpeed<dp-ShutterSpeed>` is doubled. The usage is the same as :ref:`CrDeviceProperty_ShutterSpeed<dp-ShutterSpeed>`.\n| e.g.) 0x0000000F0000000A: \n| 0x0000000F (means 15) / 0x00000000A (means 10) = 1.5\"",
+    "metadata": {
+        "title": "dp_ExtendedShutterSpeed",
+        "sdk_version": "V2.00.00"
+    }
+}

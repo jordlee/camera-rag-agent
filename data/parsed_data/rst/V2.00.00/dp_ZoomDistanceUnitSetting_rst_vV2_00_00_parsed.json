@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ZoomDistanceUnitSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ZoomDistanceUnitSetting:\n\nCrDeviceProperty_ZoomDistanceUnitSetting\n========================================\n\nGet/Set the Zoom Distance Unit Setting\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrZoomDistanceUnitSetting_mm\n    - | mm\n\n  * - CrZoomDistanceUnitSetting_percent\n    - | percent",
+    "metadata": {
+        "title": "dp_ZoomDistanceUnitSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,137 @@
+{
+    "refid": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info",
+    "kind": "class",
+    "name": "SCRSDK::CrMtpFolderInfo",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a004f85be183ef3d20ad90b4ef1dff194",
+            "kind": "variable",
+            "name": "handle",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrFolderHandle SCRSDK::CrMtpFolderInfo::handle",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a252c1ecf0588fc5a01afe13be224d77d",
+            "kind": "variable",
+            "name": "folderNameSize",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrMtpFolderInfo::folderNameSize",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1afa8e20a0f78a2847514f27f13f7ca636",
+            "kind": "variable",
+            "name": "folderName",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrChar* SCRSDK::CrMtpFolderInfo::folderName",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1aca5e341fd686d43983534a0a5e9f1a19",
+            "kind": "function",
+            "name": "CrMtpFolderInfo",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrMtpFolderInfo::CrMtpFolderInfo",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1ace14a1583892c626f5865c3631a4fd96",
+            "kind": "function",
+            "name": "~CrMtpFolderInfo",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrMtpFolderInfo::~CrMtpFolderInfo",
+            "argsstring": "()",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1aab43511b46236369f57cb566ecbdcc7b",
+            "kind": "function",
+            "name": "CrMtpFolderInfo",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "SCRSDK::CrMtpFolderInfo::CrMtpFolderInfo",
+            "argsstring": "(const CrMtpFolderInfo &ref)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": [
+                {
+                    "type": "const CrMtpFolderInfo &",
+                    "name": "ref",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a7f3683976872d80736e912552591e9dc",
+            "kind": "function",
+            "name": "operator=",
+            "visibility": "public-func",
+            "type": "",
+            "definition": "CrMtpFolderInfo & SCRSDK::CrMtpFolderInfo::operator=",
+            "argsstring": "(const CrMtpFolderInfo &ref)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": [
+                {
+                    "type": "const CrMtpFolderInfo &",
+                    "name": "ref",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "id": "class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1afdb5ef09b998b5e78e7d9235f1b9b8d8",
+            "kind": "function",
+            "name": "Alloc",
+            "visibility": "private-func",
+            "type": "void",
+            "definition": "void SCRSDK::CrMtpFolderInfo::Alloc",
+            "argsstring": "(const CrInt32u size)",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": [
+                {
+                    "type": "const CrInt32u",
+                    "name": "size",
+                    "description": ""
+                }
+            ]
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrMtpFolderInfo",
+        "sdk_version": "V2.00.00"
+    }
+}

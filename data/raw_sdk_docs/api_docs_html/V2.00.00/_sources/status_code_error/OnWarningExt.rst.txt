@@ -1,0 +1,488 @@
+.. _on-warning-ext:
+
+OnWarningExt event
+==================
+
+**Definition**
+  void OnWarningExt(CrInt32u warning, CrInt32 param1, CrInt32 param2, CrInt32 param3);
+
+.. 0xC223
+.. _SDIE_AFStatus:
+
+SDIE_AFStatus
+-------------
+  Notify the AF status.
+
+**warning code**
+  CrWarningExt_AFStatus
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Status
+      * - CrWarningExt_AFStatusParam_Unlocked
+      * - CrWarningExt_AFStatusParam_Focused_AF_S
+      * - CrWarningExt_AFStatusParam_NotFocused_AF_S
+      * - CrWarningExt_AFStatusParam_TrackingSubject_AF_C
+      * - CrWarningExt_AFStatusParam_Focused_AF_C
+      * - CrWarningExt_AFStatusParam_NotFocused_AF_C
+      * - CrWarningExt_AFStatusParam_Unpause
+      * - CrWarningExt_AFStatusParam_Pause
+
+.. 0xC222
+.. _SDIE_OperationResults:
+
+SDIE_OperationResults
+---------------------
+  Notify the operation results.
+
+**warning code**
+  CrWarningExt_OperationResults
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - SDK API
+      * - CrSdkApi_Unknown
+      * - CrSdkApi_Invalid
+      * - CrSdkApi_SetDeviceProperty
+      * - CrSdkApi_SendCommand
+
+**param2**
+
+  | If param1=CrSdkApi_SetDeviceProperty, param2= :ref:`CrDeviceProperty_xx<device-property>`.
+  | If param1=CrSdkApi_SendCommand, param2= :ref:`CrCommandId_xx<command>`.
+
+**param3**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Result
+      * - CrWarningExt_OperationResultsParam_Invalid
+      * - CrWarningExt_OperationResultsParam_OK \*1
+      * - CrWarningExt_OperationResultsParam_NG
+      * - CrWarningExt_OperationResultsParam_InvalidParameterError
+      * - CrWarningExt_OperationResultsParam_CameraStatusError
+      * - CrWarningExt_OperationResultsParam_ExecuteCanceled
+      * - CrWarningExt_OperationResultsParam_CharacterSizeError
+      * - CrWarningExt_OperationResultsParam_LowBrightnessError
+      * - CrWarningExt_OperationResultsParam_TimeLimitExceededError
+      * - CrWarningExt_OperationResultsParam_HighBrightnessError
+      * - CrWarningExt_OperationResultsParam_ColorTempHighError
+      * - CrWarningExt_OperationResultsParam_ColorTempLowError
+      * - CrWarningExt_OperationResultsParam_TintOutOfRangeError
+      * - CrWarningExt_OperationResultsParam_PoorWhiteAreaError
+
+  | \*1 OK events are not notified for the following Operations.
+  |    When OK (NG was not notified), check the result of the operation with the respective CrDeviceProperty.
+
+  * | CrDeviceProperty_NearFar
+    | If you want to check "Focus Driving Completed", use CrDeviceProperty_FocusPositionSetting and CrWarning_FocusPosition_Result_OK.
+
+  * CrDeviceProperty_Zoom_Operation
+
+  * CrDeviceProperty_RemoteTouchOperation
+
+  * CrCommandId_APS_C_or_Full_Switching
+
+  * CrCommandId_FlickerScan
+
+.. 0xC239
+.. _SDIE_PresetPTZFEvent:
+
+SDIE_PresetPTZFEvent
+--------------------
+  | Notify the PresetPTZF Event.
+  | see :ref:`Create/Clear PTZF Preset<op-create-clear-ptzf-preset>`
+
+**warning code**
+  CrWarningExt_PresetPTZFEvent
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Event Type
+      * - CrWarningExtParam_PresetPTZFEvent_Invalid
+      * - CrWarningExtParam_PresetPTZFEvent_DriveCompleted
+      * - CrWarningExtParam_PresetPTZFEvent_DriveInterrupted
+      * - CrWarningExtParam_PresetPTZFEvent_DriveError
+
+.. 0xC238,0x9245
+.. _cb-control-ptzf:
+
+:ref:`ControlPTZF<api-header-control-ptzf>` callback
+----------------------------------------------------
+
+  see :ref:`Control Pan/Tilt<op-control-pan-tilt>`
+
+**warning code**
+  CrWarningExt_ControlPTZFResult
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - CrError_None
+        - No error
+
+      * - other
+        - Error, see :ref:`Status code & Error<status-code-error>`
+
+**param2**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Result
+      * - CrWarningExtParam_ControlPTZFResult_Invalid
+      * - CrWarningExtParam_ControlPTZFResult_OK
+      * - CrWarningExtParam_ControlPTZFResult_NG
+      * - CrWarningExtParam_ControlPTZFResult_Canceled
+
+**param3**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Control Type
+      * - CrPTZFControlType_Absolute
+      * - CrPTZFControlType_Relative
+      * - CrPTZFControlType_Direction
+      * - CrPTZFControlType_HomePosition
+      * - CrPTZFControlType_Reset
+      * - CrPTZFControlType_Cancel
+
+.. 0xC240,0x9250
+.. _cb-delete-remote-transfer-contents-file:
+
+:ref:`DeleteRemoteTransferContentsFile<api-delete-remote-transfer-contents-file>` callback
+------------------------------------------------------------------------------------------
+
+**warning code**
+  CrWarningExt_DeleteContent
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Result
+      * - CrWarningExtParam_DeleteContentResult_Invalid
+      * - CrWarningExtParam_DeleteContentResult_OK
+      * - CrWarningExtParam_DeleteContentResult_StatusError
+      * - CrWarningExtParam_DeleteContentResult_DeviceBusy
+      * - CrWarningExtParam_DeleteContentResult_ContentProtected
+      * - CrWarningExtParam_DeleteContentResult_ContentNotExist
+
+**param2**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - contentsId
+        - Contents ID
+
+**param3**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+      
+      * - slotNumber
+        - Slot Number
+
+.. 0x921D
+.. _cb-downloadscenefile:
+
+:ref:`DownloadSceneFile<api-downloadscenefile>` callback
+--------------------------------------------------------
+
+  When succeeded, OnCompleteDonwload() is called.
+
+**warning code**
+  CrWarningExt_DownloadSceneFile
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - warning code
+      * - CrWarningExtParam_DownloadSceneFileResult_Invalid
+      * - CrWarningExtParam_DownloadSceneFileResult_DeviceBusy
+      * - CrWarningExtParam_DownloadSceneFileResult_NG
+
+.. 0x922A
+.. _cb-Eframing:
+
+:ref:`ExecuteEframing<api-ExecuteEframing>`, :ref:`UpdateEframingArea<api-UpdateEframingArea>` callback
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**warning code**
+  CrWarningExt_ExecuteEframing
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - CrError_None
+        - No error
+
+      * - other
+        - Error, see :ref:`Status code & Error<status-code-error>`
+
+.. 0x9246
+.. _cb-preset-ptzf-clear:
+
+:ref:`PresetPTZFClear<api-header-preset-ptzf-clear>` callback
+-------------------------------------------------------------
+
+  see :ref:`Create/Clear PTZF Preset<op-create-clear-ptzf-preset>`
+
+**warning code**
+  CrWarningExt_PresetPTZFClear
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - CrError_None
+        - No error
+
+      * - other
+        - Error, see :ref:`Status code & Error<status-code-error>`
+
+.. 0x9246
+.. _cb-preset-ptzf-set:
+
+:ref:`PresetPTZFSet<api-header-preset-ptzf-set>` callback
+---------------------------------------------------------
+
+  see :ref:`Create/Clear PTZF Preset<op-create-clear-ptzf-preset>`
+
+**warning code**
+  CrWarningExt_PresetPTZFSet
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - CrError_None
+        - No error
+
+      * - other
+        - Error, see :ref:`Status code & Error<status-code-error>`
+
+.. 0x9241
+.. _cb-request-stream-setting-list:
+
+:ref:`RequestStreamSettingList<api-request-stream-setting-list>` callback
+-------------------------------------------------------------------------
+
+**warning code**
+  CrWarningExt_RequestStreamSettingList
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - CrError_None
+        - No error
+
+      * - other
+        - Error, see :ref:`Status code & Error<status-code-error>`
+
+.. 0x9248
+.. _cb-request-timezone-setting:
+
+:ref:`RequestTimeZoneSetting<api-header-request-timezone-setting>` callback
+---------------------------------------------------------------------------
+
+  see :ref:`Set/Get the TimeZone Setting<op-timezone-setting>`
+
+**warning code**
+  CrWarningExt_RequestTimeZoneSetting
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - CrError_None
+        - No error
+
+      * - other
+        - Error, see :ref:`Status code & Error<status-code-error>`
+
+.. 0x9207
+.. _cb-send-command:
+
+:ref:`SendCommand<api-send-command>` error callback
+---------------------------------------------------
+
+  see :ref:`Send a Control Command<op-send-a-control-command>`
+
+**warning code**
+  CrWarningExt_OperationInvalid
+
+**param1,param2,param3**
+  See :ref:`SDIE_OperationResults<SDIE_OperationResults>`
+
+.. 0x9242
+.. _cb-set-stream-setting-list:
+
+:ref:`SetStreamSettingList<api-set-stream-setting-list>` callback
+-----------------------------------------------------------------
+
+**warning code**
+  CrWarningExt_SetStreamSettingList
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - CrError_None
+        - No error
+
+      * - other
+        - Error, see :ref:`Status code & Error<status-code-error>`
+
+**param2**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Result
+      * - CrWarningExtParam_SetStreamSetting_OK
+      * - CrWarningExtParam_SetStreamSetting_NG
+      * - CrWarningExtParam_SetStreamSetting_InvalidURL
+      * - CrWarningExtParam_SetStreamSetting_InvalidPort
+      * - CrWarningExtParam_SetStreamSetting_InvalidKey
+      * - CrWarningExtParam_SetStreamSetting_InvalidLatency
+      * - CrWarningExtParam_SetStreamSetting_InvalidTTL
+      * - CrWarningExtParam_SetStreamSetting_InvalidCipherType
+      * - CrWarningExtParam_SetStreamSetting_InvalidCipherKey
+      * - CrWarningExtParam_SetStreamSetting_InvalidMode
+
+.. 0x9249
+.. _cb-set-timezone-setting:
+
+:ref:`SetTimeZoneSetting<api-header-set-timezone-setting>` callback
+-------------------------------------------------------------------
+
+  see :ref:`Set/Get the TimeZone Setting<op-timezone-setting>`
+
+**warning code**
+  CrWarningExt_SetTimeZoneSetting
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Responce code
+        - Explanation
+
+      * - CrError_None
+        - No error
+
+      * - other
+        - Error, see :ref:`Status code & Error<status-code-error>`
+
+.. 0xC214,0x921B
+.. _cb-upload-custom-grid-line-file:
+
+:ref:`UploadGridLineFile<api-UploadCustomGridLineFile>` callback
+--------------------------------------------------------------------
+
+**warning code**
+  CrWarningExt_UploadCustomGridLineFile
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Result&Response
+      * - CrWarningExtParam_UploadCustomGridLineFile_Invalid
+      * - CrWarningExtParam_UploadCustomGridLineFile_OK
+      * - CrWarningExtParam_UploadCustomGridLineFile_StatusError
+      * - CrWarningExtParam_UploadCustomGridLineFile_InvalidFileName
+      * - CrWarningExtParam_UploadCustomGridLineFile_MediaError
+      * - CrWarningExtParam_UploadCustomGridLineFile_ReadError
+      * - CrWarningExtParam_UploadCustomGridLineFile_OverFileSize
+      * - CrWarningExtParam_UploadCustomGridLineFile_OverImageSize
+      * - CrWarningExtParam_UploadCustomGridLineFile_DecodeError
+      * - CrWarningExtParam_UploadCustomGridLineFile_InvalidParameter
+      * - CrWarningExtParam_UploadCustomGridLineFile_File_CantOpen
+      * - CrWarningExtParam_UploadCustomGridLineFile_File_CantRead
+      * - CrWarningExtParam_UploadCustomGridLineFile_DeviceBusy
+      * - CrWarningExtParam_UploadCustomGridLineFile_FeatureVersionInvalidValue
+      * - CrWarningExtParam_UploadCustomGridLineFile_TemporaryStorageFull
+      * - CrWarningExtParam_UploadCustomGridLineFile_CameraStatusError
+
+.. 0xC214,0x921B
+.. _cb-UploadSceneFile:
+
+:ref:`UploadSceneFile<api-UploadSceneFile>` callback
+----------------------------------------------------
+
+**warning code**
+  CrWarningExt_UploadSceneFile
+
+**param1**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Result&Response
+      * - CrWarningExtParam_UploadSceneFileResult_Invalid
+      * - CrWarningExtParam_UploadSceneFileResult_OK
+      * - CrWarningExtParam_UploadSceneFileResult_NG
+      * - CrWarningExtParam_UploadSceneFileResult_InvalidFileName
+      * - CrWarningExtParam_UploadSceneFileResult_DeviceBusy
+      * - CrWarningExtParam_UploadSceneFileResult_SomeIsCorrupted
+      * - CrWarningExtParam_UploadSceneFileResult_InvalidParameter
+      * - CrWarningExtParam_UploadSceneFileResult_FeatureVersionInvalidValue
+      * - CrWarningExtParam_UploadSceneFileResult_TemporaryStorageFull
+      * - CrWarningExtParam_UploadSceneFileResult_File_CantOpen
+      * - CrWarningExtParam_UploadSceneFileResult_File_CantRead

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrFocusFrameInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a2e6a16b03a9127df5ae134281d6497f6" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aa77cd0cdde09d74ea9b6354754242762" kindref="member">CrFocusFrameType</ref></type>
+        <definition>CrFocusFrameType SCRSDK::CrFocusFrameInfo::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5792" column="22" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5792" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a81a28e5cac5876784acf53e3b9622a7a" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a0bd12ab3d71bdd09270743116f4b90f5" kindref="member">CrFocusFrameState</ref></type>
+        <definition>CrFocusFrameState SCRSDK::CrFocusFrameInfo::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5793" column="23" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5793" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1ab91237bfabb5e6146a8b6920295bc4a4" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrFocusFrameInfo::priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::priority</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5794" column="13" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5794" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a9f6c5c15f292a8d72a7bdd9c3f7b8dcf" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrFocusFrameInfo::xNumerator</definition>
+        <argsstring></argsstring>
+        <name>xNumerator</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::xNumerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5795" column="14" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5795" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1ab79495ab1d990f96dafbdde431a1e1a4" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrFocusFrameInfo::xDenominator</definition>
+        <argsstring></argsstring>
+        <name>xDenominator</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::xDenominator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5796" column="14" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5796" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1aebc51bc1a2fdb261420b897c6ba71fd9" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrFocusFrameInfo::yNumerator</definition>
+        <argsstring></argsstring>
+        <name>yNumerator</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::yNumerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5797" column="14" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5797" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a7623e76bbf1d02ee5e0b2df21a0cc8ec" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrFocusFrameInfo::yDenominator</definition>
+        <argsstring></argsstring>
+        <name>yDenominator</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::yDenominator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5798" column="14" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5798" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a491e50c95493456eb8d7b0b8e3a451ac" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrFocusFrameInfo::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5799" column="14" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5799" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a8ed0a0be2428d27defc0cccea2ee6e93" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrFocusFrameInfo::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5800" column="14" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5800" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a004facd41fdeab39b275234d0501e4f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFocusFrameInfo::CrFocusFrameInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrFocusFrameInfo</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::CrFocusFrameInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5777" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5777" bodyend="5787"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1ac81696585e69bf84d7bac0968fe18feb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFocusFrameInfo::~CrFocusFrameInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrFocusFrameInfo</name>
+        <qualifiedname>SCRSDK::CrFocusFrameInfo::~CrFocusFrameInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5788" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5788" bodyend="5789"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5774" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5775" bodyend="5801"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a004facd41fdeab39b275234d0501e4f7" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>CrFocusFrameInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a8ed0a0be2428d27defc0cccea2ee6e93" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>height</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1ab91237bfabb5e6146a8b6920295bc4a4" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>priority</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a81a28e5cac5876784acf53e3b9622a7a" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>state</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a2e6a16b03a9127df5ae134281d6497f6" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>type</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a491e50c95493456eb8d7b0b8e3a451ac" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>width</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1ab79495ab1d990f96dafbdde431a1e1a4" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>xDenominator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a9f6c5c15f292a8d72a7bdd9c3f7b8dcf" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>xNumerator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1a7623e76bbf1d02ee5e0b2df21a0cc8ec" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>yDenominator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1aebc51bc1a2fdb261420b897c6ba71fd9" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>yNumerator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_focus_frame_info_1ac81696585e69bf84d7bac0968fe18feb" prot="public" virt="non-virtual"><scope>SCRSDK::CrFocusFrameInfo</scope><name>~CrFocusFrameInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

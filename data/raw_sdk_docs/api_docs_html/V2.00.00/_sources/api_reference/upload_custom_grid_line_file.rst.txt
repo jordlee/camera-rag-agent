@@ -1,0 +1,72 @@
+.. _api-header-upload-custom-grid-line-file:
+
+Upload Custom Grid Line File
+=============================
+
+.. _api-UploadCustomGridLineFile:
+
+UploadCustomGridLineFile
+-------------------------
+
+**Overview**
+  Upload file by split to camera.
+
+  Link CustomGridLineFile Index to file name.
+
+**Definition**
+
+  `CrError UploadCustomGridLineFile(CrDeviceHandle deviceHandle, CrGridLineType gridLineType, CrChar* filePath, CrChar* displayName = 0);`
+
+**Input Parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+  
+  * - CrDeviceHandle
+    - | deviceHandle
+      | The handle of the connected camera is returned in the variable. This must be set 0 before calling Connect().
+  * - CrGridLineType
+    - | gridLineType
+      | The index value of CrGridLineType.
+      | Defined in CrDeviceProperty.h as CrGridLineType
+  * - CrChar*
+    - | filePath
+      | Path of the file to be uploaded.
+      | the max file size for uploading file is 1MB.
+      | the max file size for linking CustomGridLineFile Index to file name is 256KB.
+  * - CrChar*
+    - | displayName
+      | This parameter is optional. The extension is fixed to "png".
+      | fileName linked to CustomGridLineFile Index.
+      | If this parameter is not specified, the file will be linked with the file name to be uploaded.
+      | the max character string length including the null-terminate for camera is 64.
+      | the max character string length including the null-terminate for PTP is 256.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - | :ref:`IDeviceCallback::OnWarningExt<callback-interface>`
+
+**Special note (details)**
+
+  | \*A license is required to use this function. Without a license, this function is not available.
+  | The sales policy for this license varies by region.
+  | Details: https://helpguide.sony.net/di/gridline_2420/v1/h_zz/index.html

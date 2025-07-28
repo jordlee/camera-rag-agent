@@ -1,0 +1,25 @@
+﻿.. _dp-TeleWideLeverValueCapability:
+
+CrDeviceProperty_TeleWideLeverValueCapability
+=============================================
+
+Get the tele/wide lever value capability.
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Valiable
+    - min
+
+  * - Valiable
+    - max
+
+  * - Valiable
+    - step
+

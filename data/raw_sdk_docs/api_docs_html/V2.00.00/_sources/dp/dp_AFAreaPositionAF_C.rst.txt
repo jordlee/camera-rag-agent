@@ -1,0 +1,29 @@
+﻿.. _dp-AFAreaPositionAF_C:
+
+CrDeviceProperty_AFAreaPositionAF_C
+===================================
+
+Get/Set the AF area position (x,y) for AF-C.
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x00000000
+    - min
+
+  * - 0xFFFFFFFF
+    - max
+
+  * - 1
+    - step
+
+| Upper two bytes: The x coordinate.
+| Lower two bytes: The y coordinate.
+|  e.g.) (x, y) = (150, 100) : 0x00960064
+

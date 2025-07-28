@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SelectFTPServerID.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SelectFTPServerID:\n\nCrDeviceProperty_SelectFTPServerID\n==================================\n\nGet/Set the Select FTP ServerID. Only for ILME-FX6/MPC-2610/ PXW-Z200/ HXR-NX800\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSelectFTPServerID_Nothing\n    - | Nothing to display.\n\n  * - Other than above values\n    - | The real value of Server ID(1~)",
+    "metadata": {
+        "title": "dp_SelectFTPServerID",
+        "sdk_version": "V2.00.00"
+    }
+}

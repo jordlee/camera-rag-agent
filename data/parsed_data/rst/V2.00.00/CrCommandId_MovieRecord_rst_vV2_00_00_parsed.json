@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/command/CrCommandId_MovieRecord.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _command-MovieRecord:\n\nCrCommandId_MovieRecord\n=============================================\n\nControl movie recording (S/S) button.\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCommandParam_Up\n    - | Specify “Up” when stop movie recording\n\n  * - CrCommandParam_Down \n    - | Specify “Down” when you start movie recording\n\n\n| Note:\n| After starting movie recording, please check the movie recording status with :ref:`CrDeviceProperty_RecordingState<dp-RecordingState>`.\n| Caution:\n| The below models can be start or stop with the “Down”, but please execute “Up” after “Down” at once.\n| ILCE-1, ILCE-9M2, ILCE-7RM4A, ILCE-7RM4, ILCE-7SM3, ILCE-7C and DSC-RX0M2.",
+    "metadata": {
+        "title": "CrCommandId_MovieRecord",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Remocon_Zoom_Speed_Type.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-Remocon_Zoom_Speed_Type:\n\nCrDeviceProperty_Remocon_Zoom_Speed_Type\n========================================\n\nGet/Set the Remocon Zoom Speed Type.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRemoconZoomSpeedType_Invalid\n    - | Invalid\n\n  * - CrRemoconZoomSpeedType_Variable\n    - | Variable\n\n  * - CrRemoconZoomSpeedType_Fixed\n    - | Fixed\n\n| Related to :ref:`CrDeviceProperty_Zoom_Operation<dp-Zoom_Operation>` and :ref:`CrDeviceProperty_Zoom_Speed_Range<dp-Zoom_Speed_Range>`.",
+    "metadata": {
+        "title": "dp_Remocon_Zoom_Speed_Type",
+        "sdk_version": "V2.00.00"
+    }
+}

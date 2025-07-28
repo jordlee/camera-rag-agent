@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PlaybackContentsNumber.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PlaybackContentsNumber:\n\nCrDeviceProperty_PlaybackContentsNumber\n=======================================\n\nGet the playback contents number.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - 1\n    - step\n\n| Unit is the clip number. \n| This value expressed in hexadecimal.",
+    "metadata": {
+        "title": "dp_PlaybackContentsNumber",
+        "sdk_version": "V2.00.00"
+    }
+}

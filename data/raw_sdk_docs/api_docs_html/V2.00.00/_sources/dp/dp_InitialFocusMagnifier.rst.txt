@@ -1,0 +1,20 @@
+﻿.. _dp-InitialFocusMagnifier:
+
+CrDeviceProperty_InitialFocusMagnifier
+======================================
+
+Get/Set the Initial Focus Magnifier(Still)
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Variable
+    - | 10 times value of the Ratio
+      |  e.g.) 0x000A = 10 (x1.0)
+

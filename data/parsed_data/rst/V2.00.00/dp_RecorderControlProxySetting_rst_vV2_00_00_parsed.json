@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecorderControlProxySetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RecorderControlProxySetting:\n\nCrDeviceProperty_RecorderControlProxySetting\n============================================\n\nGet/Set the Recorder Control Proxy Setting\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRecorderControlSetting_RecDisable\n    - | Rec Disable\n\n  * - CrRecorderControlSetting_RecEnable\n    - | Rec Enable\n\n| Indicates on/off status of the record function.",
+    "metadata": {
+        "title": "dp_RecorderControlProxySetting",
+        "sdk_version": "V2.00.00"
+    }
+}

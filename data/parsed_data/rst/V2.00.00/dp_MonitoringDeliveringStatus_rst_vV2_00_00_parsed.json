@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitoringDeliveringStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MonitoringDeliveringStatus:\n\nCrDeviceProperty_MonitoringDeliveringStatus\n===========================================\n\nGet the Monitoring Delivering Status\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMonitoringDeliveringStatus_RTSP\n    - | SDK does not support\n\n  * - CrMonitoringDeliveringStatus_VenderProtocol\n    - | Vender protocol\n\n  * - CrMonitoringDeliveringStatus_None\n    - | -",
+    "metadata": {
+        "title": "dp_MonitoringDeliveringStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

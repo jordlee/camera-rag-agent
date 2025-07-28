@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SQFrameRate.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SQFrameRate:\n\nCrDeviceProperty_SQFrameRate\n============================\n\nGet/Set the S&Q Frame Rate\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSQFrameRate_Invalid\n    - | Invalid\n\n  * - Other than above values\n    - | The range of frame rate is 1fps ~ 60fps, and 100fps / 120fps / 150fps / 180fps / 200fps / 240fps.\n\n| The range of frame rate is 1 fps to 60 fps, and 100 fps / 120 fps / 150 fps / 180 fps / 200 fps / 240 fps.",
+    "metadata": {
+        "title": "dp_SQFrameRate",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PowerSource.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PowerSource:\n\nCrDeviceProperty_PowerSource\n============================\n\nGet/Set the Power Source\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPowerSource_DC\n    - | DC\n\n  * - CrPowerSource_Battery\n    - | Battery\n\n  * - CrPowerSource_PoE\n    - | PoE",
+    "metadata": {
+        "title": "dp_PowerSource",
+        "sdk_version": "V2.00.00"
+    }
+}

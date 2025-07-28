@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ImageStabilizationSteadyShot.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ImageStabilizationSteadyShot:\n\nCrDeviceProperty_ImageStabilizationSteadyShot\n=============================================\n\nGet/Set the Image Stabilization Steady Shot\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrImageStabilizationSteadyShot_Off\n    - | Off\n\n  * - CrImageStabilizationSteadyShot_On\n    - | On",
+    "metadata": {
+        "title": "dp_ImageStabilizationSteadyShot",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AudioStreamSamplingFrequency.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AudioStreamSamplingFrequency:\n\nCrDeviceProperty_AudioStreamSamplingFrequency\n=============================================\n\nGet/Set the streaming sampling frequency.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - value\n    - | sampling frequency\n\n| The sampling frequency can be calculated as follows\n| sampling frequency(Hz) = value /10",
+    "metadata": {
+        "title": "dp_AudioStreamSamplingFrequency",
+        "sdk_version": "V2.00.00"
+    }
+}

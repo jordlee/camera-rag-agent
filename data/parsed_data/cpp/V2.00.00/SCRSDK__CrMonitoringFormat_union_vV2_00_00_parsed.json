@@ -1,0 +1,41 @@
+{
+    "refid": "union_s_c_r_s_d_k_1_1_cr_monitoring_format",
+    "kind": "union",
+    "name": "SCRSDK::CrMonitoringFormat",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "union_s_c_r_s_d_k_1_1_cr_monitoring_format_1a1d407d20086bbe145b511b3cf666c645",
+            "kind": "variable",
+            "name": "value",
+            "visibility": "public-attrib",
+            "type": "CrInt64u",
+            "definition": "CrInt64u SCRSDK::CrMonitoringFormat::value",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "union_s_c_r_s_d_k_1_1_cr_monitoring_format_1a582ee1f5a85a65ecf1a52b474d2b4628",
+            "kind": "variable",
+            "name": "member",
+            "visibility": "public-attrib",
+            "type": "struct SCRSDK::CrMonitoringFormat",
+            "definition": "struct SCRSDK::CrMonitoringFormat SCRSDK::CrMonitoringFormat::member",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrMonitoringFormat",
+        "sdk_version": "V2.00.00"
+    }
+}

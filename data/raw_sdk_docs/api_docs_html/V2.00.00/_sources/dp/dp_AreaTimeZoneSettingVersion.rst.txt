@@ -1,0 +1,18 @@
+.. _dp-AreaTimeZoneSettingVersion:
+
+CrDeviceProperty_AreaTimeZoneSettingVersion
+===========================================
+
+Get the Area TimeZone Setting Version.
+
+  CrDataType: `CrDataType_UInt16Array`
+
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - Parameter Code
+        - Explanation
+
+      * - variable
+        - Version

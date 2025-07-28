@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MaximumNumberOfBytes.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MaximumNumberOfBytes:\n\nCrDeviceProperty_MaximumNumberOfBytes\n=====================================\n\nGet the maximum number of bytes for data payload on dat packet.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - Variable\n    - step\n\n| Include size of PTP packet data payload.",
+    "metadata": {
+        "title": "dp_MaximumNumberOfBytes",
+        "sdk_version": "V2.00.00"
+    }
+}

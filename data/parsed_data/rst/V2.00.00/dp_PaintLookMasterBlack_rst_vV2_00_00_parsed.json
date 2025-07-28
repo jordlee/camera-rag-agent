@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PaintLookMasterBlack.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PaintLookMasterBlack:\n\nCrDeviceProperty_PaintLookMasterBlack\n=====================================\n\nGet/Set the paint/look master black level.\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| min(Low) to max(High)\n| 10 times the real value of Master Black Level.",
+    "metadata": {
+        "title": "dp_PaintLookMasterBlack",
+        "sdk_version": "V2.00.00"
+    }
+}

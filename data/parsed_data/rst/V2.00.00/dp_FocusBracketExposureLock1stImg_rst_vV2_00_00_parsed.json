@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusBracketExposureLock1stImg.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FocusBracketExposureLock1stImg:\n\nCrDeviceProperty_FocusBracketExposureLock1stImg\n===============================================\n\nGet/Set the Focus Bracket Exposure Lock 1st Image \n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFocusBracketExposureLock1stImg_Off\n    - | Off\n\n  * - CrFocusBracketExposureLock1stImg_On\n    - | On",
+    "metadata": {
+        "title": "dp_FocusBracketExposureLock1stImg",
+        "sdk_version": "V2.00.00"
+    }
+}

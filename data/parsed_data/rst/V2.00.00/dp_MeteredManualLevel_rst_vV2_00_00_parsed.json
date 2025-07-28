@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MeteredManualLevel.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-MeteredManualLevel:\n\nCrDeviceProperty_MeteredManualLevel\n===================================\n\nGet the Metered Manual Level\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| This value is an integer value multiplying the metered manual value by 1000.",
+    "metadata": {
+        "title": "dp_MeteredManualLevel",
+        "sdk_version": "V2.00.00"
+    }
+}

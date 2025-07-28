@@ -1,0 +1,28 @@
+﻿.. _dp-FollowFocusPositionSetting:
+
+CrDeviceProperty_FollowFocusPositionSetting
+===========================================
+
+Get/Set the Follow Focus Position
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x0000
+    - min
+
+  * - 0xFFFF
+    - max
+
+  * - 0x0001
+    - step
+
+| The Focus Position can be changed within this range. This CurrentValue will be the requested value. Check the actual Focus Position with :ref:`CrDeviceProperty_FollowFocusPositionCurrentValue<dp-FollowFocusPositionCurrentValue>`.
+| Refer to “Follow Focus Position Current Value” for the CurrentValue. 
+

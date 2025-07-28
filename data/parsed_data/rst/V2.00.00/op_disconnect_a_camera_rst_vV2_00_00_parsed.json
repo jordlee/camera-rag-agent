@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_disconnect_a_camera.rst.txt",
+    "file_type": "rst",
+    "content": ".. _op-disconnect-a-camera:\n\nDisconnect a Camera \n===================\n\nCall the Disconnect() function to disconnect the camera. The function needs one parameter for the DeviceHandle to disconnect.\n\nExample:\n\n.. code-block:: cpp\n\n    void Disconnect(CrDeviceHandle handle) {\n    \tSCRSDK::Disconnect(handle);\n\nIf the handle is not valid, Disconnect() returns an error. \n\nDisconnect() is also an asynchronous process. The return from Disconnect() does not mean that the camera has been disconnected. At the time of the OnDisconnected() callback function is called, the camera has been disconnected from the Camera Remote SDK.\n\nSee the table on the next page for the connection status of the camera and Camera Remote SDK.",
+    "metadata": {
+        "title": "op_disconnect_a_camera",
+        "sdk_version": "V2.00.00"
+    }
+}

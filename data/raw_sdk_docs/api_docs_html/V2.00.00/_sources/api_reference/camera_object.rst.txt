@@ -1,0 +1,389 @@
+.. _api-header-camera-objects:
+
+CameraObject
+============
+
+.. _api-enum-camera-objects:
+
+EnumCameraObjects
+-----------------
+
+**Overview**
+    The API generates a list of “connectable” cameras. Even if a Sony camera is visible to the PC, if the camera doesn’t have PC remote control feature or if the camera doesn’t have compatibility with this version of Camera Remote SDK, the camera is not listed. Please refer the target model list of this Camera Remote SDK.
+
+**Definition**
+
+    `CrError EnumCameraObjects(ICrEnumCameraObjectInfo** ppEnumCameraObjectInfo, CrInt8u timeInSec = 3);`
+
+**Input Parameters**
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Type
+      - Explanation
+
+    * - CrInt8u
+      - | timeInSec
+        | This parameter is not supported with the current Camera Remote SDK. 
+
+**Output parameters**
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Type
+      - Explanation
+
+    * - ICrEnumCameraObjectInfo\*\*
+      - | ppEnumCameraObjectInfo
+        | This is an input/output parameter.
+        | When this API returns, ppEnumCameraObjectInfo points an enumerator object to enumerate the connected cameras. If this pointer is null, no suitable camera devices were found.
+        |
+        | When the function returns successfully, the new object will be allocated within the function by the SDK. And because this pointer is overwritten in the SDK, calling EnumCameraObjects with unreleased memory object of this parameter will cause of leaking memory.
+
+**Return values**
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Type
+      - Explanation
+
+    * - CrError
+      - | CrError_None on Success
+        | CrError_Init if the SDK is uninitialized
+        | CrError_Adaptor_HandlePlugin if any plugin modules are not found
+        | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+    - :ref:`Connect<api-connect>`
+    - :ref:`ICrEnumCameraObjectInfo::Release<i-cr-enum-camera-object-info>`
+
+**Special note (details)**
+
+    This is a factory function. Release the list by calling :ref:`ICrEnumCameraObjectInfo::Release<i-cr-enum-camera-object-info>` interface function.
+    Enumerates all supported devices which are currently connected to the PC.
+    If no supported devices are found, ppEnumCameraObjectInfo remains nullptr. 
+    If supported devices are discovered, ppEnumCameraObjectInfo points to the enumerator object. Their related information can be accessed through the :ref:`ICrEnumCameraObjectInfo<i-cr-enum-camera-object-info>` interface.
+    The information obtained through this API is required by the SDK Connect API. 
+
+.. _api-create-camera-object-info:
+
+CreateCameraObjectInfo
+----------------------
+
+**Overview**
+
+  ICrCameraObjectInfo is an interface to detect a connectable camera that is connected to the PC. It can be retrieved by ICrEnumCameraObjectInfo using GetCameraObjectInfo(), but can be created by calling CreateCameraObjectInfo(). This ICrCameraObjectInfo interface is used when the program connects a camera.
+
+**Definition**
+
+  `ICrCameraObjectInfo* CreateCameraObjectInfo(CrChar* name, CrChar* model, CrInt16 usbPid, CrInt32u idType, CrInt32u idSize, CrInt8u* id, CrChar* connectTypeName, CrChar* adaptorName, CrChar* pairingNecessity,  CrInt32u sshSupport = 0);`
+
+**Input parameters**
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Type
+      - Explanation
+
+    * - CrChar*
+      - | name
+        | Not available.
+    * - CrChar*
+      - |	model
+        | Null-terminated device model name string
+    * - CrInt16
+      - | usbPid
+        | Pid for usb devices
+    * - CrInt32u
+      - | idType
+        | For PTP_USB, this is CAMERAOBJECTID_TYPE_USB.
+    * - CrInt32u
+      - | idSize
+        | Size in bytes of the id buffer
+    * - CrInt8u*
+      - | id
+        | A buffer containing device information
+    * - CrChar*
+      - | connectTypeName
+        | A char pointer which points to the null-terminated string of the connection type name of the camera.
+        | For PTP_USB, the string is "USB";
+    * - CrChar*
+      - | adaptorName
+        | A char pointer which points to the null-terminated string of the adapter name of the camera.
+        | For PTP_USB, the string is "Cr_PTP_USB";
+    * - CrChar*
+      - | pairingNecessity
+        | Call with NULL, because this parameter is not used.
+    * - CrInt32u
+      - | sshSupport
+        | This parameter is optional.
+        | For SSH authentication models, set CrSSHsupport_ON.
+
+All input parameter values are obtained from the EnumCameraObjects API. The user must decide how to preserve these values for use by the Connect API.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - ICrCameraObjectInfo*
+    - | A pointer which points to a newly allocated ICrCameraObjectInfo interface object. The allocation is performed internally by the SDK.
+      | An object of this type is required when calling the Connect API.
+
+**Related API**
+  - :ref:`Connect<api-connect>`
+  - :ref:`EnumCameraObjects<api-enum-camera-objects>`
+  - :ref:`ICrCameraObjectInfo::Release<i-cr-enum-camera-object-info>`
+
+**Special note (details)**
+  The pCameraObjectInfo generated by this API does not match the pCameraObjectInfo of the actual camera returned by executing EnumCameraObjects().
+
+  It is not considered to use the pCameraObjectInfo returned by EnumCameraObjects() and the pCameraObjectInfo generated by this API at the same time, and the operation in that case is not guaranteed.
+
+.. _api-create-camera-object-info-usb-connection:
+
+CreateCameraObjectInfoUSBConnection
+-----------------------------------
+
+**Overview**
+  CreateCameraObjectInfoUSBConnection() is an API that creates a “Camera Object” for USB connection camera with the information specified by the user.
+
+  The purpose of this API is to create the “Camera Object” required for Connect() without using the EnumCameraObjects() when the target camera has already been determined.
+
+  The “Camera Object” obtained as a result of the EnumCameraObjects() and the “Camera Object” obtained by using this API does not exactly match, but there is no problem in operating the target camera.
+
+**Definition**
+  `CrError CreateCameraObjectInfoUSBConnection(ICrCameraObjectInfo** pCameraObjectInfo, CrCameraDeviceModelList model, CrInt8u* usbSerialNumber);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrCameraDeviceModelList
+    - | model
+      | Model of the Camera. Use the CrCameraDeviceModelList defined in CrDefines.h.
+  * - CrInt8u*
+    - | usbSerialNumber 
+      | Serial number for usb devices.
+      | 12byte + Null-terminated
+      | refs. :ref:`To check the USB serial number<op-create-camera-object-with-information-known-in-advance>`
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - ICrCameraObjectInfo**
+    - | pCameraObjectInfo
+      | A pointer to the :ref:`ICrCameraObjectInfo<i-cr-camera-object-info>`. Specify the address of a modifiable ICrCameraObjectInfo pointer.
+      | Caution:
+      | pCameraObjectInfo created with information different from the camera you actually want to operate is not guaranteed to be used.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_Api_OutOfModelList CrCameraDeviceModelList  If the value does not exist in the model
+      | CrError_Api_NotSupportModelOfUSB USB  For unsupported model
+      | CrError_Api_InvalidSerialNumber  If usbSerialNumber is null
+
+**Related API**
+  - :ref:`Connect<api-connect>`
+  - :ref:`EnumCameraObjects<api-enum-camera-objects>`
+  - :ref:`ICrCameraObjectInfo::Release<i-cr-camera-object-info>`
+
+**Special note (details)**
+  The pCameraObjectInfo generated by this API does not match the pCameraObjectInfo of the actual camera returned by executing EnumCameraObjects().
+
+  It is not considered to use the pCameraObjectInfo returned by EnumCameraObjects() and the pCameraObjectInfo generated by this API at the same time, and the operation in that case is not guaranteed.
+
+.. _api-create-camera-object-info-ether-connection:
+
+CreateCameraObjectInfoEthernetConnection
+----------------------------------------
+
+**Overview**
+  CreateCameraObjectInfoEthernetConnection() is an API that creates a “Camera Object” for Ethernet connection camera with the information specified by the user.
+
+  The purpose of this API is to create the “Camera Object” required for Connect() without using the EnumCameraObjects() when the target camera has already been determined.
+
+  The “Camera Object” obtained as a result of the EnumCameraObjects() and the “Camera Object” obtained by using this API does not exactly match, but there is no problem in operating the target camera.
+
+**Definition**
+  `CrError CreateCameraObjectInfoEthernetConnection(ICrCameraObjectInfo** pCameraObjectInfo, CrCameraDeviceModelList model, CrInt32u ipAddress, CrInt8u* macAddress, CrInt32u sshSupport = 0);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrCameraDeviceModelList
+    - | model
+      | Model of the Camera. Use the CrCameraDeviceModelList defined in CrDefines.h.
+  * - CrInt32u
+    - | ipAddress
+      | IP address of the camera
+      |    Ex.) 192.168.0.5 = 0x0500A8C0
+      | To convert a dot-separated string notation to a 32-bit value
+      | Please set the 1st <-> 7~0bit, the 2nd <-> 15~8bit, the 3rd <-> 23~16bit, and the 4th <-> 31~24bit.
+  * - CrInt8u*
+    - | macAddress 
+      | MAC address of the camera. 6byte fixed.
+      | This value is used to identify the “Camera Object”. It is not always necessary to specify the MAC address of the camera body. If you create multiple “Camera Object”, it is recommended to specify different 6-byte data for each.
+  * - CrInt32u
+    - | sshSupport
+      | This parameter is optional. For SSH authentication models, set CrSSHsupport_ON.
+      | Caution:
+      | Default is CrSSHsupport_OFF. If this parameter is omitted for a camera that requires SSH authentication, connect will fail.
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - ICrCameraObjectInfo**
+    - | pCameraObjectInfo
+      | A pointer to the :ref:`ICrCameraObjectInfo<i-cr-camera-object-info>`. Specify the address of a modifiable ICrCameraObjectInfo pointer.
+      |
+      | Notice:
+      | pCameraObjectInfo created with information different from the camera you actually want to operate is not guaranteed to be used.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_Api_OutOfModelList CrCameraDeviceModelList  If the value does not exist in the model
+      | CrError_Api_NotSupportModelOfEthernet   For unsupported model
+      | CrError_Api_InvalidIpAddress  If the IP address is judged to be inappropriate
+      | CrError_Api_InvalidMacAddress  If the MAC address is judged to be inappropriate
+
+**Related API**
+  - :ref:`Connect<api-connect>`
+  - :ref:`EnumCameraObjects<api-enum-camera-objects>`
+  - :ref:`ICrCameraObjectInfo::Release<i-cr-camera-object-info>`
+
+**Special note (details)**
+  The pCameraObjectInfo generated by this API does not match the pCameraObjectInfo of the actual camera returned by executing EnumCameraObjects().
+
+  It is not considered to use the pCameraObjectInfo returned by EnumCameraObjects() and the pCameraObjectInfo generated by this API at the same time, and the operation in that case is not guaranteed.
+
+.. _api-get-finger-print:
+
+GetFingerprint
+--------------
+
+**Overview**
+
+  This API gets a fingerprint data from a camera that requires an SSH authentication connection.
+
+  Getting and checking the fingerprint is the only way to avoid connecting to the wrong destination (SSH server other than camera). The user should compare the fingerprint acquired by this API with the fingerprint displayed on the camera body and judge whether it is correct or not. If they do not match, the Connect() will fail even if you proceed to the connection process.
+
+  Fingerprint data changes when the camera body is initialized or the fingerprint is regenerated on the camera body. Fingerprint data is required for Connect(), but it does not require GetFingerprint() every time before Connect(). Only when the fingerprint data does not change, the fingerprint data obtained by this API can be used as a parameter of Connect() many times.
+
+**Definition**
+  `CrError GetFingerprint(ICrCameraObjectInfo* pCameraObjectInfo, char* fingerprint, CrInt32u* fingerprintSize);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - ICrCameraObjectInfo*
+    - | pCameraObjectInfo
+      | he camera which is going to be connected. This parameter is return by ICrEnumCameraObjectInfo::GetCameraObjectInfo().
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - char*
+    - | fingerprint
+      |
+      | The fingerprint pointer. Developer prepares a larger buffer to receive fingerprint data, and passes the address of this pointer.
+      | When function returns successfully, this parameter will points to a Base64 encoded character.
+      | Note:
+      | Add the "=" for padding.
+      | Does not contain Null-terminations.
+  * - CrInt32u*
+    - | fingerprintSize
+      | A pointer to an integer which indicates the size of fingerprint data. Developers should pass the address of a modifiable CrInt32u variable. This function will write the size of the returned fingerprint data to the variable.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidParameter If the parameter is NULL
+      | CrError_Connect_SSH_NotSupported If SSH connection is not supported
+      | CrError_Connect_SSH_GetFingerprintFailed If for some reason the Fingerprint could not be obtained from the specified camera. The probable reason is that the IP address of the camera object created by CreateCameraObjectInfoEthernetConnection() is incorrect.
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`Connect<api-connect>`
+  - :ref:`EnumCameraObjects<api-enum-camera-objects>`
+  - :ref:`ICrCameraObjectInfo::Release<i-cr-enum-camera-object-info>`
+
+**Special note (details)**
+  None in particular

@@ -1,0 +1,25 @@
+﻿.. _dp-LiveViewDisplayEffect:
+
+CrDeviceProperty_LiveViewDisplayEffect
+======================================
+
+Get/Set the Live View Display Effect
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrLiveViewDisplayEffect_Unknown 
+    - | Unknown
+
+  * - CrLiveViewDisplayEffect_ON
+    - | Effect ON
+
+  * - CrLiveViewDisplayEffect_OFF
+    - | Effect OFF
+

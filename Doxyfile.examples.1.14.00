@@ -1,0 +1,50 @@
+
+    PROJECT_NAME = "SDK Examples Documentation v1.14.00" # Added sdk_version
+    PROJECT_BRIEF = "Parsed C++ SDK Examples for RAG v1.14.00" # Added sdk_version
+    OUTPUT_DIRECTORY = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/doxygen_examples_xml_output/v1.14.00"
+    GENERATE_XML = YES
+    GENERATE_HTML = NO
+    XML_OUTPUT = "xml"
+
+    # Input files and directories - now includes all identified .cpp and relevant .h files
+    INPUT = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/ConnectionInfo.cpp" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/ConnectionInfo.h" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/Text.cpp" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/Text.h" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/CrDebugString.cpp" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/CrDebugString.h" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/RemoteCli.cpp" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/CameraDevice.cpp" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/CameraDevice.h"
+    FILE_PATTERNS = *.cpp *.cc *.h
+    RECURSIVE = NO # We specify exact files, so no recursion needed for input
+
+    # Include paths for resolving types (crucial for finding included headers within files)
+    INCLUDE_PATH = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00" "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v1.14.00/CRSDK"
+
+    # Extraction settings to get as much detail as possible
+    EXTRACT_ALL = YES
+    EXTRACT_STATIC = YES
+    EXTRACT_PRIVATE = YES
+    EXTRACT_LOCAL_CLASSES = YES # Ensure local classes are extracted
+    EXTRACT_LOCAL_METHODS = YES # Ensure local methods are extracted
+    SHOW_INCLUDE_FILES = YES
+    INLINE_SIMPLE_STRUCTS = YES
+
+    # Preprocessing for macros and typedefs
+    ENABLE_PREPROCESSING = YES
+    MACRO_EXPANSION = YES
+    EXPAND_ONLY_PREDEF = NO
+    PREDEFINED = SCRSDK_API= TEXT(x)=x # Example: define common SDK macros
+
+    # Force parsing of all entities
+    ALPHABETICAL_INDEX = YES
+    CASE_SENSE_NAMES = NO
+
+    # Enable program listings in XML for code extraction
+    XML_PROGRAMLISTING = YES
+
+    # Suppress some warnings for cleaner output during generation
+    QUIET = NO
+    WARNINGS = YES
+    WARN_IF_UNDOCUMENTED = NO
+    WARN_NO_PARAMDOC = NO
+
+    INTERNAL_DOCS = YES
+    AUTOLINK_SUPPORT = YES
+
+    # Ensure Doxygen processes inherited members, crucial for callbacks
+    INHERIT_DOCS = YES
+    

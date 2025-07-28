@@ -1,0 +1,3154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespacecli" kind="namespace" language="C++">
+    <compoundname>cli</compoundname>
+    <innerclass refid="classcli_1_1_camera_device" prot="public">cli::CameraDevice</innerclass>
+    <innerclass refid="classcli_1_1_c_r_folder_infos" prot="public">cli::CRFolderInfos</innerclass>
+    <innerclass refid="structcli_1_1_property_value_entry" prot="public">cli::PropertyValueEntry</innerclass>
+    <innerclass refid="structcli_1_1_property_value_table" prot="public">cli::PropertyValueTable</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacecli_1a1c241c0157ffadbdbaaf7b45394a617c" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ConnectionType</name>
+        <qualifiedname>cli::ConnectionType</qualifiedname>
+        <enumvalue id="namespacecli_1a1c241c0157ffadbdbaaf7b45394a617ca696b031073e74bf2cb98e5ef201d4aa3" prot="public">
+          <name>UNKNOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecli_1a1c241c0157ffadbdbaaf7b45394a617ca25835188a2355e9530d3a10fcbe4c65b" prot="public">
+          <name>NETWORK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecli_1a1c241c0157ffadbdbaaf7b45394a617ca7aca5ec618f7317328dcd7014cf9bdcf" prot="public">
+          <name>USB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.h" line="10" column="1" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.h" bodystart="11" bodyend="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacecli_1adc2ca1e4a2a9a9009edf1c29408a62dc" prot="public" static="no">
+        <type>char</type>
+        <definition>using cli::text_char =  char</definition>
+        <argsstring></argsstring>
+        <name>text_char</name>
+        <qualifiedname>cli::text_char</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" line="20" column="1" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecli_1af8f80254350fd6c9175d7b82f3ebae7f" prot="public" static="no">
+        <type><ref refid="namespacecli_1adc2ca1e4a2a9a9009edf1c29408a62dc" kindref="member">text_char</ref> const  *</type>
+        <definition>using cli::text_literal =  text_char const*</definition>
+        <argsstring></argsstring>
+        <name>text_literal</name>
+        <qualifiedname>cli::text_literal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" line="23" column="1" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" prot="public" static="no">
+        <type>std::basic_string&lt; <ref refid="namespacecli_1adc2ca1e4a2a9a9009edf1c29408a62dc" kindref="member">text_char</ref> &gt;</type>
+        <definition>using cli::text =  std::basic_string&lt;text_char&gt;</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <qualifiedname>cli::text</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" line="24" column="1" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecli_1a7ae075352202ea1a7148f6f00ad98d85" prot="public" static="no">
+        <type>std::basic_regex&lt; <ref refid="namespacecli_1adc2ca1e4a2a9a9009edf1c29408a62dc" kindref="member">text_char</ref> &gt;</type>
+        <definition>using cli::tregex =  std::basic_regex&lt;text_char&gt;</definition>
+        <argsstring></argsstring>
+        <name>tregex</name>
+        <qualifiedname>cli::tregex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" line="27" column="1" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecli_1a0522344ac4caf15714dd089d55acf481" prot="public" static="no">
+        <type>std::match_results&lt; text::const_iterator &gt;</type>
+        <definition>using cli::tsmatch =  std::match_results&lt;text::const_iterator&gt;</definition>
+        <argsstring></argsstring>
+        <name>tsmatch</name>
+        <qualifiedname>cli::tsmatch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" line="28" column="1" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecli_1afe46edee66ba1e227f8be5aae4b8b1c4" prot="public" static="no">
+        <type>std::basic_stringstream&lt; <ref refid="namespacecli_1adc2ca1e4a2a9a9009edf1c29408a62dc" kindref="member">text_char</ref> &gt;</type>
+        <definition>using cli::text_stringstream =  std::basic_stringstream&lt;text_char&gt;</definition>
+        <argsstring></argsstring>
+        <name>text_stringstream</name>
+        <qualifiedname>cli::text_stringstream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" line="31" column="1" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecli_1a4d255c5ff1c359ccf042dd12988198a9" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="classcli_1_1_c_r_folder_infos" kindref="compound">CRFolderInfos</ref> * &gt;</type>
+        <definition>typedef std::vector&lt;CRFolderInfos*&gt; cli::MtpFolderList</definition>
+        <argsstring></argsstring>
+        <name>MtpFolderList</name>
+        <qualifiedname>cli::MtpFolderList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.h" line="49" column="21" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecli_1aa40bfb8c63bcd480b54b54d6b357a5bc" prot="public" static="no">
+        <type>std::vector&lt; SCRSDK::CrMtpContentsInfo * &gt;</type>
+        <definition>typedef std::vector&lt;SCRSDK::CrMtpContentsInfo*&gt; cli::MtpContentsList</definition>
+        <argsstring></argsstring>
+        <name>MtpContentsList</name>
+        <qualifiedname>cli::MtpContentsList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.h" line="50" column="21" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecli_1adc493a6c1604f7f39565d81459046c49" prot="public" static="no">
+        <type>std::vector&lt; SCRSDK::CrMediaProfileInfo * &gt;</type>
+        <definition>typedef std::vector&lt;SCRSDK::CrMediaProfileInfo*&gt; cli::MediaProfileList</definition>
+        <argsstring></argsstring>
+        <name>MediaProfileList</name>
+        <qualifiedname>cli::MediaProfileList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.h" line="51" column="21" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecli_1aba70523351c5a6d1c64a907922b1b94f" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int cli::MAX_CURRENT_STR</definition>
+        <argsstring></argsstring>
+        <name>MAX_CURRENT_STR</name>
+        <qualifiedname>cli::MAX_CURRENT_STR</qualifiedname>
+        <initializer>= 255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" line="11" column="18" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecli_1a7b332f95ef90d7f081694f203ddafb23" prot="public" static="no" mutable="no">
+        <type>std::basic_istream&lt; <ref refid="namespacecli_1adc2ca1e4a2a9a9009edf1c29408a62dc" kindref="member">text_char</ref> &gt; &amp;</type>
+        <definition>std::basic_istream&lt; text_char &gt; &amp; cli::tin</definition>
+        <argsstring></argsstring>
+        <name>tin</name>
+        <qualifiedname>cli::tin</qualifiedname>
+        <initializer>= std::cin</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/Text.cpp" line="10" column="20" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.cpp" bodystart="10" bodyend="-1" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" declline="32" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecli_1a11ccf16f5bb55d6522bad4adf7e9c960" prot="public" static="no" mutable="no">
+        <type>std::basic_ostream&lt; <ref refid="namespacecli_1adc2ca1e4a2a9a9009edf1c29408a62dc" kindref="member">text_char</ref> &gt; &amp;</type>
+        <definition>std::basic_ostream&lt; text_char &gt; &amp; cli::tout</definition>
+        <argsstring></argsstring>
+        <name>tout</name>
+        <qualifiedname>cli::tout</qualifiedname>
+        <initializer>= std::cout</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/Text.cpp" line="11" column="20" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.cpp" bodystart="11" bodyend="-1" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/Text.h" declline="33" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecli_1a98d7e8a12ff1b3052d1c7e6d68577947" prot="public" static="no" mutable="no">
+        <type>const std::unordered_map&lt; CrInt32u, <ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref> &gt;</type>
+        <definition>const std::unordered_map&lt;CrInt32u, text&gt; cli::map_ERR_CAT</definition>
+        <argsstring></argsstring>
+        <name>map_ERR_CAT</name>
+        <qualifiedname>cli::map_ERR_CAT</qualifiedname>
+        <initializer>{
+        {SCRSDK::CrError_Generic,      &quot;Generic   &quot; },
+        {SCRSDK::CrError_File,         &quot;File      &quot; },
+        {SCRSDK::CrError_Connect,      &quot;Connect   &quot; },
+        {SCRSDK::CrError_Memory,       &quot;Memory    &quot; },
+        {SCRSDK::CrError_Api,          &quot;Api       &quot; },
+        {SCRSDK::CrError_Polling,      &quot;Polling   &quot; },
+        {SCRSDK::CrError_Adaptor,      &quot;Adaptor   &quot; },
+        {SCRSDK::CrError_Device,       &quot;Device    &quot; },
+        {SCRSDK::CrError_Contents,     &quot;Content   &quot; },
+        {SCRSDK::CrError_RemoteTransfer,  &quot;RemoteTransfer&quot; },
+        {SCRSDK::CrError_Monitoring,   &quot;Monitoring&quot; },
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.h" line="14" column="30" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.h" bodystart="15" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecli_1a0284ac0db9d3996ffdbb09ed9333a71b" prot="public" static="no" mutable="no">
+        <type>const std::unordered_map&lt; CrInt32u, <ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref> &gt;</type>
+        <definition>const std::unordered_map&lt;CrInt32u, text&gt; cli::map_ERR_DETAIL</definition>
+        <argsstring></argsstring>
+        <name>map_ERR_DETAIL</name>
+        <qualifiedname>cli::map_ERR_DETAIL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.h" line="30" column="30" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.h" bodystart="31" bodyend="150"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecli_1a13eb25863bfbe415c2893882f91267ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_f_number</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_f_number</name>
+        <qualifiedname>cli::parse_f_number</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="65" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="65" bodyend="75" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="117" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1abaa36e1917f301d8c817e1cd1fb7a5de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_iso_sensitivity</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_iso_sensitivity</name>
+        <qualifiedname>cli::parse_iso_sensitivity</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="77" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="77" bodyend="87" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="118" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a0e114ab04f726d05af9d935cf37ff3b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_shutter_speed</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_shutter_speed</name>
+        <qualifiedname>cli::parse_shutter_speed</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="89" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="89" bodyend="99" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="119" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ac2dbb08482cf203bb085e78f401efbbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint64_t &gt;</type>
+        <definition>std::vector&lt; std::uint64_t &gt; cli::parse_extended_shutter_speed</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_extended_shutter_speed</name>
+        <qualifiedname>cli::parse_extended_shutter_speed</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="101" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="101" bodyend="111" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="120" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a98cb5ec390a329824824e7cc0c7fb015" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_position_key_setting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_position_key_setting</name>
+        <qualifiedname>cli::parse_position_key_setting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="113" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="113" bodyend="123" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="121" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ace9a7e5ff5df4b421e8ab2e2dfd66491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_exposure_program_mode</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_exposure_program_mode</name>
+        <qualifiedname>cli::parse_exposure_program_mode</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="125" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="125" bodyend="135" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="122" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1afbe14aa56587a47a6a6596da0fa61cdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_still_capture_mode</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_still_capture_mode</name>
+        <qualifiedname>cli::parse_still_capture_mode</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="137" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="137" bodyend="147" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="123" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ab962c11d35980244b7669727a5803207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_focus_mode</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_focus_mode</name>
+        <qualifiedname>cli::parse_focus_mode</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="149" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="149" bodyend="159" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="124" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a3ff5e163475983d1174beab93610df75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_focus_area</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_focus_area</name>
+        <qualifiedname>cli::parse_focus_area</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="161" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="161" bodyend="171" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="125" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aeddc33297139f3d0ffeae9293b0da1d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_live_view_image_quality</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_live_view_image_quality</name>
+        <qualifiedname>cli::parse_live_view_image_quality</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="173" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="173" bodyend="183" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="126" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a6945f9a320f01edc88850d2b37271a6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_media_slotx_format_enable_status</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_media_slotx_format_enable_status</name>
+        <qualifiedname>cli::parse_media_slotx_format_enable_status</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="185" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="185" bodyend="195" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="127" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ac45fd264cd6ec1d0579570df44d1d9ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_white_balance</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_white_balance</name>
+        <qualifiedname>cli::parse_white_balance</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="197" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="197" bodyend="207" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="128" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aef376dcef02a661e744ccada153370fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_customwb_capture_standby</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_customwb_capture_standby</name>
+        <qualifiedname>cli::parse_customwb_capture_standby</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="209" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="209" bodyend="219" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="129" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a72d6d8f6227c0a883f60d36d36e58f08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_customwb_capture_standby_cancel</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_customwb_capture_standby_cancel</name>
+        <qualifiedname>cli::parse_customwb_capture_standby_cancel</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="221" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="221" bodyend="231" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="130" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aed972622ba0fe69a44c5ff40f7776fa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_customwb_capture_operation</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_customwb_capture_operation</name>
+        <qualifiedname>cli::parse_customwb_capture_operation</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="233" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="233" bodyend="243" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="131" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1acec1134112ccb342f1743930cd730e6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_customwb_capture_execution_state</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_customwb_capture_execution_state</name>
+        <qualifiedname>cli::parse_customwb_capture_execution_state</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="245" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="245" bodyend="255" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="132" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a925437de62f1640118a6c54331e8c37c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_zoom_operation_status</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_zoom_operation_status</name>
+        <qualifiedname>cli::parse_zoom_operation_status</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="257" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="257" bodyend="267" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="133" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1af580216f68e7613b5c94a92df771e9e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_zoom_setting_type</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_zoom_setting_type</name>
+        <qualifiedname>cli::parse_zoom_setting_type</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="269" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="269" bodyend="279" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="134" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aafc1e9d915fcfdd943daca0f2bec5809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_zoom_types_status</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_zoom_types_status</name>
+        <qualifiedname>cli::parse_zoom_types_status</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="281" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="281" bodyend="291" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="135" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a0e9071ab2493cd073426143aa7057541" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::int8_t &gt;</type>
+        <definition>std::vector&lt; std::int8_t &gt; cli::parse_zoom_operation</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_zoom_operation</name>
+        <qualifiedname>cli::parse_zoom_operation</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="293" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="293" bodyend="303" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="136" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a14567781a2c4e3d7511bfbec2c784252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::int8_t &gt;</type>
+        <definition>std::vector&lt; std::int8_t &gt; cli::parse_zoom_speed_range</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_zoom_speed_range</name>
+        <qualifiedname>cli::parse_zoom_speed_range</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="305" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="305" bodyend="315" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="137" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a6740e14e45235f0967afd6c3dff3f8b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_save_zoom_and_focus_position</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_save_zoom_and_focus_position</name>
+        <qualifiedname>cli::parse_save_zoom_and_focus_position</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="317" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="317" bodyend="327" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="138" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a500521d386dde04123d14da41e6ae755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_load_zoom_and_focus_position</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_load_zoom_and_focus_position</name>
+        <qualifiedname>cli::parse_load_zoom_and_focus_position</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="329" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="329" bodyend="339" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="139" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a0fb991b8aa22e8ce5cb0ef6cdb43d2cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_remocon_zoom_speed_type</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_remocon_zoom_speed_type</name>
+        <qualifiedname>cli::parse_remocon_zoom_speed_type</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="341" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="341" bodyend="351" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="140" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a5a329183a35191733c11102db798b6db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_playback_media</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_playback_media</name>
+        <qualifiedname>cli::parse_playback_media</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="353" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="353" bodyend="363" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="146" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1adb25692d2eee9873e5dd2d86bbead850" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_gain_base_sensitivity</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_gain_base_sensitivity</name>
+        <qualifiedname>cli::parse_gain_base_sensitivity</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="365" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="365" bodyend="375" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="141" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae4af89a951921871de137f80900a3809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_gain_base_iso_sensitivity</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_gain_base_iso_sensitivity</name>
+        <qualifiedname>cli::parse_gain_base_iso_sensitivity</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="376" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="376" bodyend="386" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="142" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a6e7ddcdd772edeeee2068c3304bf8993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_monitor_lut_setting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_monitor_lut_setting</name>
+        <qualifiedname>cli::parse_monitor_lut_setting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="388" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="388" bodyend="398" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="143" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1abde6a08816b8f21e1c9f052f0762fd1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_exposure_index</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_exposure_index</name>
+        <qualifiedname>cli::parse_exposure_index</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="400" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="400" bodyend="410" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="144" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a52e01bf3517ff89ce43c3613e7330e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_baselook_value</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_baselook_value</name>
+        <qualifiedname>cli::parse_baselook_value</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="412" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="412" bodyend="422" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="145" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ad3f326533b03abb7a6486441a8b00fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_shutter_mode_setting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_shutter_mode_setting</name>
+        <qualifiedname>cli::parse_shutter_mode_setting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="424" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="424" bodyend="434" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="148" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aeade9869803eae2c2a3a04ad2fe9ed00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_iris_mode_setting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_iris_mode_setting</name>
+        <qualifiedname>cli::parse_iris_mode_setting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="436" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="436" bodyend="446" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="147" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a2ef7c1b26a37b2da4a9e8faaecce12b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_gain_control_setting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_gain_control_setting</name>
+        <qualifiedname>cli::parse_gain_control_setting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="448" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="448" bodyend="458" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="149" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a19dcecc300638fdc17538d4274d9552d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_exposure_control_type</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_exposure_control_type</name>
+        <qualifiedname>cli::parse_exposure_control_type</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="460" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="460" bodyend="470" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="150" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a5906cc9ff821334542966f76b5470ed1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_recording_setting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_recording_setting</name>
+        <qualifiedname>cli::parse_recording_setting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="472" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="472" bodyend="482" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="151" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ac4d65552191620fde88926ed4b470fe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_dispmode_candidate</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_dispmode_candidate</name>
+        <qualifiedname>cli::parse_dispmode_candidate</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="484" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="484" bodyend="494" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="152" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a03fdccf91430b910d524a255cead7f27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_dispmode_setting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_dispmode_setting</name>
+        <qualifiedname>cli::parse_dispmode_setting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="496" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="496" bodyend="506" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="153" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1afdaee29b6b7cead0a4b1912ed470bd7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_dispmode</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_dispmode</name>
+        <qualifiedname>cli::parse_dispmode</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="508" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="508" bodyend="518" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="154" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a3b56936230adb37e238348e135037023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::int8_t &gt;</type>
+        <definition>std::vector&lt; std::int8_t &gt; cli::parse_gain_db_value</definition>
+        <argsstring>(unsigned char const *buf, std::int32_t nval)</argsstring>
+        <name>parse_gain_db_value</name>
+        <qualifiedname>cli::parse_gain_db_value</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="520" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="520" bodyend="530" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="155" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a7e63734825c94f51b318aae5a65e7b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::int8_t &gt;</type>
+        <definition>std::vector&lt; std::int8_t &gt; cli::parse_white_balance_tint</definition>
+        <argsstring>(unsigned char const *buf, std::int32_t nval)</argsstring>
+        <name>parse_white_balance_tint</name>
+        <qualifiedname>cli::parse_white_balance_tint</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="532" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="532" bodyend="542" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="156" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ac6849bb4b3ba9570cdcb14e7f4f9d4e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::int16_t &gt;</type>
+        <definition>std::vector&lt; std::int16_t &gt; cli::parse_white_balance_tint_step</definition>
+        <argsstring>(unsigned char const *buf, std::int32_t nval)</argsstring>
+        <name>parse_white_balance_tint_step</name>
+        <qualifiedname>cli::parse_white_balance_tint_step</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="544" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="544" bodyend="554" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="157" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a3108c58d0910d0f60381576bd748eeb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint64_t &gt;</type>
+        <definition>std::vector&lt; std::uint64_t &gt; cli::parse_shutter_speed_value</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_shutter_speed_value</name>
+        <qualifiedname>cli::parse_shutter_speed_value</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="556" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="556" bodyend="566" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="158" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae8f870e3ceb708bcb26e82a8c7a99a57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_focus_bracket_shot_num</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_focus_bracket_shot_num</name>
+        <qualifiedname>cli::parse_focus_bracket_shot_num</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="568" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="568" bodyend="578" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="159" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a82445c182f83a9847807ee0f55ecffad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_focus_bracket_focus_range</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_focus_bracket_focus_range</name>
+        <qualifiedname>cli::parse_focus_bracket_focus_range</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="580" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="580" bodyend="590" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="160" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a41511826af7fc9a03e7391488539d056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_image_stabilization_steady_shot</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_image_stabilization_steady_shot</name>
+        <qualifiedname>cli::parse_image_stabilization_steady_shot</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="592" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="592" bodyend="602" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="161" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a1888a5fc605c09fb81896c6a7f1609fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_movie_image_stabilization_steady_shot</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_movie_image_stabilization_steady_shot</name>
+        <qualifiedname>cli::parse_movie_image_stabilization_steady_shot</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="604" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="604" bodyend="614" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="162" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a10eb7d1b63cf7b8caa53b6196a5ac1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_silent_mode</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_silent_mode</name>
+        <qualifiedname>cli::parse_silent_mode</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="616" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="616" bodyend="626" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="163" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae1a2287e684891c0fa6bc4aeb0ce7a81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_silent_mode_aperture_drive_in_af</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_silent_mode_aperture_drive_in_af</name>
+        <qualifiedname>cli::parse_silent_mode_aperture_drive_in_af</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="628" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="628" bodyend="638" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="164" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a86563839233455ad07371e0d7ca845b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_silent_mode_shutter_when_power_off</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_silent_mode_shutter_when_power_off</name>
+        <qualifiedname>cli::parse_silent_mode_shutter_when_power_off</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="639" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="639" bodyend="649" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="165" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a488e1110163ed2b33d38eeab9bcbefcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_silent_mode_auto_pixel_mapping</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_silent_mode_auto_pixel_mapping</name>
+        <qualifiedname>cli::parse_silent_mode_auto_pixel_mapping</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="651" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="651" bodyend="661" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="166" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a1b731964bf72ac745a8680edd463aab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_shutter_type</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_shutter_type</name>
+        <qualifiedname>cli::parse_shutter_type</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="663" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="663" bodyend="673" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="167" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1abd7348f16dbe7ceca78eba0675cf3c86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_movie_shooting_mode</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_movie_shooting_mode</name>
+        <qualifiedname>cli::parse_movie_shooting_mode</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="675" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="675" bodyend="685" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="168" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a8651fa0bb995efb225e7e5aba88c81e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_customwb_size_setting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_customwb_size_setting</name>
+        <qualifiedname>cli::parse_customwb_size_setting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="687" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="687" bodyend="697" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="172" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae5ebefd1117165b9b426df78cc289902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_time_shift_shooting</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_time_shift_shooting</name>
+        <qualifiedname>cli::parse_time_shift_shooting</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="699" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="699" bodyend="709" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="173" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1af0beb5ce4d78b876e9813e188c0f653b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_focus_position</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_focus_position</name>
+        <qualifiedname>cli::parse_focus_position</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="711" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="711" bodyend="721" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="169" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a119549831dc315fb21fe61e72ddbb9ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_movie_recording_media</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_movie_recording_media</name>
+        <qualifiedname>cli::parse_movie_recording_media</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="723" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="723" bodyend="733" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="181" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a61c72fb2fc7ad988a61fc99e52ddb70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_recorder_main_status</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_recorder_main_status</name>
+        <qualifiedname>cli::parse_recorder_main_status</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="735" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="735" bodyend="745" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="182" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aab31cc0702713a05d8a5f69f28ef5a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_recording_state</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_recording_state</name>
+        <qualifiedname>cli::parse_recording_state</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="747" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="747" bodyend="757" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="183" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a3d0c0b5f241d3975f2e392aa8fd38f00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_focus_driving_status</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_focus_driving_status</name>
+        <qualifiedname>cli::parse_focus_driving_status</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="759" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="759" bodyend="769" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="170" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a171e87e472ec3d622711f95f98aa4bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_zoom_distance</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_zoom_distance</name>
+        <qualifiedname>cli::parse_zoom_distance</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="771" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="771" bodyend="781" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="171" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a6ba963b2b73dcf290a525d7aba76810f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_slotx_rec_available</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_slotx_rec_available</name>
+        <qualifiedname>cli::parse_slotx_rec_available</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="783" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="783" bodyend="793" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="174" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a0495a244ee9e03e5a3ec60604d27fe0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_camera_button_function</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_camera_button_function</name>
+        <qualifiedname>cli::parse_camera_button_function</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="795" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="795" bodyend="805" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="175" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a9a50072398c121ac42e6802990e4f7f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_camera_button_function_multi</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_camera_button_function_multi</name>
+        <qualifiedname>cli::parse_camera_button_function_multi</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="807" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="807" bodyend="817" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="176" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1af1b09a75382b0e7db3df467097de649a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_camera_dial_function</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_camera_dial_function</name>
+        <qualifiedname>cli::parse_camera_dial_function</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="819" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="819" bodyend="829" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="177" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1af0f0930dcf2d2573cdc5950681fd6297" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_camera_button_function_status</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_camera_button_function_status</name>
+        <qualifiedname>cli::parse_camera_button_function_status</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="831" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="831" bodyend="841" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="178" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a38e5f1aad29f0432149cb71eecac28ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint32_t &gt;</type>
+        <definition>std::vector&lt; std::uint32_t &gt; cli::parse_camera_lever_function</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_camera_lever_function</name>
+        <qualifiedname>cli::parse_camera_lever_function</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="843" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="843" bodyend="853" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="179" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a18dc88af69a6915e7fa67e8398b439e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint16_t &gt;</type>
+        <definition>std::vector&lt; std::uint16_t &gt; cli::parse_zoom_position</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_zoom_position</name>
+        <qualifiedname>cli::parse_zoom_position</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="855" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="855" bodyend="865" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="180" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ad0cc0bb27b1a5e8b0492c1ab4d192511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::int8_t &gt;</type>
+        <definition>std::vector&lt; std::int8_t &gt; cli::parse_tele_wide_lever_value_capability</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_tele_wide_lever_value_capability</name>
+        <qualifiedname>cli::parse_tele_wide_lever_value_capability</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="867" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="867" bodyend="877" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="184" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a32473d2abae297cadc064fb72781b3e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::uint8_t &gt;</type>
+        <definition>std::vector&lt; std::uint8_t &gt; cli::parse_debugmode</definition>
+        <argsstring>(unsigned char const *buf, std::uint32_t nval)</argsstring>
+        <name>parse_debugmode</name>
+        <qualifiedname>cli::parse_debugmode</qualifiedname>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="879" column="13" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="879" bodyend="889" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="185" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a5a01820ec159f69cac14b8daa90e0720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_f_number</definition>
+        <argsstring>(std::uint16_t f_number)</argsstring>
+        <name>format_f_number</name>
+        <qualifiedname>cli::format_f_number</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>f_number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="891" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="891" bodyend="911" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="187" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a4fad647efffcbf2d43aece1f65aeb993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_iso_sensitivity</definition>
+        <argsstring>(std::uint32_t iso)</argsstring>
+        <name>format_iso_sensitivity</name>
+        <qualifiedname>cli::format_iso_sensitivity</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>iso</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="913" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="913" bodyend="940" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="188" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aec5ff2b653a7cba20ede61909addbbb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_shutter_speed</definition>
+        <argsstring>(std::uint32_t shutter_speed)</argsstring>
+        <name>format_shutter_speed</name>
+        <qualifiedname>cli::format_shutter_speed</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>shutter_speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="942" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="942" bodyend="967" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="189" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1af9cd44fd4cf8fe83792a6a72f709d9d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_extended_shutter_speed</definition>
+        <argsstring>(std::uint64_t extended_shutter_speed)</argsstring>
+        <name>format_extended_shutter_speed</name>
+        <qualifiedname>cli::format_extended_shutter_speed</qualifiedname>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>extended_shutter_speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="969" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="969" bodyend="994" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="190" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ad29b558e9ee93d9bc04dc42f594454e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_position_key_setting</definition>
+        <argsstring>(std::uint16_t position_key_setting)</argsstring>
+        <name>format_position_key_setting</name>
+        <qualifiedname>cli::format_position_key_setting</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>position_key_setting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="996" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="996" bodyend="1012" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="191" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a2183b481f126c67c9c6bb7ce6ac6b894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_exposure_program_mode</definition>
+        <argsstring>(std::uint32_t exposure_program_mode)</argsstring>
+        <name>format_exposure_program_mode</name>
+        <qualifiedname>cli::format_exposure_program_mode</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>exposure_program_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1014" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1014" bodyend="1204" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="192" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a799f72d7165d873396e2b03a811ed25d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_still_capture_mode</definition>
+        <argsstring>(std::uint32_t still_capture_mode)</argsstring>
+        <name>format_still_capture_mode</name>
+        <qualifiedname>cli::format_still_capture_mode</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>still_capture_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1206" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1206" bodyend="1673" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="193" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a3a862011752a4fe11f636b66faf7cce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_focus_mode</definition>
+        <argsstring>(std::uint16_t focus_mode)</argsstring>
+        <name>format_focus_mode</name>
+        <qualifiedname>cli::format_focus_mode</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>focus_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1675" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1675" bodyend="1706" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="194" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1af887ff44bd80e58f124f9cc6f39dc5f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_focus_area</definition>
+        <argsstring>(std::uint16_t focus_area)</argsstring>
+        <name>format_focus_area</name>
+        <qualifiedname>cli::format_focus_area</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>focus_area</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1708" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1708" bodyend="1799" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="195" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a447f3f63df19a5ee01a5db10674e1594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_live_view_image_quality</definition>
+        <argsstring>(std::uint16_t live_view_image_quality)</argsstring>
+        <name>format_live_view_image_quality</name>
+        <qualifiedname>cli::format_live_view_image_quality</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>live_view_image_quality</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1801" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1801" bodyend="1817" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="196" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a1367755a563878ea5e4dacb54350e671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_media_slotx_format_enable_status</definition>
+        <argsstring>(std::uint8_t media_slotx_format_enable_status)</argsstring>
+        <name>format_media_slotx_format_enable_status</name>
+        <qualifiedname>cli::format_media_slotx_format_enable_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>media_slotx_format_enable_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1819" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1819" bodyend="1835" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="197" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae246f9e6d2c482d4b5a87de7385aac09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_white_balance</definition>
+        <argsstring>(std::uint16_t value)</argsstring>
+        <name>format_white_balance</name>
+        <qualifiedname>cli::format_white_balance</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1836" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1836" bodyend="1897" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="198" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a9043b5c13a04746a4842157fa5604118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_customwb_capture_standby</definition>
+        <argsstring>(std::uint16_t customwb_capture_standby)</argsstring>
+        <name>format_customwb_capture_standby</name>
+        <qualifiedname>cli::format_customwb_capture_standby</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>customwb_capture_standby</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1899" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1899" bodyend="1915" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="199" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a7e56fa27737dd62e7799c8cad8de9cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_customwb_capture_standby_cancel</definition>
+        <argsstring>(std::uint16_t customwb_capture_standby_cancel)</argsstring>
+        <name>format_customwb_capture_standby_cancel</name>
+        <qualifiedname>cli::format_customwb_capture_standby_cancel</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>customwb_capture_standby_cancel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1917" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1917" bodyend="1934" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="200" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aeee9e5f450dd39b6d9e470bb42b75730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_customwb_capture_operation</definition>
+        <argsstring>(std::uint16_t customwb_capture_operation)</argsstring>
+        <name>format_customwb_capture_operation</name>
+        <qualifiedname>cli::format_customwb_capture_operation</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>customwb_capture_operation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1936" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1936" bodyend="1952" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="201" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a9f52f6308965aef5c1efdc5908ca122e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_customwb_capture_execution_state</definition>
+        <argsstring>(std::uint16_t customwb_capture_execution_state)</argsstring>
+        <name>format_customwb_capture_execution_state</name>
+        <qualifiedname>cli::format_customwb_capture_execution_state</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>customwb_capture_execution_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1954" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1954" bodyend="1976" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="202" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a254a6299672b150c7a30d1aca4e0cb9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_zoom_operation_status</definition>
+        <argsstring>(std::uint8_t zoom_operation_status)</argsstring>
+        <name>format_zoom_operation_status</name>
+        <qualifiedname>cli::format_zoom_operation_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>zoom_operation_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1978" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1978" bodyend="1994" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="203" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1adb71e194917cacdc7fdfa193a79934b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_zoom_setting_type</definition>
+        <argsstring>(std::uint8_t zoom_setting_type)</argsstring>
+        <name>format_zoom_setting_type</name>
+        <qualifiedname>cli::format_zoom_setting_type</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>zoom_setting_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="1996" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="1996" bodyend="2018" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="204" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a8584a6cd7350843c857cef60f3c750f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_zoom_types_status</definition>
+        <argsstring>(std::uint8_t zoom_types_status)</argsstring>
+        <name>format_zoom_types_status</name>
+        <qualifiedname>cli::format_zoom_types_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>zoom_types_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2020" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2020" bodyend="2042" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="205" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a6827d228ae703e68f1d2a34f80b8ec82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_remocon_zoom_speed_type</definition>
+        <argsstring>(std::uint8_t remocon_zoom_speed_type)</argsstring>
+        <name>format_remocon_zoom_speed_type</name>
+        <qualifiedname>cli::format_remocon_zoom_speed_type</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>remocon_zoom_speed_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2044" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2044" bodyend="2063" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="206" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1abd80f092b3fad71b801970b76c0368c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_camera_setting_save_operation</definition>
+        <argsstring>(std::uint16_t camera_setting_save_operation)</argsstring>
+        <name>format_camera_setting_save_operation</name>
+        <qualifiedname>cli::format_camera_setting_save_operation</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>camera_setting_save_operation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2065" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2065" bodyend="2080" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="209" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a25eee33000b2edb8516b57c00da89fc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_camera_setting_read_operation</definition>
+        <argsstring>(std::uint16_t camera_setting_read_operation)</argsstring>
+        <name>format_camera_setting_read_operation</name>
+        <qualifiedname>cli::format_camera_setting_read_operation</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>camera_setting_read_operation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2082" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2082" bodyend="2097" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="210" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae773443507d20307fff90b7bde10e8d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_camera_setting_save_read_state</definition>
+        <argsstring>(std::uint8_t camera_setting_save_read_state)</argsstring>
+        <name>format_camera_setting_save_read_state</name>
+        <qualifiedname>cli::format_camera_setting_save_read_state</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>camera_setting_save_read_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2099" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2099" bodyend="2115" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="211" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a0f1ee2f3f7530655d7c5467b91074ee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_aps_c_or_full_switching_setting</definition>
+        <argsstring>(std::uint8_t aps_c_or_full_switching_setting)</argsstring>
+        <name>format_aps_c_or_full_switching_setting</name>
+        <qualifiedname>cli::format_aps_c_or_full_switching_setting</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>aps_c_or_full_switching_setting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2117" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2117" bodyend="2132" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="207" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a60f00c4285e1000efbc1eada121146e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_aps_c_or_full_switching_enable_status</definition>
+        <argsstring>(std::uint8_t aps_c_or_full_switching_enable_status)</argsstring>
+        <name>format_aps_c_or_full_switching_enable_status</name>
+        <qualifiedname>cli::format_aps_c_or_full_switching_enable_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>aps_c_or_full_switching_enable_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2134" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2134" bodyend="2149" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="208" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aeb62e45480add61985af04e7f32a3d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_playback_media</definition>
+        <argsstring>(std::uint8_t playback_media)</argsstring>
+        <name>format_playback_media</name>
+        <qualifiedname>cli::format_playback_media</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>playback_media</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2151" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2151" bodyend="2167" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="217" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a7a43f397a6e3ea615c3b79824b541167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_camera_setting_reset_enable_status</definition>
+        <argsstring>(std::uint8_t camera_setting_reset_enable_status)</argsstring>
+        <name>format_camera_setting_reset_enable_status</name>
+        <qualifiedname>cli::format_camera_setting_reset_enable_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>camera_setting_reset_enable_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2169" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2169" bodyend="2184" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="212" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a043d472d67e488c7c1e1a35bed827438" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_gain_base_sensitivity</definition>
+        <argsstring>(std::uint8_t gain_base)</argsstring>
+        <name>format_gain_base_sensitivity</name>
+        <qualifiedname>cli::format_gain_base_sensitivity</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>gain_base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2186" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2186" bodyend="2202" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="213" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ac92a466d7b93576fcb9e3ae04781d563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_gain_base_iso_sensitivity</definition>
+        <argsstring>(std::uint8_t gain_base_iso)</argsstring>
+        <name>format_gain_base_iso_sensitivity</name>
+        <qualifiedname>cli::format_gain_base_iso_sensitivity</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>gain_base_iso</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2203" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2203" bodyend="2219" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="214" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a5da0f3d8e3709a0c50f96b9d3c920c99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_monitor_lut_setting</definition>
+        <argsstring>(std::uint8_t monitor_setup)</argsstring>
+        <name>format_monitor_lut_setting</name>
+        <qualifiedname>cli::format_monitor_lut_setting</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>monitor_setup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2221" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2221" bodyend="2236" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="215" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a6c0842c31a096e6cb54608df344b4496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_baselook_value</definition>
+        <argsstring>(std::uint8_t baselook_value)</argsstring>
+        <name>format_baselook_value</name>
+        <qualifiedname>cli::format_baselook_value</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>baselook_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2238" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2238" bodyend="2253" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="216" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a73796bcfe07d0c39cec94a267cf6381b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_shutter_mode_setting</definition>
+        <argsstring>(std::uint8_t shutter_mode_setting)</argsstring>
+        <name>format_shutter_mode_setting</name>
+        <qualifiedname>cli::format_shutter_mode_setting</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>shutter_mode_setting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2255" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2255" bodyend="2271" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="218" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a944e82abce249ee8358638c1cc96ac6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_iris_mode_setting</definition>
+        <argsstring>(std::uint8_t iris_mode_setting)</argsstring>
+        <name>format_iris_mode_setting</name>
+        <qualifiedname>cli::format_iris_mode_setting</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>iris_mode_setting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2273" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2273" bodyend="2289" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="219" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ab3db1f29e55d4abd335fe9b8756279fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_exposure_control_type</definition>
+        <argsstring>(std::uint8_t exposure_control_type)</argsstring>
+        <name>format_exposure_control_type</name>
+        <qualifiedname>cli::format_exposure_control_type</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>exposure_control_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2291" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2291" bodyend="2307" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="220" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ad4e2c4fc34dda855a3b0a51f131a9e48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_gain_control_setting</definition>
+        <argsstring>(std::uint8_t gain_control_setting)</argsstring>
+        <name>format_gain_control_setting</name>
+        <qualifiedname>cli::format_gain_control_setting</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>gain_control_setting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2309" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2309" bodyend="2325" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="221" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a6cdf0bb1407410250fcb93e8d3f62d7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_recording_setting</definition>
+        <argsstring>(std::uint16_t recording_setting)</argsstring>
+        <name>format_recording_setting</name>
+        <qualifiedname>cli::format_recording_setting</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>recording_setting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2327" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2327" bodyend="2545" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="222" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a94410281dae147a5de1931c4bfa32c5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_dispmode</definition>
+        <argsstring>(std::uint8_t dispmode)</argsstring>
+        <name>format_dispmode</name>
+        <qualifiedname>cli::format_dispmode</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>dispmode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2547" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2547" bodyend="2577" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="223" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a223638b0fcc29ec38205fe932a29be88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_movie_rec_button_toggle_enable_status</definition>
+        <argsstring>(std::uint8_t movie_rec_button_toggle_enable_status)</argsstring>
+        <name>format_movie_rec_button_toggle_enable_status</name>
+        <qualifiedname>cli::format_movie_rec_button_toggle_enable_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>movie_rec_button_toggle_enable_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2579" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2579" bodyend="2594" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="224" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae46007137222d83274636bf3e3ad87eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_shutter_speed_value</definition>
+        <argsstring>(std::uint64_t shutter_speed_value)</argsstring>
+        <name>format_shutter_speed_value</name>
+        <qualifiedname>cli::format_shutter_speed_value</qualifiedname>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>shutter_speed_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2596" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2596" bodyend="2604" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="225" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a5c8b276236ead044aa36344df4f2acbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_media_slotx_status</definition>
+        <argsstring>(std::uint8_t media_slotx_status)</argsstring>
+        <name>format_media_slotx_status</name>
+        <qualifiedname>cli::format_media_slotx_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>media_slotx_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2606" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2606" bodyend="2627" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="226" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a948fe8130fa48ddde23be415b0b71e52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_image_stabilization_steady_shot</definition>
+        <argsstring>(std::uint8_t image_stabilization_steady_shot)</argsstring>
+        <name>format_image_stabilization_steady_shot</name>
+        <qualifiedname>cli::format_image_stabilization_steady_shot</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>image_stabilization_steady_shot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2629" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2629" bodyend="2644" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="227" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a1da2d52acdc1580a6a5b9638018d0db7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_movie_image_stabilization_steady_shot</definition>
+        <argsstring>(std::uint8_t movie_image_stabilization_steady_shot)</argsstring>
+        <name>format_movie_image_stabilization_steady_shot</name>
+        <qualifiedname>cli::format_movie_image_stabilization_steady_shot</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>movie_image_stabilization_steady_shot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2646" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2646" bodyend="2667" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="228" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1af3442b07aaf1f965bcbac982d0147e53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_silent_mode</definition>
+        <argsstring>(std::uint8_t silent_mode)</argsstring>
+        <name>format_silent_mode</name>
+        <qualifiedname>cli::format_silent_mode</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>silent_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2669" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2669" bodyend="2684" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="229" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a72719ff927187c5cabae9a6d84f17ac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_silent_mode_aperture_drive_in_af</definition>
+        <argsstring>(std::uint8_t aperture_drive_in_af)</argsstring>
+        <name>format_silent_mode_aperture_drive_in_af</name>
+        <qualifiedname>cli::format_silent_mode_aperture_drive_in_af</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>aperture_drive_in_af</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2686" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2686" bodyend="2704" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="230" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a1bc9cd3851ba6850d9b3b078598b1d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_silent_mode_shutter_when_power_off</definition>
+        <argsstring>(std::uint8_t when_power_off)</argsstring>
+        <name>format_silent_mode_shutter_when_power_off</name>
+        <qualifiedname>cli::format_silent_mode_shutter_when_power_off</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>when_power_off</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2706" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2706" bodyend="2721" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="231" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aa92759c629e659e71ad38d65b4e2c630" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_silent_mode_auto_pixel_mapping</definition>
+        <argsstring>(std::uint8_t auto_pixel_mapping)</argsstring>
+        <name>format_silent_mode_auto_pixel_mapping</name>
+        <qualifiedname>cli::format_silent_mode_auto_pixel_mapping</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>auto_pixel_mapping</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2722" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2722" bodyend="2737" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="232" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ab2980acd890d996e8367d9c87b983c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_shutter_type</definition>
+        <argsstring>(std::uint8_t shutter_type)</argsstring>
+        <name>format_shutter_type</name>
+        <qualifiedname>cli::format_shutter_type</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>shutter_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2739" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2739" bodyend="2757" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="233" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a829fad2583c87aa18746a2bff40760a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_movie_shooting_mode</definition>
+        <argsstring>(std::uint16_t movie_shooting_mode)</argsstring>
+        <name>format_movie_shooting_mode</name>
+        <qualifiedname>cli::format_movie_shooting_mode</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>movie_shooting_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2759" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2759" bodyend="2783" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="234" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a29f3e23eb9871ef5fedbc1546ee15959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_customwb_size_setting</definition>
+        <argsstring>(std::uint8_t customwb_size_setting)</argsstring>
+        <name>format_customwb_size_setting</name>
+        <qualifiedname>cli::format_customwb_size_setting</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>customwb_size_setting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2785" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2785" bodyend="2804" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="237" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae46dbc4479af313ae563ce1d3fccee16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_time_shift_shooting</definition>
+        <argsstring>(std::uint8_t time_shift_shooting)</argsstring>
+        <name>format_time_shift_shooting</name>
+        <qualifiedname>cli::format_time_shift_shooting</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>time_shift_shooting</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2806" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2806" bodyend="2822" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="238" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1af3ce7de7224410180e33eb494ca7b04c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_focus_driving_status</definition>
+        <argsstring>(std::uint8_t focus_driving_status)</argsstring>
+        <name>format_focus_driving_status</name>
+        <qualifiedname>cli::format_focus_driving_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>focus_driving_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2824" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2824" bodyend="2839" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="235" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a127a52cdf63d157d9289474028ce376e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_media_slotx_rec_available</definition>
+        <argsstring>(std::uint8_t rec_available)</argsstring>
+        <name>format_media_slotx_rec_available</name>
+        <qualifiedname>cli::format_media_slotx_rec_available</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>rec_available</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2841" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2841" bodyend="2862" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="236" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1afcc291c3d8f359baa44f81780fe39f7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_monitoring_is_delivery</definition>
+        <argsstring>(std::uint8_t sts)</argsstring>
+        <name>format_monitoring_is_delivery</name>
+        <qualifiedname>cli::format_monitoring_is_delivery</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>sts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2864" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2864" bodyend="2879" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="239" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a04ce6a0a6a01f40658cc4928edc07320" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_camera_button_function_status</definition>
+        <argsstring>(std::uint8_t status)</argsstring>
+        <name>format_camera_button_function_status</name>
+        <qualifiedname>cli::format_camera_button_function_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2881" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2881" bodyend="2897" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="240" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1acbe7d421d03cd4d025512918b5fa5afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_camera_button_function</definition>
+        <argsstring>(std::uint32_t camera_button_function)</argsstring>
+        <name>format_camera_button_function</name>
+        <qualifiedname>cli::format_camera_button_function</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>camera_button_function</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="2899" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="2899" bodyend="3013" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="241" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a8047a37d907745f377632172ab3bd43b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_camera_dial_function</definition>
+        <argsstring>(std::uint32_t camera_dial_function)</argsstring>
+        <name>format_camera_dial_function</name>
+        <qualifiedname>cli::format_camera_dial_function</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>camera_dial_function</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3015" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3015" bodyend="3036" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="242" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ab67efade4ac4358993a6bb4acf17a565" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_camera_lever_function</definition>
+        <argsstring>(std::uint32_t camera_lever_function)</argsstring>
+        <name>format_camera_lever_function</name>
+        <qualifiedname>cli::format_camera_lever_function</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>camera_lever_function</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3038" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3038" bodyend="3050" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="243" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aba1e48ff698261afc058ac36f2269fb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_zoom_driving_status</definition>
+        <argsstring>(std::uint8_t zoom_driving_status)</argsstring>
+        <name>format_zoom_driving_status</name>
+        <qualifiedname>cli::format_zoom_driving_status</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>zoom_driving_status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3052" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3052" bodyend="3067" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="244" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a63c899947ce786cc374d5cb200d4ad46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_info_content_type</definition>
+        <argsstring>(std::uint32_t content_type)</argsstring>
+        <name>format_contents_info_content_type</name>
+        <qualifiedname>cli::format_contents_info_content_type</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>content_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3069" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3069" bodyend="3095" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="245" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a16d8c1569e7adf7738c49b9ccc19d0cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_info_group_type</definition>
+        <argsstring>(std::uint32_t group_type)</argsstring>
+        <name>format_contents_info_group_type</name>
+        <qualifiedname>cli::format_contents_info_group_type</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>group_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3097" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3097" bodyend="3118" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="246" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a1d9cd6c2797ab369c759fa47d0cbf202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_info_rating</definition>
+        <argsstring>(std::int32_t rating)</argsstring>
+        <name>format_contents_info_rating</name>
+        <qualifiedname>cli::format_contents_info_rating</qualifiedname>
+        <param>
+          <type>std::int32_t</type>
+          <declname>rating</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3120" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3120" bodyend="3150" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="247" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a6943748d2e511bc133b5d3551c71345d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_file_format</definition>
+        <argsstring>(std::uint32_t file_format)</argsstring>
+        <name>format_contents_file_file_format</name>
+        <qualifiedname>cli::format_contents_file_file_format</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>file_format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3152" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3152" bodyend="3182" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="248" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a4a8a975f458e5b7eb8e71ea731811224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_video_codec</definition>
+        <argsstring>(std::uint32_t video_codec)</argsstring>
+        <name>format_contents_file_video_codec</name>
+        <qualifiedname>cli::format_contents_file_video_codec</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>video_codec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3184" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3184" bodyend="3202" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="249" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a3ec2eccb0a61b66791ea4eee760c1ac2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_gop_structure</definition>
+        <argsstring>(std::uint32_t gop_structure)</argsstring>
+        <name>format_contents_file_gop_structure</name>
+        <qualifiedname>cli::format_contents_file_gop_structure</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>gop_structure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3204" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3204" bodyend="3222" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="250" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aebc1b7a65cc3ef71e0c68a1d51a668bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_aspect_ratio</definition>
+        <argsstring>(std::uint32_t aspect_ratio)</argsstring>
+        <name>format_contents_file_aspect_ratio</name>
+        <qualifiedname>cli::format_contents_file_aspect_ratio</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>aspect_ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3224" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3224" bodyend="3254" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="251" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1aa49627b02759de20fa41c0f7f9628808" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_color_format</definition>
+        <argsstring>(std::uint32_t color_format)</argsstring>
+        <name>format_contents_file_color_format</name>
+        <qualifiedname>cli::format_contents_file_color_format</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>color_format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3256" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3256" bodyend="3283" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="252" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a78efc06f2f77fe844a3e23a534334542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_scan_type</definition>
+        <argsstring>(std::uint32_t scan_type)</argsstring>
+        <name>format_contents_file_scan_type</name>
+        <qualifiedname>cli::format_contents_file_scan_type</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>scan_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3285" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3285" bodyend="3309" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="253" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a32b606380601b561ce709f9405dedf3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_profile_indication</definition>
+        <argsstring>(std::uint32_t profile_indication)</argsstring>
+        <name>format_contents_file_profile_indication</name>
+        <qualifiedname>cli::format_contents_file_profile_indication</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>profile_indication</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3311" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3311" bodyend="3338" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="254" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a06a9a61d4d619294f86ed207bfe26c47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_rdd18meta_capture_gamma_equation</definition>
+        <argsstring>(std::uint32_t rdd18meta_capture_gamma_equation)</argsstring>
+        <name>format_contents_file_rdd18meta_capture_gamma_equation</name>
+        <qualifiedname>cli::format_contents_file_rdd18meta_capture_gamma_equation</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>rdd18meta_capture_gamma_equation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3340" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3340" bodyend="3415" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="255" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a938fed54a1b974576dcfcf4faa2cc234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_rdd18meta_color_primaries</definition>
+        <argsstring>(std::uint32_t rdd18meta_color_primaries)</argsstring>
+        <name>format_contents_file_rdd18meta_color_primaries</name>
+        <qualifiedname>cli::format_contents_file_rdd18meta_color_primaries</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>rdd18meta_color_primaries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3417" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3417" bodyend="3453" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="256" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a1a79e9a498a694389634238dd3dd5c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_rdd18meta_coding_equations</definition>
+        <argsstring>(std::uint32_t rdd18meta_coding_equations)</argsstring>
+        <name>format_contents_file_rdd18meta_coding_equations</name>
+        <qualifiedname>cli::format_contents_file_rdd18meta_coding_equations</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>rdd18meta_coding_equations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3455" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3455" bodyend="3485" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="257" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ab8be48acd6dd0cf6fcc2b077bf1b591b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_audio_codec</definition>
+        <argsstring>(std::uint32_t audio_codec)</argsstring>
+        <name>format_contents_file_audio_codec</name>
+        <qualifiedname>cli::format_contents_file_audio_codec</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>audio_codec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3487" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3487" bodyend="3505" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="258" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1a1b999af043537922634e442a4a5e955e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_contents_file_number_of_channels</definition>
+        <argsstring>(std::uint32_t number_of_channels)</argsstring>
+        <name>format_contents_file_number_of_channels</name>
+        <qualifiedname>cli::format_contents_file_number_of_channels</qualifiedname>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>number_of_channels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3507" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3507" bodyend="3585" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="259" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1abe14fa9dd3d08a45ddad2dcfef2d00d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::format_debug_mode</definition>
+        <argsstring>(std::uint8_t debug_mode)</argsstring>
+        <name>format_debug_mode</name>
+        <qualifiedname>cli::format_debug_mode</qualifiedname>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>debug_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="3587" column="6" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" bodystart="3587" bodyend="3603" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h" declline="260" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ae5b3f9a8663e4df62c5a9ca2f7f6094f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a1c241c0157ffadbdbaaf7b45394a617c" kindref="member">ConnectionType</ref></type>
+        <definition>ConnectionType cli::parse_connection_type</definition>
+        <argsstring>(text conn_type)</argsstring>
+        <name>parse_connection_type</name>
+        <qualifiedname>cli::parse_connection_type</qualifiedname>
+        <param>
+          <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+          <declname>conn_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.cpp" line="9" column="16" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.cpp" bodystart="9" bodyend="20" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.h" declline="17" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecli_1ad90a55844bf0037ae10398251579ceda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacecli_1a2c92abe043545f8b709dc9f3437d1b8e" kindref="member">text</ref></type>
+        <definition>text cli::get_message_desc</definition>
+        <argsstring>(CrInt32u code)</argsstring>
+        <name>get_message_desc</name>
+        <qualifiedname>cli::get_message_desc</qualifiedname>
+        <param>
+          <type>CrInt32u</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.cpp" line="6" column="10" bodyfile="data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.cpp" bodystart="6" bodyend="43" declfile="data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.h" declline="11" declcolumn="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp" line="63" column="1"/>
+  </compounddef>
+</doxygen>

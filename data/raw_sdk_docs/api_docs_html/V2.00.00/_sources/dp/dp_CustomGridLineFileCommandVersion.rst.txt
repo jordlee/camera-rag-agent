@@ -1,0 +1,26 @@
+﻿.. _dp-CustomGridLineFileCommandVersion:
+
+CrDeviceProperty_CustomGridLineFileCommandVersion
+=================================================
+
+Get the enabled status and dataset version (CustomGridLineFile).
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - variable
+    - | Dataset Version
+
+| ex) The Dataset Version is 0x00000064 (0d100).
+| When CustomGridLineFile feature is invalid, IsEnable field is disabled.
+
+| \*A license is required to use this function. Without a license, this function is not available.
+| The sales policy for this license varies by region.
+| Details: https://helpguide.sony.net/di/gridline_2420/v1/h_zz/index.html
+

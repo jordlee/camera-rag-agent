@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_EframingProductionEffect.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-EframingProductionEffect:\n\nCrDeviceProperty_EframingProductionEffect\n=========================================\n\nGet/Set the eframing production effect\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrEframingProductionEffect_Off\n    - | Off\n\n  * - CrEframingProductionEffect_IntervalZoomInOut_15sec\n    - | Interval Zoom In/Out (15sec)\n\n  * - CrEframingProductionEffect_IntervalZoomInOut_30sec\n    - | Interval Zoom In/Out (30sec)",
+    "metadata": {
+        "title": "dp_EframingProductionEffect",
+        "sdk_version": "V2.00.00"
+    }
+}

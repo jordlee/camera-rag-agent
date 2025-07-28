@@ -1,0 +1,22 @@
+﻿.. _dp-CustomWB_Capture_Operation:
+
+CrDeviceProperty_CustomWB_Capture_Operation
+===========================================
+
+Get the Custom WB Capture Operation Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPropertyCustomWBOperation_Disable
+    - | Disable
+
+  * - CrPropertyCustomWBOperation_Enable 
+    - | Enable
+

@@ -1,0 +1,41 @@
+{
+    "refid": "_cr_error_8h",
+    "kind": "file",
+    "name": "CrError.h",
+    "source_file": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrError.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "_cr_error_8h_1accbe577c13ec6f4651e611d95f75f7f0",
+            "kind": "define",
+            "name": "CR_SUCCEEDED",
+            "visibility": "define",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrError.h",
+            "params": []
+        },
+        {
+            "id": "_cr_error_8h_1adbc85ea8b007c8fbbe4e2a89d13b3526",
+            "kind": "define",
+            "name": "CR_FAILED",
+            "visibility": "define",
+            "type": "",
+            "definition": "",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrError.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "CrError.h",
+        "sdk_version": "V2.00.00"
+    }
+}

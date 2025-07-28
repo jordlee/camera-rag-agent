@@ -1,0 +1,33 @@
+﻿.. _dp-Focus_Operation:
+
+CrDeviceProperty_Focus_Operation
+=============================================
+
+Execute the focus operation.
+
+| This device property is valid when :ref:`CrDeviceProperty_FocalDistanceInMeter<dp-FocalDistanceInMeter>` or :ref:`CrDeviceProperty_FocalDistanceInFeet<dp-FocalDistanceInFeet>` is enabled.
+
+    CrDataType: `CrDataType_Int8`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - -1
+    - min
+
+  * - 1
+    - max
+
+  * - 1
+    - step
+
+| The CurrentValue of this device property is always zero. Update only.
+| Can be set within the range of :ref:`CrDeviceProperty_Focus_Speed_Range<dp-Focus_Speed_Range>`.
+| Ex.) SetValue = 1  : Tele focus (focus speed=1)
+|        SetValue = -3 : Wide focus (focus speed=3)
+|        SetValue = 0  : Stop focus
+

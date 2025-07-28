@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CameraPowerStatus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-CameraPowerStatus:\n\nCrDeviceProperty_CameraPowerStatus\n==================================\n\nGet the Camera Power Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCameraPowerStatus_Off\n    - | Off\n\n  * - CrCameraPowerStatus_Standby\n    - | Standby\n\n  * - CrCameraPowerStatus_PowerOn\n    - | Power On\n\n  * - CrCameraPowerStatus_TransitioningFromPowerOnToStandby\n    - | Transitioning from PowerOn to Standby\n\n  * - CrCameraPowerStatus_TransitioningFromStandbyToPowerOn\n    - | Transitioning from Standby to Power On",
+    "metadata": {
+        "title": "dp_CameraPowerStatus",
+        "sdk_version": "V2.00.00"
+    }
+}

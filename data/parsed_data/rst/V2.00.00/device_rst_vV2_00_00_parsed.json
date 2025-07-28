@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/api_reference/device.rst.txt",
+    "file_type": "rst",
+    "content": ".. _api-header-device:\n\nDevice\n======\n\n.. _api-release-device:\n\nReleaseDevice\n-------------\n\n**Overview**\n\n  This API requests that the SDK release the resources allocated for the specified device.\n  \n  Calling this API will invalidate the provided deviceHandle. Do not attempt to reuse it after calling this API.\n\n**Definition**\n  `CrError ReleaseDevice(CrDeviceHandle deviceHandle);`\n\n**Input parameters**\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Type\n    - Explanation\n\n  * - CrDeviceHandle\n    - deviceHandle\n\n**Output parameters**\n\n  None\n\n**Return value**\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Type\n    - Explanation\n\n  * - CrError\n    - | CrError_None If the deviceHandle is a valid handle.\n      | CrError_Init if the SDK is uninitialized\n      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle\n      | Other than errors above, see :ref:`Status code & Error<status-code-error>`\n\n**Related API**\n\n  - :ref:`Connect<api-connect>`\n  - :ref:`Disconnect<api-disconnect>`\n  - :ref:`IDeviceCallback::OnDisconnected<callback-interface>`\n\n**Special note (details)**\n  This function releases the resources associated with the specified device handle.",
+    "metadata": {
+        "title": "device",
+        "sdk_version": "V2.00.00"
+    }
+}

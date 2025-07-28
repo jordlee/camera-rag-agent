@@ -1,0 +1,22 @@
+﻿.. _dp-FlashCompensation:
+
+CrDeviceProperty_FlashCompensation
+==================================
+
+Get/Set the Flash Compensation
+
+    CrDataType: `CrDataType_Int16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Any
+    - | The value is obtained by multiplying a real Flash Compensation value by 1000.
+      | e.g.) 0xEC78 = -5000 (means -5.0Ev)
+      |         0x0000 = 0 (means 0.0Ev)
+      |         0x1388 = 5000 (means 5.0Ev)
+

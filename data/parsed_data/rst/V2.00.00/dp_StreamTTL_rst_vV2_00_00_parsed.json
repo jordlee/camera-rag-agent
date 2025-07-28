@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_StreamTTL.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-StreamTTL:\n\nCrDeviceProperty_StreamTTL\n==========================\n\nGet/Set the streaming TTL setting.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step",
+    "metadata": {
+        "title": "dp_StreamTTL",
+        "sdk_version": "V2.00.00"
+    }
+}

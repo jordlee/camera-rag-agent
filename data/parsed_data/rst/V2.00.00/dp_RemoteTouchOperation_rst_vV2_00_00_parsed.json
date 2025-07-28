@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RemoteTouchOperation.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-RemoteTouchOperation:\n\nCrDeviceProperty_RemoteTouchOperation\n=====================================\n\nExecute remote touch operation (x, y).\n\n    CrDataType: `CrDataType_UInt32`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000000\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 1\n    - step\n\n\n| The CurrentValue of this property is always zero.\n| For ILCE-7SM3 and ILCE-7C, only available in movie mode.\n| Note:\n| This property can only be executed if :ref:`CrDeviceProperty_RemoteTouchOperationEnableStatus<dp-RemoteTouchOperationEnableStatus>` is Enable.\n| The x coordinate is set in the upper two bytes and the y coordinate is set in the lower two bytes\n| The range of X is 0 ~ 639 (0x027F), and the range of Y is 0 ~ 479 (0x01DF).",
+    "metadata": {
+        "title": "dp_RemoteTouchOperation",
+        "sdk_version": "V2.00.00"
+    }
+}

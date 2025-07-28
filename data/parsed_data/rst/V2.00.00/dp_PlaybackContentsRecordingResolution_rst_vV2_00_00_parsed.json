@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PlaybackContentsRecordingResolution.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PlaybackContentsRecordingResolution:\n\nCrDeviceProperty_PlaybackContentsRecordingResolution\n====================================================\n\nGet the playback contents recording resolution.\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - 0x00000000～0xFFFFFFFF\n    - | Recording resolution(Width , Height)\n\n\n| The \"Width\" is set in the upper two bytes and the \"Height\" is set in the lower two bytes\n| if resolution (Width) is 1920, (Height) is 1080, set 0x07800438. 0x0780 = 0d1920, 0x0438 = 0d1080",
+    "metadata": {
+        "title": "dp_PlaybackContentsRecordingResolution",
+        "sdk_version": "V2.00.00"
+    }
+}

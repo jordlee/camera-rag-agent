@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_BaseISOSwitchEI.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-BaseISOSwitchEI:\n\nCrDeviceProperty_BaseISOSwitchEI\n================================\n\nGet/Set the Base ISO Switch EI\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Variable\n    - | Exposure Index to Switch BaseISO\n\n| e.g.)  If setting with \"1600EI\", set 0x0640",
+    "metadata": {
+        "title": "dp_BaseISOSwitchEI",
+        "sdk_version": "V2.00.00"
+    }
+}

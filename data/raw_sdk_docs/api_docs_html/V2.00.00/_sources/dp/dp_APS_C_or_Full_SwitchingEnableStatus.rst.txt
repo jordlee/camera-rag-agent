@@ -1,0 +1,22 @@
+﻿.. _dp-APS_C_or_Full_SwitchingEnableStatus:
+
+CrDeviceProperty_APS_C_or_Full_SwitchingEnableStatus
+====================================================
+
+Get the APS-C or Full Switching Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAPS_C_or_Full_Switching_Disable
+    - | Disable
+
+  * - CrAPS_C_or_Full_Switching_Enable
+    - | Enable
+

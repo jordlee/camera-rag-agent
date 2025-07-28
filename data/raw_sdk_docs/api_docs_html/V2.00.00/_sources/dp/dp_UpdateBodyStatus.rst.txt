@@ -1,0 +1,49 @@
+﻿.. _dp-UpdateBodyStatus:
+
+CrDeviceProperty_UpdateBodyStatus
+=================================
+
+Get the Update Body Status
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrUpdateStatus_NoError
+    - | No error
+
+  * - CrUpdateStatus_OtherError
+    - | Other errors
+
+  * - CrUpdateStatus_NoUpdateFileInMedia
+    - | No update body file in media
+
+  * - CrUpdateStatus_FileVersionOlder
+    - | File version older
+
+  * - CrUpdateStatus_FileDamaged
+    - | File damaged
+
+  * - CrUpdateStatus_FileInvalidData
+    - | File invalid data
+
+  * - CrUpdateStatus_FileModelNotMatch
+    - | File model not match
+
+  * - CrUpdateStatus_FileRegionNotMatch
+    - | File region not match
+
+  * - CrUpdateStatus_FileVersionNotMatch
+    - | File version not match
+
+  * - CrUpdateStatus_LowBattery
+    - | Low battery
+
+  * - CrUpdateStatus_UnsupportedBattery
+    - | Unsupported battery
+

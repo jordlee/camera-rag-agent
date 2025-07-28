@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CurrentSceneFileEdited.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-CurrentSceneFileEdited:\n\nCrDeviceProperty_CurrentSceneFileEdited\n=======================================\n\nGet the Current SceneFile Edited Info.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCurrentSceneFileEdited_Unedited\n    - | Unedited \n\n  * - CrCurrentSceneFileEdited_Edited\n    - | Edited",
+    "metadata": {
+        "title": "dp_CurrentSceneFileEdited",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PushAutoFocus.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-PushAutoFocus:\n\nCrDeviceProperty_PushAutoFocus\n==============================\n\nGet/Set the push auto focus.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPushAutoFocus_Up\n    - | Up\n\n  * - CrPushAutoFocus_Down\n    - | Down\n\n| Execute Hold when value is Down (0x0002) and cancel Hold when Up (0x0001).\n| When the focus mode is AF, it works MF while the button is hold.\n| When the focus mode is MF, it works AF while the button is hold.",
+    "metadata": {
+        "title": "dp_PushAutoFocus",
+        "sdk_version": "V2.00.00"
+    }
+}

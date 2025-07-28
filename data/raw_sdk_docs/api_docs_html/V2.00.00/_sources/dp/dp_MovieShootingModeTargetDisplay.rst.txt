@@ -1,0 +1,25 @@
+﻿.. _dp-MovieShootingModeTargetDisplay:
+
+CrDeviceProperty_MovieShootingModeTargetDisplay
+===============================================
+
+Get/Set the Movie Shooting Mode Target Display
+
+| See “:ref:`Get the menu display string<op-get-the-menu-display-string>`” for menu display characters.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieShootingModeTargetDisplay_BT709
+    - | BT.709
+
+  * - CrMovieShootingModeTargetDisplay_BT2020
+    - | BT.2020
+
+

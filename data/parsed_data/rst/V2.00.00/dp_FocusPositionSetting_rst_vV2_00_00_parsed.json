@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusPositionSetting.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FocusPositionSetting:\n\nCrDeviceProperty_FocusPositionSetting\n=====================================\n\nGet/Set the Absolute Focus Position\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x0000\n    - min\n\n  * - 0xFFFF\n    - max\n\n  * - 0x0001\n    - step\n\n| Environmental changes or the focus position of the lens, such as Near/Far edge vicinity, may cause errors in the original position the lens returns.\n| Please use this property with larger Aperture Value (F-Number) to deepen the depth of field and confirm the focus position the lens returns in advanced.\n| refs How to use Focus Position Setting",
+    "metadata": {
+        "title": "dp_FocusPositionSetting",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ExposureIndex.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ExposureIndex:\n\nCrDeviceProperty_ExposureIndex\n==============================\n\nGet/Set the Exposure Index\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Variable\n    - | Exposure Index\n\n| Set the EI value, The set value varies depending on the model and the setting status of the camera.\n| See GetDisplayStringList() for display character string and highlight latitude list associated with EI.\n| Ex.) If setting with \"200EI / 4.0E\", set 0x00C8.",
+    "metadata": {
+        "title": "dp_ExposureIndex",
+        "sdk_version": "V2.00.00"
+    }
+}

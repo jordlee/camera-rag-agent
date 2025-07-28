@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusIndication.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-FocusIndication:\n\nCrDeviceProperty_FocusIndication\n================================\n\nGet the Focus Indication\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFocusIndicator_Unlocked\n    - | Unlock\n\n  * - CrFocusIndicator_Focused_AF_S \n    - | [AF-S]Focused, and AF Locked State\n\n  * - CrFocusIndicator_NotFocused_AF_S \n    - | [AF-S]Not focused, and Low Contrast State \n\n  * - CrFocusIndicator_TrackingSubject_AF_C \n    - | [AF-C]Tracking Subject motion\n\n  * - CrFocusIndicator_Focused_AF_C \n    - | [AF-C]Focused State\n\n  * - CrFocusIndicator_NotFocused_AF_C \n    - | [AF-C]Not Focused, and Low Contrast State \n\n  * - CrFocusIndicator_Unpause\n    - | Unpause\n\n  * - CrFocusIndicator_Pause\n    - | Pause",
+    "metadata": {
+        "title": "dp_FocusIndication",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,29 @@
+.. _sample-connect:
+
+sample code - "connect"
+=======================
+
+usage:
+------
+
+* for SSH connection(Access Authen.Settings=On)
+
+.. code-block:: cpp
+
+    fingerprint: FBfvXPEdXHymp1QmcGTfegHgyeObiQoxPTY+C98PY1k=
+    id:test
+    password:xxxxxxxx
+    Connected to ILX-LR1 (C8:4D:44:10:75:5D)
+
+* for pairing connection
+
+  0. connect camera to network, [Access Authen.Settings=Off], [PC Remote=On]
+  1. (camera) menu - [Network] - [Cnct./PC Remote] - [PC Remote Function] - [Pairing]
+  2. (PC) Launch sample app.
+  3. (camera) [Allow paring with the device?] - [OK]
+
+Save the following code as "RemoteCli.cpp", replace "app/RemoteCli.cpp" in the SDK, then build.
+
+.. literalinclude:: /_static/connect.cpp
+   :language: cpp
+   :linenos:

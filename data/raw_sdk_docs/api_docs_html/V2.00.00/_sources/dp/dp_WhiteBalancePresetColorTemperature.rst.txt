@@ -1,0 +1,25 @@
+﻿.. _dp-WhiteBalancePresetColorTemperature:
+
+CrDeviceProperty_WhiteBalancePresetColorTemperature
+===================================================
+
+Get/Set the preset color temperature.
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+

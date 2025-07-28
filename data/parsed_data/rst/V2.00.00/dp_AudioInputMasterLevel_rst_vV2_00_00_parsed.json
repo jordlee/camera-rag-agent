@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AudioInputMasterLevel.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-AudioInputMasterLevel:\n\nCrDeviceProperty_AudioInputMasterLevel\n======================================\n\nGet/Set the Audio Input Master Level\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| You can adjust the audio recording level.",
+    "metadata": {
+        "title": "dp_AudioInputMasterLevel",
+        "sdk_version": "V2.00.00"
+    }
+}

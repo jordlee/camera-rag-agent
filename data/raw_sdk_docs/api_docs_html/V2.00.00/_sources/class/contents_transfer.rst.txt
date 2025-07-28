@@ -1,0 +1,125 @@
+.. _contents-transfer:
+
+Contents Transfer
+=================
+
+.. _cr-mtp-folder-info:
+
+CrMtpFolderInfo
+---------------
+
+Class describing content storage folder.
+
+Has a folder handle and date information. This folder handle is used to get the "CrContentHandle" needed to pull out the content.
+
+Member Variables
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Summary
+
+    * - handle
+      - CrFolderHandle
+      - Date folder handle.
+    * - folderNameSize
+      - CrInt32u
+      - Size of the folderName.
+    * - folderName
+      - CrChar*
+      - Folder name. format:“YYYY-MM-DD”
+
+
+Member Functions
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Signature
+      - Description
+
+    * - Constructor
+      - \-
+    * - Destructor
+      - \-
+    * - Copy Constructor
+      - \-
+    * - void Alloc(const CrInt32u size)
+      - It cannot be used.
+
+.. _cr-mtp-contents-info:
+
+CrMtpContentsInfo
+-----------------
+
+Class describing content.
+
+Includes information about the content file name, content file size, and supported values.
+
+This information is used to pull content from the media inserted in the camera slot.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - handle
+    - CrContentHandle
+    - Content handle.
+  * - parentFolderHandle
+    - CrFolderHandle
+    - Handle of the Date Folder where the content is saved.
+  * - contentSize
+    - CrInt64u
+    - Size of the content.
+  * - dateChar
+    - CrChar[16]
+    - | Shooting date and time.
+      | format : “YYYYMMDDThhmmss”
+      |   ex) 7/16/2010 1:25:46 PM= 20100716T132546
+  * - width
+    - CrInt32u
+    - Content width. unit : pixel
+  * - height
+    - CrInt32u
+    - Content height. unit : pixel
+  * - fileNameSize
+    - CrInt32u
+    - Size of the fileName.
+  * - fileName
+    - CrChar*
+    - | Content name.
+      | The content file extensions you can get are as follows
+      |   - Still image : JPG, HIF, ARW
+      |   - Movie/Proxy Movie :  MP4, MTS
+      |
+      | Note :
+      | The AVCHD file name is in "YYYYMMDDhhmmss" format (datetime).
+      |   ex) 20100716132546.MTS
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Signature
+    - Description
+  
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+  * - Copy Constructor
+    - \-
+  * - void Alloc(const CrInt32u size)
+    - It cannot be used.

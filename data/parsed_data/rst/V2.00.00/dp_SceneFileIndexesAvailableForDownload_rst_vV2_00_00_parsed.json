@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SceneFileIndexesAvailableForDownload.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-SceneFileIndexesAvailableForDownload:\n\nCrDeviceProperty_SceneFileIndexesAvailableForDownload\n=====================================================\n\nGet the SceneFile Indexes Available for Download.\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - 0x00000000\n    - | None\n\n  * - Other than above values\n    - | \\-\n\n\n| It may increase or decrease because it varies depending on the model and setting status.\n| Related Function: :ref:`DownloadSceneFile()<api-DownloadSceneFile>` with Type of data(SceneFile).\n| Get the list of value with GetDisplayValueSize and GetDisplayValues.",
+    "metadata": {
+        "title": "dp_SceneFileIndexesAvailableForDownload",
+        "sdk_version": "V2.00.00"
+    }
+}

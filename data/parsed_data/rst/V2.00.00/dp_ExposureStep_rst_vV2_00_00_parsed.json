@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ExposureStep.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-ExposureStep:\n\nCrDeviceProperty_ExposureStep\n=============================\n\nGet/Set the exposure step width.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrExposureStep_Invalid\n    - | Invalid\n\n  * - Other than above values\n    - | 100 times the real value of Exposure Step Width\n      | e.g.) 0x001E = 30/100 = 0.3 EV\n      | e.g.) 0x0032 = 50/100 = 0.5 EV",
+    "metadata": {
+        "title": "dp_ExposureStep",
+        "sdk_version": "V2.00.00"
+    }
+}

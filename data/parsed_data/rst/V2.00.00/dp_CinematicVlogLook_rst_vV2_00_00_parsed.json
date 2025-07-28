@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CinematicVlogLook.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-CinematicVlogLook:\n\nCrDeviceProperty_CinematicVlogLook\n==================================\n\nGet/Set the cinematic vlog look.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCinematicVlogLook_Classic\n    - | Classic\n\n  * - CrCinematicVlogLook_S_Cinetone\n    - | S-cinetone\n\n  * - CrCinematicVlogLook_Clean\n    - | Clean\n\n  * - CrCinematicVlogLook_Chic\n    - | Chic\n\n  * - CrCinematicVlogLook_Fresh\n    - | Fresh\n\n  * - CrCinematicVlogLook_Mono\n    - | Mono\n\n  * - CrCinematicVlogLook_User1\n    - | User1\n\n  * - CrCinematicVlogLook_User2\n    - | User2\n\n  * - CrCinematicVlogLook_User3\n    - | User3\n\n  * - CrCinematicVlogLook_User4\n    - | User4\n\n  * - CrCinematicVlogLook_User5\n    - | User5\n\n  * - CrCinematicVlogLook_User6\n    - | User6\n\n  * - CrCinematicVlogLook_User7\n    - | User7\n\n  * - CrCinematicVlogLook_User8\n    - | User8\n\n  * - CrCinematicVlogLook_User9\n    - | User9\n\n  * - CrCinematicVlogLook_User10\n    - | User10\n\n  * - CrCinematicVlogLook_User11\n    - | User11\n\n  * - CrCinematicVlogLook_User12\n    - | User12\n\n  * - CrCinematicVlogLook_User13\n    - | User13\n\n  * - CrCinematicVlogLook_User14\n    - | User14\n\n  * - CrCinematicVlogLook_User15\n    - | User15\n\n  * - CrCinematicVlogLook_User16\n    - | User16",
+    "metadata": {
+        "title": "dp_CinematicVlogLook",
+        "sdk_version": "V2.00.00"
+    }
+}

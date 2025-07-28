@@ -1,0 +1,9 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DifferentSetForSQMovie.rst.txt",
+    "file_type": "rst",
+    "content": "﻿.. _dp-DifferentSetForSQMovie:\n\nCrDeviceProperty_DifferentSetForSQMovie\n=======================================\n\nGet/Set the Different Set for S&Q/Mv\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrDifferentSetForSQMovie_On_Different\n    - | ON (Different)\n\n  * - CrDifferentSetForSQMovie_Off_Identical\n    - | OFF (Identical)\n\n| If this command is Different, Movie/S&Q commands are independent.\n| If this command is Identical, Movie command will be common, and S&Q command will be Disable.\n| Affected commands:   \n|   :ref:`CrDeviceProperty_Movie_Recording_FrameRateSetting<dp-Movie_Recording_FrameRateSetting>`\n|   :ref:`CrDeviceProperty_SQRecordingFrameRateSetting<dp-SQRecordingFrameRateSetting>`\n|   :ref:`CrDeviceProperty_Movie_Recording_Setting<dp-Movie_Recording_Setting>`\n|   :ref:`CrDeviceProperty_SQRecordingSetting<dp-SQRecordingSetting>`",
+    "metadata": {
+        "title": "dp_DifferentSetForSQMovie",
+        "sdk_version": "V2.00.00"
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "refid": "struct_s_c_r_s_d_k_1_1_cr_contents_file___audio_param",
+    "kind": "struct",
+    "name": "SCRSDK::CrContentsFile_AudioParam",
+    "source_file": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+    "brief_description": "",
+    "detailed_description": "",
+    "members": [
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_contents_file___audio_param_1af0d5a97476e72c9dc11e36360e5eb2b2",
+            "kind": "variable",
+            "name": "audioCodec",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrContentsFile_AudioCodec SCRSDK::CrContentsFile_AudioParam::audioCodec",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_contents_file___audio_param_1ac4ec3add87d9beb22029063fa5d58389",
+            "kind": "variable",
+            "name": "audioBitDepth",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrContentsFile_AudioParam::audioBitDepth",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_contents_file___audio_param_1a66a70e9958241b147df527f54e945bbe",
+            "kind": "variable",
+            "name": "samplingRate",
+            "visibility": "public-attrib",
+            "type": "CrInt32u",
+            "definition": "CrInt32u SCRSDK::CrContentsFile_AudioParam::samplingRate",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        },
+        {
+            "id": "struct_s_c_r_s_d_k_1_1_cr_contents_file___audio_param_1a91c885e213163146131d4e1470ac8a11",
+            "kind": "variable",
+            "name": "numberOfChannels",
+            "visibility": "public-attrib",
+            "type": "",
+            "definition": "CrContentsFile_NumberOfChannels SCRSDK::CrContentsFile_AudioParam::numberOfChannels",
+            "argsstring": "",
+            "brief_description": "",
+            "detailed_description": "",
+            "location": "data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h",
+            "params": []
+        }
+    ],
+    "inner_compounds": [],
+    "metadata": {
+        "title": "SCRSDK::CrContentsFile_AudioParam",
+        "sdk_version": "V1.14.00"
+    }
+}

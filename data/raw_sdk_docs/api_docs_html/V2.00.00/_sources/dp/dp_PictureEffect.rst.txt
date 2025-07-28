@@ -1,0 +1,118 @@
+﻿.. _dp-PictureEffect:
+
+CrDeviceProperty_PictureEffect
+==============================
+
+Get/Set the Picture Effect Value
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPictureEffect_Off
+    - | OFF
+
+  * - CrPictureEffect_ToyCameraNormal
+    - | Toy Camera Normal
+
+  * - CrPictureEffect_ToyCameraCool
+    - | Toy Camera Cool
+
+  * - CrPictureEffect_ToyCameraWarm
+    - | Toy Camera Warm
+
+  * - CrPictureEffect_ToyCameraGreen
+    - | Toy Camera Green
+
+  * - CrPictureEffect_ToyCameraMagenta
+    - | Toy Camera Magenta
+
+  * - CrPictureEffect_Pop
+    - | Pop Color
+
+  * - CrPictureEffect_PosterizationBW
+    - | Posterization B/W
+
+  * - CrPictureEffect_PosterizationColor
+    - | Posterization Color
+
+  * - CrPictureEffect_Retro
+    - | Retro Photo
+
+  * - CrPictureEffect_SoftHighkey
+    - | Soft High-key
+
+  * - CrPictureEffect_PartColorRed
+    - | Partial Color Red
+
+  * - CrPictureEffect_PartColorGreen
+    - | Partial Color Green
+
+  * - CrPictureEffect_PartColorBlue
+    - | Partial Color Blue
+
+  * - CrPictureEffect_PartColorYellow
+    - | Partial Color Yellow
+
+  * - CrPictureEffect_HighContrastMonochrome
+    - | High Contrast Mono
+
+  * - CrPictureEffect_SoftFocusLow
+    - | Soft Focus Low
+
+  * - CrPictureEffect_SoftFocusMid
+    - | Soft Focus Mid
+
+  * - CrPictureEffect_SoftFocusHigh
+    - | Soft Focus High
+
+  * - CrPictureEffect_HDRPaintingLow
+    - | HDR Painting Low
+
+  * - CrPictureEffect_HDRPaintingMid
+    - | HDR Painting Mid
+
+  * - CrPictureEffect_HDRPaintingHigh
+    - | HDR Painting High
+
+  * - CrPictureEffect_RichToneMonochrome
+    - | Rich-tone Mono
+
+  * - CrPictureEffect_MiniatureAuto
+    - | Miniature Auto
+
+  * - CrPictureEffect_MiniatureTop
+    - | Miniature Top
+
+  * - CrPictureEffect_MiniatureMidHorizontal
+    - | Miniature Middle(Horizontal)
+
+  * - CrPictureEffect_MiniatureBottom
+    - | Miniature Bottom
+
+  * - CrPictureEffect_MiniatureRight
+    - | Miniature Right
+
+  * - CrPictureEffect_MiniatureMidVertical
+    - | Miniature Middle(Vertical)
+
+  * - CrPictureEffect_MiniatureLeft
+    - | Miniature Left
+
+  * - CrPictureEffect_MiniatureWaterColor
+    - | Miniature Water Color
+
+  * - CrPictureEffect_MiniatureIllustrationLow
+    - | Miniature Illustration Low
+
+  * - CrPictureEffect_MiniatureIllustrationMid
+    - | Miniature Illustration Mid
+
+  * - CrPictureEffect_MiniatureIllustrationHigh
+    - | Miniature Illustration High
+

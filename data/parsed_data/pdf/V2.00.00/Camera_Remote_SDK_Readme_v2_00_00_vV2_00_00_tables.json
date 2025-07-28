@@ -1,0 +1,482 @@
+{
+    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/docs/V2.00.00/Camera_Remote_SDK_Readme_v2.00.00.pdf",
+    "file_type": "pdf_tables",
+    "content": [
+        {
+            "page": 1,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Contents for Windows (Include files)\nunzip\nCrSDK_vX.XX.XX_YYYYMMDDx.zip\n1.CameraRemote_SDK.h\n2.CrCommandData.h\nCrSDK_vX.XX.XX_YYYYMMDDx app CRSDK 3.CrDefines.h\n4.CrDeviceProperty.h\n1.enum_cli_hdr.cmake 5.CrError.h\n2.enum_cli_src.cmake 6.CrImageDataBlock.h\n3.enum_crsdk_hdr.cmake 7.CrTypes.h\ncmake\n8.ICrCameraObjectInfo.h\n1.Cr_Core.dll 9.IDeviceCallback.h\n2.Cr_Core.lib\n3.monitor_protocol.dll 1.CameraDevice.cpp\nexternal crsdk 4.monitor_protocol_pf.dll 2.CameraDevice.h\n3.ConnectionInfo.cpp\n1.Cr_PTP_IP.dll 4.ConnectionInfo.h\n2.Cr_PTP_USB.dll 5.CrDebugString.cpp\nCrAdapter 3.libusb-1.0.dll 6.CrDebugString.h\n4.libssh2.dll 7.MessageDefine.cpp\n8.MessageDefine.h\nOpenCV libraries in use SDK.\n9.OpenCVWrapper.cpp\nopencv 10.OpenCVWrapper.h\n11.PropertyValueTable.cpp\n12.PropertyValueTable.h\nDevice driver. 13.RemoteCli.cpp\n14.Text.cpp\nDriver\n15.Text.h\n1.CMakeLists.txt\n2.README.md\n3.Camera_Remote_SDK_Readme_vx.xx.xx.pdf\n4.CrSDK_API_Reference_vx.xx.xx.zip\n5.RemoteSampleApp_IM_vx.xx.xx.pdf\n6.libusb.zip\n7.libssh2.zip\n8.openssl.zip\n9.opencv.zip"
+            ]
+        },
+        {
+            "page": 2,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Contents for Windows (When build for SampleApp)\nunzip\nCrSDK_vX.XX.XX_YYYYMMDDx.zip\nCrSDK_vX.XX.XX_YYYYMMDDx app CRSDK\ncmake\nPlease remove below if you don't use Monitoring function or\nmovie playback function.\n1.monitor_protocol.dll\nexternal crsdk 2.monitor_protocol_pf.dll\nCrAdapter\nopencv\nDriver\nFirstly, make build directory\nand execute cmake\nCmake related folders/files\nto create Visual studio\nbuild CMakeFiles solution/project files here.\nDetails are explained\nRemoteCli.sln in the file “RemoteSampleApp_IM_vx.xx.xx.pdf”\n+related files\nSecondly, build RemoteCli.sln\nRemoteCli.exe with Visual Studio, then\n+related folders/files RemoteCli.exe will be created here.\nRelease"
+            ]
+        },
+        {
+            "page": 3,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Contents for Linux (Include files)\nunzip\nCrSDK_vX.XX.XX_YYYYMMDDx.zip\n1.CameraRemote_SDK.h\n2.CrCommandData.h\nCrSDK_vX.XX.XX_YYYYMMDDx app CRSDK 3.CrDefines.h\n4.CrDeviceProperty.h\n1.enum_cli_hdr.cmake 5.CrError.h\n2.enum_cli_src.cmake 6.CrImageDataBlock.h\n3.enum_crsdk_hdr.cmake 7.CrTypes.h\ncmake 8.ICrCameraObjectInfo.h\n9.IDeviceCallback.h\n1.libCr_Core.so\n2.libmonitor_protocol.so\n3.libmonitor_protocol_pf.so 1.CameraDevice.cpp\nexternal crsdk 2.CameraDevice.h\n3.ConnectionInfo.cpp\n1.libCr_PTP_IP.so\n4.ConnectionInfo.h\n2.libCr_PTP_USB.so\n5.CrDebugString.cpp\n3.libusb-1.0.so\nCrAdapter 6.CrDebugString.h\n4.libssh2.so\n7.MessageDefine.cpp\n8.MessageDefine.h\n9.OpenCVWrapper.cpp\n10.OpenCVWrapper.h\nOpenCV libraries in use SDK.\n11.PropertyValueTable.cpp\nopencv 12.PropertyValueTable.h\n13.RemoteCli.cpp\n14.Text.cpp\n1.CMakeLists.txt 15.Text.h\n2.README.md\n3.Camera_Remote_SDK_Readme_vx.xx.xx.pdf\n4.CrSDK_API_Reference_vx.xx.xx.zip\n5.RemoteSampleApp_IM_vx.xx.xx.pdf\n6.libusb.zip\n7.libssh2.zip\n8.openssl.zip\n9.opencv.zip"
+            ]
+        },
+        {
+            "page": 4,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Contents for Linux (When build for SampleApp)\nunzip\nCrSDK_vX.XX.XX_YYYYMMDDx.zip\nCrSDK_vX.XX.XX_YYYYMMDDx app CRSDK\ncmake\nPlease remove below if you don't use Monitoring function or\nmovie playback function.\n1.libmonitor_protocol.so\nexternal crsdk 2.libmonitor_protocol_pf.so\nCrAdapter\nopencv\nFirstly, make build directory\nand execute cmake.build\nCmake related folders/files\nDetails are explained\nbuild CMakeFiles in the file “RemoteSampleApp_IM_vx.xx.xx.pdf”\nMakefile\n+related folder/files\nRemoteCli The build results will be found in \"build\""
+            ]
+        },
+        {
+            "page": 5,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Contents for macOS (Include files)\nunzip\nCrSDK_vX.XX.XX_YYYYMMDDx.zip\n1.CameraRemote_SDK.h\n2.CrCommandData.h\nCrSDK_vX.XX.XX_YYYYMMDDx app CRSDK 3.CrDefines.h\n4.CrDeviceProperty.h\n1.enum_cli_hdr.cmake 5.CrError.h\n2.enum_cli_src.cmake 6.CrImageDataBlock.h\n3.enum_crsdk_hdr.cmake 7.CrTypes.h\ncmake 8.ICrCameraObjectInfo.h\n9.IDeviceCallback.h\n1.libCr_Core.dylib\n2.libmonitor_protocol.dylib\n3.libmonitor_protocol_pf.dylib 1.CameraDevice.cpp\nexternal crsdk 2.CameraDevice.h\n3.ConnectionInfo.cpp\n1.libCr_PTP_IP.dylib\n4.ConnectionInfo.h\n2.libCr_PTP_USB.dylib\n5.CrDebugString.cpp\n3.libusb-1.0.0.dylib\nCrAdapter 6.CrDebugString.h\n4.libssh2.dylib\n7.MessageDefine.cpp\n8.MessageDefine.h\n9.OpenCVWrapper.cpp\n10.OpenCVWrapper.h\nOpenCV libraries in use SDK.\n11.PropertyValueTable.cpp\nopencv 12.PropertyValueTable.h\n13.RemoteCli.cpp\n14.Text.cpp\n1.CMakeLists.txt 15.Text.h\n2.README.md\n3.Camera_Remote_SDK_Readme_vx.xx.xx.pdf\n4.CrSDK_API_Reference_vx.xx.xx.zip\n5.RemoteSampleApp_IM_vx.xx.xx.pdf\n6.libusb.zip\n7.libssh2.zip\n8.openssl.zip\n9.opencv.zip"
+            ]
+        },
+        {
+            "page": 6,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Contents for macOS (When build for SampleApp)\nunzip\nCrSDK_vX.XX.XX_YYYYMMDDx.zip\nCrSDK_vX.XX.XX_YYYYMMDDx app CRSDK\ncmake\nPlease remove below if you don't use Monitoring function or\nmovie playback function.\n1.libmonitor_protocol.dylib\nexternal crsdk 2.libmonitor_protocol_pf.dylib\nCrAdapter\nopencv\nFirstly, make build directory\nand execute cmake\nCmake related folders/files\nto create Xcode\nbuild CMakeFiles project files here.\nDetails are explained\nRemoteCli.xcodeproj in the file “RemoteSampleApp_IM_vx.xx.xx.pdf”\n+related folder/files\nSecondly, build\nRemoteCli.xcodeproj\nRemoteCli\nwith Xcode, then RemoteCli will be\nRelease created here."
+            ]
+        },
+        {
+            "page": 7,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Release\n◇CrSDK_vX.X.XX_YYYYMMDDx folder\nManual files and Readme files are included.\n◇RemoteSampleApp_IM_vx.xx.xx.pdf\nIt is recommended tostart and learn how it works with this sample application first.\nPlease read Sample Application Manual first of all, as the condition/preparation/build explanation is described.\nYou can build with the file/folder configuration as it is.\n◇Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf\nAPI Reference for CameraRemoteSDK. Also sequence, tips & trouble shooting, and product help guide URL are included.\n◇Readme.pdf\nThis file.\n◇app folder\nSource files and CRSDK folder are included.\n◇CRSDK folder\nHeader files are included. When you build your application, you need the files in this folder to use SDK APIs.\nIf the header files have changed, you need to replace the header files and rebuild.\n◇external folder\nLibrary files are included.\nWhen you build/distribute your application, you need the files in external/crsdkfolder,\nhowever please note that the file “libusb-1.0.xx” is Open Source Software\nand you need to cover its license conditions. In detail, please check the libusb website http://libusb.info/.\n◇libusb.zip\nYou can check the source files including the license/copyright descriptions by unzipping this file.\nLicense Agreement of this Camera Remote SDK is linked with the following URL. http://www.sony.net/CameraRemoteSDK/\nSony is a trademark or registered trademark of Sony Corporation. All other trademarks and copyrights are the property of their respective owners."
+            ]
+        },
+        {
+            "page": 8,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes about libusb when using Silex Technology “SX Virtual Link” application\n◇In the case Silex Technology “SX Virtual Link” application is installed,\nthere is a possibility that Sony camera is not recognized by SDK.\nThen, please replace the following file with the one downloaded from Silex Site.\nAlso the latest “SX Virtual Link” must be installed.\n◆The file to be replaced in SDK\nCrAdapter/libusb-1.0.dll\n◆Silex Site for libusb download\nhttps://www.silex.jp/support/downfile/libusb-1.0(UDS04022020).zip\n◆Silex Site for the latest “SX Virtual Link” install\nhttps://www.silex.jp/support/download/virtuallink.html\n#Regarding Silex Site, only Japanese web site is available as of March in 2021."
+            ]
+        },
+        {
+            "page": 9,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.00.01 Release\n◇Please replace following 2 dll files to update from Ver. 1.00.00 to Ver. 1.00.01.\nCr_Core.dll\nCrAdapter/Cr_PTP_USB.dll\n◇ If you are using LiveView function, please refer to the Sample Application code\nand update your Application code, as the memory new/delete codes are updated.\n“void CameraDevice::get_live_view()” of the “CameraDevice.cpp”\n◇ If you are using command line output, please refer to the Sample Application code\nand update your Application code, as the locale setting codes are added.\n“int main()” of the “RemoteCli.cpp(RemoteSampleApp.cpp)”"
+            ]
+        },
+        {
+            "page": 10,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.01.00 Release\n◇Linux package is added.\n◇Some supporting commands are added.\nPlease check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇Please replace following 2 dll files to update from former versions to the latest version.\nCr_Core.dll\nCrAdapter/Cr_PTP_USB.dll\n#In Linux case, “dll” should be replaced with “so”."
+            ]
+        },
+        {
+            "page": 11,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.02.00 Release\n◇Linux 32bit ARMv7 package is added.\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\nPlease check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇Please replace following 2 dll files to update from former versions to the latest version.\nCr_Core.dll\nCrAdapter/Cr_PTP_USB.dll\n#In Linux case, “dll” should be replaced with “so”."
+            ]
+        },
+        {
+            "page": 12,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.02.01 Release\n◇ This version is released for Windows only.\n◇ The stability issue occasionally happened when connecting/disconnecting the camera via\nUSB was fixed.\n◇Please replace following 2 dll files to update from former versions to the latest version.\nCr_Core.dll\nCrAdapter/Cr_PTP_USB.dll"
+            ]
+        },
+        {
+            "page": 13,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.03.00 Release\n◇macOS package is added.\n◇Some supporting commands are added.\nPlease check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 2 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_USB.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 14,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.04.00 Release\n◇\"Supporting products\" is updated.\n◇PC Linux package is added.\n◇\"Supporting physical layer\" is updated.\n- The information about models supporting ethernet is added.\n◇Some supporting commands are added.\n- Please check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 3 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 15,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.05.00 Release\n◇\"Supporting products\" is updated.\n◇Added some support commands and the function to pull out contents from the camera.\n- Please check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 3 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”.\nAdded three callback functions, the application needs to prepare three new functions\nin a class that inherits IDeviceCallback."
+            ]
+        },
+        {
+            "page": 16,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.06.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 4 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libusb-1.0.dll\nA parameter has been added to the OnCompleteDownload callback function.\nClasses that inherit from IDeviceCallback must correspond to the changed definition.\n◇Support for Ethernet-connected cameras with SSH authentication.\nThe following dll files are required for this.\nCrAdapter/libssh2.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 17,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.07.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 3 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 18,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.08.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 5 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libssh2.dll\nCrAdapter/libusb-1.0.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”.\nThe 5 files for macOS have been updated to universal binaries.\n◇To update each camera to the latest System Software (Firmware) before use."
+            ]
+        },
+        {
+            "page": 19,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.08.00 Release\n◇ Frame Rate Setting value\nThe CrDeviceProperty_Movie_Recording_FrameRateSetting values for the following models have been\nchanged to be represented by exact values.\n- ILME-FX3 (Ver. 3.00 or late)\n- ILME-FX30 (Ver. 2.00 or late)\nWhen using these models, please refer to the table and replace the definitions.\nVer 1.07.00 Ver 1.08.00\nEnumeration\nILME-FX6 Other ILME-FX3/ILME-FX30 Other\nCrRecordingFrameRateSettingMovie_120p - -\nCrRecordingFrameRateSettingMovie_100p -\nCrRecordingFrameRateSettingMovie_60p - -\nCrRecordingFrameRateSettingMovie_50p\nCrRecordingFrameRateSettingMovie_30p - -\nCrRecordingFrameRateSettingMovie_25p Same as\nCrRecordingFrameRateSettingMovie_24p - Ver 1.07.00\nCrRecordingFrameRateSettingMovie_23_98p -\nCrRecordingFrameRateSettingMovie_29_97p -\nCrRecordingFrameRateSettingMovie_59_94p -\nCrRecordingFrameRateSettingMovie_24_00p - -\nCrRecordingFrameRateSettingMovie_119_88p - -"
+            ]
+        },
+        {
+            "page": 19,
+            "table_number_on_page": 2,
+            "data": [
+                [
+                    null,
+                    "ILME-FX6",
+                    "Other",
+                    "ILME-FX3/ILME-FX30",
+                    "Other"
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_120p",
+                    "-",
+                    "",
+                    "-",
+                    "Same as\nVer 1.07.00"
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_100p",
+                    "-",
+                    "",
+                    "",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_60p",
+                    "-",
+                    "",
+                    "-",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_50p",
+                    "",
+                    "",
+                    "",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_30p",
+                    "-",
+                    "",
+                    "-",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_25p",
+                    "",
+                    "",
+                    "",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_24p",
+                    "",
+                    "",
+                    "-",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_23_98p",
+                    "",
+                    "-",
+                    "",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_29_97p",
+                    "",
+                    "-",
+                    "",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_59_94p",
+                    "",
+                    "-",
+                    "",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_24_00p",
+                    "-",
+                    "-",
+                    "",
+                    null
+                ],
+                [
+                    "CrRecordingFrameRateSettingMovie_119_88p",
+                    "-",
+                    "-",
+                    "",
+                    null
+                ]
+            ],
+            "headers": [
+                "Enumeration",
+                "Ver 1.07.00",
+                null,
+                "Ver 1.08.00",
+                null
+            ]
+        },
+        {
+            "page": 20,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.09.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 5 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libssh2.dll\nCrAdapter/libusb-1.0.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 21,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.10.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 5 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libssh2.dll\nCrAdapter/libusb-1.0.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 22,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.11.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Sony_CameraRemoteSDK_API-Reference_vx.xx.xx.pdf in detail.\n◇To update the SDK to the latest version,\nplease replace following 5 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libssh2.dll\nCrAdapter/libusb-1.0.dll\n◇Support for Monitoring functions. (only for MPC-2610)\nThe following dll files are required for this.\nmonitor_protocol.dll\nmonitor_protocol_pf.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 23,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.12.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Camera_Remote_SDK_API_Reference_vx.xx.xx.pdf in detail.\n◇\"Supporting physical layer\" is updated.\n- The information about models supporting wireless ethernet connection is added.\n◇To update the SDK to the latest version,\nplease replace following 7 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nmonitor_protocol.dll\nmonitor_protocol_pf.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libssh2.dll\nCrAdapter/libusb-1.0.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 24,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.13.00 Release 1/2\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Camera_Remote_SDK_API_Reference_vx.xx.xx.pdf in detail.\n◆ New connection mode “RemoteTransferMode”. This mode can transfer contents in media during remote control.\n◆ Get OSD(On-Screen Display) Image function.\n◆ Firmware update at remote.\n◇ Add new color mode to CrDeviceProperty_PictureProfile_ColorMode\n- New color mode “CrPictureProfileColorMode_709tone” added.\nAt ILME-FX30, the existing \"CrPictureProfileColorMode_Pro\" will be changed to\n\"CrPictureProfileColorMode_709tone\".\nCamera Display\nCurrentValue\nprev now\nCrPictureProfileColorMode_Pro Pro -\nILME-FX30\nCrPictureProfileColorMode_709tone 709tone\nCrPictureProfileColorMode_Pro Pro Pro\nOther\nCrPictureProfileColorMode_709tone 709tone"
+            ]
+        },
+        {
+            "page": 24,
+            "table_number_on_page": 2,
+            "data": [
+                [
+                    "",
+                    null,
+                    "prev",
+                    "now"
+                ],
+                [
+                    "ILME-FX30",
+                    "CrPictureProfileColorMode_Pro",
+                    "Pro",
+                    "-"
+                ],
+                [
+                    null,
+                    "CrPictureProfileColorMode_709tone",
+                    "",
+                    "709tone"
+                ],
+                [
+                    "Other",
+                    "CrPictureProfileColorMode_Pro",
+                    "Pro",
+                    "Pro"
+                ],
+                [
+                    null,
+                    "CrPictureProfileColorMode_709tone",
+                    "",
+                    "709tone"
+                ]
+            ],
+            "headers": [
+                "",
+                "CurrentValue",
+                "Camera Display",
+                null
+            ]
+        },
+        {
+            "page": 25,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.13.00 Release 2/2\n◇To update the SDK to the latest version,\nplease replace following 7 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nmonitor_protocol.dll\nmonitor_protocol_pf.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libssh2.dll\nCrAdapter/libusb-1.0.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 26,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 1.14.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check Camera_Remote_SDK_API_Reference_vx.xx.xx.pdf in detail.\n◇\"Supporting physical layer\" is updated.\n- The information about models supporting wireless ethernet connection is added.\n◇To update the SDK to the latest version,\nplease replace following 7 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nmonitor_protocol.dll\nmonitor_protocol_pf.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libssh2.dll\nCrAdapter/libusb-1.0.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        },
+        {
+            "page": 27,
+            "table_number_on_page": 1,
+            "data": [
+                [
+                    ""
+                ]
+            ],
+            "headers": [
+                "■Notes for SDK Ver 2.00.00 Release\n◇\"Supporting products\" is updated.\n◇Some supporting commands are added.\n- Please check CrSDK_API_Reference_vx.xx.xx.zip in detail.\n◆ Content deletion is now available in RemoteTransferMode.\n◆ Support for PTZ cameras has been added.\n◇\"Supporting physical layer\" is updated.\n- The information about models supporting wireless ethernet connection is added.\n◇To update the SDK to the latest version,\nplease replace following 7 dll files and\nplease replace the header files in CRSDK folder and rebuild your application.\nCr_Core.dll\nmonitor_protocol.dll\nmonitor_protocol_pf.dll\nCrAdapter/Cr_PTP_IP.dll\nCrAdapter/Cr_PTP_USB.dll\nCrAdapter/libssh2.dll\nCrAdapter/libusb-1.0.dll\n#In Linux case, “dll” should be replaced with “so”.\n#In macOS case, “dll” should be replaced with “dylib”."
+            ]
+        }
+    ],
+    "metadata": {
+        "title": "Camera_Remote_SDK_Readme_v2.00.00",
+        "sdk_version": "V2.00.00",
+        "extracted_type": "tables",
+        "num_tables": 29
+    }
+}

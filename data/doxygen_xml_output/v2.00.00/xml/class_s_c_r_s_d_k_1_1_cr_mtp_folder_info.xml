@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrMtpFolderInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a004f85be183ef3d20ad90b4ef1dff194" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ac9aff0730369c9c44edda2abaede426a" kindref="member">CrFolderHandle</ref></type>
+        <definition>CrFolderHandle SCRSDK::CrMtpFolderInfo::handle</definition>
+        <argsstring></argsstring>
+        <name>handle</name>
+        <qualifiedname>SCRSDK::CrMtpFolderInfo::handle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5722" column="16" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5722" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a252c1ecf0588fc5a01afe13be224d77d" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMtpFolderInfo::folderNameSize</definition>
+        <argsstring></argsstring>
+        <name>folderNameSize</name>
+        <qualifiedname>SCRSDK::CrMtpFolderInfo::folderNameSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5723" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5723" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1afa8e20a0f78a2847514f27f13f7ca636" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref> *</type>
+        <definition>CrChar* SCRSDK::CrMtpFolderInfo::folderName</definition>
+        <argsstring></argsstring>
+        <name>folderName</name>
+        <qualifiedname>SCRSDK::CrMtpFolderInfo::folderName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5724" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5724" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1aca5e341fd686d43983534a0a5e9f1a19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMtpFolderInfo::CrMtpFolderInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrMtpFolderInfo</name>
+        <qualifiedname>SCRSDK::CrMtpFolderInfo::CrMtpFolderInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5712" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1ace14a1583892c626f5865c3631a4fd96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMtpFolderInfo::~CrMtpFolderInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrMtpFolderInfo</name>
+        <qualifiedname>SCRSDK::CrMtpFolderInfo::~CrMtpFolderInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5713" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1aab43511b46236369f57cb566ecbdcc7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMtpFolderInfo::CrMtpFolderInfo</definition>
+        <argsstring>(const CrMtpFolderInfo &amp;ref)</argsstring>
+        <name>CrMtpFolderInfo</name>
+        <qualifiedname>SCRSDK::CrMtpFolderInfo::CrMtpFolderInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info" kindref="compound">CrMtpFolderInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5714" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a7f3683976872d80736e912552591e9dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info" kindref="compound">CrMtpFolderInfo</ref> &amp;</type>
+        <definition>CrMtpFolderInfo &amp; SCRSDK::CrMtpFolderInfo::operator=</definition>
+        <argsstring>(const CrMtpFolderInfo &amp;ref)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SCRSDK::CrMtpFolderInfo::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info" kindref="compound">CrMtpFolderInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5715" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1afdb5ef09b998b5e78e7d9235f1b9b8d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SCRSDK::CrMtpFolderInfo::Alloc</definition>
+        <argsstring>(const CrInt32u size)</argsstring>
+        <name>Alloc</name>
+        <qualifiedname>SCRSDK::CrMtpFolderInfo::Alloc</qualifiedname>
+        <param>
+          <type>const CrInt32u</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5719" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5709" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5710" bodyend="5725"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1afdb5ef09b998b5e78e7d9235f1b9b8d8" prot="private" virt="non-virtual"><scope>SCRSDK::CrMtpFolderInfo</scope><name>Alloc</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1aca5e341fd686d43983534a0a5e9f1a19" prot="public" virt="non-virtual"><scope>SCRSDK::CrMtpFolderInfo</scope><name>CrMtpFolderInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1aab43511b46236369f57cb566ecbdcc7b" prot="public" virt="non-virtual"><scope>SCRSDK::CrMtpFolderInfo</scope><name>CrMtpFolderInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1afa8e20a0f78a2847514f27f13f7ca636" prot="public" virt="non-virtual"><scope>SCRSDK::CrMtpFolderInfo</scope><name>folderName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a252c1ecf0588fc5a01afe13be224d77d" prot="public" virt="non-virtual"><scope>SCRSDK::CrMtpFolderInfo</scope><name>folderNameSize</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a004f85be183ef3d20ad90b4ef1dff194" prot="public" virt="non-virtual"><scope>SCRSDK::CrMtpFolderInfo</scope><name>handle</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1a7f3683976872d80736e912552591e9dc" prot="public" virt="non-virtual"><scope>SCRSDK::CrMtpFolderInfo</scope><name>operator=</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_mtp_folder_info_1ace14a1583892c626f5865c3631a4fd96" prot="public" virt="non-virtual"><scope>SCRSDK::CrMtpFolderInfo</scope><name>~CrMtpFolderInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

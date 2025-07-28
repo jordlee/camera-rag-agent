@@ -1,0 +1,608 @@
+.. _api-header-contents-transfer-with-remote-control:
+
+Contents Transfer with remote control
+=====================================
+
+.. _api-get-remote-transfer-captured-date-list:
+
+GetRemoteTransferCapturedDateList
+---------------------------------
+
+**Overview**
+    Get captured date list in selected media.
+
+    This function is the first function to call when pulling out the content in the camera.
+
+**Definition**
+  `CrError GetRemoteTransferCapturedDateList(CrDeviceHandle deviceHandle, CrSlotNumber slotNumber, CrCaptureDate** captureDateList, CrInt32u* nums);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrSlotNumber
+    - | slotNumber
+      | Specifies the slot from which to get the date list.
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrCaptureDate**
+    - | captureDateList
+      | :ref:`CrCaptureDate<cr-capture-date>` list pointer.
+  * - CrInt32u*
+    - | nums
+      | Number of list of CrCaptureDate.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success (Include case that nothing contents in media)
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`ReleaseRemoteTransferCapturedDateList<api-release-remote-transfer-captured-date-list>`
+  - :ref:`GetRemoteTransferContentsInfoList<api-get-remote-transfer-contents-info-list>`
+
+**Special note (details)**
+  None in particular 
+
+.. _api-get-remote-transfer-contents-info-list:
+
+GetRemoteTransferContentsInfoList
+---------------------------------
+
+**Overview**
+  Get the list of contents info at selected date in selected media.
+
+**Definition**
+  `CrError GetRemoteTransferContentsInfoList(CrDeviceHandle deviceHandle, CrSlotNumber slotNumber, CrGetContentsInfoListType type, CrCaptureDate* captureDate, CrInt32u maxNums, CrContentsInfo** contentsInfoList, CrInt32u* nums);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrSlotNumber
+    - | slotNumber
+      | Specifies the slot from which to get the date list.
+  * - CrGetContentsInfoListType
+    - | type
+      | Specifies the type of get contents info range.
+      | See: :ref:`CrGetContentsInfoListType<cr-get-contents-info-list-type>`
+  * - CrCaptureDate*
+    - | captureDate
+      | Specifies base datetime at get contents info.
+  * - CrInt32u
+    - | maxNums
+      | Specifies max count of get contents info.
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrContentsInfo**
+    - | contentsInfoList
+      | :ref:`CrContentsInfo<cr-contents-info>` list pointer.
+  * - CrInt32u*
+    - | nums
+      | Number of list of CrContentsInfo.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success (Include case that nothing contents in media)
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`ReleaseRemoteTransferContentsInfoList<api-release-remote-transfer-contents-info-list>`
+  - :ref:`GetRemoteTransferContentsData<api-get-remote-transfer-contents-data>`
+  - :ref:`GetRemoteTransferContentsDataFile<api-get-remote-transfer-contents-data-file>`
+  - :ref:`GetRemoteTransferContentsCompressedData<api-get-remote-transfer-contents-compressed-data>`
+  - :ref:`GetRemoteTransferContentsCompressedDataFile<api-get-remote-transfer-contents-compressed-data-file>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-get-remote-transfer-contents-data:
+
+GetRemoteTransferContentsData
+-----------------------------
+
+**Overview**
+  Get the contents from media. Data has receive at callback argument.
+
+  This api not support for transfer movie contents.
+
+  See: :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+
+**Definition**
+  `CrError GetRemoteTransferContentsData(CrDeviceHandle deviceHandle, CrSlotNumber slotNumber, CrInt32u contentsId, CrInt32u fileId, CrInt32u divisionSize);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrSlotNumber
+    - | slotNumber
+      | Specifies the slot from which to get the date list.
+  * - CrInt32u
+    - | contentsId
+      | Specifies the target contents id that get from CrContentsInfo.
+  * - CrInt32u
+    - | fileId
+      | Specifies the target file id that get from CrContentsInfo.
+  * - CrInt32u
+    - | divisionSize
+      | Specifies the size of division when transfer content.
+      | Max size is “CrREMOTETRANSFER_PARTIAL_FILE_SIZE_MAX”
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_RemoteTransfer_VideoFileNotSupported on target contents is video.
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetRemoteTransferContentsInfoList<api-get-remote-transfer-contents-info-list>`
+  - :ref:`GetRemoteTransferContentsDataFile<api-get-remote-transfer-contents-data-file>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+    | See: :ref:`GetRemoteTransferContentsData, GetRemoteTransferContentsDataFile, GetRemoteTransferContentsCompressedData, GetRemoteTransferContentsCompressedDataFile callback<cb-get-remote-transfer-contents-compressed-data-file>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-get-remote-transfer-contents-data-file:
+
+GetRemoteTransferContentsDataFile
+---------------------------------
+
+**Overview**
+  Get the contents from media, then write data to file. Written file path has receive at callback argument.
+
+  See: :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+
+**Definition**
+  `CrError GetRemoteTransferContentsDataFile(CrDeviceHandle deviceHandle, CrSlotNumber slotNumber, CrInt32u contentsId, CrInt32u fileId, CrInt32u divisionSize, CrChar* path, CrChar* fileName);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrSlotNumber
+    - | slotNumber
+      | Specifies the slot from which to get the date list.
+  * - CrInt32u
+    - | contentsId
+      | Specifies the target contents id that get from CrContentsInfo.
+  * - CrInt32u
+    - | fileId
+      | Specifies the target file id that get from CrContentsInfo.
+  * - CrInt32u
+    - | divisionSize
+      | Specifies the size of division when transfer content.
+      | Max size is “CrREMOTETRANSFER_PARTIAL_FILE_SIZE_MAX”
+  * - CrChar*
+    - | path
+      | This parameter is optional.
+      | If not specified, the path specified in the second parameter of SetSaveInfo will be used. To do this, use :ref:`SetSaveInfo<api-set-save-info>` to change the save destination path in advance. If a path that does not exist in this parameter is specified, or if this parameter is not specified and SetSaveInfo is not used, normal operation of content transfer cannot be guaranteed.
+  * - CrChar*
+    - | fileName
+      | This parameter is optional.
+      | If not specified, the content will be saved with the file name.
+      | If the file name conflicts with an existing file, an additional number is appended after the file name like DSC01234(1).JPG.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetRemoteTransferContentsInfoList<api-get-remote-transfer-contents-info-list>`
+  - :ref:`ControlGetRemoteTransferContentsDataFile<api-control-get-remote-transfer-contents-data-file>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+    | See: :ref:`GetRemoteTransferContentsData, GetRemoteTransferContentsDataFile, GetRemoteTransferContentsCompressedData, GetRemoteTransferContentsCompressedDataFile callback<cb-get-remote-transfer-contents-compressed-data-file>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-control-get-remote-transfer-contents-data-file:
+
+ControlGetRemoteTransferContentsDataFile
+----------------------------------------
+
+**Overview**
+  Control contents transfer by :ref:`GetRemoteTransferContentsDataFile()<api-get-remote-transfer-contents-data-file>`.
+
+**Definition**
+  `CrError ControlGetRemoteTransferContentsDataFile(CrDeviceHandle deviceHandle, CrGetContentsDataControlType type);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrGetContentsDataControlType
+    - | type
+      | See: :ref:`CrGetContentsDataControlType<cr-get-contents-data-control-type>`
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetRemoteTransferContentsDataFile<api-get-remote-transfer-contents-data-file>`
+  - :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-get-remote-transfer-contents-compressed-data:
+
+GetRemoteTransferContentsCompressedData
+---------------------------------------
+
+**Overview**
+  Get the compressed contents from media. Data has receive at callback argument.
+
+  See: :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+
+**Definition**
+  `CrError GetRemoteTransferContentsCompressedData(CrDeviceHandle deviceHandle, CrSlotNumber slotNumber, CrInt32u contentsId, CrInt32u fileId, CrGetContentsCompressedDataType type);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrSlotNumber
+    - | slotNumber
+      | Specifies the slot from which to get the date list.
+  * - CrInt32u
+    - | contentsId
+      | Specifies the target contents id that get from CrContentsInfo.
+  * - CrInt32u
+    - | fileId
+      | Specifies the target file id that get from CrContentsInfo.
+  * - CrGetContentsCompressedDataType
+    - | type
+      | Specifies the compress size.
+      | See: :ref:`CrGetContentsCompressedDataType<cr-get-contents-compressed-data-type>`
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetRemoteTransferContentsCompressedDataFile<api-get-remote-transfer-contents-compressed-data-file>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+    | See: :ref:`GetRemoteTransferContentsData, GetRemoteTransferContentsDataFile, GetRemoteTransferContentsCompressedData, GetRemoteTransferContentsCompressedDataFile callback<cb-get-remote-transfer-contents-compressed-data-file>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-get-remote-transfer-contents-compressed-data-file:
+
+GetRemoteTransferContentsCompressedDataFile
+-------------------------------------------
+
+**Overview**
+  Get the compressed contents from media, then write data to file. Written file path has receive at callback argument.
+
+  See: :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+
+**Definition**
+  `CrError GetRemoteTransferContentsCompressedDataFile(CrDeviceHandle deviceHandle, CrSlotNumber slotNumber, CrInt32u contentsId, CrInt32u fileId, CrGetContentsCompressedDataType type, CrChar* path, CrChar* fileName);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrSlotNumber
+    - | slotNumber
+      | Specifies the slot from which to get the date list.
+  * - CrInt32u
+    - | contentsId
+      | Specifies the target contents id that get from CrContentsInfo.
+  * - CrInt32u
+    - | fileId
+      | Specifies the target file id that get from CrContentsInfo.
+  * - CrGetContentsCompressedDataType
+    - | type
+      | Specifies the compress size.
+      | See: :ref:`CrGetContentsCompressedDataType<cr-get-contents-compressed-data-type>`
+  * - CrChar*
+    - | path
+      | Specifies the path of file that write receive data.
+  * - CrChar*
+    - | filename
+      | Specifies the name of file that write receive data.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetRemoteTransferContentsCompressedData<api-get-remote-transfer-contents-compressed-data>`
+  - | :ref:`IDeviceCallback::OnNotifyRemoteTransferResult<callback-interface>`
+    | See: :ref:`GetRemoteTransferContentsData, GetRemoteTransferContentsDataFile, GetRemoteTransferContentsCompressedData, GetRemoteTransferContentsCompressedDataFile callback<cb-get-remote-transfer-contents-compressed-data-file>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-release-remote-transfer-captured-date-list:
+
+ReleaseRemoteTransferCapturedDateList
+-------------------------------------
+
+**Overview**
+  This function releases the CrCaptureDate allocated by GetRemoteTransferCapturedDateList.
+
+**Definition**
+  `CrError ReleaseRemoteTransferCapturedDateList(CrDeviceHandle deviceHandle, CrCaptureDate* dateList);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrCaptureDate*
+    - | dateList
+      | Captured date list pointer to release.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetRemoteTransferCapturedDateList<api-get-remote-transfer-captured-date-list>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-release-remote-transfer-contents-info-list:
+
+ReleaseRemoteTransferContentsInfoList
+-------------------------------------
+
+**Overview**
+  This function releases the CrContentsInfo allocated by GetRemoteTransferContentsInfoList.
+
+**Definition**
+  `CrError ReleaseRemoteTransferContentsInfoList(CrDeviceHandle deviceHandle, CrContentsInfo* contentsInfoList);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrContentsInfo*
+    - | contentsInfoList
+      | Contents info list pointer to release.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetRemoteTransferContentsInfoList<api-get-remote-transfer-contents-info-list>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-delete-remote-transfer-contents-file:
+
+DeleteRemoteTransferContentsFile
+--------------------------------
+
+**Overview**
+  Delete the contents from media.
+
+**Definition**
+  `CrError DeleteRemoteTransferContentsFile(CrDeviceHandle deviceHandle, CrSlotNumber slotNumber, CrInt32u contentsId)`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrSlotNumber
+    - | slotNumber
+      | the number of camera slot.
+  * - CrInt32u
+    - | contentsId
+      | ID of contents.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetRemoteTransferContentsInfoList<api-get-remote-transfer-contents-info-list>`
+  - | :ref:`OnWarningExt<callback-interface>`
+
+**Special note (details)**
+  None in particular
