@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AFTrackingSensitivity.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-AFTrackingSensitivity:\n\nCrDeviceProperty_AFTrackingSensitivity\n======================================\n\nGet/Set the AF Tracking Sensitivity(Still)\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAFTrackingSensitivity_5\n    - | 5 (Responsive)\n\n  * - CrAFTrackingSensitivity_4\n    - | 4\n\n  * - CrAFTrackingSensitivity_3\n    - | 3 (Standard)\n\n  * - CrAFTrackingSensitivity_2\n    - | 2\n\n  * - CrAFTrackingSensitivity_1\n    - | 1 (Locked on)",
-    "metadata": {
-        "title": "dp_AFTrackingSensitivity",
-        "sdk_version": "V2.00.00"
-    }
-}

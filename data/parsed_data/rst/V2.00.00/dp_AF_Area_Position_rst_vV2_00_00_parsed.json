@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AF_Area_Position.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-AF_Area_Position:\n\nCrDeviceProperty_AF_Area_Position\n=================================\n\nSet the AF Area Position(x,y)\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000000\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 1\n    - step\n\n\n| Set the center position of the AF frame.\n| The x coordinate is set in the upper two bytes and the y coordinate is set in the lower two bytes\n| The range of X is 0 ~ 639 (0x027F), and the range of Y is 0 ~ 479 (0x01DF).\n| AF frame size is acquired by :ref:`CrFocusFrameInfo<cr-focus-frame-info>`.\n| CrFocusFrameInfo is in :ref:`LiveViewProperty<op-get-the-liveview-properties>`.\n| The settable area is more inside by half the frame size than CrFocusFrameInfo.xDenominator/yDenominator.\n|  \n| Note:\n|  The range in which the coordinates can be specified varies depending on the model, aspect setting, and AF setting.\n|  \n| Fig.Relationship between CrFocusframeInfo and settable area\n\n.. image:: /_images/dp_AF_Area_Position_fig.png\n  :width: 50%",
-    "metadata": {
-        "title": "dp_AF_Area_Position",
-        "sdk_version": "V2.00.00"
-    }
-}

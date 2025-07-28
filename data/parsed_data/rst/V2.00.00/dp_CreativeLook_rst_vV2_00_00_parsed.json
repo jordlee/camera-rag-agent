@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CreativeLook.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-CreativeLook:\n\nCrDeviceProperty_CreativeLook\n=============================\n\nGet/Set the Creative Look\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCreativeLook_Standard\n    - | ST(Standard)\n\n  * - CrCreativeLook_Portrait\n    - | PT(Portrait)\n\n  * - CrCreativeLook_Neutral\n    - | NT(Neutral)\n\n  * - CrCreativeLook_Vivid\n    - | VV(Vivid)\n\n  * - CrCreativeLook_Vivid2\n    - | VV2(Vivid2)\n\n  * - CrCreativeLook_Film\n    - | FL(Film)\n\n  * - CrCreativeLook_Instant\n    - | IN(Instant)\n\n  * - CrCreativeLook_SoftHighkey\n    - | SH(Soft Highkey)\n\n  * - CrCreativeLook_BlackWhite\n    - | BW(Black&White)\n\n  * - CrCreativeLook_Sepia\n    - | SE(Sepia)\n\n  * - CrCreativeLook_Film2\n    - | FL2(Film2)\n\n  * - CrCreativeLook_Film3\n    - | FL3(Film3)\n\n  * - CrCreativeLook_CustomLookOffset\n    - | CustomLook offset.\n      | When the upper 8 bits are 0x01, it means CustomLook.\n      | e.g.) 0x0101 = CustomLook 1\n      | e.g.) 0x0103 = CustomLook 3\n\n\n| It may increase or decrease because it varies depending on the model and setting status.\n| See :ref:`GetDisplayStringList()<api-get-display-string-list>`.",
-    "metadata": {
-        "title": "dp_CreativeLook",
-        "sdk_version": "V2.00.00"
-    }
-}

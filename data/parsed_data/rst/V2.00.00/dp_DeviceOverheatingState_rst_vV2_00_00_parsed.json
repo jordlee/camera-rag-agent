@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DeviceOverheatingState.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DeviceOverheatingState:\n\nCrDeviceProperty_DeviceOverheatingState\n=======================================\n\nGet the Device Overheating State\n\n    CrDataType: `CrDataType_Int8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| The current value can be one of the following three.\n| CrDeviceOverheatingState_NotOverheating\n| CrDeviceOverheatingState_PreOverheating\n| CrDeviceOverheatingState_Overheating",
-    "metadata": {
-        "title": "dp_DeviceOverheatingState",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MovieForwardButton.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MovieForwardButton:\n\nCrDeviceProperty_MovieForwardButton\n===================================\n\nGet/Set the Movie Forward button\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMovieXButton_Up\n    - | Fast-forward playback of movie.\n\n  * - CrMovieXButton_Down\n    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_MoviePlayButton<dp-MoviePlayButton>`.",
-    "metadata": {
-        "title": "dp_MovieForwardButton",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_BatteryLevel.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-BatteryLevel:\n\nCrDeviceProperty_BatteryLevel\n=============================\n\nGet the Battery Level Indicator\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrBatteryLevel_Fake\n    - | Fake Battery\n\n  * - CrBatteryLevel_PreEndBattery\n    - | Pre-End Battery\n\n  * - CrBatteryLevel_1_4\n    - | Battery Level 1/4\n\n  * - CrBatteryLevel_2_4\n    - | Battery Level 2/4\n\n  * - CrBatteryLevel_3_4\n    - | Battery Level 3/4\n\n  * - CrBatteryLevel_4_4\n    - | Battery Level 4/4\n\n  * - CrBatteryLevel_1_3\n    - | Battery Level 1/3\n\n  * - CrBatteryLevel_2_3\n    - | Battery Level 2/3\n\n  * - CrBatteryLevel_3_3\n    - | Battery Level 3/3\n\n  * - CrBatteryLevel_PreEnd_PowerSupply\n    - | Pre-End Battery with USB Bus Power Supply\n\n  * - CrBatteryLevel_1_4_PowerSupply\n    - | Battery Level 1/4 with USB Bus Power Supply\n\n  * - CrBatteryLevel_2_4_PowerSupply\n    - | Battery Level 2/4 with USB Bus Power Supply\n\n  * - CrBatteryLevel_3_4_PowerSupply\n    - | Battery Level 3/4 with USB Bus Power Supply\n\n  * - CrBatteryLevel_4_4_PowerSupply\n    - | Battery Level 4/4 with USB Bus Power Supply\n\n  * - CrBatteryLevel_USBPowerSupply\n    - | USB Bus Power Supply\n\n  * - CrBatteryLevel_BatteryNotInstalled\n    - | Battery not installed",
-    "metadata": {
-        "title": "dp_BatteryLevel",
-        "sdk_version": "V2.00.00"
-    }
-}

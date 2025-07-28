@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_BatteryRemainingInVoltage.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-BatteryRemainingInVoltage:\n\nCrDeviceProperty_BatteryRemainingInVoltage\n==========================================\n\nGet the Battery Remaining in voltage\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000000\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 0x01\n    - step\n\n| CrBatteryRemainingInVoltage_Untaken(0xFFFFFFFF) is untaken.\n| 1000 times the real value of Battery Remaining in voltage.",
-    "metadata": {
-        "title": "dp_BatteryRemainingInVoltage",
-        "sdk_version": "V2.00.00"
-    }
-}

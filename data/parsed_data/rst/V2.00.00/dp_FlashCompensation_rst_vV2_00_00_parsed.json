@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FlashCompensation.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FlashCompensation:\n\nCrDeviceProperty_FlashCompensation\n==================================\n\nGet/Set the Flash Compensation\n\n    CrDataType: `CrDataType_Int16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Any\n    - | The value is obtained by multiplying a real Flash Compensation value by 1000.\n      | e.g.) 0xEC78 = -5000 (means -5.0Ev)\n      |         0x0000 = 0 (means 0.0Ev)\n      |         0x1388 = 5000 (means 5.0Ev)",
-    "metadata": {
-        "title": "dp_FlashCompensation",
-        "sdk_version": "V2.00.00"
-    }
-}

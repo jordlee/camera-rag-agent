@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_WhiteBalanceRGain.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-WhiteBalanceRGain:\n\nCrDeviceProperty_WhiteBalanceRGain\n==================================\n\nGet/Set the white balance R gain.\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - -32768\n    - min\n\n  * - 32767\n    - max\n\n  * - 1\n    - step\n\n| 10 times the real value of White Balance R Gain",
-    "metadata": {
-        "title": "dp_WhiteBalanceRGain",
-        "sdk_version": "V2.00.00"
-    }
-}

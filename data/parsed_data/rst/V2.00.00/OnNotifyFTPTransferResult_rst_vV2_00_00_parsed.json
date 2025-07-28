@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/status_code_error/OnNotifyFTPTransferResult.rst.txt",
-    "file_type": "rst",
-    "content": ".. _on-notify-ftp-transfer-result:\n\nOnNotifyFTPTransferResult\n=========================\n  This is a callback that notifies the number of contents transferred to the host PC by the FTP Transfer function.\n\n**Definition**\n  void OnNotifyFTPTransferResult(CrInt32u notify, CrInt32u numOfSuccess, CrInt32u numOfFail);\n\n.. 0x9233\n.. _cb-request-ftp-transfer-result:\n\n:ref:`RequestFTPTransferResult<api-request-ftp-transfer-result>` callback\n-------------------------------------------------------------------------\n\n**notify**\n  .. list-table::\n      :widths: auto\n      :header-rows: 1\n\n      * - notify code\n\n      * - CrNotify_FTPTransferResult_Success\n\n      * - CrNotify_FTPTransferResult_Failure\n\n**numOfSuccess**\n\n**numOfFail**",
-    "metadata": {
-        "title": "OnNotifyFTPTransferResult",
-        "sdk_version": "V2.00.00"
-    }
-}

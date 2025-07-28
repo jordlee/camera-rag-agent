@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Zoom_Operation_Status.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Zoom_Operation_Status:\n\nCrDeviceProperty_Zoom_Operation_Status\n======================================\n\nGet the Zoom Operation Enable Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrZoomOperationEnableStatus_Disable\n    - | Disable\n\n  * - CrZoomOperationEnableStatus_Enable\n    - | Enable",
-    "metadata": {
-        "title": "dp_Zoom_Operation_Status",
-        "sdk_version": "V2.00.00"
-    }
-}

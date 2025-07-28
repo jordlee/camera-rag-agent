@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_UserBaseLookOutput.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-UserBaseLookOutput:\n\nCrDeviceProperty_UserBaseLookOutput\n===================================\n\nGet/Set the UserBaseLook output.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrUserBaseLookOutput_BT709\n    - | BT.709\n\n  * - CrUserBaseLookOutput_BT709_Legal\n    - | BT.709(Legal)\n\n  * - CrUserBaseLookOutput_HLG\n    - | HLG\n\n  * - CrUserBaseLookOutput_HLG_Legal\n    - | HLG(Legal)\n\n| Set “UserBaseLook Output” for the UserBaseLook selected in “Select UserBaseLook to Edit.”",
-    "metadata": {
-        "title": "dp_UserBaseLookOutput",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MediaSLOT2Player.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MediaSLOT2Player:\n\nCrDeviceProperty_MediaSLOT2Player\n=================================\n\nGet the Media SLOT2 Player\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMediaPlayer_None\n    - | None\n\n  * - CrMediaPlayer_Player\n    - | Player\n\n  * - CrMediaPlayer_Recorder\n    - | Recorder\n\n  * - CrMediaPlayer_Player_Recorder\n    - | Player and Recorder",
-    "metadata": {
-        "title": "dp_MediaSLOT2Player",
-        "sdk_version": "V2.00.00"
-    }
-}

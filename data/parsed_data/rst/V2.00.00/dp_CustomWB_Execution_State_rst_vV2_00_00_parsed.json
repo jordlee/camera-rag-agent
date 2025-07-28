@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CustomWB_Execution_State.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-CustomWB_Execution_State:\n\nCrDeviceProperty_CustomWB_Execution_State\n=========================================\n\nGet the Custom WB Execution State\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPropertyCustomWBExecutionState_Invalid\n    - | Invalid\n\n  * - CrPropertyCustomWBExecutionState_Standby\n    - | Standby\n\n  * - CrPropertyCustomWBExecutionState_Capturing\n    - | Capturing\n\n  * - CrPropertyCustomWBExecutionState_OperatingCamera\n    - | OperatingCamera",
-    "metadata": {
-        "title": "dp_CustomWB_Execution_State",
-        "sdk_version": "V2.00.00"
-    }
-}

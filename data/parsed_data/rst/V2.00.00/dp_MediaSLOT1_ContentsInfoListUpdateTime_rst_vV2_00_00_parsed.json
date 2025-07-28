@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MediaSLOT1_ContentsInfoListUpdateTime.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MediaSLOT1_ContentsInfoListUpdateTime:\n\nCrDeviceProperty_MediaSLOT1_ContentsInfoListUpdateTime\n======================================================\n\nGet the media slot 1 ContentsInfoList update time.\n\n    CrDataType: `CrDataType_UInt64Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - UnixTime(ms) UTC",
-    "metadata": {
-        "title": "dp_MediaSLOT1_ContentsInfoListUpdateTime",
-        "sdk_version": "V2.00.00"
-    }
-}

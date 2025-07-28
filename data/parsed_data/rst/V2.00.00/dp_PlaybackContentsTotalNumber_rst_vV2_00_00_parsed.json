@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PlaybackContentsTotalNumber.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PlaybackContentsTotalNumber:\n\nCrDeviceProperty_PlaybackContentsTotalNumber\n============================================\n\nGet the playback contents total number.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - 1\n    - step\n\n| Unit is the total number of clips. \n| This value expressed in hexadecimal.",
-    "metadata": {
-        "title": "dp_PlaybackContentsTotalNumber",
-        "sdk_version": "V2.00.00"
-    }
-}

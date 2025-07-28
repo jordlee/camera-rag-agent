@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MeteringMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MeteringMode:\n\nCrDeviceProperty_MeteringMode\n=============================\n\nGet/Set the Exposure Metering Mode\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMetering_Average\n    - | Average\n\n  * - CrMetering_CenterWeightedAverage \n    - | Center-weighted-average\n\n  * - CrMetering_MultiSpot\n    - | Multi-spot\n\n  * - CrMetering_CenterSpot\n    - | Center-spot\n\n  * - CrMetering_Multi\n    - | Multi\n\n  * - CrMetering_CenterWeighted\n    - | Center-weighted\n\n  * - CrMetering_EntireScreenAverage \n    - | Entire Screen Avg.\n\n  * - CrMetering_Spot_Standard\n    - | Spot : Standard\n\n  * - CrMetering_Spot_Large\n    - | Spot : Large\n\n  * - CrMetering_HighLightWeighted \n    - | Highlight\n\n  * - CrMetering_Standard\n    - | Standard\n\n  * - CrMetering_Backlight\n    - | Backlight\n\n  * - CrMetering_Spotlight\n    - | Spotlight",
-    "metadata": {
-        "title": "dp_MeteringMode",
-        "sdk_version": "V2.00.00"
-    }
-}

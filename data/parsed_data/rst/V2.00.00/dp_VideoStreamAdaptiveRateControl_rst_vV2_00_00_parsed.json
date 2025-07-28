@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_VideoStreamAdaptiveRateControl.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-VideoStreamAdaptiveRateControl:\n\nCrDeviceProperty_VideoStreamAdaptiveRateControl\n===============================================\n\nGet/Set the streaming variable bit rate.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrVideoStreamAdaptiveRateControl_Off\n    - | Off\n\n  * - CrVideoStreamAdaptiveRateControl_On\n    - | On\n\n\n| Adaptive rate control on/off",
-    "metadata": {
-        "title": "dp_VideoStreamAdaptiveRateControl",
-        "sdk_version": "V2.00.00"
-    }
-}

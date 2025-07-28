@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_initialize_and_release_camera_remote_sdk.rst.txt",
-    "file_type": "rst",
-    "content": ".. _op-initialize-and-release-camera-remote-sdk:\n\nInitialize and Release Camera Remote SDK\n========================================\n\nTo initialize Camera Remote SDK, call SCRSDK::Init(0).\n\nInit() needs one parameter, which must be zero.\n\nIn case of a memory allocation error or another fatal error, it returns false.\n\nExample:\n\n.. code-block:: cpp\n\n    bool Init() {\n        bool ret = SCRSDK::Init(0);\n        if (!ret) {\n            // code to handle the error \n            return false;\n        }\n    }\n\nTo terminate Camera Remote SDK, call SCRSDK::Release().\n\nThis function terminates all connections and releases the allocating resources. Note that the Release() function waits for the completion of the data transfer to be executed. When transferring huge amounts of data between the pc and the camera, this Release() function waits for the completion of the transfer. It is strongly recommended to call this method after confirming the disconnection of each device. \n\nExample:\n\n.. code-block:: cpp\n\n    void Terminate() {\n        SCRSDK::Release();\n    }\n\nCurrently, Release() always returns true.",
-    "metadata": {
-        "title": "op_initialize_and_release_camera_remote_sdk",
-        "sdk_version": "V2.00.00"
-    }
-}

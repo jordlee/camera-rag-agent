@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PictureProfile_BlackGammaRange.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PictureProfile_BlackGammaRange:\n\nCrDeviceProperty_PictureProfile_BlackGammaRange\n===============================================\n\nGet/Set the Picture Profile Black Gamma Range\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPictureProfileBlackGammaRange_Wide\n    - | Wide\n\n  * - CrPictureProfileBlackGammaRange_Middle\n    - | Middle\n\n  * - CrPictureProfileBlackGammaRange_Narrow\n    - | Narrow\n\n| Set BlackGamma Range for the Picture Profile selected in “Picture Profile.”",
-    "metadata": {
-        "title": "dp_PictureProfile_BlackGammaRange",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DigitalZoomScale.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DigitalZoomScale:\n\nCrDeviceProperty_DigitalZoomScale\n=================================\n\nGet/Set the Digital Zoom Scale\n\n| refs Zoom Operation / Zoom Scale.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - Variable\n    - step\n\n| 1000 times the real value of zoom scale.\n| The resolution of the CurrentValue is the step value.\n| The CurrentValue increases or decreases with each step value.\n| Ex.) 0x000004B0 = 1200 /1000 = x1.2\n| CrDeviceProperty_Zoom_Scale shows the total scale of digital and optical.",
-    "metadata": {
-        "title": "dp_DigitalZoomScale",
-        "sdk_version": "V2.00.00"
-    }
-}

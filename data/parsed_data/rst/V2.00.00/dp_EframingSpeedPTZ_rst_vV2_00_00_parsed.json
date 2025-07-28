@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_EframingSpeedPTZ.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-EframingSpeedPTZ:\n\nCrDeviceProperty_EframingSpeedPTZ\n=================================\n\nGet/Set the eframing speed (PTZ).\n\n    CrDataType: `CrDataType_UInt8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - Variable\n    - step",
-    "metadata": {
-        "title": "dp_EframingSpeedPTZ",
-        "sdk_version": "V2.00.00"
-    }
-}

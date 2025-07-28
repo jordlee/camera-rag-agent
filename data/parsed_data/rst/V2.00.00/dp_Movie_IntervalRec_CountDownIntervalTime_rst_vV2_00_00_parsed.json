@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Movie_IntervalRec_CountDownIntervalTime.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Movie_IntervalRec_CountDownIntervalTime:\n\nCrDeviceProperty_Movie_IntervalRec_CountDownIntervalTime\n========================================================\n\nGet the Interval REC(Movie) Count Down Interval Time\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 1\n    - step\n\n| The real value of Interval REC(Time Lapse Movie) count down interval time. Unit is second\n| e.g.) 0x00000001 = 1 sec\n| e.g.) 0x0000003C = 1 min",
-    "metadata": {
-        "title": "dp_Movie_IntervalRec_CountDownIntervalTime",
-        "sdk_version": "V2.00.00"
-    }
-}

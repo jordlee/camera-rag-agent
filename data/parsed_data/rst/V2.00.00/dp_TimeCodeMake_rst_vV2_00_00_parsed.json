@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_TimeCodeMake.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-TimeCodeMake:\n\nCrDeviceProperty_TimeCodeMake\n=============================\n\nGet/Set the Time Code Make\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrTimeCodeMake_Preset\n    - | Preset\n\n  * - CrTimeCodeMake_Regenerate\n    - | Regenerate",
-    "metadata": {
-        "title": "dp_TimeCodeMake",
-        "sdk_version": "V2.00.00"
-    }
-}

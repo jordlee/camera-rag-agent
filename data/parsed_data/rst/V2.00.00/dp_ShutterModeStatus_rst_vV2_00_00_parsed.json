@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ShutterModeStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ShutterModeStatus:\n\nCrDeviceProperty_ShutterModeStatus\n==================================\n\nGet/Set the Shutter Mode Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrShutterModeStatus_Off\n    - | OFF\n\n  * - CrShutterModeStatus_Speed\n    - | Speed\n\n  * - CrShutterModeStatus_Angle\n    - | Angle\n\n  * - CrShutterModeStatus_ECS\n    - | ECS\n\n  * - CrShutterModeStatus_Auto\n    - | Auto\n\n| This value depends on the following commands:\n| Shutter Setting\n| Shutter ECS Setting\n| Shutter Mode",
-    "metadata": {
-        "title": "dp_ShutterModeStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

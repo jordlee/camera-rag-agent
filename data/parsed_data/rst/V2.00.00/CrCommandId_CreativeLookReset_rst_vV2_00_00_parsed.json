@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/command/CrCommandId_CreativeLookReset.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _command-CreativeLookReset:\n\nCrCommandId_CreativeLookReset\n=============================================\n\nExecute creative look reset.\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCommandParam_Up\n    - | Be sure to specify \"Up\" after specifying \"Down\".\n\n  * - CrCommandParam_Down\n    - | Specify \"Down\" when you want to reset Creative Look.\n      | Valid when :ref:`CrDeviceProperty_CreativeLookResetEnableStatus<dp-CreativeLookResetEnableStatus>` is Enable.\n\n| Reset settings for the creative look selected in “Creative Look.”\n| This Control Code can be executed only when the device property \"Reset Creative Look Enable Status\" is Enabled (0x01).",
-    "metadata": {
-        "title": "CrCommandId_CreativeLookReset",
-        "sdk_version": "V2.00.00"
-    }
-}

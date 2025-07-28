@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Focus_Magnifier_Setting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Focus_Magnifier_Setting:\n\nCrDeviceProperty_Focus_Magnifier_Setting\n========================================\n\nGet/Set the Focus Magnifier Setting\n\n    CrDataType: `CrDataType_UInt64Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - 0x0000000000000000～0xFFFFFFFFFFFFFFFF\n    - | Focus Magnifier Ratio [Upper 4bytes] | Focus Magnifier Position (x,y) [Lower 4bytes]\n\n.. include:: ./dp_Focus_Magnifier_Setting.inc",
-    "metadata": {
-        "title": "dp_Focus_Magnifier_Setting",
-        "sdk_version": "V2.00.00"
-    }
-}

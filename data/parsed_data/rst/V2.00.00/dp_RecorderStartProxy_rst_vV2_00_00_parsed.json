@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecorderStartProxy.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-RecorderStartProxy:\n\nCrDeviceProperty_RecorderStartProxy\n===================================\n\nGet the Recorder Start Proxy\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRecorderStart_RecStartDisable\n    - | Rec Start Disable\n\n  * - CrRecorderStart_RecStartEnable\n    - | Rec Start Enable\n\n| Indicate the recordable status.",
-    "metadata": {
-        "title": "dp_RecorderStartProxy",
-        "sdk_version": "V2.00.00"
-    }
-}

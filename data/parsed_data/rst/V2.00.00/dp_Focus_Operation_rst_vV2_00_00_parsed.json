@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Focus_Operation.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Focus_Operation:\n\nCrDeviceProperty_Focus_Operation\n=============================================\n\nExecute the focus operation.\n\n| This device property is valid when :ref:`CrDeviceProperty_FocalDistanceInMeter<dp-FocalDistanceInMeter>` or :ref:`CrDeviceProperty_FocalDistanceInFeet<dp-FocalDistanceInFeet>` is enabled.\n\n    CrDataType: `CrDataType_Int8`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - -1\n    - min\n\n  * - 1\n    - max\n\n  * - 1\n    - step\n\n| The CurrentValue of this device property is always zero. Update only.\n| Can be set within the range of :ref:`CrDeviceProperty_Focus_Speed_Range<dp-Focus_Speed_Range>`.\n| Ex.) SetValue = 1  : Tele focus (focus speed=1)\n|        SetValue = -3 : Wide focus (focus speed=3)\n|        SetValue = 0  : Stop focus",
-    "metadata": {
-        "title": "dp_Focus_Operation",
-        "sdk_version": "V2.00.00"
-    }
-}

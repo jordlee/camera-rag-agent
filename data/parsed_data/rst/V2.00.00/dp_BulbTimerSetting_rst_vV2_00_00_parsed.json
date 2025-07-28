@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_BulbTimerSetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-BulbTimerSetting:\n\nCrDeviceProperty_BulbTimerSetting\n=================================\n\nGet/Set the Bulb Timer Setting\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrBulbTimerSetting_Off\n    - | Off\n\n  * - CrBulbTimerSetting_On\n    - | On\n\n| This property is valid when “Shutter Speed” is “BULB.”",
-    "metadata": {
-        "title": "dp_BulbTimerSetting",
-        "sdk_version": "V2.00.00"
-    }
-}

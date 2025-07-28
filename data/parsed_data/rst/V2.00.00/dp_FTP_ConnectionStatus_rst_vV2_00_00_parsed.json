@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FTP_ConnectionStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FTP_ConnectionStatus:\n\nCrDeviceProperty_FTP_ConnectionStatus\n=====================================\n\nGet the FTP Connection Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFTPConnectionStatus_Connecting\n    - | Connecting\n\n  * - CrFTPConnectionStatus_Connected\n    - | Connected\n\n  * - CrFTPConnectionStatus_Connected_ServerError\n    - | Connected (Server certification error)\n\n  * - CrFTPConnectionStatus_ConnectionError\n    - | Connection Error\n\n| When FTP Function is Off, the IsEnable Field is disabled.",
-    "metadata": {
-        "title": "dp_FTP_ConnectionStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

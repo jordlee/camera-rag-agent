@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CameraDialFunction.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-CameraDialFunction:\n\nCrDeviceProperty_CameraDialFunction\n===================================\n\nGet the Camera Dial Function\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCameraDialFunction_ControlWheel\n    - | Control wheel\n\n  * - CrCameraDialFunction_FrontDial\n    - | Front dial\n\n  * - CrCameraDialFunction_RearDialL\n    - | Rear dial L\n\n  * - CrCameraDialFunction_RearDialR\n    - | Rear dial R\n\n\n.. include:: ./dp_CameraDialFunction.inc",
-    "metadata": {
-        "title": "dp_CameraDialFunction",
-        "sdk_version": "V2.00.00"
-    }
-}

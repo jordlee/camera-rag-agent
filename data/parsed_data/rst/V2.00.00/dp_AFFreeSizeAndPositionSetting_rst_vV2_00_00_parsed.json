@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AFFreeSizeAndPositionSetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-AFFreeSizeAndPositionSetting:\n\nCrDeviceProperty_AFFreeSizeAndPositionSetting\n=============================================\n\nGet/Set the AF Free Size and Position Setting\n\n    CrDataType: `CrDataType_UInt64Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x0000000000000000～0xFFFFFFFFFFFFFFFF\n    - Height and width size [Upper 4bytes] | center coordinates [Lower 4bytes]\n\n\n| Upper four bytes: Height and Width\n| the height is set in the upper two bytes and the width is set in the lower two bytes. \n| Lower four bytes: Center coordinates\n| the x coordinate is set in the upper two bytes and the y coordinate is set in the lower two bytes.\n|  e.g.) 0x0032003200960064\n|  = Height is 50, Width is 50, x is 150, y is 100\n| Caution:\n| The min-max of x and min-max of y represent the settable range of center coordinates when the frame size (Height & Width) is zero.\n| After requesting a change, x and y may be corrected within the camera depending on the Height and Width specified at the same time.\n| Note:\n| For the set of FreeSize1, FreeSize2, FreeSize3, refer to :ref:`CrDeviceProperty_FocusArea<dp-FocusArea>`.\n| When each FreeSize Setting is selected, the selected FreeSize Setting can be changed.",
-    "metadata": {
-        "title": "dp_AFFreeSizeAndPositionSetting",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_NDFilterPositionSetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-NDFilterPositionSetting:\n\nCrDeviceProperty_NDFilterPositionSetting\n========================================\n\nGet/Set the the nd filter position with a absolute value.\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| The transmittance of ND filter can be calculated as follows.\n| transmittance = 2 ^ ( ( （Value） - 0x7FFF ) / 0x1000 )",
-    "metadata": {
-        "title": "dp_NDFilterPositionSetting",
-        "sdk_version": "V2.00.00"
-    }
-}

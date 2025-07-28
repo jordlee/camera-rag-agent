@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/command/command.rst.txt",
-    "file_type": "rst",
-    "content": ".. _command:\n\nCommand\n=======\n\nCrCommandId\n-----------\n\nEnumeration value describing command data type\nCheck the :ref:`Function list<function-list>` for the Command Id(CrCommandId enumerations) supported in the current release.\nSee :ref:`Send a Control Command<op-send-a-control-command>` and :ref:`SendCommand()<api-send-command>` for usage.\nDetails of each Command Id are described in Parameter description.\n\n----------\n\n.. toctree::\n   :maxdepth: 1\n   :hidden:\n   :glob:\n\n   /command/*",
-    "metadata": {
-        "title": "command",
-        "sdk_version": "V2.00.00"
-    }
-}

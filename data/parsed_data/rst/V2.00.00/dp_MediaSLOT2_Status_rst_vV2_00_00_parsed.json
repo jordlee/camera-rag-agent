@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MediaSLOT2_Status.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MediaSLOT2_Status:\n\nCrDeviceProperty_MediaSLOT2_Status\n==================================\n\nGet the Media (SLOT2) Status\n\n| Please set the function of camera “Rec. Media Settings: Recording Mode” to Standard when using ILCE-7RM4 and ILCE-7RM4A.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSlotStatus_OK\n    - | OK\n\n  * - CrSlotStatus_NoCard\n    - | No card\n\n  * - CrSlotStatus_CardError\n    - | Card error\n\n  * - CrSlotStatus_RecognizingOrLockedError\n    - | Card recognizing/Card locked and DB error\n\n  * - CrSlotStatus_DBError\n    - | DB Error\n\n  * - CrSlotStatus_CardRecognizing\n    - | Card Recognizing\n\n  * - CrSlotStatus_CardLockedAndDBError\n    - | Card Locked and DB Error\n\n  * - CrSlotStatus_DBError_CantRepairAndNeedFormat\n    - | DB Error (Cannot Repair and Need Format)\n\n  * - CrSlotStatus_CardError_ReadOnlyMedia\n    - | Card Error (Read-Only Media)\n\n| This device property is not available if the camera does not support the target media slot.",
-    "metadata": {
-        "title": "dp_MediaSLOT2_Status",
-        "sdk_version": "V2.00.00"
-    }
-}

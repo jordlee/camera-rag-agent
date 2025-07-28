@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PlaybackContentsRecordingDateTime.rst.txt",
-    "file_type": "rst",
-    "content": ".. _dp-PlaybackContentsRecordingDateTime:\n\nCrDeviceProperty_PlaybackContentsRecordingDateTime\n==================================================\n\nGet the playback contents recording date/time.\n\n  CrDataType: `CrDataType_STR`\n\n  .. list-table::\n      :widths: auto\n      :header-rows: 1\n\n      * - Parameter Code\n        - Explanation\n\n      * - \"YYYYMMDDThhmmss.sss\"\n        - date/time strings\n\nNote\n    | Indicate by the character string in date and time form provided by the ISO8601.\n    | The value sets the local time.",
-    "metadata": {
-        "title": "dp_PlaybackContentsRecordingDateTime",
-        "sdk_version": "V2.00.00"
-    }
-}

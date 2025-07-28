@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_sdk_properties.rst.txt",
-    "file_type": "rst",
-    "content": ".. _op-sdk-properties:\n\nSDK Properties\n==============\n\nUsing SetDeviceSetting(), some behavior of Camera Remote SDK can be changed. The setting can be set for each device. \n\n`CrError SetDeviceSetting(CrDeviceHandle handle, CrInt32u key, CrInt32u value);`\n \nThe following code sample disables and enables the Live View function; setting “CrDeviceSetting_Disable” disables it and setting “CrDeviceSetting_Enable” enables it.\n\n.. code-block:: cpp\n\n  SCRSDK::SetDeviceSetting(handle, Setting_Key_EnableLiveView,  CrDeviceSetting_Disable); \n  :\n  SCRSDK::SetDeviceSetting(handle, Setting_Key_EnableLiveView, CrDeviceSetting_Enable);\n\nIn the following sample code, setting 2 will change the captured still image data to be divided into 2MB each and transferred to the host PC.\n\nIf you want to return to the initial state, set “CrPartialFile_Default”.\n\nThe initial state varies depending on the connection type.\n\nSee :ref:`SetDeviceSetting()<api-set-device-setting>` for details.\n\nExample:\n\n.. code-block:: cpp\n\n  SCRSDK::SetDeviceSetting(handle, Setting_Key_PartialBuffer, 2);\n  :\n  SCRSDK::SetDeviceSetting(handle, Setting_Key_PartialBuffer, CrPartialFile_Default);",
-    "metadata": {
-        "title": "op_sdk_properties",
-        "sdk_version": "V2.00.00"
-    }
-}

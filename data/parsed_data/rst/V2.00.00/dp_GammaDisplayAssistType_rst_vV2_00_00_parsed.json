@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_GammaDisplayAssistType.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-GammaDisplayAssistType:\n\nCrDeviceProperty_GammaDisplayAssistType\n=======================================\n\nGet/Set the Gamma Display Assist Type\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrGammaDisplayAssistType_Auto\n    - | Auto\n\n  * - CrGammaDisplayAssistType_SLog2_709_800\n    - | S-Log2→709 (800%)\n\n  * - CrGammaDisplayAssistType_SLog3_709_800\n    - | S-Log3→709 (800%)\n\n  * - CrGammaDisplayAssistType_HLG_BT2020\n    - | HLG (BT.2020)\n\n  * - CrGammaDisplayAssistType_HLG_709\n    - | HLG (709)",
-    "metadata": {
-        "title": "dp_GammaDisplayAssistType",
-        "sdk_version": "V2.00.00"
-    }
-}

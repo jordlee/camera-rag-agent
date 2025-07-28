@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitoringSettingVersion.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MonitoringSettingVersion:\n\nCrDeviceProperty_MonitoringSettingVersion\n=========================================\n\nGet the Monitoring Setting Version\n\n    CrDataType: `CrDataType_UInt32`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - --\n    - | 100 times value\n\n| e.g.) 0x00000064 =100 = version 1.00",
-    "metadata": {
-        "title": "dp_MonitoringSettingVersion",
-        "sdk_version": "V2.00.00"
-    }
-}

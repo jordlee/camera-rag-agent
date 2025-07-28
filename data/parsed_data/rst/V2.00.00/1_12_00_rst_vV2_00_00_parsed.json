@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/release_notes/1_12_00.rst.txt",
-    "file_type": "rst",
-    "content": "Version 1.12.0\n==============\n\n**Notes for SDK Ver 1.12.00 Release**\n\n*Release Date: 2024-Apr-12*\n\n- “Supporting products” and “Supporting OS” are updated.\n- Wireless LAN(Wi-Fi) connection is added.\n- Some of DeviceProperties and DeviceProperty values are added.\n- Some of error codes are added.",
-    "metadata": {
-        "title": "1_12_00",
-        "sdk_version": "V2.00.00"
-    }
-}

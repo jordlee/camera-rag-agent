@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/api_reference/sdk_serial_number.rst.txt",
-    "file_type": "rst",
-    "content": ".. _api-header-sdk-serial-number:\n\nSDK Serial Number\n=================\n\n.. _api-get-sdk-serial:\n\nGetSDKSerial\n------------\n\n**Overview**\n    This function returns the SDK serial number.\n\n**Definition**\n    `CrInt32u GetSDKSerial();`\n\n**Input parameters**\n  None\n\n**Output parameters**\n  None\n\n**Return value**\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Type\n    - Explanation\n\n  * - CrInt32u\n    - | The SDK Serial is represented as a 4-byte unsigned integer constant.\n      | The last 2 bytes contain the SDK serial. The first 2 byte is reserved by the SDK for future use.\n\n**Error Codes**\n  No Error\n\n**Related API**\n  - :ref:`GetSDKVersion<api-get-sdk-version>`\n\n**Special note (details)**\n  The SDK serial number is set at build time.",
-    "metadata": {
-        "title": "sdk_serial_number",
-        "sdk_version": "V2.00.00"
-    }
-}

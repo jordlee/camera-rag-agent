@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CameraOperatingMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-CameraOperatingMode:\n\nCrDeviceProperty_CameraOperatingMode\n====================================\n\nGet the Camera Operating Mode\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCameraOperatingMode_Record\n    - | Record\n\n  * - CrCameraOperatingMode_Playback\n    - | Playback",
-    "metadata": {
-        "title": "dp_CameraOperatingMode",
-        "sdk_version": "V2.00.00"
-    }
-}

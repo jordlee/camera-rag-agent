@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ColortempStep.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ColortempStep:\n\nCrDeviceProperty_ColortempStep\n=============================================\n\nSet the color temperature.\n\n| Manipulating this device property updates the CurrentValue of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>`.\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - -30\n    - min\n\n  * - 30\n    - max\n\n  * - 1\n    - step\n\n| The CurrentValue of this device property is always zero.\n| This device property is used to update :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>`.\n| The step value of this device property is synchronized with the step value of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>`, and if the step value of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>` is 100, updating to -1 using this device property will decrement the CurrentValue of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>` by 100.\n| And if you use this device property to update to +2, the CurrentValue of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>` will increase by 200.",
-    "metadata": {
-        "title": "dp_ColortempStep",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SelectFinder.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SelectFinder:\n\nCrDeviceProperty_SelectFinder\n=============================\n\nGet/Set the Finder/Monitor Setting\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSelectFinder_Auto\n    - | Auto\n\n  * - CrSelectFinder_ViewFinder_M\n    - | Viewfinder(Manual)\n\n  * - CrSelectFinder_Monitor_M\n    - | Monitor(Manual)\n\n  * - CrSelectFinder_Auto2\n    - | Auto 2",
-    "metadata": {
-        "title": "dp_SelectFinder",
-        "sdk_version": "V2.00.00"
-    }
-}

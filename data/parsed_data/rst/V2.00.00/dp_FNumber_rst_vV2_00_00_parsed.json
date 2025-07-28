@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FNumber.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FNumber:\n\nCrDeviceProperty_FNumber\n========================\n\nGet/Set the Aperture Value (F-Number)\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Other values\n    - | The value is obtained by multiplying a real FNumber value by 100.\n      | e.g.) 0x0190 =400 (means F-4)\n      |         0x03B6 = 950 (means F-9.5)\n\n  * - CrFnumber_IrisClose\n    - | Iris Close\n\n  * - CrFnumber_Unknown\n    - | Display \"--\"\n\n  * - CrFnumber_Nothing\n    - | Nothing to display",
-    "metadata": {
-        "title": "dp_FNumber",
-        "sdk_version": "V2.00.00"
-    }
-}

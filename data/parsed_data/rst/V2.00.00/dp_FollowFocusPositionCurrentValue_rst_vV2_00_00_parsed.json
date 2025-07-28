@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FollowFocusPositionCurrentValue.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FollowFocusPositionCurrentValue:\n\nCrDeviceProperty_FollowFocusPositionCurrentValue\n================================================\n\nGet the Follow Focus Position Current Value\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x0000\n    - min\n\n  * - 0xFFFF\n    - max\n\n  * - 0x0001\n    - step\n\n| Note:\n| Can be converted from normalized values to Focus Position (meters/feet) using data taken with GetLensInformation().\n| Focus drive suitable for movie recording.",
-    "metadata": {
-        "title": "dp_FollowFocusPositionCurrentValue",
-        "sdk_version": "V2.00.00"
-    }
-}

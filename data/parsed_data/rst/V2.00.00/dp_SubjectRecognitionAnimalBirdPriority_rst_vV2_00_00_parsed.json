@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SubjectRecognitionAnimalBirdPriority.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SubjectRecognitionAnimalBirdPriority:\n\nCrDeviceProperty_SubjectRecognitionAnimalBirdPriority\n=====================================================\n\nGet/Set the Subject Recognition Animal+Bird Priority\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSubjectRecognitionAnimalBirdPriority_Auto\n    - | Auto\n\n  * - CrSubjectRecognitionAnimalBirdPriority_AnimalPriority\n    - | Animal Priority\n\n  * - CrSubjectRecognitionAnimalBirdPriority_BirdPriority\n    - | Bird Priority",
-    "metadata": {
-        "title": "dp_SubjectRecognitionAnimalBirdPriority",
-        "sdk_version": "V2.00.00"
-    }
-}

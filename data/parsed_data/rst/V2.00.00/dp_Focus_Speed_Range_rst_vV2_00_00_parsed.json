@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Focus_Speed_Range.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Focus_Speed_Range:\n\nCrDeviceProperty_Focus_Speed_Range\n==================================\n\nGet the Focus Speed Range\n\n    CrDataType: `CrDataType_Int8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - 1\n    - step\n\n| A value that can be used for Focus Operation.\n| For example, when min is -5 and max is +5, it means that the focus drive speed can be specified in 5 steps. The higher the number, the faster the focus drive speed.\n| The CurrentValue of this device property is always zero.",
-    "metadata": {
-        "title": "dp_Focus_Speed_Range",
-        "sdk_version": "V2.00.00"
-    }
-}

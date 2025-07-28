@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DateTime_Settings.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DateTime_Settings:\n\nCrDeviceProperty_DateTime_Settings\n==================================\n\nSet the Date and Time\n\n    CrDataType: `CrDataType_UInt64`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - \"YYYYMMDDThhmmss.s±hhmm\"\n    - Offset value from UNIX epoch.\n\n\n| 64bit value. \n| Specify the time in UNIX time (elapsed time from 1970/01/01 00:00:00).\n| The time displayed is linked to the time zone setting of the HostPC. \n| The range depends on the model and firmware. \n| Ex.) when 1609582830 is set \n|          = 2021/01/02 10:20:30(UTC) \n|          = 2021/01/02 19:20:30(Tokyo) \n| Some models cannot be set to UTC. \n| Please set your camera to UTC in the menu setting beforehand. \n| Perform an operational check when using the camera. \n\n| **Related API**\n|   :ref:`IDeviceCallback::OnWarning<callback-interface>`\n|   See: :ref:`CrDeviceProperty_DateTime_Settings callback<cb-DateTime_Settings>`",
-    "metadata": {
-        "title": "dp_DateTime_Settings",
-        "sdk_version": "V2.00.00"
-    }
-}

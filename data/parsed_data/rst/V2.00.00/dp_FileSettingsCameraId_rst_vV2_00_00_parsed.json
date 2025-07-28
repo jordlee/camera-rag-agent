@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FileSettingsCameraId.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FileSettingsCameraId:\n\nCrDeviceProperty_FileSettingsCameraId\n=====================================\n\nGet/Set the file settings camera ID.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFileSettingsCameraId_A\n    - | A\n\n  * - CrFileSettingsCameraId_B\n    - | B\n\n  * - CrFileSettingsCameraId_C\n    - | C\n\n  * - CrFileSettingsCameraId_D\n    - | D\n\n  * - CrFileSettingsCameraId_E\n    - | E\n\n  * - CrFileSettingsCameraId_F\n    - | F\n\n  * - CrFileSettingsCameraId_G\n    - | G\n\n  * - CrFileSettingsCameraId_H\n    - | H\n\n  * - CrFileSettingsCameraId_I\n    - | I\n\n  * - CrFileSettingsCameraId_J\n    - | J\n\n  * - CrFileSettingsCameraId_K\n    - | K\n\n  * - CrFileSettingsCameraId_L\n    - | L\n\n  * - CrFileSettingsCameraId_M\n    - | M\n\n  * - CrFileSettingsCameraId_N\n    - | N\n\n  * - CrFileSettingsCameraId_O\n    - | O\n\n  * - CrFileSettingsCameraId_P\n    - | P\n\n  * - CrFileSettingsCameraId_Q\n    - | Q\n\n  * - CrFileSettingsCameraId_R\n    - | R\n\n  * - CrFileSettingsCameraId_S\n    - | S\n\n  * - CrFileSettingsCameraId_T\n    - | T\n\n  * - CrFileSettingsCameraId_U\n    - | U\n\n  * - CrFileSettingsCameraId_V\n    - | V\n\n  * - CrFileSettingsCameraId_W\n    - | W\n\n  * - CrFileSettingsCameraId_X\n    - | X\n\n  * - CrFileSettingsCameraId_Y\n    - | Y\n\n  * - CrFileSettingsCameraId_Z\n    - | Z",
-    "metadata": {
-        "title": "dp_FileSettingsCameraId",
-        "sdk_version": "V2.00.00"
-    }
-}

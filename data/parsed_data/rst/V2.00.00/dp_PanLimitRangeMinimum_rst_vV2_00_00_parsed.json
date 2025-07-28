@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PanLimitRangeMinimum.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PanLimitRangeMinimum:\n\nCrDeviceProperty_PanLimitRangeMinimum\n=====================================\n\nGet/Set the Pan Limit Range Minimum\n\n    CrDataType: `CrDataType_Int32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - Variable\n    - step\n\n| step is Angle unit. The Angle unit is 0.000001 degree.",
-    "metadata": {
-        "title": "dp_PanLimitRangeMinimum",
-        "sdk_version": "V2.00.00"
-    }
-}

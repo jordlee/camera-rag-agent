@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitorLUTSetting2.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MonitorLUTSetting2:\n\nCrDeviceProperty_MonitorLUTSetting2\n===================================\n\nGet/Set the Monitor LUT Setting 2\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMonitorLUT_OFF\n    - | Off\n\n  * - CrMonitorLUT_ON\n    - | On\n\n| Get the list of Monitor LUT output destinations with Monitor LUT Setting Output Dest.",
-    "metadata": {
-        "title": "dp_MonitorLUTSetting2",
-        "sdk_version": "V2.00.00"
-    }
-}

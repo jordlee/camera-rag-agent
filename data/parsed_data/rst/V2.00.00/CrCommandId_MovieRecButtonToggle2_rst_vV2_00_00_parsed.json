@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/command/CrCommandId_MovieRecButtonToggle2.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _command-MovieRecButtonToggle2:\n\nCrCommandId_MovieRecButtonToggle2\n=============================================\n\nExecute movie recording button (2nd).\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCommandParam_Up\n    - | Be sure to specify “Up” after specifying “Down”.\n\n  * - CrCommandParam_Down\n    - | Specify “Down” when you start movie recording and stop movie recording.",
-    "metadata": {
-        "title": "CrCommandId_MovieRecButtonToggle2",
-        "sdk_version": "V2.00.00"
-    }
-}

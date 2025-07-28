@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SceneFileCommandVersion.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SceneFileCommandVersion:\n\nCrDeviceProperty_SceneFileCommandVersion\n========================================\n\nGet the enabled status and dataset version (SceneFile).\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - variable\n    - | Dataset Version\n\n| ex) The Dataset Version is 0x00000064 (0d100).\n| When SceneFile feature is invalid, IsEnable field is disabled.",
-    "metadata": {
-        "title": "dp_SceneFileCommandVersion",
-        "sdk_version": "V2.00.00"
-    }
-}

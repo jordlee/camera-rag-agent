@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_TCUBDisplaySetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-TCUBDisplaySetting:\n\nCrDeviceProperty_TCUBDisplaySetting\n===================================\n\nGet/Set the TC/UB Display Setting\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrTCUBDisplaySetting_Counter\n    - | Counter\n\n  * - CrTCUBDisplaySetting_TC\n    - | Time Code\n\n  * - CrTCUBDisplaySetting_UB\n    - | User Bit\n\n  * - CrTCUBDisplaySetting_Duration\n    - | Duration",
-    "metadata": {
-        "title": "dp_TCUBDisplaySetting",
-        "sdk_version": "V2.00.00"
-    }
-}

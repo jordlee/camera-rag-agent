@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_LogShootingModeColorGamut.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-LogShootingModeColorGamut:\n\nCrDeviceProperty_LogShootingModeColorGamut\n==========================================\n\nGet/Set the color gamut for the still image log shooting mode\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrLogShootingModeColorGamut_S_Gamut3_Cine\n    - | S-Gamut3.Cine\n\n  * - CrLogShootingModeColorGamut_S_Gamut3\n    - | S-Gamut3",
-    "metadata": {
-        "title": "dp_LogShootingModeColorGamut",
-        "sdk_version": "V2.00.00"
-    }
-}

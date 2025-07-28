@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CameraSystemErrorInfo.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-CameraSystemErrorInfo:\n\nCrDeviceProperty_CameraSystemErrorInfo\n======================================\n\nGet the camera system error info.\n\n    CrDataType: `CrDataType_STR`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - String\n    - The camera system error information.",
-    "metadata": {
-        "title": "dp_CameraSystemErrorInfo",
-        "sdk_version": "V2.00.00"
-    }
-}

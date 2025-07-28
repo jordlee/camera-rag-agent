@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FunctionOfRemoteTouchOperation.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FunctionOfRemoteTouchOperation:\n\nCrDeviceProperty_FunctionOfRemoteTouchOperation\n===============================================\n\nGet/Set the Function of Remote Touch Operation\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFunctionOfRemoteTouchOperation_Tracking_AF\n    - | Tracking AF\n\n  * - CrFunctionOfRemoteTouchOperation_Spot_AF\n    - | Spot AF\n\n  * - CrFunctionOfRemoteTouchOperation_AFAreaSelect\n    - | AF Area Select",
-    "metadata": {
-        "title": "dp_FunctionOfRemoteTouchOperation",
-        "sdk_version": "V2.00.00"
-    }
-}

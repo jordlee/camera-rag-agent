@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_UserBitPresetResetEnableStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-UserBitPresetResetEnableStatus:\n\nCrDeviceProperty_UserBitPresetResetEnableStatus\n===============================================\n\nGet the User Bit Preset Reset Enable Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrUserBitPresetReset_Disable\n    - | Disable\n\n  * - CrUserBitPresetReset_Enable\n    - | Enable",
-    "metadata": {
-        "title": "dp_UserBitPresetResetEnableStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SilentModeApertureDriveInAF.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SilentModeApertureDriveInAF:\n\nCrDeviceProperty_SilentModeApertureDriveInAF\n============================================\n\nGet/Set the Silent Mode Aperture Drive in AF\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSilentModeApertureDriveInAF_NotTarget\n    - | Not Target\n\n  * - CrSilentModeApertureDriveInAF_Standard\n    - | Standard\n\n  * - CrSilentModeApertureDriveInAF_SilentPriority\n    - | Silent Priority",
-    "metadata": {
-        "title": "dp_SilentModeApertureDriveInAF",
-        "sdk_version": "V2.00.00"
-    }
-}

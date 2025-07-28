@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ManualInputForNDFilterValue.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ManualInputForNDFilterValue:\n\nCrDeviceProperty_ManualInputForNDFilterValue\n============================================\n\nGet/Set the manual input value of the ND filter\n\n    CrDataType: `CrDataType_UInt64Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - 0xFFFFFFFFFFFFFFFF\n    - | nothing to display.\n\n  * - Other than above values\n    - | The real value of ND Filter (Upper four bytes: numerator, Lower four bytes: denominator)\n\n| This value is expressed in transmittance.",
-    "metadata": {
-        "title": "dp_ManualInputForNDFilterValue",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_NDFilterMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-NDFilterMode:\n\nCrDeviceProperty_NDFilterMode\n=============================\n\nGet the ND Filter Mode\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrNDFilterMode_Auto\n    - | Auto\n\n  * - CrNDFilterMode_Preset\n    - | Preset\n\n  * - CrNDFilterMode_PresetClear\n    - | Preset clear\n\n  * - CrNDFilterMode_Variable\n    - | Variable\n\n  * - CrNDFilterMode_VariableClear\n    - | Variable clear\n\n  * - CrNDFilterMode_Step\n    - | Step\n\n  * - CrNDFilterMode_StepClear\n    - | Step clear",
-    "metadata": {
-        "title": "dp_NDFilterMode",
-        "sdk_version": "V2.00.00"
-    }
-}

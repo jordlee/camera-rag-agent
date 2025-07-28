@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FileType.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FileType:\n\nCrDeviceProperty_FileType\n=========================\n\nGet/Set the File Format(Still)\n\n| Before setting this, check if :ref:`CrDeviceProperty_CompressionFileFormatStill<dp-CompressionFileFormatStill>` is set properly.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFileType_None\n    - | NONE\n\n  * - CrFileType_Raw\n    - | RAW\n\n  * - CrFileType_RawJpeg\n    - | RAW+JPEG\n\n  * - CrFileType_Jpeg\n    - | JPEG\n\n  * - CrFileType_RawHeif\n    - | RAW+HEIF\n\n  * - CrFileType_Heif\n    - | HEIF",
-    "metadata": {
-        "title": "dp_FileType",
-        "sdk_version": "V2.00.00"
-    }
-}

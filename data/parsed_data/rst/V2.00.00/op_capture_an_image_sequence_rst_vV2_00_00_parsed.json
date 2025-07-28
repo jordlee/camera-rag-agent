@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_capture_an_image_sequence.rst.txt",
-    "file_type": "rst",
-    "content": ".. _op-capture-an-image-sequence:\n\nCapture an Image Sequence\n=========================\n\nWhere the store image destination (CrDeviceProperty_StillImageStoreDestination) property is “PC” or “PC and Camera”, the captured image is automatically transmitted to PC and stored in the storage of the PC by Camera Remote SDK.\n\nThis section explains the sequence of the storing captured images.\n\n.. image:: /_images/op_seq_capture_an_image_sequence.png\n\n(\\*1 After the image is saved to camera memory, CrNotify_Captured_Event is notified in the OnWarning() callback function.)\n\nAfter Camera Remote SDK stored the image to the PC, the OnCompleteDownload() callback function is called with the stored file path.\n\n    void OnCompleteDownload(CrChar \\*filename);\n\nThe store image folder can be set using the SetSaveInfo() function. The next section explains this process.\n\nTo check focus lock condition, please see :ref:`CrDeviceProperty_FocusIndication<dp-FocusIndication>`",
-    "metadata": {
-        "title": "op_capture_an_image_sequence",
-        "sdk_version": "V2.00.00"
-    }
-}

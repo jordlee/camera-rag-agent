@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MediaSLOT1_ImageSize.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MediaSLOT1_ImageSize:\n\nCrDeviceProperty_MediaSLOT1_ImageSize\n=====================================\n\nGet/Set the Image Size of media(SLOT1)\n\n| This property is effective when Recording Media for still images is set to \"Sort Recording\", and :ref:`CrDeviceProperty_MediaSLOT1_FileType<dp-MediaSLOT1_FileType>` is set to \"CrFileType_Jpeg\" or \"CrFileType_Heif\".\n\n| For ILCE-1 : MENU > Shooting > Image Quality > Image Quality Settings > JPEG Image Size/HEIF Image Size\n\n| This setting is related to “CrDeviceProperty_CompressionFileFormatStill”.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrImageSize_L\n    - | L\n\n  * - CrImageSize_M\n    - | M\n\n  * - CrImageSize_S\n    - | S",
-    "metadata": {
-        "title": "dp_MediaSLOT1_ImageSize",
-        "sdk_version": "V2.00.00"
-    }
-}

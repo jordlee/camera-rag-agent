@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/class/operation_result_information.rst.txt",
-    "file_type": "rst",
-    "content": ".. _operation-result-information:\n\nOperationResult Information\n===========================\n\n.. _cr-OperationResultSupportedInfo:\n\nCrOperationResultSupportedInfo\n------------------------------\n\nClass describing OperationResult supported information.\n\nMember Variables\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Name\n    - Type\n    - Summary\n  \n  * - api\n    - CrSdkApi\n    - | The type of API from which the execution results are obtained\n      | See: :ref:`CrSdkApi<cr-SdkApi>`\n  * - code\n    - CrInt32u\n    - CrCommandId / CrDevicePropertyCode\n\nMember Functions\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Signature\n    - Description\n  \n  * - Constructor\n    - \\-\n  * - Destructor\n    - \\-\n\n.. _cr-SdkApi:\n\nCrSdkApi\n--------\n\nEnumerate the type of API.\n\nMember Enumerations\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n  \n  * - Definition\n    - Summary\n  \n  * - CrSdkApi_Unknown\n    - Unknown\n  * - CrSdkApi_Invalid\n    - Invalid\n  * - CrSdkApi_SetDeviceProperty\n    - SetDeviceProperty()\n  * - CrSdkApi_SendCommand\n    - SendCommand()",
-    "metadata": {
-        "title": "operation_result_information",
-        "sdk_version": "V2.00.00"
-    }
-}

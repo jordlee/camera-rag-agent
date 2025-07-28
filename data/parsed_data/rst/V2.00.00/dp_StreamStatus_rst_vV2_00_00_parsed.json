@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_StreamStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-StreamStatus:\n\nCrDeviceProperty_StreamStatus\n=============================\n\nGet the streaming status.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrStreamStatus_Inactive\n    - | Inactive\n\n  * - CrStreamStatus_Idle\n    - | Idle\n\n  * - CrStreamStatus_Streaming\n    - | Streaming\n\n  * - CrStreamStatus_Error\n    - | Error\n\n  * - CrStreamStatus_Ready\n    - | Ready\n\n| Inactive: Streaming functionality is turned off or not available.\n| Idle: Not connected to a streaming server or client.\n| Ready: Connected to a streaming server or client but not streaming.\n| Streaming: Streaming video to a streaming server or client.",
-    "metadata": {
-        "title": "dp_StreamStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusOperationWithInt16EnableStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FocusOperationWithInt16EnableStatus:\n\nCrDeviceProperty_FocusOperationWithInt16EnableStatus\n====================================================\n\nGet the focus operation with INT16 enabled status.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFocusOperationWithInt16EnableStatus_Disable\n    - | Disable\n\n  * - CrFocusOperationWithInt16EnableStatus_Enable\n    - | Enable",
-    "metadata": {
-        "title": "dp_FocusOperationWithInt16EnableStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

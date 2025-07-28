@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_GridLineType.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-GridLineType:\n\nCrDeviceProperty_GridLineType\n=============================\n\nGet/Set the Grid Line Type\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrGridLineType_RuleOf3rdsGrid\n    - | Rule of 3rds Grid\n\n  * - CrGridLineType_SquareGrid\n    - | Square Grid\n\n  * - CrGridLineType_DiagAndSquareGrid\n    - | Diag. + Square Grid\n\n  * - CrGridLineType_GoldenRatioGrid\n    - | Golden Ratio Grid\n\n  * - CrGridLineType_Custom1\n    - | Custom 1\n\n  * - CrGridLineType_Custom2\n    - | Custom 2\n\n  * - CrGridLineType_Custom3\n    - | Custom 3\n\n  * - CrGridLineType_Custom4\n    - | Custom 4\n\n\n| \\*A license is required to use custom GridLine types.\n| Without a license, custom GridLine types features are not available.\n| The sales policy for this license varies by region.\n| Details: https://helpguide.sony.net/di/gridline_2420/v1/h_zz/index.html",
-    "metadata": {
-        "title": "dp_GridLineType",
-        "sdk_version": "V2.00.00"
-    }
-}

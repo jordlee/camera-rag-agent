@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DispModeSetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DispModeSetting:\n\nCrDeviceProperty_DispModeSetting\n================================\n\nGet/Set the Monitor DISP(Screen Display) Mode Setting\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000001\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 0x00000001\n    - step\n\n| Set whether to enable or disable selectable items in :ref:`CrDeviceProperty_DispMode<dp-DispMode>`.\n| The only candidates that can be selected in :ref:`CrDeviceProperty_DispMode<dp-DispMode>` are the items(bit position) that are set to enable(turn on the bit) in this property.\n| Note:\n| Not all items can be disabled. Be sure to set one or more items(bit position) to enable(turn on the bit).\n| Refer to “About the Monitor DISP(Screen Display) for camera body”.\n| Only when “No Disp. Info. (0x0010)” is selected, “No Disp. Info. Exposure: On (0x0020)” and “No Disp. Info. Exposure: Timeout (0x0040)” can be set.",
-    "metadata": {
-        "title": "dp_DispModeSetting",
-        "sdk_version": "V2.00.00"
-    }
-}

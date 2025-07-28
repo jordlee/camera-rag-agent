@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_WhiteBalanceTintStep.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-WhiteBalanceTintStep:\n\nCrDeviceProperty_WhiteBalanceTintStep\n=============================================\n\nSet the white balance tint.\n\n| Manipulating this device property updates the CurrentValue of :ref:`CrDeviceProperty_WhiteBalanceTint<dp-WhiteBalanceTint>`.\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - -198\n    - min\n\n  * - 198\n    - max\n\n  * - 1\n    - step\n\n| The CurrentValue of this device property is always zero.\n| This device property is used to update :ref:`CrDeviceProperty_WhiteBalanceTint<dp-WhiteBalanceTint>`.",
-    "metadata": {
-        "title": "dp_WhiteBalanceTintStep",
-        "sdk_version": "V2.00.00"
-    }
-}

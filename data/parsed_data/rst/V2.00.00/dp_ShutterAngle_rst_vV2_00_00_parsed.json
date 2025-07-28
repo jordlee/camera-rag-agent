@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ShutterAngle.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ShutterAngle:\n\nCrDeviceProperty_ShutterAngle\n=============================\n\nGet/Set the Shutter Angle\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrShutterAngle_Disable\n    - | -\n\n  * - Other than above values\n    - | 1000 times the real value of Shutter Angle\n      | e.g.) 0x0002BF20 = 180000 /1000 = 180\n      | e.g.) 0x00015F90 = 90000 /1000 = 90",
-    "metadata": {
-        "title": "dp_ShutterAngle",
-        "sdk_version": "V2.00.00"
-    }
-}

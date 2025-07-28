@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_HDMIResolutionStillPlay.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-HDMIResolutionStillPlay:\n\nCrDeviceProperty_HDMIResolutionStillPlay\n========================================\n\nGet/Set the HDMI Resolution(Still/Play)\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrHDMIResolution_4320p_2160p\n    - | 4320p/2160p\n\n  * - CrHDMIResolution_2160p\n    - | 2160p\n\n  * - CrHDMIResolution_2160p_1080p\n    - | 2160p/1080p\n\n  * - CrHDMIResolution_1080p\n    - | 1080p\n\n  * - CrHDMIResolution_720p\n    - | 720p\n\n  * - CrHDMIResolution_480p\n    - | 480p\n\n  * - CrHDMIResolution_576p\n    - | 576p\n\n  * - CrHDMIResolution_1080i\n    - | 1080i\n\n  * - CrHDMIResolution_480i\n    - | 480i\n\n  * - CrHDMIResolution_576i\n    - | 576i\n\n  * - CrHDMIResolution_Auto\n    - | Auto",
-    "metadata": {
-        "title": "dp_HDMIResolutionStillPlay",
-        "sdk_version": "V2.00.00"
-    }
-}

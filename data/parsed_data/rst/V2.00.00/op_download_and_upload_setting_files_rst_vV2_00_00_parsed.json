@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/op_download_and_upload_setting_files.rst.txt",
-    "file_type": "rst",
-    "content": ".. _op-download-and-upload-setting-files:\n\nDownload and upload setting files\n=================================\n\nYou can save(download) the camera settings as a file on the host PC or a storage device connected to the host PC. You can restore the camera settings by uploading the file saved with this API to the camera. You can only upload to the same model. It is also possible to upload to another camera of the same model.\n\nDownloadSettingFile() has four parameters. The second parameter specifies the type of file to download from the camera. Specify the file save path in the third parameter and the file name in the fourth parameter.\n\nSpecify the file save location in the third parameter and the file name in the fourth parameter.\n    refs. :ref:`DownloadSettingFile()<api-download-setting-file>` API\n\nExample:\n\n.. code-block:: cpp\n\n  CrError err = SCRSDK::DownloadSettingFile(\n    handle, \n    SCRSDK::CrDownloadSettingFileType_Setup, \n    path, \n    name);\n\nUploadSettingFile() has three parameters. The second parameter specifies the type of file to upload to the camera. The third specifies the full path of the file to upload to the camera.\n\nThe upload result will be notified by a OnWarning(). If a file for another model or an invalid file is uploaded, CrWarning_CameraSettings_Read_Result_Invalid etc. will be returned.\n\nExample:\n\n.. code-block:: cpp\n\n  SCRSDK:: UploadSettingFile(\n    handle,\n    SCRSDK::CrUploadSettingFileType_Setup,\n    filepath);",
-    "metadata": {
-        "title": "op_download_and_upload_setting_files",
-        "sdk_version": "V2.00.00"
-    }
-}

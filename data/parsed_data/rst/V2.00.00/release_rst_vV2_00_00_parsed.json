@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/api_reference/release.rst.txt",
-    "file_type": "rst",
-    "content": ".. _api-header-release:\n\nRelease\n=======\n\n.. _api-release:\n\nRelease\n-------\n\n**Overview**\n    Terminate the Camera Remote SDK by deleting objects and releasing the memory used by the Camera Remote SDK. Use this function to clean up resources when the Camera Remote SDK is no longer required. Should be called after disconnecting all connected cameras and before your application close.\n\n**Definition**\n\n    `bool Release();`\n\n**Input Parameters**\n\n  Empty\n\n**Return values**\n\n.. list-table::\n    :widths: auto\n    :header-rows: 1\n\n    * - Type\n      - Explanation\n\n    * - bool\n      - Always returns true\n\n**Related API**\n    - :ref:`Init<api-init>`\n\n**Special note (details)**\n\n  Please execute this API same thread as Init.",
-    "metadata": {
-        "title": "release",
-        "sdk_version": "V2.00.00"
-    }
-}

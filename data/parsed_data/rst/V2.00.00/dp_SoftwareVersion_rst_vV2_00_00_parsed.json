@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SoftwareVersion.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SoftwareVersion:\n\nCrDeviceProperty_SoftwareVersion\n================================\n\nSoftware Version.\n\n    CrDataType: `CrDataType_STR`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - String\n    - Software Version",
-    "metadata": {
-        "title": "dp_SoftwareVersion",
-        "sdk_version": "V2.00.00"
-    }
-}

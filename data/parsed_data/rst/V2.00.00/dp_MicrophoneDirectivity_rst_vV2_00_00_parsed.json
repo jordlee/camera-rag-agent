@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MicrophoneDirectivity.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MicrophoneDirectivity:\n\nCrDeviceProperty_MicrophoneDirectivity\n======================================\n\nGet/Set the microphone directivity.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMicrophoneDirectivity_Auto\n    - | Auto\n\n  * - CrMicrophoneDirectivity_All\n    - | All\n\n  * - CrMicrophoneDirectivity_Front\n    - | Front\n\n  * - CrMicrophoneDirectivity_Rear\n    - | Rear",
-    "metadata": {
-        "title": "dp_MicrophoneDirectivity",
-        "sdk_version": "V2.00.00"
-    }
-}

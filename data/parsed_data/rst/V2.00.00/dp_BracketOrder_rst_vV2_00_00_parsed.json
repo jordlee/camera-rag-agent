@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_BracketOrder.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-BracketOrder:\n\nCrDeviceProperty_BracketOrder\n=============================\n\nGet/Set the Bracket Order \n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrBracketOrder_0ToMinusToPlus\n    - | 0 -> -(minus) -> +(plus)\n\n  * - CrBracketOrder_MinusTo0ToPlus\n    - | -(minus) -> 0 -> +(plus)",
-    "metadata": {
-        "title": "dp_BracketOrder",
-        "sdk_version": "V2.00.00"
-    }
-}

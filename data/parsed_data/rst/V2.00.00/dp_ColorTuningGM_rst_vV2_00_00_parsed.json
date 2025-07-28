@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ColorTuningGM.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ColorTuningGM:\n\nCrDeviceProperty_ColorTuningGM\n==============================\n\nGet/Set the Biaxial Fine Tuning G-M Direction\n\n    CrDataType: `CrDataType_UInt8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x9C(M9_00)\n    - min\n\n  * - 0xE4(G9_00)\n    - max\n\n  * - 0x01(0.25)\n    - step\n\n| GM value sent to PC App from camera corresponds to one of the following patterns.\n| GM number is MX or GX, where X is decimal from 0.00 to 9.00 and increments by 0.25.\n| Ex.) M9.00(0x9C), M8.75(0x9D), ...,\n|        G8.75(0xE3), G9.00(0xE4).\n| Note:\n| There may be parameter differences due to model differences.",
-    "metadata": {
-        "title": "dp_ColorTuningGM",
-        "sdk_version": "V2.00.00"
-    }
-}

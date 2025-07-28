@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_VideoStreamSelect.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-VideoStreamSelect:\n\nCrDeviceProperty_VideoStreamSelect\n==================================\n\nGet/Set the video stream select.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrVideoStream_1\n    - | Video Stream 1\n\n  * - CrVideoStream_2\n    - | Video Stream 2\n\n  * - CrVideoStream_3\n    - | Video Stream 3\n\n  * - CrVideoStream_4\n    - | Video Stream 4\n\n  * - CrVideoStream_5\n    - | Video Stream 5\n\n  * - CrVideoStream_6\n    - | Video Stream 6\n\n\n| This command will update the following DeviceProperty to the value you set\n| CrDeviceProperty_VideoStreamCodec\n| CrDeviceProperty_VideoStreamResolution\n| CrDeviceProperty_VideoStreamBitRateCompressionMode\n| CrDeviceProperty_VideoStreamBitRateVBRMode\n| CrDeviceProperty_VideoStreamMaxBitRate\n| CrDeviceProperty_StreamLatency\n| CrDeviceProperty_StreamTTL\n| CrDeviceProperty_StreamCipherType\n| CrDeviceProperty_StreamModeSetting\n| CrDeviceProperty_StreamStatus\n| CrDeviceProperty_StreamDisplayName\n| CrDeviceProperty_VideoStreamMaxBitRate\n| CrDeviceProperty_VideoStreamBitRateVBRMode",
-    "metadata": {
-        "title": "dp_VideoStreamSelect",
-        "sdk_version": "V2.00.00"
-    }
-}

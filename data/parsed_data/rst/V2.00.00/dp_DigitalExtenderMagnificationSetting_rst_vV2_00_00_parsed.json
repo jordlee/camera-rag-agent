@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DigitalExtenderMagnificationSetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DigitalExtenderMagnificationSetting:\n\nCrDeviceProperty_DigitalExtenderMagnificationSetting\n====================================================\n\nGet/Set the digital extender magnification setting.\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - Any\n    - | 1000 times the real value of Digital Extender Magnification.\n\n| e.g.) 0x000003E8 = 1000 (x1.0)\n|       0x000005DC = 1500 (x1.5)\n|       0x000007D0 = 2000 (x2.0)\n|       0x00000FA0 = 4000 (x4.0)",
-    "metadata": {
-        "title": "dp_DigitalExtenderMagnificationSetting",
-        "sdk_version": "V2.00.00"
-    }
-}

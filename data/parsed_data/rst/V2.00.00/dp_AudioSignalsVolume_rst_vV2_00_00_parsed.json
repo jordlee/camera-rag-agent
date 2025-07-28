@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AudioSignalsVolume.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-AudioSignalsVolume:\n\nCrDeviceProperty_AudioSignalsVolume\n===================================\n\nGet/Set the Audio Signals Volume\n\n    CrDataType: `CrDataType_UInt8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| Adjusts the sound volume level within the range of min to max.",
-    "metadata": {
-        "title": "dp_AudioSignalsVolume",
-        "sdk_version": "V2.00.00"
-    }
-}

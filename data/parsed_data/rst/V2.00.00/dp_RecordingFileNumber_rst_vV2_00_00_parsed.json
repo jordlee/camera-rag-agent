@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecordingFileNumber.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-RecordingFileNumber:\n\nCrDeviceProperty_RecordingFileNumber\n====================================\n\nGet/Set the Recording File Number (Still)\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRecordingFileNumber_Reset\n    - | Reset\n\n  * - CrRecordingFileNumber_Series\n    - | Series",
-    "metadata": {
-        "title": "dp_RecordingFileNumber",
-        "sdk_version": "V2.00.00"
-    }
-}

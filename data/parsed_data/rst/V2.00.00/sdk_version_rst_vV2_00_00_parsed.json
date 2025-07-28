@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/api_reference/sdk_version.rst.txt",
-    "file_type": "rst",
-    "content": ".. _api-header-sdk-version:\n\nSDK Version\n===========\n\n.. _api-get-sdk-version:\n\nGetSDKVersion\n-------------\n\n**Overview**\n  This function returns the SDK version number.\n\n**Definition**\n  `CrInt32u GetSDKVersion();`\n\n**Input parameters**\n  None\n\n**Output parameters**\n  None\n\n**Return value**\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Type\n    - Explanation\n\n  * - CrInt32u\n    - | The SDK Version is represented as a 4-byte unsigned integer constant.\n      | The first 3 bytes contain the SDK version. The last byte is reserved by the SDK for future use.\n\n**Error Codes**\n  No Error\n\n**Related API**\n  - :ref:`GetSDKSerial<api-get-sdk-serial>`\n\n**Special note (details)**\n  The SDK version number is set at build time.\n\n  This version number will be updated if the SDK API is changed.",
-    "metadata": {
-        "title": "sdk_version",
-        "sdk_version": "V2.00.00"
-    }
-}

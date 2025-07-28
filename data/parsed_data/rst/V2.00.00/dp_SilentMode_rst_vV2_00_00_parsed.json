@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SilentMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SilentMode:\n\nCrDeviceProperty_SilentMode\n===========================\n\nGet/Set the Silent Mode\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSilentMode_Off\n    - | Off\n\n  * - CrSilentMode_On\n    - | On",
-    "metadata": {
-        "title": "dp_SilentMode",
-        "sdk_version": "V2.00.00"
-    }
-}

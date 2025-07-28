@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Zoom_Scale.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Zoom_Scale:\n\nCrDeviceProperty_Zoom_Scale\n===========================\n\nGet/Set the Zoom Scale.\n\n| It may not be possible to operate depending on the model and lens type. refs Zoom Operation / Zoom Scale.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - Variable\n    - step\n\n| min/max/Value should be set in units of “step”.\n| Ex.) min: 1000, max: 8000, step: 200, value: 1200 (min = x1.0, max = x8.0, value = x1.2)\n| This value varies depending on the camera’s configurable conditions. (in units of 0.001)",
-    "metadata": {
-        "title": "dp_Zoom_Scale",
-        "sdk_version": "V2.00.00"
-    }
-}

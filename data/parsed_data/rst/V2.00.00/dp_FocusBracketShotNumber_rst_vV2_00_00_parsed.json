@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusBracketShotNumber.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FocusBracketShotNumber:\n\nCrDeviceProperty_FocusBracketShotNumber\n=======================================\n\nGet/Set the Focus Bracket Shot Num\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - 1\n    - step\n\n| Focus Bracket The number of shots to take.",
-    "metadata": {
-        "title": "dp_FocusBracketShotNumber",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DebugMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DebugMode:\n\nCrDeviceProperty_DebugMode\n==========================\n\nGet/Set the Debug Mode\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrDebugMode_OFF\n    - | Off\n\n  * - CrDebugMode_Pseudo_update_with_Fake_Firmware\n    - | Pseudo-update with Fake Firmware\n\n| This Device Porperty is only for SDK users to debug their application\n| The value should be set to 0x01(OFF) except during debugging",
-    "metadata": {
-        "title": "dp_DebugMode",
-        "sdk_version": "V2.00.00"
-    }
-}

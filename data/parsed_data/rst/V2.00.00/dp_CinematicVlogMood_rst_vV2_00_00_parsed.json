@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CinematicVlogMood.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-CinematicVlogMood:\n\nCrDeviceProperty_CinematicVlogMood\n==================================\n\nGet/Set the cinematic vlog mood.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCinematicVlogMood_Auto\n    - | Auto\n\n  * - CrCinematicVlogMood_Gold\n    - | Gold\n\n  * - CrCinematicVlogMood_Ocean\n    - | Ocean\n\n  * - CrCinematicVlogMood_Forest\n    - | Forest",
-    "metadata": {
-        "title": "dp_CinematicVlogMood",
-        "sdk_version": "V2.00.00"
-    }
-}

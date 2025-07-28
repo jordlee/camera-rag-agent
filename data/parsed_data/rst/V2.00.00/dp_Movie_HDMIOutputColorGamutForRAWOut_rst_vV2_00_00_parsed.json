@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Movie_HDMIOutputColorGamutForRAWOut.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Movie_HDMIOutputColorGamutForRAWOut:\n\nCrDeviceProperty_Movie_HDMIOutputColorGamutForRAWOut\n====================================================\n\nGet/Set the HDMI Output Color Gamut for RAW Out(Movie)\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrHDMIOutputColorGamutForRAWOutMovie_S_Gamut3_Cine_SLog3\n    - | S-Gamut3 Cine/S-Log3\n\n  * - CrHDMIOutputColorGamutForRAWOutMovie_S_Gamut3_SLog3\n    - | S-Gamut3/S-Log3",
-    "metadata": {
-        "title": "dp_Movie_HDMIOutputColorGamutForRAWOut",
-        "sdk_version": "V2.00.00"
-    }
-}

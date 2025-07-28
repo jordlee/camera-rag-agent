@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SystemErrorCautionStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SystemErrorCautionStatus:\n\nCrDeviceProperty_SystemErrorCautionStatus\n=========================================\n\nGet the System Error Caution Status\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSystemErrorCautionStatus_NoError\n    - | No Error\n\n  * - CrSystemErrorCautionStatus_Error\n    - | Error",
-    "metadata": {
-        "title": "dp_SystemErrorCautionStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

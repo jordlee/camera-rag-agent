@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PictureProfile_Gamma.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PictureProfile_Gamma:\n\nCrDeviceProperty_PictureProfile_Gamma\n=====================================\n\nGet/Set the Picture Profile Gamma\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPictureProfileGamma_Movie\n    - | Movie\n\n  * - CrPictureProfileGamma_Still\n    - | Still\n\n  * - CrPictureProfileGamma_S_Cinetone\n    - | S-Cinetone\n\n  * - CrPictureProfileGamma_Cine1\n    - | Cine1\n\n  * - CrPictureProfileGamma_Cine2\n    - | Cine2\n\n  * - CrPictureProfileGamma_Cine3\n    - | Cine3\n\n  * - CrPictureProfileGamma_Cine4\n    - | Cine4\n\n  * - CrPictureProfileGamma_ITU709\n    - | ITU709\n\n  * - CrPictureProfileGamma_ITU709_800\n    - | ITU709(800%)\n\n  * - CrPictureProfileGamma_S_Log2\n    - | S-Log2\n\n  * - CrPictureProfileGamma_S_Log3\n    - | S-Log3\n\n  * - CrPictureProfileGamma_HLG\n    - | HLG\n\n  * - CrPictureProfileGamma_HLG1\n    - | HLG1\n\n  * - CrPictureProfileGamma_HLG2\n    - | HLG2\n\n  * - CrPictureProfileGamma_HLG3\n    - | HLG3\n\n| Set Gamma for the Picture Profile selected in “Picture Profile.”",
-    "metadata": {
-        "title": "dp_PictureProfile_Gamma",
-        "sdk_version": "V2.00.00"
-    }
-}

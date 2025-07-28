@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_IrisDisplayUnit.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-IrisDisplayUnit:\n\nCrDeviceProperty_IrisDisplayUnit\n================================\n\nGet/Set the Iris Display Unit\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrIrisDisplayUnit_Auto\n    - | Auto\n\n  * - CrIrisDisplayUnit_FLock\n    - | F Lock\n\n  * - CrIrisDisplayUnit_TLock\n    - | T Lock",
-    "metadata": {
-        "title": "dp_IrisDisplayUnit",
-        "sdk_version": "V2.00.00"
-    }
-}

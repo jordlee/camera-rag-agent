@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/sample_getSetDeviceProperty.rst.txt",
-    "file_type": "rst",
-    "content": ".. _sample-getSetDeviceProperty:\n\nsample code - \"get/set device property, send command\"\n=====================================================\n\n.. code-block:: cpp\n\n    usage:\n       set <DP name> <param> [1-blocking,0-no blocking]\n       get <DP name>\n       info <DP name>\n       send <command name> <param>\n    To exit, please enter 'q'.\n\n.. list-table::\n    :widths: auto\n    :header-rows: 1\n\n    * - argument\n      - example\n\n    * - DP name\n      - **FNumber** for CrDeviceProperty_FNumber.\n\n    * - command name\n      - **Release** for CrCommandId_Release.\n\n    * - param\n      - **80, 0x50** (numeric value)\n\nSave the following code as \"RemoteCli.cpp\", replace \"app/RemoteCli.cpp\" in the SDK, then build.\n\n.. literalinclude:: /_static/getSetDeviceProperty.cpp\n   :language: cpp\n   :linenos:",
-    "metadata": {
-        "title": "sample_getSetDeviceProperty",
-        "sdk_version": "V2.00.00"
-    }
-}

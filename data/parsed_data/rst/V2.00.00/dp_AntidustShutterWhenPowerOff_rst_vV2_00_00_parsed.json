@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AntidustShutterWhenPowerOff.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-AntidustShutterWhenPowerOff:\n\nCrDeviceProperty_AntidustShutterWhenPowerOff\n============================================\n\nGet/Set the Anti-dust Shutter When Power Off\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAntidustShutterWhenPowerOff_Off\n    - | Off\n\n  * - CrAntidustShutterWhenPowerOff_On\n    - | On",
-    "metadata": {
-        "title": "dp_AntidustShutterWhenPowerOff",
-        "sdk_version": "V2.00.00"
-    }
-}

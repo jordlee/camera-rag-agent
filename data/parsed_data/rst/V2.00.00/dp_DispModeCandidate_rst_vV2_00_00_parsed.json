@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DispModeCandidate.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DispModeCandidate:\n\nCrDeviceProperty_DispModeCandidate\n==================================\n\nGet the Monitor DISP(Screen Display) Mode Candidate\n\n    CrDataType: `CrDataType_UInt32Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrDispModeBitNum_GraphicDisplay\n    - | Graphic Display\n\n  * - CrDispModeBitNum_DisplayAllInfo\n    - | Display All Information\n\n  * - CrDispModeBitNum_Histogram\n    - | Histogram\n\n  * - CrDispModeBitNum_Level\n    - | Level\n\n  * - CrDispModeBitNum_NoDispInfo\n    - | No Display Information\n\n  * - CrDispModeBitNum_NoDispInfoExposureOn\n    - | No Display Information Exposure:On\n\n  * - CrDispModeBitNum_NoDispInfoExposureTimeOut\n    - | No Display Information Timeout\n\n  * - CrDispModeBitNum_ForViewFinder\n    - | For Viewfinder\n\n  * - CrDispModeBitNum_MonitorOff\n    - | Monitor Off\n\n| This bit-assigned available DISP values can be used to set “Monitor DISP (Screen Display) Mode Setting” by OR operation.\n\n| GetCurrentValue() is always zero.\n| In GetValues(), one or more of the following items (Bit positions) that can be set in SetCurrentValue() of :ref:`CrDeviceProperty_DispModeSetting<dp-DispModeSetting>` are set.\n| ex) If the camera supports Display All Information, Histogram, Level, No Display Information, GetValues() will be set to the following four values.\n| values[0] = 0x00000002 (Display All Information)\n| values[1] = 0x00000004 (Histogram)\n| values[2] = 0x00000008 (Level)\n| values[3] = 0x00000010 (No Display Information)",
-    "metadata": {
-        "title": "dp_DispModeCandidate",
-        "sdk_version": "V2.00.00"
-    }
-}

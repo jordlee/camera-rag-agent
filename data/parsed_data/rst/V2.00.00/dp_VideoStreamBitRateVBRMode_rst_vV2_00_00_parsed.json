@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_VideoStreamBitRateVBRMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-VideoStreamBitRateVBRMode:\n\nCrDeviceProperty_VideoStreamBitRateVBRMode\n==========================================\n\nGet/Set the Video Stream Bit Rate VBR Mode\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrVideoStreamBitRateVBRMode_Standard\n    - | Standard\n\n  * - CrVideoStreamBitRateVBRMode_BitRateLimit\n    - | Bit Rate Limit",
-    "metadata": {
-        "title": "dp_VideoStreamBitRateVBRMode",
-        "sdk_version": "V2.00.00"
-    }
-}

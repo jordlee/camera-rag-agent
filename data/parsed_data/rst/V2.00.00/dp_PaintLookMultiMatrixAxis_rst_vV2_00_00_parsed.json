@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PaintLookMultiMatrixAxis.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PaintLookMultiMatrixAxis:\n\nCrDeviceProperty_PaintLookMultiMatrixAxis\n==========================================\n\nGet/Set the paint/look multi matrix axis.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPaintLookMultiMatrixAxis_B\n    - | B\n\n  * - CrPaintLookMultiMatrixAxis_B_Plus\n    - | B+\n\n  * - CrPaintLookMultiMatrixAxis_B_Minus\n    - | B-\n\n  * - CrPaintLookMultiMatrixAxis_MG\n    - | MG\n\n  * - CrPaintLookMultiMatrixAxis_MG_Plus\n    - | MG+\n\n  * - CrPaintLookMultiMatrixAxis_MG_Minus\n    - | MG-\n\n  * - CrPaintLookMultiMatrixAxis_R\n    - | R\n\n  * - CrPaintLookMultiMatrixAxis_R_Plus\n    - | R+\n\n  * - CrPaintLookMultiMatrixAxis_YL\n    - | YL\n\n  * - CrPaintLookMultiMatrixAxis_YL_Plus\n    - | YL+\n\n  * - CrPaintLookMultiMatrixAxis_YL_Minus\n    - | YL-\n\n  * - CrPaintLookMultiMatrixAxis_G\n    - | G\n\n  * - CrPaintLookMultiMatrixAxis_G_Plus\n    - | G+\n\n  * - CrPaintLookMultiMatrixAxis_G_Minus\n    - | G-\n\n  * - CrPaintLookMultiMatrixAxis_CY\n    - | CY\n\n  * - CrPaintLookMultiMatrixAxis_CY_Plus\n    - | CY+",
-    "metadata": {
-        "title": "dp_PaintLookMultiMatrixAxis",
-        "sdk_version": "V2.00.00"
-    }
-}

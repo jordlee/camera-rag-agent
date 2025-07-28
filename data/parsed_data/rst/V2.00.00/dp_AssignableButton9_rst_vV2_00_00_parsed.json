@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AssignableButton9.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-AssignableButton9:\n\nCrDeviceProperty_AssignableButton9\n==================================\n\nGet/Set the Assignable Button 9\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAssignableButton_Up\n    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_AssignableButton1<dp-AssignableButton1>`.\n\n  * - CrAssignableButton_Down\n    - |",
-    "metadata": {
-        "title": "dp_AssignableButton9",
-        "sdk_version": "V2.00.00"
-    }
-}

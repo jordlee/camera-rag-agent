@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CameraSetting_SaveOperationEnableStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-CameraSetting_SaveOperationEnableStatus:\n\nCrDeviceProperty_CameraSetting_SaveOperationEnableStatus\n========================================================\n\nGet the Camera-Setting Save Operation Enable Status\n\n| DownloadSettingFile() is possible when this property is Enable.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCameraSettingSaveOperation_Disable\n    - | Disable\n\n  * - CrCameraSettingSaveOperation_Enable\n    - | Enable",
-    "metadata": {
-        "title": "dp_CameraSetting_SaveOperationEnableStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

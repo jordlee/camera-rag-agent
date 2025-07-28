@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Movie_HDMIOutput4KSetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Movie_HDMIOutput4KSetting:\n\nCrDeviceProperty_Movie_HDMIOutput4KSetting\n==========================================\n\nGet/Set the HDMI Output 4K Setting(Movie) \n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrHDMIOutput4KSettingMovie_59_94p_10bit\n    - | 59.94p 10bit\n\n  * - CrHDMIOutput4KSettingMovie_50_00p_10bit\n    - | 50.00p 10bit\n\n  * - CrHDMIOutput4KSettingMovie_29_97p_10bit\n    - | 29.97p 10bit\n\n  * - CrHDMIOutput4KSettingMovie_25_00p_10bit\n    - | 25.00p 10bit\n\n  * - CrHDMIOutput4KSettingMovie_24_00p_10bit\n    - | 24.00p 10bit\n\n  * - CrHDMIOutput4KSettingMovie_23_98p_10bit\n    - | 23.98p 10bit\n\n  * - CrHDMIOutput4KSettingMovie_59_94p_8bit\n    - | 59.94p 8bit\n\n  * - CrHDMIOutput4KSettingMovie_50_00p_8bit\n    - | 50.00p 8bit\n\n  * - CrHDMIOutput4KSettingMovie_29_97p_8bit\n    - | 29.97p 8bit\n\n  * - CrHDMIOutput4KSettingMovie_25_00p_8bit\n    - | 25.00p 8bit\n\n  * - CrHDMIOutput4KSettingMovie_23_98p_8bit\n    - | 23.98p 8bit\n\n| Note: Actual frame rate values. Depending on the camera, this may not match the menu display string.",
-    "metadata": {
-        "title": "dp_Movie_HDMIOutput4KSetting",
-        "sdk_version": "V2.00.00"
-    }
-}

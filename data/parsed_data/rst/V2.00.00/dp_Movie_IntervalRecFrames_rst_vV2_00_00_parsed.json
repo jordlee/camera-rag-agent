@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Movie_IntervalRecFrames.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Movie_IntervalRecFrames:\n\nCrDeviceProperty_Movie_IntervalRecFrames\n========================================\n\nGet/Set the interval recording (movie) number of frames.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - 0x0001\n    - | 1 frame\n\n  * - 0x0002\n    - | 2 frames\n\n  * - 0x0003\n    - | 3 frames\n\n  * - 0x0006\n    - | 6 frames\n\n  * - 0x0009\n    - | 9 frames\n\n  * - 0x000C\n    - | 12 frames\n\n| The real value of number of recording frames.",
-    "metadata": {
-        "title": "dp_Movie_IntervalRecFrames",
-        "sdk_version": "V2.00.00"
-    }
-}

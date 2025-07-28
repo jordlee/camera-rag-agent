@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_BodySerialNumber.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-BodySerialNumber:\n\nCrDeviceProperty_BodySerialNumber\n=============================================\n\nGet the Body Serial Number\n\n    CrDataType: `CrDataType_STR`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - --\n    - | Body Serial Number",
-    "metadata": {
-        "title": "dp_BodySerialNumber",
-        "sdk_version": "V2.00.00"
-    }
-}

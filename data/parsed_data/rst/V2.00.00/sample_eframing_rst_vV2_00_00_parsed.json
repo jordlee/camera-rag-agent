@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/op_flow_and_seq/sample_eframing.rst.txt",
-    "file_type": "rst",
-    "content": ".. _sample-Eframing:\n\nsample code \"set Eframing\"\n==========================\n\n.. code-block:: cpp\n\n    usage:\n        set <horizontal_denominator> <vertical_denominator> <eframingType>\n        addarea <in/out> <areaNo> <x> <y> <width> <height>\n        removearea <in/out> <areaNo>\n        commit\n        update <in/out> <areaNo> <x> <y> <width> <height>\n        get\n    To exit, please enter 'q'.\n\n* About eframingType\n    - None\n    - Auto\n    - Single\n    - PTZ\n    - HoldCurrentPosition\n    - ForceZoomOut\n\n.. code-block:: cpp\n\n    sample:\n       set 640 480 PTZ\n       addarea in 0 1 1 640 480\n       addarea out 0 0 0 640 480\n       commit\n       update in 0 10 10 640 480\n\nSave the following code as \"RemoteCli.cpp\", replace \"app/RemoteCli.cpp\" in the SDK, then build.\n\n.. literalinclude:: /_static/Eframing.cpp\n   :language: cpp\n   :linenos:",
-    "metadata": {
-        "title": "sample_eframing",
-        "sdk_version": "V2.00.00"
-    }
-}

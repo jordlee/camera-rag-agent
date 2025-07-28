@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_CustomWB_Capturable_Area.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-CustomWB_Capturable_Area:\n\nCrDeviceProperty_CustomWB_Capturable_Area\n=========================================\n\nGet the Custom WB Capturable Area(x,y)\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00000000\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 0x00000001\n    - step\n\n| The device can get the capturable area of Custom WB Capturing with this property.\n| The x coordinate is set in the upper two bytes and the y coordinate is set in the lower two bytes\n| This value varies depends on the model and aspect setting.\n| e.g.)\n    min 0x00200020 means TopLeft=32,32.\n| The current value is not available (fixed 0x00000000).\n\n| Note :\n| Enabled by executing :ref:`CrDeviceProperty_CustomWB_Capture_Standby<dp-CustomWB_Capture_Standby>` and changing to standby state. When it changes to Standby state, :ref:`CrDeviceProperty_CustomWB_Capture_Operation<dp-CustomWB_Capture_Operation>` changes to Enable, and the current value of :ref:`CrDeviceProperty_CustomWB_Capture_Standby<dp-CustomWB_Capture_Standby>` changes to Disable.",
-    "metadata": {
-        "title": "dp_CustomWB_Capturable_Area",
-        "sdk_version": "V2.00.00"
-    }
-}

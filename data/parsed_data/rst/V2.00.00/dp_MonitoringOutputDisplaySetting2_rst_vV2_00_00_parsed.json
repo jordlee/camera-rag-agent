@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MonitoringOutputDisplaySetting2.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MonitoringOutputDisplaySetting2:\n\nCrDeviceProperty_MonitoringOutputDisplaySetting2\n================================================\n\nGet/Set the Monitoring Output Display Setting 2\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMonitoringOutputDisplaySetting_Off\n    - | Off\n\n  * - CrMonitoringOutputDisplaySetting_On\n    - | On\n\n| Get the list of Monitoring Output Display Setting destinations with Monitoring Output Display Setting Dest Assign.",
-    "metadata": {
-        "title": "dp_MonitoringOutputDisplaySetting2",
-        "sdk_version": "V2.00.00"
-    }
-}

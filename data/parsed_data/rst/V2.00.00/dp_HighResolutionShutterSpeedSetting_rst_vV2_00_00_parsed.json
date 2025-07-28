@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_HighResolutionShutterSpeedSetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-HighResolutionShutterSpeedSetting:\n\nCrDeviceProperty_HighResolutionShutterSpeedSetting\n==================================================\n\nGet/Set the High Resolution Shutter Speed Setting\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrHighResolutionShutterSpeedSetting_Off\n    - | Off\n\n  * - CrHighResolutionShutterSpeedSetting_On\n    - | On",
-    "metadata": {
-        "title": "dp_HighResolutionShutterSpeedSetting",
-        "sdk_version": "V2.00.00"
-    }
-}

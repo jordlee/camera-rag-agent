@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Zoom_Setting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Zoom_Setting:\n\nCrDeviceProperty_Zoom_Setting\n=============================\n\nGet/Set the Zoom Setting.\n\n| It may not be possible to operate depending on the model and lens type. refs Zoom Operation / Zoom Scale.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrZoomSetting_OpticalZoomOnly \n    - | Optical zoom only\n\n  * - CrZoomSetting_SmartZoomOnly \n    - | Smart zoom only\n\n  * - CrZoomSetting_On_ClearImageZoom \n    - | Clear image zoom on\n\n  * - CrZoomSetting_On_DigitalZoom \n    - | Digital zoom (and Clear image zoom) on",
-    "metadata": {
-        "title": "dp_Zoom_Setting",
-        "sdk_version": "V2.00.00"
-    }
-}

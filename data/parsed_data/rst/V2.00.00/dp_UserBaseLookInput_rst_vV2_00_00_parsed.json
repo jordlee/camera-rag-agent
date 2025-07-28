@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_UserBaseLookInput.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-UserBaseLookInput:\n\nCrDeviceProperty_UserBaseLookInput\n==================================\n\nSet/Get to UserBaseLook Input\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrUserBaseLookInput_S_Gamut3_SLog3\n    - | S-Gamut3/SLog3\n\n  * - CrUserBaseLookInput_S_Gamut3_Cine_SLog3\n    - | S-Gamut3.Cine/SLog3\n\n| Set “UserBaseLook Input” for UserBaseLook selected in “Select UserBaseLook to Edit.”",
-    "metadata": {
-        "title": "dp_UserBaseLookInput",
-        "sdk_version": "V2.00.00"
-    }
-}

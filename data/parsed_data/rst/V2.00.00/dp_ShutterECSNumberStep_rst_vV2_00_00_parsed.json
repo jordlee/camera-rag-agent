@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ShutterECSNumberStep.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ShutterECSNumberStep:\n\nCrDeviceProperty_ShutterECSNumberStep\n=============================================\n\nSet the shutter ECS number.\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - -32768\n    - min\n\n  * - 32767\n    - max\n\n  * - 1\n    - step\n\n| The CurrentValue of this device property is always zero.\n| Updating this property will be reflected in :ref:`CrDeviceProperty_ShutterECSNumber<dp-ShutterECSNumber>`.",
-    "metadata": {
-        "title": "dp_ShutterECSNumberStep",
-        "sdk_version": "V2.00.00"
-    }
-}

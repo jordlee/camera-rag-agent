@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_RecordingState.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-RecordingState:\n\nCrDeviceProperty_RecordingState\n===============================\n\nGet the Movie Recording State\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0x00\n    - Not Recording\n\n  * - 0x01\n    - Recording\n\n  * - 0x02\n    - Recording Failed\n\n| “Waiting Record” (0x03) is not record during “Interval REC (movie)” recording.",
-    "metadata": {
-        "title": "dp_RecordingState",
-        "sdk_version": "V2.00.00"
-    }
-}

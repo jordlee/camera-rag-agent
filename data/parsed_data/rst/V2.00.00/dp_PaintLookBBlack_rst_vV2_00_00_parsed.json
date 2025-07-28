@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PaintLookBBlack.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PaintLookBBlack:\n\nCrDeviceProperty_PaintLookBBlack\n================================\n\nGet/Set the paint/look B black level.\n\n    CrDataType: `CrDataType_Int16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| min(Low) to max(High)\n| 10 times the real value of B Black Level.",
-    "metadata": {
-        "title": "dp_PaintLookBBlack",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_VideoStreamCodec.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-VideoStreamCodec:\n\nCrDeviceProperty_VideoStreamCodec\n=================================\n\nGet/Set the video stream codec.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrVideoStreamCodec_Off\n    - | Off\n\n  * - CrVideoStreamCodec_MotionJpeg\n    - | MotionJpeg\n\n  * - CrVideoStreamCodec_H264\n    - | H264\n\n  * - CrVideoStreamCodec_H265\n    - | H265",
-    "metadata": {
-        "title": "dp_VideoStreamCodec",
-        "sdk_version": "V2.00.00"
-    }
-}

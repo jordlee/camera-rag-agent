@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DepthOfFieldAdjustmentInterlockingMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DepthOfFieldAdjustmentInterlockingMode:\n\nCrDeviceProperty_DepthOfFieldAdjustmentInterlockingMode\n=======================================================\n\nGet the Depth of Field Adjustment Interlocking Mode State\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrDepthOfFieldAdjustmentInterlockingMode_NDInterlockingMode\n    - | ND interlocking mode\n\n  * - CrDepthOfFieldAdjustmentInterlockingMode_GainInterlockingMode\n    - | Gain interlocking mode",
-    "metadata": {
-        "title": "dp_DepthOfFieldAdjustmentInterlockingMode",
-        "sdk_version": "V2.00.00"
-    }
-}

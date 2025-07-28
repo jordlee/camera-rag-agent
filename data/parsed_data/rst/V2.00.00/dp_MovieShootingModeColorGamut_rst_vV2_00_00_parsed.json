@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MovieShootingModeColorGamut.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MovieShootingModeColorGamut:\n\nCrDeviceProperty_MovieShootingModeColorGamut\n============================================\n\nGet/Set the Movie Shooting Mode Color Gamut\n\n| See “:ref:`Get the menu display string<op-get-the-menu-display-string>`” for menu display characters.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMovieShootingModeColorGamut_S_Gamut3_Cine\n    - | S-Gamut3.Cine\n\n  * - CrMovieShootingModeColorGamut_S_Gamut3\n    - | S-Gamut3",
-    "metadata": {
-        "title": "dp_MovieShootingModeColorGamut",
-        "sdk_version": "V2.00.00"
-    }
-}

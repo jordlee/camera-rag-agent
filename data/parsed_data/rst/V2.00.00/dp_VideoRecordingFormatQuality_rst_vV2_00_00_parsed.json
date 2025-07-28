@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_VideoRecordingFormatQuality.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-VideoRecordingFormatQuality:\n\nCrDeviceProperty_VideoRecordingFormatQuality\n============================================\n\nGet/Set the Recording quality\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrVideoRecordingFormatQuality_Level1\n    - | Level1\n\n  * - CrVideoRecordingFormatQuality_Level2\n    - | Level2\n\n  * - CrVideoRecordingFormatQuality_Level3\n    - | Level3",
-    "metadata": {
-        "title": "dp_VideoRecordingFormatQuality",
-        "sdk_version": "V2.00.00"
-    }
-}

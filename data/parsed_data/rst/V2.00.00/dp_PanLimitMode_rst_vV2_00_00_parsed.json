@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PanLimitMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PanLimitMode:\n\nCrDeviceProperty_PanLimitMode\n=============================\n\nGet/Set the Pan Limit Mode\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPanLimitMode_Off\n    - | Off\n\n  * - CrPanLimitMode_On\n    - | On",
-    "metadata": {
-        "title": "dp_PanLimitMode",
-        "sdk_version": "V2.00.00"
-    }
-}

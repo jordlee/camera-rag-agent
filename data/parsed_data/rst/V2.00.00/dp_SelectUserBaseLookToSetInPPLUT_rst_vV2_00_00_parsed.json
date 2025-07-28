@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SelectUserBaseLookToSetInPPLUT.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SelectUserBaseLookToSetInPPLUT:\n\nCrDeviceProperty_SelectUserBaseLookToSetInPPLUT\n===============================================\n\nSet/Get to Select UserBaseLook to Set in PPLUT\n\n| Can only be set in movie mode.\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSelectUserBaseLookToSetInPPLUT_Invalid\n    - | Invalid\n\n  * - Other than above values\n    - | The value of UserBaseLookNumber\n\n| It may increase or decrease because it varies depending on the model and setting status.\n| Set “Select BaseLook to Set in PPLUT” for PictureProfileLUT in “Picture Profile.”",
-    "metadata": {
-        "title": "dp_SelectUserBaseLookToSetInPPLUT",
-        "sdk_version": "V2.00.00"
-    }
-}

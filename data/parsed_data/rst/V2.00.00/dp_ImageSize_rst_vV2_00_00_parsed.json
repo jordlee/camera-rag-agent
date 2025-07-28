@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ImageSize.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ImageSize:\n\nCrDeviceProperty_ImageSize\n==========================\n\nGet/Set the Image Size\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrImageSize_L\n    - | L\n\n  * - CrImageSize_M\n    - | M\n\n  * - CrImageSize_S\n    - | S\n\n  * - CrImageSize_VGA\n    - | VGA",
-    "metadata": {
-        "title": "dp_ImageSize",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusModeStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FocusModeStatus:\n\nCrDeviceProperty_FocusModeStatus\n================================\n\nGet the focus mode status.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFocusModeStatus_FocusHold\n    - | Focus Hold\n\n  * - CrFocusModeStatus_MF_Operation\n    - | MF Operation \n\n  * - CrFocusModeStatus_AF_Operation\n    - | AF Operation (AF-S/AF-C)",
-    "metadata": {
-        "title": "dp_FocusModeStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

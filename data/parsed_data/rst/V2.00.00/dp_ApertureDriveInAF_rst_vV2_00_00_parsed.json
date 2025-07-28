@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ApertureDriveInAF.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ApertureDriveInAF:\n\nCrDeviceProperty_ApertureDriveInAF\n==================================\n\nGet/Set the Aperture Drive in AF\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrApertureDriveInAF_Standard\n    - | Standard\n\n  * - CrApertureDriveInAF_FocusPriority\n    - | Focus Priority\n\n  * - CrApertureDriveInAF_SilentPriority\n    - | Silent Priority",
-    "metadata": {
-        "title": "dp_ApertureDriveInAF",
-        "sdk_version": "V2.00.00"
-    }
-}

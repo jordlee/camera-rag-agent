@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PriorityKeySettings.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PriorityKeySettings:\n\nCrDeviceProperty_PriorityKeySettings\n====================================\n\nGet/Set the Position Key Setting\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPriorityKey_CameraPosition\n    - | Camera position priority\n      | (Ex. Mode dial, Drive/Focus mode dial)\n\n  * - CrPriorityKey_PCRemote \n    - | PC Remote setting priority\n\n| This value will be set to 0x00 when the session is closed.",
-    "metadata": {
-        "title": "dp_PriorityKeySettings",
-        "sdk_version": "V2.00.00"
-    }
-}

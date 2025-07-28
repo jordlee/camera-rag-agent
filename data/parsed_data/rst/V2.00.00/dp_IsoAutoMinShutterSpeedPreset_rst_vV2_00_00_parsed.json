@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_IsoAutoMinShutterSpeedPreset.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-IsoAutoMinShutterSpeedPreset:\n\nCrDeviceProperty_IsoAutoMinShutterSpeedPreset\n=============================================\n\nGet/Set the Iso Auto Min Shutter Speed Preset\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrIsoAutoMinShutterSpeedPreset_Slower\n    - | Slower\n\n  * - CrIsoAutoMinShutterSpeedPreset_Slow\n    - | Slow\n\n  * - CrIsoAutoMinShutterSpeedPreset_Standard\n    - | Standard\n\n  * - CrIsoAutoMinShutterSpeedPreset_Fast\n    - | Fast\n\n  * - CrIsoAutoMinShutterSpeedPreset_Faster\n    - | Faster",
-    "metadata": {
-        "title": "dp_IsoAutoMinShutterSpeedPreset",
-        "sdk_version": "V2.00.00"
-    }
-}

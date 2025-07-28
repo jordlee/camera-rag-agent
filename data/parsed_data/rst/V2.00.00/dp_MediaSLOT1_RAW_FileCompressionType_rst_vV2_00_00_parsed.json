@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MediaSLOT1_RAW_FileCompressionType.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MediaSLOT1_RAW_FileCompressionType:\n\nCrDeviceProperty_MediaSLOT1_RAW_FileCompressionType\n===================================================\n\nGet/Set the compression type of RAW file in media(SLOT1)\n\n| This property is effective when Recording Media for still images is set to \"Sort Recording\", and :ref:`CrDeviceProperty_MediaSLOT1_FileType<dp-MediaSLOT1_FileType>` is set to \"CrFileType_Raw\".\n\n| For ILCE-1 : MENU > Shooting > Image Quality > Image Quality Settings\n\n|  > File Format/RAW File Type\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrRAWFile_Compression\n    - | Compression\n\n  * - CrRAWFile_LossLessL\n    - | LosslessL\n\n  * - CrRAWFile_LossLessM\n    - | LosslessM\n\n  * - CrRAWFile_LossLessS\n    - | LosslessS\n\n  * - CrRAWFile_Uncompression\n    - | Uncompression\n\n  * - CrRAWFile_LossLess\n    - | Lossless Compression",
-    "metadata": {
-        "title": "dp_MediaSLOT1_RAW_FileCompressionType",
-        "sdk_version": "V2.00.00"
-    }
-}

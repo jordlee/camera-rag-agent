@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Movie_IntervalRec_RecordingDuration.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Movie_IntervalRec_RecordingDuration:\n\nCrDeviceProperty_Movie_IntervalRec_RecordingDuration\n====================================================\n\nGet the Interval REC(Movie) Recording Duration\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - 0\n    - min\n\n  * - 0xFFFFFFFF\n    - max\n\n  * - 1\n    - step\n\n| Interval REC(Time Lapse Movie) recorded clip length. Unit is second.\n| For example, if you start shooting at 30 fps at 1 second intervals, CurrentValue will increase by 1 for every 30 seconds elapsed.",
-    "metadata": {
-        "title": "dp_Movie_IntervalRec_RecordingDuration",
-        "sdk_version": "V2.00.00"
-    }
-}

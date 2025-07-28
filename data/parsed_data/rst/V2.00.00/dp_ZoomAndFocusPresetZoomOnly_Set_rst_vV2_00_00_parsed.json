@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ZoomAndFocusPresetZoomOnly_Set.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ZoomAndFocusPresetZoomOnly_Set:\n\nCrDeviceProperty_ZoomAndFocusPresetZoomOnly_Set\n===============================================\n\nSet the Zoom&Focus Preset Zoom-only\n\n    CrDataType: `CrDataType_UInt16`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - See below\n\n\n| Upper 8bits : Preset number\n| Lower 8bits :  Off/On value\n|  ex.) Preset5 is On =\n|        0x0400 | (CrInt16u)(CrZoomAndFocusPresetZoomOnlyValue_On)\n| Set the Zoom&Focus Preset Zoom-only setting value\n| CrDataType_UInt8Array\n| Parameter Code\n| CrZoomAndFocusPresetZoomOnlyValue_Off Off\n| CrZoomAndFocusPresetZoomOnlyValue_On On",
-    "metadata": {
-        "title": "dp_ZoomAndFocusPresetZoomOnly_Set",
-        "sdk_version": "V2.00.00"
-    }
-}

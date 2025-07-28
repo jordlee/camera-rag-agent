@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ImageStabilizationSteadyShotFocalLength.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ImageStabilizationSteadyShotFocalLength:\n\nCrDeviceProperty_ImageStabilizationSteadyShotFocalLength\n========================================================\n\nGet/Set the Image Stabilization Steady Shot Focal Length\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - --\n    - | Unit is mm\n      | e.g.) 0x0064= 100mm",
-    "metadata": {
-        "title": "dp_ImageStabilizationSteadyShotFocalLength",
-        "sdk_version": "V2.00.00"
-    }
-}

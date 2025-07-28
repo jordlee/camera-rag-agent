@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusSpeedDirectSync.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FocusSpeedDirectSync:\n\nCrDeviceProperty_FocusSpeedDirectSync\n=====================================\n\nGet/Set the focus speed direct sync.\n\n    CrDataType: `CrDataType_UInt32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - Variable\n    - step\n\n| The focus speed is set in the upper 16bits and the focus position is set in the lower 16bits.\n| The focus speed and position ranges (Min/Max/Step values) are separated. Set the range value for each.\n| If focus speed is 2048, position is 4096, set 0x08001000. (0x0800 = 0d2048, 0x1000 = 0d4096)",
-    "metadata": {
-        "title": "dp_FocusSpeedDirectSync",
-        "sdk_version": "V2.00.00"
-    }
-}

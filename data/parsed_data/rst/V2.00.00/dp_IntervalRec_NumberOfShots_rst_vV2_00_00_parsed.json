@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_IntervalRec_NumberOfShots.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-IntervalRec_NumberOfShots:\n\nCrDeviceProperty_IntervalRec_NumberOfShots\n==========================================\n\nGet/Set the IntervalREC(Still) Number of Shots\n\n    CrDataType: `CrDataType_UInt16Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step\n\n| Number of shots.",
-    "metadata": {
-        "title": "dp_IntervalRec_NumberOfShots",
-        "sdk_version": "V2.00.00"
-    }
-}

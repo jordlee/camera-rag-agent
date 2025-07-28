@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_MediaSLOT3_RecordingAvailableType.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-MediaSLOT3_RecordingAvailableType:\n\nCrDeviceProperty_MediaSLOT3_RecordingAvailableType\n==================================================\n\nGet the Media SLOT3 Recording Available Type\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrMediaSlotRecordingAvailableType_None\n    - | None\n\n  * - CrMediaSlotRecordingAvailableType_Main\n    - | Main\n\n  * - CrMediaSlotRecordingAvailableType_Proxy\n    - | Proxy\n\n  * - CrMediaSlotRecordingAvailableType_MainAndProxy\n    - | Main + Proxy",
-    "metadata": {
-        "title": "dp_MediaSLOT3_RecordingAvailableType",
-        "sdk_version": "V2.00.00"
-    }
-}

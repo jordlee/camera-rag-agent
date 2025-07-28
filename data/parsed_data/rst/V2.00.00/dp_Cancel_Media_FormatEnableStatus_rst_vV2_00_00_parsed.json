@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Cancel_Media_FormatEnableStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Cancel_Media_FormatEnableStatus:\n\nCrDeviceProperty_Cancel_Media_FormatEnableStatus\n================================================\n\nGet the status of whether the media format is cancelable or not.\n\n| This property changes during Full formatting.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrCancelMediaFormat_Disable\n    - | Disable\n\n  * - CrCancelMediaFormat_Enable\n    - | Enable",
-    "metadata": {
-        "title": "dp_Cancel_Media_FormatEnableStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

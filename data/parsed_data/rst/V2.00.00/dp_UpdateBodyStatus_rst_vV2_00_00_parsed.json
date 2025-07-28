@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_UpdateBodyStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-UpdateBodyStatus:\n\nCrDeviceProperty_UpdateBodyStatus\n=================================\n\nGet the Update Body Status\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrUpdateStatus_NoError\n    - | No error\n\n  * - CrUpdateStatus_OtherError\n    - | Other errors\n\n  * - CrUpdateStatus_NoUpdateFileInMedia\n    - | No update body file in media\n\n  * - CrUpdateStatus_FileVersionOlder\n    - | File version older\n\n  * - CrUpdateStatus_FileDamaged\n    - | File damaged\n\n  * - CrUpdateStatus_FileInvalidData\n    - | File invalid data\n\n  * - CrUpdateStatus_FileModelNotMatch\n    - | File model not match\n\n  * - CrUpdateStatus_FileRegionNotMatch\n    - | File region not match\n\n  * - CrUpdateStatus_FileVersionNotMatch\n    - | File version not match\n\n  * - CrUpdateStatus_LowBattery\n    - | Low battery\n\n  * - CrUpdateStatus_UnsupportedBattery\n    - | Unsupported battery",
-    "metadata": {
-        "title": "dp_UpdateBodyStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

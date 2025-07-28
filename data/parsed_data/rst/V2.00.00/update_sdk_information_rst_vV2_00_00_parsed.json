@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/api_reference/update_sdk_information.rst.txt",
-    "file_type": "rst",
-    "content": ".. _api-header-update-sdk-information:\n\nUpdate SDK Information\n======================\n\n.. _api-edit-sdk-info:\n\nEditSDKInfo\n-----------\n\n**Overview**\n    Edit the information about the SDK stored in the config file.\n\n**Definition**\n    `CrError EditSDKInfo(CrInt16u infotype);`\n\n**Input parameters**\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Type\n    - Explanation\n\n  * - CrInt16u\n    - | A constant that means the information to update.\n      | The constant values are in the SDKInfoType enumeration.\n      |\n      | It is possible to delete camera-specific information with the following values.\n      | SDKINFO_AUTHINFO\n\n**Output parameters**\n  None\n\n**Return value**\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Type\n    - Explanation\n\n  * - CrError\n    - | CrError_None on Success\n      | CrError_Api_Insufficient if the update fails\n\n**Related API**\n  None\n\n**Special note (details)**\n  None in particular",
-    "metadata": {
-        "title": "update_sdk_information",
-        "sdk_version": "V2.00.00"
-    }
-}

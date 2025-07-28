@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_DeleteUserBaseLook.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-DeleteUserBaseLook:\n\nCrDeviceProperty_DeleteUserBaseLook\n===================================\n\nSet/Get to Delete UserBaseLook\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrDeleteUserBaseLook_Invalid\n    - | Invalid\n\n  * - CrDeleteUserBaseLook_All\n    - | All\n\n  * - Other than above values\n    - | The value of UserBaseLookNumber\n\n\n| It may increase or decrease because it varies depending on the model and setting status.\n| See the :ref:`GetDisplayStringList<api-get-display-string-list>` for display character.",
-    "metadata": {
-        "title": "dp_DeleteUserBaseLook",
-        "sdk_version": "V2.00.00"
-    }
-}

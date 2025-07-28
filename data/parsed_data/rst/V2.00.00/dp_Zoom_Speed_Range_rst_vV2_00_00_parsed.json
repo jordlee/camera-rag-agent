@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_Zoom_Speed_Range.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-Zoom_Speed_Range:\n\nCrDeviceProperty_Zoom_Speed_Range\n=================================\n\nGet the Zoom Speed Range.\n\n    CrDataType: `CrDataType_Int8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - Variable\n    - min\n\n  * - Variable\n    - max\n\n  * - 1\n    - step\n\n| Current parameter is fixed at 0.\n| The range of the parameters is the same as the range of Zoom Operation.\n\n| Zoom in speed is a positive number and zoom out speed is a negative number.\n| Valid when :ref:`CrDeviceProperty_Remocon_Zoom_Speed_Type<dp-Remocon_Zoom_Speed_Type>` is CrRemoconZoomSpeedType_Variable.\n| Note:\n| The actual zoom speed depends on the specifications of each lens model.",
-    "metadata": {
-        "title": "dp_Zoom_Speed_Range",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_PictureProfile_ColorMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-PictureProfile_ColorMode:\n\nCrDeviceProperty_PictureProfile_ColorMode\n=========================================\n\nGet/Set the Picture Profile Color Mode\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrPictureProfileColorMode_Movie\n    - | Movie\n\n  * - CrPictureProfileColorMode_Still\n    - | Still\n\n  * - CrPictureProfileColorMode_S_Cinetone\n    - | S-Cinetone\n\n  * - CrPictureProfileColorMode_Cinema\n    - | Cinema\n\n  * - CrPictureProfileColorMode_Pro\n    - | Pro\n      | As of v1.13.00, ILME-FX30 uses “CrPictureProfileColorMode_709tone” instead.\n\n  * - CrPictureProfileColorMode_ITU709_Matrix\n    - | ITU709 Matrix\n\n  * - CrPictureProfileColorMode_BlackWhite\n    - | Black&White\n\n  * - CrPictureProfileColorMode_S_Gamut3_Cine\n    - | S-Gamut3.Cine\n\n  * - CrPictureProfileColorMode_S_Gamut3\n    - | S-Gamut3\n\n  * - CrPictureProfileColorMode_BT_2020\n    - | BT.2020\n\n  * - CrPictureProfileColorMode_709\n    - | 709\n\n  * - CrPictureProfileColorMode_S_Gamut\n    - | S-Gamut\n\n  * - CrPictureProfileColorMode_709tone\n    - | 709tone\n\n| Set Color Mode for the Picture Profile selected in “Picture Profile.”",
-    "metadata": {
-        "title": "dp_PictureProfile_ColorMode",
-        "sdk_version": "V2.00.00"
-    }
-}

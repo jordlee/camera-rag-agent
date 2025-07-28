@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_WhiteBalance.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-WhiteBalance:\n\nCrDeviceProperty_WhiteBalance\n=============================\n\nGet/Set the WhiteBalance\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrWhiteBalance_AWB\n    - | AWB\n\n  * - CrWhiteBalance_Daylight\n    - | Daylight\n\n  * - CrWhiteBalance_Fluorescent\n    - | Fluorescent\n\n  * - CrWhiteBalance_Tungsten\n    - | Tungsten (Incandescent)\n\n  * - CrWhiteBalance_Flush\n    - | Flash\n\n  * - CrWhiteBalance_Fluorescent_WarmWhite \n    - | Fluor.: Warm White (-1)\n\n  * - CrWhiteBalance_Fluorescent_CoolWhite\n    - | Fluor.: Cool White (0)\n\n  * - CrWhiteBalance_Fluorescent_DayWhite\n    - | Fluor.: Day White (+1)\n\n  * - CrWhiteBalance_Fluorescent_Daylight\n    - | Fluor.: Daylight White (+2)\n\n  * - CrWhiteBalance_Cloudy\n    - | Cloudy\n\n  * - CrWhiteBalance_Shadow\n    - | Shade\n\n  * - CrWhiteBalance_ColorTemp\n    - | C.Temp.\n\n  * - CrWhiteBalance_Custom_1\n    - | Custom 1\n\n  * - CrWhiteBalance_Custom_2\n    - | Custom 2\n\n  * - CrWhiteBalance_Custom_3\n    - | Custom 3\n\n  * - CrWhiteBalance_Custom\n    - | Custom\n\n  * - CrWhiteBalance_Underwater_Auto\n    - | Underwater Auto",
-    "metadata": {
-        "title": "dp_WhiteBalance",
-        "sdk_version": "V2.00.00"
-    }
-}

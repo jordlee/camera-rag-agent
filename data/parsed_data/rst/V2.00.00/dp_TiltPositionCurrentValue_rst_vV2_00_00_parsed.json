@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_TiltPositionCurrentValue.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-TiltPositionCurrentValue:\n\nCrDeviceProperty_TiltPositionCurrentValue\n=========================================\n\nGet the tilt position current value.\n\n    CrDataType: `CrDataType_Int32Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - variable\n    - min\n\n  * - variable\n    - max\n\n  * - variable\n    - step",
-    "metadata": {
-        "title": "dp_TiltPositionCurrentValue",
-        "sdk_version": "V2.00.00"
-    }
-}

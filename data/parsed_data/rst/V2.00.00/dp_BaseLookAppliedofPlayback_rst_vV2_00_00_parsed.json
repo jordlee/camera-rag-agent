@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_BaseLookAppliedofPlayback.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-BaseLookAppliedofPlayback:\n\nCrDeviceProperty_BaseLookAppliedofPlayback\n==========================================\n\nGet the BaseLook applied of playback.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrBaseLookAppliedofPlayback_Applicable\n    - | Applicable\n\n  * - CrBaseLookAppliedofPlayback_Not_Applicable\n    - | Not applicable",
-    "metadata": {
-        "title": "dp_BaseLookAppliedofPlayback",
-        "sdk_version": "V2.00.00"
-    }
-}

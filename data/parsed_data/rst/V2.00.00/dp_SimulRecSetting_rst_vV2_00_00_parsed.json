@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_SimulRecSetting.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-SimulRecSetting:\n\nCrDeviceProperty_SimulRecSetting\n================================\n\nGet/Set the simul recording setting.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrSimulRecSetting_OFF\n    - | Off\n\n  * - CrSimulRecSetting_ON\n    - | On",
-    "metadata": {
-        "title": "dp_SimulRecSetting",
-        "sdk_version": "V2.00.00"
-    }
-}

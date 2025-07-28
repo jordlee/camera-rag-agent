@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ElectricFrontCurtainShutter.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ElectricFrontCurtainShutter:\n\nCrDeviceProperty_ElectricFrontCurtainShutter\n============================================\n\nGet/Set the Electric Front Curtain Shutter\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrElectricFrontCurtainShutter_Off\n    - | Off\n\n  * - CrElectricFrontCurtainShutter_On\n    - | On",
-    "metadata": {
-        "title": "dp_ElectricFrontCurtainShutter",
-        "sdk_version": "V2.00.00"
-    }
-}

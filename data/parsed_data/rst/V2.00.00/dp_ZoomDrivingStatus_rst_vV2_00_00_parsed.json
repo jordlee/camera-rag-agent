@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ZoomDrivingStatus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ZoomDrivingStatus:\n\nCrDeviceProperty_ZoomDrivingStatus\n==================================\n\nGet the Zoom Driving Status\n\n| This value changes only when the :ref:`CrDeviceProperty_ZoomPositionSetting<dp-ZoomPositionSetting>` operation.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrZoomDrivingStatus_NotDriving\n    - | Not Driving\n\n  * - CrZoomDrivingStatus_Driving\n    - | Driving\n\n| “Driving (0x02)” is set for this device property throughout the short Zoom Driving period.\n| “Not Driving (0x01)” is set for this device property except during the short Zoom Driving period.\n| “Driving (0x02)” may be set for this device property during the period from  the time when the Zoom Driving request is received to the time when the zoom acutually drives.\n| This device property only reflects the Focus Driving Status derived from “Load Zoom and Focus Position” and from \"Zoom Position Setting.”",
-    "metadata": {
-        "title": "dp_ZoomDrivingStatus",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_WhiteBalanceSwitch.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-WhiteBalanceSwitch:\n\nCrDeviceProperty_WhiteBalanceSwitch\n===================================\n\nGet/Set the selected current white balance mode.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrWhiteBalanceSwitch_PresetMode\n    - | Preset Mode\n\n  * - CrWhiteBalanceSwitch_MemoryAMode\n    - | Memory A Mode\n\n  * - CrWhiteBalanceSwitch_MemoryBMode\n    - | Memory B Mode",
-    "metadata": {
-        "title": "dp_WhiteBalanceSwitch",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FocusMode.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FocusMode:\n\nCrDeviceProperty_FocusMode\n==========================\n\nGet/Set the Focus Mode\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFocus_MF\n    - | Manual(MF)\n\n  * - CrFocus_AF_S\n    - | Automatic(AF_S)\n\n  * - CrFocus_AF_C\n    - | Continuous AF(AF_C)\n\n  * - CrFocus_AF_A\n    - | Auto(AF_A)\n\n  * - CrFocus_DMF\n    - | Direct Manual Focus(DMF)\n\n  * - CrFocus_AF_D\n    - | (AF-D)\n\n  * - CrFocus_PF\n    - | Preset Focus(PF)",
-    "metadata": {
-        "title": "dp_FocusMode",
-        "sdk_version": "V2.00.00"
-    }
-}

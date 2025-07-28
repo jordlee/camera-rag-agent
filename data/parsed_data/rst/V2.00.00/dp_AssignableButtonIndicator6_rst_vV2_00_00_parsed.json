@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_AssignableButtonIndicator6.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-AssignableButtonIndicator6:\n\nCrDeviceProperty_AssignableButtonIndicator6\n===========================================\n\nGet the Assignable Button Indicator 6\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrAssignableButtonIndicator_Off\n    - | OFF\n\n  * - CrAssignableButtonIndicator_On\n    - | ON",
-    "metadata": {
-        "title": "dp_AssignableButtonIndicator6",
-        "sdk_version": "V2.00.00"
-    }
-}

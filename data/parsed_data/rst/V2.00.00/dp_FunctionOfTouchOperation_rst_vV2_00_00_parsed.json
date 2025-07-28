@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_FunctionOfTouchOperation.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-FunctionOfTouchOperation:\n\nCrDeviceProperty_FunctionOfTouchOperation\n=========================================\n\nGet/Set the Function of Touch Operation\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrFunctionOfTouchOperation_Off\n    - | OFF\n\n  * - CrFunctionOfTouchOperation_Shutter\n    - | Touch Shutter\n\n  * - CrFunctionOfTouchOperation_Focus\n    - | Touch Focus\n\n  * - CrFunctionOfTouchOperation_Tracking\n    - | Touch Tracking\n\n  * - CrFunctionOfTouchOperation_AE\n    - | Touch AE\n\n  * - CrFunctionOfTouchOperation_ShutterAndAEOn\n    - | Touch Shutter and Touch AE ON\n\n  * - CrFunctionOfTouchOperation_ShutterAndAEOff\n    - | Touch Shutter and Touch AE OFF\n\n  * - CrFunctionOfTouchOperation_FocusAndAEOn\n    - | Touch Focus and Touch AE ON\n\n  * - CrFunctionOfTouchOperation_FocusAndAEOff\n    - | Touch Focus and Touch AE OFF\n\n  * - CrFunctionOfTouchOperation_TrackingAndAEOn\n    - | Touch Tracking and Touch AE ON\n\n  * - CrFunctionOfTouchOperation_TrackingAndAEOff\n    - | Touch Tracking and Touch AE OFF",
-    "metadata": {
-        "title": "dp_FunctionOfTouchOperation",
-        "sdk_version": "V2.00.00"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_WhiteBalanceTint.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-WhiteBalanceTint:\n\nCrDeviceProperty_WhiteBalanceTint\n=================================\n\nGet/Set the White Balance Tint\n\n| This device property can also be updated by :ref:`CrDeviceProperty_WhiteBalanceTintStep<dp-WhiteBalanceTintStep>`.\n\n    CrDataType: `CrDataType_Int8Range`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Value\n    - Explanation\n\n  * - -99\n    - min\n\n  * - 99\n    - max\n\n  * - 1\n    - step\n\n| White Balance Tint<A/B> setting value, A and B can be switched by SW to control the CurrentValue remotely.",
-    "metadata": {
-        "title": "dp_WhiteBalanceTint",
-        "sdk_version": "V2.00.00"
-    }
-}

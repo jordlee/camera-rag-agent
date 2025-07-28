@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_TargetStreamingDestinationSelect.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-TargetStreamingDestinationSelect:\n\nCrDeviceProperty_TargetStreamingDestinationSelect\n=================================================\n\nGet/Set the Target Streaming Destination Select\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - 1\n    - | Video Stream 1\n\n  * - 2\n    - | Video Stream 2\n\n  * - 3\n    - | Video Stream 3\n\n  * - 4\n    - | Video Stream 4\n\n  * - 5\n    - | Video Stream 5\n\n  * - 6\n    - | Video Stream 6\n\n  * - 7\n    - | Video Stream 7\n\n  * - 8\n    - | Video Stream 8\n\n  * - 9\n    - | Video Stream 9\n\n  * - 10\n    - | Video Stream 10\n\n  * - 11\n    - | Video Stream 11\n\n  * - 12\n    - | Video Stream 12\n\n  * - 13\n    - | Video Stream 13\n\n  * - 14\n    - | Video Stream 14\n\n  * - 15\n    - | Video Stream 15\n\n  * - 16\n    - | Video Stream 16",
-    "metadata": {
-        "title": "dp_TargetStreamingDestinationSelect",
-        "sdk_version": "V2.00.00"
-    }
-}

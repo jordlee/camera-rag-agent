@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_StreamCipherType.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-StreamCipherType:\n\nCrDeviceProperty_StreamCipherType\n=================================\n\nGet/Set the streaming cipher type.\n\n    CrDataType: `CrDataType_UInt8Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrStreamCipherType_None\n    - | None\n\n  * - CrStreamCipherType_AES_128\n    - | AES_128\n\n  * - CrStreamCipherType_AES_192\n    - | AES_192\n\n  * - CrStreamCipherType_AES_256\n    - | AES_256",
-    "metadata": {
-        "title": "dp_StreamCipherType",
-        "sdk_version": "V2.00.00"
-    }
-}

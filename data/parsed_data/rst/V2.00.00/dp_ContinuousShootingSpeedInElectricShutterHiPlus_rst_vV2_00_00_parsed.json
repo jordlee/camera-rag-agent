@@ -1,9 +1,0 @@
-{
-    "source_file": "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/api_docs_html/V2.00.00/_sources/dp/dp_ContinuousShootingSpeedInElectricShutterHiPlus.rst.txt",
-    "file_type": "rst",
-    "content": "﻿.. _dp-ContinuousShootingSpeedInElectricShutterHiPlus:\n\nCrDeviceProperty_ContinuousShootingSpeedInElectricShutterHiPlus\n===============================================================\n\nGet/Set the Continuous Shooting Speed in Electric Shutter(Hi+)\n\n    CrDataType: `CrDataType_UInt16Array`\n\n.. list-table::\n  :widths: auto\n  :header-rows: 1\n\n  * - Parameter Code\n    - Explanation\n\n  * - CrContinuousShootingSpeedInElectricShutter_Invalid\n    - | Invalid\n\n  * - Other than above values\n    - | The real value of shutter speed in pictures/second.",
-    "metadata": {
-        "title": "dp_ContinuousShootingSpeedInElectricShutterHiPlus",
-        "sdk_version": "V2.00.00"
-    }
-}
