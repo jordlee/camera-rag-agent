@@ -6,11 +6,12 @@ env/
 
 # Data directories (generated/local, often large)
 data/
-!data/
 data/chroma_db/
 data/chunks.json
 data/parsed_data/
 data/raw_sdk_docs/
+data/doxygen_examples_xml_output/
+data/doxygen_xml_output/
 
 # Compiled Python files
 __pycache__/
