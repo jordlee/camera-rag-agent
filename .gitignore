@@ -10,6 +10,7 @@ data/
 data/chroma_db/
 data/chunks.json
 data/parsed_data/
+data/raw_sdk_docs/
 
 # Compiled Python files
 __pycache__/
