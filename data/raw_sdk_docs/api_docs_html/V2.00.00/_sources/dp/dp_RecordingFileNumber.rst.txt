@@ -1,0 +1,22 @@
+﻿.. _dp-RecordingFileNumber:
+
+CrDeviceProperty_RecordingFileNumber
+====================================
+
+Get/Set the Recording File Number (Still)
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRecordingFileNumber_Reset
+    - | Reset
+
+  * - CrRecordingFileNumber_Series
+    - | Series
+

@@ -1,0 +1,25 @@
+﻿.. _dp-MonitoringDeliveringStatus:
+
+CrDeviceProperty_MonitoringDeliveringStatus
+===========================================
+
+Get the Monitoring Delivering Status
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMonitoringDeliveringStatus_RTSP
+    - | SDK does not support
+
+  * - CrMonitoringDeliveringStatus_VenderProtocol
+    - | Vender protocol
+
+  * - CrMonitoringDeliveringStatus_None
+    - | -
+

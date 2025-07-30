@@ -1,0 +1,28 @@
+﻿.. _dp-MediaSLOT2Player:
+
+CrDeviceProperty_MediaSLOT2Player
+=================================
+
+Get the Media SLOT2 Player
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMediaPlayer_None
+    - | None
+
+  * - CrMediaPlayer_Player
+    - | Player
+
+  * - CrMediaPlayer_Recorder
+    - | Recorder
+
+  * - CrMediaPlayer_Player_Recorder
+    - | Player and Recorder
+

@@ -1,0 +1,25 @@
+﻿.. _dp-NDFilterUnitSetting:
+
+CrDeviceProperty_NDFilterUnitSetting
+====================================
+
+Get/Set the ND Filter Unit Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrNDFilterUnitSetting_OpticalDensity
+    - | Optical density
+
+  * - CrNDFilterUnitSetting_Transmittance
+    - | Transmittance
+
+| See “ND Filter Value” when selecting the value of Transmittance.
+| See “ND Filter Optical Density Value” when selecting the value of Optical Density.
+

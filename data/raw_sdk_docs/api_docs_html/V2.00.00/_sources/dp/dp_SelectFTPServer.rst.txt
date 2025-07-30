@@ -1,0 +1,24 @@
+﻿.. _dp-SelectFTPServer:
+
+CrDeviceProperty_SelectFTPServer
+================================
+
+Get/Set the Select FTP Server
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Value
+    - | The real value of Server ID(1~)
+      | Changing it will disconnect IP network communication. Reconnection may take some time
+
+| When this device properties changed, the following device properties are changed.
+| CrDeviceProperty_FTP_ConnectionStatus
+| CrDeviceProperty_FTP_ConnectionErrorInfo
+

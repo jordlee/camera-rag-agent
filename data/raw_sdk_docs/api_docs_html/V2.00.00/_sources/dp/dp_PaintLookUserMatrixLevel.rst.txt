@@ -1,0 +1,28 @@
+﻿.. _dp-PaintLookUserMatrixLevel:
+
+CrDeviceProperty_PaintLookUserMatrixLevel
+==========================================
+
+Get/Set the paint/look user matrix level.
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| The range value may changes depending on the model.
+| 10 times the real value.
+

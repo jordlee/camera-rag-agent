@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="struct_s_c_r_s_d_k_1_1_cr_contents_file___image_param" kind="struct" language="C++" prot="public">
+    <compoundname>SCRSDK::CrContentsFile_ImageParam</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___image_param_1a4f53be35d1548fa27532647d1e39be97" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_ImageParam::imagePixWidth</definition>
+        <argsstring></argsstring>
+        <name>imagePixWidth</name>
+        <qualifiedname>SCRSDK::CrContentsFile_ImageParam::imagePixWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6412" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___image_param_1a5b6669ddd32b82e87588fe36eace6d37" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_ImageParam::imagePixHeight</definition>
+        <argsstring></argsstring>
+        <name>imagePixHeight</name>
+        <qualifiedname>SCRSDK::CrContentsFile_ImageParam::imagePixHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6413" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6413" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="6410" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="6411" bodyend="6414"/>
+    <listofallmembers>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___image_param_1a5b6669ddd32b82e87588fe36eace6d37" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_ImageParam</scope><name>imagePixHeight</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___image_param_1a4f53be35d1548fa27532647d1e39be97" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_ImageParam</scope><name>imagePixWidth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

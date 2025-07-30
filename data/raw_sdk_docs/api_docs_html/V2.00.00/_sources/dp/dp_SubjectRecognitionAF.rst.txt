@@ -1,0 +1,25 @@
+﻿.. _dp-SubjectRecognitionAF:
+
+CrDeviceProperty_SubjectRecognitionAF
+=====================================
+
+Get/Set Face Subject Recognition AF
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSubjectRecognitionAF_Off
+    - | Off
+
+  * - CrSubjectRecognitionAF_OnlyAF
+    - | Only AF
+
+  * - CrSubjectRecognitionAF_PriorityAF
+    - | Priority AF
+

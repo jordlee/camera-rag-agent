@@ -1,0 +1,27 @@
+﻿.. _dp-ZoomPositionCurrentValue:
+
+CrDeviceProperty_ZoomPositionCurrentValue
+=========================================
+
+Get the absolute zoom position current value.
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - 0x0001
+    - step
+
+| Obtain fixed value during digital zoom when using following models: ILCE-1, ILCE-7RM5, ILCE-7SM3, ILCE-7M4, ILME-FX3, ILME-FX3A, ILME-FX30.
+

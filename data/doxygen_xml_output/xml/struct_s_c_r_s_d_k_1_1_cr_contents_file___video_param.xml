@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param" kind="struct" language="C++" prot="public">
+    <compoundname>SCRSDK::CrContentsFile_VideoParam</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1aa536fca03111ed0ce12bb9165597ff7d" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::startTimeCode</definition>
+        <argsstring></argsstring>
+        <name>startTimeCode</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::startTimeCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6418" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1ac036b6f818969c58af8e98f0dfb252e5" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::endTimeCode</definition>
+        <argsstring></argsstring>
+        <name>endTimeCode</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::endTimeCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6419" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a9ab5e7ba746ef1dae54ba872fba3a3e5" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a8a8e3a44dee50a8afb56f089236e2a44" kindref="member">CrContentsFile_VideoCodec</ref></type>
+        <definition>CrContentsFile_VideoCodec SCRSDK::CrContentsFile_VideoParam::videoCodec</definition>
+        <argsstring></argsstring>
+        <name>videoCodec</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::videoCodec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6420" column="27" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a8c167dcd248530651a49f9f63ebba34e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrContentsFile_VideoParam::proxyStatus</definition>
+        <argsstring></argsstring>
+        <name>proxyStatus</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::proxyStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6421" column="6" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a978c2fab08b9238e9433fc404311de17" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a489f33654b61ef63059d7c6aff690ced" kindref="member">CrContentsFile_GopStructure</ref></type>
+        <definition>CrContentsFile_GopStructure SCRSDK::CrContentsFile_VideoParam::gopStructure</definition>
+        <argsstring></argsstring>
+        <name>gopStructure</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::gopStructure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6422" column="29" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a3e6cf79a44dae876b1353716332f7f90" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6423" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1ad7f140d7a8c428fd296b4b81ec65705e" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6424" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1abd922b4156a0c53cb682dc1389163088" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aa0e31e622230d3eb3a32426d7d0e10f1" kindref="member">CrContentsFile_AspectRatio</ref></type>
+        <definition>CrContentsFile_AspectRatio SCRSDK::CrContentsFile_VideoParam::aspectRatio</definition>
+        <argsstring></argsstring>
+        <name>aspectRatio</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::aspectRatio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6425" column="28" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a43c02de966f5e29101828057a0457437" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ac10e55783531648a1bc4af6e7698e7f6" kindref="member">CrContentsFile_ColorFormat</ref></type>
+        <definition>CrContentsFile_ColorFormat SCRSDK::CrContentsFile_VideoParam::colorFormat</definition>
+        <argsstring></argsstring>
+        <name>colorFormat</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::colorFormat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6426" column="28" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a3ea9e0d3236ac26e6982214d7096deb9" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::imageBitDepth</definition>
+        <argsstring></argsstring>
+        <name>imageBitDepth</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::imageBitDepth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6427" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1aa517682e693ff811cc80b085d200c71c" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::framesPerThousandSeconds</definition>
+        <argsstring></argsstring>
+        <name>framesPerThousandSeconds</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::framesPerThousandSeconds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6428" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a6008409fcaa519d6255cb51351912fd9" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aeb621e1f3439b4af016f5a84899d51e8" kindref="member">CrContentsFile_ScanType</ref></type>
+        <definition>CrContentsFile_ScanType SCRSDK::CrContentsFile_VideoParam::scanType</definition>
+        <argsstring></argsstring>
+        <name>scanType</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::scanType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6429" column="25" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1ae954d3fa016a3f371dc10a0e9f3a47bb" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::bitrateMbps</definition>
+        <argsstring></argsstring>
+        <name>bitrateMbps</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::bitrateMbps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6430" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a7d53300dfb404949d62c73a9916170c3" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::imageFramesPerThousandSeconds</definition>
+        <argsstring></argsstring>
+        <name>imageFramesPerThousandSeconds</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::imageFramesPerThousandSeconds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6431" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a652370a90239ff7bd802f4439beb0c26" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ad07325c99dee5a297d684d437b0805bc" kindref="member">CrContentsFile_ProfileIndication</ref></type>
+        <definition>CrContentsFile_ProfileIndication SCRSDK::CrContentsFile_VideoParam::profileIndication</definition>
+        <argsstring></argsstring>
+        <name>profileIndication</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::profileIndication</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6432" column="34" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a162dfe718f3511246665651d759480ef" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsFile_VideoParam::profileLevel</definition>
+        <argsstring></argsstring>
+        <name>profileLevel</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::profileLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6433" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a340f583168e4460c0132d4bc9e3fa9a4" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a2f33091078450fa81f3679b452eb7b34" kindref="member">CrContentsFile_Rdd18metaCaptureGammaEquation</ref></type>
+        <definition>CrContentsFile_Rdd18metaCaptureGammaEquation SCRSDK::CrContentsFile_VideoParam::rdd18metaCaptureGammaEquation</definition>
+        <argsstring></argsstring>
+        <name>rdd18metaCaptureGammaEquation</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::rdd18metaCaptureGammaEquation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6434" column="46" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a3552ace0b41a63c3afbf03bfe5c32103" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aac03fa6f2b960c8a50d6f18c5a161238" kindref="member">CrContentsFile_Rdd18metaColorPrimaries</ref></type>
+        <definition>CrContentsFile_Rdd18metaColorPrimaries SCRSDK::CrContentsFile_VideoParam::rdd18metaColorPrimaries</definition>
+        <argsstring></argsstring>
+        <name>rdd18metaColorPrimaries</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::rdd18metaColorPrimaries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6435" column="40" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a72b9b0e4e74f432d896058d3c248a797" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1adbb89cb69e54e1780d8963902b8ca1d7" kindref="member">CrContentsFile_Rdd18metaCodingEquations</ref></type>
+        <definition>CrContentsFile_Rdd18metaCodingEquations SCRSDK::CrContentsFile_VideoParam::rdd18metaCodingEquations</definition>
+        <argsstring></argsstring>
+        <name>rdd18metaCodingEquations</name>
+        <qualifiedname>SCRSDK::CrContentsFile_VideoParam::rdd18metaCodingEquations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6436" column="41" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6436" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6416" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6417" bodyend="6437"/>
+    <listofallmembers>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1abd922b4156a0c53cb682dc1389163088" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>aspectRatio</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1ae954d3fa016a3f371dc10a0e9f3a47bb" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>bitrateMbps</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a43c02de966f5e29101828057a0457437" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>colorFormat</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1ac036b6f818969c58af8e98f0dfb252e5" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>endTimeCode</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1aa517682e693ff811cc80b085d200c71c" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>framesPerThousandSeconds</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a978c2fab08b9238e9433fc404311de17" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>gopStructure</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1ad7f140d7a8c428fd296b4b81ec65705e" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>height</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a3ea9e0d3236ac26e6982214d7096deb9" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>imageBitDepth</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a7d53300dfb404949d62c73a9916170c3" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>imageFramesPerThousandSeconds</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a652370a90239ff7bd802f4439beb0c26" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>profileIndication</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a162dfe718f3511246665651d759480ef" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>profileLevel</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a8c167dcd248530651a49f9f63ebba34e" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>proxyStatus</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a340f583168e4460c0132d4bc9e3fa9a4" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>rdd18metaCaptureGammaEquation</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a72b9b0e4e74f432d896058d3c248a797" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>rdd18metaCodingEquations</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a3552ace0b41a63c3afbf03bfe5c32103" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>rdd18metaColorPrimaries</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a6008409fcaa519d6255cb51351912fd9" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>scanType</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1aa536fca03111ed0ce12bb9165597ff7d" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>startTimeCode</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a9ab5e7ba746ef1dae54ba872fba3a3e5" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>videoCodec</name></member>
+      <member refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param_1a3e6cf79a44dae876b1353716332f7f90" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsFile_VideoParam</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

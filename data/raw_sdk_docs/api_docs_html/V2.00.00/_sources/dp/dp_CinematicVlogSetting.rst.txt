@@ -1,0 +1,22 @@
+﻿.. _dp-CinematicVlogSetting:
+
+CrDeviceProperty_CinematicVlogSetting
+=====================================
+
+Get/Set the cinematic vlog setting.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCinematicVlogSetting_Off
+    - | Off
+
+  * - CrCinematicVlogSetting_On
+    - | On
+

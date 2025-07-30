@@ -1,0 +1,60 @@
+.. _op-how-to-use-lens-information:
+
+How to use LensInformation
+==========================
+
+| Get a table for converting CrDeviceProperty_FollowFocusPositionSetting and CrDeviceProperty_FollowFocusPositionCurrentValue to Focus position (meters/feet).
+| Valid only when compatible lens is attached.
+| Valid only in movie mode.
+
+The following are available when CrDeviceProperty_LensInformationEnableStatus is set to Enable.
+
+Example:
+
+.. code-block:: cpp
+
+  std::vector<SCRSDK::CrLensInformation*> m_lensInfo;
+
+    // Call the request
+    CrError err = SCRSDK::RequestLensInformation(handle);
+
+
+  // When the OnWarning callback notifies you of success: 
+    CrInt32u numOfList= 0;
+    SCRSDK::CrLensInformation* list = nullptr;
+    CrError err = SCRSDK::GetLensInformation(
+      handle,
+      &list,
+      &numOfList);
+    if (CR_SUCCEEDED(err) && 0 < numOfList) {
+      for (int i = 0; i < numOfList; ++i) {
+        auto item = new SCRSDK::CrLensInformation();
+        item->normalizedValue = list[i].normalizedValue;
+        item->focusPosition = list[i].focusPosition;
+        m_lensInfo.push_back(item);
+      }
+      // release of list pointer
+      SCRSDK:: ReleaseLensInformation (handle, list);
+    }
+
+The information retrieved by GetLensInformation() can be used to know the Focus position (meter/feet).
+
+Example:
+
+.. code-block:: cpp
+
+  // Example of a case where CrDeviceProperty_FollowFocusPositionCurrentValue is 0x00001234
+  CrInt32u followVal = 0x00001234;
+
+  // If Focal distance unit is “Feet”
+  CrInt32u unitFeet = SCRSDK::CrLensInformationType_Feet;
+
+  for (int i=0; i < (m_lensInfo.size() - 1); ++i) {
+    if (m_lensInfo[i]->type != unitFeet) continue;
+    if ((m_lensInfo[i + 1]->normalizedValue <= followVal) &&
+      (followVal <= m_lensInfo[i]->normalizedValue)) {
+      printf("Follow Focus Position between %d and %d\n",
+              m_lensInfo[i]->focusPosition, m_lensInfo[i + 1]->focusPosition);
+      break;
+    }
+  }

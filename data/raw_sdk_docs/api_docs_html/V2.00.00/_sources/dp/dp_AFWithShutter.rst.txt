@@ -1,0 +1,22 @@
+﻿.. _dp-AFWithShutter:
+
+CrDeviceProperty_AFWithShutter
+==============================
+
+Get/Set the AF with shutter
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAFWithShutter_Off
+    - | Off
+
+  * - CrAFWithShutter_On
+    - | On
+

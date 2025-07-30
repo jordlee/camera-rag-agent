@@ -1,0 +1,94 @@
+﻿.. _dp-FileSettingsCameraId:
+
+CrDeviceProperty_FileSettingsCameraId
+=====================================
+
+Get/Set the file settings camera ID.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFileSettingsCameraId_A
+    - | A
+
+  * - CrFileSettingsCameraId_B
+    - | B
+
+  * - CrFileSettingsCameraId_C
+    - | C
+
+  * - CrFileSettingsCameraId_D
+    - | D
+
+  * - CrFileSettingsCameraId_E
+    - | E
+
+  * - CrFileSettingsCameraId_F
+    - | F
+
+  * - CrFileSettingsCameraId_G
+    - | G
+
+  * - CrFileSettingsCameraId_H
+    - | H
+
+  * - CrFileSettingsCameraId_I
+    - | I
+
+  * - CrFileSettingsCameraId_J
+    - | J
+
+  * - CrFileSettingsCameraId_K
+    - | K
+
+  * - CrFileSettingsCameraId_L
+    - | L
+
+  * - CrFileSettingsCameraId_M
+    - | M
+
+  * - CrFileSettingsCameraId_N
+    - | N
+
+  * - CrFileSettingsCameraId_O
+    - | O
+
+  * - CrFileSettingsCameraId_P
+    - | P
+
+  * - CrFileSettingsCameraId_Q
+    - | Q
+
+  * - CrFileSettingsCameraId_R
+    - | R
+
+  * - CrFileSettingsCameraId_S
+    - | S
+
+  * - CrFileSettingsCameraId_T
+    - | T
+
+  * - CrFileSettingsCameraId_U
+    - | U
+
+  * - CrFileSettingsCameraId_V
+    - | V
+
+  * - CrFileSettingsCameraId_W
+    - | W
+
+  * - CrFileSettingsCameraId_X
+    - | X
+
+  * - CrFileSettingsCameraId_Y
+    - | Y
+
+  * - CrFileSettingsCameraId_Z
+    - | Z
+

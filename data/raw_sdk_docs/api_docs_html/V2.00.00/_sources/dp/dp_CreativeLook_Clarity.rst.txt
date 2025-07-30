@@ -1,0 +1,27 @@
+﻿.. _dp-CreativeLook_Clarity:
+
+CrDeviceProperty_CreativeLook_Clarity
+=====================================
+
+Get/Set the Creative Look Clarity
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Clarity for Creative Look
+

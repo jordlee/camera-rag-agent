@@ -1,0 +1,158 @@
+.. _op-control-pan-tilt:
+
+Control Pan/Tilt
+================
+
+To control pan/tilt of cameras, call SCRSDK:::ref:`ControlPTZF()<api-header-control-ptzf>`.
+ControlPTZF() needs two parameter.
+third parameter is option parameter for some control type.
+
+When Control to Home position
+
+Example:
+
+.. code-block:: cpp
+
+    // To Home Position
+    SCRSDK::CrError ret = SCRSDK::ControlPTZF(handle, SCRSDK::CrPTZFControlType_HomePosition);
+    if (CR_FAILED(ret))
+    {
+        printf("fail control pan/tilt.\n");
+        return;
+    }
+
+When Reset position
+
+Example:
+
+.. code-block:: cpp
+
+    // Reset position
+    SCRSDK::CrError ret = SCRSDK::ControlPTZF(handle, SCRSDK::CrPTZFControlType_Reset);
+    if (CR_FAILED(ret))
+    {
+        printf("fail control pan/tilt.\n");
+        return;
+    }
+
+When Cancel to Control Pan/TIlt
+
+Example:
+
+.. code-block:: cpp
+
+    // Cancel Pan/Tilt
+    SCRSDK::CrError ret = SCRSDK::ControlPTZF(handle, SCRSDK::CrPTZFControlType_Cancel);
+    if (CR_FAILED(ret))
+    {
+        printf("fail cancel pan/tilt.\n");
+        return;
+    }
+
+When Control Pan/Tilt by Absolute position
+
+Example:
+
+.. code-block:: cpp
+
+    // Setup
+    SDK::CrPTZFSetting ptzfSetting;
+
+    // for Pan Settings
+    ptzfSetting.pan.exists = 0x01;
+    ptzfSetting.pan.position = 1250; // used as absolute position
+    ptzfSetting.pan.speed = 1000;
+
+    // for TIlt Settings
+    ptzfSetting.tilt.exists = 0x01;
+    ptzfSetting.tilt.position = -32000; // used as absolute position
+    ptzfSetting.tilt.speed = 10000;
+
+    SCRSDK::CrError ret = SCRSDK::ControlPTZF(handle, SCRSDK::CrPTZFControlType_Absolute, &ptzfSetting);
+    if (CR_FAILED(ret))
+    {
+        printf("fail control pan/tilt.\n");
+        return;
+    }
+
+When Control Pan/Tilt by Relative position
+
+Example:
+
+.. code-block:: cpp
+
+    // Setup
+    SDK::CrPTZFSetting ptzfSetting;
+
+    // for Pan Settings
+    ptzfSetting.pan.exists = 0x01;
+    ptzfSetting.pan.position = 1250; // used as relative position
+    ptzfSetting.pan.speed = 1000;
+
+    // for TIlt Settings
+    ptzfSetting.tilt.exists = 0x01;
+    ptzfSetting.tilt.position = -32000; // used as relative position
+    ptzfSetting.tilt.speed = 10000;
+
+    SCRSDK::CrError ret = SCRSDK::ControlPTZF(handle, SCRSDK::CrPTZFControlType_Relative, &ptzfSetting);
+    if (CR_FAILED(ret))
+    {
+        printf("fail control pan/tilt.\n");
+        return;
+    }
+
+When Control Pan/Tilt by Direction
+
+Example:
+
+.. code-block:: cpp
+
+    // Setup
+    SDK::CrPTZFSetting ptzfSetting;
+
+    // for Pan Settings
+    ptzfSetting.pan.exists = 0x01;
+    ptzfSetting.pan.position = 1250; // used as direction volume
+    ptzfSetting.pan.speed = 1000;
+
+    // for TIlt Settings
+    ptzfSetting.tilt.exists = 0x01;
+    ptzfSetting.tilt.position = -32000; // used as direction volume
+    ptzfSetting.tilt.speed = 10000;
+
+    SCRSDK::CrError ret = SCRSDK::ControlPTZF(handle, SCRSDK::CrPTZFControlType_Direction, &ptzfSetting);
+    if (CR_FAILED(ret))
+    {
+        printf("fail control pan/tilt.\n");
+        return;
+    }
+
+Handling pan/tilt events
+
+Example:
+
+.. code-block:: cpp
+
+    void OnWarningExt(CrInt32u warning, CrInt32 param1, CrInt32 param2, CrInt32 param3)
+    {
+        if(warning==CrWarningExt_ControlPTZFResult){
+            CrError err = (CrError)param1;
+            CrPTZFControlType controlType = (CrPTZFControlType)param3; // Absolute/Relative/Direction/HomePosition/Reset/Cancel
+            switch(param2){
+            case CrWarningExtParam_ControlPTZFResult_Invalid:
+                // result is invalid.
+                break;
+            case CrWarningExtParam_ControlPTZFResult_OK:
+                // result is OK.
+                break;
+            case CrWarningExtParam_ControlPTZFResult_NG:
+                // result is NG.
+                break;
+            case CrWarningExtParam_ControlPTZFResult_Canceled:
+                // result is canceled.
+                break;
+            }
+            
+        }
+        ...
+    }

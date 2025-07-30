@@ -1,0 +1,25 @@
+﻿.. _dp-WhiteBalanceOffsetColorTempATW:
+
+CrDeviceProperty_WhiteBalanceOffsetColorTempATW
+===============================================
+
+Get/Set the offset color temp for ATW mode.
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - -128
+    - min
+
+  * - 127
+    - max
+
+  * - 1
+    - step
+

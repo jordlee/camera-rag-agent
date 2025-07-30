@@ -1,0 +1,22 @@
+﻿.. _dp-AudioInput2TypeSelect:
+
+CrDeviceProperty_AudioInput2TypeSelect
+======================================
+
+Get/Set the Audio Input2 Type Select
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAudioInputTypeSelect_MIC
+    - | MIC
+
+  * - CrAudioInputTypeSelect_LINE
+    - | LINE
+

@@ -1,0 +1,22 @@
+﻿.. _dp-Movie_RecordingResolutionForRAW:
+
+CrDeviceProperty_Movie_RecordingResolutionForRAW
+================================================
+
+Get/Set the recording resolution for RAW.
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - 0x00000000～0xFFFFFFFF
+    - | Recording resolution(Width , Height)
+
+| The "Width" is set in the upper two bytes and the "Height" is set in the lower two bytes
+| if resolution (Width) is 4096, (Height) is 2160, set 0x10000870. 0x1000 = 0d4096, 0x0870 = 0d2160
+

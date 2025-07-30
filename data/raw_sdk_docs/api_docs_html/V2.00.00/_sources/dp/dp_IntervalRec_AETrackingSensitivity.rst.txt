@@ -1,0 +1,28 @@
+﻿.. _dp-IntervalRec_AETrackingSensitivity:
+
+CrDeviceProperty_IntervalRec_AETrackingSensitivity
+==================================================
+
+Get/Set the IntervalREC(Still) AE Tracking Sensitivity
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrIntervalRecAETrackingSensitivity_Off
+    - | Off
+
+  * - CrIntervalRecAETrackingSensitivity_Low
+    - | Low
+
+  * - CrIntervalRecAETrackingSensitivity_Mid
+    - | Mid
+
+  * - CrIntervalRecAETrackingSensitivity_High
+    - | High
+

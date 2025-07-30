@@ -1,0 +1,29 @@
+﻿.. _dp-FocusSpeedDirectSync:
+
+CrDeviceProperty_FocusSpeedDirectSync
+=====================================
+
+Get/Set the focus speed direct sync.
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| The focus speed is set in the upper 16bits and the focus position is set in the lower 16bits.
+| The focus speed and position ranges (Min/Max/Step values) are separated. Set the range value for each.
+| If focus speed is 2048, position is 4096, set 0x08001000. (0x0800 = 0d2048, 0x1000 = 0d4096)
+

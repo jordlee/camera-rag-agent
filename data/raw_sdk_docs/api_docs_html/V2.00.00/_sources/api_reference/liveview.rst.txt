@@ -1,0 +1,410 @@
+.. _api-header-liveview:
+
+LiveView
+========
+
+.. _api-get-liveview-image:
+
+GetLiveViewImage
+----------------
+
+**OverView**
+  Get the latest frame from SDK live-view image buffer.
+  
+  Use the GetLiveViewImageInfo API to get information about the data size of the image before calling this API to fetch the data.
+
+  Using this data, the user can render a live preview of the camera device view finder. This data is in JPEG format.
+
+**Definition**
+  `CrError GetLiveViewImage(CrDeviceHandle deviceHandle, CrImageDataBlock*imageData);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+  
+  * - CrImageDataBlock*
+    - | imageData
+      | This parameter points to an CrImageDataBlock object which is a memory buffer for storing the image data.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the live-view image data returns successfully
+      | CrError_Connect_Disconnected If the camera is not connected CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`GetOSDImage, GetLiveViewImage callback<cb-get-osd-image>`
+  - :ref:`GetLiveViewImageInfo<api-get-liveview-image-info>`
+
+**Special note (details)**
+  This function retrieves one frame from the corresponding device live-view.
+
+  Before you call this function, you should call GetLiveViewImageInfo first and allocate an appropriately sized buffer for the imageData parameter.
+
+  This function does not send or receive any data from the device but merely copy the live view image data from a buffer, the buffer is updated in real time by background task.
+
+.. _api-get-liveview-image-info:
+
+GetLiveViewImageInfo
+--------------------
+
+**Overview**
+  This function returns the data size of the live-view image.
+
+**Definition**
+  `CrError GetLiveViewImageInfo(CrDeviceHandle deviceHandle, CrImageInfo* info);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrImageInfo*
+    - | info
+      | This parameter points to a CrImageInfo object.  If function returns successfully, the member bufferSize of the  CrImageInfo object will be set appropriately according to the live-view image settings.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the CrImageInfo is properly set CrError_Connect_Disconnected If the camera is not connected CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetLiveViewImage<api-get-liveview-image>`
+
+**Special note (details)**
+  This function is used to retrieve the size of the live-view image. Use the retrieved value to create a buffer to store the live-view image.
+  
+  Call this function prior to calling GetLiveViewImage.
+
+.. _api-get-liveview-properties:
+
+GetLiveViewProperties
+---------------------
+
+**Overview**
+  Get live view properties from the specified device. Functionally equivalent to GetProperties for properties related to the device live-view.
+
+  The properties retrieved by this API call are closely related to the camera live-view image. These properties are not included in the list of properties retrieved by GetDeviceProperties.
+
+**Definition**
+  `CrError GetLiveViewProperties(CrDeviceHandle deviceHandle, CrLiveViewProperty** properties, CrInt32* numOfProperties);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrLiveViewProperty**
+    - | properties
+      | The property list pointer. Developers should pass the address of a modifiable CrLiveViewProperty pointer. The value of this pointer should be initialized to nullptr.
+      | The function will make a copy of the SDK-internal CrLiveViewProperty list for the indicated deviceHandle. When function returns successfully, this parameter will point to the copy of CrLiveViewProperty list.
+      | Must be freed with ReleaseLiveViewProperties() after use.
+  * - CrInt32*
+    - | numOfProperties
+      | A pointer to an integer which indicates the number of CrLiveViewProperty objects in the property list.
+      | App developers should pass the address of a modifiable CrInt32 variable. This function will write the size of the returned list to this location.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the function returns successfully
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetSelectLiveViewProperties<api-get-select-liveview-properties>`
+  - :ref:`ReleaseLiveViewProperties<api-release-liveview-properties>`
+  - :ref:`IDeviceCallback::OnLvPropertyChanged<callback-interface>`
+  - :ref:`IDeviceCallback::OnLvPropertyChangedCodes<callback-interface>`
+
+**Special note (details)**
+  This is a factory function. The SDK will allocate memory if required.
+
+  This API function retrieves a list of all the live-view properties supported by the indicated device. Each returned property also provides its current value, a list of values it supports and whether or not the property is currently modifiable.
+
+  The out-parameter properties will remain unmodified if the property list cannot be retrieved.
+
+  If the list is successfully retrieved, properties points to the list and out-parameter numOfProperties indicates the number of items in the list.
+
+.. _api-get-select-liveview-properties:
+
+GetSelectLiveViewProperties
+---------------------------
+
+**Overview**
+  Get specified live view properties from the specified device. Functionally equivalent to GetSelectDeviceProperties for properties related to the device live-view.
+
+  The properties retrieved by this API call are closely related to the camera live-view image. These properties are not included in the list of properties retrieved by GetDeviceProperties or GetSelectDeviceProperties.
+
+**Definition**
+  `CrError GetSelectLiveViewProperties(CrDeviceHandle deviceHandle, CrInt32u numOfCodes, CrInt32u* codes, CrLiveViewProperty** properties, CrInt32* numOfProperties);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrInt32u
+    - | numOfCodes
+      | Number of live-view properties to get.
+  * - CrInt32u*
+    - | codes
+      | List of live-view property codes to get.
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrLiveViewProperty**
+    - | properties
+      | The property list pointer. Developers should pass the address of a modifiable CrLiveViewProperty pointer. The value of this pointer should be initialized to nullptr.
+      | The function will make a copy of the specified CrLiveViewProperty list for the indicated deviceHandle. When function returns successfully, this parameter will point to the copy of CrLiveViewProperty list.
+      | Must be freed with ReleaseLiveViewProperties() after use.
+  * - CrInt32*
+    - | numOfProperties
+      | A pointer to an integer which indicates the number of CrLiveViewProperty objects in the property list.
+      | App developers should pass the address of a modifiable CrInt32 variable. This function will write the size of the returned list to this location.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the function returns successfully
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetLiveViewProperties<api-get-liveview-properties>`
+  - :ref:`ReleaseLiveViewProperties<api-release-liveview-properties>`
+  - :ref:`IDeviceCallback::OnLvPropertyChangedCodes<callback-interface>`
+
+**Special note (details)**
+  This is a factory function. The SDK will allocate memory if required.
+
+  This API function retrieves a list of all the live-view properties supported by the indicated device. Each returned property also provides its current value, a list of values it supports and whether or not the property is currently modifiable.
+
+  The out-parameter properties will remain unmodified if the property list cannot be retrieved.
+
+  If the list is successfully retrieved, properties points to the list and out-parameter numOfProperties indicates the number of items in the list.
+
+.. _api-release-liveview-properties:
+
+ReleaseLiveViewProperties
+-------------------------
+
+**Overview**
+  This API function releases the CrLiveViewProperty list allocated by GetLiveViewProperties.
+
+**Definition**
+  `CrError ReleaseLiveViewProperties(CrDeviceHandle deviceHandle, CrLiveViewProperty* properties);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrLiveViewProperty*
+    - | properties
+      | The live-view property list pointer pointing to the list to be released.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the function returns successfully
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetLiveViewProperties<api-get-liveview-properties>`
+  - :ref:`GetSelectLiveViewProperties<api-get-select-liveview-properties>`
+
+**Special note (details)**
+  Allows the SDK to release the SDK-allocated memory for the corresponding device live-view properties list.
+
+  Supply a connected device handle.
+
+.. _api-get-osd-image:
+
+GetOSDImage
+-----------
+
+**Overview**
+  Get the latest frame from SDK OSD image buffer.
+
+  If you want to get an OSD image, you need to enable it with :ref:`CrDeviceProperty_OSDImageMode<dp-OSDImageMode>`.
+
+  Enabling get OSD image may reduce other command and or LiveView response, so please check the performance in your system environment before use.
+
+  Using this data, the user can render a live preview of the camera device view finder/monitor. This data is in PNG format.
+
+  The frequency at which the SDK get OSD images from the camera can be switched using SetDeviceSetting().
+
+**Definition**
+  `CrError GetOSDImage(CrDeviceHandle deviceHandle, CrOSDImageDataBlock* imageData);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrOSDImageDataBlock*
+    - | imageData
+      | This parameter points to an CrOSDImageDataBlock object which is a memory buffer for storing the image data.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the OSD image data returns successfully
+      | CrError_Connect_Disconnected If the camera is not connected CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`GetOSDImage, GetLiveViewImage callback<cb-get-osd-image>`
+  - :ref:`GetDeviceSetting<api-get-device-setting>`
+  - :ref:`SetDeviceSetting<api-set-device-setting>`
+
+**Special note (details)**
+  This function retrieves one OSD frame from the corresponding device live-view.
+
+  Before calling this function, prepare a CR_OSD_IMAGE_MAX_SIZE byte buffer in the user area and assign it to the imageData parameter.
+
+  This function does not send or receive any data from the device but merely copy the OSD image data from a buffer, the buffer is updated in real time by background task.
+
+  Camera Remote SDK does not support "enlarge screen". Disable "Enlarge Screen".
+
+  Camera Remote SDK does not support at monitor flip display. If the camera body monitor flip is enabled, the monitor screen may not be displayed correctly. Please set “No Flip” on “Monitor Flip Direction” menu.

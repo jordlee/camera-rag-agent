@@ -1,0 +1,23 @@
+﻿.. _dp-PlaybackMedia:
+
+CrDeviceProperty_PlaybackMedia
+==============================
+
+Get/Set the Playback Media
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPlaybackMedia_Slot1
+    - | SLOT1
+
+  * - CrPlaybackMedia_Slot2
+    - | SLOT2
+
+

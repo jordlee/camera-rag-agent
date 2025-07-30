@@ -1,0 +1,65 @@
+\doxysection{data/raw\+\_\+sdk\+\_\+docs/sdk\+\_\+source/\+Camera\+Device.h File Reference}
+\hypertarget{_camera_device_8h}{}\label{_camera_device_8h}\index{data/raw\_sdk\_docs/sdk\_source/CameraDevice.h@{data/raw\_sdk\_docs/sdk\_source/CameraDevice.h}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include "{}CRSDK/\+Camera\+Remote\+\_\+\+SDK.\+h"{}}\newline
+{\ttfamily \#include "{}CRSDK/\+IDevice\+Callback.\+h"{}}\newline
+{\ttfamily \#include "{}Connection\+Info.\+h"{}}\newline
+{\ttfamily \#include "{}Property\+Value\+Table.\+h"{}}\newline
+{\ttfamily \#include "{}Text.\+h"{}}\newline
+{\ttfamily \#include "{}Message\+Define.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcli_1_1_c_r_folder_infos}{cli\+::\+CRFolder\+Infos}}
+\item 
+class \mbox{\hyperlink{classcli_1_1_camera_device}{cli\+::\+Camera\+Device}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacecli}{cli}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_camera_device_8h_a470d227a0c7676f5c438456a9454668b}{MAC\+\_\+\+MAX\+\_\+\+PATH}}~255
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{classcli_1_1_c_r_folder_infos}{CRFolder\+Infos}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{namespacecli_a4d255c5ff1c359ccf042dd12988198a9}{cli\+::\+Mtp\+Folder\+List}}
+\item 
+typedef std\+::vector$<$ SCRSDK\+::\+Cr\+Mtp\+Contents\+Info \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{namespacecli_aa40bfb8c63bcd480b54b54d6b357a5bc}{cli\+::\+Mtp\+Contents\+List}}
+\item 
+typedef std\+::vector$<$ SCRSDK\+::\+Cr\+Media\+Profile\+Info \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{namespacecli_adc493a6c1604f7f39565d81459046c49}{cli\+::\+Media\+Profile\+List}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+errno\+\_\+t \mbox{\hyperlink{_camera_device_8h_a47bd83961f4ae2aa2c0a9e8b68b94afc}{Mem\+Cpy\+Ex}} (void \texorpdfstring{$\ast$}{*}result, const void \texorpdfstring{$\ast$}{*}source, size\+\_\+t type\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_camera_device_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_camera_device_8h_a470d227a0c7676f5c438456a9454668b}\index{CameraDevice.h@{CameraDevice.h}!MAC\_MAX\_PATH@{MAC\_MAX\_PATH}}
+\index{MAC\_MAX\_PATH@{MAC\_MAX\_PATH}!CameraDevice.h@{CameraDevice.h}}
+\doxysubsubsection{\texorpdfstring{MAC\_MAX\_PATH}{MAC\_MAX\_PATH}}
+{\footnotesize\ttfamily \label{_camera_device_8h_a470d227a0c7676f5c438456a9454668b} 
+\#define MAC\+\_\+\+MAX\+\_\+\+PATH~255}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_camera_device_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_camera_device_8h_a47bd83961f4ae2aa2c0a9e8b68b94afc}\index{CameraDevice.h@{CameraDevice.h}!MemCpyEx@{MemCpyEx}}
+\index{MemCpyEx@{MemCpyEx}!CameraDevice.h@{CameraDevice.h}}
+\doxysubsubsection{\texorpdfstring{MemCpyEx()}{MemCpyEx()}}
+{\footnotesize\ttfamily \label{_camera_device_8h_a47bd83961f4ae2aa2c0a9e8b68b94afc} 
+errno\+\_\+t Mem\+Cpy\+Ex (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{result}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{source}{, }\item[{size\+\_\+t}]{type\+\_\+size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

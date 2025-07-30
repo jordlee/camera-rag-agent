@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrTrackingFrameInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1afa34f33678b369a5509b3981c061fce9" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1adb584977b051408403e8fdba520c20e0" kindref="member">CrTrackingFrameType</ref></type>
+        <definition>CrTrackingFrameType SCRSDK::CrTrackingFrameInfo::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5854" column="21" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5854" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1afe5bbd156c1c95794cc5d72f8df56ede" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a0bd12ab3d71bdd09270743116f4b90f5" kindref="member">CrFocusFrameState</ref></type>
+        <definition>CrFocusFrameState SCRSDK::CrTrackingFrameInfo::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5855" column="19" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5855" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a60673c15209d9efa1d19eca0ecfed85a" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrTrackingFrameInfo::priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::priority</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5856" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5856" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a16a97dc0e6c9fca307d5913b917aaf1d" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrTrackingFrameInfo::xNumerator</definition>
+        <argsstring></argsstring>
+        <name>xNumerator</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::xNumerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5857" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5857" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1ab9f1a4ece832fb674c43340fba19765a" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrTrackingFrameInfo::xDenominator</definition>
+        <argsstring></argsstring>
+        <name>xDenominator</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::xDenominator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5858" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1ac004f1ff616e7dd4813054dbf9bdc9c7" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrTrackingFrameInfo::yNumerator</definition>
+        <argsstring></argsstring>
+        <name>yNumerator</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::yNumerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5859" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a07b2c20a37c0ce7336b63908858f7454" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrTrackingFrameInfo::yDenominator</definition>
+        <argsstring></argsstring>
+        <name>yDenominator</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::yDenominator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5860" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5860" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a883181538b9f92516dae95e0fac1696d" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrTrackingFrameInfo::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5861" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5861" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a09231b9fb85d7d4e0641d3692174243d" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrTrackingFrameInfo::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5862" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5862" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1ad6410902417d82e8b8789ede6ddefc7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrTrackingFrameInfo::CrTrackingFrameInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrTrackingFrameInfo</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::CrTrackingFrameInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5840" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5840" bodyend="5850"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a4bb9b56b798216eb1f88b314bfe33e0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrTrackingFrameInfo::~CrTrackingFrameInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrTrackingFrameInfo</name>
+        <qualifiedname>SCRSDK::CrTrackingFrameInfo::~CrTrackingFrameInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5851" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5851" bodyend="5852"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" line="5837" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrDeviceProperty.h" bodystart="5838" bodyend="5863"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1ad6410902417d82e8b8789ede6ddefc7f" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>CrTrackingFrameInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a09231b9fb85d7d4e0641d3692174243d" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>height</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a60673c15209d9efa1d19eca0ecfed85a" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>priority</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1afe5bbd156c1c95794cc5d72f8df56ede" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>state</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1afa34f33678b369a5509b3981c061fce9" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>type</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a883181538b9f92516dae95e0fac1696d" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>width</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1ab9f1a4ece832fb674c43340fba19765a" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>xDenominator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a16a97dc0e6c9fca307d5913b917aaf1d" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>xNumerator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a07b2c20a37c0ce7336b63908858f7454" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>yDenominator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1ac004f1ff616e7dd4813054dbf9bdc9c7" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>yNumerator</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_tracking_frame_info_1a4bb9b56b798216eb1f88b314bfe33e0e" prot="public" virt="non-virtual"><scope>SCRSDK::CrTrackingFrameInfo</scope><name>~CrTrackingFrameInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

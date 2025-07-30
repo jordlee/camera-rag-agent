@@ -1,0 +1,27 @@
+﻿.. _dp-SubjectRecognitionAnimalTrackingSensitivity:
+
+CrDeviceProperty_SubjectRecognitionAnimalTrackingSensitivity
+============================================================
+
+Get/Set the Subject Recognition Animal(Still) Tracking Sensitivity
+
+    CrDataType: `CrDataType_UInt8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| min(Not Locked On) to max(Locked On)
+

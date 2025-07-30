@@ -1,0 +1,27 @@
+﻿.. _dp-PictureProfile_KneeAutoSet_Sensitivity:
+
+CrDeviceProperty_PictureProfile_KneeAutoSet_Sensitivity
+=======================================================
+
+Get/Set the Picture Profile Knee AutoSet Sensitivity
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPictureProfileKneeAutoSetSensitivity_Low
+    - | Low
+
+  * - CrPictureProfileKneeAutoSetSensitivity_Mid
+    - | Middle
+
+  * - CrPictureProfileKneeAutoSetSensitivity_High
+    - | High
+
+| Set  Knee AutoSet Sensitivity for the Picture Profile selected in “Picture Profile.”
+

@@ -1,0 +1,22 @@
+﻿.. _dp-SynchroterminalForcedOutput:
+
+CrDeviceProperty_SynchroterminalForcedOutput
+============================================
+
+Get/Set the Synchroterminal Forced Output
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSynchroterminalForcedOutput_Off
+    - | Off
+
+  * - CrSynchroterminalForcedOutput_On
+    - | On
+

@@ -1,0 +1,27 @@
+﻿.. _dp-BulbExposureTimeSetting:
+
+CrDeviceProperty_BulbExposureTimeSetting
+========================================
+
+Get/Set the Bulb Exposure Time Setting
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| Unit is second
+

@@ -1,0 +1,22 @@
+﻿.. _dp-GainControlSetting:
+
+CrDeviceProperty_GainControlSetting
+===================================
+
+Get/Set the Gain Control Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrGainControl_Automatic
+    - | Automatic
+
+  * - CrGainControl_Manual
+    - | Manual
+

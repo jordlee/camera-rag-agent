@@ -1,0 +1,22 @@
+﻿.. _dp-ShutterSlowFrames:
+
+CrDeviceProperty_ShutterSlowFrames
+==================================
+
+Get/Set the Shutter Slow Frames
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrShutterSlowFrames_Disable
+    - | -
+
+  * - Other than above values
+    - | Shutter Slow Frames Value
+

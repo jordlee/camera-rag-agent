@@ -1,0 +1,201 @@
+﻿.. _dp-ExposureProgramMode:
+
+CrDeviceProperty_ExposureProgramMode
+====================================
+
+Get/Set the Exposure Program Mode
+
+| Caution: When setting parameters related to shooting a picture such as ShutterSpeed after setting ExposureProgramMode, please wait 500ms before setting.
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrExposure_M_Manual
+    - | Manual (M)
+
+  * - CrExposure_P_Auto
+    - | Automatic (P)
+
+  * - CrExposure_A_AperturePriority
+    - | Aperture Priority (A)
+
+  * - CrExposure_S_ShutterSpeedPriority
+    - | Shutter Priority (S)
+
+  * - CrExposure_Program_Creative
+    - | Program Creative (Greater Depth of Field)
+
+  * - CrExposure_Program_Action
+    - | Program Action (Faster Shutter Speed)
+
+  * - CrExposure_Portrait
+    - | Portrait
+
+  * - CrExposure_Auto
+    - | Auto
+
+  * - CrExposure_Auto_Plus
+    - | Auto+
+
+  * - CrExposure_P_A
+    - | P_A
+
+  * - CrExposure_P_S
+    - | P_S
+
+  * - CrExposure_Sports_Action
+    - | Sports Action
+
+  * - CrExposure_Sunset
+    - | Sunset
+
+  * - CrExposure_Night
+    - | Night Scene
+
+  * - CrExposure_Landscape
+    - | Landscape
+
+  * - CrExposure_Macro
+    - | Macro
+
+  * - CrExposure_HandheldTwilight
+    - | Hand-held Twilight
+
+  * - CrExposure_NightPortrait
+    - | Night Portrait
+
+  * - CrExposure_AntiMotionBlur
+    - | Anti Motion Blur
+
+  * - CrExposure_Pet
+    - | Pet
+
+  * - CrExposure_Gourmet
+    - | Gourmet
+
+  * - CrExposure_Fireworks
+    - | Fireworks
+
+  * - CrExposure_HighSensitivity
+    - | High Sensitivity
+
+  * - CrExposure_MemoryRecall
+    - | Memory Recall (MR)
+
+  * - CrExposure_ContinuousPriority_AE_8pics
+    - | Tele-Zoom Continuous Priority AE 8pics
+
+  * - CrExposure_ContinuousPriority_AE_10pics
+    - | Tele-Zoom Continuous Priority AE 10pics
+
+  * - CrExposure_ContinuousPriority_AE_12pics
+    - | Continuous Priority AE12pics
+
+  * - CrExposure_3D_SweepPanorama
+    - | 3D Sweep Panorama Shooting
+
+  * - CrExposure_SweepPanorama
+    - | Sweep Panorama Shooting
+
+  * - CrExposure_Movie_P
+    - | Movie Recording (P)
+
+  * - CrExposure_Movie_A
+    - | Movie Recording (A)
+
+  * - CrExposure_Movie_S
+    - | Movie Recording (S)
+
+  * - CrExposure_Movie_M
+    - | Movie Recording (M)
+
+  * - CrExposure_Movie_Auto
+    - | Movie Recording (AUTO)
+
+  * - CrExposure_Movie_SQMotion_P
+    - | Movie Recording (S&Q Motion (P))
+
+  * - CrExposure_Movie_SQMotion_A
+    - | Movie Recording (S&Q Motion (A))
+
+  * - CrExposure_Movie_SQMotion_S
+    - | Movie Recording (S&Q Motion (S))
+
+  * - CrExposure_Movie_SQMotion_M
+    - | Movie Recording (S&Q Motion (M))
+
+  * - CrExposure_Movie_SQMotion_AUTO
+    - | Movie Recording (S&Q Motion (AUTO))
+
+  * - CrExposure_Flash_Off
+    - | Flash Off
+
+  * - CrExposure_PictureEffect
+    - | Picture Effect
+
+  * - CrExposure_HiFrameRate_P
+    - | High Frame Rate (P)
+
+  * - CrExposure_HiFrameRate_A
+    - | High Frame Rate (A)
+
+  * - CrExposure_HiFrameRate_S
+    - | High Frame Rate (S)
+
+  * - CrExposure_HiFrameRate_M
+    - | High Frame Rate (M)
+
+  * - CrExposure_SQMotion_P
+    - | S&Q Motion (P)
+
+  * - CrExposure_SQMotion_A
+    - | S&Q Motion (A)
+
+  * - CrExposure_SQMotion_S
+    - | S&Q Motion (S)
+
+  * - CrExposure_SQMotion_M
+    - | S&Q Motion (M)
+
+  * - CrExposure_MOVIE
+    - | MOVIE
+
+  * - CrExposure_STILL
+    - | STILL
+
+  * - CrExposure_F_MovieOrSQMotion
+    - | F (Movie or S&Q)
+      | This value is GetOnly. Cannot be set.
+
+  * - CrExposure_Movie_F
+    - | Movie F Mode
+
+  * - CrExposure_Movie_SQMotion_F
+    - | S&Q F Mode
+
+  * - CrExposure_Movie_IntervalRec_F
+    - | Interval REC (Movie) F Mode \*1
+
+  * - CrExposure_Movie_IntervalRec_P
+    - | Interval REC (Movie) (P) \*1
+
+  * - CrExposure_Movie_IntervalRec_A
+    - | Interval REC (Movie) (A) \*1
+
+  * - CrExposure_Movie_IntervalRec_S
+    - | Interval REC (Movie) (S) \*1
+
+  * - CrExposure_Movie_IntervalRec_M
+    - | Interval REC (Movie) (M) \*1
+
+  * - CrExposure_Movie_IntervalRec_AUTO
+    - | Interval REC (Movie) (AUTO) \*1
+
+| \*1 : Function of the camera is Time Lapse Movie
+

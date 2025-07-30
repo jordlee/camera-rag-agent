@@ -1,0 +1,25 @@
+﻿.. _dp-PowerSource:
+
+CrDeviceProperty_PowerSource
+============================
+
+Get/Set the Power Source
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPowerSource_DC
+    - | DC
+
+  * - CrPowerSource_Battery
+    - | Battery
+
+  * - CrPowerSource_PoE
+    - | PoE
+

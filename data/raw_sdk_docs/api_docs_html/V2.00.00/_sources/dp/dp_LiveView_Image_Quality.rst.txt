@@ -1,0 +1,27 @@
+﻿.. _dp-LiveView_Image_Quality:
+
+CrDeviceProperty_LiveView_Image_Quality
+=======================================
+
+Get/Set the LiveView Image Quality
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPropertyLiveViewImageQuality_Low 
+    - | Low
+      |   Width : 640pixel
+      |   Height : Changes according to the aspect ratio
+
+  * - CrPropertyLiveViewImageQuality_High
+    - | High
+      |   Width : 1024pixel
+      |   Height : Changes according to the aspect ratio
+
+

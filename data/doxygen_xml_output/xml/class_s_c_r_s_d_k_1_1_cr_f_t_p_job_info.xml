@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrFTPJobInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1af8f8587b17c3d885b92a9caba8fe2519" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrFTPJobInfo::serverId</definition>
+        <argsstring></argsstring>
+        <name>serverId</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::serverId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6058" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6058" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1aeabd9acef5ef6a7d2fd160e77c37dea9" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrFTPJobInfo::jobId</definition>
+        <argsstring></argsstring>
+        <name>jobId</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::jobId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6059" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6059" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a13528e97080a1216e76a1b29e760b597" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aa0f4f9eeb2dfb6fdb9dbc169c5dbcf0c" kindref="member">CrFTPJobSlotId</ref></type>
+        <definition>CrFTPJobSlotId SCRSDK::CrFTPJobInfo::slotId</definition>
+        <argsstring></argsstring>
+        <name>slotId</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::slotId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6060" column="16" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6060" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a4106b6c69530c8f61c73b6735a2f7025" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a910f017bb55b4f5a5ae75ed0afb85db5" kindref="member">CrFTPJobStatus</ref></type>
+        <definition>CrFTPJobStatus SCRSDK::CrFTPJobInfo::jobStatus</definition>
+        <argsstring></argsstring>
+        <name>jobStatus</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::jobStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6061" column="16" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6061" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a45dde69329b0b28d136b1c26f1e11ae8" prot="public" static="no" mutable="no">
+        <type>CrInt32</type>
+        <definition>CrInt32 SCRSDK::CrFTPJobInfo::chunkNum</definition>
+        <argsstring></argsstring>
+        <name>chunkNum</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::chunkNum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6062" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6062" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1acbd08f053adaf478c5b8992335867c39" prot="public" static="no" mutable="no">
+        <type>CrInt64u</type>
+        <definition>CrInt64u SCRSDK::CrFTPJobInfo::fileSize</definition>
+        <argsstring></argsstring>
+        <name>fileSize</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::fileSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6063" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6063" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a04388bf67bfd164e6b5f8ba82812b7a0" prot="public" static="no" mutable="no">
+        <type>CrInt64u</type>
+        <definition>CrInt64u SCRSDK::CrFTPJobInfo::transferSize</definition>
+        <argsstring></argsstring>
+        <name>transferSize</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::transferSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6064" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6064" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a3ffcaa867871dd24f1616216fbdc6faf" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrFTPJobInfo::clipName</definition>
+        <argsstring></argsstring>
+        <name>clipName</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::clipName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6065" column="9" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6065" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a3c50d495b2c65348a7a45ad69285b618" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrFTPJobInfo::mainName</definition>
+        <argsstring></argsstring>
+        <name>mainName</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::mainName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6066" column="9" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6066" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1afc2050888c371486730c53c4977ce788" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrFTPJobInfo::metaName</definition>
+        <argsstring></argsstring>
+        <name>metaName</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::metaName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6067" column="9" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6067" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a1b8026b1ae74ee51b5290c1d23bb5aa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFTPJobInfo::CrFTPJobInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrFTPJobInfo</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::CrFTPJobInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6048" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1aff4519af9860269d499352abae5b5e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFTPJobInfo::~CrFTPJobInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrFTPJobInfo</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::~CrFTPJobInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6049" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1ae35c9ea2e4e7f41d5b740f60de98bfe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrFTPJobInfo::CrFTPJobInfo</definition>
+        <argsstring>(const CrFTPJobInfo &amp;ref)</argsstring>
+        <name>CrFTPJobInfo</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::CrFTPJobInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info" kindref="compound">CrFTPJobInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6050" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a224932281b3441564f299493f00f47be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info" kindref="compound">CrFTPJobInfo</ref> &amp;</type>
+        <definition>CrFTPJobInfo &amp; SCRSDK::CrFTPJobInfo::operator=</definition>
+        <argsstring>(const CrFTPJobInfo &amp;ref)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info" kindref="compound">CrFTPJobInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6051" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a7ce2b0f184a2988a7449d516cf3f1802" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrFTPJobInfo::GetClipName</definition>
+        <argsstring>()</argsstring>
+        <name>GetClipName</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::GetClipName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6053" column="12" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6053" bodyend="6053"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1af7549476ec0b16d054540a394461ecad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrFTPJobInfo::GetMainName</definition>
+        <argsstring>()</argsstring>
+        <name>GetMainName</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::GetMainName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6054" column="12" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6054" bodyend="6054"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a203bb4b6717e51f84b92d72b8f0a51cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * SCRSDK::CrFTPJobInfo::GetMetaName</definition>
+        <argsstring>()</argsstring>
+        <name>GetMetaName</name>
+        <qualifiedname>SCRSDK::CrFTPJobInfo::GetMetaName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6055" column="12" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6055" bodyend="6055"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="6045" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="6046" bodyend="6068"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a45dde69329b0b28d136b1c26f1e11ae8" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>chunkNum</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a3ffcaa867871dd24f1616216fbdc6faf" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>clipName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a1b8026b1ae74ee51b5290c1d23bb5aa8" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>CrFTPJobInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1ae35c9ea2e4e7f41d5b740f60de98bfe7" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>CrFTPJobInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1acbd08f053adaf478c5b8992335867c39" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>fileSize</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a7ce2b0f184a2988a7449d516cf3f1802" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>GetClipName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1af7549476ec0b16d054540a394461ecad" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>GetMainName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a203bb4b6717e51f84b92d72b8f0a51cf" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>GetMetaName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1aeabd9acef5ef6a7d2fd160e77c37dea9" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>jobId</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a4106b6c69530c8f61c73b6735a2f7025" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>jobStatus</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a3c50d495b2c65348a7a45ad69285b618" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>mainName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1afc2050888c371486730c53c4977ce788" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>metaName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a224932281b3441564f299493f00f47be" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>operator=</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1af8f8587b17c3d885b92a9caba8fe2519" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>serverId</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a13528e97080a1216e76a1b29e760b597" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>slotId</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1a04388bf67bfd164e6b5f8ba82812b7a0" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>transferSize</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_f_t_p_job_info_1aff4519af9860269d499352abae5b5e1a" prot="public" virt="non-virtual"><scope>SCRSDK::CrFTPJobInfo</scope><name>~CrFTPJobInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

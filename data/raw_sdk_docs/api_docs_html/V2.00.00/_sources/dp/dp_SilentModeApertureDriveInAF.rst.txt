@@ -1,0 +1,25 @@
+﻿.. _dp-SilentModeApertureDriveInAF:
+
+CrDeviceProperty_SilentModeApertureDriveInAF
+============================================
+
+Get/Set the Silent Mode Aperture Drive in AF
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSilentModeApertureDriveInAF_NotTarget
+    - | Not Target
+
+  * - CrSilentModeApertureDriveInAF_Standard
+    - | Standard
+
+  * - CrSilentModeApertureDriveInAF_SilentPriority
+    - | Silent Priority
+

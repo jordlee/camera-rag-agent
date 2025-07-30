@@ -1,0 +1,27 @@
+.. _dp-LiveViewProtocol:
+
+CrDeviceProperty_LiveViewProtocol
+=================================
+
+Get/Set the Live View Protocol
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrLiveViewProtocol_None 
+    - | None
+
+  * - CrLiveViewProtocol_Main
+    - | Main
+      | This value is default value.
+
+  * - CrLiveViewProtocol_Alt
+    - | Alt
+      | Using this value, you can get LiveView in the HTTP way.
+

@@ -1,0 +1,23 @@
+﻿.. _dp-MovieRecReviewPlayingState:
+
+CrDeviceProperty_MovieRecReviewPlayingState
+===============================================
+
+Get the movie recording review playing state.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieRecReviewPlayingState_NotPlaying 
+    - | Not Playing
+
+  * - CrMovieRecReviewPlayingState_Playing
+    - | Playing
+
+

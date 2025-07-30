@@ -1,0 +1,22 @@
+﻿.. _dp-FocusMap:
+
+CrDeviceProperty_FocusMap
+=========================
+
+Get/Set the Focus Map
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusMap_Off
+    - | Off
+
+  * - CrFocusMap_On
+    - | On
+

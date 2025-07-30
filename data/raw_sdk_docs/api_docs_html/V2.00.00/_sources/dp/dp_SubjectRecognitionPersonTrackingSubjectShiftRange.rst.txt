@@ -1,0 +1,27 @@
+﻿.. _dp-SubjectRecognitionPersonTrackingSubjectShiftRange:
+
+CrDeviceProperty_SubjectRecognitionPersonTrackingSubjectShiftRange
+==================================================================
+
+Get/Set the Subject Recognition Person Tracking Subject Shift Range
+
+    CrDataType: `CrDataType_UInt8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| min(Narrow) to max(Wide)
+

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_time_zone_setting" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrTimeZoneSetting</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <innerclass refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting" prot="public">SCRSDK::CrTimeZoneSetting::CrAreaSetting</innerclass>
+    <innerclass refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting" prot="public">SCRSDK::CrTimeZoneSetting::CrDateTimeSetting</innerclass>
+    <innerclass refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_daylight_setting" prot="public">SCRSDK::CrTimeZoneSetting::CrDaylightSetting</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a2ce01658fc80e1073b17b774bda3b8f9" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting" kindref="compound">CrDateTimeSetting</ref></type>
+        <definition>CrDateTimeSetting SCRSDK::CrTimeZoneSetting::dateTimeSetting</definition>
+        <argsstring></argsstring>
+        <name>dateTimeSetting</name>
+        <qualifiedname>SCRSDK::CrTimeZoneSetting::dateTimeSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6626" column="19" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a9adeaf1c96b6b4721feb2c2d416bb1ea" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting" kindref="compound">CrAreaSetting</ref></type>
+        <definition>CrAreaSetting SCRSDK::CrTimeZoneSetting::areaSetting</definition>
+        <argsstring></argsstring>
+        <name>areaSetting</name>
+        <qualifiedname>SCRSDK::CrTimeZoneSetting::areaSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6627" column="15" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6627" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a73cdc8592ac6b7fc76cd2e0e5933668e" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_daylight_setting" kindref="compound">CrDaylightSetting</ref></type>
+        <definition>CrDaylightSetting SCRSDK::CrTimeZoneSetting::daylightSetting</definition>
+        <argsstring></argsstring>
+        <name>daylightSetting</name>
+        <qualifiedname>SCRSDK::CrTimeZoneSetting::daylightSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6628" column="19" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6628" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a63bc5bb4a6d59ec3c9edc0184db38ab9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrTimeZoneSetting::CrTimeZoneSetting</definition>
+        <argsstring>()</argsstring>
+        <name>CrTimeZoneSetting</name>
+        <qualifiedname>SCRSDK::CrTimeZoneSetting::CrTimeZoneSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6623" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6623" bodyend="6625"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>SCRSDK::CrTimeZoneSetting</label>
+        <link refid="class_s_c_r_s_d_k_1_1_cr_time_zone_setting"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dateTimeSetting</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>areaSetting</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>daylightSetting</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SCRSDK::CrTimeZoneSetting::CrAreaSetting</label>
+        <link refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_area_setting"/>
+      </node>
+      <node id="2">
+        <label>SCRSDK::CrTimeZoneSetting::CrDateTimeSetting</label>
+        <link refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_date_time_setting"/>
+      </node>
+      <node id="4">
+        <label>SCRSDK::CrTimeZoneSetting::CrDaylightSetting</label>
+        <link refid="struct_s_c_r_s_d_k_1_1_cr_time_zone_setting_1_1_cr_daylight_setting"/>
+      </node>
+    </collaborationgraph>
+    <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6589" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6590" bodyend="6629"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a9adeaf1c96b6b4721feb2c2d416bb1ea" prot="public" virt="non-virtual"><scope>SCRSDK::CrTimeZoneSetting</scope><name>areaSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a63bc5bb4a6d59ec3c9edc0184db38ab9" prot="public" virt="non-virtual"><scope>SCRSDK::CrTimeZoneSetting</scope><name>CrTimeZoneSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a2ce01658fc80e1073b17b774bda3b8f9" prot="public" virt="non-virtual"><scope>SCRSDK::CrTimeZoneSetting</scope><name>dateTimeSetting</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_time_zone_setting_1a73cdc8592ac6b7fc76cd2e0e5933668e" prot="public" virt="non-virtual"><scope>SCRSDK::CrTimeZoneSetting</scope><name>daylightSetting</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

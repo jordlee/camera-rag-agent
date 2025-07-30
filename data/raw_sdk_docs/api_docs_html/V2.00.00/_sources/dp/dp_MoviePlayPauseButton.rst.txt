@@ -1,0 +1,22 @@
+﻿.. _dp-MoviePlayPauseButton:
+
+CrDeviceProperty_MoviePlayPauseButton
+=====================================
+
+Get/Set the Movie Play Pause button
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieXButton_Up
+    - | Pause movie playback.
+
+  * - CrMovieXButton_Down
+    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_MoviePlayButton<dp-MoviePlayButton>`.
+

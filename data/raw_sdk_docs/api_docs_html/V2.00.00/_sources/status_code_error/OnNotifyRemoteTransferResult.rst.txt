@@ -1,0 +1,57 @@
+.. _on-notify-remote-transfer-result:
+
+OnNotifyRemoteTransferResult
+============================
+  This is a callback that notifies the result of get contents with remote transfer mode.
+
+**Definition**
+  | void OnNotifyRemoteTransferResult(CrInt32u notify, CrInt32u per, CrChar* filename);
+  | void OnNotifyRemoteTransferResult(CrInt32u notify, CrInt32u per, CrInt8u* data, CrInt64u size);
+
+.. 0x923D,0x923E
+.. _cb-get-remote-transfer-contents-data:
+.. _cb-get-remote-transfer-contents-data-file:
+.. _cb-get-remote-transfer-contents-compressed-data:
+.. _cb-get-remote-transfer-contents-compressed-data-file:
+
+:ref:`GetRemoteTransferContentsData<api-get-remote-transfer-contents-data>`, :ref:`GetRemoteTransferContentsDataFile<api-get-remote-transfer-contents-data-file>`, :ref:`GetRemoteTransferContentsCompressedData<api-get-remote-transfer-contents-compressed-data>`, :ref:`GetRemoteTransferContentsCompressedDataFile<api-get-remote-transfer-contents-compressed-data-file>` callback
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  see :ref:`Pull out content stored on media in RemoteTransferMode<op-pull-out-content-stored-on-media-in-remote-transfer-mode>`
+
+**notify**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - notify code
+
+      * - CrNotify_RemoteTransfer_Result_OK
+
+      * - CrNotify_RemoteTransfer_Result_NG
+
+      * - CrNotify_RemoteTransfer_Result_DeviceBusy
+
+      * - CrNotify_RemoteTransfer_InProgress
+
+      * - CrWarning_File_StorageFull
+
+.. SDK internal
+.. _cb-control-get-remote-transfer-contents-data-file:
+
+:ref:`ControlGetRemoteTransferContentsDataFile<api-control-get-remote-transfer-contents-data-file>` callbak
+-----------------------------------------------------------------------------------------------------------
+
+  see :ref:`Pull out content stored on media in RemoteTransferMode<op-pull-out-content-stored-on-media-in-remote-transfer-mode>`
+
+**notify**
+  .. list-table::
+      :widths: auto
+      :header-rows: 1
+
+      * - notify code
+
+      * - CrNotify_RemoteTransfer_Control_Stopped
+
+      * - CrNotify_RemoteTransfer_Control_Canceled
+

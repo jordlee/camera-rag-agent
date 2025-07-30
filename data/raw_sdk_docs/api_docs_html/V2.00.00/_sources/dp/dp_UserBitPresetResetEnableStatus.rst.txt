@@ -1,0 +1,22 @@
+﻿.. _dp-UserBitPresetResetEnableStatus:
+
+CrDeviceProperty_UserBitPresetResetEnableStatus
+===============================================
+
+Get the User Bit Preset Reset Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrUserBitPresetReset_Disable
+    - | Disable
+
+  * - CrUserBitPresetReset_Enable
+    - | Enable
+

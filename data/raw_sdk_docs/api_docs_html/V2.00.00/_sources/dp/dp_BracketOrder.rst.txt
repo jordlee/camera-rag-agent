@@ -1,0 +1,22 @@
+﻿.. _dp-BracketOrder:
+
+CrDeviceProperty_BracketOrder
+=============================
+
+Get/Set the Bracket Order 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrBracketOrder_0ToMinusToPlus
+    - | 0 -> -(minus) -> +(plus)
+
+  * - CrBracketOrder_MinusTo0ToPlus
+    - | -(minus) -> 0 -> +(plus)
+

@@ -1,0 +1,689 @@
+.. _live-view:
+
+Live View
+=========
+
+.. _cr-live-view-property:
+
+CrLiveViewProperty
+------------------
+
+Class for manipulating live-view properties of a device.
+
+Member Variables
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Summary
+
+    * - \-
+      - \-
+      - \-
+
+Member Functions
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Signature
+      - Description
+
+    * - Constructor
+      - \-
+
+    * - Destructor
+      - \-
+
+    * - Copy Constructor
+      - \-
+
+    * - void Alloc(const CrInt32u size)
+      - It cannot be used.
+
+    * - bool IsGetEnableCurrentValue() const
+      - Checks to see if live-view property is readable.
+
+    * - CrInt32u GetCode() const
+      - Get the CrLiveViewPropertyCode used by this live-view property.
+
+    * - CrPropertyEnableFlag GetPropertyEnableFlag() const
+      - Get the CrPropertyEnableFlag that represents the enable status for this live-view property.
+    * - CrFrameInfoType GetFrameInfoType() const
+      - | Get the CrFrameInfoType of  live-view property.
+        | Defined in CrDeviceProperty.h as CrFrameInfoType.
+    * - CrInt32u GetValueSize() const
+      - Get the total number of bytes of value set for value pointer.
+    * - CrInt8u* GetValue() const
+      - | Get the value pointer.
+        | This pointer is set to :ref:`CrFocusFrameInfo<cr-focus-frame-info>`, :ref:`CrMagPosInfo<cr-mag-pos-info>`, :ref:`CrFaceFrameInfo<cr-face-frame-info>`, :ref:`CrTrackingFrameInfo<cr-tracking-frame-info>` or :ref:`CrLevelInfo<cr-level-info>`.
+
+    * - CrInt32u GetTimeCode() const
+      - | Get the time-code.
+        | See below for value details
+        | refs. :ref:`Time-code specifications of Monitoring<tips-time-code-specifications-of-monitoring>`
+        | It is always zero for models that do not support the :ref:`ControlMonitoring()<api-control-monitoring>`.
+        | Correct values are only available during recording.
+
+Supported Live View Properties
+
+Live View Properties supported in the current release.
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Frame name
+      - | Top row: CrLiveViewPropertyCode,
+        | Bottom row: CrFrameInfoType
+      - Class
+
+    * - AF Area
+      - | CrLiveViewProperty_AF_Area_Position
+        | CrFrameInfoType_FocusFrameInfo
+      - :ref:`CrFocusFrameInfo<cr-focus-frame-info>`
+
+    * - Focus Magnifier
+      - | CrLiveViewProperty_Focus_Magnifier_Position
+        | CrFrameInfoType_Magnifier_Position
+      - :ref:`CrMagPosInfo<cr-mag-pos-info>`
+
+    * - Face/Eye Frame
+      - | CrLiveViewProperty_FaceFrame
+        | CrFrameInfoType_FaceFrameInfo
+      - :ref:`CrFaceFrameInfo<cr-face-frame-info>`
+
+    * - Tracking Frame
+      - | CrLiveViewProperty_TrackingFrame
+        | CrFrameInfoType_TrackingFrameInfo
+      - :ref:`CrTrackingFrameInfo<cr-tracking-frame-info>`
+
+    * - Level
+      - | CrLiveViewProperty_Level
+        | CrFrameInfoType_Level
+      - :ref:`CrLevelInfo<cr-level-info>`
+
+    * - Framing Frame
+      - | CrLiveViewProperty_FramingFrame
+        | CrFrameInfoType_FramingFrameInfo
+      - :ref:`CrFramingFrameInfo<cr-FramingFrameInfo>`
+
+.. _cr-focus-frame-info:
+
+CrFocusFrameInfo
+----------------
+
+Used to retrieve Focus frame info.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+
+  * - type
+    - CrFocusFrameType
+    - | The type of focus used.
+      | Defined in CrDeviceProperty.h as CrFocusFrameType.
+  * - state
+    - CrFocusFrameState
+    - | The state of frame.
+      | Defined in CrDeviceProperty.h as CrFocusFrameState.
+  * - priority
+    - CrInt8u
+    - It cannot be used. Reserved parameter.
+  * - xNumerator
+    - CrInt32u
+    - x-axis value
+  * - xDenominator
+    - CrInt32u
+    - x-axis value
+  * - yNumerator
+    - CrInt32u
+    - y-axis value
+  * - yDenominator
+    - CrInt32u
+    - y-axis value
+  * - width
+    - CrInt32u
+    - Width of frame
+  * - height
+    - CrInt32u
+    - Height of frame
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Signature
+    - Description
+  
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+
+Supported Focus frame types
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - CrFocusFrameType_Unknown
+    - Undefined value
+  * - CrFocusFrameType_PhaseDetection_AFSensor (*)
+    - Phase Detection AF Sensor
+  * - CrFocusFrameType_PhaseDetection_ImageSensor
+    - Phase Detection Image Sensor
+  * - CrFocusFrameType_Wide
+    - Wide
+  * - CrFocusFrameType_Zone
+    - Zone
+  * - CrFocusFrameType_CentralEmphasis
+    - Central Emphasis
+  * - CrFocusFrameType_ContrastFlexibleMain
+    - Contrast Flexible Main
+  * - CrFocusFrameType_ContrastFlexibleAssist
+    - Contrast Flexible Assist
+  * - CrFocusFrameType_Contrast
+    - Contrast
+  * - CrFocusFrameType_FrameSomewhere
+    - Frame Somewhere
+
+\* : When the camera attached A-mount Lens & Mount Adaptor such as LA-EA4.
+
+Supported Focus frame states
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+  
+  * - CrFocusFrameState_Unknown
+    - Undefined value
+  * - CrFocusFrameState_NotFocused
+    - Not focused
+  * - CrFocusFrameState_Focused
+    - Focused
+  * - CrFocusFrameState_FocusFrameSelection
+    - Focus Frame Selection
+  * - CrFocusFrameState_Moving
+    - Moving
+  * - CrFocusFrameState_RegistrationAF
+    - Registration AF 
+  * - CrFocusFrameState_Island (*)
+    - Island
+
+\* : When the camera attached A-mount Lens & Mount Adaptor such as LA-EA4.
+
+.. _cr-mag-pos-info:
+
+CrMagPosInfo
+------------
+
+Used to retrieve MagnifierPosition info.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - xNumerator
+    - CrInt32u
+    - x-axis value
+  * - xDenominator
+    - CrInt32u
+    - x-axis value
+  * - yNumerator
+    - CrInt32u
+    - y-axis value
+  * - yDenominator
+    - CrInt32u
+    - y-axis value
+  * - width
+    - CrInt32u
+    - Width of live-view
+  * - height
+    - CrInt32u
+    - Height of live-view
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Signature
+    - Description
+  
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+
+.. _cr-face-frame-info:
+
+CrFaceFrameInfo
+---------------
+
+Used to retrieve Face/Eye frame info. This class is also used for subject recognition.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+
+  * - type
+    - CrFaceFrameType
+    - | The type of Face/Eye frame used.
+      | Defined in CrDeviceProperty.h as CrFaceFrameType.
+  * - state
+    - CrFocusFrameState
+    - | The state of frame.
+      | Defined in CrDeviceProperty.h as CrFocusFrameState.
+  * - isSelected
+    - CrFocusFrameSelectState
+    - It cannot be used. Reserved parameter.
+  * - priority
+    - CrInt8u
+    - It cannot be used. Reserved parameter.
+  * - xNumerator
+    - CrInt32u
+    - x-axis value
+  * - xDenominator
+    - CrInt32u
+    - x-axis value
+  * - yNumerator
+    - CrInt32u
+    - y-axis value
+  * - yDenominator
+    - CrInt32u
+    - y-axis value
+  * - width
+    - CrInt32u
+    - Width of frame
+  * - height
+    - CrInt32u
+    - Height of frame
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+  
+  * - Signature
+    - Description
+
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+
+Supported Face/Eye frame types
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+  
+  * - CrFaceFrameType_Unknown
+    - Undefined value
+  * - CrFaceFrameType_DetectedFace
+    - Detected Face
+  * - CrFaceFrameType_AF_TargetFace
+    - AF Target Face
+  * - CrFaceFrameType_PersonalRecognitionFace
+    - Personal Recognition Face
+  * - CrFaceFrameType_SmileDetectionFace
+    - It cannot be used. Reserved definition.
+  * - CrFaceFrameType_SelectedFace
+    - Selected Face
+  * - CrFaceFrameType_AF_TargetSelectionFace
+    - AF Target Selection Face
+  * - CrFaceFrameType_SmileDetectionSelectFace
+    - It cannot be used. Reserved definition.
+
+Supported Focus frame states
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+  
+  * - CrFocusFrameState_NotFocused
+    - Not focused
+  * - CrFocusFrameState_Focused
+    - Focused
+
+CrFocusFrameState is used as in the :ref:`CrFocusFrameInfo<cr-focus-frame-info>` class. However, only the above is valid in this class.
+
+.. _cr-tracking-frame-info:
+
+CrTrackingFrameInfo
+-------------------
+
+Used to retrieve Tracking frame info. 
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - type
+    - CrTrackingFrameType
+    - | The type of Tracking frame used.
+      | Defined in CrDeviceProperty.h as CrTrackingFrameType.
+  * - state
+    - CrFocusFrameState
+    - | The state of frame.
+      | Defined in CrDeviceProperty.h as CrFocusFrameState.
+  * - priority
+    - CrInt8u
+    - It cannot be used. Reserved parameter.
+  * - xNumerator
+    - CrInt32u
+    - x-axis value
+  * - xDenominator
+    - CrInt32u
+    - x-axis value
+  * - yNumerator
+    - CrInt32u
+    - y-axis value
+  * - yDenominator
+    - CrInt32u
+    - y-axis value
+  * - width
+    - CrInt32u
+    - Width of frame
+  * - height
+    - CrInt32u
+    - Height of frame
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Signature
+    - Description
+  
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+
+Supported Tracking frame types
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+  
+  * - CrTrackingFrameType_NonTargetAF
+    - | Non AF Target
+      | It is outside the AF area. Don't use x, y, Width, Height.
+  * - CrTrackingFrameType_TargetAF
+    - AF Target
+
+Supported Focus frame states
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+  
+  * - CrFocusFrameState_NotFocused
+    - Not focused
+  * - CrFocusFrameState_Focused
+    - Focused
+
+CrFocusFrameState is used as in the :ref:`CrFocusFrameInfo<cr-focus-frame-info>` class. However, only the above is valid in this class.
+
+.. _cr-level-info:
+
+CrLevelInfo
+-----------
+
+Used to retrieve Level info. 
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - state
+    - CrLevelState
+    - | The state of Level info.
+      | Defined in CrDeviceProperty.h as CrLevelState.
+  * - x
+    - CrInt32
+    - | x-axis value.
+      | Range is -180~+180. Valid when state is On.
+  * - y
+    - CrInt32
+    - | y-axis value.
+      | Range is -180~+180. Valid when state is On.
+  * - z
+    - CrInt32
+    - | z-axis value.
+      | Range is -180~+180. Valid when state is On.
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Signature
+    - Description
+  
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+
+Supported Level states
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+  
+  * - CrLevel_Off
+    - Off
+  * - CrLevel_On
+    - On
+
+.. _cr-image-info:
+
+CrImageInfo
+-----------
+
+Used to retrieve live-view image info. Use this class to retrieve the size of the live-view image.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - \-
+    - \-
+    - \-
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Signature
+    - Description
+  
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+  * - CrInt32u GetBufferSize()
+    - Get the data size (bytes) of a live-view image.
+
+.. _cr-image-data-block:
+
+CrImageDataBlock
+----------------
+
+Used for retrieving live-view image data. Allocate an object of this type to use as an output buffer.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - \-
+    - \-
+    - \-
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Signature
+    - Description
+  
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+  * - CrInt32u GetFrameNo()
+    - Get the frame number.
+  * - void SetSize(CrInt32u size)
+    - Set the maximum size(bytes) that can save live-view images. Use the size(bytes) obtained by CrImageInfo::GetBufferSize()
+  * - CrInt32u GetSize()
+    - Get the size set in SetSize().
+  * - void SetData(CrInt8u* data)
+    - Set the receive pointer for live-view image.
+  * - CrInt32u GetImageSize()
+    - Get the live-view image(jpeg) data size.
+  * - CrInt8u* GetImageData()
+    - Get the pointer of live-view image(jpeg) data.
+  * - CrInt32u GetTimeCode()
+    - | Get the time-code.
+      | See below for value details
+      |   refs. :ref:`Time-code specifications of Monitoring<tips-time-code-specifications-of-monitoring>`
+      | It is always zero for models that do not support the :ref:`ControlMonitoring()<api-control-monitoring>`.
+      | Correct values are only available during recording.
+
+.. _cr-FramingFrameInfo:
+
+CrFramingFrameInfo
+------------------
+
+Used to retrieve framing frame info. 
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - type
+    - CrFramingFrameType
+    - | The type of framing frame.
+      | Defined in CrDeviceProperty.h as CrFramingFrameType.
+  * - priority
+    - CrInt8u
+    - | priority value.
+  * - xNumerator
+    - CrInt32u
+    - x-axis value
+  * - xDenominator
+    - CrInt32u
+    - x-axis value 
+  * - yNumerator
+    - CrInt32u
+    - y-axis value
+  * - yDenominator
+    - CrInt32u
+    - y-axis value
+  * - width
+    - CrInt32u
+    - width value
+  * - height
+    - CrInt32u
+    - height value
+
+Supported Framing frame types
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+  
+  * - CrFramingFrameType_Unknown
+    - Unknown
+  * - CrFramingFrameType_Auto
+    - Auto

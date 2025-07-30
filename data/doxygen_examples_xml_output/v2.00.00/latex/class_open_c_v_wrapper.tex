@@ -1,0 +1,68 @@
+\doxysection{Open\+CVWrapper Class Reference}
+\hypertarget{class_open_c_v_wrapper}{}\label{class_open_c_v_wrapper}\index{OpenCVWrapper@{OpenCVWrapper}}
+
+
+{\ttfamily \#include $<$Open\+CVWrapper.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_c_v_wrapper_a7201d42fb5b7164232e9d7b065b8b585}{Open\+CVWrapper}} (void)
+\item 
+\mbox{\hyperlink{class_open_c_v_wrapper_a18e1593d9db87e87cdaa1192769d4667}{\texorpdfstring{$\sim$}{\string~}\+Open\+CVWrapper}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_open_c_v_wrapper_a470687931fcfa1a74f2d9032ee53692a}{Composite\+Image}} (const std\+::vector$<$ Cr\+Int8u $>$ \&lvdata, SCRSDK\+::\+Cr\+OSDImage\+Data\+Block \texorpdfstring{$\ast$}{*}osddata, unsigned char \texorpdfstring{$\ast$}{*}outputdata, Cr\+Int32u \texorpdfstring{$\ast$}{*}out\+Size)
+\item 
+static cv\+::\+Mat \mbox{\hyperlink{class_open_c_v_wrapper_a89af8fe1618d16650a5e660fe3a19cbd}{Overlay\+Image}} (const cv\+::\+Mat \&src, const cv\+::\+Mat \&overlay)
+\item 
+static void \mbox{\hyperlink{class_open_c_v_wrapper_a4dceccf7033548dc95c4f57d9f89b7b9}{Create\+Fill\+Image}} (int width, int height, int r, int g, int b, std\+::vector$<$ uchar $>$ \texorpdfstring{$\ast$}{*}imgdata)
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_open_c_v_wrapper_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_open_c_v_wrapper_a7201d42fb5b7164232e9d7b065b8b585}\index{OpenCVWrapper@{OpenCVWrapper}!OpenCVWrapper@{OpenCVWrapper}}
+\index{OpenCVWrapper@{OpenCVWrapper}!OpenCVWrapper@{OpenCVWrapper}}
+\doxysubsubsection{\texorpdfstring{OpenCVWrapper()}{OpenCVWrapper()}}
+{\footnotesize\ttfamily \label{class_open_c_v_wrapper_a7201d42fb5b7164232e9d7b065b8b585} 
+Open\+CVWrapper\+::\+Open\+CVWrapper (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_open_c_v_wrapper_a18e1593d9db87e87cdaa1192769d4667}\index{OpenCVWrapper@{OpenCVWrapper}!````~OpenCVWrapper@{\texorpdfstring{$\sim$}{\string~}OpenCVWrapper}}
+\index{````~OpenCVWrapper@{\texorpdfstring{$\sim$}{\string~}OpenCVWrapper}!OpenCVWrapper@{OpenCVWrapper}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OpenCVWrapper()}{\string~OpenCVWrapper()}}
+{\footnotesize\ttfamily \label{class_open_c_v_wrapper_a18e1593d9db87e87cdaa1192769d4667} 
+Open\+CVWrapper\+::\texorpdfstring{$\sim$}{\string~}\+Open\+CVWrapper (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_open_c_v_wrapper_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_open_c_v_wrapper_a470687931fcfa1a74f2d9032ee53692a}\index{OpenCVWrapper@{OpenCVWrapper}!CompositeImage@{CompositeImage}}
+\index{CompositeImage@{CompositeImage}!OpenCVWrapper@{OpenCVWrapper}}
+\doxysubsubsection{\texorpdfstring{CompositeImage()}{CompositeImage()}}
+{\footnotesize\ttfamily \label{class_open_c_v_wrapper_a470687931fcfa1a74f2d9032ee53692a} 
+bool Open\+CVWrapper\+::\+Composite\+Image (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Cr\+Int8u $>$ \&}]{lvdata}{, }\item[{SCRSDK\+::\+Cr\+OSDImage\+Data\+Block \texorpdfstring{$\ast$}{*}}]{osddata}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{outputdata}{, }\item[{Cr\+Int32u \texorpdfstring{$\ast$}{*}}]{out\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_open_c_v_wrapper_a4dceccf7033548dc95c4f57d9f89b7b9}\index{OpenCVWrapper@{OpenCVWrapper}!CreateFillImage@{CreateFillImage}}
+\index{CreateFillImage@{CreateFillImage}!OpenCVWrapper@{OpenCVWrapper}}
+\doxysubsubsection{\texorpdfstring{CreateFillImage()}{CreateFillImage()}}
+{\footnotesize\ttfamily \label{class_open_c_v_wrapper_a4dceccf7033548dc95c4f57d9f89b7b9} 
+void Open\+CVWrapper\+::\+Create\+Fill\+Image (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{int}]{r}{, }\item[{int}]{g}{, }\item[{int}]{b}{, }\item[{std\+::vector$<$ uchar $>$ \texorpdfstring{$\ast$}{*}}]{imgdata}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_open_c_v_wrapper_a89af8fe1618d16650a5e660fe3a19cbd}\index{OpenCVWrapper@{OpenCVWrapper}!OverlayImage@{OverlayImage}}
+\index{OverlayImage@{OverlayImage}!OpenCVWrapper@{OpenCVWrapper}}
+\doxysubsubsection{\texorpdfstring{OverlayImage()}{OverlayImage()}}
+{\footnotesize\ttfamily \label{class_open_c_v_wrapper_a89af8fe1618d16650a5e660fe3a19cbd} 
+cv\+::\+Mat Open\+CVWrapper\+::\+Overlay\+Image (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{src}{, }\item[{const cv\+::\+Mat \&}]{overlay}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+data/raw\+\_\+sdk\+\_\+docs/sdk\+\_\+source/v2.\+00.\+00/\mbox{\hyperlink{_open_c_v_wrapper_8h}{Open\+CVWrapper.\+h}}\item 
+data/raw\+\_\+sdk\+\_\+docs/sdk\+\_\+source/v2.\+00.\+00/\mbox{\hyperlink{_open_c_v_wrapper_8cpp}{Open\+CVWrapper.\+cpp}}\end{DoxyCompactItemize}

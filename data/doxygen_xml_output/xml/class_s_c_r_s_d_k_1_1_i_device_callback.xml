@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_i_device_callback" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::IDeviceCallback</compoundname>
+    <derivedcompoundref refid="classcli_1_1_camera_device" prot="public" virt="non-virtual">cli::CameraDevice</derivedcompoundref>
+    <includes refid="_i_device_callback_8h" local="no">IDeviceCallback.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a09419ff635d9b267939c3f6b56a625a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnConnected</definition>
+        <argsstring>(DeviceConnectionVersioin version)</argsstring>
+        <name>OnConnected</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnConnected</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1ad15e18981d4d37e09c6890c833a77f93">OnConnected</reimplementedby>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1adf92f7fb96e970926493817c9cd7ddcd" kindref="member">DeviceConnectionVersioin</ref></type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="12" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1af3ce487705e7968793e4c4522e9d431e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnDisconnected</definition>
+        <argsstring>(CrInt32u error)</argsstring>
+        <name>OnDisconnected</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnDisconnected</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1a6c011fb1d958f378f744ee63de520ccf">OnDisconnected</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="14" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a25307ec0ad9e7932a0388ddfa6cbd3d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnPropertyChanged</definition>
+        <argsstring>()</argsstring>
+        <name>OnPropertyChanged</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnPropertyChanged</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1a18c7b043bac34b7a858bee92e3ebe03c">OnPropertyChanged</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="16" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a779e6e0fa94ee06f2c31d865eacb6a4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnPropertyChangedCodes</definition>
+        <argsstring>(CrInt32u num, CrInt32u *codes)</argsstring>
+        <name>OnPropertyChangedCodes</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnPropertyChangedCodes</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1adbd6973b81aad8405aa4a4ce675f3292">OnPropertyChangedCodes</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>CrInt32u *</type>
+          <declname>codes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="18" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a1a50ed3954da7af4c1f2e4d596013376" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnLvPropertyChanged</definition>
+        <argsstring>()</argsstring>
+        <name>OnLvPropertyChanged</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnLvPropertyChanged</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1afcd360f75a88abc27908e4eef7357a86">OnLvPropertyChanged</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="20" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a85ea6dacf51fb654cc28953ccbf78ea7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnLvPropertyChangedCodes</definition>
+        <argsstring>(CrInt32u num, CrInt32u *codes)</argsstring>
+        <name>OnLvPropertyChangedCodes</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnLvPropertyChangedCodes</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1acf224682678590c12e6885bbb8bb3c73">OnLvPropertyChangedCodes</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>CrInt32u *</type>
+          <declname>codes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="22" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a2f103f042cd998ff2289b4ee0b6baabc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnCompleteDownload</definition>
+        <argsstring>(CrChar *filename, CrInt32u type=0xFFFFFFFF)</argsstring>
+        <name>OnCompleteDownload</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnCompleteDownload</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1a8436373af9263a5264e90f8e13aa4af0">OnCompleteDownload</reimplementedby>
+        <param>
+          <type><ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref> *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>type</declname>
+          <defval>0xFFFFFFFF</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="24" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a91993bf605f650c6c5ef4ca21219c09e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnNotifyContentsTransfer</definition>
+        <argsstring>(CrInt32u notify, CrContentHandle handle, CrChar *filename=0)</argsstring>
+        <name>OnNotifyContentsTransfer</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnNotifyContentsTransfer</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1ab5616305cf9b9515eca1919b666187b4">OnNotifyContentsTransfer</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>notify</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_s_c_r_s_d_k_1a4f6ae29bb252f8fa71f05cb6a1f9c746" kindref="member">CrContentHandle</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref> *</type>
+          <declname>filename</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="26" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a8b13e639bd101f6eaca6d4b02d3324f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnWarning</definition>
+        <argsstring>(CrInt32u warning)</argsstring>
+        <name>OnWarning</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnWarning</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1aafdd637064d6589e562e6e5501e4e3dc">OnWarning</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>warning</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="28" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a87affb1060f0d55966812d998e0fdcd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnWarningExt</definition>
+        <argsstring>(CrInt32u warning, CrInt32 param1, CrInt32 param2, CrInt32 param3)</argsstring>
+        <name>OnWarningExt</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnWarningExt</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1a183bf895030dee443b1572fe73ecec36">OnWarningExt</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>warning</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>param2</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>param3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="30" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a95d5f92a973177f2d3668ffd54a54e71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnError</definition>
+        <argsstring>(CrInt32u error)</argsstring>
+        <name>OnError</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnError</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1ab90bdd2702826d8ed5dda5414e394a2c">OnError</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="32" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a008b3d0f574de59ef0e7fff489461f24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnNotifyFTPTransferResult</definition>
+        <argsstring>(CrInt32u notify, CrInt32u numOfSuccess, CrInt32u numOfFail)</argsstring>
+        <name>OnNotifyFTPTransferResult</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnNotifyFTPTransferResult</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1aae79ddf5da36dce7d7813a4214aad12b">OnNotifyFTPTransferResult</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>notify</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>numOfSuccess</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>numOfFail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="34" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a2e0421f6bd1fe951cb3c144ba36b5692" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnNotifyRemoteTransferResult</definition>
+        <argsstring>(CrInt32u notify, CrInt32u per, CrChar *filename)</argsstring>
+        <name>OnNotifyRemoteTransferResult</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnNotifyRemoteTransferResult</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1a618839bfb90b5342d5d894b3fbc92fae">OnNotifyRemoteTransferResult</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>notify</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>per</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref> *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="36" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a6a90cdd1684b7d186b090cbe5ad1e945" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnNotifyRemoteTransferResult</definition>
+        <argsstring>(CrInt32u notify, CrInt32u per, CrInt8u *data, CrInt64u size)</argsstring>
+        <name>OnNotifyRemoteTransferResult</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnNotifyRemoteTransferResult</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1a8c1848bdd1f1328cd5c987ec7a946d0a">OnNotifyRemoteTransferResult</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>notify</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>per</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>CrInt64u</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="38" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a0081670fd6aa49b4d4e42dbba155de0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnNotifyRemoteTransferContentsListChanged</definition>
+        <argsstring>(CrInt32u notify, CrInt32u slotNumber, CrInt32u addSize)</argsstring>
+        <name>OnNotifyRemoteTransferContentsListChanged</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnNotifyRemoteTransferContentsListChanged</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1a542c466f03067e5b1850ff2482fc9105">OnNotifyRemoteTransferContentsListChanged</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>notify</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>slotNumber</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>addSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="40" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a0729e0e51c9ef9550e16d4d261eb6ab2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnNotifyRemoteFirmwareUpdateResult</definition>
+        <argsstring>(CrInt32u notify, const void *param)</argsstring>
+        <name>OnNotifyRemoteFirmwareUpdateResult</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnNotifyRemoteFirmwareUpdateResult</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1af0c793081fa1b39d335c56982c803ae1">OnNotifyRemoteFirmwareUpdateResult</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>notify</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="42" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a48e256a00bf4809923a9da703a6be370" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnReceivePlaybackTimeCode</definition>
+        <argsstring>(CrInt32u timeCode)</argsstring>
+        <name>OnReceivePlaybackTimeCode</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnReceivePlaybackTimeCode</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1af276b4733e35377366b3dadba10dbab5">OnReceivePlaybackTimeCode</reimplementedby>
+        <param>
+          <type>CrInt32u</type>
+          <declname>timeCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="44" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a73c76d6662e74aab82bf8df91710df40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnReceivePlaybackData</definition>
+        <argsstring>(CrInt8u mediaType, CrInt32 dataSize, CrInt8u *data, CrInt64 pts, CrInt64 dts, CrInt32 param1, CrInt32 param2)</argsstring>
+        <name>OnReceivePlaybackData</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnReceivePlaybackData</qualifiedname>
+        <reimplementedby refid="classcli_1_1_camera_device_1afe19460599f20696294b8cbd43392467">OnReceivePlaybackData</reimplementedby>
+        <param>
+          <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+          <declname>mediaType</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>dataSize</declname>
+        </param>
+        <param>
+          <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>CrInt64</type>
+          <declname>pts</declname>
+        </param>
+        <param>
+          <type>CrInt64</type>
+          <declname>dts</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>CrInt32</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="46" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_i_device_callback_1a182260ea370a6c947430307ddee1cdd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SCRSDK::IDeviceCallback::OnNotifyMonitorUpdated</definition>
+        <argsstring>(CrInt32u type, CrInt32u frameNo)</argsstring>
+        <name>OnNotifyMonitorUpdated</name>
+        <qualifiedname>SCRSDK::IDeviceCallback::OnNotifyMonitorUpdated</qualifiedname>
+        <param>
+          <type>CrInt32u</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>CrInt32u</type>
+          <declname>frameNo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="48" column="14" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SCRSDK::IDeviceCallback</label>
+        <link refid="class_s_c_r_s_d_k_1_1_i_device_callback"/>
+      </node>
+      <node id="2">
+        <label>cli::CameraDevice</label>
+        <link refid="classcli_1_1_camera_device"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" line="9" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h" bodystart="10" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a2f103f042cd998ff2289b4ee0b6baabc" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnCompleteDownload</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a09419ff635d9b267939c3f6b56a625a3" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnConnected</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1af3ce487705e7968793e4c4522e9d431e" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnDisconnected</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a95d5f92a973177f2d3668ffd54a54e71" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnError</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a1a50ed3954da7af4c1f2e4d596013376" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnLvPropertyChanged</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a85ea6dacf51fb654cc28953ccbf78ea7" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnLvPropertyChangedCodes</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a91993bf605f650c6c5ef4ca21219c09e" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnNotifyContentsTransfer</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a008b3d0f574de59ef0e7fff489461f24" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnNotifyFTPTransferResult</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a182260ea370a6c947430307ddee1cdd7" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnNotifyMonitorUpdated</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a0729e0e51c9ef9550e16d4d261eb6ab2" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnNotifyRemoteFirmwareUpdateResult</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a0081670fd6aa49b4d4e42dbba155de0a" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnNotifyRemoteTransferContentsListChanged</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a2e0421f6bd1fe951cb3c144ba36b5692" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnNotifyRemoteTransferResult</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a6a90cdd1684b7d186b090cbe5ad1e945" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnNotifyRemoteTransferResult</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a25307ec0ad9e7932a0388ddfa6cbd3d4" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnPropertyChanged</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a779e6e0fa94ee06f2c31d865eacb6a4e" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnPropertyChangedCodes</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a73c76d6662e74aab82bf8df91710df40" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnReceivePlaybackData</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a48e256a00bf4809923a9da703a6be370" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnReceivePlaybackTimeCode</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a8b13e639bd101f6eaca6d4b02d3324f7" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnWarning</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a87affb1060f0d55966812d998e0fdcd1" prot="public" virt="virtual"><scope>SCRSDK::IDeviceCallback</scope><name>OnWarningExt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

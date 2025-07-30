@@ -1,0 +1,45 @@
+﻿.. _dp-Movie_IntervalRec_FrameRateSetting:
+
+CrDeviceProperty_Movie_IntervalRec_FrameRateSetting
+===================================================
+
+Get/Set the IntervalREC(Movie) Frame Rate
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRecordingFrameRateSettingMovie_120p
+    - | 120p
+
+  * - CrRecordingFrameRateSettingMovie_100p
+    - | 100p
+
+  * - CrRecordingFrameRateSettingMovie_50p
+    - | 50p
+
+  * - CrRecordingFrameRateSettingMovie_25p
+    - | 25p
+
+  * - CrRecordingFrameRateSettingMovie_23_98p
+    - | 23.98p
+
+  * - CrRecordingFrameRateSettingMovie_29_97p
+    - | 29.97p
+
+  * - CrRecordingFrameRateSettingMovie_59_94p
+    - | 59.94p
+
+  * - CrRecordingFrameRateSettingMovie_24_00p
+    - | 24.00p
+
+  * - CrRecordingFrameRateSettingMovie_119_88p
+    - | 119.88p
+
+| Note: Actual frame rate values. Depending on the camera, this may not match the menu display string.
+

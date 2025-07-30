@@ -1,0 +1,37 @@
+﻿.. _dp-MediaSLOT1_FileType:
+
+CrDeviceProperty_MediaSLOT1_FileType
+====================================
+
+Get/Set the File Format(Still) of media(SLOT1)
+
+| This property is effective when Recording Media for still images is set to "Sort Recording".
+
+| For ILCE-1 : MENU > Shooting > Media > Rec. Media Settings > Recording Media 
+
+| This setting is related to “CrDeviceProperty_CompressionFileFormatStill”.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFileType_Raw
+    - | RAW
+
+  * - CrFileType_RawJpeg
+    - | RAW+JPEG
+
+  * - CrFileType_Jpeg
+    - | JPEG
+
+  * - CrFileType_RawHeif
+    - | RAW+HEIF
+
+  * - CrFileType_Heif
+    - | HEIF
+

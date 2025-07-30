@@ -1,0 +1,40 @@
+﻿.. _dp-FocusIndication:
+
+CrDeviceProperty_FocusIndication
+================================
+
+Get the Focus Indication
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusIndicator_Unlocked
+    - | Unlock
+
+  * - CrFocusIndicator_Focused_AF_S 
+    - | [AF-S]Focused, and AF Locked State
+
+  * - CrFocusIndicator_NotFocused_AF_S 
+    - | [AF-S]Not focused, and Low Contrast State 
+
+  * - CrFocusIndicator_TrackingSubject_AF_C 
+    - | [AF-C]Tracking Subject motion
+
+  * - CrFocusIndicator_Focused_AF_C 
+    - | [AF-C]Focused State
+
+  * - CrFocusIndicator_NotFocused_AF_C 
+    - | [AF-C]Not Focused, and Low Contrast State 
+
+  * - CrFocusIndicator_Unpause
+    - | Unpause
+
+  * - CrFocusIndicator_Pause
+    - | Pause
+

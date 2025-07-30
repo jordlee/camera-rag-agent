@@ -1,0 +1,23 @@
+﻿.. _dp-ButtonAssignmentAssignable9:
+
+CrDeviceProperty_ButtonAssignmentAssignable9
+============================================
+
+Get/Set the Button Assignment Assignable 9
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Variable(0x00 ~ 0xFF)
+    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_ButtonAssignmentAssignable1<dp-ButtonAssignmentAssignable1>`.
+
+
+| It may increase or decrease because it varies depending on the model and setting status.
+| See the :ref:`GetDisplayStringList<api-get-display-string-list>` for display character.
+

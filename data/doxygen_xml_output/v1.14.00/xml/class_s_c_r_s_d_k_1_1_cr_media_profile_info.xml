@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_media_profile_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrMediaProfileInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a940f2916e1aa1e0ee1c07cf94b439140" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::contentName</definition>
+        <argsstring></argsstring>
+        <name>contentName</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::contentName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5946" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5946" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a56733535ef73d483f64d61623fa7ec30" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::contentUrl</definition>
+        <argsstring></argsstring>
+        <name>contentUrl</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::contentUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5947" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5947" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a96d94ec44ebe8aeffabd72b07fab8409" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::contentType</definition>
+        <argsstring></argsstring>
+        <name>contentType</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::contentType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5948" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5948" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a2a374012f3b1177b6a8fb8a45519358f" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::contentFrameRate</definition>
+        <argsstring></argsstring>
+        <name>contentFrameRate</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::contentFrameRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5949" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5949" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1aae84a978086e561faa2d7743d72af0cd" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::contentAspectRatio</definition>
+        <argsstring></argsstring>
+        <name>contentAspectRatio</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::contentAspectRatio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5950" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5950" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a088a9aa5a9ca1dbae6f6b34382eae9a5" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::contentChannel</definition>
+        <argsstring></argsstring>
+        <name>contentChannel</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::contentChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5951" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5951" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1ad8900d59a7c4ad74b33792e3d0e488d8" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::contentVideoType</definition>
+        <argsstring></argsstring>
+        <name>contentVideoType</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::contentVideoType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5952" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5952" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a0bd044a3f4e694f072381ec848468783" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::contentAudioType</definition>
+        <argsstring></argsstring>
+        <name>contentAudioType</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::contentAudioType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5953" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5953" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1adc634b522d54deda419bd015d3dfc53b" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::proxyUrl</definition>
+        <argsstring></argsstring>
+        <name>proxyUrl</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::proxyUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5954" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5954" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a3f16d10e76aba914ec2ff509ef7c7266" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::proxyType</definition>
+        <argsstring></argsstring>
+        <name>proxyType</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::proxyType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5955" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5955" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a0cb0c18f994e708052d4853c893e245e" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::proxyFrameRate</definition>
+        <argsstring></argsstring>
+        <name>proxyFrameRate</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::proxyFrameRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5956" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5956" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a10657e8d0be569468a03bf96f626e2b2" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::proxyAspectRatio</definition>
+        <argsstring></argsstring>
+        <name>proxyAspectRatio</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::proxyAspectRatio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5957" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5957" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1aff758644716e83f86a3ab9890b2bfcd7" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::proxyChannel</definition>
+        <argsstring></argsstring>
+        <name>proxyChannel</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::proxyChannel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5958" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5958" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1af86692fa688c4533275353531a4d3f8c" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::proxyVideoType</definition>
+        <argsstring></argsstring>
+        <name>proxyVideoType</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::proxyVideoType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5959" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5959" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a5073d2f9150e53bb51afaab2790c9463" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::proxyAudioType</definition>
+        <argsstring></argsstring>
+        <name>proxyAudioType</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::proxyAudioType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5960" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5960" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a01258ef41e4b306e220eeefea6601365" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::thumbnailUrl</definition>
+        <argsstring></argsstring>
+        <name>thumbnailUrl</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::thumbnailUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5961" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5961" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1ac7dcb45f247fd609ef5513526157cc50" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrMediaProfileInfo::metaUrl</definition>
+        <argsstring></argsstring>
+        <name>metaUrl</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::metaUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5962" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5962" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1af34b246e3d3d65a5f5cf3157a688ac2e" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref></type>
+        <definition>CrInt8u SCRSDK::CrMediaProfileInfo::umid[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>umid</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::umid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5963" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5963" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a57ecd8a2a3e7e3608630f8d530cf633c" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMediaProfileInfo::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::duration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5964" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5964" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1aff069af6bc57b644c9a86faf7406f315" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrMediaProfileInfo::restrictionFrame</definition>
+        <argsstring></argsstring>
+        <name>restrictionFrame</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::restrictionFrame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5965" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5965" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1ad250f50081b997afe5cd8d8a3817c05a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrMediaProfileInfo::isTrimmingAvailable</definition>
+        <argsstring></argsstring>
+        <name>isTrimmingAvailable</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::isTrimmingAvailable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5966" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5966" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a22ab221853e4fef12a4ab17701150bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMediaProfileInfo::CrMediaProfileInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrMediaProfileInfo</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::CrMediaProfileInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5940" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a82b3816106041f44d36f87b4991092a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMediaProfileInfo::~CrMediaProfileInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrMediaProfileInfo</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::~CrMediaProfileInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5941" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1ab3215585d1f3e6c82e58cfac6be3606d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrMediaProfileInfo::CrMediaProfileInfo</definition>
+        <argsstring>(const CrMediaProfileInfo &amp;ref)</argsstring>
+        <name>CrMediaProfileInfo</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::CrMediaProfileInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info" kindref="compound">CrMediaProfileInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5942" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a3e55e07a959745c74a3b7d377dd07d8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info" kindref="compound">CrMediaProfileInfo</ref> &amp;</type>
+        <definition>CrMediaProfileInfo &amp; SCRSDK::CrMediaProfileInfo::operator=</definition>
+        <argsstring>(const CrMediaProfileInfo &amp;ref)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SCRSDK::CrMediaProfileInfo::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info" kindref="compound">CrMediaProfileInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5943" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="5937" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="5938" bodyend="5967"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1aae84a978086e561faa2d7743d72af0cd" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>contentAspectRatio</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a0bd044a3f4e694f072381ec848468783" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>contentAudioType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a088a9aa5a9ca1dbae6f6b34382eae9a5" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>contentChannel</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a2a374012f3b1177b6a8fb8a45519358f" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>contentFrameRate</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a940f2916e1aa1e0ee1c07cf94b439140" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>contentName</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a96d94ec44ebe8aeffabd72b07fab8409" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>contentType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a56733535ef73d483f64d61623fa7ec30" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>contentUrl</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1ad8900d59a7c4ad74b33792e3d0e488d8" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>contentVideoType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a22ab221853e4fef12a4ab17701150bc3" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>CrMediaProfileInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1ab3215585d1f3e6c82e58cfac6be3606d" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>CrMediaProfileInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a57ecd8a2a3e7e3608630f8d530cf633c" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>duration</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1ad250f50081b997afe5cd8d8a3817c05a" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>isTrimmingAvailable</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1ac7dcb45f247fd609ef5513526157cc50" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>metaUrl</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a3e55e07a959745c74a3b7d377dd07d8e" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>operator=</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a10657e8d0be569468a03bf96f626e2b2" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>proxyAspectRatio</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a5073d2f9150e53bb51afaab2790c9463" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>proxyAudioType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1aff758644716e83f86a3ab9890b2bfcd7" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>proxyChannel</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a0cb0c18f994e708052d4853c893e245e" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>proxyFrameRate</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a3f16d10e76aba914ec2ff509ef7c7266" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>proxyType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1adc634b522d54deda419bd015d3dfc53b" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>proxyUrl</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1af86692fa688c4533275353531a4d3f8c" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>proxyVideoType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1aff069af6bc57b644c9a86faf7406f315" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>restrictionFrame</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a01258ef41e4b306e220eeefea6601365" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>thumbnailUrl</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1af34b246e3d3d65a5f5cf3157a688ac2e" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>umid</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_media_profile_info_1a82b3816106041f44d36f87b4991092a3" prot="public" virt="non-virtual"><scope>SCRSDK::CrMediaProfileInfo</scope><name>~CrMediaProfileInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

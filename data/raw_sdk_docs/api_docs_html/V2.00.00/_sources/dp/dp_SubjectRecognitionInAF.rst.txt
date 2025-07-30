@@ -1,0 +1,22 @@
+﻿.. _dp-SubjectRecognitionInAF:
+
+CrDeviceProperty_SubjectRecognitionInAF
+=======================================
+
+Get/Set the Subject Recognition in AF
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSubjectRecognitionInAF_Off
+    - | Off
+
+  * - CrSubjectRecognitionInAF_On
+    - | On
+

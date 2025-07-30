@@ -1,0 +1,22 @@
+﻿.. _dp-SQModeSetting:
+
+CrDeviceProperty_SQModeSetting
+==============================
+
+Get/Set the S&Q mode.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSQModeSetting_Off
+    - | Off
+
+  * - CrSQModeSetting_On
+    - | On
+

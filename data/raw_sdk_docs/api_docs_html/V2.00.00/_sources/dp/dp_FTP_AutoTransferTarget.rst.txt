@@ -1,0 +1,25 @@
+﻿.. _dp-FTP_AutoTransferTarget:
+
+CrDeviceProperty_FTP_AutoTransferTarget
+=======================================
+
+Get/Set the FTP Auto Transfer Target FileType (Still/Movie)
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPAutoTransferTarget_StillOnly
+    - | Still
+
+  * - CrFTPAutoTransferTarget_MovieOnly
+    - | Movie
+
+  * - CrFTPAutoTransferTarget_StillAndMovie
+    - | Still and Movie
+

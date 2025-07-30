@@ -1,0 +1,22 @@
+﻿.. _dp-PushAFModeSetting:
+
+CrDeviceProperty_PushAFModeSetting
+==================================
+
+Get/Set the push AF mode.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPushAFModeSetting_ContinuousShotAF_C
+    - | Continuous-shot AF(AF-C)
+
+  * - CrPushAFModeSetting_SingleShotAF_S
+    - | Single-shot AF(AF-S)
+

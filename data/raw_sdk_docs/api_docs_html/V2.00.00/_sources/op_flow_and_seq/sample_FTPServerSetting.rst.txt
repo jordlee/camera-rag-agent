@@ -1,0 +1,24 @@
+.. _sample-FTPServerSetting:
+
+sample code - "FTPServerSetting"
+===========================================
+
+.. code-block:: cpp
+
+    usage:
+       set <id> <display> <host> <port> <user> [passExist] [pass] [passive] [dest] [secure] [hierarchy] [overwrite] [rootcert]
+       get <id>
+       result <slot>
+    To exit, please enter 'q'.
+
+.. code-block:: cpp
+
+    sample:
+       set 1 FTP1 192.168.11.16 21 test
+       set 1 FTP1 192.168.11.16 21 test 1 test 2 "" 1 1 1 2
+
+Save the following code as "RemoteCli.cpp", replace "app/RemoteCli.cpp" in the SDK, then build.
+
+.. literalinclude:: /_static/FTPServerSetting.cpp
+   :language: cpp
+   :linenos:

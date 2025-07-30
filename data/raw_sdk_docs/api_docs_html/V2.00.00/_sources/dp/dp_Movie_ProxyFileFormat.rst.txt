@@ -1,0 +1,28 @@
+﻿.. _dp-Movie_ProxyFileFormat:
+
+CrDeviceProperty_Movie_ProxyFileFormat
+======================================
+
+Get/Set the Proxy File Format(Movie)
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFileFormatMovie_XAVC_S_HD
+    - | XAVC S HD
+
+  * - CrFileFormatMovie_XAVC_HS_HD
+    - | XAVC HS HD
+
+  * - CrFileFormatMovie_XAVC_S_I_DCI_4K
+    - | XAVC S-I DCI 4K
+
+  * - CrFileFormatMovie_XAVC_Proxy
+    - | XAVC Proxy
+

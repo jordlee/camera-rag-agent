@@ -1,0 +1,22 @@
+﻿.. _dp-ReleaseWithoutLens:
+
+CrDeviceProperty_ReleaseWithoutLens
+===================================
+
+Get/Set the Release without Lens
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrReleaseWithoutLens_Disable
+    - | Disable
+
+  * - CrReleaseWithoutLens_Enable
+    - | Enable
+

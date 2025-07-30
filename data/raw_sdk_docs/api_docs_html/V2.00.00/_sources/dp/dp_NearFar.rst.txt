@@ -1,0 +1,32 @@
+﻿.. _dp-NearFar:
+
+CrDeviceProperty_NearFar
+========================
+
+Set the Focus Near/Far
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - -7
+    - min
+
+  * - 7
+    - max
+
+  * - 1
+    - step
+
+
+| In the case of DSC-RX0M2, the movement width is fixed.
+
+..
+
+.. include:: ./dp_NearFar.inc
+

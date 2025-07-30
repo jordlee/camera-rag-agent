@@ -1,0 +1,23 @@
+﻿.. _dp-MonitoringIsDelivering:
+
+CrDeviceProperty_MonitoringIsDelivering
+=======================================
+
+Get the Delivering Condition
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMonitoringIsDelivering_False
+    - | Streaming delivery has been suspended
+
+  * - CrMonitoringIsDelivering_True
+    - | Streaming delivery in progress
+
+

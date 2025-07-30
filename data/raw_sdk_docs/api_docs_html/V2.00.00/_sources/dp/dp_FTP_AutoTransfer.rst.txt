@@ -1,0 +1,22 @@
+﻿.. _dp-FTP_AutoTransfer:
+
+CrDeviceProperty_FTP_AutoTransfer
+=================================
+
+Get/Set the FTP Auto Transfer
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPAutoTransfer_Off
+    - | Off
+
+  * - CrFTPAutoTransfer_On
+    - | On
+

@@ -1,0 +1,24 @@
+﻿.. _dp-PlaybackViewMode:
+
+CrDeviceProperty_PlaybackViewMode
+=================================
+
+Get the Playback View Mode
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPlaybackViewMode_Playback
+    - | Playback
+
+  * - CrPlaybackViewMode_Index
+    - | Index
+
+| When Camera Operating Mode is not set to Playback, the IsEnable Field is disabled.
+

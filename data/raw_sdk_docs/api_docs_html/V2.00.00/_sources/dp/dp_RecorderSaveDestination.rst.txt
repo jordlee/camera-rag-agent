@@ -1,0 +1,27 @@
+﻿.. _dp-RecorderSaveDestination:
+
+CrDeviceProperty_RecorderSaveDestination
+========================================
+
+Get the information of Recorder Save Destination
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRecorderSaveDestination_External
+    - | External
+
+  * - CrRecorderSaveDestination_Internal
+    - | Internal
+
+  * - CrRecorderSaveDestination_ExternalAndInternal
+    - | External & Internal
+
+| “External” is only external output. It does not matter whether it is saved or not.
+

@@ -1,0 +1,22 @@
+.. _dp-DisplayedMenuStatus:
+
+CrDeviceProperty_DisplayedMenuStatus
+====================================
+
+Get the displayed menu status.
+
+CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Parameter Code
+      - Explanation
+
+    * - CrDisplayedMenuStatus_Off
+      - Off
+    * - CrDisplayedMenuStatus_StatusMenu
+      - Status Menu
+    * - CrDisplayedMenuStatus_FullMenu
+      - Full Menu

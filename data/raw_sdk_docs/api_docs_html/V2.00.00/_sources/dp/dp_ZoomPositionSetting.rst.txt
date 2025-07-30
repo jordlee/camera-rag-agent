@@ -1,0 +1,29 @@
+﻿.. _dp-ZoomPositionSetting:
+
+CrDeviceProperty_ZoomPositionSetting
+====================================
+
+Get/Set the absolute zoom position.
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - 0x0001
+    - step
+
+| min(Low) to max(High)
+| This command sets the target value to CurrentValues.
+| See :ref:`CrDeviceProperty_ZoomPositionCurrentValue<dp-ZoomPositionCurrentValue>` for the CurrentValue.
+

@@ -1,0 +1,22 @@
+\doxysection{Open\+CVWrapper.\+h}
+\hypertarget{_open_c_v_wrapper_8h_source}{}\label{_open_c_v_wrapper_8h_source}\index{data/raw\_sdk\_docs/sdk\_source/v2.00.00/OpenCVWrapper.h@{data/raw\_sdk\_docs/sdk\_source/v2.00.00/OpenCVWrapper.h}}
+\mbox{\hyperlink{_open_c_v_wrapper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CrImageDataBlock.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_c_v_wrapper_a7201d42fb5b7164232e9d7b065b8b585}{OpenCVWrapper}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_open_c_v_wrapper_a7201d42fb5b7164232e9d7b065b8b585}{OpenCVWrapper}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_open_c_v_wrapper_a18e1593d9db87e87cdaa1192769d4667}{\string~OpenCVWrapper}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_open_c_v_wrapper_a470687931fcfa1a74f2d9032ee53692a}{CompositeImage}}(\textcolor{keyword}{const}\ std::vector<CrInt8u>\&\ lvdata,\ SCRSDK::CrOSDImageDataBlock*\ osddata,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ outputdata,\ CrInt32u*\ outSize);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ cv::Mat\ \mbox{\hyperlink{class_open_c_v_wrapper_a89af8fe1618d16650a5e660fe3a19cbd}{OverlayImage}}(\textcolor{keyword}{const}\ cv::Mat\&\ src,\ \textcolor{keyword}{const}\ cv::Mat\&\ overlay);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_c_v_wrapper_a4dceccf7033548dc95c4f57d9f89b7b9}{CreateFillImage}}(\textcolor{keywordtype}{int}\ width,\textcolor{keywordtype}{int}\ height,\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b,\ std::vector<uchar>*\ imgdata);}
+\DoxyCodeLine{00016\ \};}
+
+\end{DoxyCode}

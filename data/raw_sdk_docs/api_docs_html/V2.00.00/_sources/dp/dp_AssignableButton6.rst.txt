@@ -1,0 +1,22 @@
+﻿.. _dp-AssignableButton6:
+
+CrDeviceProperty_AssignableButton6
+==================================
+
+Get/Set the Assignable Button 6
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAssignableButton_Up
+    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_AssignableButton1<dp-AssignableButton1>`.
+
+  * - CrAssignableButton_Down
+    - | 
+

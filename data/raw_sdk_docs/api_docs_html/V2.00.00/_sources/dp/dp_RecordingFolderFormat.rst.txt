@@ -1,0 +1,22 @@
+﻿.. _dp-RecordingFolderFormat:
+
+CrDeviceProperty_RecordingFolderFormat
+======================================
+
+Get/Set the Recording Folder Format
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRecordingFolderFormat_Standard
+    - | Standard format
+
+  * - CrRecordingFolderFormat_Date
+    - | Date format
+

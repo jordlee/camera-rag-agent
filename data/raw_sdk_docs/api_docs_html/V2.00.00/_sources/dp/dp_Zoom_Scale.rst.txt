@@ -1,0 +1,31 @@
+﻿.. _dp-Zoom_Scale:
+
+CrDeviceProperty_Zoom_Scale
+===========================
+
+Get/Set the Zoom Scale.
+
+| It may not be possible to operate depending on the model and lens type. refs Zoom Operation / Zoom Scale.
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| min/max/Value should be set in units of “step”.
+| Ex.) min: 1000, max: 8000, step: 200, value: 1200 (min = x1.0, max = x8.0, value = x1.2)
+| This value varies depending on the camera’s configurable conditions. (in units of 0.001)
+

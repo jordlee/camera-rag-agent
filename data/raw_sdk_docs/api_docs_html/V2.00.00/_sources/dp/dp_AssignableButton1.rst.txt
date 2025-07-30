@@ -1,0 +1,23 @@
+﻿.. _dp-AssignableButton1:
+
+CrDeviceProperty_AssignableButton1
+==================================
+
+Get/Set the Assignable Button 1
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAssignableButton_Up
+    - | Be sure to specify "Up" after specifying "Down".
+
+  * - CrAssignableButton_Down
+    - | Specify "Down" and execute the function assigned to :ref:`CrDeviceProperty_ButtonAssignmentAssignable1<dp-ButtonAssignmentAssignable1>`.
+      | It stays in the Down state (hold down the button) until CrAssignableButton_Up is set.
+

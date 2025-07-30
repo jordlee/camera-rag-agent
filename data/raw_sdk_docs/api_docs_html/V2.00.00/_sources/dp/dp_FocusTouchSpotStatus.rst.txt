@@ -1,0 +1,22 @@
+﻿.. _dp-FocusTouchSpotStatus:
+
+CrDeviceProperty_FocusTouchSpotStatus
+=====================================
+
+Get the Focus TouchSpot Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusTouchSpotStatus_Stopped
+    - | Stopped
+
+  * - CrFocusTouchSpotStatus_Running
+    - | Running
+

@@ -1,0 +1,26 @@
+﻿.. _dp-PictureProfile_KneeManualSet_Point:
+
+CrDeviceProperty_PictureProfile_KneeManualSet_Point
+===================================================
+
+Get/Set the Picture Profile Knee ManualSet Point
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPictureProfileKneeSetPoint_Invalid
+    - | Invalid
+
+  * - Other than above values
+    - | 100 times the value of MaxPoint(%)
+      | ex) 0x2616 = 97.50%
+
+| It may increase or decrease because it varies depending on the model and setting status.
+| Set Knee ManualSet Point for the Picture Profile selected in “Picture Profile.”
+

@@ -1,0 +1,27 @@
+﻿.. _command-RemoteKeyDown:
+
+CrCommandId_RemoteKeyDown
+=========================
+
+Execute remote key DOWN.
+
+    CrDataType: `CrDataType_UInt16`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCommandParam_Up
+    - | Up
+
+  * - CrCommandParam_Down
+    - | Down
+
+
+| Execute when the control value is Up
+| When this Control Code is executed, the following LiveView properties change:
+| Focus Magnifier Position (x,y)
+

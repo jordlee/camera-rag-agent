@@ -1,0 +1,47 @@
+﻿.. _dp-MediaSLOT2_Status:
+
+CrDeviceProperty_MediaSLOT2_Status
+==================================
+
+Get the Media (SLOT2) Status
+
+| Please set the function of camera “Rec. Media Settings: Recording Mode” to Standard when using ILCE-7RM4 and ILCE-7RM4A.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSlotStatus_OK
+    - | OK
+
+  * - CrSlotStatus_NoCard
+    - | No card
+
+  * - CrSlotStatus_CardError
+    - | Card error
+
+  * - CrSlotStatus_RecognizingOrLockedError
+    - | Card recognizing/Card locked and DB error
+
+  * - CrSlotStatus_DBError
+    - | DB Error
+
+  * - CrSlotStatus_CardRecognizing
+    - | Card Recognizing
+
+  * - CrSlotStatus_CardLockedAndDBError
+    - | Card Locked and DB Error
+
+  * - CrSlotStatus_DBError_CantRepairAndNeedFormat
+    - | DB Error (Cannot Repair and Need Format)
+
+  * - CrSlotStatus_CardError_ReadOnlyMedia
+    - | Card Error (Read-Only Media)
+
+| This device property is not available if the camera does not support the target media slot.
+

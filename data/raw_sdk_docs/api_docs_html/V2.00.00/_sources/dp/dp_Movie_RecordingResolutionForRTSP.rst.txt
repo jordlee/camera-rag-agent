@@ -1,0 +1,22 @@
+﻿.. _dp-Movie_RecordingResolutionForRTSP:
+
+CrDeviceProperty_Movie_RecordingResolutionForRTSP
+=================================================
+
+Get/Set the recording resolution for RTSP.
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - 0x00000000-0xFFFFFFFF
+    - | Recording resolution (Width, Height)
+
+| The “Width” is set in the upper two bytes and the “Height” is set in the lower two bytes
+| if resolution (width) is 1920, (height) is 1080, set 0x07800438. 0x0780 = 0d1920, 0x0438 = 0d1080.
+

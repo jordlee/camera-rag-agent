@@ -1,0 +1,31 @@
+﻿.. _dp-CameraPowerStatus:
+
+CrDeviceProperty_CameraPowerStatus
+==================================
+
+Get the Camera Power Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCameraPowerStatus_Off
+    - | Off
+
+  * - CrCameraPowerStatus_Standby
+    - | Standby
+
+  * - CrCameraPowerStatus_PowerOn
+    - | Power On
+
+  * - CrCameraPowerStatus_TransitioningFromPowerOnToStandby
+    - | Transitioning from PowerOn to Standby
+
+  * - CrCameraPowerStatus_TransitioningFromStandbyToPowerOn
+    - | Transitioning from Standby to Power On
+

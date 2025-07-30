@@ -1,0 +1,22 @@
+﻿.. _dp-FTP_AutoTransferTarget_StillImage:
+
+CrDeviceProperty_FTP_AutoTransferTarget_StillImage
+==================================================
+
+Get/Set the Auto FTP Transfer Target(Still)
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPAutoTransferTargetStill_All
+    - | All
+
+  * - CrFTPAutoTransferTargetStill_ProtectOnly
+    - | Protect Only
+

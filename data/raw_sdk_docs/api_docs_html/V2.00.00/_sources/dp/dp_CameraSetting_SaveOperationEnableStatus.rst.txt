@@ -1,0 +1,24 @@
+﻿.. _dp-CameraSetting_SaveOperationEnableStatus:
+
+CrDeviceProperty_CameraSetting_SaveOperationEnableStatus
+========================================================
+
+Get the Camera-Setting Save Operation Enable Status
+
+| DownloadSettingFile() is possible when this property is Enable.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCameraSettingSaveOperation_Disable
+    - | Disable
+
+  * - CrCameraSettingSaveOperation_Enable
+    - | Enable
+

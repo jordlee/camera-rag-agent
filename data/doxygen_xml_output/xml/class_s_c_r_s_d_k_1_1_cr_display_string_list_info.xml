@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrDisplayStringListInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a35c492b90edf39a24b3e99a1e24a59a3" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1ad14773698c3db11ee5b881e167367428" kindref="member">CrDataType</ref></type>
+        <definition>CrDataType SCRSDK::CrDisplayStringListInfo::dataType</definition>
+        <argsstring></argsstring>
+        <name>dataType</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::dataType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5929" column="12" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5929" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a6de8dffddd78f8ae29ef03c36b7be684" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a1b85fea5ea845fd3e3f5d3f44994e5f4" kindref="member">CrDisplayStringType</ref></type>
+        <definition>CrDisplayStringType SCRSDK::CrDisplayStringListInfo::listType</definition>
+        <argsstring></argsstring>
+        <name>listType</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::listType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5930" column="21" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5930" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a98f4e0d07e4230059c8cb7a17756f5c9" prot="public" static="no" mutable="no">
+        <type>CrInt64u</type>
+        <definition>CrInt64u SCRSDK::CrDisplayStringListInfo::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5931" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5931" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1ab43d4e11c00b68eb6ab3de8f2f2234a1" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrDisplayStringListInfo::displayStringSize</definition>
+        <argsstring></argsstring>
+        <name>displayStringSize</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::displayStringSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5932" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5932" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a925a747f955d4b4dc4384db1fdb6a0ab" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrDisplayStringListInfo::displayString</definition>
+        <argsstring></argsstring>
+        <name>displayString</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::displayString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5933" column="9" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5933" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a31db2cb1cd8862db063a16c237e238d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrDisplayStringListInfo::CrDisplayStringListInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrDisplayStringListInfo</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::CrDisplayStringListInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5920" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1ae5b4f7a33c2815f519a572d796f31bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrDisplayStringListInfo::~CrDisplayStringListInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrDisplayStringListInfo</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::~CrDisplayStringListInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5921" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1abe61fababdbb8cec03459412dc0eabec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrDisplayStringListInfo::CrDisplayStringListInfo</definition>
+        <argsstring>(const CrDisplayStringListInfo &amp;ref)</argsstring>
+        <name>CrDisplayStringListInfo</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::CrDisplayStringListInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info" kindref="compound">CrDisplayStringListInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5922" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a511e380bafb392d4d872ce9d233558fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info" kindref="compound">CrDisplayStringListInfo</ref> &amp;</type>
+        <definition>CrDisplayStringListInfo &amp; SCRSDK::CrDisplayStringListInfo::operator=</definition>
+        <argsstring>(const CrDisplayStringListInfo &amp;ref)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info" kindref="compound">CrDisplayStringListInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5923" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a945d29fd00e65f327e694edea8c5b31d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SCRSDK::CrDisplayStringListInfo::Alloc</definition>
+        <argsstring>(const CrInt32u size)</argsstring>
+        <name>Alloc</name>
+        <qualifiedname>SCRSDK::CrDisplayStringListInfo::Alloc</qualifiedname>
+        <param>
+          <type>const CrInt32u</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5926" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" line="5917" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrDeviceProperty.h" bodystart="5918" bodyend="5934"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a945d29fd00e65f327e694edea8c5b31d" prot="private" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>Alloc</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a31db2cb1cd8862db063a16c237e238d9" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>CrDisplayStringListInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1abe61fababdbb8cec03459412dc0eabec" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>CrDisplayStringListInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a35c492b90edf39a24b3e99a1e24a59a3" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>dataType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a925a747f955d4b4dc4384db1fdb6a0ab" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>displayString</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1ab43d4e11c00b68eb6ab3de8f2f2234a1" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>displayStringSize</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a6de8dffddd78f8ae29ef03c36b7be684" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>listType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a511e380bafb392d4d872ce9d233558fa" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>operator=</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1a98f4e0d07e4230059c8cb7a17756f5c9" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>value</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_display_string_list_info_1ae5b4f7a33c2815f519a572d796f31bae" prot="public" virt="non-virtual"><scope>SCRSDK::CrDisplayStringListInfo</scope><name>~CrDisplayStringListInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

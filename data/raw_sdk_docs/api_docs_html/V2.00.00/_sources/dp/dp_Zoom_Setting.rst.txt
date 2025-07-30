@@ -1,0 +1,30 @@
+﻿.. _dp-Zoom_Setting:
+
+CrDeviceProperty_Zoom_Setting
+=============================
+
+Get/Set the Zoom Setting.
+
+| It may not be possible to operate depending on the model and lens type. refs Zoom Operation / Zoom Scale.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrZoomSetting_OpticalZoomOnly 
+    - | Optical zoom only
+
+  * - CrZoomSetting_SmartZoomOnly 
+    - | Smart zoom only
+
+  * - CrZoomSetting_On_ClearImageZoom 
+    - | Clear image zoom on
+
+  * - CrZoomSetting_On_DigitalZoom 
+    - | Digital zoom (and Clear image zoom) on
+

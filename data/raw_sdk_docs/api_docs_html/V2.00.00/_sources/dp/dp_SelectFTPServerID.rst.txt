@@ -1,0 +1,22 @@
+﻿.. _dp-SelectFTPServerID:
+
+CrDeviceProperty_SelectFTPServerID
+==================================
+
+Get/Set the Select FTP ServerID. Only for ILME-FX6/MPC-2610/ PXW-Z200/ HXR-NX800
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSelectFTPServerID_Nothing
+    - | Nothing to display.
+
+  * - Other than above values
+    - | The real value of Server ID(1~)
+

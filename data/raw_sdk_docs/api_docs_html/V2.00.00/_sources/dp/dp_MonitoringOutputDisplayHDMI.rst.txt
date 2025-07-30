@@ -1,0 +1,22 @@
+﻿.. _dp-MonitoringOutputDisplayHDMI:
+
+CrDeviceProperty_MonitoringOutputDisplayHDMI
+============================================
+
+Get/Set the Monitoring Output Display HDMI(Movie) 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMonitoringOutputDisplayHDMI_Off
+    - | Off
+
+  * - CrMonitoringOutputDisplayHDMI_On
+    - | On
+

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_b1b4c14f4c564e8b44f0b36f8d7f52c4" kind="dir">
+    <compoundname>data/raw_sdk_docs/sdk_source/v1.14.00/CRSDK</compoundname>
+    <innerfile refid="_camera_remote___s_d_k_8h">CameraRemote_SDK.h</innerfile>
+    <innerfile refid="_cr_command_data_8h">CrCommandData.h</innerfile>
+    <innerfile refid="_cr_defines_8h">CrDefines.h</innerfile>
+    <innerfile refid="_cr_device_property_8h">CrDeviceProperty.h</innerfile>
+    <innerfile refid="_cr_error_8h">CrError.h</innerfile>
+    <innerfile refid="_cr_image_data_block_8h">CrImageDataBlock.h</innerfile>
+    <innerfile refid="_cr_types_8h">CrTypes.h</innerfile>
+    <innerfile refid="_i_cr_camera_object_info_8h">ICrCameraObjectInfo.h</innerfile>
+    <innerfile refid="_i_device_callback_8h">IDeviceCallback.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/v1.14.00/CRSDK/"/>
+  </compounddef>
+</doxygen>

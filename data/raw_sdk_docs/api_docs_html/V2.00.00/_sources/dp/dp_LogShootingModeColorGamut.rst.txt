@@ -1,0 +1,23 @@
+﻿.. _dp-LogShootingModeColorGamut:
+
+CrDeviceProperty_LogShootingModeColorGamut
+==========================================
+
+Get/Set the color gamut for the still image log shooting mode
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrLogShootingModeColorGamut_S_Gamut3_Cine
+    - | S-Gamut3.Cine
+
+  * - CrLogShootingModeColorGamut_S_Gamut3
+    - | S-Gamut3
+
+

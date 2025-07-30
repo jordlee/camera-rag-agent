@@ -1,0 +1,30 @@
+﻿.. _dp-FTP_ConnectionStatus:
+
+CrDeviceProperty_FTP_ConnectionStatus
+=====================================
+
+Get the FTP Connection Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFTPConnectionStatus_Connecting
+    - | Connecting
+
+  * - CrFTPConnectionStatus_Connected
+    - | Connected
+
+  * - CrFTPConnectionStatus_Connected_ServerError
+    - | Connected (Server certification error)
+
+  * - CrFTPConnectionStatus_ConnectionError
+    - | Connection Error
+
+| When FTP Function is Off, the IsEnable Field is disabled.
+

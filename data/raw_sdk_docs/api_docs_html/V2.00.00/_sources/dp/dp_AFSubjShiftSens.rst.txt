@@ -1,0 +1,27 @@
+﻿.. _dp-AFSubjShiftSens:
+
+CrDeviceProperty_AFSubjShiftSens
+================================
+
+Get/Set AF Subj Shift Sens
+
+    CrDataType: `CrDataType_UInt8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| The range value may change depending on the model.
+

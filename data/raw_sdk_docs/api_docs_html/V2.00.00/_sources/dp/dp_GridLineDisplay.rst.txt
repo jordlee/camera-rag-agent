@@ -1,0 +1,22 @@
+﻿.. _dp-GridLineDisplay:
+
+CrDeviceProperty_GridLineDisplay
+================================
+
+Get/Set the Grid Line Display
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrGridLineDisplay_Off
+    - | Off
+
+  * - CrGridLineDisplay_On
+    - | On
+

@@ -1,0 +1,22 @@
+﻿.. _dp-NDFilter:
+
+CrDeviceProperty_NDFilter
+=========================
+
+Get/Set the ND Filter
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrNDFilter_OFF
+    - | OFF
+
+  * - CrNDFilter_ON
+    - | ON
+

@@ -1,0 +1,24 @@
+﻿.. _dp-FirmwareUpdateCommandVersion:
+
+CrDeviceProperty_FirmwareUpdateCommandVersion
+=============================================
+
+Get the enabled status and command dataset version (firmware update).
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - --
+    - | Dataset Version
+
+
+| ex) The Dataset Version is 0x00000064. (0d100) 
+| When Firmware Update feature is invalid, IsEnable field is Disable.
+| Related Commands: :ref:`UploadPartialFile<api-upload-partial-file>`, :ref:`StartFirmwareUpdate<api-start-firmware-update>`
+

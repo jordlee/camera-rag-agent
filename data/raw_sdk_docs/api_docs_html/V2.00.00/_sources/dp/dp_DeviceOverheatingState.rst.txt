@@ -1,0 +1,30 @@
+﻿.. _dp-DeviceOverheatingState:
+
+CrDeviceProperty_DeviceOverheatingState
+=======================================
+
+Get the Device Overheating State
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| The current value can be one of the following three.
+| CrDeviceOverheatingState_NotOverheating
+| CrDeviceOverheatingState_PreOverheating
+| CrDeviceOverheatingState_Overheating
+

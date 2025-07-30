@@ -1,0 +1,31 @@
+﻿.. _dp-ImageID_String:
+
+CrDeviceProperty_ImageID_String
+===============================
+
+Get/Set the Image ID(String)
+
+| See "GPS information and shooting image link" in Tips / Trouble shooting for how to use it.
+
+    CrDataType: `CrDataType_STR`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - String
+    - Image ID (String)
+
+
+| By specifying a value in this property before shooting, the value specified in the Exif tag of the image file shot after that will be saved.
+| Please set the string in UTF16BE.
+| The maximum number of characters that can be specified depends on whether :ref:`CrDeviceProperty_MaximumSizeOfImageIDString<dp-MaximumSizeOfImageIDString>` can be obtained.
+|   When CrDeviceProperty_MaximumSizeOfImageIDString can be obtained: Look at the value of CrDeviceProperty_MaximumSizeOfImageIDString.
+|   When CrDeviceProperty_MaximumSizeOfImageIDString cannot be obtained: The maximum number of characters is 64.
+| If blank ("") is set, Exif tags are not save in the image.
+| Note:
+| The Exif tag for Image ID (String) is 0x2043.
+

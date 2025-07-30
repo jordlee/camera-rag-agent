@@ -1,0 +1,19 @@
+﻿.. _dp-ShutterSpeedValue:
+
+CrDeviceProperty_ShutterSpeedValue
+==================================
+
+Get/Set the Shutter Speed Value
+
+    CrDataType: `CrDataType_UInt64Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Variable
+    - | Upper four bytes: numerator, Lower four bytes: denominator
+

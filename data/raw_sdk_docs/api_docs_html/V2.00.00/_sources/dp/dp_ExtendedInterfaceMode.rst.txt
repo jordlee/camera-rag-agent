@@ -1,0 +1,27 @@
+﻿.. _dp-ExtendedInterfaceMode:
+
+CrDeviceProperty_ExtendedInterfaceMode
+======================================
+
+Get/Set the Extended Interface Mode
+
+| Extended interface for Sony’s Camera Remote SDK supports shutter trigger by electrical signal and remote power On/Off\*.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrExtendedInterfaceMode_Off
+    - | OFF
+
+  * - CrExtendedInterfaceMode_On
+    - | ON
+
+| \*: Extended interface for Sony’s Camera Remote SDK is compatible only with the camera that has a USB Type-C® connector. To use this function, a separate device must be prepared and connected. For details, please download the following link.
+| https://support.d-imaging.sony.co.jp/app/sdk/extended_interface/en/index.html
+

@@ -1,0 +1,27 @@
+﻿.. _dp-MeteredManualLevel:
+
+CrDeviceProperty_MeteredManualLevel
+===================================
+
+Get the Metered Manual Level
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| This value is an integer value multiplying the metered manual value by 1000.
+

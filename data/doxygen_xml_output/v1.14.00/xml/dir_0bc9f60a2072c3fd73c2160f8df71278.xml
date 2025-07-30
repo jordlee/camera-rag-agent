@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_0bc9f60a2072c3fd73c2160f8df71278" kind="dir">
+    <compoundname>data/raw_sdk_docs/sdk_source/V1.14.00</compoundname>
+    <innerdir refid="dir_cb8cb5cacd12356c921076a30064b21a">data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/V1.14.00/"/>
+  </compounddef>
+</doxygen>

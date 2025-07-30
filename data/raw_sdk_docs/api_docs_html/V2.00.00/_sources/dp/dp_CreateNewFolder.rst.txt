@@ -1,0 +1,29 @@
+﻿.. _dp-CreateNewFolder:
+
+CrDeviceProperty_CreateNewFolder
+=============================================
+
+Create a new folder (still).
+
+    CrDataType: `CrDataType_STR`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 
+    - New Folder Name
+
+
+| The values that can be set differ depending on the “Folder Name” menu.
+| MENU > Shooting > File > File/Folder Settings > Folder Name
+|   Standard Form :The number of characters that can be set is 5.
+|   Date Form        : Set an null string, a folder will be created in the camera’s date format.
+| Notify with OnWarningExt callback when update fails.
+|   - CrWarningExt_OperationResultsParam_CameraStatusError
+|   - CrWarningExt_OperationResultsParam_CharacterSizeError
+|   - CrWarningExt_OperationResultsParam_InvalidParameterError
+

@@ -1,0 +1,27 @@
+﻿.. _dp-PictureProfile_BlackGammaRange:
+
+CrDeviceProperty_PictureProfile_BlackGammaRange
+===============================================
+
+Get/Set the Picture Profile Black Gamma Range
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPictureProfileBlackGammaRange_Wide
+    - | Wide
+
+  * - CrPictureProfileBlackGammaRange_Middle
+    - | Middle
+
+  * - CrPictureProfileBlackGammaRange_Narrow
+    - | Narrow
+
+| Set BlackGamma Range for the Picture Profile selected in “Picture Profile.”
+

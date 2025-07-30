@@ -1,0 +1,22 @@
+﻿.. _dp-TimeCodeRun:
+
+CrDeviceProperty_TimeCodeRun
+============================
+
+Get/Set the Time Code Run
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTimeCodeRun_RecRun
+    - | Rec Run
+
+  * - CrTimeCodeRun_FreeRun
+    - | Free Run
+

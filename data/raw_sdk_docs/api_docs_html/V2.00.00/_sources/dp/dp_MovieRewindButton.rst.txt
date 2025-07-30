@@ -1,0 +1,22 @@
+﻿.. _dp-MovieRewindButton:
+
+CrDeviceProperty_MovieRewindButton
+==================================
+
+Get/Set the Movie Rewind button
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieXButton_Up
+    - | Rewind playback of movie.
+
+  * - CrMovieXButton_Down
+    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_MoviePlayButton<dp-MoviePlayButton>`.
+

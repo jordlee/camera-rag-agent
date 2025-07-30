@@ -1,0 +1,27 @@
+﻿.. _dp-PanLimitRangeMinimum:
+
+CrDeviceProperty_PanLimitRangeMinimum
+=====================================
+
+Get/Set the Pan Limit Range Minimum
+
+    CrDataType: `CrDataType_Int32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| step is Angle unit. The Angle unit is 0.000001 degree.
+

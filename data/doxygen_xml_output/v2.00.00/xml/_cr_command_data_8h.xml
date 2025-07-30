@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_cr_command_data_8h" kind="file" language="C++">
+    <compoundname>CrCommandData.h</compoundname>
+    <includes refid="_cr_types_8h" local="yes">CrTypes.h</includes>
+    <includedby refid="_camera_remote___s_d_k_8h" local="yes">data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CameraRemote_SDK.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrCommandData.h</label>
+        <link refid="_cr_command_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CrTypes.h</label>
+        <link refid="_cr_types_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CameraRemote_SDK.h</label>
+        <link refid="_camera_remote___s_d_k_8h"/>
+      </node>
+      <node id="1">
+        <label>data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrCommandData.h</label>
+        <link refid="_cr_command_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_s_c_r_s_d_k">SCRSDK</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CRCOMMANDDATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CRCOMMANDDATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_cr_types_8h" kindref="compound">CrTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_c_r_s_d_k" kindref="compound">SCRSDK</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743" kindref="member">CrCommandId</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a49448ee12a69322c77b9e98b906a6547" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a49448ee12a69322c77b9e98b906a6547" kindref="member">CrCommandId_Release</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="11" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743afefbb99517f78b11990bdc5d087132f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743afefbb99517f78b11990bdc5d087132f7" kindref="member">CrCommandId_MovieRecord</ref>,</highlight></codeline>
+<codeline lineno="12" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ac4f3608b5c190f887bc3892fceb61481" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ac4f3608b5c190f887bc3892fceb61481" kindref="member">CrCommandId_CancelShooting</ref>,</highlight></codeline>
+<codeline lineno="13" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad9e10b79d7e523a664e527e02bd10e34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad9e10b79d7e523a664e527e02bd10e34" kindref="member">CrCommandId_MediaFormat</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="14" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9e8681fd8c8bd6227095bbebf2f93a06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9e8681fd8c8bd6227095bbebf2f93a06" kindref="member">CrCommandId_MediaQuickFormat</ref>,</highlight></codeline>
+<codeline lineno="15" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ae1df042743c1bd5368855c02f3331454" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ae1df042743c1bd5368855c02f3331454" kindref="member">CrCommandId_CancelMediaFormat</ref>,</highlight></codeline>
+<codeline lineno="16" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a3aaf5ac56f7f5dc66ad03e8d2b36e848" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a3aaf5ac56f7f5dc66ad03e8d2b36e848" kindref="member">CrCommandId_S1andRelease</ref>,</highlight></codeline>
+<codeline lineno="17" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad6f4d594e77b9d9a24528051ec10be87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad6f4d594e77b9d9a24528051ec10be87" kindref="member">CrCommandId_CancelContentsTransfer</ref>,</highlight></codeline>
+<codeline lineno="18" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ac54620aeb4b5b3828c77a2d28c3ebdf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ac54620aeb4b5b3828c77a2d28c3ebdf4" kindref="member">CrCommandId_CameraSettingsReset</ref>,</highlight></codeline>
+<codeline lineno="19" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9cbdf6e0e90b94ff782f4c530aa892a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9cbdf6e0e90b94ff782f4c530aa892a9" kindref="member">CrCommandId_APS_C_or_Full_Switching</ref>,</highlight></codeline>
+<codeline lineno="20" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a974a8e446285c9ef227f1e575b17cacb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a974a8e446285c9ef227f1e575b17cacb" kindref="member">CrCommandId_MovieRecButtonToggle</ref>,</highlight></codeline>
+<codeline lineno="21" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9bc9fc023d4b5c1520d02d8204dd4772" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9bc9fc023d4b5c1520d02d8204dd4772" kindref="member">CrCommandId_CancelRemoteTouchOperation</ref>,</highlight></codeline>
+<codeline lineno="22" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a6ce27dda8296deec65356b8663bb600f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a6ce27dda8296deec65356b8663bb600f" kindref="member">CrCommandId_PixelMapping</ref>,</highlight></codeline>
+<codeline lineno="23" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9f50c88330ab7260ac724d3f87695d88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9f50c88330ab7260ac724d3f87695d88" kindref="member">CrCommandId_TimeCodePresetReset</ref>,</highlight></codeline>
+<codeline lineno="24" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad2c38e2aa4d91ddc52071729545eeff9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad2c38e2aa4d91ddc52071729545eeff9" kindref="member">CrCommandId_UserBitPresetReset</ref>,</highlight></codeline>
+<codeline lineno="25" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ab8e778ec6f52f2e93130417dc6474ca1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ab8e778ec6f52f2e93130417dc6474ca1" kindref="member">CrCommandId_SensorCleaning</ref>,</highlight></codeline>
+<codeline lineno="26" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aaeeac98122f91440b44fdeccae2c615e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aaeeac98122f91440b44fdeccae2c615e" kindref="member">CrCommandId_PictureProfileReset</ref>,</highlight></codeline>
+<codeline lineno="27" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a23c13506b89606d3c60521e393833d3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a23c13506b89606d3c60521e393833d3c" kindref="member">CrCommandId_CreativeLookReset</ref>,</highlight></codeline>
+<codeline lineno="28" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743af1eeb57e2ca5c9c272cc29a9f2d00959" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743af1eeb57e2ca5c9c272cc29a9f2d00959" kindref="member">CrCommandId_PowerOff</ref>,</highlight></codeline>
+<codeline lineno="29" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743af75814c1cdcf686787fb40b7c0892908" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743af75814c1cdcf686787fb40b7c0892908" kindref="member">CrCommandId_CancelFocusPosition</ref>,</highlight></codeline>
+<codeline lineno="30" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a8306f05a405331f434bbc4c7dcc9d003" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a8306f05a405331f434bbc4c7dcc9d003" kindref="member">CrCommandId_FlickerScan</ref>,</highlight></codeline>
+<codeline lineno="31" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ac56a1650799c15acf47dcb5755206a21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ac56a1650799c15acf47dcb5755206a21" kindref="member">CrCommandId_ContinuousShootingSpotBoost</ref>,</highlight></codeline>
+<codeline lineno="32" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad8f398b737876d5158398121c7e25477" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad8f398b737876d5158398121c7e25477" kindref="member">CrCommandId_ForcedFileNumberReset</ref>,</highlight></codeline>
+<codeline lineno="33" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a15a4060c332efde21be77a0582a35002" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a15a4060c332efde21be77a0582a35002" kindref="member">CrCommandId_TrackingOnAndAFOn</ref>,</highlight></codeline>
+<codeline lineno="34" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a2bf9719ea3b9081cfa70e6dd7f0854d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a2bf9719ea3b9081cfa70e6dd7f0854d2" kindref="member">CrCommandId_CancelZoomPosition</ref>,</highlight></codeline>
+<codeline lineno="35" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a5223515395fcc9099c2f14534b6d02db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a5223515395fcc9099c2f14534b6d02db" kindref="member">CrCommandId_MovieRecButtonToggle2</ref>,</highlight></codeline>
+<codeline lineno="36" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad5e4f84efe11a53f363473ee60919a73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743ad5e4f84efe11a53f363473ee60919a73" kindref="member">CrCommandId_CameraStandBy</ref>,</highlight></codeline>
+<codeline lineno="37" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aeaecd3efd5050ccb75fc264fd4fc1db7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aeaecd3efd5050ccb75fc264fd4fc1db7" kindref="member">CrCommandId_PowerOn</ref>,</highlight></codeline>
+<codeline lineno="38" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a4b5c9589143802bd2171ca9e6d489484" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a4b5c9589143802bd2171ca9e6d489484" kindref="member">CrCommandId_StreamButton</ref>,</highlight></codeline>
+<codeline lineno="39" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a121e457d619cb5d077139f21d3a09c2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a121e457d619cb5d077139f21d3a09c2c" kindref="member">CrCommandId_ResetMultiMatrix</ref>,</highlight></codeline>
+<codeline lineno="40" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aea88dbf596289eb25ae0e05105b2e68c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aea88dbf596289eb25ae0e05105b2e68c" kindref="member">CrCommandId_RemoteKeyUp</ref>,</highlight></codeline>
+<codeline lineno="41" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aa30981a1bf98563720dcf22d8c294f7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aa30981a1bf98563720dcf22d8c294f7e" kindref="member">CrCommandId_RemoteKeyDown</ref>,</highlight></codeline>
+<codeline lineno="42" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743acd8a2d7fa3e2bb5ea28e63eb197b1f7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743acd8a2d7fa3e2bb5ea28e63eb197b1f7b" kindref="member">CrCommandId_RemoteKeyLeft</ref>,</highlight></codeline>
+<codeline lineno="43" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9b5fcb14fdea52eda818132b7a2f3365" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9b5fcb14fdea52eda818132b7a2f3365" kindref="member">CrCommandId_RemoteKeyRight</ref>,</highlight></codeline>
+<codeline lineno="44" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a080bdce941413e648f4977a99b5d042e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a080bdce941413e648f4977a99b5d042e" kindref="member">CrCommandId_RemoteKeyCancelBackButton</ref>,</highlight></codeline>
+<codeline lineno="45" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9998cab1a59921f6870edc6ae91a5386" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a9998cab1a59921f6870edc6ae91a5386" kindref="member">CrCommandId_RemoteKeyDisplayButton</ref>,</highlight></codeline>
+<codeline lineno="46" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a57bcd53d63ab0dcc58c1379bf3ce9882" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a57bcd53d63ab0dcc58c1379bf3ce9882" kindref="member">CrCommandId_RemoteKeySet</ref>,</highlight></codeline>
+<codeline lineno="47" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a964a4b4d3aa2cdc07f485ed18bc65286" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a964a4b4d3aa2cdc07f485ed18bc65286" kindref="member">CrCommandId_RemoteKeyRightUp</ref>,</highlight></codeline>
+<codeline lineno="48" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aacc674ba22072270a75a67816fea95c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aacc674ba22072270a75a67816fea95c7" kindref="member">CrCommandId_RemoteKeyRightDown</ref>,</highlight></codeline>
+<codeline lineno="49" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a333d4f94461307f9967bb554bb228c72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a333d4f94461307f9967bb554bb228c72" kindref="member">CrCommandId_RemoteKeyLeftUp</ref>,</highlight></codeline>
+<codeline lineno="50" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aa94b96487df9392695211c1fcfdb5947" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743aa94b96487df9392695211c1fcfdb5947" kindref="member">CrCommandId_RemoteKeyLeftDown</ref>,</highlight></codeline>
+<codeline lineno="51" refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a70a3e0883cc1f39fdb22e713a5fdf0ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1a7dd75a3b37a8e930c54934662b51e743a70a3e0883cc1f39fdb22e713a5fdf0ce" kindref="member">CrCommandId_RemoteKeyMenuButton</ref>,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="namespace_s_c_r_s_d_k_1aa1595c97255dd0ea111768f3ff79b154" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_s_c_r_s_d_k_1aa1595c97255dd0ea111768f3ff79b154" kindref="member">CrCommandParam</ref><sp/>:<sp/><ref refid="_cr_types_8h_1a3b0d5eacdd498a8a430171ce2c7c2bcf" kindref="member">CrInt16u</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56" refid="namespace_s_c_r_s_d_k_1aa1595c97255dd0ea111768f3ff79b154a345c848a1a33adbcadfd1b7c76baa142" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1aa1595c97255dd0ea111768f3ff79b154a345c848a1a33adbcadfd1b7c76baa142" kindref="member">CrCommandParam_Up</ref><sp/>=<sp/>0x0000,</highlight></codeline>
+<codeline lineno="57" refid="namespace_s_c_r_s_d_k_1aa1595c97255dd0ea111768f3ff79b154a6c1323831041a7a2b99bba310e50e3ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_s_c_r_s_d_k_1aa1595c97255dd0ea111768f3ff79b154a6c1323831041a7a2b99bba310e50e3ee" kindref="member">CrCommandParam_Down</ref><sp/>=<sp/>0x0001,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CRCOMMANDDATA_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK/CrCommandData.h"/>
+  </compounddef>
+</doxygen>

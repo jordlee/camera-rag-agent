@@ -1,0 +1,27 @@
+﻿.. _dp-SubjectRecognitionCarTrainTrackingSubjectShiftRange:
+
+CrDeviceProperty_SubjectRecognitionCarTrainTrackingSubjectShiftRange
+====================================================================
+
+Get/Set the Subject Recognition Car/Train Tracking Subject Shift Range
+
+    CrDataType: `CrDataType_UInt8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| min(Narrow) to max(Wide)
+

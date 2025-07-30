@@ -1,0 +1,81 @@
+.. _op-connect-a-camera:
+
+Connect a Camera 
+================
+
+Using one of the enumerated ICrCameraObjectInfo, the camera can be connected with Camera Remote SDK by calling the Connect() function of the class. This function has five parameters. The first parameter ICrCameraObjectInfo * specifies the camera to connect to. The second parameter IDeviceCallback is a function object that is called back to notify the communication events from Camera Remote SDK. The caller must create the object instance before calling the Connect() function. The third parameter CrDeviceHandle * is returned with the connection handle from SDK and it must be set NULL before calling the Connect() function. The fourth parameter CrSdkControlMode is optional. To control the camera remotely, do not specify this parameter, or specify Remote Control Mode. Specify ContentsTransferMode to pull the content on the media inserted in the slot of the camera.  Specify RemoteTransferMode to control the camera remotely and pull the content. RemoteTransferMode like combination of "RemoteControlMode" and "ContentsTransferMode". The fifth parameter CrReconnectingSet is optional. You can specify whether to automatically reconnect after the connection with the camera is unintentionally lost. If not specified, the default is CrReconnecting_ON and automatic reconnection is performed. However, CrReconnecting_ON is valid only in RemoteControlMode. In the ContentsTransferMode, automatic reconnection is not performed regardless of the fifth parameter setting. The 6th to 9th parameters are all for SSH authentication. These parameters are not needed for cameras that do not require SSH authentication. Check “:ref:`Supporting physical layer<supporting-physical-layer>`” to see if SSH authentication is required.
+
+After the Connect() function, ICrCameraObjectInfo can be freed. There is no need to wait for OnConnected() or the OnError() callback function. It means you can delete the ICrEnumCameraObjectInfo object returned from the EnumCameraObjects() function. 
+
+Example:
+
+.. code-block:: cpp
+
+    class MyDeviceCallback : public IDeviceCallback {
+    void OnConnected(DeviceConnectionVersion version) {
+            DeviceConnectionVersion ver = version;
+            // Program can use the device handle.
+        };
+	: 
+    bool ConnectCamera(ICrCameraObjectInfo *pcamera) {
+        MyDeviceCallback *cb = new MyDeviceCallback();
+        CrDeviceHandle	hDev = NULL;
+        CrError err = SCRSDK::Connect(pcamera, cb, &hDev);
+
+The following is an example of a ContentsTransferMode connection.
+
+Example:
+
+.. code-block:: cpp
+
+    CrError err = SCRSDK::Connect(pcamera,cb,&hDev,CrSdkControlMode_ContentsTransfer);
+
+The following is an example of a RemoteTransferMode connection.
+
+.. code-block:: cpp
+
+    CrError err = SCRSDK::Connect(pcamera,cb,&hDev, CrSdkControlMode_RemoteTransfer );
+
+Caution: Default value of “LiveView” and “PostView” enable status is disable when connect at RemoteTransferMode.
+
+See: :ref:`Device Setting<device-setting>`
+
+Switching between RemoteControlMode, ContentsTransferMode, RemoteTransferMode, and CrReconnectingSet cannot be performed while connected. After disconnecting in each mode, reconnect in the desired mode.
+
+The following is an example of connecting to an SSH certified camera.
+
+For SSH authentication, you need to get the data for the 8th parameter and 9th parameter of Connect() in advance with GetFingerprint(). The user needs to check that the fingerprint data obtained from the camera is correct. If fingerprint data different from the fingerprint data owned by the camera is returned by the GetFingerprint(), please do not proceed to Connect().
+If you do not check whether the fingerprint data obtained by Get Fingerprint() is legitimate and specify incorrect fingerprint data in Connect(), the security of the host PC is not guaranteed.
+For the 6th parameter userId and the 7th parameter userPassword, use the information set in the camera body.
+
+Example:
+
+.. code-block:: cpp
+
+    CrInt32u fpLen = 0;
+    char fpBuff[128] = { 0 };
+    CrError err = SCRSDK::GetFingerprint(pcamera, fpBuff, &fpLen);
+    if (CR_SUCCEEDED(err)) {
+        // If the acquired Fingerprint is correct, proceed to connection
+        ...
+
+        err = SCRSDK::Connect(pcamera,cb,&hDev,CrSdkControlMode_Remote,CrReconnecting_ON,"admin", "12345678", fpBuff, fpLen); 
+        ...
+
+As described at the top of this section, the connection process is executed asynchronously. Calling the Connect() function means that just the connection process is started. When the connection is established, the OnConnected() callback of IDeviceCallback is called.
+
+.. image:: /_images/op_connect_a_camera_seq.png
+
+The left vertical line indicates the user thread of your program, the center vertical line indicates API of Camera Remote SDK, and the right vertical line indicates the camera connection thread inside Camera Remote SDK.
+
+Connect() returns an error when the function parameter is not valid. In the synchronous process in the Connect() function, it does not check for the device existence or the connectivity. It is checked in the Connection thread. If the camera is not found or if the camera is not compatible with the Camera Remote SDK, the OnError() callback function is called with an error id, CrError_Connect_Connect.
+
+If the connection is established, the OnConnected() callback function is called with a parameter for connecting Remote Control Protocol Version.
+
+In this Camera Remote SDK version, the parameter’s value below is fixed.
+    Device_Connection_Version_RCP3 = 300
+
+Because this version’s Camera Remote SDK supports only the Remote-Control Protocol Version 3. 
+
+The camera may not accept shooting operations immediately connection.
+

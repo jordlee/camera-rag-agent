@@ -1,0 +1,36 @@
+﻿.. _dp-Movie_HDMIOutputRawSetting:
+
+CrDeviceProperty_Movie_HDMIOutputRawSetting
+===========================================
+
+Get/Set the HDMI Output Raw Setting(Movie)
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrHDMIOutputRawSettingMovie_59_94p
+    - | 59.94p
+
+  * - CrHDMIOutputRawSettingMovie_50_00p
+    - | 50.00p
+
+  * - CrHDMIOutputRawSettingMovie_29_97p
+    - | 29.97p
+
+  * - CrHDMIOutputRawSettingMovie_25_00p
+    - | 25.00p
+
+  * - CrHDMIOutputRawSettingMovie_24_00p
+    - | 24.00p
+
+  * - CrHDMIOutputRawSettingMovie_23_98p
+    - | 23.98p
+
+| Note: Actual frame rate values. Depending on the camera, this may not match the menu display string.
+

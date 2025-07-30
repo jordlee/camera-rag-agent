@@ -1,0 +1,28 @@
+﻿.. _dp-ShutterECSNumber:
+
+CrDeviceProperty_ShutterECSNumber
+=================================
+
+Get/Set the Shutter ECS Number
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - 1
+    - step
+
+| This device property is used to specify Shutter ECS with a certain range of Index values. The upper and lower limits of the relative value operation by :ref:`CrDeviceProperty_ShutterECSNumberStep<dp-ShutterECSNumberStep>` are obtained with this device property.
+| If :ref:`CrDeviceProperty_ShutterECSNumberStep<dp-ShutterECSNumberStep>` is operated while the CurrentValue is min or max, the CurrentValue will not be changed.
+

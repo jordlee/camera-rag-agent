@@ -1,0 +1,32 @@
+﻿.. _dp-ColortempStep:
+
+CrDeviceProperty_ColortempStep
+=============================================
+
+Set the color temperature.
+
+| Manipulating this device property updates the CurrentValue of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>`.
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - -30
+    - min
+
+  * - 30
+    - max
+
+  * - 1
+    - step
+
+| The CurrentValue of this device property is always zero.
+| This device property is used to update :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>`.
+| The step value of this device property is synchronized with the step value of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>`, and if the step value of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>` is 100, updating to -1 using this device property will decrement the CurrentValue of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>` by 100.
+| And if you use this device property to update to +2, the CurrentValue of :ref:`CrDeviceProperty_Colortemp<dp-Colortemp>` will increase by 200.
+

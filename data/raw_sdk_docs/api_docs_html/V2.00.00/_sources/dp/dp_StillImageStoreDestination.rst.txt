@@ -1,0 +1,25 @@
+﻿.. _dp-StillImageStoreDestination:
+
+CrDeviceProperty_StillImageStoreDestination
+===========================================
+
+Get/Set the information of Still Image Save Destination
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrStillImageStoreDestination_HostPC 
+    - | Host Device (Ex. PC)
+
+  * - CrStillImageStoreDestination_MemoryCard 
+    - | Camera (Memory Card)
+
+  * - CrStillImageStoreDestination_HostPCAndMemoryCard 
+    - | Host Device & Camera (Memory Card)
+

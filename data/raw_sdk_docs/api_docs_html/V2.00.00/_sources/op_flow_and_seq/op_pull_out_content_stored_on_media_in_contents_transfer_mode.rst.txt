@@ -1,0 +1,85 @@
+.. _op-pull-out-content-stored-on-media-in-contents-transfer-mode:
+
+Pull out content stored on media in ContentsTransferMode
+========================================================
+
+When you connect in ContentsTransferMode, you can pull content from the media inserted in the camera slot.
+
+In order to pull the contents from the media, a content handle is required to identify the content.
+
+Content/content handle is managed for each DateFolder. First, get the DateFolder list with :ref:`GetDateFolderList()<api-get-date-folder-list>`, and then use the DateFolder handle to get the handle list of the contents existing in the DateFolder with :ref:`GetContentsHandleList()<api-get-contents-handle-list>`.
+
+To know the file name and size of the content, get the detailed information with :ref:`GetContentsDetailInfo()<api-get-contents-detail-info>`.
+
+.. image:: /_images/op_seq_pull_out_content_stored_on_media_in_contents_transfer_mode.png
+	:width: 50%
+
+.. image:: /_images/op_seq_pull_out_content_stored_on_media_in_contents_transfer_mode2.png
+	:width: 50%
+
+Example:
+
+.. code-block:: cpp
+
+  CrInt32u fNums = 0;
+	SCRSDK::CrMtpFolderInfo* fList;
+	CrError err = SCRSDK::GetDateFolderList(handle, &fList, &fNums);
+	if (CR_SUCCEEDED(err)) {
+	    for (int i = 0; i < fNums; ++i) {
+	        CrInt32u cNums = 0;
+	        CrContentHandle* cList;
+	        err = SCRSDK::GetContentsHandleList(handle, fList[i].handle, &cList, &cNums);
+	        if (CR_SUCCEEDED(err)) {
+	            for (int j = 0; j < cNums; ++j) {
+	                SCRSDK::CrMtpContentsInfo* pContents = new SDK::CrMtpContentsInfo();
+	                err = SCRSDK::GetContentsDetailInfo(handle, cList[j], pContents);
+	                if (CR_SUCCEEDED(err))
+	                    m_contentList.push_back(pContents);
+	            }
+	            SCRSDK::ReleaseContentsHandleList(handle, cList);
+	        }
+	    }
+	    SCRSDK::ReleaseDateFolderList(handle, fList);
+	}
+
+Save the content file to the host device using :ref:`PullContentsFile()<api-pull-contents-file>`. PullContentsFile() is asynchronous.
+
+When the transfer is complete, you will be notified with the :ref:`OnNotifyContentsTransfer()<callback-interface>` callback.
+When the user requests to cancel the content transfer or the connection is lost, the OnNotifyContentsTransfer() callback will notify you of the reason why it could not be completed.
+
+.. image:: /_images/op_seq_pull_out_content_stored_on_media_in_contents_transfer_mode3.png
+	:width: 50%
+
+Note: We cannot guarantee the transfer of content taken with other cameras. And large files may not be handled depending on the OS.
+
+Example:
+
+.. code-block:: cpp
+
+  err = SCRSDK::PullContentsFile(handle, cList[j]);
+
+  class MyDeviceCallback : public IDeviceCallback { 
+    void OnNotifyContentsTransfer(CrInt32u notify, CrContentHandle handle, CrChar* filename = 0) {
+	if (CrNotify_ContentsTransfer_Start == notify) {
+		:
+	else if (CrNotify_ContentsTransfer_Complete == notify) {
+		:
+	else
+		: // Failure
+
+You can also get a thumbnail of the content with :ref:`GetContentsThumbnailImage()<api-get-contents-thumbnail-image>`. For example, as a means of selecting the content to be pull, it is possible to preview the thumbnails of all the content on the application screen.
+
+Example:
+
+.. code-block:: cpp
+
+  CrInt32u bufSize = 0x4B000; // Uses LiveViewImage buffer size
+	auto* image_data = new SCRSDK::CrImageDataBlock();
+	if (image_data) {
+	    CrInt8u* image_buff = new CrInt8u[bufSize];
+	    if (image_buff) {
+	        image_data->SetSize(bufSize);
+	        image_data->SetData(image_buff);
+	        SCRSDK::GetContentsThumbnailImage(handle, cList[j], image_data);
+
+Note that PullContentsFile() is an asynchronous API and GetContentsThumbnailImage() is a synchronous API. Camera Remote SDK will not be able to respond to GetContentsThumbnailImage() calls until it has completed the queue processing accumulated by one or more PullContentsFile() calls. And while running GetContentsThumbnailImage(), the application cannot call PullContentsFile().

@@ -1,0 +1,28 @@
+﻿.. _dp-ImageSize:
+
+CrDeviceProperty_ImageSize
+==========================
+
+Get/Set the Image Size
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrImageSize_L
+    - | L
+
+  * - CrImageSize_M
+    - | M
+
+  * - CrImageSize_S
+    - | S
+
+  * - CrImageSize_VGA
+    - | VGA
+

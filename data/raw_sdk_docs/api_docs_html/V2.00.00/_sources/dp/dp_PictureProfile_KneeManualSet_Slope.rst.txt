@@ -1,0 +1,27 @@
+﻿.. _dp-PictureProfile_KneeManualSet_Slope:
+
+CrDeviceProperty_PictureProfile_KneeManualSet_Slope
+===================================================
+
+Get/Set the Picture Profile Knee ManualSet Slope
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Knee ManualSet Slope for Picture Profile
+

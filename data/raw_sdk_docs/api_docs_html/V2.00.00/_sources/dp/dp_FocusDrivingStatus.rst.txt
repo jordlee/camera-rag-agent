@@ -1,0 +1,29 @@
+﻿.. _dp-FocusDrivingStatus:
+
+CrDeviceProperty_FocusDrivingStatus
+===================================
+
+Get the Focus Driving Status(Absolute)
+
+| This value changes only when the :ref:`CrDeviceProperty_FocusPositionSetting<dp-FocusPositionSetting>` operation.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusDrivingStatus_NotDriving
+    - | Not Driving
+
+  * - CrFocusDrivingStatus_Driving
+    - | Driving
+
+| “Driving (0x02)” is set for this device property throughout the short Focus Driving period.
+| “Not Driving (0x01)” is set for this device property except during the short Focus Driving period.
+| “Driving (0x02)” may be set for this device property during the period from  the time when the Focus Driving request is received to the time when the focus acutually drives.
+| This device property only reflects the Focus Driving Status derived from “Load Zoom and Focus Position” and from “Focus Position Setting.”
+

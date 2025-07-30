@@ -1,0 +1,25 @@
+﻿.. _dp-FocusModeStatus:
+
+CrDeviceProperty_FocusModeStatus
+================================
+
+Get the focus mode status.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusModeStatus_FocusHold
+    - | Focus Hold
+
+  * - CrFocusModeStatus_MF_Operation
+    - | MF Operation 
+
+  * - CrFocusModeStatus_AF_Operation
+    - | AF Operation (AF-S/AF-C)
+

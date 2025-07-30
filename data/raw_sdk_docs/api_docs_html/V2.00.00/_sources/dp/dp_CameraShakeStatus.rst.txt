@@ -1,0 +1,22 @@
+﻿.. _dp-CameraShakeStatus:
+
+CrDeviceProperty_CameraShakeStatus
+==================================
+
+Get the Camera Shake Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCameraShakeStatus_NoError
+    - | No error
+
+  * - CrCameraShakeStatus_Error
+    - | Error
+

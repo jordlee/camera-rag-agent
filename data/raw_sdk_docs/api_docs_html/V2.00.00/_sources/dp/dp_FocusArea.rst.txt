@@ -1,0 +1,97 @@
+﻿.. _dp-FocusArea:
+
+CrDeviceProperty_FocusArea
+==========================
+
+Get/Set the Focus Area
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFocusArea_Unknown
+    - | Unknown
+
+  * - CrFocusArea_Wide
+    - | Wide
+
+  * - CrFocusArea_Zone
+    - | Zone
+
+  * - CrFocusArea_Center
+    - | Center
+
+  * - CrFocusArea_Flexible_Spot_S
+    - | Flexible spot S
+
+  * - CrFocusArea_Flexible_Spot_M
+    - | Flexible spot M
+
+  * - CrFocusArea_Flexible_Spot_L
+    - | Flexible spot L
+
+  * - CrFocusArea_Expand_Flexible_Spot 
+    - | Expand flexible spot
+
+  * - CrFocusArea_Flexible_Spot
+    - | Flexible spot
+
+  * - CrFocusArea_Flexible_Spot_XS
+    - | Flexible spot XS
+
+  * - CrFocusArea_Flexible_Spot_XL
+    - | Flexible spot XL
+
+  * - CrFocusArea_Flexible_Spot_FreeSize1
+    - | Flexible spot Free Size 1
+
+  * - CrFocusArea_Flexible_Spot_FreeSize2
+    - | Flexible spot FreeSize2
+
+  * - CrFocusArea_Flexible_Spot_FreeSize3
+    - | Flexible spot FreeSize3
+
+  * - CrFocusArea_Tracking_Wide
+    - | Tracking on AF wide
+
+  * - CrFocusArea_Tracking_Zone
+    - | Tracking on AF zone
+
+  * - CrFocusArea_Tracking_Center
+    - | Tracking on AF center
+
+  * - CrFocusArea_Tracking_Flexible_Spot_S
+    - | Tracking on AF flexible spot S
+
+  * - CrFocusArea_Tracking_Flexible_Spot_M
+    - | Tracking on AF flexible spot M
+
+  * - CrFocusArea_Tracking_Flexible_Spot_L
+    - | Tracking on AF flexible spot L
+
+  * - CrFocusArea_Tracking_Expand_Flexible_Spot 
+    - | Tracking on expand flexible spot
+
+  * - CrFocusArea_Tracking_Flexible_Spot
+    - | Tracking on AF flexible spot
+
+  * - CrFocusArea_Tracking_Flexible_Spot_XS
+    - | Tracking on AF flexible spot XS
+
+  * - CrFocusArea_Tracking_Flexible_Spot_XL
+    - | Tracking on AF flexible spot XL
+
+  * - CrFocusArea_Tracking_Flexible_Spot_FreeSize1
+    - | Tracking on AF flexible spot FreeSize1
+
+  * - CrFocusArea_Tracking_Flexible_Spot_FreeSize2
+    - | Tracking on AF flexible spot FreeSize2
+
+  * - CrFocusArea_Tracking_Flexible_Spot_FreeSize3
+    - | Tracking on AF flexible spot FreeSize3
+

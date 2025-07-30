@@ -1,0 +1,24 @@
+﻿.. _dp-MonitoringDeliveryTypeSupportInfo:
+
+CrDeviceProperty_MonitoringDeliveryTypeSupportInfo
+==================================================
+
+Get the Monitoring Delivery Type Support Information
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMonitoringDeliveryType_None
+    - | This parameter is not used
+
+  * - CrMonitoringDeliveryType_Jpeg
+    - | JPEG
+
+| This device property gets the delivery type candidate value.
+

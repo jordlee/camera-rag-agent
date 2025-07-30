@@ -1,0 +1,27 @@
+﻿.. _dp-ContentsTransferProgress:
+
+CrDeviceProperty_ContentsTransferProgress
+=============================================
+
+Gets the handle and progress of the content during transfer
+
+    CrDataType: `CrDataType_UInt64`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - 63-32bit
+    - | CrContentHandle
+      | Content handle during transfer processing
+
+  * - 31-0bit
+    - | 0-100
+      | Transfer progress rate. Unit is percent(%)
+
+| Content with a large file size is acquired in multiple steps.
+| The acquisition time changes depending on the size of the file size. With this progress rate, you can predict that the transfer of the specified content will be completed.
+

@@ -1,0 +1,22 @@
+﻿.. _dp-PictureProfile_DetailAdjustBWBalance:
+
+CrDeviceProperty_PictureProfile_DetailAdjustBWBalance
+=====================================================
+
+Get/Set the Picture Profile Detail Adjust B/W Balance
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Variable
+    - | Detail Adjust B/W Balance for Picture Profile
+
+| It may increase or decrease because it varies depending on the model and setting status.
+| Set detail adjust B/W balance for the picture profile selected in “Picture Profile.”
+

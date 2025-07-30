@@ -1,0 +1,116 @@
+.. _api-header-eframing:
+
+Eframing
+========
+
+.. _api-ExecuteEframing:
+
+ExecuteEframing
+---------------
+
+**Overview**
+  Execute the Eframing by Absolute position.
+
+**Definition**
+
+  `CrError ExecuteEframing(CrDeviceHandle deviceHandle, CrEframingInfo* eframingInfo);`
+
+**Input Parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+  
+  * - CrDeviceHandle
+    - | deviceHandle
+      | The handle of the connected camera is returned in the variable. This must be set 0 before calling Connect().
+  * - CrEframingInfo*
+    - | eframingInfo
+      | Defined in CrDeviceProperty.h as CrEframingInfo.
+      | See: :ref:`CrEframingInfo<cr-EframingInfo>`
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`IDeviceCallback::OnWarningExt<callback-interface>`
+
+**Special note (details)**
+  The values specified for horizontal_denominator and vertical_denominator in eframingInfo must be multiplied by 1024.
+
+.. _api-UpdateEframingArea:
+
+UpdateEframingArea
+--------------------
+
+**Overview**
+  Execute the Eframing by Relative position and size.
+
+**Definition**
+
+  `CrError UpdateEframingArea(CrDeviceHandle deviceHandle, CrEframingAreaNumber area, CrEframingAreaGroup group, CrInt16 x, CrInt16 y, CrInt16 width, CrInt16 height);`
+
+**Input Parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+  
+  * - CrDeviceHandle
+    - | deviceHandle
+      | The handle of the connected camera is returned in the variable. This must be set 0 before calling Connect().
+  * - CrEframingAreaNumber
+    - | area
+      | Defined in CrDeviceProperty.h as CrEframingAreaNumber.
+  * - CrEframingAreaGroup
+    - | group
+      | Defined in CrDeviceProperty.h as CrEframingAreaGroup.
+  * - CrInt16
+    - x
+  * - CrInt16
+    - y
+  * - CrInt16
+    - width
+  * - CrInt16
+    - height
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`IDeviceCallback::OnWarning<callback-interface>`
+
+**Special note (details)**
+  The values specified for the arguments x, y, w, and h must be multiplied by 1024.

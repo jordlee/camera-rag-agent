@@ -1,0 +1,22 @@
+﻿.. _dp-TouchFunctionInMF:
+
+CrDeviceProperty_TouchFunctionInMF
+==================================
+
+Get/Set touch function in MF.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTouchFunctionInMF_TrackingAF
+    - | Tracking AF
+
+  * - CrTouchFunctionInMF_SpotFocus
+    - | Spot Focus
+

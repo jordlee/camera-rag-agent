@@ -1,0 +1,24 @@
+﻿.. _dp-BulbTimerSetting:
+
+CrDeviceProperty_BulbTimerSetting
+=================================
+
+Get/Set the Bulb Timer Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrBulbTimerSetting_Off
+    - | Off
+
+  * - CrBulbTimerSetting_On
+    - | On
+
+| This property is valid when “Shutter Speed” is “BULB.”
+

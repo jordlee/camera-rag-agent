@@ -1,0 +1,28 @@
+﻿.. _dp-StreamModeSetting:
+
+CrDeviceProperty_StreamModeSetting
+==================================
+
+Get/Set the streaming mode setting.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrStreamModeSetting_Undefined
+    - | Undefined
+
+  * - CrStreamModeSetting_Caller
+    - | Caller
+
+  * - CrStreamModeSetting_Listener
+    - | Listener
+
+  * - CrStreamModeSetting_Rendezvous
+    - | Rendezvous
+

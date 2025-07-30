@@ -1,0 +1,29 @@
+.. _op-connect-disconnect-multiple-cameras:
+
+Connect/Disconnect multiple cameras
+===================================
+
+To control multiple cameras, call the Connect() function for the number of cameras and get a handle for the number of cameras.
+With each handle you get, you can control each camera.
+
+.. image:: /_images/op_seq_connect_disconnect_multiple.png
+  :width: 50%
+
+.. image:: /_images/op_seq_connect_disconnect_multiple2.png
+  :width: 50%
+
+When ending control of multiple cameras, use all handles to call the Disconnect() function to disconnect from all cameras.
+
+.. image:: /_images/op_seq_connect_disconnect_multiple3.png
+  :width: 50%
+
+Points to note when connecting USB
+  - Pay attention to the maximum power supply of the USB bus controller and the power consumption required by the camera
+
+  - | When using multiple cameras at the same time, it is recommended to turn off the USB power supply setting on the cameras.
+      | “USB Power Supply” menu varies by model. Please refer to the help guide for your model.
+
+  - Multiple connection requires more CPU loads than single connection, and there is a possibility to cause delays in getting and updating properties. If you do not need to display LiveViewImage from all cameras at the same time, it is recommended to disable LiveViewImage acquisition to reduce the processing load by using :ref:`SetDeviceSetting<api-set-device-setting>`.
+    refs :ref:`SDK Properties<op-sdk-properties>`
+
+  - Although a maximum of 20 devices have been confirmed to be connected, the number of devices that can be connected depends on the performance of the host PC and hub.

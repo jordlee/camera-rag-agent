@@ -1,0 +1,25 @@
+﻿.. _dp-ZoomAndFocusPosition_Load:
+
+CrDeviceProperty_ZoomAndFocusPosition_Load
+==========================================
+
+Get/Set the Load Zoom&FocusPosition Preset.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - 0x00 ～ 0xFF
+    - | Load preset number
+
+
+| Note:
+| If a lens other than the saved lens is attached, the focus / zoom position cannot be reproduced. In that case, it will notify you of CrWarning_ZoomAndFocusPosition_DifferentLens.
+| Environmental changes or the focus position of the lens, such as Near/Far edge vicinity, may cause errors in the original position the lens returns.
+| Please use this property with larger Aperture Value (F-Number) to deepen the depth of field and confirm the focus position the lens returns in advanced.
+

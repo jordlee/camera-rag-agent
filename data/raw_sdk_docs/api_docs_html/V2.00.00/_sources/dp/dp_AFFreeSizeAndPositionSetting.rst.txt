@@ -1,0 +1,33 @@
+﻿.. _dp-AFFreeSizeAndPositionSetting:
+
+CrDeviceProperty_AFFreeSizeAndPositionSetting
+=============================================
+
+Get/Set the AF Free Size and Position Setting
+
+    CrDataType: `CrDataType_UInt64Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x0000000000000000～0xFFFFFFFFFFFFFFFF
+    - Height and width size [Upper 4bytes] | center coordinates [Lower 4bytes]
+
+
+| Upper four bytes: Height and Width
+| the height is set in the upper two bytes and the width is set in the lower two bytes. 
+| Lower four bytes: Center coordinates
+| the x coordinate is set in the upper two bytes and the y coordinate is set in the lower two bytes.
+|  e.g.) 0x0032003200960064
+|  = Height is 50, Width is 50, x is 150, y is 100
+| Caution:
+| The min-max of x and min-max of y represent the settable range of center coordinates when the frame size (Height & Width) is zero.
+| After requesting a change, x and y may be corrected within the camera depending on the Height and Width specified at the same time.
+| Note:
+| For the set of FreeSize1, FreeSize2, FreeSize3, refer to :ref:`CrDeviceProperty_FocusArea<dp-FocusArea>`.
+| When each FreeSize Setting is selected, the selected FreeSize Setting can be changed.
+

@@ -1,0 +1,30 @@
+﻿.. _dp-FocalDistanceInFeet:
+
+CrDeviceProperty_FocalDistanceInFeet
+====================================
+
+Get/Set the Focal Distance in Feet
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| 1000 times the real value of focal distance in feet.
+| If current value is CrFocalDistance_Infinity(0xFFFFFFFF), ∞.
+| e.g.) 0x00005014 = 20500 /1000 = 20.5 feet
+| e.g.) 0x00030D40 = 200000 /1000 = 200 feet
+

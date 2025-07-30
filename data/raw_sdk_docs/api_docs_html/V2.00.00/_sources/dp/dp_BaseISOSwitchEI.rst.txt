@@ -1,0 +1,21 @@
+﻿.. _dp-BaseISOSwitchEI:
+
+CrDeviceProperty_BaseISOSwitchEI
+================================
+
+Get/Set the Base ISO Switch EI
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Variable
+    - | Exposure Index to Switch BaseISO
+
+| e.g.)  If setting with "1600EI", set 0x0640
+

@@ -1,0 +1,1978 @@
+\doxysection{cli\+::Camera\+Device Class Reference}
+\hypertarget{classcli_1_1_camera_device}{}\label{classcli_1_1_camera_device}\index{cli::CameraDevice@{cli::CameraDevice}}
+
+
+{\ttfamily \#include $<$Camera\+Device.\+h$>$}
+
+Inheritance diagram for cli\+::Camera\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcli_1_1_camera_device}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcli_1_1_camera_device_a1df9159fb4822a0846ce0eccb580e4a8}{Camera\+Device}} ()=delete
+\item 
+\mbox{\hyperlink{classcli_1_1_camera_device_ae3a49b5b99ffd7a1190df0459c317ccf}{Camera\+Device}} (std\+::int32\+\_\+t no, SCRSDK\+::\+ICr\+Camera\+Object\+Info const \texorpdfstring{$\ast$}{*}camera\+\_\+info)
+\item 
+\mbox{\hyperlink{classcli_1_1_camera_device_aa36affee1a4c3f3dac0cd51ed845312a}{\texorpdfstring{$\sim$}{\string~}\+Camera\+Device}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a2ede3cc3fb308396acf484cef55514cd}{getfingerprint}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_ae66730a034e81f824093fbee612d6f4a}{connect}} (SCRSDK\+::\+Cr\+Sdk\+Control\+Mode open\+Mode, SCRSDK\+::\+Cr\+Reconnecting\+Set reconnect)
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a4fa3d54d975d76135a60efe26aec13fe}{disconnect}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a7e0dd28b99cd855dae27190b9db2aa3f}{release}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a55035c7a1bdbf627b355cc5d68d7edfa}{capture\+\_\+image}} () const
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a8287e667aa6dcad74c70be6c997c2308}{s1\+\_\+shooting}} () const
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_acac58174247027f82bd612c4a6120d5f}{af\+\_\+shutter}} () const
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_af6174f40a73d97213334ee2c8dddf9c2}{continuous\+\_\+shooting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae5e8038905285e538eaf51c6970ea176}{get\+\_\+aperture}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a8969172285f26a7f33ea804024e5ee31}{get\+\_\+iso}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a0e7322bc48cba0a5deeeb5da5a85d2df}{get\+\_\+shutter\+\_\+speed}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a2281754959d3a1315af076d890f575ac}{get\+\_\+extended\+\_\+shutter\+\_\+speed}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a94bfea1c35ceb4c15624bf80878dd8a2}{get\+\_\+position\+\_\+key\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a5aea9e7da08b625cacd55110d1ad0a56}{get\+\_\+exposure\+\_\+program\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a88c81de24bdb4c7ccb2d0079e437b642}{get\+\_\+still\+\_\+capture\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae5513cda6a13de9a4027a93ae9a47036}{get\+\_\+focus\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2062d46894ceb68ca053103e86efa0ce}{get\+\_\+focus\+\_\+area}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7bb74d2561ce6719f502303d891b1125}{get\+\_\+live\+\_\+view}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a74540bb6c6993c4c12b6986e0eded9bb}{get\+\_\+live\+\_\+view\+\_\+only}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a286c5481d502f2ee8bae53ea823c749c}{get\+\_\+live\+\_\+view\+\_\+and\+\_\+\+OSD}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a6472a5dc67cd60f74c6ae70d3864bc36}{get\+\_\+live\+\_\+view\+\_\+image\+\_\+quality}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a8ee0d9fe55ef22020c76499910117b72}{get\+\_\+af\+\_\+area\+\_\+position}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a8c664e9691d039a869f20a05d3380afb}{get\+\_\+select\+\_\+media\+\_\+format}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_aff533d034eee5b6aa6b3485543fd5532}{get\+\_\+white\+\_\+balance}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a30276729dc511d5b9c1b7e27f5834eb9}{get\+\_\+custom\+\_\+wb}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae4e9213e26b94c1de6ae14c21d1670b0}{get\+\_\+zoom\+\_\+operation}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_aaf9b68f47bb7651be21d9f541895669d}{get\+\_\+remocon\+\_\+zoom\+\_\+speed\+\_\+type}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a5f2c9d666cd6166bd99a885fbb48e5b6}{get\+\_\+aps\+\_\+c\+\_\+or\+\_\+full\+\_\+switching\+\_\+setting}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a539490884b32b01f0091428a69f9c655}{get\+\_\+camera\+\_\+setting\+\_\+saveread\+\_\+state}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_ae337549ed4ea6657f7367d43cdcd3848}{get\+\_\+playback\+\_\+media}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a2dabcec84fccf32016b7b08165a23491}{get\+\_\+gain\+\_\+base\+\_\+sensitivity}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_ab0dd293c44a9fc5f5c3743e0e06aad5b}{get\+\_\+gain\+\_\+base\+\_\+iso\+\_\+sensitivity}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_aa4ae49d2c9bf1a36123fc93169952008}{get\+\_\+monitor\+\_\+lut\+\_\+setting}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a29801453bce7fc7feddc04c4c0a9927b}{get\+\_\+exposure\+\_\+index}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_abcf004579ecaa35b2eb5ceea8ed71130}{get\+\_\+baselook\+\_\+value}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_afa7f0b3259f68233729e1a53c3e9bf30}{get\+\_\+iris\+\_\+mode\+\_\+setting}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a2531cc8d607b15f055f8aa77c92fbd6a}{get\+\_\+shutter\+\_\+mode\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_acec4e2416e10cd46abe317873320b4ef}{get\+\_\+iso\+\_\+current\+\_\+sensitivity}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a4c18d8140c04afe7c071b8a906399b6c}{get\+\_\+gain\+\_\+control\+\_\+setting}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_adce8b64c4452f55eaf218cc8fabc8a9d}{get\+\_\+exposure\+\_\+control\+\_\+type}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a0caff7650570991b03c7e276e600cbcd}{get\+\_\+recording\+\_\+setting}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a41312311472628ddf1c5b7c8a911b64a}{get\+\_\+gain\+\_\+db\+\_\+value}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a16faa277705f4f6fd048a31572bacc6c}{get\+\_\+shutter\+\_\+speed\+\_\+value}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_ae2b1fe8c2a7ab4fba85ec86cc5984d4e}{get\+\_\+white\+\_\+balance\+\_\+tint}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a5175f6807aecfd26082444bc9ac300f7}{get\+\_\+media\+\_\+slot\+\_\+status}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a7ba08ef5c64249aa105e02838cfcf092}{get\+\_\+movie\+\_\+rec\+\_\+button\+\_\+toggle\+\_\+enable\+\_\+status}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_abd7265f4e3c3ee595e202e4291816633}{get\+\_\+focus\+\_\+bracket\+\_\+shot\+\_\+num}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a23504ebceb1e10033282364f7a73e665}{get\+\_\+focus\+\_\+bracket\+\_\+focus\+\_\+range}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a92e585540bc6d04bd8998412893dea31}{get\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a2a32c59dd38d9da5235ab210111b8be0}{get\+\_\+movie\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a3414b751ffb7ff72e520c1760b67bac8}{get\+\_\+silent\+\_\+mode}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a638d3f1996ffd43e622230941376c17b}{get\+\_\+silent\+\_\+mode\+\_\+aperture\+\_\+drive\+\_\+in\+\_\+af}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a91f9309a90656247500011e2e260206d}{get\+\_\+silent\+\_\+mode\+\_\+shutter\+\_\+when\+\_\+power\+\_\+off}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a13a27f69ce3c7e1bad3969d56d00058c}{get\+\_\+silent\+\_\+mode\+\_\+auto\+\_\+pixel\+\_\+mapping}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_ad00ad4dc2f9675beeb3f0b53b20124bb}{get\+\_\+shutter\+\_\+type}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_ae2e7c8fa20ba7b048c382b2f81cdbe9e}{get\+\_\+focus\+\_\+position\+\_\+setting}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a9308a5e9b8c5536f9fd8c93c3ba12492}{get\+\_\+custom\+\_\+wb\+\_\+size\+\_\+setting}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a36188089d7cdd2e2a8eaf1b99fc635ff}{get\+\_\+time\+\_\+shift\+\_\+shooting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7ef8b1f6aed9493b497088a86a9855e5}{get\+\_\+osd\+\_\+image}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_ad70d4ce92aa86a7b402d023f0169e07a}{get\+\_\+zoom\+\_\+position\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a9adcbfb3493bbc46ed511e131505e499}{set\+\_\+aperture}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ab9233d76b7f01ff7f607aac5deda07c6}{set\+\_\+iso}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a5a998382848ba57f87745f449330d46e}{set\+\_\+save\+\_\+info}} () const
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a4344db9d2602e47e895f08aaeb5c3187}{set\+\_\+shutter\+\_\+speed}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a4f28e24f7fe7c216898b7a0719e389ed}{set\+\_\+extended\+\_\+shutter\+\_\+speed}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7fe37b89bdb6a7360246ca1fb7b9bca7}{set\+\_\+position\+\_\+key\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a1f6012536b33cdb8f4c8a80f2a7db150}{set\+\_\+exposure\+\_\+program\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a18d840c24595b443cd476e3c2fe4c132}{set\+\_\+still\+\_\+capture\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a81b2f323dc1a15dfe3150a87ce04f439}{set\+\_\+focus\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_abeab99832f8dea6209ffd0989c946ce9}{set\+\_\+focus\+\_\+area}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae457cbf2b21f14a33f0b29722ee7cdde}{set\+\_\+live\+\_\+view\+\_\+image\+\_\+quality}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a93273803bffff8fc323a0554207ab9e7}{set\+\_\+af\+\_\+area\+\_\+position}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a80e336fa3d62ad56dc4837b86e704aec}{set\+\_\+white\+\_\+balance}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a31bd578c07f5d45692e29c9209b245fb}{set\+\_\+custom\+\_\+wb}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae75a8b375b8d651a5694d738618ce01b}{set\+\_\+zoom\+\_\+operation}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ac7b192fe9be85f54aef483da204d317f}{set\+\_\+remocon\+\_\+zoom\+\_\+speed\+\_\+type}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a61556daaea61f08b0f342ffdcbcca9ac}{set\+\_\+drive\+\_\+mode}} (Cr\+Int64u value)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae02fa320abadd06a2e9055e77c7a3c56}{execute\+\_\+camera\+\_\+setting\+\_\+reset}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a9319f3870af2668ea9e8ccc784b011e8}{set\+\_\+playback\+\_\+media}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a0b638d25dea4110bcd6fbc2fed956b34}{set\+\_\+gain\+\_\+base\+\_\+iso\+\_\+sensitivity}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a1a701e26f595ea0cefdf9aeefbe56ed5}{set\+\_\+gain\+\_\+base\+\_\+sensitivity}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_aa6d5269881596c24869e03771c0c5d6d}{set\+\_\+monitor\+\_\+lut\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7ccea4f50a8843fce988b05caafeb298}{set\+\_\+exposure\+\_\+index}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7a0d49154619c031588251ea35cb2629}{set\+\_\+baselook\+\_\+value}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a75382fa4c53c5797380453e2e0ec303a}{set\+\_\+iris\+\_\+mode\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a075a02f55a22c803d30cf826ef23a818}{set\+\_\+shutter\+\_\+mode\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_afbba03783725d600a6a2bc01953d6322}{set\+\_\+gain\+\_\+control\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_af8fdc0442295f17590f80289036d88a1}{set\+\_\+exposure\+\_\+control\+\_\+type}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a9a296ab1721435157485cc1aa288502d}{set\+\_\+recording\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ad667e5414fb8f9d285ebe8ce641bdd5e}{set\+\_\+dispmode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_aae166c25f47a263e81f6c5d669553277}{set\+\_\+gain\+\_\+db\+\_\+value}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a82c74279e7e205514c97dcf70a378cc0}{set\+\_\+white\+\_\+balance\+\_\+tint}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a6b4afd8a3b769f6f61ddaf275143f91a}{set\+\_\+shutter\+\_\+speed\+\_\+value}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ade01f02652081a1c45c344bc00ab3fec}{set\+\_\+focus\+\_\+bracket\+\_\+focus\+\_\+range}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_afa26d3f8fc8acc0e884e088ef77edc05}{set\+\_\+focus\+\_\+bracket\+\_\+shot\+\_\+num}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a15e2b874b01272b2a85ba9c02721fb8d}{set\+\_\+movie\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a0033a24b77e534373e71a9bed135971f}{set\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ab6b5d96f77d0923eb8fe827e9bede705}{set\+\_\+silent\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_aa18b7728a08ce05432f3bb4504a8bf18}{set\+\_\+silent\+\_\+mode\+\_\+aperture\+\_\+drive\+\_\+in\+\_\+af}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2ce6c68f74a926f5fc406bce5876ef88}{set\+\_\+silent\+\_\+mode\+\_\+shutter\+\_\+when\+\_\+power\+\_\+off}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7dd19457270532ecb0cc217203a1dd49}{set\+\_\+silent\+\_\+mode\+\_\+auto\+\_\+pixel\+\_\+mapping}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_aa424991098683da47c72bcf933b39568}{set\+\_\+shutter\+\_\+type}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a75333e0b75f72e64d4fd6dcfcc216eb6}{set\+\_\+focus\+\_\+position\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a385afab18e01296aa63b9c23891afb6e}{set\+\_\+custom\+\_\+wb\+\_\+size\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2f5a851e2eb6397d4c2a38c59778f003}{set\+\_\+time\+\_\+shift\+\_\+shooting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ab17c4c26d85bb64a510331e1dca6c8d2}{set\+\_\+recording\+\_\+setting\+\_\+file\+\_\+name}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a8d383d996167064bef0ca47ec6e9d958}{set\+\_\+enable\+\_\+get\+\_\+osd\+\_\+image}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a3739ff4121f955e1e14b856062618d10}{execute\+\_\+lock\+\_\+property}} (Cr\+Int16u code)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ad0c8573b68db1936ae3ec3971ad5e9b5}{set\+\_\+select\+\_\+media\+\_\+format}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2fc55c016e0fef9ce2a6b9e7657721e9}{execute\+\_\+movie\+\_\+rec}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a0400e857c676142ea56bbf75e9d9660e}{execute\+\_\+downup\+\_\+property}} (Cr\+Int16u code)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae12ffe87bdceb90179337bf1be810469}{execute\+\_\+pos\+\_\+xy}} (Cr\+Int16u code)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_acda65b76d63978c4aa93cd140d5c2bf7}{change\+\_\+live\+\_\+view\+\_\+enable}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a2c4471f77d807543b083500619aafab1}{is\+\_\+live\+\_\+view\+\_\+enable}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a849bdd782fa78ef4ecc01388cd5a83f1}{execute\+\_\+preset\+\_\+focus}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_adcffe2779c71a596113ae860245f9214}{execute\+\_\+\+APS\+\_\+\+C\+\_\+or\+\_\+\+Full}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2b7fa94d6a813e188a94dbfd1e08a5c8}{execute\+\_\+movie\+\_\+rec\+\_\+toggle}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7d2054dc460b2de86891be04c3f9e376}{do\+\_\+download\+\_\+camera\+\_\+setting\+\_\+file}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a1164f2a343580ba42f3df4d621bcb7e4}{do\+\_\+upload\+\_\+camera\+\_\+setting\+\_\+file}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ac1053ee96c1af2d93651f8b0046b64e5}{execute\+\_\+request\+\_\+displaystringlist}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a93cf8fd9887727477de6262f9c0543f9}{execute\+\_\+get\+\_\+displaystringtypes}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a906906ab95c76a72702dc68c0e367aab}{execute\+\_\+get\+\_\+displaystringlist}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a16ecfb1688e98d0f13e6005057f23b4d}{execute\+\_\+focus\+\_\+bracket}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_aa88c274b16d98ce11230fa56176fbcd8}{execute\+\_\+focus\+\_\+position\+\_\+cancel}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a71a984d3462d564aa4042e91961cdcac}{get\+\_\+mediaprofile}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_aefe89ecddfdfd412249874d51a6cc61f}{get\+\_\+movie\+\_\+shooting\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a6d12152566baa3cd7cdb43149a76500d}{set\+\_\+movie\+\_\+shooting\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a1e1000e9808d52680c99a806d2932bc4}{execute\+\_\+request\+\_\+zoom\+\_\+and\+\_\+focus\+\_\+preset}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a84920916d8b12ef31961789bed692693}{execute\+\_\+get\+\_\+zoom\+\_\+and\+\_\+focus\+\_\+preset}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a208f734527232cf3e4c618390bf5929a}{execute\+\_\+zoom\+\_\+position\+\_\+cancel}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_aafec081e5dc996f46ad279dd2e8323d6}{format\+\_\+focus\+\_\+position\+\_\+value}} (uint16\+\_\+t value)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a8d7c079c2524ee347714c2956bb212f0}{camera\+\_\+button\+\_\+function}} (bool multi\+Flg)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a552a07e5940c4a573fe37e4cbff27dc8}{camera\+\_\+dial\+\_\+function}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ac3b3e0e3da375ad6b8e82dd1ed7e1f36}{camera\+\_\+lever\+\_\+function}} ()
+\item 
+SCRSDK\+::\+Cr\+Error \mbox{\hyperlink{classcli_1_1_camera_device_ad8a565ed46f59ebdc4f00337cfe24864}{display\+\_\+support\+\_\+camera\+\_\+key\+\_\+values}} (SCRSDK\+::\+Cr\+Display\+String\+Type type, const std\+::vector$<$ Cr\+Int32u $>$ \&values)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a4dc224396969aca1d761d915cca190fe}{set\+\_\+zoom\+\_\+position\+\_\+setting}} ()
+\item 
+std\+::int32\+\_\+t \mbox{\hyperlink{classcli_1_1_camera_device_a6bc9bc528e6fe7dd561817969dace61c}{get\+\_\+number}} ()
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{classcli_1_1_camera_device_ab2989c3d047d21112c890481f865b3c4}{get\+\_\+model}} ()
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{classcli_1_1_camera_device_a47c9e084c8f319fccc2ce3072465ae3a}{get\+\_\+id}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_abdf41ecfa76836dccbfe9539afa241d9}{is\+\_\+connected}} () const
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_acac94110e6b03a376339dff2a26a321e}{get\+Contents\+List}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ac4fb281cbd3202d1f292af6b9226b40d}{get\+File\+Names}} (std\+::vector$<$ \mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} $>$ \&file\+\_\+names)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ac0da1cdcd418fef01138ad006bcd6be8}{pull\+Contents}} (SCRSDK\+::\+Cr\+Content\+Handle content)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a91a3fee6465be85b0f744f78b3a3852c}{get\+Screennail}} (SCRSDK\+::\+Cr\+Content\+Handle content)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7b6a3526b0e2b421ea0388d7b3278d3e}{get\+Thumbnail}} (SCRSDK\+::\+Cr\+Content\+Handle content)
+\item 
+SCRSDK\+::\+Cr\+Sdk\+Control\+Mode \mbox{\hyperlink{classcli_1_1_camera_device_a0dcf18dc7496ea2702053964b720b7fe}{get\+\_\+sdkmode}} ()
+\item 
+Cr\+Int32u \mbox{\hyperlink{classcli_1_1_camera_device_a26e02dece0ec92b217c76fc690715243}{get\+\_\+sshsupport}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a3173211c0ebf3f51b7d614aa0a8848f6}{is\+\_\+getfingerprint}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a0d11ca231f14538d2a8cc63ad427e537}{is\+\_\+setpassword}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a67c9c755268f21c9f2bb5edf3c003423}{is\+Monitoring\+Function\+Support}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2d63cb7b7e1c1c7266a207cf6bf27be9}{set\+Monitoring\+Derivery\+Setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a33d66e9b82d0da4f24f4855119b93f58}{start\+Monitoring}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ad697d364e12c11c8a91fe77797b41d9b}{stop\+Monitoring}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_abc41b7af1f7adb476faff0984b4fe078}{print\+Other\+Info}} ()
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{classcli_1_1_camera_device_ad171c23a7f6f30b225786706c22bf492}{get\+Current\+Str}} (SCRSDK\+::\+Cr\+Device\+Property \texorpdfstring{$\ast$}{*}prop)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a5e4a07624a7bcdcd0e50ef0b6208886c}{get\+\_\+remote\+\_\+transfer\+\_\+contentsdata}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a906410ff51a4a9cb0afb57dab26ee352}{show\+\_\+contents\+\_\+data\+\_\+detail}} (SCRSDK\+::\+Cr\+Contents\+Info \&contents\+Info, SCRSDK\+::\+Cr\+Contents\+File \&contents\+File)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_aa69c4e245241f9361abd0d6e422b1142}{release\+\_\+contents\+\_\+info}} (int slot\+Index)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a9766f283b68490a9c176c84d09701c1b}{execute\+\_\+movie\+\_\+rec\+\_\+and\+\_\+get\+\_\+contentsdata}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a57e425ed6a4385c0225ad57c019e2909}{get\+\_\+firmware\+\_\+version}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a8b9614a43c2bf2deae05b847e928ef3c}{check\+\_\+firmware\+\_\+update\+\_\+status}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a04518190878e1d814f5851b341f820b0}{upload\+\_\+firmware}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a23b470a0ed7fdb57ddc03fe4d84138cb}{get\+\_\+firmware\+\_\+upload\+\_\+rate}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ac551ae51456e64cfb7635f369fcaaf1b}{cancel\+\_\+upload\+\_\+firmware}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ab57c54191a78a228fb14741ffd1a0a75}{execute\+\_\+update\+\_\+firmware}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2eb87bec48186e044c4152024a6cbc02}{get\+\_\+firmware\+\_\+updater\+\_\+info}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a8ecc806aa683c632a568a7e782ea7239}{set\+\_\+debug\+\_\+mode}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2282313e4f5086af4a3f8b34e4b5076d}{set\+Movie\+Playback\+Setting}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a81b9b0608c6b77c582df3c62a66eb112}{get\+Contents\+Info\+Movie}} (SCRSDK\+::\+Cr\+Slot\+Number \texorpdfstring{$\ast$}{*}slot\+Id, Cr\+Int32u \texorpdfstring{$\ast$}{*}contents\+Id, Cr\+Int32u \texorpdfstring{$\ast$}{*}file\+Id)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a6f6e863ca85b565702d9577e1405abd1}{get\+Movie\+Playback\+Setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a0a0f563ca2d9fecf8a73932e25f66b55}{control\+Movie\+Playback}} ()
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_aa723d9746ccb75d41cee1079784ffebb}{is\+Movie\+Playback\+Function\+Support}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae769ab8738ba6ee1464a42b559e1129c}{request\+Movie\+Playback\+Status}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae6a94e3b4b380aae767ea204668b6b0a}{get\+Movie\+Playback\+Status}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_af3c7e80df3fde089525a9738b3ed654e}{set\+\_\+timezone\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a75fd8d0c7676509b5f2b2e7d948683d4}{request\+\_\+timezone\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_abbfa94056030343355ca765465d0a2da}{get\+\_\+timezone\+\_\+setting}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a7e9c814a39fe60f94d0771a41bf47c14}{change\+\_\+live\+\_\+view\+\_\+protocol}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a77df632178b8c3d8c64a35a1634d4f36}{control\+\_\+ptzf\+\_\+home\+\_\+reset\+\_\+cancel}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_ae9d2b78f04f628ccb1a800e9ba633d5a}{control\+\_\+ptzf}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a2dc85fc2424aa15a0bc432601c07bcc9}{clear\+\_\+ptzf\+\_\+preset}} ()
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a05592b3e900bdc12c7aa53c69be60f98}{set\+\_\+ptzf\+\_\+preset}} ()
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a451f5480a7155a191799b89030f3e6c4}{On\+Connected}} (SCRSDK\+::\+Device\+Connection\+Versioin version) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_aa98f4e013a2493cb7f46cdd3298a037d}{On\+Disconnected}} (Cr\+Int32u error) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_ab41da7073366376f1a7354171a9728d5}{On\+Property\+Changed}} () override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_aee6bcefe41e5e649cd6ca52980e867a2}{On\+Lv\+Property\+Changed}} () override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_ab79276c067a373c00ecda0383de0ad34}{On\+Complete\+Download}} (Cr\+Char \texorpdfstring{$\ast$}{*}filename, Cr\+Int32u type) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a0d61c4a1f5d117c2f26e3e6ef5b87edf}{On\+Warning}} (Cr\+Int32u warning) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_ac63cbe4aa97459d54ec8eabb3eea0c89}{On\+Warning\+Ext}} (Cr\+Int32u warning, Cr\+Int32 param1, Cr\+Int32 param2, Cr\+Int32 param3) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a9b4ea5df75fd3dfc82388e09f951aca5}{On\+Error}} (Cr\+Int32u error) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a4912a9dd84a7aa56f7c6036a646b3d01}{On\+Property\+Changed\+Codes}} (Cr\+Int32u num, Cr\+Int32u \texorpdfstring{$\ast$}{*}codes) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a5e51a72d06129b2faa4f0bbdff5dd303}{On\+Lv\+Property\+Changed\+Codes}} (Cr\+Int32u num, Cr\+Int32u \texorpdfstring{$\ast$}{*}codes) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_acebe9eeeb65df817243cbae78c0761c4}{On\+Notify\+Contents\+Transfer}} (Cr\+Int32u notify, SCRSDK\+::\+Cr\+Content\+Handle content\+Handle, Cr\+Char \texorpdfstring{$\ast$}{*}filename) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a3a8fea0e39355717aae2c60db166ca2a}{On\+Notify\+FTPTransfer\+Result}} (Cr\+Int32u notify, Cr\+Int32u num\+Of\+Success, Cr\+Int32u num\+Of\+Fail) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_aa7d44878742f72e53a7cd66e97958619}{On\+Notify\+Remote\+Transfer\+Result}} (Cr\+Int32u notify, Cr\+Int32u per, Cr\+Char \texorpdfstring{$\ast$}{*}filename) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a17158199a2d4fca4ff80591f37a15d09}{On\+Notify\+Remote\+Transfer\+Result}} (Cr\+Int32u notify, Cr\+Int32u per, Cr\+Int8u \texorpdfstring{$\ast$}{*}data, Cr\+Int64u size) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a5ae363845ac2a4ba0fcb4843560dd6ec}{On\+Notify\+Remote\+Transfer\+Contents\+List\+Changed}} (Cr\+Int32u notify, Cr\+Int32u slot\+Number, Cr\+Int32u add\+Size) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_af644139e9fd8d1cafc11b929d57f13da}{On\+Receive\+Playback\+Time\+Code}} (Cr\+Int32u time\+Code) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_a56bde3fe8e9e85d237d590fc83de02df}{On\+Receive\+Playback\+Data}} (Cr\+Int8u media\+Type, Cr\+Int32 data\+Size, Cr\+Int8u \texorpdfstring{$\ast$}{*}data, Cr\+Int64 pts, Cr\+Int64 dts, Cr\+Int32 param1, Cr\+Int32 param2) override
+\item 
+virtual void \mbox{\hyperlink{classcli_1_1_camera_device_ae6721b54faeb71675f9bda529de1a3af}{On\+Notify\+Remote\+Firmware\+Update\+Result}} (Cr\+Int32u notify, const void \texorpdfstring{$\ast$}{*}param) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a26742717e752a2f0476c5b8c6dd9dae3}{load\+\_\+properties}} (Cr\+Int32u num=0, Cr\+Int32u \texorpdfstring{$\ast$}{*}codes=nullptr)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a1df9bc951443406dde1289c6332dc52c}{get\+\_\+property}} (SCRSDK\+::\+Cr\+Device\+Property \&prop) const
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_aa27413904344a420270ef2febc653156}{set\+\_\+property}} (SCRSDK\+::\+Cr\+Device\+Property \&prop) const
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{classcli_1_1_camera_device_a92d98dd0083a6ad1997e02afd9a1f5a4}{format\+\_\+dispstrlist}} (SCRSDK\+::\+Cr\+Display\+String\+List\+Info list)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{classcli_1_1_camera_device_a874c647774d06069067fc254b615d4d2}{format\+\_\+display\+\_\+string\+\_\+type}} (SCRSDK\+::\+Cr\+Display\+String\+Type type)
+\item 
+void \mbox{\hyperlink{classcli_1_1_camera_device_a40faf384e2feeaedd3bc8459b1430a48}{check\+\_\+monitoringstatus}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::int32\+\_\+t \mbox{\hyperlink{classcli_1_1_camera_device_a4fe3163f077ab25f3d22ed3329990c08}{m\+\_\+number}}
+\item 
+SCRSDK\+::\+ICr\+Camera\+Object\+Info \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcli_1_1_camera_device_aeb11acba289e2ecf74e2073130b70b37}{m\+\_\+info}}
+\item 
+std\+::int64\+\_\+t \mbox{\hyperlink{classcli_1_1_camera_device_ac731068145e225a6b3441226b546dde9}{m\+\_\+device\+\_\+handle}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classcli_1_1_camera_device_a323c73408cf3dc8e12855406da733c56}{m\+\_\+connected}}
+\item 
+\mbox{\hyperlink{namespacecli_a1c241c0157ffadbdbaaf7b45394a617c}{Connection\+Type}} \mbox{\hyperlink{classcli_1_1_camera_device_a559ed19b24e5f516c918c6cfd0866484}{m\+\_\+conn\+\_\+type}}
+\item 
+\mbox{\hyperlink{namespacecli_structcli_1_1_property_value_table}{Property\+Value\+Table}} \mbox{\hyperlink{classcli_1_1_camera_device_a9a1664935e37141369c65d2b411b4848}{m\+\_\+prop}}
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_ac8f75cd22e306033e48b5c41c52f37d1}{m\+\_\+lv\+Enb\+Set}}
+\item 
+SCRSDK\+::\+Cr\+Sdk\+Control\+Mode \mbox{\hyperlink{classcli_1_1_camera_device_ace9050f09fbcb0d1a35e923d8bfede84}{m\+\_\+mode\+SDK}}
+\item 
+\mbox{\hyperlink{namespacecli_a4d255c5ff1c359ccf042dd12988198a9}{Mtp\+Folder\+List}} \mbox{\hyperlink{classcli_1_1_camera_device_a38b79caeb64a50914ea6ef73a1e4ac02}{m\+\_\+fold\+List}}
+\item 
+\mbox{\hyperlink{namespacecli_aa40bfb8c63bcd480b54b54d6b357a5bc}{Mtp\+Contents\+List}} \mbox{\hyperlink{classcli_1_1_camera_device_a8150d7ac2b95fe1a26d7c8fcb0929911}{m\+\_\+content\+List}}
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a8f281e184f2382b6be3123195ae72c18}{m\+\_\+spontaneous\+\_\+disconnection}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classcli_1_1_camera_device_ad35dc0f0c1738b33203c46cf04dce990}{m\+\_\+media\+\_\+format\+Complete}}
+\item 
+std\+::vector$<$ SCRSDK\+::\+Cr\+Display\+String\+Type $>$ \mbox{\hyperlink{classcli_1_1_camera_device_af29538382f1e574a00630c59255de856}{m\+\_\+disp\+Str\+Type\+List}}
+\item 
+\mbox{\hyperlink{namespacecli_adc493a6c1604f7f39565d81459046c49}{Media\+Profile\+List}} \mbox{\hyperlink{classcli_1_1_camera_device_a1b45ba8b30778f722b4c883de6dbe8be}{m\+\_\+mediaprofile\+List}}
+\item 
+std\+::string \mbox{\hyperlink{classcli_1_1_camera_device_a1a3a184af61e5ecf69b81c38d8717675}{m\+\_\+fingerprint}}
+\item 
+std\+::string \mbox{\hyperlink{classcli_1_1_camera_device_a5a5f5c710206d6e3c725038de0b3b791}{m\+\_\+user\+Password}}
+\item 
+SCRSDK\+::\+Cr\+Device\+Property \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcli_1_1_camera_device_ad722f6a227fe64d8b5ec27a599f93119}{m\+\_\+body\+Serial\+Number\+Prop}}
+\item 
+SCRSDK\+::\+Cr\+Device\+Property \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcli_1_1_camera_device_a0ff2fac400a2459dc4b49f88f415f334}{m\+\_\+lens\+Model\+Name\+Prop}}
+\item 
+SCRSDK\+::\+Cr\+Device\+Property \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcli_1_1_camera_device_a4ba351380dee62ad969e06bfaeda9d63}{m\+\_\+recording\+Setting\+File\+Name\+Prop}}
+\item 
+SCRSDK\+::\+Cr\+Device\+Property \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcli_1_1_camera_device_ab17a3a0b0e600b60ffb3d187c6634f72}{m\+\_\+model\+Name\+Prop}}
+\item 
+SCRSDK\+::\+Cr\+Capture\+Date \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcli_1_1_camera_device_ad9ac61846b4cf275f780707787521b24}{m\+\_\+capture\+Date\+List}} \mbox{[}2\mbox{]}
+\item 
+SCRSDK\+::\+Cr\+Contents\+Info \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcli_1_1_camera_device_acd1e60f42d27f0f72045bef9ca6c02b5}{m\+\_\+contents\+Info\+List}} \mbox{[}2\mbox{]}
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a11dc25c71c4e8604fa994840b8215a4a}{m\+\_\+get\+Contents\+Data\+Start\+Flg}}
+\item 
+bool \mbox{\hyperlink{classcli_1_1_camera_device_a5d5aa43b484172e99a1ab77eb9092cdd}{m\+\_\+get\+Contents\+Data\+Movie\+Flg}}
+\item 
+std\+::mutex \mbox{\hyperlink{classcli_1_1_camera_device_a8bb87fe206b9372967795ff7f13e9bfb}{m\+\_\+get\+Contents\+Data\+Mtx}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classcli_1_1_camera_device_a3598d7a13d45f1798296cd8e37d4178b}{m\+\_\+get\+Contents\+Data\+Movie\+Cv}}
+\item 
+std\+::mutex \mbox{\hyperlink{classcli_1_1_camera_device_ae9f02c48625a8128e8821f519deba6cd}{m\+\_\+lockget\+Contents\+Data}}
+\item 
+Cr\+Int32u \mbox{\hyperlink{classcli_1_1_camera_device_af53b73806715a715f133b9b96782228e}{m\+\_\+get\+Contents\+Data\+\_\+notify}}
+\item 
+Cr\+Int32u \mbox{\hyperlink{classcli_1_1_camera_device_ab4c9c0f4a34a5a399236a467763a3bf8}{m\+\_\+get\+Contents\+Data\+\_\+per}}
+\item 
+std\+::string \mbox{\hyperlink{classcli_1_1_camera_device_a1131130d25f8fc8fffdd775a1cca5bba}{m\+\_\+get\+Contents\+Data\+\_\+file\+Name}}
+\item 
+std\+::mutex \mbox{\hyperlink{classcli_1_1_camera_device_ab1cd48dbfe69c381e877382f32e42540}{m\+\_\+disp\+Camera\+Key\+Mutex}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classcli_1_1_camera_device_a7c1aed3469b5ffe3b2513ec73951754d}{m\+\_\+disp\+Camera\+Key\+CV}}
+\item 
+Cr\+Int32u \mbox{\hyperlink{classcli_1_1_camera_device_a03084e844103e26bbfb31e6953308b57}{m\+\_\+latest\+Firmware\+Upload\+Rate}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classcli_1_1_camera_device_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcli_1_1_camera_device_a1df9159fb4822a0846ce0eccb580e4a8}\index{cli::CameraDevice@{cli::CameraDevice}!CameraDevice@{CameraDevice}}
+\index{CameraDevice@{CameraDevice}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{CameraDevice()}{CameraDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1df9159fb4822a0846ce0eccb580e4a8} 
+cli\+::\+Camera\+Device\+::\+Camera\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{classcli_1_1_camera_device_ae3a49b5b99ffd7a1190df0459c317ccf}\index{cli::CameraDevice@{cli::CameraDevice}!CameraDevice@{CameraDevice}}
+\index{CameraDevice@{CameraDevice}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{CameraDevice()}{CameraDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae3a49b5b99ffd7a1190df0459c317ccf} 
+cli\+::\+Camera\+Device\+::\+Camera\+Device (\begin{DoxyParamCaption}\item[{std\+::int32\+\_\+t}]{no}{, }\item[{SCRSDK\+::\+ICr\+Camera\+Object\+Info const \texorpdfstring{$\ast$}{*}}]{camera\+\_\+info}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aa36affee1a4c3f3dac0cd51ed845312a}\index{cli::CameraDevice@{cli::CameraDevice}!````~CameraDevice@{\texorpdfstring{$\sim$}{\string~}CameraDevice}}
+\index{````~CameraDevice@{\texorpdfstring{$\sim$}{\string~}CameraDevice}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CameraDevice()}{\string~CameraDevice()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa36affee1a4c3f3dac0cd51ed845312a} 
+cli\+::\+Camera\+Device\+::\texorpdfstring{$\sim$}{\string~}\+Camera\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classcli_1_1_camera_device_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcli_1_1_camera_device_acac58174247027f82bd612c4a6120d5f}\index{cli::CameraDevice@{cli::CameraDevice}!af\_shutter@{af\_shutter}}
+\index{af\_shutter@{af\_shutter}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{af\_shutter()}{af\_shutter()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_acac58174247027f82bd612c4a6120d5f} 
+void cli\+::\+Camera\+Device\+::af\+\_\+shutter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classcli_1_1_camera_device_a8d7c079c2524ee347714c2956bb212f0}\index{cli::CameraDevice@{cli::CameraDevice}!camera\_button\_function@{camera\_button\_function}}
+\index{camera\_button\_function@{camera\_button\_function}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{camera\_button\_function()}{camera\_button\_function()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8d7c079c2524ee347714c2956bb212f0} 
+void cli\+::\+Camera\+Device\+::camera\+\_\+button\+\_\+function (\begin{DoxyParamCaption}\item[{bool}]{multi\+Flg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a552a07e5940c4a573fe37e4cbff27dc8}\index{cli::CameraDevice@{cli::CameraDevice}!camera\_dial\_function@{camera\_dial\_function}}
+\index{camera\_dial\_function@{camera\_dial\_function}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{camera\_dial\_function()}{camera\_dial\_function()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a552a07e5940c4a573fe37e4cbff27dc8} 
+void cli\+::\+Camera\+Device\+::camera\+\_\+dial\+\_\+function (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ac3b3e0e3da375ad6b8e82dd1ed7e1f36}\index{cli::CameraDevice@{cli::CameraDevice}!camera\_lever\_function@{camera\_lever\_function}}
+\index{camera\_lever\_function@{camera\_lever\_function}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{camera\_lever\_function()}{camera\_lever\_function()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac3b3e0e3da375ad6b8e82dd1ed7e1f36} 
+void cli\+::\+Camera\+Device\+::camera\+\_\+lever\+\_\+function (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ac551ae51456e64cfb7635f369fcaaf1b}\index{cli::CameraDevice@{cli::CameraDevice}!cancel\_upload\_firmware@{cancel\_upload\_firmware}}
+\index{cancel\_upload\_firmware@{cancel\_upload\_firmware}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{cancel\_upload\_firmware()}{cancel\_upload\_firmware()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac551ae51456e64cfb7635f369fcaaf1b} 
+void cli\+::\+Camera\+Device\+::cancel\+\_\+upload\+\_\+firmware (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a55035c7a1bdbf627b355cc5d68d7edfa}\index{cli::CameraDevice@{cli::CameraDevice}!capture\_image@{capture\_image}}
+\index{capture\_image@{capture\_image}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{capture\_image()}{capture\_image()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a55035c7a1bdbf627b355cc5d68d7edfa} 
+void cli\+::\+Camera\+Device\+::capture\+\_\+image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classcli_1_1_camera_device_acda65b76d63978c4aa93cd140d5c2bf7}\index{cli::CameraDevice@{cli::CameraDevice}!change\_live\_view\_enable@{change\_live\_view\_enable}}
+\index{change\_live\_view\_enable@{change\_live\_view\_enable}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{change\_live\_view\_enable()}{change\_live\_view\_enable()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_acda65b76d63978c4aa93cd140d5c2bf7} 
+void cli\+::\+Camera\+Device\+::change\+\_\+live\+\_\+view\+\_\+enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7e9c814a39fe60f94d0771a41bf47c14}\index{cli::CameraDevice@{cli::CameraDevice}!change\_live\_view\_protocol@{change\_live\_view\_protocol}}
+\index{change\_live\_view\_protocol@{change\_live\_view\_protocol}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{change\_live\_view\_protocol()}{change\_live\_view\_protocol()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7e9c814a39fe60f94d0771a41bf47c14} 
+void cli\+::\+Camera\+Device\+::change\+\_\+live\+\_\+view\+\_\+protocol (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a8b9614a43c2bf2deae05b847e928ef3c}\index{cli::CameraDevice@{cli::CameraDevice}!check\_firmware\_update\_status@{check\_firmware\_update\_status}}
+\index{check\_firmware\_update\_status@{check\_firmware\_update\_status}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{check\_firmware\_update\_status()}{check\_firmware\_update\_status()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8b9614a43c2bf2deae05b847e928ef3c} 
+void cli\+::\+Camera\+Device\+::check\+\_\+firmware\+\_\+update\+\_\+status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a40faf384e2feeaedd3bc8459b1430a48}\index{cli::CameraDevice@{cli::CameraDevice}!check\_monitoringstatus@{check\_monitoringstatus}}
+\index{check\_monitoringstatus@{check\_monitoringstatus}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{check\_monitoringstatus()}{check\_monitoringstatus()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a40faf384e2feeaedd3bc8459b1430a48} 
+void cli\+::\+Camera\+Device\+::check\+\_\+monitoringstatus (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a2dc85fc2424aa15a0bc432601c07bcc9}\index{cli::CameraDevice@{cli::CameraDevice}!clear\_ptzf\_preset@{clear\_ptzf\_preset}}
+\index{clear\_ptzf\_preset@{clear\_ptzf\_preset}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{clear\_ptzf\_preset()}{clear\_ptzf\_preset()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2dc85fc2424aa15a0bc432601c07bcc9} 
+void cli\+::\+Camera\+Device\+::clear\+\_\+ptzf\+\_\+preset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae66730a034e81f824093fbee612d6f4a}\index{cli::CameraDevice@{cli::CameraDevice}!connect@{connect}}
+\index{connect@{connect}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae66730a034e81f824093fbee612d6f4a} 
+bool cli\+::\+Camera\+Device\+::connect (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Sdk\+Control\+Mode}]{open\+Mode}{, }\item[{SCRSDK\+::\+Cr\+Reconnecting\+Set}]{reconnect}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_af6174f40a73d97213334ee2c8dddf9c2}\index{cli::CameraDevice@{cli::CameraDevice}!continuous\_shooting@{continuous\_shooting}}
+\index{continuous\_shooting@{continuous\_shooting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{continuous\_shooting()}{continuous\_shooting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_af6174f40a73d97213334ee2c8dddf9c2} 
+void cli\+::\+Camera\+Device\+::continuous\+\_\+shooting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae9d2b78f04f628ccb1a800e9ba633d5a}\index{cli::CameraDevice@{cli::CameraDevice}!control\_ptzf@{control\_ptzf}}
+\index{control\_ptzf@{control\_ptzf}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{control\_ptzf()}{control\_ptzf()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae9d2b78f04f628ccb1a800e9ba633d5a} 
+void cli\+::\+Camera\+Device\+::control\+\_\+ptzf (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a77df632178b8c3d8c64a35a1634d4f36}\index{cli::CameraDevice@{cli::CameraDevice}!control\_ptzf\_home\_reset\_cancel@{control\_ptzf\_home\_reset\_cancel}}
+\index{control\_ptzf\_home\_reset\_cancel@{control\_ptzf\_home\_reset\_cancel}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{control\_ptzf\_home\_reset\_cancel()}{control\_ptzf\_home\_reset\_cancel()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a77df632178b8c3d8c64a35a1634d4f36} 
+void cli\+::\+Camera\+Device\+::control\+\_\+ptzf\+\_\+home\+\_\+reset\+\_\+cancel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a0a0f563ca2d9fecf8a73932e25f66b55}\index{cli::CameraDevice@{cli::CameraDevice}!controlMoviePlayback@{controlMoviePlayback}}
+\index{controlMoviePlayback@{controlMoviePlayback}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{controlMoviePlayback()}{controlMoviePlayback()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0a0f563ca2d9fecf8a73932e25f66b55} 
+void cli\+::\+Camera\+Device\+::control\+Movie\+Playback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a4fa3d54d975d76135a60efe26aec13fe}\index{cli::CameraDevice@{cli::CameraDevice}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a4fa3d54d975d76135a60efe26aec13fe} 
+bool cli\+::\+Camera\+Device\+::disconnect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ad8a565ed46f59ebdc4f00337cfe24864}\index{cli::CameraDevice@{cli::CameraDevice}!display\_support\_camera\_key\_values@{display\_support\_camera\_key\_values}}
+\index{display\_support\_camera\_key\_values@{display\_support\_camera\_key\_values}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{display\_support\_camera\_key\_values()}{display\_support\_camera\_key\_values()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad8a565ed46f59ebdc4f00337cfe24864} 
+SDK\+::\+Cr\+Error cli\+::\+Camera\+Device\+::display\+\_\+support\+\_\+camera\+\_\+key\+\_\+values (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Display\+String\+Type}]{type}{, }\item[{const std\+::vector$<$ Cr\+Int32u $>$ \&}]{values}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7d2054dc460b2de86891be04c3f9e376}\index{cli::CameraDevice@{cli::CameraDevice}!do\_download\_camera\_setting\_file@{do\_download\_camera\_setting\_file}}
+\index{do\_download\_camera\_setting\_file@{do\_download\_camera\_setting\_file}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{do\_download\_camera\_setting\_file()}{do\_download\_camera\_setting\_file()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7d2054dc460b2de86891be04c3f9e376} 
+void cli\+::\+Camera\+Device\+::do\+\_\+download\+\_\+camera\+\_\+setting\+\_\+file (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a1164f2a343580ba42f3df4d621bcb7e4}\index{cli::CameraDevice@{cli::CameraDevice}!do\_upload\_camera\_setting\_file@{do\_upload\_camera\_setting\_file}}
+\index{do\_upload\_camera\_setting\_file@{do\_upload\_camera\_setting\_file}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{do\_upload\_camera\_setting\_file()}{do\_upload\_camera\_setting\_file()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1164f2a343580ba42f3df4d621bcb7e4} 
+void cli\+::\+Camera\+Device\+::do\+\_\+upload\+\_\+camera\+\_\+setting\+\_\+file (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_adcffe2779c71a596113ae860245f9214}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_APS\_C\_or\_Full@{execute\_APS\_C\_or\_Full}}
+\index{execute\_APS\_C\_or\_Full@{execute\_APS\_C\_or\_Full}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_APS\_C\_or\_Full()}{execute\_APS\_C\_or\_Full()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_adcffe2779c71a596113ae860245f9214} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+\+APS\+\_\+\+C\+\_\+or\+\_\+\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae02fa320abadd06a2e9055e77c7a3c56}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_camera\_setting\_reset@{execute\_camera\_setting\_reset}}
+\index{execute\_camera\_setting\_reset@{execute\_camera\_setting\_reset}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_camera\_setting\_reset()}{execute\_camera\_setting\_reset()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae02fa320abadd06a2e9055e77c7a3c56} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+camera\+\_\+setting\+\_\+reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a0400e857c676142ea56bbf75e9d9660e}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_downup\_property@{execute\_downup\_property}}
+\index{execute\_downup\_property@{execute\_downup\_property}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_downup\_property()}{execute\_downup\_property()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0400e857c676142ea56bbf75e9d9660e} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+downup\+\_\+property (\begin{DoxyParamCaption}\item[{Cr\+Int16u}]{code}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a16ecfb1688e98d0f13e6005057f23b4d}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_focus\_bracket@{execute\_focus\_bracket}}
+\index{execute\_focus\_bracket@{execute\_focus\_bracket}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_focus\_bracket()}{execute\_focus\_bracket()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a16ecfb1688e98d0f13e6005057f23b4d} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+focus\+\_\+bracket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aa88c274b16d98ce11230fa56176fbcd8}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_focus\_position\_cancel@{execute\_focus\_position\_cancel}}
+\index{execute\_focus\_position\_cancel@{execute\_focus\_position\_cancel}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_focus\_position\_cancel()}{execute\_focus\_position\_cancel()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa88c274b16d98ce11230fa56176fbcd8} 
+bool cli\+::\+Camera\+Device\+::execute\+\_\+focus\+\_\+position\+\_\+cancel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a906906ab95c76a72702dc68c0e367aab}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_get\_displaystringlist@{execute\_get\_displaystringlist}}
+\index{execute\_get\_displaystringlist@{execute\_get\_displaystringlist}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_get\_displaystringlist()}{execute\_get\_displaystringlist()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a906906ab95c76a72702dc68c0e367aab} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+get\+\_\+displaystringlist (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a93cf8fd9887727477de6262f9c0543f9}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_get\_displaystringtypes@{execute\_get\_displaystringtypes}}
+\index{execute\_get\_displaystringtypes@{execute\_get\_displaystringtypes}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_get\_displaystringtypes()}{execute\_get\_displaystringtypes()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a93cf8fd9887727477de6262f9c0543f9} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+get\+\_\+displaystringtypes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a84920916d8b12ef31961789bed692693}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_get\_zoom\_and\_focus\_preset@{execute\_get\_zoom\_and\_focus\_preset}}
+\index{execute\_get\_zoom\_and\_focus\_preset@{execute\_get\_zoom\_and\_focus\_preset}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_get\_zoom\_and\_focus\_preset()}{execute\_get\_zoom\_and\_focus\_preset()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a84920916d8b12ef31961789bed692693} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+get\+\_\+zoom\+\_\+and\+\_\+focus\+\_\+preset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a3739ff4121f955e1e14b856062618d10}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_lock\_property@{execute\_lock\_property}}
+\index{execute\_lock\_property@{execute\_lock\_property}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_lock\_property()}{execute\_lock\_property()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a3739ff4121f955e1e14b856062618d10} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+lock\+\_\+property (\begin{DoxyParamCaption}\item[{Cr\+Int16u}]{code}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2fc55c016e0fef9ce2a6b9e7657721e9}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_movie\_rec@{execute\_movie\_rec}}
+\index{execute\_movie\_rec@{execute\_movie\_rec}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_movie\_rec()}{execute\_movie\_rec()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2fc55c016e0fef9ce2a6b9e7657721e9} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+movie\+\_\+rec (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a9766f283b68490a9c176c84d09701c1b}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_movie\_rec\_and\_get\_contentsdata@{execute\_movie\_rec\_and\_get\_contentsdata}}
+\index{execute\_movie\_rec\_and\_get\_contentsdata@{execute\_movie\_rec\_and\_get\_contentsdata}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_movie\_rec\_and\_get\_contentsdata()}{execute\_movie\_rec\_and\_get\_contentsdata()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a9766f283b68490a9c176c84d09701c1b} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+movie\+\_\+rec\+\_\+and\+\_\+get\+\_\+contentsdata (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2b7fa94d6a813e188a94dbfd1e08a5c8}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_movie\_rec\_toggle@{execute\_movie\_rec\_toggle}}
+\index{execute\_movie\_rec\_toggle@{execute\_movie\_rec\_toggle}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_movie\_rec\_toggle()}{execute\_movie\_rec\_toggle()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2b7fa94d6a813e188a94dbfd1e08a5c8} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+movie\+\_\+rec\+\_\+toggle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae12ffe87bdceb90179337bf1be810469}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_pos\_xy@{execute\_pos\_xy}}
+\index{execute\_pos\_xy@{execute\_pos\_xy}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_pos\_xy()}{execute\_pos\_xy()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae12ffe87bdceb90179337bf1be810469} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+pos\+\_\+xy (\begin{DoxyParamCaption}\item[{Cr\+Int16u}]{code}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a849bdd782fa78ef4ecc01388cd5a83f1}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_preset\_focus@{execute\_preset\_focus}}
+\index{execute\_preset\_focus@{execute\_preset\_focus}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_preset\_focus()}{execute\_preset\_focus()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a849bdd782fa78ef4ecc01388cd5a83f1} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+preset\+\_\+focus (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ac1053ee96c1af2d93651f8b0046b64e5}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_request\_displaystringlist@{execute\_request\_displaystringlist}}
+\index{execute\_request\_displaystringlist@{execute\_request\_displaystringlist}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_request\_displaystringlist()}{execute\_request\_displaystringlist()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac1053ee96c1af2d93651f8b0046b64e5} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+request\+\_\+displaystringlist (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a1e1000e9808d52680c99a806d2932bc4}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_request\_zoom\_and\_focus\_preset@{execute\_request\_zoom\_and\_focus\_preset}}
+\index{execute\_request\_zoom\_and\_focus\_preset@{execute\_request\_zoom\_and\_focus\_preset}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_request\_zoom\_and\_focus\_preset()}{execute\_request\_zoom\_and\_focus\_preset()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1e1000e9808d52680c99a806d2932bc4} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+request\+\_\+zoom\+\_\+and\+\_\+focus\+\_\+preset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ab57c54191a78a228fb14741ffd1a0a75}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_update\_firmware@{execute\_update\_firmware}}
+\index{execute\_update\_firmware@{execute\_update\_firmware}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_update\_firmware()}{execute\_update\_firmware()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab57c54191a78a228fb14741ffd1a0a75} 
+void cli\+::\+Camera\+Device\+::execute\+\_\+update\+\_\+firmware (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a208f734527232cf3e4c618390bf5929a}\index{cli::CameraDevice@{cli::CameraDevice}!execute\_zoom\_position\_cancel@{execute\_zoom\_position\_cancel}}
+\index{execute\_zoom\_position\_cancel@{execute\_zoom\_position\_cancel}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{execute\_zoom\_position\_cancel()}{execute\_zoom\_position\_cancel()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a208f734527232cf3e4c618390bf5929a} 
+bool cli\+::\+Camera\+Device\+::execute\+\_\+zoom\+\_\+position\+\_\+cancel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a874c647774d06069067fc254b615d4d2}\index{cli::CameraDevice@{cli::CameraDevice}!format\_display\_string\_type@{format\_display\_string\_type}}
+\index{format\_display\_string\_type@{format\_display\_string\_type}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{format\_display\_string\_type()}{format\_display\_string\_type()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a874c647774d06069067fc254b615d4d2} 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} cli\+::\+Camera\+Device\+::format\+\_\+display\+\_\+string\+\_\+type (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Display\+String\+Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a92d98dd0083a6ad1997e02afd9a1f5a4}\index{cli::CameraDevice@{cli::CameraDevice}!format\_dispstrlist@{format\_dispstrlist}}
+\index{format\_dispstrlist@{format\_dispstrlist}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{format\_dispstrlist()}{format\_dispstrlist()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a92d98dd0083a6ad1997e02afd9a1f5a4} 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} cli\+::\+Camera\+Device\+::format\+\_\+dispstrlist (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Display\+String\+List\+Info}]{list}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_aafec081e5dc996f46ad279dd2e8323d6}\index{cli::CameraDevice@{cli::CameraDevice}!format\_focus\_position\_value@{format\_focus\_position\_value}}
+\index{format\_focus\_position\_value@{format\_focus\_position\_value}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{format\_focus\_position\_value()}{format\_focus\_position\_value()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aafec081e5dc996f46ad279dd2e8323d6} 
+void cli\+::\+Camera\+Device\+::format\+\_\+focus\+\_\+position\+\_\+value (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a8ee0d9fe55ef22020c76499910117b72}\index{cli::CameraDevice@{cli::CameraDevice}!get\_af\_area\_position@{get\_af\_area\_position}}
+\index{get\_af\_area\_position@{get\_af\_area\_position}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_af\_area\_position()}{get\_af\_area\_position()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8ee0d9fe55ef22020c76499910117b72} 
+void cli\+::\+Camera\+Device\+::get\+\_\+af\+\_\+area\+\_\+position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae5e8038905285e538eaf51c6970ea176}\index{cli::CameraDevice@{cli::CameraDevice}!get\_aperture@{get\_aperture}}
+\index{get\_aperture@{get\_aperture}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_aperture()}{get\_aperture()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae5e8038905285e538eaf51c6970ea176} 
+void cli\+::\+Camera\+Device\+::get\+\_\+aperture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a5f2c9d666cd6166bd99a885fbb48e5b6}\index{cli::CameraDevice@{cli::CameraDevice}!get\_aps\_c\_or\_full\_switching\_setting@{get\_aps\_c\_or\_full\_switching\_setting}}
+\index{get\_aps\_c\_or\_full\_switching\_setting@{get\_aps\_c\_or\_full\_switching\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_aps\_c\_or\_full\_switching\_setting()}{get\_aps\_c\_or\_full\_switching\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5f2c9d666cd6166bd99a885fbb48e5b6} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+aps\+\_\+c\+\_\+or\+\_\+full\+\_\+switching\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_abcf004579ecaa35b2eb5ceea8ed71130}\index{cli::CameraDevice@{cli::CameraDevice}!get\_baselook\_value@{get\_baselook\_value}}
+\index{get\_baselook\_value@{get\_baselook\_value}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_baselook\_value()}{get\_baselook\_value()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_abcf004579ecaa35b2eb5ceea8ed71130} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+baselook\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a539490884b32b01f0091428a69f9c655}\index{cli::CameraDevice@{cli::CameraDevice}!get\_camera\_setting\_saveread\_state@{get\_camera\_setting\_saveread\_state}}
+\index{get\_camera\_setting\_saveread\_state@{get\_camera\_setting\_saveread\_state}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_camera\_setting\_saveread\_state()}{get\_camera\_setting\_saveread\_state()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a539490884b32b01f0091428a69f9c655} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+camera\+\_\+setting\+\_\+saveread\+\_\+state (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a30276729dc511d5b9c1b7e27f5834eb9}\index{cli::CameraDevice@{cli::CameraDevice}!get\_custom\_wb@{get\_custom\_wb}}
+\index{get\_custom\_wb@{get\_custom\_wb}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_custom\_wb()}{get\_custom\_wb()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a30276729dc511d5b9c1b7e27f5834eb9} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+custom\+\_\+wb (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a9308a5e9b8c5536f9fd8c93c3ba12492}\index{cli::CameraDevice@{cli::CameraDevice}!get\_custom\_wb\_size\_setting@{get\_custom\_wb\_size\_setting}}
+\index{get\_custom\_wb\_size\_setting@{get\_custom\_wb\_size\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_custom\_wb\_size\_setting()}{get\_custom\_wb\_size\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a9308a5e9b8c5536f9fd8c93c3ba12492} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+custom\+\_\+wb\+\_\+size\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_adce8b64c4452f55eaf218cc8fabc8a9d}\index{cli::CameraDevice@{cli::CameraDevice}!get\_exposure\_control\_type@{get\_exposure\_control\_type}}
+\index{get\_exposure\_control\_type@{get\_exposure\_control\_type}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_exposure\_control\_type()}{get\_exposure\_control\_type()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_adce8b64c4452f55eaf218cc8fabc8a9d} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+exposure\+\_\+control\+\_\+type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a29801453bce7fc7feddc04c4c0a9927b}\index{cli::CameraDevice@{cli::CameraDevice}!get\_exposure\_index@{get\_exposure\_index}}
+\index{get\_exposure\_index@{get\_exposure\_index}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_exposure\_index()}{get\_exposure\_index()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a29801453bce7fc7feddc04c4c0a9927b} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+exposure\+\_\+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a5aea9e7da08b625cacd55110d1ad0a56}\index{cli::CameraDevice@{cli::CameraDevice}!get\_exposure\_program\_mode@{get\_exposure\_program\_mode}}
+\index{get\_exposure\_program\_mode@{get\_exposure\_program\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_exposure\_program\_mode()}{get\_exposure\_program\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5aea9e7da08b625cacd55110d1ad0a56} 
+void cli\+::\+Camera\+Device\+::get\+\_\+exposure\+\_\+program\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2281754959d3a1315af076d890f575ac}\index{cli::CameraDevice@{cli::CameraDevice}!get\_extended\_shutter\_speed@{get\_extended\_shutter\_speed}}
+\index{get\_extended\_shutter\_speed@{get\_extended\_shutter\_speed}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_extended\_shutter\_speed()}{get\_extended\_shutter\_speed()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2281754959d3a1315af076d890f575ac} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+extended\+\_\+shutter\+\_\+speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2eb87bec48186e044c4152024a6cbc02}\index{cli::CameraDevice@{cli::CameraDevice}!get\_firmware\_updater\_info@{get\_firmware\_updater\_info}}
+\index{get\_firmware\_updater\_info@{get\_firmware\_updater\_info}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_firmware\_updater\_info()}{get\_firmware\_updater\_info()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2eb87bec48186e044c4152024a6cbc02} 
+void cli\+::\+Camera\+Device\+::get\+\_\+firmware\+\_\+updater\+\_\+info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a23b470a0ed7fdb57ddc03fe4d84138cb}\index{cli::CameraDevice@{cli::CameraDevice}!get\_firmware\_upload\_rate@{get\_firmware\_upload\_rate}}
+\index{get\_firmware\_upload\_rate@{get\_firmware\_upload\_rate}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_firmware\_upload\_rate()}{get\_firmware\_upload\_rate()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a23b470a0ed7fdb57ddc03fe4d84138cb} 
+void cli\+::\+Camera\+Device\+::get\+\_\+firmware\+\_\+upload\+\_\+rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a57e425ed6a4385c0225ad57c019e2909}\index{cli::CameraDevice@{cli::CameraDevice}!get\_firmware\_version@{get\_firmware\_version}}
+\index{get\_firmware\_version@{get\_firmware\_version}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_firmware\_version()}{get\_firmware\_version()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a57e425ed6a4385c0225ad57c019e2909} 
+void cli\+::\+Camera\+Device\+::get\+\_\+firmware\+\_\+version (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2062d46894ceb68ca053103e86efa0ce}\index{cli::CameraDevice@{cli::CameraDevice}!get\_focus\_area@{get\_focus\_area}}
+\index{get\_focus\_area@{get\_focus\_area}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_focus\_area()}{get\_focus\_area()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2062d46894ceb68ca053103e86efa0ce} 
+void cli\+::\+Camera\+Device\+::get\+\_\+focus\+\_\+area (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a23504ebceb1e10033282364f7a73e665}\index{cli::CameraDevice@{cli::CameraDevice}!get\_focus\_bracket\_focus\_range@{get\_focus\_bracket\_focus\_range}}
+\index{get\_focus\_bracket\_focus\_range@{get\_focus\_bracket\_focus\_range}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_focus\_bracket\_focus\_range()}{get\_focus\_bracket\_focus\_range()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a23504ebceb1e10033282364f7a73e665} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+focus\+\_\+bracket\+\_\+focus\+\_\+range (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_abd7265f4e3c3ee595e202e4291816633}\index{cli::CameraDevice@{cli::CameraDevice}!get\_focus\_bracket\_shot\_num@{get\_focus\_bracket\_shot\_num}}
+\index{get\_focus\_bracket\_shot\_num@{get\_focus\_bracket\_shot\_num}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_focus\_bracket\_shot\_num()}{get\_focus\_bracket\_shot\_num()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_abd7265f4e3c3ee595e202e4291816633} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+focus\+\_\+bracket\+\_\+shot\+\_\+num (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae5513cda6a13de9a4027a93ae9a47036}\index{cli::CameraDevice@{cli::CameraDevice}!get\_focus\_mode@{get\_focus\_mode}}
+\index{get\_focus\_mode@{get\_focus\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_focus\_mode()}{get\_focus\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae5513cda6a13de9a4027a93ae9a47036} 
+void cli\+::\+Camera\+Device\+::get\+\_\+focus\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae2e7c8fa20ba7b048c382b2f81cdbe9e}\index{cli::CameraDevice@{cli::CameraDevice}!get\_focus\_position\_setting@{get\_focus\_position\_setting}}
+\index{get\_focus\_position\_setting@{get\_focus\_position\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_focus\_position\_setting()}{get\_focus\_position\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae2e7c8fa20ba7b048c382b2f81cdbe9e} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+focus\+\_\+position\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ab0dd293c44a9fc5f5c3743e0e06aad5b}\index{cli::CameraDevice@{cli::CameraDevice}!get\_gain\_base\_iso\_sensitivity@{get\_gain\_base\_iso\_sensitivity}}
+\index{get\_gain\_base\_iso\_sensitivity@{get\_gain\_base\_iso\_sensitivity}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_gain\_base\_iso\_sensitivity()}{get\_gain\_base\_iso\_sensitivity()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab0dd293c44a9fc5f5c3743e0e06aad5b} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+gain\+\_\+base\+\_\+iso\+\_\+sensitivity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2dabcec84fccf32016b7b08165a23491}\index{cli::CameraDevice@{cli::CameraDevice}!get\_gain\_base\_sensitivity@{get\_gain\_base\_sensitivity}}
+\index{get\_gain\_base\_sensitivity@{get\_gain\_base\_sensitivity}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_gain\_base\_sensitivity()}{get\_gain\_base\_sensitivity()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2dabcec84fccf32016b7b08165a23491} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+gain\+\_\+base\+\_\+sensitivity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a4c18d8140c04afe7c071b8a906399b6c}\index{cli::CameraDevice@{cli::CameraDevice}!get\_gain\_control\_setting@{get\_gain\_control\_setting}}
+\index{get\_gain\_control\_setting@{get\_gain\_control\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_gain\_control\_setting()}{get\_gain\_control\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a4c18d8140c04afe7c071b8a906399b6c} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+gain\+\_\+control\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a41312311472628ddf1c5b7c8a911b64a}\index{cli::CameraDevice@{cli::CameraDevice}!get\_gain\_db\_value@{get\_gain\_db\_value}}
+\index{get\_gain\_db\_value@{get\_gain\_db\_value}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_gain\_db\_value()}{get\_gain\_db\_value()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a41312311472628ddf1c5b7c8a911b64a} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+gain\+\_\+db\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a47c9e084c8f319fccc2ce3072465ae3a}\index{cli::CameraDevice@{cli::CameraDevice}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a47c9e084c8f319fccc2ce3072465ae3a} 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} cli\+::\+Camera\+Device\+::get\+\_\+id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a92e585540bc6d04bd8998412893dea31}\index{cli::CameraDevice@{cli::CameraDevice}!get\_image\_stabilization\_steady\_shot@{get\_image\_stabilization\_steady\_shot}}
+\index{get\_image\_stabilization\_steady\_shot@{get\_image\_stabilization\_steady\_shot}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_image\_stabilization\_steady\_shot()}{get\_image\_stabilization\_steady\_shot()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a92e585540bc6d04bd8998412893dea31} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_afa7f0b3259f68233729e1a53c3e9bf30}\index{cli::CameraDevice@{cli::CameraDevice}!get\_iris\_mode\_setting@{get\_iris\_mode\_setting}}
+\index{get\_iris\_mode\_setting@{get\_iris\_mode\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_iris\_mode\_setting()}{get\_iris\_mode\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_afa7f0b3259f68233729e1a53c3e9bf30} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+iris\+\_\+mode\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a8969172285f26a7f33ea804024e5ee31}\index{cli::CameraDevice@{cli::CameraDevice}!get\_iso@{get\_iso}}
+\index{get\_iso@{get\_iso}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_iso()}{get\_iso()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8969172285f26a7f33ea804024e5ee31} 
+void cli\+::\+Camera\+Device\+::get\+\_\+iso (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_acec4e2416e10cd46abe317873320b4ef}\index{cli::CameraDevice@{cli::CameraDevice}!get\_iso\_current\_sensitivity@{get\_iso\_current\_sensitivity}}
+\index{get\_iso\_current\_sensitivity@{get\_iso\_current\_sensitivity}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_iso\_current\_sensitivity()}{get\_iso\_current\_sensitivity()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_acec4e2416e10cd46abe317873320b4ef} 
+void cli\+::\+Camera\+Device\+::get\+\_\+iso\+\_\+current\+\_\+sensitivity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7bb74d2561ce6719f502303d891b1125}\index{cli::CameraDevice@{cli::CameraDevice}!get\_live\_view@{get\_live\_view}}
+\index{get\_live\_view@{get\_live\_view}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_live\_view()}{get\_live\_view()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7bb74d2561ce6719f502303d891b1125} 
+void cli\+::\+Camera\+Device\+::get\+\_\+live\+\_\+view (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a286c5481d502f2ee8bae53ea823c749c}\index{cli::CameraDevice@{cli::CameraDevice}!get\_live\_view\_and\_OSD@{get\_live\_view\_and\_OSD}}
+\index{get\_live\_view\_and\_OSD@{get\_live\_view\_and\_OSD}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_live\_view\_and\_OSD()}{get\_live\_view\_and\_OSD()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a286c5481d502f2ee8bae53ea823c749c} 
+void cli\+::\+Camera\+Device\+::get\+\_\+live\+\_\+view\+\_\+and\+\_\+\+OSD (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a6472a5dc67cd60f74c6ae70d3864bc36}\index{cli::CameraDevice@{cli::CameraDevice}!get\_live\_view\_image\_quality@{get\_live\_view\_image\_quality}}
+\index{get\_live\_view\_image\_quality@{get\_live\_view\_image\_quality}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_live\_view\_image\_quality()}{get\_live\_view\_image\_quality()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a6472a5dc67cd60f74c6ae70d3864bc36} 
+void cli\+::\+Camera\+Device\+::get\+\_\+live\+\_\+view\+\_\+image\+\_\+quality (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a74540bb6c6993c4c12b6986e0eded9bb}\index{cli::CameraDevice@{cli::CameraDevice}!get\_live\_view\_only@{get\_live\_view\_only}}
+\index{get\_live\_view\_only@{get\_live\_view\_only}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_live\_view\_only()}{get\_live\_view\_only()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a74540bb6c6993c4c12b6986e0eded9bb} 
+void cli\+::\+Camera\+Device\+::get\+\_\+live\+\_\+view\+\_\+only (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a5175f6807aecfd26082444bc9ac300f7}\index{cli::CameraDevice@{cli::CameraDevice}!get\_media\_slot\_status@{get\_media\_slot\_status}}
+\index{get\_media\_slot\_status@{get\_media\_slot\_status}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_media\_slot\_status()}{get\_media\_slot\_status()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5175f6807aecfd26082444bc9ac300f7} 
+void cli\+::\+Camera\+Device\+::get\+\_\+media\+\_\+slot\+\_\+status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a71a984d3462d564aa4042e91961cdcac}\index{cli::CameraDevice@{cli::CameraDevice}!get\_mediaprofile@{get\_mediaprofile}}
+\index{get\_mediaprofile@{get\_mediaprofile}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_mediaprofile()}{get\_mediaprofile()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a71a984d3462d564aa4042e91961cdcac} 
+void cli\+::\+Camera\+Device\+::get\+\_\+mediaprofile (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ab2989c3d047d21112c890481f865b3c4}\index{cli::CameraDevice@{cli::CameraDevice}!get\_model@{get\_model}}
+\index{get\_model@{get\_model}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_model()}{get\_model()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab2989c3d047d21112c890481f865b3c4} 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} cli\+::\+Camera\+Device\+::get\+\_\+model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcli_1_1_camera_device_aa4ae49d2c9bf1a36123fc93169952008}\index{cli::CameraDevice@{cli::CameraDevice}!get\_monitor\_lut\_setting@{get\_monitor\_lut\_setting}}
+\index{get\_monitor\_lut\_setting@{get\_monitor\_lut\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_monitor\_lut\_setting()}{get\_monitor\_lut\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa4ae49d2c9bf1a36123fc93169952008} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+monitor\+\_\+lut\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2a32c59dd38d9da5235ab210111b8be0}\index{cli::CameraDevice@{cli::CameraDevice}!get\_movie\_image\_stabilization\_steady\_shot@{get\_movie\_image\_stabilization\_steady\_shot}}
+\index{get\_movie\_image\_stabilization\_steady\_shot@{get\_movie\_image\_stabilization\_steady\_shot}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_movie\_image\_stabilization\_steady\_shot()}{get\_movie\_image\_stabilization\_steady\_shot()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2a32c59dd38d9da5235ab210111b8be0} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+movie\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7ba08ef5c64249aa105e02838cfcf092}\index{cli::CameraDevice@{cli::CameraDevice}!get\_movie\_rec\_button\_toggle\_enable\_status@{get\_movie\_rec\_button\_toggle\_enable\_status}}
+\index{get\_movie\_rec\_button\_toggle\_enable\_status@{get\_movie\_rec\_button\_toggle\_enable\_status}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_movie\_rec\_button\_toggle\_enable\_status()}{get\_movie\_rec\_button\_toggle\_enable\_status()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7ba08ef5c64249aa105e02838cfcf092} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+movie\+\_\+rec\+\_\+button\+\_\+toggle\+\_\+enable\+\_\+status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aefe89ecddfdfd412249874d51a6cc61f}\index{cli::CameraDevice@{cli::CameraDevice}!get\_movie\_shooting\_mode@{get\_movie\_shooting\_mode}}
+\index{get\_movie\_shooting\_mode@{get\_movie\_shooting\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_movie\_shooting\_mode()}{get\_movie\_shooting\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aefe89ecddfdfd412249874d51a6cc61f} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+movie\+\_\+shooting\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a6bc9bc528e6fe7dd561817969dace61c}\index{cli::CameraDevice@{cli::CameraDevice}!get\_number@{get\_number}}
+\index{get\_number@{get\_number}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_number()}{get\_number()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a6bc9bc528e6fe7dd561817969dace61c} 
+std\+::int32\+\_\+t cli\+::\+Camera\+Device\+::get\+\_\+number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcli_1_1_camera_device_a7ef8b1f6aed9493b497088a86a9855e5}\index{cli::CameraDevice@{cli::CameraDevice}!get\_osd\_image@{get\_osd\_image}}
+\index{get\_osd\_image@{get\_osd\_image}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_osd\_image()}{get\_osd\_image()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7ef8b1f6aed9493b497088a86a9855e5} 
+void cli\+::\+Camera\+Device\+::get\+\_\+osd\+\_\+image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae337549ed4ea6657f7367d43cdcd3848}\index{cli::CameraDevice@{cli::CameraDevice}!get\_playback\_media@{get\_playback\_media}}
+\index{get\_playback\_media@{get\_playback\_media}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_playback\_media()}{get\_playback\_media()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae337549ed4ea6657f7367d43cdcd3848} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+playback\+\_\+media (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a94bfea1c35ceb4c15624bf80878dd8a2}\index{cli::CameraDevice@{cli::CameraDevice}!get\_position\_key\_setting@{get\_position\_key\_setting}}
+\index{get\_position\_key\_setting@{get\_position\_key\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_position\_key\_setting()}{get\_position\_key\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a94bfea1c35ceb4c15624bf80878dd8a2} 
+void cli\+::\+Camera\+Device\+::get\+\_\+position\+\_\+key\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a1df9bc951443406dde1289c6332dc52c}\index{cli::CameraDevice@{cli::CameraDevice}!get\_property@{get\_property}}
+\index{get\_property@{get\_property}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_property()}{get\_property()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1df9bc951443406dde1289c6332dc52c} 
+void cli\+::\+Camera\+Device\+::get\+\_\+property (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Device\+Property \&}]{prop}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a0caff7650570991b03c7e276e600cbcd}\index{cli::CameraDevice@{cli::CameraDevice}!get\_recording\_setting@{get\_recording\_setting}}
+\index{get\_recording\_setting@{get\_recording\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_recording\_setting()}{get\_recording\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0caff7650570991b03c7e276e600cbcd} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+recording\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aaf9b68f47bb7651be21d9f541895669d}\index{cli::CameraDevice@{cli::CameraDevice}!get\_remocon\_zoom\_speed\_type@{get\_remocon\_zoom\_speed\_type}}
+\index{get\_remocon\_zoom\_speed\_type@{get\_remocon\_zoom\_speed\_type}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_remocon\_zoom\_speed\_type()}{get\_remocon\_zoom\_speed\_type()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aaf9b68f47bb7651be21d9f541895669d} 
+void cli\+::\+Camera\+Device\+::get\+\_\+remocon\+\_\+zoom\+\_\+speed\+\_\+type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a5e4a07624a7bcdcd0e50ef0b6208886c}\index{cli::CameraDevice@{cli::CameraDevice}!get\_remote\_transfer\_contentsdata@{get\_remote\_transfer\_contentsdata}}
+\index{get\_remote\_transfer\_contentsdata@{get\_remote\_transfer\_contentsdata}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_remote\_transfer\_contentsdata()}{get\_remote\_transfer\_contentsdata()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5e4a07624a7bcdcd0e50ef0b6208886c} 
+void cli\+::\+Camera\+Device\+::get\+\_\+remote\+\_\+transfer\+\_\+contentsdata (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a0dcf18dc7496ea2702053964b720b7fe}\index{cli::CameraDevice@{cli::CameraDevice}!get\_sdkmode@{get\_sdkmode}}
+\index{get\_sdkmode@{get\_sdkmode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_sdkmode()}{get\_sdkmode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0dcf18dc7496ea2702053964b720b7fe} 
+SCRSDK\+::\+Cr\+Sdk\+Control\+Mode cli\+::\+Camera\+Device\+::get\+\_\+sdkmode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a8c664e9691d039a869f20a05d3380afb}\index{cli::CameraDevice@{cli::CameraDevice}!get\_select\_media\_format@{get\_select\_media\_format}}
+\index{get\_select\_media\_format@{get\_select\_media\_format}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_select\_media\_format()}{get\_select\_media\_format()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8c664e9691d039a869f20a05d3380afb} 
+void cli\+::\+Camera\+Device\+::get\+\_\+select\+\_\+media\+\_\+format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2531cc8d607b15f055f8aa77c92fbd6a}\index{cli::CameraDevice@{cli::CameraDevice}!get\_shutter\_mode\_setting@{get\_shutter\_mode\_setting}}
+\index{get\_shutter\_mode\_setting@{get\_shutter\_mode\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_shutter\_mode\_setting()}{get\_shutter\_mode\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2531cc8d607b15f055f8aa77c92fbd6a} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+shutter\+\_\+mode\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a0e7322bc48cba0a5deeeb5da5a85d2df}\index{cli::CameraDevice@{cli::CameraDevice}!get\_shutter\_speed@{get\_shutter\_speed}}
+\index{get\_shutter\_speed@{get\_shutter\_speed}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_shutter\_speed()}{get\_shutter\_speed()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0e7322bc48cba0a5deeeb5da5a85d2df} 
+void cli\+::\+Camera\+Device\+::get\+\_\+shutter\+\_\+speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a16faa277705f4f6fd048a31572bacc6c}\index{cli::CameraDevice@{cli::CameraDevice}!get\_shutter\_speed\_value@{get\_shutter\_speed\_value}}
+\index{get\_shutter\_speed\_value@{get\_shutter\_speed\_value}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_shutter\_speed\_value()}{get\_shutter\_speed\_value()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a16faa277705f4f6fd048a31572bacc6c} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+shutter\+\_\+speed\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ad00ad4dc2f9675beeb3f0b53b20124bb}\index{cli::CameraDevice@{cli::CameraDevice}!get\_shutter\_type@{get\_shutter\_type}}
+\index{get\_shutter\_type@{get\_shutter\_type}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_shutter\_type()}{get\_shutter\_type()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad00ad4dc2f9675beeb3f0b53b20124bb} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+shutter\+\_\+type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a3414b751ffb7ff72e520c1760b67bac8}\index{cli::CameraDevice@{cli::CameraDevice}!get\_silent\_mode@{get\_silent\_mode}}
+\index{get\_silent\_mode@{get\_silent\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_silent\_mode()}{get\_silent\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a3414b751ffb7ff72e520c1760b67bac8} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+silent\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a638d3f1996ffd43e622230941376c17b}\index{cli::CameraDevice@{cli::CameraDevice}!get\_silent\_mode\_aperture\_drive\_in\_af@{get\_silent\_mode\_aperture\_drive\_in\_af}}
+\index{get\_silent\_mode\_aperture\_drive\_in\_af@{get\_silent\_mode\_aperture\_drive\_in\_af}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_silent\_mode\_aperture\_drive\_in\_af()}{get\_silent\_mode\_aperture\_drive\_in\_af()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a638d3f1996ffd43e622230941376c17b} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+silent\+\_\+mode\+\_\+aperture\+\_\+drive\+\_\+in\+\_\+af (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a13a27f69ce3c7e1bad3969d56d00058c}\index{cli::CameraDevice@{cli::CameraDevice}!get\_silent\_mode\_auto\_pixel\_mapping@{get\_silent\_mode\_auto\_pixel\_mapping}}
+\index{get\_silent\_mode\_auto\_pixel\_mapping@{get\_silent\_mode\_auto\_pixel\_mapping}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_silent\_mode\_auto\_pixel\_mapping()}{get\_silent\_mode\_auto\_pixel\_mapping()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a13a27f69ce3c7e1bad3969d56d00058c} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+silent\+\_\+mode\+\_\+auto\+\_\+pixel\+\_\+mapping (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a91f9309a90656247500011e2e260206d}\index{cli::CameraDevice@{cli::CameraDevice}!get\_silent\_mode\_shutter\_when\_power\_off@{get\_silent\_mode\_shutter\_when\_power\_off}}
+\index{get\_silent\_mode\_shutter\_when\_power\_off@{get\_silent\_mode\_shutter\_when\_power\_off}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_silent\_mode\_shutter\_when\_power\_off()}{get\_silent\_mode\_shutter\_when\_power\_off()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a91f9309a90656247500011e2e260206d} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+silent\+\_\+mode\+\_\+shutter\+\_\+when\+\_\+power\+\_\+off (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a26e02dece0ec92b217c76fc690715243}\index{cli::CameraDevice@{cli::CameraDevice}!get\_sshsupport@{get\_sshsupport}}
+\index{get\_sshsupport@{get\_sshsupport}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_sshsupport()}{get\_sshsupport()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a26e02dece0ec92b217c76fc690715243} 
+Cr\+Int32u cli\+::\+Camera\+Device\+::get\+\_\+sshsupport (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a88c81de24bdb4c7ccb2d0079e437b642}\index{cli::CameraDevice@{cli::CameraDevice}!get\_still\_capture\_mode@{get\_still\_capture\_mode}}
+\index{get\_still\_capture\_mode@{get\_still\_capture\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_still\_capture\_mode()}{get\_still\_capture\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a88c81de24bdb4c7ccb2d0079e437b642} 
+void cli\+::\+Camera\+Device\+::get\+\_\+still\+\_\+capture\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a36188089d7cdd2e2a8eaf1b99fc635ff}\index{cli::CameraDevice@{cli::CameraDevice}!get\_time\_shift\_shooting@{get\_time\_shift\_shooting}}
+\index{get\_time\_shift\_shooting@{get\_time\_shift\_shooting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_time\_shift\_shooting()}{get\_time\_shift\_shooting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a36188089d7cdd2e2a8eaf1b99fc635ff} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+time\+\_\+shift\+\_\+shooting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_abbfa94056030343355ca765465d0a2da}\index{cli::CameraDevice@{cli::CameraDevice}!get\_timezone\_setting@{get\_timezone\_setting}}
+\index{get\_timezone\_setting@{get\_timezone\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_timezone\_setting()}{get\_timezone\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_abbfa94056030343355ca765465d0a2da} 
+void cli\+::\+Camera\+Device\+::get\+\_\+timezone\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aff533d034eee5b6aa6b3485543fd5532}\index{cli::CameraDevice@{cli::CameraDevice}!get\_white\_balance@{get\_white\_balance}}
+\index{get\_white\_balance@{get\_white\_balance}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_white\_balance()}{get\_white\_balance()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aff533d034eee5b6aa6b3485543fd5532} 
+void cli\+::\+Camera\+Device\+::get\+\_\+white\+\_\+balance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae2b1fe8c2a7ab4fba85ec86cc5984d4e}\index{cli::CameraDevice@{cli::CameraDevice}!get\_white\_balance\_tint@{get\_white\_balance\_tint}}
+\index{get\_white\_balance\_tint@{get\_white\_balance\_tint}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_white\_balance\_tint()}{get\_white\_balance\_tint()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae2b1fe8c2a7ab4fba85ec86cc5984d4e} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+white\+\_\+balance\+\_\+tint (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae4e9213e26b94c1de6ae14c21d1670b0}\index{cli::CameraDevice@{cli::CameraDevice}!get\_zoom\_operation@{get\_zoom\_operation}}
+\index{get\_zoom\_operation@{get\_zoom\_operation}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_zoom\_operation()}{get\_zoom\_operation()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae4e9213e26b94c1de6ae14c21d1670b0} 
+void cli\+::\+Camera\+Device\+::get\+\_\+zoom\+\_\+operation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ad70d4ce92aa86a7b402d023f0169e07a}\index{cli::CameraDevice@{cli::CameraDevice}!get\_zoom\_position\_setting@{get\_zoom\_position\_setting}}
+\index{get\_zoom\_position\_setting@{get\_zoom\_position\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{get\_zoom\_position\_setting()}{get\_zoom\_position\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad70d4ce92aa86a7b402d023f0169e07a} 
+bool cli\+::\+Camera\+Device\+::get\+\_\+zoom\+\_\+position\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a81b9b0608c6b77c582df3c62a66eb112}\index{cli::CameraDevice@{cli::CameraDevice}!getContentsInfoMovie@{getContentsInfoMovie}}
+\index{getContentsInfoMovie@{getContentsInfoMovie}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getContentsInfoMovie()}{getContentsInfoMovie()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a81b9b0608c6b77c582df3c62a66eb112} 
+bool cli\+::\+Camera\+Device\+::get\+Contents\+Info\+Movie (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Slot\+Number \texorpdfstring{$\ast$}{*}}]{slot\+Id}{, }\item[{Cr\+Int32u \texorpdfstring{$\ast$}{*}}]{contents\+Id}{, }\item[{Cr\+Int32u \texorpdfstring{$\ast$}{*}}]{file\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_acac94110e6b03a376339dff2a26a321e}\index{cli::CameraDevice@{cli::CameraDevice}!getContentsList@{getContentsList}}
+\index{getContentsList@{getContentsList}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getContentsList()}{getContentsList()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_acac94110e6b03a376339dff2a26a321e} 
+void cli\+::\+Camera\+Device\+::get\+Contents\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ad171c23a7f6f30b225786706c22bf492}\index{cli::CameraDevice@{cli::CameraDevice}!getCurrentStr@{getCurrentStr}}
+\index{getCurrentStr@{getCurrentStr}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getCurrentStr()}{getCurrentStr()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad171c23a7f6f30b225786706c22bf492} 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} cli\+::\+Camera\+Device\+::get\+Current\+Str (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Device\+Property \texorpdfstring{$\ast$}{*}}]{prop}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ac4fb281cbd3202d1f292af6b9226b40d}\index{cli::CameraDevice@{cli::CameraDevice}!getFileNames@{getFileNames}}
+\index{getFileNames@{getFileNames}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getFileNames()}{getFileNames()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac4fb281cbd3202d1f292af6b9226b40d} 
+void cli\+::\+Camera\+Device\+::get\+File\+Names (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} $>$ \&}]{file\+\_\+names}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2ede3cc3fb308396acf484cef55514cd}\index{cli::CameraDevice@{cli::CameraDevice}!getfingerprint@{getfingerprint}}
+\index{getfingerprint@{getfingerprint}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getfingerprint()}{getfingerprint()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2ede3cc3fb308396acf484cef55514cd} 
+bool cli\+::\+Camera\+Device\+::getfingerprint (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a6f6e863ca85b565702d9577e1405abd1}\index{cli::CameraDevice@{cli::CameraDevice}!getMoviePlaybackSetting@{getMoviePlaybackSetting}}
+\index{getMoviePlaybackSetting@{getMoviePlaybackSetting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getMoviePlaybackSetting()}{getMoviePlaybackSetting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a6f6e863ca85b565702d9577e1405abd1} 
+void cli\+::\+Camera\+Device\+::get\+Movie\+Playback\+Setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae6a94e3b4b380aae767ea204668b6b0a}\index{cli::CameraDevice@{cli::CameraDevice}!getMoviePlaybackStatus@{getMoviePlaybackStatus}}
+\index{getMoviePlaybackStatus@{getMoviePlaybackStatus}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getMoviePlaybackStatus()}{getMoviePlaybackStatus()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae6a94e3b4b380aae767ea204668b6b0a} 
+void cli\+::\+Camera\+Device\+::get\+Movie\+Playback\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a91a3fee6465be85b0f744f78b3a3852c}\index{cli::CameraDevice@{cli::CameraDevice}!getScreennail@{getScreennail}}
+\index{getScreennail@{getScreennail}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getScreennail()}{getScreennail()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a91a3fee6465be85b0f744f78b3a3852c} 
+void cli\+::\+Camera\+Device\+::get\+Screennail (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Content\+Handle}]{content}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7b6a3526b0e2b421ea0388d7b3278d3e}\index{cli::CameraDevice@{cli::CameraDevice}!getThumbnail@{getThumbnail}}
+\index{getThumbnail@{getThumbnail}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{getThumbnail()}{getThumbnail()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7b6a3526b0e2b421ea0388d7b3278d3e} 
+void cli\+::\+Camera\+Device\+::get\+Thumbnail (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Content\+Handle}]{content}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_abdf41ecfa76836dccbfe9539afa241d9}\index{cli::CameraDevice@{cli::CameraDevice}!is\_connected@{is\_connected}}
+\index{is\_connected@{is\_connected}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{is\_connected()}{is\_connected()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_abdf41ecfa76836dccbfe9539afa241d9} 
+bool cli\+::\+Camera\+Device\+::is\+\_\+connected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classcli_1_1_camera_device_a3173211c0ebf3f51b7d614aa0a8848f6}\index{cli::CameraDevice@{cli::CameraDevice}!is\_getfingerprint@{is\_getfingerprint}}
+\index{is\_getfingerprint@{is\_getfingerprint}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{is\_getfingerprint()}{is\_getfingerprint()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a3173211c0ebf3f51b7d614aa0a8848f6} 
+bool cli\+::\+Camera\+Device\+::is\+\_\+getfingerprint (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcli_1_1_camera_device_a2c4471f77d807543b083500619aafab1}\index{cli::CameraDevice@{cli::CameraDevice}!is\_live\_view\_enable@{is\_live\_view\_enable}}
+\index{is\_live\_view\_enable@{is\_live\_view\_enable}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{is\_live\_view\_enable()}{is\_live\_view\_enable()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2c4471f77d807543b083500619aafab1} 
+bool cli\+::\+Camera\+Device\+::is\+\_\+live\+\_\+view\+\_\+enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcli_1_1_camera_device_a0d11ca231f14538d2a8cc63ad427e537}\index{cli::CameraDevice@{cli::CameraDevice}!is\_setpassword@{is\_setpassword}}
+\index{is\_setpassword@{is\_setpassword}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{is\_setpassword()}{is\_setpassword()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0d11ca231f14538d2a8cc63ad427e537} 
+bool cli\+::\+Camera\+Device\+::is\+\_\+setpassword (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcli_1_1_camera_device_a67c9c755268f21c9f2bb5edf3c003423}\index{cli::CameraDevice@{cli::CameraDevice}!isMonitoringFunctionSupport@{isMonitoringFunctionSupport}}
+\index{isMonitoringFunctionSupport@{isMonitoringFunctionSupport}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{isMonitoringFunctionSupport()}{isMonitoringFunctionSupport()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a67c9c755268f21c9f2bb5edf3c003423} 
+bool cli\+::\+Camera\+Device\+::is\+Monitoring\+Function\+Support (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aa723d9746ccb75d41cee1079784ffebb}\index{cli::CameraDevice@{cli::CameraDevice}!isMoviePlaybackFunctionSupport@{isMoviePlaybackFunctionSupport}}
+\index{isMoviePlaybackFunctionSupport@{isMoviePlaybackFunctionSupport}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{isMoviePlaybackFunctionSupport()}{isMoviePlaybackFunctionSupport()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa723d9746ccb75d41cee1079784ffebb} 
+bool cli\+::\+Camera\+Device\+::is\+Movie\+Playback\+Function\+Support (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a26742717e752a2f0476c5b8c6dd9dae3}\index{cli::CameraDevice@{cli::CameraDevice}!load\_properties@{load\_properties}}
+\index{load\_properties@{load\_properties}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{load\_properties()}{load\_properties()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a26742717e752a2f0476c5b8c6dd9dae3} 
+void cli\+::\+Camera\+Device\+::load\+\_\+properties (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{num}{ = {\ttfamily 0}, }\item[{Cr\+Int32u \texorpdfstring{$\ast$}{*}}]{codes}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ab79276c067a373c00ecda0383de0ad34}\index{cli::CameraDevice@{cli::CameraDevice}!OnCompleteDownload@{OnCompleteDownload}}
+\index{OnCompleteDownload@{OnCompleteDownload}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnCompleteDownload()}{OnCompleteDownload()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab79276c067a373c00ecda0383de0ad34} 
+void cli\+::\+Camera\+Device\+::\+On\+Complete\+Download (\begin{DoxyParamCaption}\item[{Cr\+Char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{Cr\+Int32u}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a451f5480a7155a191799b89030f3e6c4}\index{cli::CameraDevice@{cli::CameraDevice}!OnConnected@{OnConnected}}
+\index{OnConnected@{OnConnected}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnConnected()}{OnConnected()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a451f5480a7155a191799b89030f3e6c4} 
+void cli\+::\+Camera\+Device\+::\+On\+Connected (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Device\+Connection\+Versioin}]{version}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_aa98f4e013a2493cb7f46cdd3298a037d}\index{cli::CameraDevice@{cli::CameraDevice}!OnDisconnected@{OnDisconnected}}
+\index{OnDisconnected@{OnDisconnected}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnDisconnected()}{OnDisconnected()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa98f4e013a2493cb7f46cdd3298a037d} 
+void cli\+::\+Camera\+Device\+::\+On\+Disconnected (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a9b4ea5df75fd3dfc82388e09f951aca5}\index{cli::CameraDevice@{cli::CameraDevice}!OnError@{OnError}}
+\index{OnError@{OnError}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnError()}{OnError()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a9b4ea5df75fd3dfc82388e09f951aca5} 
+void cli\+::\+Camera\+Device\+::\+On\+Error (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_aee6bcefe41e5e649cd6ca52980e867a2}\index{cli::CameraDevice@{cli::CameraDevice}!OnLvPropertyChanged@{OnLvPropertyChanged}}
+\index{OnLvPropertyChanged@{OnLvPropertyChanged}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnLvPropertyChanged()}{OnLvPropertyChanged()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aee6bcefe41e5e649cd6ca52980e867a2} 
+void cli\+::\+Camera\+Device\+::\+On\+Lv\+Property\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a5e51a72d06129b2faa4f0bbdff5dd303}\index{cli::CameraDevice@{cli::CameraDevice}!OnLvPropertyChangedCodes@{OnLvPropertyChangedCodes}}
+\index{OnLvPropertyChangedCodes@{OnLvPropertyChangedCodes}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnLvPropertyChangedCodes()}{OnLvPropertyChangedCodes()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5e51a72d06129b2faa4f0bbdff5dd303} 
+void cli\+::\+Camera\+Device\+::\+On\+Lv\+Property\+Changed\+Codes (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{num}{, }\item[{Cr\+Int32u \texorpdfstring{$\ast$}{*}}]{codes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_acebe9eeeb65df817243cbae78c0761c4}\index{cli::CameraDevice@{cli::CameraDevice}!OnNotifyContentsTransfer@{OnNotifyContentsTransfer}}
+\index{OnNotifyContentsTransfer@{OnNotifyContentsTransfer}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnNotifyContentsTransfer()}{OnNotifyContentsTransfer()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_acebe9eeeb65df817243cbae78c0761c4} 
+void cli\+::\+Camera\+Device\+::\+On\+Notify\+Contents\+Transfer (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{notify}{, }\item[{SCRSDK\+::\+Cr\+Content\+Handle}]{content\+Handle}{, }\item[{Cr\+Char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a3a8fea0e39355717aae2c60db166ca2a}\index{cli::CameraDevice@{cli::CameraDevice}!OnNotifyFTPTransferResult@{OnNotifyFTPTransferResult}}
+\index{OnNotifyFTPTransferResult@{OnNotifyFTPTransferResult}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnNotifyFTPTransferResult()}{OnNotifyFTPTransferResult()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a3a8fea0e39355717aae2c60db166ca2a} 
+void cli\+::\+Camera\+Device\+::\+On\+Notify\+FTPTransfer\+Result (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{notify}{, }\item[{Cr\+Int32u}]{num\+Of\+Success}{, }\item[{Cr\+Int32u}]{num\+Of\+Fail}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_ae6721b54faeb71675f9bda529de1a3af}\index{cli::CameraDevice@{cli::CameraDevice}!OnNotifyRemoteFirmwareUpdateResult@{OnNotifyRemoteFirmwareUpdateResult}}
+\index{OnNotifyRemoteFirmwareUpdateResult@{OnNotifyRemoteFirmwareUpdateResult}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnNotifyRemoteFirmwareUpdateResult()}{OnNotifyRemoteFirmwareUpdateResult()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae6721b54faeb71675f9bda529de1a3af} 
+void cli\+::\+Camera\+Device\+::\+On\+Notify\+Remote\+Firmware\+Update\+Result (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{notify}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{param}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a5ae363845ac2a4ba0fcb4843560dd6ec}\index{cli::CameraDevice@{cli::CameraDevice}!OnNotifyRemoteTransferContentsListChanged@{OnNotifyRemoteTransferContentsListChanged}}
+\index{OnNotifyRemoteTransferContentsListChanged@{OnNotifyRemoteTransferContentsListChanged}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnNotifyRemoteTransferContentsListChanged()}{OnNotifyRemoteTransferContentsListChanged()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5ae363845ac2a4ba0fcb4843560dd6ec} 
+void cli\+::\+Camera\+Device\+::\+On\+Notify\+Remote\+Transfer\+Contents\+List\+Changed (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{notify}{, }\item[{Cr\+Int32u}]{slot\+Number}{, }\item[{Cr\+Int32u}]{add\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_aa7d44878742f72e53a7cd66e97958619}\index{cli::CameraDevice@{cli::CameraDevice}!OnNotifyRemoteTransferResult@{OnNotifyRemoteTransferResult}}
+\index{OnNotifyRemoteTransferResult@{OnNotifyRemoteTransferResult}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnNotifyRemoteTransferResult()}{OnNotifyRemoteTransferResult()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa7d44878742f72e53a7cd66e97958619} 
+void cli\+::\+Camera\+Device\+::\+On\+Notify\+Remote\+Transfer\+Result (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{notify}{, }\item[{Cr\+Int32u}]{per}{, }\item[{Cr\+Char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a17158199a2d4fca4ff80591f37a15d09}\index{cli::CameraDevice@{cli::CameraDevice}!OnNotifyRemoteTransferResult@{OnNotifyRemoteTransferResult}}
+\index{OnNotifyRemoteTransferResult@{OnNotifyRemoteTransferResult}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnNotifyRemoteTransferResult()}{OnNotifyRemoteTransferResult()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a17158199a2d4fca4ff80591f37a15d09} 
+void cli\+::\+Camera\+Device\+::\+On\+Notify\+Remote\+Transfer\+Result (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{notify}{, }\item[{Cr\+Int32u}]{per}{, }\item[{Cr\+Int8u \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{Cr\+Int64u}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_ab41da7073366376f1a7354171a9728d5}\index{cli::CameraDevice@{cli::CameraDevice}!OnPropertyChanged@{OnPropertyChanged}}
+\index{OnPropertyChanged@{OnPropertyChanged}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChanged()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab41da7073366376f1a7354171a9728d5} 
+void cli\+::\+Camera\+Device\+::\+On\+Property\+Changed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a4912a9dd84a7aa56f7c6036a646b3d01}\index{cli::CameraDevice@{cli::CameraDevice}!OnPropertyChangedCodes@{OnPropertyChangedCodes}}
+\index{OnPropertyChangedCodes@{OnPropertyChangedCodes}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChangedCodes()}{OnPropertyChangedCodes()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a4912a9dd84a7aa56f7c6036a646b3d01} 
+void cli\+::\+Camera\+Device\+::\+On\+Property\+Changed\+Codes (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{num}{, }\item[{Cr\+Int32u \texorpdfstring{$\ast$}{*}}]{codes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a56bde3fe8e9e85d237d590fc83de02df}\index{cli::CameraDevice@{cli::CameraDevice}!OnReceivePlaybackData@{OnReceivePlaybackData}}
+\index{OnReceivePlaybackData@{OnReceivePlaybackData}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnReceivePlaybackData()}{OnReceivePlaybackData()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a56bde3fe8e9e85d237d590fc83de02df} 
+void cli\+::\+Camera\+Device\+::\+On\+Receive\+Playback\+Data (\begin{DoxyParamCaption}\item[{Cr\+Int8u}]{media\+Type}{, }\item[{Cr\+Int32}]{data\+Size}{, }\item[{Cr\+Int8u \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{Cr\+Int64}]{pts}{, }\item[{Cr\+Int64}]{dts}{, }\item[{Cr\+Int32}]{param1}{, }\item[{Cr\+Int32}]{param2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_af644139e9fd8d1cafc11b929d57f13da}\index{cli::CameraDevice@{cli::CameraDevice}!OnReceivePlaybackTimeCode@{OnReceivePlaybackTimeCode}}
+\index{OnReceivePlaybackTimeCode@{OnReceivePlaybackTimeCode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnReceivePlaybackTimeCode()}{OnReceivePlaybackTimeCode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_af644139e9fd8d1cafc11b929d57f13da} 
+void cli\+::\+Camera\+Device\+::\+On\+Receive\+Playback\+Time\+Code (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{time\+Code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_a0d61c4a1f5d117c2f26e3e6ef5b87edf}\index{cli::CameraDevice@{cli::CameraDevice}!OnWarning@{OnWarning}}
+\index{OnWarning@{OnWarning}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnWarning()}{OnWarning()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0d61c4a1f5d117c2f26e3e6ef5b87edf} 
+void cli\+::\+Camera\+Device\+::\+On\+Warning (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{warning}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_ac63cbe4aa97459d54ec8eabb3eea0c89}\index{cli::CameraDevice@{cli::CameraDevice}!OnWarningExt@{OnWarningExt}}
+\index{OnWarningExt@{OnWarningExt}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{OnWarningExt()}{OnWarningExt()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac63cbe4aa97459d54ec8eabb3eea0c89} 
+void cli\+::\+Camera\+Device\+::\+On\+Warning\+Ext (\begin{DoxyParamCaption}\item[{Cr\+Int32u}]{warning}{, }\item[{Cr\+Int32}]{param1}{, }\item[{Cr\+Int32}]{param2}{, }\item[{Cr\+Int32}]{param3}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classcli_1_1_camera_device_abc41b7af1f7adb476faff0984b4fe078}\index{cli::CameraDevice@{cli::CameraDevice}!printOtherInfo@{printOtherInfo}}
+\index{printOtherInfo@{printOtherInfo}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{printOtherInfo()}{printOtherInfo()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_abc41b7af1f7adb476faff0984b4fe078} 
+void cli\+::\+Camera\+Device\+::print\+Other\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ac0da1cdcd418fef01138ad006bcd6be8}\index{cli::CameraDevice@{cli::CameraDevice}!pullContents@{pullContents}}
+\index{pullContents@{pullContents}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{pullContents()}{pullContents()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac0da1cdcd418fef01138ad006bcd6be8} 
+void cli\+::\+Camera\+Device\+::pull\+Contents (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Content\+Handle}]{content}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7e0dd28b99cd855dae27190b9db2aa3f}\index{cli::CameraDevice@{cli::CameraDevice}!release@{release}}
+\index{release@{release}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7e0dd28b99cd855dae27190b9db2aa3f} 
+bool cli\+::\+Camera\+Device\+::release (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aa69c4e245241f9361abd0d6e422b1142}\index{cli::CameraDevice@{cli::CameraDevice}!release\_contents\_info@{release\_contents\_info}}
+\index{release\_contents\_info@{release\_contents\_info}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{release\_contents\_info()}{release\_contents\_info()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa69c4e245241f9361abd0d6e422b1142} 
+void cli\+::\+Camera\+Device\+::release\+\_\+contents\+\_\+info (\begin{DoxyParamCaption}\item[{int}]{slot\+Index}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a75fd8d0c7676509b5f2b2e7d948683d4}\index{cli::CameraDevice@{cli::CameraDevice}!request\_timezone\_setting@{request\_timezone\_setting}}
+\index{request\_timezone\_setting@{request\_timezone\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{request\_timezone\_setting()}{request\_timezone\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a75fd8d0c7676509b5f2b2e7d948683d4} 
+void cli\+::\+Camera\+Device\+::request\+\_\+timezone\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae769ab8738ba6ee1464a42b559e1129c}\index{cli::CameraDevice@{cli::CameraDevice}!requestMoviePlaybackStatus@{requestMoviePlaybackStatus}}
+\index{requestMoviePlaybackStatus@{requestMoviePlaybackStatus}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{requestMoviePlaybackStatus()}{requestMoviePlaybackStatus()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae769ab8738ba6ee1464a42b559e1129c} 
+void cli\+::\+Camera\+Device\+::request\+Movie\+Playback\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a8287e667aa6dcad74c70be6c997c2308}\index{cli::CameraDevice@{cli::CameraDevice}!s1\_shooting@{s1\_shooting}}
+\index{s1\_shooting@{s1\_shooting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{s1\_shooting()}{s1\_shooting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8287e667aa6dcad74c70be6c997c2308} 
+void cli\+::\+Camera\+Device\+::s1\+\_\+shooting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classcli_1_1_camera_device_a93273803bffff8fc323a0554207ab9e7}\index{cli::CameraDevice@{cli::CameraDevice}!set\_af\_area\_position@{set\_af\_area\_position}}
+\index{set\_af\_area\_position@{set\_af\_area\_position}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_af\_area\_position()}{set\_af\_area\_position()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a93273803bffff8fc323a0554207ab9e7} 
+void cli\+::\+Camera\+Device\+::set\+\_\+af\+\_\+area\+\_\+position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a9adcbfb3493bbc46ed511e131505e499}\index{cli::CameraDevice@{cli::CameraDevice}!set\_aperture@{set\_aperture}}
+\index{set\_aperture@{set\_aperture}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_aperture()}{set\_aperture()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a9adcbfb3493bbc46ed511e131505e499} 
+void cli\+::\+Camera\+Device\+::set\+\_\+aperture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7a0d49154619c031588251ea35cb2629}\index{cli::CameraDevice@{cli::CameraDevice}!set\_baselook\_value@{set\_baselook\_value}}
+\index{set\_baselook\_value@{set\_baselook\_value}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_baselook\_value()}{set\_baselook\_value()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7a0d49154619c031588251ea35cb2629} 
+void cli\+::\+Camera\+Device\+::set\+\_\+baselook\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a31bd578c07f5d45692e29c9209b245fb}\index{cli::CameraDevice@{cli::CameraDevice}!set\_custom\_wb@{set\_custom\_wb}}
+\index{set\_custom\_wb@{set\_custom\_wb}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_custom\_wb()}{set\_custom\_wb()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a31bd578c07f5d45692e29c9209b245fb} 
+void cli\+::\+Camera\+Device\+::set\+\_\+custom\+\_\+wb (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a385afab18e01296aa63b9c23891afb6e}\index{cli::CameraDevice@{cli::CameraDevice}!set\_custom\_wb\_size\_setting@{set\_custom\_wb\_size\_setting}}
+\index{set\_custom\_wb\_size\_setting@{set\_custom\_wb\_size\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_custom\_wb\_size\_setting()}{set\_custom\_wb\_size\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a385afab18e01296aa63b9c23891afb6e} 
+void cli\+::\+Camera\+Device\+::set\+\_\+custom\+\_\+wb\+\_\+size\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a8ecc806aa683c632a568a7e782ea7239}\index{cli::CameraDevice@{cli::CameraDevice}!set\_debug\_mode@{set\_debug\_mode}}
+\index{set\_debug\_mode@{set\_debug\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_debug\_mode()}{set\_debug\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8ecc806aa683c632a568a7e782ea7239} 
+void cli\+::\+Camera\+Device\+::set\+\_\+debug\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ad667e5414fb8f9d285ebe8ce641bdd5e}\index{cli::CameraDevice@{cli::CameraDevice}!set\_dispmode@{set\_dispmode}}
+\index{set\_dispmode@{set\_dispmode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_dispmode()}{set\_dispmode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad667e5414fb8f9d285ebe8ce641bdd5e} 
+void cli\+::\+Camera\+Device\+::set\+\_\+dispmode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a61556daaea61f08b0f342ffdcbcca9ac}\index{cli::CameraDevice@{cli::CameraDevice}!set\_drive\_mode@{set\_drive\_mode}}
+\index{set\_drive\_mode@{set\_drive\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_drive\_mode()}{set\_drive\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a61556daaea61f08b0f342ffdcbcca9ac} 
+bool cli\+::\+Camera\+Device\+::set\+\_\+drive\+\_\+mode (\begin{DoxyParamCaption}\item[{Cr\+Int64u}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a8d383d996167064bef0ca47ec6e9d958}\index{cli::CameraDevice@{cli::CameraDevice}!set\_enable\_get\_osd\_image@{set\_enable\_get\_osd\_image}}
+\index{set\_enable\_get\_osd\_image@{set\_enable\_get\_osd\_image}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_enable\_get\_osd\_image()}{set\_enable\_get\_osd\_image()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8d383d996167064bef0ca47ec6e9d958} 
+void cli\+::\+Camera\+Device\+::set\+\_\+enable\+\_\+get\+\_\+osd\+\_\+image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_af8fdc0442295f17590f80289036d88a1}\index{cli::CameraDevice@{cli::CameraDevice}!set\_exposure\_control\_type@{set\_exposure\_control\_type}}
+\index{set\_exposure\_control\_type@{set\_exposure\_control\_type}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_exposure\_control\_type()}{set\_exposure\_control\_type()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_af8fdc0442295f17590f80289036d88a1} 
+void cli\+::\+Camera\+Device\+::set\+\_\+exposure\+\_\+control\+\_\+type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7ccea4f50a8843fce988b05caafeb298}\index{cli::CameraDevice@{cli::CameraDevice}!set\_exposure\_index@{set\_exposure\_index}}
+\index{set\_exposure\_index@{set\_exposure\_index}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_exposure\_index()}{set\_exposure\_index()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7ccea4f50a8843fce988b05caafeb298} 
+void cli\+::\+Camera\+Device\+::set\+\_\+exposure\+\_\+index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a1f6012536b33cdb8f4c8a80f2a7db150}\index{cli::CameraDevice@{cli::CameraDevice}!set\_exposure\_program\_mode@{set\_exposure\_program\_mode}}
+\index{set\_exposure\_program\_mode@{set\_exposure\_program\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_exposure\_program\_mode()}{set\_exposure\_program\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1f6012536b33cdb8f4c8a80f2a7db150} 
+void cli\+::\+Camera\+Device\+::set\+\_\+exposure\+\_\+program\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a4f28e24f7fe7c216898b7a0719e389ed}\index{cli::CameraDevice@{cli::CameraDevice}!set\_extended\_shutter\_speed@{set\_extended\_shutter\_speed}}
+\index{set\_extended\_shutter\_speed@{set\_extended\_shutter\_speed}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_extended\_shutter\_speed()}{set\_extended\_shutter\_speed()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a4f28e24f7fe7c216898b7a0719e389ed} 
+void cli\+::\+Camera\+Device\+::set\+\_\+extended\+\_\+shutter\+\_\+speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_abeab99832f8dea6209ffd0989c946ce9}\index{cli::CameraDevice@{cli::CameraDevice}!set\_focus\_area@{set\_focus\_area}}
+\index{set\_focus\_area@{set\_focus\_area}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_focus\_area()}{set\_focus\_area()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_abeab99832f8dea6209ffd0989c946ce9} 
+void cli\+::\+Camera\+Device\+::set\+\_\+focus\+\_\+area (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ade01f02652081a1c45c344bc00ab3fec}\index{cli::CameraDevice@{cli::CameraDevice}!set\_focus\_bracket\_focus\_range@{set\_focus\_bracket\_focus\_range}}
+\index{set\_focus\_bracket\_focus\_range@{set\_focus\_bracket\_focus\_range}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_focus\_bracket\_focus\_range()}{set\_focus\_bracket\_focus\_range()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ade01f02652081a1c45c344bc00ab3fec} 
+void cli\+::\+Camera\+Device\+::set\+\_\+focus\+\_\+bracket\+\_\+focus\+\_\+range (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_afa26d3f8fc8acc0e884e088ef77edc05}\index{cli::CameraDevice@{cli::CameraDevice}!set\_focus\_bracket\_shot\_num@{set\_focus\_bracket\_shot\_num}}
+\index{set\_focus\_bracket\_shot\_num@{set\_focus\_bracket\_shot\_num}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_focus\_bracket\_shot\_num()}{set\_focus\_bracket\_shot\_num()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_afa26d3f8fc8acc0e884e088ef77edc05} 
+void cli\+::\+Camera\+Device\+::set\+\_\+focus\+\_\+bracket\+\_\+shot\+\_\+num (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a81b2f323dc1a15dfe3150a87ce04f439}\index{cli::CameraDevice@{cli::CameraDevice}!set\_focus\_mode@{set\_focus\_mode}}
+\index{set\_focus\_mode@{set\_focus\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_focus\_mode()}{set\_focus\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a81b2f323dc1a15dfe3150a87ce04f439} 
+void cli\+::\+Camera\+Device\+::set\+\_\+focus\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a75333e0b75f72e64d4fd6dcfcc216eb6}\index{cli::CameraDevice@{cli::CameraDevice}!set\_focus\_position\_setting@{set\_focus\_position\_setting}}
+\index{set\_focus\_position\_setting@{set\_focus\_position\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_focus\_position\_setting()}{set\_focus\_position\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a75333e0b75f72e64d4fd6dcfcc216eb6} 
+void cli\+::\+Camera\+Device\+::set\+\_\+focus\+\_\+position\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a0b638d25dea4110bcd6fbc2fed956b34}\index{cli::CameraDevice@{cli::CameraDevice}!set\_gain\_base\_iso\_sensitivity@{set\_gain\_base\_iso\_sensitivity}}
+\index{set\_gain\_base\_iso\_sensitivity@{set\_gain\_base\_iso\_sensitivity}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_gain\_base\_iso\_sensitivity()}{set\_gain\_base\_iso\_sensitivity()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0b638d25dea4110bcd6fbc2fed956b34} 
+void cli\+::\+Camera\+Device\+::set\+\_\+gain\+\_\+base\+\_\+iso\+\_\+sensitivity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a1a701e26f595ea0cefdf9aeefbe56ed5}\index{cli::CameraDevice@{cli::CameraDevice}!set\_gain\_base\_sensitivity@{set\_gain\_base\_sensitivity}}
+\index{set\_gain\_base\_sensitivity@{set\_gain\_base\_sensitivity}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_gain\_base\_sensitivity()}{set\_gain\_base\_sensitivity()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1a701e26f595ea0cefdf9aeefbe56ed5} 
+void cli\+::\+Camera\+Device\+::set\+\_\+gain\+\_\+base\+\_\+sensitivity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_afbba03783725d600a6a2bc01953d6322}\index{cli::CameraDevice@{cli::CameraDevice}!set\_gain\_control\_setting@{set\_gain\_control\_setting}}
+\index{set\_gain\_control\_setting@{set\_gain\_control\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_gain\_control\_setting()}{set\_gain\_control\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_afbba03783725d600a6a2bc01953d6322} 
+void cli\+::\+Camera\+Device\+::set\+\_\+gain\+\_\+control\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aae166c25f47a263e81f6c5d669553277}\index{cli::CameraDevice@{cli::CameraDevice}!set\_gain\_db\_value@{set\_gain\_db\_value}}
+\index{set\_gain\_db\_value@{set\_gain\_db\_value}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_gain\_db\_value()}{set\_gain\_db\_value()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aae166c25f47a263e81f6c5d669553277} 
+void cli\+::\+Camera\+Device\+::set\+\_\+gain\+\_\+db\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a0033a24b77e534373e71a9bed135971f}\index{cli::CameraDevice@{cli::CameraDevice}!set\_image\_stabilization\_steady\_shot@{set\_image\_stabilization\_steady\_shot}}
+\index{set\_image\_stabilization\_steady\_shot@{set\_image\_stabilization\_steady\_shot}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_image\_stabilization\_steady\_shot()}{set\_image\_stabilization\_steady\_shot()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0033a24b77e534373e71a9bed135971f} 
+void cli\+::\+Camera\+Device\+::set\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a75382fa4c53c5797380453e2e0ec303a}\index{cli::CameraDevice@{cli::CameraDevice}!set\_iris\_mode\_setting@{set\_iris\_mode\_setting}}
+\index{set\_iris\_mode\_setting@{set\_iris\_mode\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_iris\_mode\_setting()}{set\_iris\_mode\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a75382fa4c53c5797380453e2e0ec303a} 
+void cli\+::\+Camera\+Device\+::set\+\_\+iris\+\_\+mode\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ab9233d76b7f01ff7f607aac5deda07c6}\index{cli::CameraDevice@{cli::CameraDevice}!set\_iso@{set\_iso}}
+\index{set\_iso@{set\_iso}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_iso()}{set\_iso()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab9233d76b7f01ff7f607aac5deda07c6} 
+void cli\+::\+Camera\+Device\+::set\+\_\+iso (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae457cbf2b21f14a33f0b29722ee7cdde}\index{cli::CameraDevice@{cli::CameraDevice}!set\_live\_view\_image\_quality@{set\_live\_view\_image\_quality}}
+\index{set\_live\_view\_image\_quality@{set\_live\_view\_image\_quality}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_live\_view\_image\_quality()}{set\_live\_view\_image\_quality()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae457cbf2b21f14a33f0b29722ee7cdde} 
+void cli\+::\+Camera\+Device\+::set\+\_\+live\+\_\+view\+\_\+image\+\_\+quality (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aa6d5269881596c24869e03771c0c5d6d}\index{cli::CameraDevice@{cli::CameraDevice}!set\_monitor\_lut\_setting@{set\_monitor\_lut\_setting}}
+\index{set\_monitor\_lut\_setting@{set\_monitor\_lut\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_monitor\_lut\_setting()}{set\_monitor\_lut\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa6d5269881596c24869e03771c0c5d6d} 
+void cli\+::\+Camera\+Device\+::set\+\_\+monitor\+\_\+lut\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a15e2b874b01272b2a85ba9c02721fb8d}\index{cli::CameraDevice@{cli::CameraDevice}!set\_movie\_image\_stabilization\_steady\_shot@{set\_movie\_image\_stabilization\_steady\_shot}}
+\index{set\_movie\_image\_stabilization\_steady\_shot@{set\_movie\_image\_stabilization\_steady\_shot}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_movie\_image\_stabilization\_steady\_shot()}{set\_movie\_image\_stabilization\_steady\_shot()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a15e2b874b01272b2a85ba9c02721fb8d} 
+void cli\+::\+Camera\+Device\+::set\+\_\+movie\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a6d12152566baa3cd7cdb43149a76500d}\index{cli::CameraDevice@{cli::CameraDevice}!set\_movie\_shooting\_mode@{set\_movie\_shooting\_mode}}
+\index{set\_movie\_shooting\_mode@{set\_movie\_shooting\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_movie\_shooting\_mode()}{set\_movie\_shooting\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a6d12152566baa3cd7cdb43149a76500d} 
+void cli\+::\+Camera\+Device\+::set\+\_\+movie\+\_\+shooting\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a9319f3870af2668ea9e8ccc784b011e8}\index{cli::CameraDevice@{cli::CameraDevice}!set\_playback\_media@{set\_playback\_media}}
+\index{set\_playback\_media@{set\_playback\_media}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_playback\_media()}{set\_playback\_media()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a9319f3870af2668ea9e8ccc784b011e8} 
+void cli\+::\+Camera\+Device\+::set\+\_\+playback\+\_\+media (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7fe37b89bdb6a7360246ca1fb7b9bca7}\index{cli::CameraDevice@{cli::CameraDevice}!set\_position\_key\_setting@{set\_position\_key\_setting}}
+\index{set\_position\_key\_setting@{set\_position\_key\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_position\_key\_setting()}{set\_position\_key\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7fe37b89bdb6a7360246ca1fb7b9bca7} 
+void cli\+::\+Camera\+Device\+::set\+\_\+position\+\_\+key\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aa27413904344a420270ef2febc653156}\index{cli::CameraDevice@{cli::CameraDevice}!set\_property@{set\_property}}
+\index{set\_property@{set\_property}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_property()}{set\_property()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa27413904344a420270ef2febc653156} 
+bool cli\+::\+Camera\+Device\+::set\+\_\+property (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Device\+Property \&}]{prop}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a05592b3e900bdc12c7aa53c69be60f98}\index{cli::CameraDevice@{cli::CameraDevice}!set\_ptzf\_preset@{set\_ptzf\_preset}}
+\index{set\_ptzf\_preset@{set\_ptzf\_preset}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_ptzf\_preset()}{set\_ptzf\_preset()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a05592b3e900bdc12c7aa53c69be60f98} 
+void cli\+::\+Camera\+Device\+::set\+\_\+ptzf\+\_\+preset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a9a296ab1721435157485cc1aa288502d}\index{cli::CameraDevice@{cli::CameraDevice}!set\_recording\_setting@{set\_recording\_setting}}
+\index{set\_recording\_setting@{set\_recording\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_recording\_setting()}{set\_recording\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a9a296ab1721435157485cc1aa288502d} 
+void cli\+::\+Camera\+Device\+::set\+\_\+recording\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ab17c4c26d85bb64a510331e1dca6c8d2}\index{cli::CameraDevice@{cli::CameraDevice}!set\_recording\_setting\_file\_name@{set\_recording\_setting\_file\_name}}
+\index{set\_recording\_setting\_file\_name@{set\_recording\_setting\_file\_name}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_recording\_setting\_file\_name()}{set\_recording\_setting\_file\_name()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab17c4c26d85bb64a510331e1dca6c8d2} 
+void cli\+::\+Camera\+Device\+::set\+\_\+recording\+\_\+setting\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ac7b192fe9be85f54aef483da204d317f}\index{cli::CameraDevice@{cli::CameraDevice}!set\_remocon\_zoom\_speed\_type@{set\_remocon\_zoom\_speed\_type}}
+\index{set\_remocon\_zoom\_speed\_type@{set\_remocon\_zoom\_speed\_type}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_remocon\_zoom\_speed\_type()}{set\_remocon\_zoom\_speed\_type()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac7b192fe9be85f54aef483da204d317f} 
+void cli\+::\+Camera\+Device\+::set\+\_\+remocon\+\_\+zoom\+\_\+speed\+\_\+type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a5a998382848ba57f87745f449330d46e}\index{cli::CameraDevice@{cli::CameraDevice}!set\_save\_info@{set\_save\_info}}
+\index{set\_save\_info@{set\_save\_info}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_save\_info()}{set\_save\_info()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5a998382848ba57f87745f449330d46e} 
+bool cli\+::\+Camera\+Device\+::set\+\_\+save\+\_\+info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classcli_1_1_camera_device_ad0c8573b68db1936ae3ec3971ad5e9b5}\index{cli::CameraDevice@{cli::CameraDevice}!set\_select\_media\_format@{set\_select\_media\_format}}
+\index{set\_select\_media\_format@{set\_select\_media\_format}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_select\_media\_format()}{set\_select\_media\_format()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad0c8573b68db1936ae3ec3971ad5e9b5} 
+void cli\+::\+Camera\+Device\+::set\+\_\+select\+\_\+media\+\_\+format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a075a02f55a22c803d30cf826ef23a818}\index{cli::CameraDevice@{cli::CameraDevice}!set\_shutter\_mode\_setting@{set\_shutter\_mode\_setting}}
+\index{set\_shutter\_mode\_setting@{set\_shutter\_mode\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_shutter\_mode\_setting()}{set\_shutter\_mode\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a075a02f55a22c803d30cf826ef23a818} 
+void cli\+::\+Camera\+Device\+::set\+\_\+shutter\+\_\+mode\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a4344db9d2602e47e895f08aaeb5c3187}\index{cli::CameraDevice@{cli::CameraDevice}!set\_shutter\_speed@{set\_shutter\_speed}}
+\index{set\_shutter\_speed@{set\_shutter\_speed}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_shutter\_speed()}{set\_shutter\_speed()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a4344db9d2602e47e895f08aaeb5c3187} 
+void cli\+::\+Camera\+Device\+::set\+\_\+shutter\+\_\+speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a6b4afd8a3b769f6f61ddaf275143f91a}\index{cli::CameraDevice@{cli::CameraDevice}!set\_shutter\_speed\_value@{set\_shutter\_speed\_value}}
+\index{set\_shutter\_speed\_value@{set\_shutter\_speed\_value}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_shutter\_speed\_value()}{set\_shutter\_speed\_value()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a6b4afd8a3b769f6f61ddaf275143f91a} 
+void cli\+::\+Camera\+Device\+::set\+\_\+shutter\+\_\+speed\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aa424991098683da47c72bcf933b39568}\index{cli::CameraDevice@{cli::CameraDevice}!set\_shutter\_type@{set\_shutter\_type}}
+\index{set\_shutter\_type@{set\_shutter\_type}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_shutter\_type()}{set\_shutter\_type()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa424991098683da47c72bcf933b39568} 
+void cli\+::\+Camera\+Device\+::set\+\_\+shutter\+\_\+type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ab6b5d96f77d0923eb8fe827e9bede705}\index{cli::CameraDevice@{cli::CameraDevice}!set\_silent\_mode@{set\_silent\_mode}}
+\index{set\_silent\_mode@{set\_silent\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_silent\_mode()}{set\_silent\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab6b5d96f77d0923eb8fe827e9bede705} 
+void cli\+::\+Camera\+Device\+::set\+\_\+silent\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_aa18b7728a08ce05432f3bb4504a8bf18}\index{cli::CameraDevice@{cli::CameraDevice}!set\_silent\_mode\_aperture\_drive\_in\_af@{set\_silent\_mode\_aperture\_drive\_in\_af}}
+\index{set\_silent\_mode\_aperture\_drive\_in\_af@{set\_silent\_mode\_aperture\_drive\_in\_af}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_silent\_mode\_aperture\_drive\_in\_af()}{set\_silent\_mode\_aperture\_drive\_in\_af()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aa18b7728a08ce05432f3bb4504a8bf18} 
+void cli\+::\+Camera\+Device\+::set\+\_\+silent\+\_\+mode\+\_\+aperture\+\_\+drive\+\_\+in\+\_\+af (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a7dd19457270532ecb0cc217203a1dd49}\index{cli::CameraDevice@{cli::CameraDevice}!set\_silent\_mode\_auto\_pixel\_mapping@{set\_silent\_mode\_auto\_pixel\_mapping}}
+\index{set\_silent\_mode\_auto\_pixel\_mapping@{set\_silent\_mode\_auto\_pixel\_mapping}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_silent\_mode\_auto\_pixel\_mapping()}{set\_silent\_mode\_auto\_pixel\_mapping()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7dd19457270532ecb0cc217203a1dd49} 
+void cli\+::\+Camera\+Device\+::set\+\_\+silent\+\_\+mode\+\_\+auto\+\_\+pixel\+\_\+mapping (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2ce6c68f74a926f5fc406bce5876ef88}\index{cli::CameraDevice@{cli::CameraDevice}!set\_silent\_mode\_shutter\_when\_power\_off@{set\_silent\_mode\_shutter\_when\_power\_off}}
+\index{set\_silent\_mode\_shutter\_when\_power\_off@{set\_silent\_mode\_shutter\_when\_power\_off}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_silent\_mode\_shutter\_when\_power\_off()}{set\_silent\_mode\_shutter\_when\_power\_off()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2ce6c68f74a926f5fc406bce5876ef88} 
+void cli\+::\+Camera\+Device\+::set\+\_\+silent\+\_\+mode\+\_\+shutter\+\_\+when\+\_\+power\+\_\+off (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a18d840c24595b443cd476e3c2fe4c132}\index{cli::CameraDevice@{cli::CameraDevice}!set\_still\_capture\_mode@{set\_still\_capture\_mode}}
+\index{set\_still\_capture\_mode@{set\_still\_capture\_mode}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_still\_capture\_mode()}{set\_still\_capture\_mode()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a18d840c24595b443cd476e3c2fe4c132} 
+void cli\+::\+Camera\+Device\+::set\+\_\+still\+\_\+capture\+\_\+mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2f5a851e2eb6397d4c2a38c59778f003}\index{cli::CameraDevice@{cli::CameraDevice}!set\_time\_shift\_shooting@{set\_time\_shift\_shooting}}
+\index{set\_time\_shift\_shooting@{set\_time\_shift\_shooting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_time\_shift\_shooting()}{set\_time\_shift\_shooting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2f5a851e2eb6397d4c2a38c59778f003} 
+void cli\+::\+Camera\+Device\+::set\+\_\+time\+\_\+shift\+\_\+shooting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_af3c7e80df3fde089525a9738b3ed654e}\index{cli::CameraDevice@{cli::CameraDevice}!set\_timezone\_setting@{set\_timezone\_setting}}
+\index{set\_timezone\_setting@{set\_timezone\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_timezone\_setting()}{set\_timezone\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_af3c7e80df3fde089525a9738b3ed654e} 
+void cli\+::\+Camera\+Device\+::set\+\_\+timezone\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a80e336fa3d62ad56dc4837b86e704aec}\index{cli::CameraDevice@{cli::CameraDevice}!set\_white\_balance@{set\_white\_balance}}
+\index{set\_white\_balance@{set\_white\_balance}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_white\_balance()}{set\_white\_balance()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a80e336fa3d62ad56dc4837b86e704aec} 
+void cli\+::\+Camera\+Device\+::set\+\_\+white\+\_\+balance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a82c74279e7e205514c97dcf70a378cc0}\index{cli::CameraDevice@{cli::CameraDevice}!set\_white\_balance\_tint@{set\_white\_balance\_tint}}
+\index{set\_white\_balance\_tint@{set\_white\_balance\_tint}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_white\_balance\_tint()}{set\_white\_balance\_tint()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a82c74279e7e205514c97dcf70a378cc0} 
+void cli\+::\+Camera\+Device\+::set\+\_\+white\+\_\+balance\+\_\+tint (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ae75a8b375b8d651a5694d738618ce01b}\index{cli::CameraDevice@{cli::CameraDevice}!set\_zoom\_operation@{set\_zoom\_operation}}
+\index{set\_zoom\_operation@{set\_zoom\_operation}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_zoom\_operation()}{set\_zoom\_operation()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae75a8b375b8d651a5694d738618ce01b} 
+void cli\+::\+Camera\+Device\+::set\+\_\+zoom\+\_\+operation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a4dc224396969aca1d761d915cca190fe}\index{cli::CameraDevice@{cli::CameraDevice}!set\_zoom\_position\_setting@{set\_zoom\_position\_setting}}
+\index{set\_zoom\_position\_setting@{set\_zoom\_position\_setting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{set\_zoom\_position\_setting()}{set\_zoom\_position\_setting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a4dc224396969aca1d761d915cca190fe} 
+void cli\+::\+Camera\+Device\+::set\+\_\+zoom\+\_\+position\+\_\+setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2d63cb7b7e1c1c7266a207cf6bf27be9}\index{cli::CameraDevice@{cli::CameraDevice}!setMonitoringDeriverySetting@{setMonitoringDeriverySetting}}
+\index{setMonitoringDeriverySetting@{setMonitoringDeriverySetting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{setMonitoringDeriverySetting()}{setMonitoringDeriverySetting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2d63cb7b7e1c1c7266a207cf6bf27be9} 
+void cli\+::\+Camera\+Device\+::set\+Monitoring\+Derivery\+Setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a2282313e4f5086af4a3f8b34e4b5076d}\index{cli::CameraDevice@{cli::CameraDevice}!setMoviePlaybackSetting@{setMoviePlaybackSetting}}
+\index{setMoviePlaybackSetting@{setMoviePlaybackSetting}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{setMoviePlaybackSetting()}{setMoviePlaybackSetting()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a2282313e4f5086af4a3f8b34e4b5076d} 
+void cli\+::\+Camera\+Device\+::set\+Movie\+Playback\+Setting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a906410ff51a4a9cb0afb57dab26ee352}\index{cli::CameraDevice@{cli::CameraDevice}!show\_contents\_data\_detail@{show\_contents\_data\_detail}}
+\index{show\_contents\_data\_detail@{show\_contents\_data\_detail}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{show\_contents\_data\_detail()}{show\_contents\_data\_detail()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a906410ff51a4a9cb0afb57dab26ee352} 
+void cli\+::\+Camera\+Device\+::show\+\_\+contents\+\_\+data\+\_\+detail (\begin{DoxyParamCaption}\item[{SCRSDK\+::\+Cr\+Contents\+Info \&}]{contents\+Info}{, }\item[{SCRSDK\+::\+Cr\+Contents\+File \&}]{contents\+File}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a33d66e9b82d0da4f24f4855119b93f58}\index{cli::CameraDevice@{cli::CameraDevice}!startMonitoring@{startMonitoring}}
+\index{startMonitoring@{startMonitoring}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{startMonitoring()}{startMonitoring()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a33d66e9b82d0da4f24f4855119b93f58} 
+void cli\+::\+Camera\+Device\+::start\+Monitoring (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_ad697d364e12c11c8a91fe77797b41d9b}\index{cli::CameraDevice@{cli::CameraDevice}!stopMonitoring@{stopMonitoring}}
+\index{stopMonitoring@{stopMonitoring}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{stopMonitoring()}{stopMonitoring()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad697d364e12c11c8a91fe77797b41d9b} 
+void cli\+::\+Camera\+Device\+::stop\+Monitoring (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classcli_1_1_camera_device_a04518190878e1d814f5851b341f820b0}\index{cli::CameraDevice@{cli::CameraDevice}!upload\_firmware@{upload\_firmware}}
+\index{upload\_firmware@{upload\_firmware}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{upload\_firmware()}{upload\_firmware()}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a04518190878e1d814f5851b341f820b0} 
+void cli\+::\+Camera\+Device\+::upload\+\_\+firmware (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classcli_1_1_camera_device_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcli_1_1_camera_device_ad722f6a227fe64d8b5ec27a599f93119}\index{cli::CameraDevice@{cli::CameraDevice}!m\_bodySerialNumberProp@{m\_bodySerialNumberProp}}
+\index{m\_bodySerialNumberProp@{m\_bodySerialNumberProp}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_bodySerialNumberProp}{m\_bodySerialNumberProp}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad722f6a227fe64d8b5ec27a599f93119} 
+SCRSDK\+::\+Cr\+Device\+Property\texorpdfstring{$\ast$}{*} cli\+::\+Camera\+Device\+::m\+\_\+body\+Serial\+Number\+Prop\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ad9ac61846b4cf275f780707787521b24}\index{cli::CameraDevice@{cli::CameraDevice}!m\_captureDateList@{m\_captureDateList}}
+\index{m\_captureDateList@{m\_captureDateList}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_captureDateList}{m\_captureDateList}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad9ac61846b4cf275f780707787521b24} 
+SCRSDK\+::\+Cr\+Capture\+Date\texorpdfstring{$\ast$}{*} cli\+::\+Camera\+Device\+::m\+\_\+capture\+Date\+List\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a559ed19b24e5f516c918c6cfd0866484}\index{cli::CameraDevice@{cli::CameraDevice}!m\_conn\_type@{m\_conn\_type}}
+\index{m\_conn\_type@{m\_conn\_type}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_conn\_type}{m\_conn\_type}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a559ed19b24e5f516c918c6cfd0866484} 
+\mbox{\hyperlink{namespacecli_a1c241c0157ffadbdbaaf7b45394a617c}{Connection\+Type}} cli\+::\+Camera\+Device\+::m\+\_\+conn\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a323c73408cf3dc8e12855406da733c56}\index{cli::CameraDevice@{cli::CameraDevice}!m\_connected@{m\_connected}}
+\index{m\_connected@{m\_connected}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_connected}{m\_connected}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a323c73408cf3dc8e12855406da733c56} 
+std\+::atomic$<$bool$>$ cli\+::\+Camera\+Device\+::m\+\_\+connected\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a8150d7ac2b95fe1a26d7c8fcb0929911}\index{cli::CameraDevice@{cli::CameraDevice}!m\_contentList@{m\_contentList}}
+\index{m\_contentList@{m\_contentList}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_contentList}{m\_contentList}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8150d7ac2b95fe1a26d7c8fcb0929911} 
+\mbox{\hyperlink{namespacecli_aa40bfb8c63bcd480b54b54d6b357a5bc}{Mtp\+Contents\+List}} cli\+::\+Camera\+Device\+::m\+\_\+content\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_acd1e60f42d27f0f72045bef9ca6c02b5}\index{cli::CameraDevice@{cli::CameraDevice}!m\_contentsInfoList@{m\_contentsInfoList}}
+\index{m\_contentsInfoList@{m\_contentsInfoList}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_contentsInfoList}{m\_contentsInfoList}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_acd1e60f42d27f0f72045bef9ca6c02b5} 
+SCRSDK\+::\+Cr\+Contents\+Info\texorpdfstring{$\ast$}{*} cli\+::\+Camera\+Device\+::m\+\_\+contents\+Info\+List\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ac731068145e225a6b3441226b546dde9}\index{cli::CameraDevice@{cli::CameraDevice}!m\_device\_handle@{m\_device\_handle}}
+\index{m\_device\_handle@{m\_device\_handle}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_device\_handle}{m\_device\_handle}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac731068145e225a6b3441226b546dde9} 
+std\+::int64\+\_\+t cli\+::\+Camera\+Device\+::m\+\_\+device\+\_\+handle\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a7c1aed3469b5ffe3b2513ec73951754d}\index{cli::CameraDevice@{cli::CameraDevice}!m\_dispCameraKeyCV@{m\_dispCameraKeyCV}}
+\index{m\_dispCameraKeyCV@{m\_dispCameraKeyCV}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_dispCameraKeyCV}{m\_dispCameraKeyCV}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a7c1aed3469b5ffe3b2513ec73951754d} 
+std\+::condition\+\_\+variable cli\+::\+Camera\+Device\+::m\+\_\+disp\+Camera\+Key\+CV\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ab1cd48dbfe69c381e877382f32e42540}\index{cli::CameraDevice@{cli::CameraDevice}!m\_dispCameraKeyMutex@{m\_dispCameraKeyMutex}}
+\index{m\_dispCameraKeyMutex@{m\_dispCameraKeyMutex}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_dispCameraKeyMutex}{m\_dispCameraKeyMutex}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab1cd48dbfe69c381e877382f32e42540} 
+std\+::mutex cli\+::\+Camera\+Device\+::m\+\_\+disp\+Camera\+Key\+Mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_af29538382f1e574a00630c59255de856}\index{cli::CameraDevice@{cli::CameraDevice}!m\_dispStrTypeList@{m\_dispStrTypeList}}
+\index{m\_dispStrTypeList@{m\_dispStrTypeList}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_dispStrTypeList}{m\_dispStrTypeList}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_af29538382f1e574a00630c59255de856} 
+std\+::vector$<$SCRSDK\+::\+Cr\+Display\+String\+Type$>$ cli\+::\+Camera\+Device\+::m\+\_\+disp\+Str\+Type\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a1a3a184af61e5ecf69b81c38d8717675}\index{cli::CameraDevice@{cli::CameraDevice}!m\_fingerprint@{m\_fingerprint}}
+\index{m\_fingerprint@{m\_fingerprint}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_fingerprint}{m\_fingerprint}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1a3a184af61e5ecf69b81c38d8717675} 
+std\+::string cli\+::\+Camera\+Device\+::m\+\_\+fingerprint\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a38b79caeb64a50914ea6ef73a1e4ac02}\index{cli::CameraDevice@{cli::CameraDevice}!m\_foldList@{m\_foldList}}
+\index{m\_foldList@{m\_foldList}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_foldList}{m\_foldList}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a38b79caeb64a50914ea6ef73a1e4ac02} 
+\mbox{\hyperlink{namespacecli_a4d255c5ff1c359ccf042dd12988198a9}{Mtp\+Folder\+List}} cli\+::\+Camera\+Device\+::m\+\_\+fold\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a1131130d25f8fc8fffdd775a1cca5bba}\index{cli::CameraDevice@{cli::CameraDevice}!m\_getContentsData\_fileName@{m\_getContentsData\_fileName}}
+\index{m\_getContentsData\_fileName@{m\_getContentsData\_fileName}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_getContentsData\_fileName}{m\_getContentsData\_fileName}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1131130d25f8fc8fffdd775a1cca5bba} 
+std\+::string cli\+::\+Camera\+Device\+::m\+\_\+get\+Contents\+Data\+\_\+file\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_af53b73806715a715f133b9b96782228e}\index{cli::CameraDevice@{cli::CameraDevice}!m\_getContentsData\_notify@{m\_getContentsData\_notify}}
+\index{m\_getContentsData\_notify@{m\_getContentsData\_notify}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_getContentsData\_notify}{m\_getContentsData\_notify}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_af53b73806715a715f133b9b96782228e} 
+Cr\+Int32u cli\+::\+Camera\+Device\+::m\+\_\+get\+Contents\+Data\+\_\+notify\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ab4c9c0f4a34a5a399236a467763a3bf8}\index{cli::CameraDevice@{cli::CameraDevice}!m\_getContentsData\_per@{m\_getContentsData\_per}}
+\index{m\_getContentsData\_per@{m\_getContentsData\_per}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_getContentsData\_per}{m\_getContentsData\_per}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab4c9c0f4a34a5a399236a467763a3bf8} 
+Cr\+Int32u cli\+::\+Camera\+Device\+::m\+\_\+get\+Contents\+Data\+\_\+per\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a3598d7a13d45f1798296cd8e37d4178b}\index{cli::CameraDevice@{cli::CameraDevice}!m\_getContentsDataMovieCv@{m\_getContentsDataMovieCv}}
+\index{m\_getContentsDataMovieCv@{m\_getContentsDataMovieCv}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_getContentsDataMovieCv}{m\_getContentsDataMovieCv}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a3598d7a13d45f1798296cd8e37d4178b} 
+std\+::condition\+\_\+variable cli\+::\+Camera\+Device\+::m\+\_\+get\+Contents\+Data\+Movie\+Cv\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a5d5aa43b484172e99a1ab77eb9092cdd}\index{cli::CameraDevice@{cli::CameraDevice}!m\_getContentsDataMovieFlg@{m\_getContentsDataMovieFlg}}
+\index{m\_getContentsDataMovieFlg@{m\_getContentsDataMovieFlg}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_getContentsDataMovieFlg}{m\_getContentsDataMovieFlg}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5d5aa43b484172e99a1ab77eb9092cdd} 
+bool cli\+::\+Camera\+Device\+::m\+\_\+get\+Contents\+Data\+Movie\+Flg\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a8bb87fe206b9372967795ff7f13e9bfb}\index{cli::CameraDevice@{cli::CameraDevice}!m\_getContentsDataMtx@{m\_getContentsDataMtx}}
+\index{m\_getContentsDataMtx@{m\_getContentsDataMtx}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_getContentsDataMtx}{m\_getContentsDataMtx}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8bb87fe206b9372967795ff7f13e9bfb} 
+std\+::mutex cli\+::\+Camera\+Device\+::m\+\_\+get\+Contents\+Data\+Mtx\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a11dc25c71c4e8604fa994840b8215a4a}\index{cli::CameraDevice@{cli::CameraDevice}!m\_getContentsDataStartFlg@{m\_getContentsDataStartFlg}}
+\index{m\_getContentsDataStartFlg@{m\_getContentsDataStartFlg}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_getContentsDataStartFlg}{m\_getContentsDataStartFlg}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a11dc25c71c4e8604fa994840b8215a4a} 
+bool cli\+::\+Camera\+Device\+::m\+\_\+get\+Contents\+Data\+Start\+Flg\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_aeb11acba289e2ecf74e2073130b70b37}\index{cli::CameraDevice@{cli::CameraDevice}!m\_info@{m\_info}}
+\index{m\_info@{m\_info}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_info}{m\_info}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_aeb11acba289e2ecf74e2073130b70b37} 
+SCRSDK\+::\+ICr\+Camera\+Object\+Info\texorpdfstring{$\ast$}{*} cli\+::\+Camera\+Device\+::m\+\_\+info\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a03084e844103e26bbfb31e6953308b57}\index{cli::CameraDevice@{cli::CameraDevice}!m\_latestFirmwareUploadRate@{m\_latestFirmwareUploadRate}}
+\index{m\_latestFirmwareUploadRate@{m\_latestFirmwareUploadRate}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_latestFirmwareUploadRate}{m\_latestFirmwareUploadRate}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a03084e844103e26bbfb31e6953308b57} 
+Cr\+Int32u cli\+::\+Camera\+Device\+::m\+\_\+latest\+Firmware\+Upload\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a0ff2fac400a2459dc4b49f88f415f334}\index{cli::CameraDevice@{cli::CameraDevice}!m\_lensModelNameProp@{m\_lensModelNameProp}}
+\index{m\_lensModelNameProp@{m\_lensModelNameProp}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_lensModelNameProp}{m\_lensModelNameProp}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a0ff2fac400a2459dc4b49f88f415f334} 
+SCRSDK\+::\+Cr\+Device\+Property\texorpdfstring{$\ast$}{*} cli\+::\+Camera\+Device\+::m\+\_\+lens\+Model\+Name\+Prop\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ae9f02c48625a8128e8821f519deba6cd}\index{cli::CameraDevice@{cli::CameraDevice}!m\_lockgetContentsData@{m\_lockgetContentsData}}
+\index{m\_lockgetContentsData@{m\_lockgetContentsData}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_lockgetContentsData}{m\_lockgetContentsData}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ae9f02c48625a8128e8821f519deba6cd} 
+std\+::mutex cli\+::\+Camera\+Device\+::m\+\_\+lockget\+Contents\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ac8f75cd22e306033e48b5c41c52f37d1}\index{cli::CameraDevice@{cli::CameraDevice}!m\_lvEnbSet@{m\_lvEnbSet}}
+\index{m\_lvEnbSet@{m\_lvEnbSet}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_lvEnbSet}{m\_lvEnbSet}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ac8f75cd22e306033e48b5c41c52f37d1} 
+bool cli\+::\+Camera\+Device\+::m\+\_\+lv\+Enb\+Set\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ad35dc0f0c1738b33203c46cf04dce990}\index{cli::CameraDevice@{cli::CameraDevice}!m\_media\_formatComplete@{m\_media\_formatComplete}}
+\index{m\_media\_formatComplete@{m\_media\_formatComplete}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_media\_formatComplete}{m\_media\_formatComplete}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ad35dc0f0c1738b33203c46cf04dce990} 
+std\+::atomic$<$bool$>$ cli\+::\+Camera\+Device\+::m\+\_\+media\+\_\+format\+Complete\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a1b45ba8b30778f722b4c883de6dbe8be}\index{cli::CameraDevice@{cli::CameraDevice}!m\_mediaprofileList@{m\_mediaprofileList}}
+\index{m\_mediaprofileList@{m\_mediaprofileList}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_mediaprofileList}{m\_mediaprofileList}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a1b45ba8b30778f722b4c883de6dbe8be} 
+\mbox{\hyperlink{namespacecli_adc493a6c1604f7f39565d81459046c49}{Media\+Profile\+List}} cli\+::\+Camera\+Device\+::m\+\_\+mediaprofile\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ab17a3a0b0e600b60ffb3d187c6634f72}\index{cli::CameraDevice@{cli::CameraDevice}!m\_modelNameProp@{m\_modelNameProp}}
+\index{m\_modelNameProp@{m\_modelNameProp}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_modelNameProp}{m\_modelNameProp}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ab17a3a0b0e600b60ffb3d187c6634f72} 
+SCRSDK\+::\+Cr\+Device\+Property\texorpdfstring{$\ast$}{*} cli\+::\+Camera\+Device\+::m\+\_\+model\+Name\+Prop\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_ace9050f09fbcb0d1a35e923d8bfede84}\index{cli::CameraDevice@{cli::CameraDevice}!m\_modeSDK@{m\_modeSDK}}
+\index{m\_modeSDK@{m\_modeSDK}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_modeSDK}{m\_modeSDK}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_ace9050f09fbcb0d1a35e923d8bfede84} 
+SCRSDK\+::\+Cr\+Sdk\+Control\+Mode cli\+::\+Camera\+Device\+::m\+\_\+mode\+SDK\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a4fe3163f077ab25f3d22ed3329990c08}\index{cli::CameraDevice@{cli::CameraDevice}!m\_number@{m\_number}}
+\index{m\_number@{m\_number}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_number}{m\_number}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a4fe3163f077ab25f3d22ed3329990c08} 
+std\+::int32\+\_\+t cli\+::\+Camera\+Device\+::m\+\_\+number\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a9a1664935e37141369c65d2b411b4848}\index{cli::CameraDevice@{cli::CameraDevice}!m\_prop@{m\_prop}}
+\index{m\_prop@{m\_prop}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_prop}{m\_prop}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a9a1664935e37141369c65d2b411b4848} 
+\mbox{\hyperlink{namespacecli_structcli_1_1_property_value_table}{Property\+Value\+Table}} cli\+::\+Camera\+Device\+::m\+\_\+prop\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a4ba351380dee62ad969e06bfaeda9d63}\index{cli::CameraDevice@{cli::CameraDevice}!m\_recordingSettingFileNameProp@{m\_recordingSettingFileNameProp}}
+\index{m\_recordingSettingFileNameProp@{m\_recordingSettingFileNameProp}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_recordingSettingFileNameProp}{m\_recordingSettingFileNameProp}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a4ba351380dee62ad969e06bfaeda9d63} 
+SCRSDK\+::\+Cr\+Device\+Property\texorpdfstring{$\ast$}{*} cli\+::\+Camera\+Device\+::m\+\_\+recording\+Setting\+File\+Name\+Prop\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a8f281e184f2382b6be3123195ae72c18}\index{cli::CameraDevice@{cli::CameraDevice}!m\_spontaneous\_disconnection@{m\_spontaneous\_disconnection}}
+\index{m\_spontaneous\_disconnection@{m\_spontaneous\_disconnection}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_spontaneous\_disconnection}{m\_spontaneous\_disconnection}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a8f281e184f2382b6be3123195ae72c18} 
+bool cli\+::\+Camera\+Device\+::m\+\_\+spontaneous\+\_\+disconnection\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcli_1_1_camera_device_a5a5f5c710206d6e3c725038de0b3b791}\index{cli::CameraDevice@{cli::CameraDevice}!m\_userPassword@{m\_userPassword}}
+\index{m\_userPassword@{m\_userPassword}!cli::CameraDevice@{cli::CameraDevice}}
+\doxysubsubsection{\texorpdfstring{m\_userPassword}{m\_userPassword}}
+{\footnotesize\ttfamily \label{classcli_1_1_camera_device_a5a5f5c710206d6e3c725038de0b3b791} 
+std\+::string cli\+::\+Camera\+Device\+::m\+\_\+user\+Password\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+data/raw\+\_\+sdk\+\_\+docs/sdk\+\_\+source/v2.\+00.\+00/\mbox{\hyperlink{_camera_device_8h}{Camera\+Device.\+h}}\item 
+data/raw\+\_\+sdk\+\_\+docs/sdk\+\_\+source/v2.\+00.\+00/\mbox{\hyperlink{_camera_device_8cpp}{Camera\+Device.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,22 @@
+﻿.. _dp-PictureCacheRecSetting:
+
+CrDeviceProperty_PictureCacheRecSetting
+=======================================
+
+Get/Set the picture cache recording setting.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPictureCacheRecSetting_Off
+    - | Off
+
+  * - CrPictureCacheRecSetting_On
+    - | On
+

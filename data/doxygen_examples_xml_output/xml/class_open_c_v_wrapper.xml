@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_open_c_v_wrapper" kind="class" language="C++" prot="public">
+    <compoundname>OpenCVWrapper</compoundname>
+    <includes refid="_open_c_v_wrapper_8h" local="no">OpenCVWrapper.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_open_c_v_wrapper_1a7201d42fb5b7164232e9d7b065b8b585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OpenCVWrapper::OpenCVWrapper</definition>
+        <argsstring>(void)</argsstring>
+        <name>OpenCVWrapper</name>
+        <qualifiedname>OpenCVWrapper::OpenCVWrapper</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/OpenCVWrapper.h" line="9" column="5" bodyfile="data/raw_sdk_docs/sdk_source/OpenCVWrapper.cpp" bodystart="9" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_open_c_v_wrapper_1a18e1593d9db87e87cdaa1192769d4667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OpenCVWrapper::~OpenCVWrapper</definition>
+        <argsstring>(void)</argsstring>
+        <name>~OpenCVWrapper</name>
+        <qualifiedname>OpenCVWrapper::~OpenCVWrapper</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/OpenCVWrapper.h" line="10" column="5" bodyfile="data/raw_sdk_docs/sdk_source/OpenCVWrapper.cpp" bodystart="12" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_open_c_v_wrapper_1a470687931fcfa1a74f2d9032ee53692a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OpenCVWrapper::CompositeImage</definition>
+        <argsstring>(const std::vector&lt; CrInt8u &gt; &amp;lvdata, SCRSDK::CrOSDImageDataBlock *osddata, unsigned char *outputdata, CrInt32u *outSize)</argsstring>
+        <name>CompositeImage</name>
+        <qualifiedname>OpenCVWrapper::CompositeImage</qualifiedname>
+        <param>
+          <type>const std::vector&lt; CrInt8u &gt; &amp;</type>
+          <declname>lvdata</declname>
+        </param>
+        <param>
+          <type>SCRSDK::CrOSDImageDataBlock *</type>
+          <declname>osddata</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>outputdata</declname>
+        </param>
+        <param>
+          <type>CrInt32u *</type>
+          <declname>outSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/OpenCVWrapper.h" line="12" column="17" bodyfile="data/raw_sdk_docs/sdk_source/OpenCVWrapper.cpp" bodystart="15" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_open_c_v_wrapper_1a89af8fe1618d16650a5e660fe3a19cbd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cv::Mat</type>
+        <definition>cv::Mat OpenCVWrapper::OverlayImage</definition>
+        <argsstring>(const cv::Mat &amp;src, const cv::Mat &amp;overlay)</argsstring>
+        <name>OverlayImage</name>
+        <qualifiedname>OpenCVWrapper::OverlayImage</qualifiedname>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>const cv::Mat &amp;</type>
+          <declname>overlay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/OpenCVWrapper.h" line="14" column="20" bodyfile="data/raw_sdk_docs/sdk_source/OpenCVWrapper.cpp" bodystart="175" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_open_c_v_wrapper_1a4dceccf7033548dc95c4f57d9f89b7b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpenCVWrapper::CreateFillImage</definition>
+        <argsstring>(int width, int height, int r, int g, int b, std::vector&lt; uchar &gt; *imgdata)</argsstring>
+        <name>CreateFillImage</name>
+        <qualifiedname>OpenCVWrapper::CreateFillImage</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; uchar &gt; *</type>
+          <declname>imgdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/OpenCVWrapper.h" line="15" column="17" bodyfile="data/raw_sdk_docs/sdk_source/OpenCVWrapper.cpp" bodystart="220" bodyend="231"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/OpenCVWrapper.h" line="6" column="1" bodyfile="data/raw_sdk_docs/sdk_source/OpenCVWrapper.h" bodystart="7" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_open_c_v_wrapper_1a470687931fcfa1a74f2d9032ee53692a" prot="public" virt="non-virtual"><scope>OpenCVWrapper</scope><name>CompositeImage</name></member>
+      <member refid="class_open_c_v_wrapper_1a4dceccf7033548dc95c4f57d9f89b7b9" prot="public" virt="non-virtual"><scope>OpenCVWrapper</scope><name>CreateFillImage</name></member>
+      <member refid="class_open_c_v_wrapper_1a7201d42fb5b7164232e9d7b065b8b585" prot="public" virt="non-virtual"><scope>OpenCVWrapper</scope><name>OpenCVWrapper</name></member>
+      <member refid="class_open_c_v_wrapper_1a89af8fe1618d16650a5e660fe3a19cbd" prot="public" virt="non-virtual"><scope>OpenCVWrapper</scope><name>OverlayImage</name></member>
+      <member refid="class_open_c_v_wrapper_1a18e1593d9db87e87cdaa1192769d4667" prot="public" virt="non-virtual"><scope>OpenCVWrapper</scope><name>~OpenCVWrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrOSDImageMetaInfo</compoundname>
+    <includes refid="_cr_image_data_block_8h" local="no">CrImageDataBlock.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a81280083448038ba631e68abaafb648e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1aeb9ea099c31e9e34b1ee1ff990aec12d" kindref="member">CrIsLvPosExist</ref></type>
+        <definition>CrIsLvPosExist SCRSDK::CrOSDImageMetaInfo::isLvPosExist</definition>
+        <argsstring></argsstring>
+        <name>isLvPosExist</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::isLvPosExist</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="87" column="16" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a8c1b8f4880c6ffa6a8da4c0d5f62766d" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrOSDImageMetaInfo::osdWidth</definition>
+        <argsstring></argsstring>
+        <name>osdWidth</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::osdWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="88" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1acfd1a7555fd0ab18096c39957398ad3a" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrOSDImageMetaInfo::osdHeight</definition>
+        <argsstring></argsstring>
+        <name>osdHeight</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::osdHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="89" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a98eaa0efd6a35334842e4ce3997f65a4" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrOSDImageMetaInfo::lvPosX</definition>
+        <argsstring></argsstring>
+        <name>lvPosX</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::lvPosX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="90" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a206f63f0a2938eb0a2099e5e7496c4c9" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrOSDImageMetaInfo::lvPosY</definition>
+        <argsstring></argsstring>
+        <name>lvPosY</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::lvPosY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="91" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a60d6fb4a50a13aeb7e79bdc5392e73ac" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrOSDImageMetaInfo::lvWidth</definition>
+        <argsstring></argsstring>
+        <name>lvWidth</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::lvWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="92" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a9811954e9d949dfb537aa1c2b49c34ae" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrOSDImageMetaInfo::lvHeight</definition>
+        <argsstring></argsstring>
+        <name>lvHeight</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::lvHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="93" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a7e46dab861ea8c9ec62202d68baf014c" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrOSDImageMetaInfo::degree</definition>
+        <argsstring></argsstring>
+        <name>degree</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::degree</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="94" column="10" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1af3030b3243ad33f78539566bccbd9089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrOSDImageMetaInfo::CrOSDImageMetaInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrOSDImageMetaInfo</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::CrOSDImageMetaInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a3d393f91f5e0bd30feb7680bde233073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrOSDImageMetaInfo::~CrOSDImageMetaInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrOSDImageMetaInfo</name>
+        <qualifiedname>SCRSDK::CrOSDImageMetaInfo::~CrOSDImageMetaInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="85" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" line="81" column="1" bodyfile="data/raw_sdk_docs/sdk_source/CRSDK/CrImageDataBlock.h" bodystart="82" bodyend="95"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1af3030b3243ad33f78539566bccbd9089" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>CrOSDImageMetaInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a7e46dab861ea8c9ec62202d68baf014c" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>degree</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a81280083448038ba631e68abaafb648e" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>isLvPosExist</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a9811954e9d949dfb537aa1c2b49c34ae" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>lvHeight</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a98eaa0efd6a35334842e4ce3997f65a4" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>lvPosX</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a206f63f0a2938eb0a2099e5e7496c4c9" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>lvPosY</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a60d6fb4a50a13aeb7e79bdc5392e73ac" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>lvWidth</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1acfd1a7555fd0ab18096c39957398ad3a" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>osdHeight</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a8c1b8f4880c6ffa6a8da4c0d5f62766d" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>osdWidth</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_o_s_d_image_meta_info_1a3d393f91f5e0bd30feb7680bde233073" prot="public" virt="non-virtual"><scope>SCRSDK::CrOSDImageMetaInfo</scope><name>~CrOSDImageMetaInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

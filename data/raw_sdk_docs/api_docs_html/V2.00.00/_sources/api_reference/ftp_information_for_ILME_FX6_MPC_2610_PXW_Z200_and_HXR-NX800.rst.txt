@@ -1,0 +1,251 @@
+.. _api-header-ftp_information-for-ILME-FX6-MPC-2610-PXW-Z200-and-HXR-NX800:
+
+FTP information for ILME-FX6, MPC-2610, PXW-Z200 and HXR-NX800
+==============================================================
+
+.. _api-request-ftp-job-list:
+
+RequestFTPJobList
+-----------------
+
+**Overview**
+    You can use this API and :ref:`GetFTPJobList()<api-get-ftp-job-list>` to get FTP Job information.
+
+    If you want to use the FTP Job information, first request of this API. Then get information on GetFTPJobList() after that.
+
+**Definition**
+    `CrError RequestFTPJobList(CrDeviceHandle deviceHandle);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetFTPJobList<api-get-ftp-job-list>`
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`RequestFTPJobList callback<cb-request-ftp-job-list>`
+
+**Special note (details)**
+  This API can be executed when :ref:`CrDeviceProperty_FTPJobListDataVersion<dp-FTPJobListDataVersion>` exists and CrDeviceProperty_FTPJobListDataVersion is CrEnableValue_DisplayOnly.
+
+  The result of this API will be notified by OnWarning(). When OnWarning notifies you of "CrWarning_RequestFTPJobList_Result_Success", you can get FTP Job information with GetFTPJobList().
+
+.. _api-get-ftp-job-list:
+
+GetFTPJobList
+-------------
+
+**Overview**
+  It is an API to get the FTP Job information. It can only be executed if :ref:`RequestFTPJobList()<api-request-ftp-job-list>` is successful.
+
+  See “:ref:`Control the FTP Jobs<op-control-the-ftp-jobs>`” for instructions on how to control FTP Jobs.
+
+**Definition**
+  `CrError GetFTPJobList(CrDeviceHandle deviceHandle, CrFTPJobInfo** list,  CrInt32u* numOfList);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+
+**Output parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrFTPJobInfo**
+    - | list
+      | The :ref:`CrFTPJobInfo<cr-ftp-job-info>` list pointer. Developers should pass the address of a modifiable CrFTPJobInfo pointer. The value of this pointer should be initialized to nullptr. Copy the FTP Job information stored inside the SDK-internal after the success of :ref:`RequestFTPJobList()<api-request-ftp-job-list>` to this pointer.
+  * - CrInt32u*
+    - | numOfList
+      | An integer pointer that indicates the number of CrFTPJobInfo returned by the list pointer.
+      | Developers should pass the address of a modifiable CrInt32u variable.
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_Api_NoApplicableInformation  RequestFTPJobList() may not have been executed. Please do RequestFTPJobList().
+
+**Related API**
+  - :ref:`RequestFTPJobList<api-request-ftp-job-list>`
+  - :ref:`ReleaseFTPJobList<api-release-ftp-job-list>`
+  - :ref:`ControlFTPJobList<api-control-ftp-job-list>`
+  - :ref:`IDeviceCallback::OnWarning<callback-interface>`
+
+**Special note (details)**
+  This API can be executed only once. If you want to get the FTP Job information after this API, please request again to get the FTP Job information from the camera with RequestFTPJobList().
+
+.. _api-release-ftp-job-list:
+
+ReleaseFTPJobList
+-----------------
+
+**Overview**
+  This function releases the CrFTPJobInfo allocated by :ref:`GetFTPJobList()<api-get-ftp-job-list>`.
+
+**Definition**
+  `CrError ReleaseFTPJobList(CrDeviceHandle deviceHandle, CrFTPJobInfo* list);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrFTPJobInfo*
+    - | list
+      | CrFTPJobInfo list pointer to release.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None If the list is released successfully
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - :ref:`GetFTPJobList<api-get-ftp-job-list>`
+
+**Special note (details)**
+  None in particular
+
+.. _api-control-ftp-job-list:
+
+ControlFTPJobList
+-----------------
+
+**Overview**
+  Request the SDK to control FTP Job.
+
+  The function is asynchronous and returns to the user as soon as the SDK enqueues the requested action. 
+
+  See “:ref:`Control the FTP Jobs<op-control-the-ftp-jobs>`” for instructions on how to control FTP Jobs.
+
+**Definition**
+  `CrError ControlFTPJobList(CrDeviceHandle deviceHandle, CrFTPJobControlType control, void* jobList, CrInt32u numOfList, CrFTPJobDeleteType deleteType);`
+
+**Input parameters**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrDeviceHandle
+    - deviceHandle
+  * - CrFTPJobControlType
+    - | control
+      | Specify the control type of FTP Job. Use the :ref:`CrFTPJobControlType<cr-ftp-job-control-type>` defined in CrDeviceProperty.h.
+  * - void*
+    - | jobList
+      | There are two types of data to be set for this parameter
+      | 1) :ref:`CrFTPJobSetting<cr-ftp-job-setting>` class(Array)
+      | - Register an FTP Job
+      | - Specify CrFTPJobControlType_Add for the control parameter.
+      | 2) CrInt32u (Array)
+      | - Delete, suspend, and resume an FTP Job
+      | - Specify one of the following for control parameter.
+      |   CrFTPJobControlType_Delete
+      |   CrFTPJobControlType_Suspend
+      |   CrFTPJobControlType_Resume
+  * - CrInt32u
+    - | numOfList
+      | Number of arrays set in jobList.
+  * - CrFTPJobDeleteType
+    - | deleteType
+      | This parameter is valid for deleting an FTP Job. Specify the deletion type. CrFTPJobDeleteType defined in CrDeviceProperty.h.
+
+**Output parameters**
+  None
+
+**Return value**
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Type
+    - Explanation
+
+  * - CrError
+    - | CrError_None on Success
+      | CrError_Init if the SDK is uninitialized
+      | CrError_Generic_InvalidHandle If the deviceHandle is an invalid handle
+      | Other than errors above, see :ref:`Status code & Error<status-code-error>`
+
+**Related API**
+  - | :ref:`IDeviceCallback::OnWarning<callback-interface>`
+    | See: :ref:`RequestFTPJobList callback<cb-request-ftp-job-list>`
+    | See: :ref:`ControlFTPJobList callback<cb-control-ftp-job-list>`
+  - :ref:`GetMediaProfile<api-get-media-profile>`
+  - :ref:`GetFTPJobList<api-get-ftp-job-list>`
+
+**Special note (details)**
+  The result will be notified by OnWarning().
+
+  If the control is successful, CrWarning_ControlFTPJobList_XXXX_Result_OK will be notified by OnWarning().
+
+  If the control fails, OnWarning() will notify you of the cause of the failure.
+
+  This API does not support all models.

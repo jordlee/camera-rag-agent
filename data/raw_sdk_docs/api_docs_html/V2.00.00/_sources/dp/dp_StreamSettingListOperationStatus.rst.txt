@@ -1,0 +1,22 @@
+﻿.. _dp-StreamSettingListOperationStatus:
+
+CrDeviceProperty_StreamSettingListOperationStatus
+=================================================
+
+Get the StreamSettingList Operation Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrStreamSettingListOperationStatus_Disable
+    - | Disable
+
+  * - CrStreamSettingListOperationStatus_Enable
+    - | Enable
+

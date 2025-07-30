@@ -1,0 +1,28 @@
+﻿.. _dp-AspectRatio:
+
+CrDeviceProperty_AspectRatio
+============================
+
+Get/Set the Aspect Ratio
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAspectRatio_3_2
+    - | 3:2
+
+  * - CrAspectRatio_16_9
+    - | 16:9
+
+  * - CrAspectRatio_4_3
+    - | 4:3
+
+  * - CrAspectRatio_1_1
+    - | 1:1
+

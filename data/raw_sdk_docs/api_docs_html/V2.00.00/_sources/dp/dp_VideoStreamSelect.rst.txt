@@ -1,0 +1,50 @@
+﻿.. _dp-VideoStreamSelect:
+
+CrDeviceProperty_VideoStreamSelect
+==================================
+
+Get/Set the video stream select.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrVideoStream_1
+    - | Video Stream 1
+
+  * - CrVideoStream_2
+    - | Video Stream 2
+
+  * - CrVideoStream_3
+    - | Video Stream 3
+
+  * - CrVideoStream_4
+    - | Video Stream 4
+
+  * - CrVideoStream_5
+    - | Video Stream 5
+
+  * - CrVideoStream_6
+    - | Video Stream 6
+
+
+| This command will update the following DeviceProperty to the value you set
+| CrDeviceProperty_VideoStreamCodec
+| CrDeviceProperty_VideoStreamResolution
+| CrDeviceProperty_VideoStreamBitRateCompressionMode
+| CrDeviceProperty_VideoStreamBitRateVBRMode
+| CrDeviceProperty_VideoStreamMaxBitRate
+| CrDeviceProperty_StreamLatency
+| CrDeviceProperty_StreamTTL
+| CrDeviceProperty_StreamCipherType
+| CrDeviceProperty_StreamModeSetting
+| CrDeviceProperty_StreamStatus
+| CrDeviceProperty_StreamDisplayName
+| CrDeviceProperty_VideoStreamMaxBitRate
+| CrDeviceProperty_VideoStreamBitRateVBRMode
+

@@ -1,0 +1,31 @@
+﻿.. _dp-GammaDisplayAssistType:
+
+CrDeviceProperty_GammaDisplayAssistType
+=======================================
+
+Get/Set the Gamma Display Assist Type
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrGammaDisplayAssistType_Auto
+    - | Auto
+
+  * - CrGammaDisplayAssistType_SLog2_709_800
+    - | S-Log2→709 (800%)
+
+  * - CrGammaDisplayAssistType_SLog3_709_800
+    - | S-Log3→709 (800%)
+
+  * - CrGammaDisplayAssistType_HLG_BT2020
+    - | HLG (BT.2020)
+
+  * - CrGammaDisplayAssistType_HLG_709
+    - | HLG (709)
+

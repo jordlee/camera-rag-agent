@@ -1,0 +1,22 @@
+﻿.. _dp-CameraButtonFunctionMulti:
+
+CrDeviceProperty_CameraButtonFunctionMulti
+==========================================
+
+Get the Camera Button Function(Multi)
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Variable
+    - | The specifications of this device property are the same as :ref:`CrDeviceProperty_CameraButtonFunction<dp-CameraButtonFunction>`.
+
+
+.. include:: ./dp_CameraButtonFunctionMulti.inc
+

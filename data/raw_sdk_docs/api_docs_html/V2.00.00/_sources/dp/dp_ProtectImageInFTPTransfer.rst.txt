@@ -1,0 +1,22 @@
+﻿.. _dp-ProtectImageInFTPTransfer:
+
+CrDeviceProperty_ProtectImageInFTPTransfer
+==========================================
+
+Get/Set the Protect Image in FTP Transfer
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrProtectImageInFTPTransfer_Off
+    - | Off
+
+  * - CrProtectImageInFTPTransfer_On
+    - | On
+

@@ -1,0 +1,22 @@
+﻿.. _dp-CurrentSceneFileEdited:
+
+CrDeviceProperty_CurrentSceneFileEdited
+=======================================
+
+Get the Current SceneFile Edited Info.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCurrentSceneFileEdited_Unedited
+    - | Unedited 
+
+  * - CrCurrentSceneFileEdited_Edited
+    - | Edited
+

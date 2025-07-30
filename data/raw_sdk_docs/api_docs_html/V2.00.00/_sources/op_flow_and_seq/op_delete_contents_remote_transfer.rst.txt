@@ -1,0 +1,19 @@
+.. _op-delete-contents-remote-transfer:
+
+Delete Contents from Media by Contents Transfer with remote control mode
+========================================================================
+
+To delete contents from Media, call SCRSDK:::ref:`DeleteRemoteTransferContentsFile()<api-delete-remote-transfer-contents-file>`.
+DeleteRemoteTransferContentsFile() needs three parameters.
+
+Example:
+
+.. code-block:: cpp
+
+    SCRSDK::CrSlotNumber slotNumber = SCRSDK::CrSlotNumber_Slot1;
+    SCRSDK::CrError ret = SCRSDK::DeleteRemoteTransferContentsFile(handle, slotNumber, contentId);
+    if (CR_FAILED(ret))
+    {
+        printf("fail create ptzf preset.\n");
+        return;
+    }

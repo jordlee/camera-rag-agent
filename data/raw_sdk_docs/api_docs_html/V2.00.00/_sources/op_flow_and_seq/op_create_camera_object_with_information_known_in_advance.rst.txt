@@ -1,0 +1,83 @@
+.. _op-create-camera-object-with-information-known-in-advance:
+
+Create a “Camera Object” with information known in advance
+==========================================================
+
+If the camera to be connected is determined in advance, you can create a “Camera object” with the specified information and use it as a parameter of Connect() without using EnumCameraObjects() of camera search function.
+
+Use CreateCameraObjectInfoUSBConnection() for a USB connection and CreateCameraObjectInfoEthernetConnection() for an Ethernet connection.
+The reason why we have prepared for USB connection and Ethernet connection respectively is that the required conditions differ depending on the connection method.
+
+:ref:`CreateCameraObjectInfoUSBConnection()<api-create-camera-object-info-usb-connection>` has three parameters. The second parameter specifies the model of the camera to connect to, and the third parameter specifies the serial number of the camera to connect to. The camera object pointer created by this condition is returned with the first parameter ICrCameraObjectInfo \*\*.
+You can check the serial number of the camera by the following method.
+
+**Windows**
+    | 1. Connect the camera to the host PC with a USB cable and display [Device Manager]
+    | 2. Display the properties of the target camera in [Device Manager]
+    | 3. On the [Details] tab, select “Device Instance path” from the [Property] pull-down list. 
+
+    Area marked in red : USB serial number
+
+    .. image:: /_images/op_seq_create_camera_object_serial_number.png
+        :width: 50%
+
+**Linux/RaspPi**
+    | 1. Connect the camera to the host PC with a USB cable and display the terminal
+    | 2. Execute the lsusb command with the v option to see information about the various USB devices.
+
+    Area marked in red : iSerial
+
+    .. image:: /_images/op_seq_create_camera_object_serial_linux.png
+        :width: 50%
+
+**macOS**
+    | 1. Connect the camera to the host PC with a USB cable and display the terminal
+    | 2. Execute the system_profiler command with the SPUSBDataType to see information about the various USB devices.
+
+    Area marked in red : Serial Number
+
+    .. image:: /_images/op_seq_create_camera_object_serial_mac.png
+        :width: 50%
+
+Example:
+
+.. code-block:: cpp
+
+    void CreateUSBObject() {
+        CrChar serialNum[(SCRSDK::USB_SERIAL_LENGTH + 1] = {0}; // +1 is Null-terminate
+        memcpy(serialNum, L"CFB7A03380EF", sizeof(serialNum)); // wide char on Windows
+        SCRSDK::ICrCameraObjectInfo* pCam = nullptr;
+        CrError err = SCRSDK::CreateCameraObjectInfoUSBConnection(
+            &pCam,
+            SCRSDK::CrCameraDeviceModel_ILCE_9M2,
+            (CrInt8u*)serialNum); 
+        if (CrError_None == err && pCam != NULL) { 
+            // connect to camera
+
+:ref:`CreateCameraObjectInfoEthernetConnection()<api-create-camera-object-info-ether-connection>` has five parameters. The second parameter specifies the model type of the camera to connect to, the third parameter specifies the IP Address of the camera to connect to, and the fourth parameter specifies the MAC address. Check the MAC address with the camera. Fifth parameter specifies the SSH authentication enable flag. The camera object pointer created by these conditions is returned with the first parameter ICrCameraObjectInfo \*\*.
+
+You can check the MAC address of the camera by the following method.
+
+    MENU > Network > Wired LAN > Display Wired LAN Info.
+
+    For ILME-FX6, it is the MAC address of the Wi-Fi adapter
+        MENU > Network > Wireless LAN > MAC Address
+
+Example:
+
+.. code-block:: cpp
+
+    void CreateEthernetObject() {
+        CrInt32 ipAddr = 0x0500A8C0; // 192.168.0.5
+        CrInt8u macAddr[6] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06};
+        SCRSDK::ICrCameraObjectInfo* pCam = nullptr;
+        CrError err = SCRSDK::CreateCameraObjectInfoEthernetConnection(
+            &pCam, 
+            SCRSDK::CrCameraDeviceModel_ILCE_9M2,
+            ipAddr,
+            macAddr,
+            SCRSDK::CrSSHsupport_OFF); 
+        if (CrError_None == err && pCam != NULL) { 
+            // connect to camera
+
+If a “ICrCameraObjectInfo” created with incorrect information is used in Connect(), the SDK operation is not guaranteed.

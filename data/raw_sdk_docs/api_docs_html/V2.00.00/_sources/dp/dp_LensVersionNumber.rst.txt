@@ -1,0 +1,23 @@
+﻿.. _dp-LensVersionNumber:
+
+CrDeviceProperty_LensVersionNumber
+==================================
+
+Get the Lens Version Number
+
+    CrDataType: `CrDataType_STR`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - String
+    - Lens Version Number
+
+| For example, when the major number of the lens version is 1, "01" is set.
+| CrLensVersionNumber_Untaken(blank) if the lens version cannot be obtained.
+| For example, this gets `01` for the major number 1.
+

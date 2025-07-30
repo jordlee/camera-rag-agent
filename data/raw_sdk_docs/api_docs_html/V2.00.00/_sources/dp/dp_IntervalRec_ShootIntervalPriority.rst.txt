@@ -1,0 +1,22 @@
+﻿.. _dp-IntervalRec_ShootIntervalPriority:
+
+CrDeviceProperty_IntervalRec_ShootIntervalPriority
+==================================================
+
+Get/Set the IntervalREC(Still) Shoot Interval Priority
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrIntervalRecShootIntervalPriority_Off
+    - | Off
+
+  * - CrIntervalRecShootIntervalPriority_On
+    - | On
+

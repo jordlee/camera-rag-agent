@@ -1,0 +1,34 @@
+.. _op-get-the-media-profile:
+
+Get the MediaProfile
+====================
+
+It is an API to get the MediaProfile stored in the media of the camera.
+
+In ILME-FX6/MPC-2610/PXW-Z200/HXR-NX800, meta information such as recorded content is called "MediaProfile".
+
+With this API you can only get MediaProfile about the content. Not an API to get content files.
+
+The second parameter specifies the Slot for which you want to get the MediaProfile. The third parameter is a pointer to which the list information of the acquired MediaProfile is written. The fourth parameter is set to the number of acquired MediaProfile and returns.
+
+Example:
+
+.. code-block:: cpp
+
+  CrInt32u numOfList= 0;
+  SCRSDK:: CrMediaProfileInfo* mediaList;
+  CrError err = SCRSDK:: GetMediaProfile (
+    handle,
+    SCRSDK::CrMediaProfile_Slot1,
+    &mediaList,
+    &numOfList);
+  if (CR_SUCCEEDED(err) && 0 < numOfList) {
+    //  etc.
+    // release of list pointer
+    SCRSDK:: ReleaseMediaProfile(handle, mediaList);
+  }
+
+For example, there is "contentUrl" in the information obtained by this API. If you enter those URLs in browser software (Chrome, Safari, etc.) that supports streaming playback, you can play the content.
+
+.. image:: /_images/op_seq_get_the_media_profile.png
+  :width: 50%

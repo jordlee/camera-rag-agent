@@ -1,0 +1,13 @@
+.. _more-information:
+
+More information
+================
+
+.. _trademarks-and-acknowledgements:
+
+Trademarks and acknowledgements
+-------------------------------
+
+Sony is a trademark or registered trademark of Sony Corporation. 
+
+All other trademarks and copyrights are the property of their respective owners 

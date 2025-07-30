@@ -1,0 +1,37 @@
+﻿.. _dp-TopOfTheGroupShootingMarkSetting:
+
+CrDeviceProperty_TopOfTheGroupShootingMarkSetting
+=================================================
+
+Get/Set the top of ContShootGroup mark setting.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTopOfTheGroupShootingMarkSetting_None
+    - | None
+
+  * - CrTopOfTheGroupShootingMarkSetting_Rating1
+    - | Rating1
+
+  * - CrTopOfTheGroupShootingMarkSetting_Rating2
+    - | Rating2
+
+  * - CrTopOfTheGroupShootingMarkSetting_Rating3
+    - | Rating3
+
+  * - CrTopOfTheGroupShootingMarkSetting_Rating4
+    - | Rating4
+
+  * - CrTopOfTheGroupShootingMarkSetting_Rating5
+    - | Rating5
+
+  * - CrTopOfTheGroupShootingMarkSetting_DividerFrame
+    - | Divider Frame
+

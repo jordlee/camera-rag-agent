@@ -1,0 +1,24 @@
+﻿.. _dp-CallSetting:
+
+CrDeviceProperty_CallSetting
+============================
+
+Get/Set the Call Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCallSetting_Off
+    - | Off
+
+  * - CrCallSetting_On
+    - | On
+
+| This command is used to control the display of CALL information.
+

@@ -1,0 +1,51 @@
+.. _op-get-a-liveview-image:
+
+Get a Live View Image
+=====================
+
+Live view image is sent from the camera as a Jpeg image. The image size depends on the live view image quality of the camera setting and the image aspect mode.
+
+The image is updated at a rate of 30 frames per second if the communication speed is good. The FPS becomes much lower when the communication bandwidth is narrow. The situations, where the communication quality is poor or where captured images are transmitted, result in corresponding to a lower live view FPS.
+
+To receive live view image, a receive buffer needs to be prepared. The buffer size can be acquired by the GetLiveViewImageInfo() function. The first parameter is the device handle, and the second parameter is the pointer to CrImageInfo. CrImageInfo has the information related to width, height and the required buffer size. After getting the image buffer size, allocate the memory buffer for the image and call GetLiveViewImage().
+
+Example:
+
+.. code-block:: cpp
+
+  CrImageInfo *pInfo = new CrImageInfo();
+	SCRSDK::GetLiveViewImageInfo(handle, pInfo);
+	CrImageDataBlock *pLiveViewImage = new CrImageDataBlock();
+	pLiveViewImage->SetSize(pInfo->GetBufferSize());
+	CrInt8u* recvBuffer = new CrInt8u[pInfo->GetBufferSize()];
+	pLiveViewImage->SetData(recvBuffer);
+	SCRSDK::GetLiveViewImage(handle, pLiveViewImage);
+
+Example:
+
+.. code-block:: cpp
+
+  SCRSDK::GetLiveViewImage(handle, pLiveViewImage);
+	CrInt32u size = pLiveViewImage->GetImageSize();
+	CrInt8u *pdata = pLiveViewImage->GetImageData();
+
+CrImageInfo has the Jpeg image data and its size. GetImageData() returns the data pointer and GetImageSize() returns the data size.
+
+This Jpeg image data starts from SOI marker (FF D8) and ends with EOI marker (FF D9). It can be displayed as it is by the graphic user interface using OpenGL, DirectDraw or another framework. 
+
+Example:
+
+.. code-block:: cpp
+
+  SCRSDK::GetLiveViewImage(handle, pLiveViewImage);
+	CrInt32u size = pLiveViewImage->GetImageSize();
+	CrInt8u *pJpegData = new CrInt8u[size];
+	memcpy(pJpegData, pLiveViewImage->GetImageData(), size);
+
+The image is updated inside Camera Remote SDK and one unique and an incremental number is given for the image that is transmitted from the camera. GetLiveViewImage() compares the frame number of the given CrImageDataBlock class object and the current frame number in the Camera Remote SDK. If the given number is smaller than the current number, a copy of the new image buffer is made of the given object and updates the frame number of the given object. If the number of the object is equal or larger than the number of the SDK, no copy is made, and it returns CrWarning_Frame_NotUpdated. Therefore, at the first call of GetLiveViewImage(), the frame number of CrImageDataBlock should be set to zero.
+
+The size member of CrImageDataBlock is updated to the real image data size in GetLiveViewImage(). Where the buffer size of CrImageDataBlock is smaller than received image size, Camera Remote SDK also does not copy the buffer and returns CrError_Memory_Insufficient.
+
+If the return value of the GetLiveViewImage() is CrWarning_Frame_NotUpdated, wait for a while and get the frame again. If the return value is CrError_Memory_Insufficient, get the image buffer size by GetLiveViewImageInfo() and reallocate the memory as the new size.
+
+If GetLiveViewImage() returns CrError_Generic_Unknown, it means that there is an issue related to the data communication between the PC and Camera. 

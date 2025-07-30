@@ -1,0 +1,68 @@
+.. _operation-sequence-and-sample-code:
+
+Operation sequence and Sample code
+==================================
+
+This section describes the basic operation sequence of Camera Remote SDK.
+At the beginning of all camera operations, :ref:`Init()<api-init>` must be called to initialize Camera Remote SDK, and at the end of the operation, :ref:`Release()<api-release>` must be called to release all resources.
+:ref:`EnumCameraObjects()<api-enum-camera-objects>` enumerates connected cameras that can be connected with this Camera.
+
+.. csv-table::
+    :file: /_static/op_flow.csv
+    :encoding: shift-jis
+    :header-rows: 1
+    :delim: tab
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    op_initialize_and_release_camera_remote_sdk
+    op_enumerate_cameras
+    op_create_camera_object_with_information_known_in_advance
+    op_connect_a_camera
+    op_disconnect_a_camera
+    op_changes_in_sdk_connection_status
+    op_connect_disconnect_multiple_cameras
+    op_get_the_camera_properties
+    op_get_the_liveview_properties
+    op_device_properties_and_liveview_properties
+    op_change_the_camera_properties
+    op_send_a_control_command
+    op_get_a_liveview_image
+    op_capture_an_image_sequence
+    op_change_the_store_image_folder_and_the_filename
+    op_get_the_menu_display_string
+    op_pull_out_content_stored_on_media_in_contents_transfer_mode
+    op_pull_out_content_stored_on_media_in_remote_transfer_mode
+    op_get_the_media_profile
+    op_sdk_properties
+    op_download_and_upload_setting_files
+    op_control_the_ftp_jobs
+    op_control_monitoring
+    op_memorize_zoom_distance_and_focal_distance
+    op_get_osd_on_screen_display_image
+    op_movie_playback
+    op_remote_firmware_update
+    op_control_pan_tilt
+    op_create_clear_ptzf_preset
+    op_timezone_setting
+    op_how_to_use_lens_information.rst
+    op_delete_contents_remote_transfer
+    op_set_eframing
+    sample_afShooting
+    sample_connect
+    sample_connectMulti
+    sample_ContentsTransferMode
+    sample_controlFTPJob
+    sample_CreateCameraObjectInfo
+    sample_CustomGridLine
+    sample_downloadUploadSettingFile
+    sample_eframing
+    sample_FTPServerSetting
+    sample_getLensInformation
+    sample_getLiveViewAndOSD
+    sample_getLiveViewAndOSDhttp
+    sample_getSetDeviceProperty
+    sample_monitoring
+    sample_RemoteTransferMode

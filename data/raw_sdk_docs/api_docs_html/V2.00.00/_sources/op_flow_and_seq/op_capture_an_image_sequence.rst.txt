@@ -1,0 +1,20 @@
+.. _op-capture-an-image-sequence:
+
+Capture an Image Sequence
+=========================
+
+Where the store image destination (CrDeviceProperty_StillImageStoreDestination) property is “PC” or “PC and Camera”, the captured image is automatically transmitted to PC and stored in the storage of the PC by Camera Remote SDK.
+
+This section explains the sequence of the storing captured images.
+
+.. image:: /_images/op_seq_capture_an_image_sequence.png
+
+(\*1 After the image is saved to camera memory, CrNotify_Captured_Event is notified in the OnWarning() callback function.)
+
+After Camera Remote SDK stored the image to the PC, the OnCompleteDownload() callback function is called with the stored file path.
+
+    void OnCompleteDownload(CrChar \*filename);
+
+The store image folder can be set using the SetSaveInfo() function. The next section explains this process.
+
+To check focus lock condition, please see :ref:`CrDeviceProperty_FocusIndication<dp-FocusIndication>`

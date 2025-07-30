@@ -1,0 +1,23 @@
+﻿.. _dp-DeSqueezeDisplayRatio:
+
+CrDeviceProperty_DeSqueezeDisplayRatio
+======================================
+
+Get/Set the De-Squeeze Display Ratio
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - Variable
+    - | The value is obtained by multiplying a real De-Squeeze display ratio value by 1000.
+      | e.g.) 0x03E8 = 1000 (x1.0)
+      | 0x0514 = 1300 (x1.3)
+      | 0x05DC = 1500 (x1.5)
+      | 0x07D0 = 2000 (x2.0)
+

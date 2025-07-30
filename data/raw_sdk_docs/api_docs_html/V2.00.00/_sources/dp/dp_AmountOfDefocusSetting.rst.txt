@@ -1,0 +1,25 @@
+﻿.. _dp-AmountOfDefocusSetting:
+
+CrDeviceProperty_AmountOfDefocusSetting
+=======================================
+
+Get/Set the amount of defocus setting.
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+

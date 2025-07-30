@@ -1,0 +1,26 @@
+﻿.. _dp-FileSettingsTitleNameSettings:
+
+CrDeviceProperty_FileSettingsTitleNameSettings
+==============================================
+
+Get/Set the File Settings Title Name Settings
+
+    CrDataType: `CrDataType_STR`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - String
+    - Title Name
+
+| If the character size is invalid, EventCode: SDIE_OperationResults "Character size error" is notified.
+| If invalid value is set, EventCode:SDIE_OperationResults "Invalid parameter error" is notified.
+
+| Notify with OnWarningExt callback when update fails.
+|   - CrWarningExt_OperationResultsParam_CharacterSizeError
+|   - CrWarningExt_OperationResultsParam_InvalidParameterError
+

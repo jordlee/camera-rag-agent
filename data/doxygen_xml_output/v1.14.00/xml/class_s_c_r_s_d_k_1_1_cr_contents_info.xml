@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_s_c_r_s_d_k_1_1_cr_contents_info" kind="class" language="C++" prot="public">
+    <compoundname>SCRSDK::CrContentsInfo</compoundname>
+    <includes refid="_cr_device_property_8h" local="no">CrDeviceProperty.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1ad6022f3e7ba977631be1cef50d6c8724" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a2766ee160a6662f5b4b9be1e02021c7e" kindref="member">CrContentsInfo_ContentType</ref></type>
+        <definition>CrContentsInfo_ContentType SCRSDK::CrContentsInfo::contentType</definition>
+        <argsstring></argsstring>
+        <name>contentType</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::contentType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6479" column="28" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1ac84f6c71f19ec56ff1f2d9e3ccf34e48" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsInfo::contentId</definition>
+        <argsstring></argsstring>
+        <name>contentId</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::contentId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6480" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6480" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a6fcde8dec67c0ff62b671cceef709af9" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsInfo::dirNumber</definition>
+        <argsstring></argsstring>
+        <name>dirNumber</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::dirNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6481" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a1a81dc0c58d8f17e8c7a4a38dbfd87e4" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsInfo::fileNumber</definition>
+        <argsstring></argsstring>
+        <name>fileNumber</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::fileNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6482" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6482" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a5d940c5f5a64b2b72ffcca439260e689" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a4c9b2d51f4f2b55b8c5b85fbfcbc9ee2" kindref="member">CrContentsInfo_GroupType</ref></type>
+        <definition>CrContentsInfo_GroupType SCRSDK::CrContentsInfo::groupType</definition>
+        <argsstring></argsstring>
+        <name>groupType</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::groupType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6483" column="26" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1adae0c40ef876ed6b25fee37bdf119170" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsInfo::groupId</definition>
+        <argsstring></argsstring>
+        <name>groupId</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::groupId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6484" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a8ba04acfb2d6f197dad7f7d90f66d714" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrContentsInfo::representative</definition>
+        <argsstring></argsstring>
+        <name>representative</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::representative</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6485" column="6" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a9765e8f478a7eb22e3c4974b975f2a43" prot="public" static="no" mutable="no">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_capture_date" kindref="compound">CrCaptureDate</ref></type>
+        <definition>CrCaptureDate SCRSDK::CrContentsInfo::creationDatetimeUTC</definition>
+        <argsstring></argsstring>
+        <name>creationDatetimeUTC</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::creationDatetimeUTC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6486" column="15" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a47d9d8f4c977fd406b0706c325c9674a" prot="public" static="no" mutable="no">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_capture_date" kindref="compound">CrCaptureDate</ref></type>
+        <definition>CrCaptureDate SCRSDK::CrContentsInfo::modificationDatetimeUTC</definition>
+        <argsstring></argsstring>
+        <name>modificationDatetimeUTC</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::modificationDatetimeUTC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6487" column="15" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1aab88b703448e89e1e484412851871133" prot="public" static="no" mutable="no">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_capture_date" kindref="compound">CrCaptureDate</ref></type>
+        <definition>CrCaptureDate SCRSDK::CrContentsInfo::creationDatetimeLocaltime</definition>
+        <argsstring></argsstring>
+        <name>creationDatetimeLocaltime</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::creationDatetimeLocaltime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6488" column="15" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a7006e760ff182c6277c9390a6b9316d7" prot="public" static="no" mutable="no">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_capture_date" kindref="compound">CrCaptureDate</ref></type>
+        <definition>CrCaptureDate SCRSDK::CrContentsInfo::modificationDatetimeLocaltime</definition>
+        <argsstring></argsstring>
+        <name>modificationDatetimeLocaltime</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::modificationDatetimeLocaltime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6489" column="15" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1ab6b6df9610888ad658bcb86cce0dc981" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_s_c_r_s_d_k_1a43448b548fc273f6a61f418ac385ffb3" kindref="member">CrContentsInfo_Rating</ref></type>
+        <definition>CrContentsInfo_Rating SCRSDK::CrContentsInfo::rating</definition>
+        <argsstring></argsstring>
+        <name>rating</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::rating</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6490" column="23" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a66c2637d2e787c71763203e44dd801e4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrContentsInfo::protectionStatus</definition>
+        <argsstring></argsstring>
+        <name>protectionStatus</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::protectionStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6491" column="6" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1acc05ae4e73b20dd6d14e2f41de78fe01" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SCRSDK::CrContentsInfo::dummyContent</definition>
+        <argsstring></argsstring>
+        <name>dummyContent</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::dummyContent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6492" column="6" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1af78cf2c8535f970e1860faae9e57b5ee" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsInfo::shotMarkNum</definition>
+        <argsstring></argsstring>
+        <name>shotMarkNum</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::shotMarkNum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6493" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a98245525dab15ac6c23f908b24b8c0b0" prot="public" static="no" mutable="no">
+        <type><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref> *</type>
+        <definition>CrInt8u* SCRSDK::CrContentsInfo::shotMark</definition>
+        <argsstring></argsstring>
+        <name>shotMark</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::shotMark</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6494" column="9" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6494" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1af671621c2d13ee9304bfcdd2800a3a1d" prot="public" static="no" mutable="no">
+        <type>CrInt32u</type>
+        <definition>CrInt32u SCRSDK::CrContentsInfo::filesNum</definition>
+        <argsstring></argsstring>
+        <name>filesNum</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::filesNum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6495" column="10" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1aa9467908c6bdf92fd361f68e3b13c998" prot="public" static="no" mutable="no">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_contents_file" kindref="compound">CrContentsFile</ref> *</type>
+        <definition>CrContentsFile* SCRSDK::CrContentsInfo::files</definition>
+        <argsstring></argsstring>
+        <name>files</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::files</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6496" column="16" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6496" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1aca31b7db425b17431e4ebfaddad84372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrContentsInfo::CrContentsInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CrContentsInfo</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::CrContentsInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6473" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1a055b9323e74db5d6803ca74950d7942d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrContentsInfo::~CrContentsInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~CrContentsInfo</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::~CrContentsInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6474" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1aa57e1356bf5843e2a069b85421124248" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SCRSDK::CrContentsInfo::CrContentsInfo</definition>
+        <argsstring>(const CrContentsInfo &amp;ref)</argsstring>
+        <name>CrContentsInfo</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::CrContentsInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_contents_info" kindref="compound">CrContentsInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6475" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_c_r_s_d_k_1_1_cr_contents_info_1abbe3c3312becec21ba38a1b5b0b9d5ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_c_r_s_d_k_1_1_cr_contents_info" kindref="compound">CrContentsInfo</ref> &amp;</type>
+        <definition>CrContentsInfo &amp; SCRSDK::CrContentsInfo::operator=</definition>
+        <argsstring>(const CrContentsInfo &amp;ref)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>SCRSDK::CrContentsInfo::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_s_c_r_s_d_k_1_1_cr_contents_info" kindref="compound">CrContentsInfo</ref> &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6476" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>SCRSDK::CrCaptureDate</label>
+        <link refid="class_s_c_r_s_d_k_1_1_cr_capture_date"/>
+      </node>
+      <node id="3">
+        <label>SCRSDK::CrContentsFile</label>
+        <link refid="class_s_c_r_s_d_k_1_1_cr_contents_file"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>imageParam</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>videoParam</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>audioParam</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SCRSDK::CrContentsFile_AudioParam</label>
+        <link refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___audio_param"/>
+      </node>
+      <node id="4">
+        <label>SCRSDK::CrContentsFile_ImageParam</label>
+        <link refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___image_param"/>
+      </node>
+      <node id="5">
+        <label>SCRSDK::CrContentsFile_VideoParam</label>
+        <link refid="struct_s_c_r_s_d_k_1_1_cr_contents_file___video_param"/>
+      </node>
+      <node id="1">
+        <label>SCRSDK::CrContentsInfo</label>
+        <link refid="class_s_c_r_s_d_k_1_1_cr_contents_info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>creationDatetimeLocaltime</edgelabel>
+          <edgelabel>creationDatetimeUTC</edgelabel>
+          <edgelabel>modificationDatetimeLocaltime</edgelabel>
+          <edgelabel>modificationDatetimeUTC</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>files</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" line="6470" column="1" bodyfile="data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK/CrDeviceProperty.h" bodystart="6471" bodyend="6497"/>
+    <listofallmembers>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1ac84f6c71f19ec56ff1f2d9e3ccf34e48" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>contentId</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1ad6022f3e7ba977631be1cef50d6c8724" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>contentType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1aca31b7db425b17431e4ebfaddad84372" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>CrContentsInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1aa57e1356bf5843e2a069b85421124248" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>CrContentsInfo</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1aab88b703448e89e1e484412851871133" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>creationDatetimeLocaltime</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a9765e8f478a7eb22e3c4974b975f2a43" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>creationDatetimeUTC</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a6fcde8dec67c0ff62b671cceef709af9" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>dirNumber</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1acc05ae4e73b20dd6d14e2f41de78fe01" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>dummyContent</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a1a81dc0c58d8f17e8c7a4a38dbfd87e4" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>fileNumber</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1aa9467908c6bdf92fd361f68e3b13c998" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>files</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1af671621c2d13ee9304bfcdd2800a3a1d" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>filesNum</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1adae0c40ef876ed6b25fee37bdf119170" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>groupId</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a5d940c5f5a64b2b72ffcca439260e689" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>groupType</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a7006e760ff182c6277c9390a6b9316d7" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>modificationDatetimeLocaltime</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a47d9d8f4c977fd406b0706c325c9674a" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>modificationDatetimeUTC</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1abbe3c3312becec21ba38a1b5b0b9d5ae" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>operator=</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a66c2637d2e787c71763203e44dd801e4" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>protectionStatus</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1ab6b6df9610888ad658bcb86cce0dc981" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>rating</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a8ba04acfb2d6f197dad7f7d90f66d714" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>representative</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a98245525dab15ac6c23f908b24b8c0b0" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>shotMark</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1af78cf2c8535f970e1860faae9e57b5ee" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>shotMarkNum</name></member>
+      <member refid="class_s_c_r_s_d_k_1_1_cr_contents_info_1a055b9323e74db5d6803ca74950d7942d" prot="public" virt="non-virtual"><scope>SCRSDK::CrContentsInfo</scope><name>~CrContentsInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

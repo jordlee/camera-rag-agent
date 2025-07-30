@@ -1,0 +1,28 @@
+﻿.. _dp-PaintLookBBlack:
+
+CrDeviceProperty_PaintLookBBlack
+================================
+
+Get/Set the paint/look B black level.
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+
+| min(Low) to max(High)
+| 10 times the real value of B Black Level.
+

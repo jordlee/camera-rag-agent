@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_704f54334ed414d5d893823eb74918df" kind="dir">
+    <compoundname>data/raw_sdk_docs/sdk_source</compoundname>
+    <innerfile refid="_camera_device_8cpp">CameraDevice.cpp</innerfile>
+    <innerfile refid="_camera_device_8h">CameraDevice.h</innerfile>
+    <innerfile refid="_connection_info_8cpp">ConnectionInfo.cpp</innerfile>
+    <innerfile refid="_connection_info_8h">ConnectionInfo.h</innerfile>
+    <innerfile refid="_cr_debug_string_8cpp">CrDebugString.cpp</innerfile>
+    <innerfile refid="_cr_debug_string_8h">CrDebugString.h</innerfile>
+    <innerfile refid="_message_define_8cpp">MessageDefine.cpp</innerfile>
+    <innerfile refid="_message_define_8h">MessageDefine.h</innerfile>
+    <innerfile refid="_open_c_v_wrapper_8cpp">OpenCVWrapper.cpp</innerfile>
+    <innerfile refid="_open_c_v_wrapper_8h">OpenCVWrapper.h</innerfile>
+    <innerfile refid="_property_value_table_8cpp">PropertyValueTable.cpp</innerfile>
+    <innerfile refid="_property_value_table_8h">PropertyValueTable.h</innerfile>
+    <innerfile refid="_remote_cli_8cpp">RemoteCli.cpp</innerfile>
+    <innerfile refid="_text_8cpp">Text.cpp</innerfile>
+    <innerfile refid="_text_8h">Text.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/raw_sdk_docs/sdk_source/"/>
+  </compounddef>
+</doxygen>

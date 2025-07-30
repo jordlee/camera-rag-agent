@@ -1,0 +1,19 @@
+﻿.. _dp-ModelName:
+
+CrDeviceProperty_ModelName
+=============================================
+
+Get the camera model name.
+
+    CrDataType: `CrDataType_STR`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - --
+    - | The camera model name.
+

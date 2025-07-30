@@ -1,0 +1,33 @@
+﻿.. _dp-DigitalZoomScale:
+
+CrDeviceProperty_DigitalZoomScale
+=================================
+
+Get/Set the Digital Zoom Scale
+
+| refs Zoom Operation / Zoom Scale.
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| 1000 times the real value of zoom scale.
+| The resolution of the CurrentValue is the step value.
+| The CurrentValue increases or decreases with each step value.
+| Ex.) 0x000004B0 = 1200 /1000 = x1.2
+| CrDeviceProperty_Zoom_Scale shows the total scale of digital and optical.
+

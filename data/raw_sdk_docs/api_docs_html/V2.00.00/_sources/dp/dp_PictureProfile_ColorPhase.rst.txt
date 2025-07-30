@@ -1,0 +1,27 @@
+﻿.. _dp-PictureProfile_ColorPhase:
+
+CrDeviceProperty_PictureProfile_ColorPhase
+==========================================
+
+Get/Set the Picture Profile Color Phase
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Color Phase for Picture Profile
+

@@ -1,0 +1,25 @@
+﻿.. _dp-VideoRecordingFormatQuality:
+
+CrDeviceProperty_VideoRecordingFormatQuality
+============================================
+
+Get/Set the Recording quality
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrVideoRecordingFormatQuality_Level1
+    - | Level1
+
+  * - CrVideoRecordingFormatQuality_Level2
+    - | Level2
+
+  * - CrVideoRecordingFormatQuality_Level3
+    - | Level3
+

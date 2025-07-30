@@ -1,0 +1,22 @@
+﻿.. _dp-ForcedFileNumberResetEnableStatus:
+
+CrDeviceProperty_ForcedFileNumberResetEnableStatus
+==================================================
+
+Get/Set the Forced File Number Reset Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrForcedFileNumberReset_Disable
+    - | Disable
+
+  * - CrForcedFileNumberReset_Enable
+    - | Enable
+

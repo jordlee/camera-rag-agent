@@ -1,0 +1,156 @@
+.. _control-pan-tilt:
+
+Control Pan/Tilt
+================
+
+.. _cr-PTZFControlType:
+
+CrPTZFControlType
+-----------------
+
+Enumerate of kind of type of Pan/Tilt control.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrPTZFControlType_Absolute
+    - Absolute
+  * - CrPTZFControlType_Relative
+    - Relative
+  * - CrPTZFControlType_Direction
+    - Direction
+  * - CrPTZFControlType_HomePosition
+    - Set to Home position
+  * - CrPTZFControlType_Reset
+    - Reset to position
+  * - CrPTZFControlType_Cancel
+    - Cancel to Pan/Tilt
+
+.. _cr-PTZFSetting:
+
+CrPTZFSetting
+-------------
+
+Class describing contents file.
+
+Has a data of contents information.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - pan
+    - CrDrivePanSetting
+    - Pan settings.
+  * - tilt
+    - CrDriveTiltSetting
+    - Tilt settings.
+
+Member Functions
+  None
+
+.. _cr-DrivePanSetting:
+
+CrDrivePanSetting
+-----------------
+
+Struct describing pan parameter in CrPTZFSetting.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+
+  * - exists
+    - CrInt8u
+    - parameter exists.
+  * - position
+    - CrInt32
+    - position value or Movement volume.
+  * - speed
+    - CrInt32
+    - speed value.
+
+.. _cr-DriveTiltSetting:
+
+CrDriveTiltSetting
+------------------
+
+Struct describing tilt parameter in CrPTZFSetting.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+
+  * - exists
+    - CrInt8u
+    - parameter exists.
+  * - position
+    - CrInt32
+    - position value or Movement volume.
+  * - speed
+    - CrInt32
+    - speed value.
+
+.. _cr-PresetPTZFSettingType:
+
+CrPresetPTZFSettingType
+-----------------------
+
+Enumerate of kind of setting type of Preset Pan/Tilt.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrPresetPTZFSettingType_current
+    - Current
+
+.. _cr-PresetPTZFThumbnail:
+
+CrPresetPTZFThumbnail
+---------------------
+
+Enumerate of kind of thumbnail of Preset Pan/Tilt.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrPresetPTZFThumbnail_Off
+    - off
+  * - CrPresetPTZFThumbnail_On
+    - on

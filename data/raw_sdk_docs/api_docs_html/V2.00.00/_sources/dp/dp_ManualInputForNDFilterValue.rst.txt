@@ -1,0 +1,24 @@
+﻿.. _dp-ManualInputForNDFilterValue:
+
+CrDeviceProperty_ManualInputForNDFilterValue
+============================================
+
+Get/Set the manual input value of the ND filter
+
+    CrDataType: `CrDataType_UInt64Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - 0xFFFFFFFFFFFFFFFF
+    - | nothing to display.
+
+  * - Other than above values
+    - | The real value of ND Filter (Upper four bytes: numerator, Lower four bytes: denominator)
+
+| This value is expressed in transmittance.
+

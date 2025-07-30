@@ -1,0 +1,24 @@
+﻿.. _dp-UserBaseLookInput:
+
+CrDeviceProperty_UserBaseLookInput
+==================================
+
+Set/Get to UserBaseLook Input
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrUserBaseLookInput_S_Gamut3_SLog3
+    - | S-Gamut3/SLog3
+
+  * - CrUserBaseLookInput_S_Gamut3_Cine_SLog3
+    - | S-Gamut3.Cine/SLog3
+
+| Set “UserBaseLook Input” for UserBaseLook selected in “Select UserBaseLook to Edit.”
+

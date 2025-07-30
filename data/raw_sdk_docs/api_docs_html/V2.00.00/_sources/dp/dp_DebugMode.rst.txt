@@ -1,0 +1,25 @@
+﻿.. _dp-DebugMode:
+
+CrDeviceProperty_DebugMode
+==========================
+
+Get/Set the Debug Mode
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrDebugMode_OFF
+    - | Off
+
+  * - CrDebugMode_Pseudo_update_with_Fake_Firmware
+    - | Pseudo-update with Fake Firmware
+
+| This Device Porperty is only for SDK users to debug their application
+| The value should be set to 0x01(OFF) except during debugging
+

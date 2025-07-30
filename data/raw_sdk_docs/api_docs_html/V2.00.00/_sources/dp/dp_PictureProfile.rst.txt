@@ -1,0 +1,64 @@
+﻿.. _dp-PictureProfile:
+
+CrDeviceProperty_PictureProfile
+===============================
+
+Get/Set the Picture Profile
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrPictureProfile_Off
+    - | Picture Profile Off
+
+  * - CrPictureProfile_Number1
+    - | Picture Profile number 1
+
+  * - CrPictureProfile_Number2
+    - | Picture Profile number 2
+
+  * - CrPictureProfile_Number3
+    - | Picture Profile number 3
+
+  * - CrPictureProfile_Number4
+    - | Picture Profile number 4
+
+  * - CrPictureProfile_Number5
+    - | Picture Profile number 5
+
+  * - CrPictureProfile_Number6
+    - | Picture Profile number 6
+
+  * - CrPictureProfile_Number7
+    - | Picture Profile number 7
+
+  * - CrPictureProfile_Number8
+    - | Picture Profile number 8
+
+  * - CrPictureProfile_Number9
+    - | Picture Profile number 9
+
+  * - CrPictureProfile_Number10
+    - | Picture Profile number 10
+
+  * - CrPictureProfile_Number11
+    - | Picture Profile number 11
+
+  * - CrPictureProfile_LUT_Number1
+    - | Picture Profile LUT number 1
+
+  * - CrPictureProfile_LUT_Number2
+    - | Picture Profile LUT number 2
+
+  * - CrPictureProfile_LUT_Number3
+    - | Picture Profile LUT number 3
+
+  * - CrPictureProfile_LUT_Number4
+    - | Picture Profile LUT number 4
+

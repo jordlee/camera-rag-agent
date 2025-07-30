@@ -1,0 +1,22 @@
+﻿.. _dp-AudioInputCH3LevelControl:
+
+CrDeviceProperty_AudioInputCH3LevelControl
+==========================================
+
+Get/Set the audio input CH3 level control.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAudioInputCHLevelControl_Auto
+    - | Auto
+
+  * - CrAudioInputCHLevelControl_Manual
+    - | Manual
+

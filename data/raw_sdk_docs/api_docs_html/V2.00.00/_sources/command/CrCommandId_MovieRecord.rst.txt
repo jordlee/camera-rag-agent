@@ -1,0 +1,27 @@
+﻿.. _command-MovieRecord:
+
+CrCommandId_MovieRecord
+=============================================
+
+Control movie recording (S/S) button.
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCommandParam_Up
+    - | Specify “Up” when stop movie recording
+
+  * - CrCommandParam_Down 
+    - | Specify “Down” when you start movie recording
+
+
+| Note:
+| After starting movie recording, please check the movie recording status with :ref:`CrDeviceProperty_RecordingState<dp-RecordingState>`.
+| Caution:
+| The below models can be start or stop with the “Down”, but please execute “Up” after “Down” at once.
+| ILCE-1, ILCE-9M2, ILCE-7RM4A, ILCE-7RM4, ILCE-7SM3, ILCE-7C and DSC-RX0M2.
+

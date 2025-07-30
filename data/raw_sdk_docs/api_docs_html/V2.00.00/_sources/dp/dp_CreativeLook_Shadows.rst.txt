@@ -1,0 +1,27 @@
+﻿.. _dp-CreativeLook_Shadows:
+
+CrDeviceProperty_CreativeLook_Shadows
+=====================================
+
+Get/Set the Creative Look Shadows
+
+    CrDataType: `CrDataType_Int8Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - Variable
+    - min
+
+  * - Variable
+    - max
+
+  * - Variable
+    - step
+
+| Shadows for Creative Look
+

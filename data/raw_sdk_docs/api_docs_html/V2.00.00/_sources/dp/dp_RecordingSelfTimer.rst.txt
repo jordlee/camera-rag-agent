@@ -1,0 +1,22 @@
+﻿.. _dp-RecordingSelfTimer:
+
+CrDeviceProperty_RecordingSelfTimer
+===================================
+
+Get/Set the Movie Rec Self timer
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieRecordingSelfTimer_Off
+    - | Off
+
+  * - CrMovieRecordingSelfTimer_On
+    - | On
+

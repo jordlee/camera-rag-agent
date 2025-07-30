@@ -1,0 +1,22 @@
+﻿.. _dp-TrackingOnAndAFOnEnableStatus:
+
+CrDeviceProperty_TrackingOnAndAFOnEnableStatus
+==============================================
+
+Get the Tracking On + AF On Enable Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrTrackingOnAndAFOnEnableStatus_Disable
+    - | Disable
+
+  * - CrTrackingOnAndAFOnEnableStatus_Enable
+    - | Enable
+

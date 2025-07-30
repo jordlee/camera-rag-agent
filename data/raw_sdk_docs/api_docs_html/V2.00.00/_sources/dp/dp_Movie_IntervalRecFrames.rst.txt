@@ -1,0 +1,36 @@
+﻿.. _dp-Movie_IntervalRecFrames:
+
+CrDeviceProperty_Movie_IntervalRecFrames
+========================================
+
+Get/Set the interval recording (movie) number of frames.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - 0x0001
+    - | 1 frame
+
+  * - 0x0002
+    - | 2 frames
+
+  * - 0x0003
+    - | 3 frames
+
+  * - 0x0006
+    - | 6 frames
+
+  * - 0x0009
+    - | 9 frames
+
+  * - 0x000C
+    - | 12 frames
+
+| The real value of number of recording frames.
+

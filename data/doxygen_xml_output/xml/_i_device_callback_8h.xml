@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_i_device_callback_8h" kind="file" language="C++">
+    <compoundname>IDeviceCallback.h</compoundname>
+    <includes refid="_cr_defines_8h" local="yes">CrDefines.h</includes>
+    <includedby refid="_camera_device_8h" local="yes">data/raw_sdk_docs/sdk_source/CameraDevice.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>CrDefines.h</label>
+        <link refid="_cr_defines_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CrError.h</label>
+        <link refid="_cr_error_8h"/>
+      </node>
+      <node id="3">
+        <label>CrTypes.h</label>
+        <link refid="_cr_types_8h"/>
+      </node>
+      <node id="1">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h</label>
+        <link refid="_i_device_callback_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h</label>
+        <link refid="_i_device_callback_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>data/raw_sdk_docs/sdk_source/CameraDevice.h</label>
+        <link refid="_camera_device_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_s_c_r_s_d_k_1_1_i_device_callback" prot="public">SCRSDK::IDeviceCallback</innerclass>
+    <innernamespace refid="namespace_s_c_r_s_d_k">SCRSDK</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>IDEVICECALLBACK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDEVICECALLBACK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&quot;<ref refid="_cr_defines_8h" kindref="compound">CrDefines.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_s_c_r_s_d_k" kindref="compound">SCRSDK</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_s_c_r_s_d_k_1_1_i_device_callback" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback" kindref="compound">IDeviceCallback</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a09419ff635d9b267939c3f6b56a625a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a09419ff635d9b267939c3f6b56a625a3" kindref="member">OnConnected</ref>(<ref refid="namespace_s_c_r_s_d_k_1adf92f7fb96e970926493817c9cd7ddcd" kindref="member">DeviceConnectionVersioin</ref><sp/>version)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1af3ce487705e7968793e4c4522e9d431e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1af3ce487705e7968793e4c4522e9d431e" kindref="member">OnDisconnected</ref>(CrInt32u<sp/>error)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a25307ec0ad9e7932a0388ddfa6cbd3d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a25307ec0ad9e7932a0388ddfa6cbd3d4" kindref="member">OnPropertyChanged</ref>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a779e6e0fa94ee06f2c31d865eacb6a4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a779e6e0fa94ee06f2c31d865eacb6a4e" kindref="member">OnPropertyChangedCodes</ref>(CrInt32u<sp/>num,<sp/>CrInt32u*<sp/>codes)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a1a50ed3954da7af4c1f2e4d596013376" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a1a50ed3954da7af4c1f2e4d596013376" kindref="member">OnLvPropertyChanged</ref>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a85ea6dacf51fb654cc28953ccbf78ea7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a85ea6dacf51fb654cc28953ccbf78ea7" kindref="member">OnLvPropertyChangedCodes</ref>(CrInt32u<sp/>num,<sp/>CrInt32u*<sp/>codes)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a2f103f042cd998ff2289b4ee0b6baabc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a2f103f042cd998ff2289b4ee0b6baabc" kindref="member">OnCompleteDownload</ref>(<ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref>*<sp/>filename,<sp/>CrInt32u<sp/>type<sp/>=<sp/>0xFFFFFFFF)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a91993bf605f650c6c5ef4ca21219c09e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a91993bf605f650c6c5ef4ca21219c09e" kindref="member">OnNotifyContentsTransfer</ref>(CrInt32u<sp/>notify,<sp/><ref refid="namespace_s_c_r_s_d_k_1a4f6ae29bb252f8fa71f05cb6a1f9c746" kindref="member">CrContentHandle</ref><sp/>handle,<sp/><ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref>*<sp/>filename<sp/>=<sp/>0)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a8b13e639bd101f6eaca6d4b02d3324f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a8b13e639bd101f6eaca6d4b02d3324f7" kindref="member">OnWarning</ref>(CrInt32u<sp/>warning)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a87affb1060f0d55966812d998e0fdcd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a87affb1060f0d55966812d998e0fdcd1" kindref="member">OnWarningExt</ref>(CrInt32u<sp/>warning,<sp/>CrInt32<sp/>param1,<sp/>CrInt32<sp/>param2,<sp/>CrInt32<sp/>param3)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a95d5f92a973177f2d3668ffd54a54e71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a95d5f92a973177f2d3668ffd54a54e71" kindref="member">OnError</ref>(CrInt32u<sp/>error)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a008b3d0f574de59ef0e7fff489461f24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a008b3d0f574de59ef0e7fff489461f24" kindref="member">OnNotifyFTPTransferResult</ref>(CrInt32u<sp/>notify,<sp/>CrInt32u<sp/>numOfSuccess,<sp/>CrInt32u<sp/>numOfFail)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a2e0421f6bd1fe951cb3c144ba36b5692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a2e0421f6bd1fe951cb3c144ba36b5692" kindref="member">OnNotifyRemoteTransferResult</ref>(CrInt32u<sp/>notify,<sp/>CrInt32u<sp/>per,<sp/><ref refid="_cr_types_8h_1ad1d04d0a5f5be0363cf184abcdabad3a" kindref="member">CrChar</ref>*<sp/>filename)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a6a90cdd1684b7d186b090cbe5ad1e945" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a6a90cdd1684b7d186b090cbe5ad1e945" kindref="member">OnNotifyRemoteTransferResult</ref>(CrInt32u<sp/>notify,<sp/>CrInt32u<sp/>per,<sp/><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref>*<sp/>data,<sp/>CrInt64u<sp/>size)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a0081670fd6aa49b4d4e42dbba155de0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a0081670fd6aa49b4d4e42dbba155de0a" kindref="member">OnNotifyRemoteTransferContentsListChanged</ref>(CrInt32u<sp/>notify,<sp/>CrInt32u<sp/>slotNumber,<sp/>CrInt32u<sp/>addSize)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a0729e0e51c9ef9550e16d4d261eb6ab2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a0729e0e51c9ef9550e16d4d261eb6ab2" kindref="member">OnNotifyRemoteFirmwareUpdateResult</ref>(CrInt32u<sp/>notify,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>param)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a48e256a00bf4809923a9da703a6be370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a48e256a00bf4809923a9da703a6be370" kindref="member">OnReceivePlaybackTimeCode</ref>(CrInt32u<sp/>timeCode)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a73c76d6662e74aab82bf8df91710df40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a73c76d6662e74aab82bf8df91710df40" kindref="member">OnReceivePlaybackData</ref>(<ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref><sp/>mediaType,<sp/>CrInt32<sp/>dataSize,<sp/><ref refid="_cr_types_8h_1ae3716d619d07a8ecdca9c9a36a1d484b" kindref="member">CrInt8u</ref>*<sp/>data,<sp/>CrInt64<sp/>pts,<sp/>CrInt64<sp/>dts,<sp/>CrInt32<sp/>param1,<sp/>CrInt32<sp/>param2)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a182260ea370a6c947430307ddee1cdd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_c_r_s_d_k_1_1_i_device_callback_1a182260ea370a6c947430307ddee1cdd7" kindref="member">OnNotifyMonitorUpdated</ref>(CrInt32u<sp/>type,<sp/>CrInt32u<sp/>frameNo)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight><highlight class="comment">//<sp/>namespace<sp/>SCRSDK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>IDEVICECALLBACK_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/raw_sdk_docs/sdk_source/CRSDK/IDeviceCallback.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+﻿.. _dp-RedEyeReduction:
+
+CrDeviceProperty_RedEyeReduction
+================================
+
+Get/Set the Red Eye Reduction
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRedEye_Off
+    - | Off
+
+  * - CrRedEye_On
+    - | On
+

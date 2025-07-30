@@ -1,0 +1,36 @@
+﻿.. _dp-FileType:
+
+CrDeviceProperty_FileType
+=========================
+
+Get/Set the File Format(Still)
+
+| Before setting this, check if :ref:`CrDeviceProperty_CompressionFileFormatStill<dp-CompressionFileFormatStill>` is set properly.
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrFileType_None
+    - | NONE
+
+  * - CrFileType_Raw
+    - | RAW
+
+  * - CrFileType_RawJpeg
+    - | RAW+JPEG
+
+  * - CrFileType_Jpeg
+    - | JPEG
+
+  * - CrFileType_RawHeif
+    - | RAW+HEIF
+
+  * - CrFileType_Heif
+    - | HEIF
+

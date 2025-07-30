@@ -1,0 +1,56 @@
+\doxysection{data/raw\+\_\+sdk\+\_\+docs/sdk\+\_\+source/\+Text.h File Reference}
+\hypertarget{_text_8h}{}\label{_text_8h}\index{data/raw\_sdk\_docs/sdk\_source/Text.h@{data/raw\_sdk\_docs/sdk\_source/Text.h}}
+{\ttfamily \#include $<$istream$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacecli}{cli}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_text_8h_a65c91f8d7af3c67b8a21e089fdddd0fe}{TCHAR}}~char
+\item 
+\#define \mbox{\hyperlink{_text_8h_a2648be24b645a86d8bc20d006c9fcdcd}{TEXT}}(s)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecli_adc2ca1e4a2a9a9009edf1c29408a62dc}{cli\+::text\+\_\+char}} = char
+\item 
+using \mbox{\hyperlink{namespacecli_af8f80254350fd6c9175d7b82f3ebae7f}{cli\+::text\+\_\+literal}} = \mbox{\hyperlink{namespacecli_adc2ca1e4a2a9a9009edf1c29408a62dc}{text\+\_\+char}} const\texorpdfstring{$\ast$}{*}
+\item 
+using \mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{cli\+::text}} = std\+::basic\+\_\+string$<$\mbox{\hyperlink{namespacecli_adc2ca1e4a2a9a9009edf1c29408a62dc}{text\+\_\+char}}$>$
+\item 
+using \mbox{\hyperlink{namespacecli_a7ae075352202ea1a7148f6f00ad98d85}{cli\+::tregex}} = std\+::basic\+\_\+regex$<$\mbox{\hyperlink{namespacecli_adc2ca1e4a2a9a9009edf1c29408a62dc}{text\+\_\+char}}$>$
+\item 
+using \mbox{\hyperlink{namespacecli_a0522344ac4caf15714dd089d55acf481}{cli\+::tsmatch}} = std\+::match\+\_\+results$<$text\+::const\+\_\+iterator$>$
+\item 
+using \mbox{\hyperlink{namespacecli_afe46edee66ba1e227f8be5aae4b8b1c4}{cli\+::text\+\_\+stringstream}} = std\+::basic\+\_\+stringstream$<$\mbox{\hyperlink{namespacecli_adc2ca1e4a2a9a9009edf1c29408a62dc}{text\+\_\+char}}$>$
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_text_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_text_8h_a65c91f8d7af3c67b8a21e089fdddd0fe}\index{Text.h@{Text.h}!TCHAR@{TCHAR}}
+\index{TCHAR@{TCHAR}!Text.h@{Text.h}}
+\doxysubsubsection{\texorpdfstring{TCHAR}{TCHAR}}
+{\footnotesize\ttfamily \label{_text_8h_a65c91f8d7af3c67b8a21e089fdddd0fe} 
+\#define TCHAR~char}
+
+\Hypertarget{_text_8h_a2648be24b645a86d8bc20d006c9fcdcd}\index{Text.h@{Text.h}!TEXT@{TEXT}}
+\index{TEXT@{TEXT}!Text.h@{Text.h}}
+\doxysubsubsection{\texorpdfstring{TEXT}{TEXT}}
+{\footnotesize\ttfamily \label{_text_8h_a2648be24b645a86d8bc20d006c9fcdcd} 
+\#define TEXT(\begin{DoxyParamCaption}\item[{}]{s}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{s}
+
+\end{DoxyCode}

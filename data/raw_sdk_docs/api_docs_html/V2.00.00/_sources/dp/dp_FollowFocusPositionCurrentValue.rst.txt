@@ -1,0 +1,29 @@
+﻿.. _dp-FollowFocusPositionCurrentValue:
+
+CrDeviceProperty_FollowFocusPositionCurrentValue
+================================================
+
+Get the Follow Focus Position Current Value
+
+    CrDataType: `CrDataType_UInt16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x0000
+    - min
+
+  * - 0xFFFF
+    - max
+
+  * - 0x0001
+    - step
+
+| Note:
+| Can be converted from normalized values to Focus Position (meters/feet) using data taken with GetLensInformation().
+| Focus drive suitable for movie recording.
+

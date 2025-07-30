@@ -1,0 +1,22 @@
+﻿.. _dp-AudioSignalsStartEnd:
+
+CrDeviceProperty_AudioSignalsStartEnd
+=====================================
+
+Get/Set the Audio Signals(Start/End)
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAudioSignalsStartEnd_Off
+    - | Off
+
+  * - CrAudioSignalsStartEnd_On
+    - | On
+

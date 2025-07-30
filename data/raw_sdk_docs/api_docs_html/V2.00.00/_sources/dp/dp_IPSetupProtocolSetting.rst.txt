@@ -1,0 +1,22 @@
+﻿.. _dp-IPSetupProtocolSetting:
+
+CrDeviceProperty_IPSetupProtocolSetting
+=======================================
+
+Get/Set whether the setting via the IP Setup Protocol is turned on.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrIPSetupProtocolSetting_Off
+    - | Off
+
+  * - CrIPSetupProtocolSetting_On
+    - | On
+

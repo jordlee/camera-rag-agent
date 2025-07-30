@@ -1,0 +1,21 @@
+﻿.. _dp-MediaSLOT2_ContentsInfoListRegenerateUpdateTime:
+
+CrDeviceProperty_MediaSLOT2_ContentsInfoListRegenerateUpdateTime
+================================================================
+
+Get the media slot 2 ContentsInfoList regenerate update time.
+
+    CrDataType: `CrDataType_UInt64Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - UnixTime(ms) UTC
+
+| ContentsInfoList is regenerated when any contents is edited or deleted on media.
+

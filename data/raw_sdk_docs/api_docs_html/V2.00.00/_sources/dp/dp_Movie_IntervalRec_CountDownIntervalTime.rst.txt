@@ -1,0 +1,29 @@
+﻿.. _dp-Movie_IntervalRec_CountDownIntervalTime:
+
+CrDeviceProperty_Movie_IntervalRec_CountDownIntervalTime
+========================================================
+
+Get the Interval REC(Movie) Count Down Interval Time
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0
+    - min
+
+  * - 0xFFFFFFFF
+    - max
+
+  * - 1
+    - step
+
+| The real value of Interval REC(Time Lapse Movie) count down interval time. Unit is second
+| e.g.) 0x00000001 = 1 sec
+| e.g.) 0x0000003C = 1 min
+

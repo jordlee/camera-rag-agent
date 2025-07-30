@@ -1,0 +1,40 @@
+﻿.. _dp-AudioInputCH4InputSelect:
+
+CrDeviceProperty_AudioInputCH4InputSelect
+=========================================
+
+Get/Set the audio input CH4 input select.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAudioInputCHInputSelect_Off
+    - | Off
+
+  * - CrAudioInputCHInputSelect_INPUT1
+    - | INPUT1
+
+  * - CrAudioInputCHInputSelect_INPUT2
+    - | INPUT2
+
+  * - CrAudioInputCHInputSelect_InternalMIC
+    - | Internal MIC
+
+  * - CrAudioInputCHInputSelect_ShoeCH1
+    - | Shoe CH1
+
+  * - CrAudioInputCHInputSelect_ShoeCH2
+    - | Shoe CH2
+
+  * - CrAudioInputCHInputSelect_StereoMicJackL
+    - | Stereo Mic Jack (L)
+
+  * - CrAudioInputCHInputSelect_StereoMicJackR
+    - | Stereo Mic Jack (R)
+

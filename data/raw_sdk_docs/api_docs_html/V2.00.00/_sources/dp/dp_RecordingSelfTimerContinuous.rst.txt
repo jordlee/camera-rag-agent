@@ -1,0 +1,22 @@
+﻿.. _dp-RecordingSelfTimerContinuous:
+
+CrDeviceProperty_RecordingSelfTimerContinuous
+=============================================
+
+Get/Set the Movie Recording Self timer Continuous
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrMovieRecordingSelfTimerContinuous_Off
+    - | Off
+
+  * - CrMovieRecordingSelfTimerContinuous_On
+    - | On
+

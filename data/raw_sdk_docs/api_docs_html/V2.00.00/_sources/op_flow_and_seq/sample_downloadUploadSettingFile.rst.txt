@@ -1,0 +1,17 @@
+.. _sample-downloadUploadSettingFile:
+
+sample code - "Download and upload setting files"
+=================================================
+
+.. code-block:: cpp
+
+    usage:
+       d      - download camera setting
+       u      - upload camera setting
+    To exit, please enter 'q'.
+
+Save the following code as "RemoteCli.cpp", replace "app/RemoteCli.cpp" in the SDK, then build.
+
+.. literalinclude:: /_static/downloadUploadSettingFile.cpp
+   :language: cpp
+   :linenos:

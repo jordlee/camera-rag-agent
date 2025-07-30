@@ -1,0 +1,21 @@
+﻿.. _dp-SceneFileIndex:
+
+CrDeviceProperty_SceneFileIndex
+===============================
+
+Get/Set the SceneFile Index
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - --
+    - | It may increase or decrease because it varies depending on the model and setting status.
+      | Get the display character and list of value with :ref:`GetDisplayStringList()<api-get-display-string-list>`.
+
+

@@ -1,0 +1,192 @@
+.. _lens-information:
+
+Lens Information
+================
+
+.. _cr-lens-information:
+
+CrLensInformation
+-----------------
+
+Class describing display information.
+
+Member Variables
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Summary
+
+    * - type
+      - CrLensInformationType
+      - Type of LensInformation
+    * - dataVersion
+      - CrInt16u
+      - Data Version(100 -fold value)
+    * - normalizedValue
+      - CrInt32u
+      - Normalized focus position value
+    * - focusPosition
+      - CrInt32u
+      - | Focus position
+        | ex)20 = 0.2feet/meter
+
+Member Functions
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+
+    * - Signature
+      - Description
+
+    * - Constructor
+      - \-
+    * - Destructor
+      - \-
+    * - Copy Constructor
+      - \-
+
+.. _cr-lens-information-type:
+
+CrLensInformationType
+---------------------
+
+Enumerate the kind of list-type.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrLensInformationType_Undefined
+    - Unavailable
+  * - CrLensInformationType_Feet
+    - Focus position information whose unit is Feet
+  * - CrLensInformationType_Meter
+    - Focus position information whose unit is Meter
+
+.. _cr-zoom-and-focus-preset-info:
+
+CrZoomAndFocusPresetInfo
+------------------------
+
+Class describing Zoom&Focus Preset info.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - isExists
+    - CrZoomAndFocusPresetExist
+    - Existence of Preset info
+  * - lensModelName
+    - CrInt16u*
+    - Lens Model Name
+  * - zoomDistance
+    - CrInt32u
+    - | Zoom Distance. Units of 0.001[mm]
+      | ex)6000 = 6mm
+  * - focalDistance
+    - CrInt32u
+    - | Focal Distance. Units of 0.001[m]
+      | ex)200 = 0.2m
+  * - zoomOnlyEnableStatus
+    - CrZoomAndFocusPresetZoomOnlyEnableStatus
+    - Enable status of zoomOnlyValue
+  * - zoomOnlyValue
+    - CrZoomAndFocusPresetZoomOnlyValue
+    - | Zoom-only value
+      | This value can be changed with :ref:`CrDeviceProperty_ZoomAndFocusPresetZoomOnly_Set<dp-ZoomAndFocusPresetZoomOnly_Set>`
+
+Member Functions
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Signature
+    - Description
+  
+  * - Constructor
+    - \-
+  * - Destructor
+    - \-
+  * - Copy Constructor
+    - \-
+
+.. _cr-zoom-and-focus-preset-exist:
+
+CrZoomAndFocusPresetExist
+-------------------------
+
+Enumerate the kind of exist status.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrZoomAndFocusPresetExist_False
+    - False
+  * - CrZoomAndFocusPresetExist_True
+    - True
+
+.. _cr-zoom-and-focus-preset-zoom-only-enable-status:
+
+CrZoomAndFocusPresetZoomOnlyEnableStatus
+----------------------------------------
+
+Enumerate the kind of Zoom-only enable status.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrZoomAndFocusPresetZoomOnlyEnableStatus_Disable
+    - Disable
+  * - CrZoomAndFocusPresetZoomOnlyEnableStatus_Enable
+    - Enable
+
+.. _cr-zoom-and-focus-preset-zoom-only-value:
+
+CrZoomAndFocusPresetZoomOnlyValue
+---------------------------------
+
+Enumerate the kind of Zoom-only value.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrZoomAndFocusPresetZoomOnlyValue_Off
+    - Off
+  * - CrZoomAndFocusPresetZoomOnlyValue_On
+    - On

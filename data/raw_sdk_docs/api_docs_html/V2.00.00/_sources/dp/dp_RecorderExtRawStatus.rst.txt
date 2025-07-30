@@ -1,0 +1,34 @@
+﻿.. _dp-RecorderExtRawStatus:
+
+CrDeviceProperty_RecorderExtRawStatus
+=====================================
+
+Get the Recorder Ext Raw Status
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrRecorderStatus_Idle
+    - | Idle
+
+  * - CrRecorderStatus_Ready
+    - | Ready
+
+  * - CrRecorderStatus_PreparingToRecord
+    - | PreparingToRecord
+
+  * - CrRecorderStatus_Standby
+    - | Standby
+
+  * - CrRecorderStatus_Recording
+    - | Recording
+
+  * - CrRecorderStatus_Stopping
+    - | Stopping
+

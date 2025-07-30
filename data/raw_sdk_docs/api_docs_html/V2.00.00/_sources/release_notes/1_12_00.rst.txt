@@ -1,0 +1,11 @@
+Version 1.12.0
+==============
+
+**Notes for SDK Ver 1.12.00 Release**
+
+*Release Date: 2024-Apr-12*
+
+- “Supporting products” and “Supporting OS” are updated.
+- Wireless LAN(Wi-Fi) connection is added.
+- Some of DeviceProperties and DeviceProperty values are added.
+- Some of error codes are added.

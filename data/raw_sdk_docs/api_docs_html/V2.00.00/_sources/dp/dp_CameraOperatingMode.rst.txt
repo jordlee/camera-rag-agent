@@ -1,0 +1,22 @@
+﻿.. _dp-CameraOperatingMode:
+
+CrDeviceProperty_CameraOperatingMode
+====================================
+
+Get the Camera Operating Mode
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrCameraOperatingMode_Record
+    - | Record
+
+  * - CrCameraOperatingMode_Playback
+    - | Playback
+

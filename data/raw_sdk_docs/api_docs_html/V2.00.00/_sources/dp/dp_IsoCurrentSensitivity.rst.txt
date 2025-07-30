@@ -1,0 +1,21 @@
+﻿.. _dp-IsoCurrentSensitivity:
+
+CrDeviceProperty_IsoCurrentSensitivity
+======================================
+
+Get the ISO Current Sensitivity
+
+    CrDataType: `CrDataType_UInt32Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - --
+    - | value : bit 28-31 extension, bit 24-27 ISO mode , bit 0-23 ISO value.
+      | Real ISO value : when bits 0-23 are other than CrISO_AUTO(0xFFFFFF).
+      | e.g.) 0x00000140 = 320
+

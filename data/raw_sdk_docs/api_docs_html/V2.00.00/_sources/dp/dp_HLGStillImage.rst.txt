@@ -1,0 +1,22 @@
+﻿.. _dp-HLGStillImage:
+
+CrDeviceProperty_HLGStillImage
+==============================
+
+Get/Set the HLG Still Image 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrHLGStillImage_Off
+    - | Off
+
+  * - CrHLGStillImage_On
+    - | On
+

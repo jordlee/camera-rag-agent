@@ -1,0 +1,64 @@
+﻿.. _dp-TargetStreamingDestinationSelect:
+
+CrDeviceProperty_TargetStreamingDestinationSelect
+=================================================
+
+Get/Set the Target Streaming Destination Select
+
+    CrDataType: `CrDataType_UInt16Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - 1
+    - | Video Stream 1
+
+  * - 2
+    - | Video Stream 2
+
+  * - 3
+    - | Video Stream 3
+
+  * - 4
+    - | Video Stream 4
+
+  * - 5
+    - | Video Stream 5
+
+  * - 6
+    - | Video Stream 6
+
+  * - 7
+    - | Video Stream 7
+
+  * - 8
+    - | Video Stream 8
+
+  * - 9
+    - | Video Stream 9
+
+  * - 10
+    - | Video Stream 10
+
+  * - 11
+    - | Video Stream 11
+
+  * - 12
+    - | Video Stream 12
+
+  * - 13
+    - | Video Stream 13
+
+  * - 14
+    - | Video Stream 14
+
+  * - 15
+    - | Video Stream 15
+
+  * - 16
+    - | Video Stream 16
+

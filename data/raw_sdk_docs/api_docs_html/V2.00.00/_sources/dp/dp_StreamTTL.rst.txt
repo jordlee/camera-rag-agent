@@ -1,0 +1,25 @@
+﻿.. _dp-StreamTTL:
+
+CrDeviceProperty_StreamTTL
+==========================
+
+Get/Set the streaming TTL setting.
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variable
+    - min
+
+  * - variable
+    - max
+
+  * - variable
+    - step
+

@@ -1,0 +1,33 @@
+.. _op-send-a-control-command:
+
+Send a Control Command
+----------------------
+
+Some of the camera commands are implemented as “Control Command”. For example, shutter release (fully pressing the shutter button), movie record and so on. In these cases, the SendCommand() function must be used. The interface of this function is much simpler than the device property case.
+
+  `void SendCommand(CrDeviceHandle device, CrInt32u commandId, CrCommandParam parm);`
+
+The first parameter specifies the device, the second parameter indexes the command id and the last parameter is ON (CrCommandParam_Down) or OFF (CrCommandParam_Up). The Up and Down expresses the physical button action.
+
+The following example shows how to capture images.
+
+.. code-block:: cpp
+
+  SCRSDK::SendCommand(handle, CrCommandId_Release, CrCommandParam_Down);
+
+This command initiates a human’s action using the button; therefore, the button must be released (Up) once when you send “Down” command. If the camera’s drive mode is in the continuous shooting mode, the camera captures continuously what it receives from the CrCommandParam_Down command until it receives CrCommandParam_Up.
+
+This sample code shows the simplest way to press the shutter release button for one second.
+
+Example:
+
+.. code-block:: cpp
+
+  SCRSDK::SendCommand(handle, CrCommandId_Release, CrCommandParam_Down);
+  Sleep(1000);
+  SCRSDK::SendCommand(handle, CrCommandId_Release, CrCommandParam_Up);
+
+This command sent by SendCommand() has a higher priority than other communication processes, getting device properties, and getting live view image data and so on, to make the response of camera quicker.
+If you set the settings to transfer the captured images to the host PC, use :ref:`SetSaveInfo()<api-set-save-info>` to specify the destination folder.
+
+  refs. :ref:`Change the Store Image Folder and the File Name<op-change-the-store-image-folder-and-the-filename>`

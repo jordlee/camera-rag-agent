@@ -1,0 +1,22 @@
+﻿.. _dp-SceneFileDownloadOperationEnableStatus:
+
+CrDeviceProperty_SceneFileDownloadOperationEnableStatus
+=======================================================
+
+Get the SceneFile download operation enabled status.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrSceneFileOperationEnableStatus_Disable
+    - | Disable
+
+  * - CrSceneFileOperationEnableStatus_Enable
+    - | Enable
+

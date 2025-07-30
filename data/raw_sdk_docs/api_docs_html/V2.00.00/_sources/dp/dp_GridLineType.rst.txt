@@ -1,0 +1,46 @@
+﻿.. _dp-GridLineType:
+
+CrDeviceProperty_GridLineType
+=============================
+
+Get/Set the Grid Line Type
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrGridLineType_RuleOf3rdsGrid
+    - | Rule of 3rds Grid
+
+  * - CrGridLineType_SquareGrid
+    - | Square Grid
+
+  * - CrGridLineType_DiagAndSquareGrid
+    - | Diag. + Square Grid
+
+  * - CrGridLineType_GoldenRatioGrid
+    - | Golden Ratio Grid
+
+  * - CrGridLineType_Custom1
+    - | Custom 1
+
+  * - CrGridLineType_Custom2
+    - | Custom 2
+
+  * - CrGridLineType_Custom3
+    - | Custom 3
+
+  * - CrGridLineType_Custom4
+    - | Custom 4
+
+
+| \*A license is required to use custom GridLine types.
+| Without a license, custom GridLine types features are not available.
+| The sales policy for this license varies by region.
+| Details: https://helpguide.sony.net/di/gridline_2420/v1/h_zz/index.html
+

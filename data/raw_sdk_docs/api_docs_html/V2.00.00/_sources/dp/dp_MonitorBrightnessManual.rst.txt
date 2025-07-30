@@ -1,0 +1,25 @@
+﻿.. _dp-MonitorBrightnessManual:
+
+CrDeviceProperty_MonitorBrightnessManual
+========================================
+
+Get/Set the Monitor Brightness Manual
+
+    CrDataType: `CrDataType_Int16Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - variables
+    - min
+
+  * - variables
+    - max
+
+  * - variables
+    - step
+

@@ -1,0 +1,314 @@
+\doxysection{data/raw\+\_\+sdk\+\_\+docs/sdk\+\_\+source/\+Property\+Value\+Table.cpp File Reference}
+\hypertarget{_property_value_table_8cpp}{}\label{_property_value_table_8cpp}\index{data/raw\_sdk\_docs/sdk\_source/PropertyValueTable.cpp@{data/raw\_sdk\_docs/sdk\_source/PropertyValueTable.cpp}}
+{\ttfamily \#include "{}Property\+Value\+Table.\+h"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include "{}Camera\+Device.\+h"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceimpl}{impl}}
+\item 
+namespace \mbox{\hyperlink{namespacecli}{cli}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{namespaceimpl_a2d0b16104fdee57463c9abf90dd1578b}{impl\+::parse}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+double \mbox{\hyperlink{namespaceimpl_aba47cbc77ee07f6ac258bce9acbec77d}{impl\+::\+Round}} (double value, int figure)
+\item 
+constexpr std\+::uint16\+\_\+t \mbox{\hyperlink{namespaceimpl_a5b14ebafe57ebbcce2c930f767f97568}{impl\+::\+HIWORD}} (std\+::uint32\+\_\+t dword)
+\item 
+constexpr std\+::uint16\+\_\+t \mbox{\hyperlink{namespaceimpl_a5dbe0af4d88ddeddb435d480fafeed71}{impl\+::\+LOWORD}} (std\+::uint32\+\_\+t dword)
+\item 
+constexpr std\+::uint32\+\_\+t \mbox{\hyperlink{namespaceimpl_a24ff538c73edbd27736e219780939e1f}{impl\+::\+HIWORD64}} (std\+::uint64\+\_\+t dword)
+\item 
+constexpr std\+::uint32\+\_\+t \mbox{\hyperlink{namespaceimpl_abb9df916bb9cdd15f43b1ffa74017eb7}{impl\+::\+LOWORD64}} (std\+::uint64\+\_\+t dword)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a13eb25863bfbe415c2893882f91267ac}{cli\+::parse\+\_\+f\+\_\+number}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_abaa36e1917f301d8c817e1cd1fb7a5de}{cli\+::parse\+\_\+iso\+\_\+sensitivity}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a0e114ab04f726d05af9d935cf37ff3b7}{cli\+::parse\+\_\+shutter\+\_\+speed}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint64\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ac2dbb08482cf203bb085e78f401efbbf}{cli\+::parse\+\_\+extended\+\_\+shutter\+\_\+speed}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a98cb5ec390a329824824e7cc0c7fb015}{cli\+::parse\+\_\+position\+\_\+key\+\_\+setting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ace9a7e5ff5df4b421e8ab2e2dfd66491}{cli\+::parse\+\_\+exposure\+\_\+program\+\_\+mode}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_afbe14aa56587a47a6a6596da0fa61cdb}{cli\+::parse\+\_\+still\+\_\+capture\+\_\+mode}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ab962c11d35980244b7669727a5803207}{cli\+::parse\+\_\+focus\+\_\+mode}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a3ff5e163475983d1174beab93610df75}{cli\+::parse\+\_\+focus\+\_\+area}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_aeddc33297139f3d0ffeae9293b0da1d5}{cli\+::parse\+\_\+live\+\_\+view\+\_\+image\+\_\+quality}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a6945f9a320f01edc88850d2b37271a6a}{cli\+::parse\+\_\+media\+\_\+slotx\+\_\+format\+\_\+enable\+\_\+status}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ac45fd264cd6ec1d0579570df44d1d9ed}{cli\+::parse\+\_\+white\+\_\+balance}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_aef376dcef02a661e744ccada153370fb}{cli\+::parse\+\_\+customwb\+\_\+capture\+\_\+standby}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a72d6d8f6227c0a883f60d36d36e58f08}{cli\+::parse\+\_\+customwb\+\_\+capture\+\_\+standby\+\_\+cancel}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_aed972622ba0fe69a44c5ff40f7776fa0}{cli\+::parse\+\_\+customwb\+\_\+capture\+\_\+operation}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_acec1134112ccb342f1743930cd730e6e}{cli\+::parse\+\_\+customwb\+\_\+capture\+\_\+execution\+\_\+state}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a925437de62f1640118a6c54331e8c37c}{cli\+::parse\+\_\+zoom\+\_\+operation\+\_\+status}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_af580216f68e7613b5c94a92df771e9e0}{cli\+::parse\+\_\+zoom\+\_\+setting\+\_\+type}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_aafc1e9d915fcfdd943daca0f2bec5809}{cli\+::parse\+\_\+zoom\+\_\+types\+\_\+status}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::int8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a0e9071ab2493cd073426143aa7057541}{cli\+::parse\+\_\+zoom\+\_\+operation}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::int8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a14567781a2c4e3d7511bfbec2c784252}{cli\+::parse\+\_\+zoom\+\_\+speed\+\_\+range}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a6740e14e45235f0967afd6c3dff3f8b0}{cli\+::parse\+\_\+save\+\_\+zoom\+\_\+and\+\_\+focus\+\_\+position}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a500521d386dde04123d14da41e6ae755}{cli\+::parse\+\_\+load\+\_\+zoom\+\_\+and\+\_\+focus\+\_\+position}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a0fb991b8aa22e8ce5cb0ef6cdb43d2cf}{cli\+::parse\+\_\+remocon\+\_\+zoom\+\_\+speed\+\_\+type}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a5a329183a35191733c11102db798b6db}{cli\+::parse\+\_\+playback\+\_\+media}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_adb25692d2eee9873e5dd2d86bbead850}{cli\+::parse\+\_\+gain\+\_\+base\+\_\+sensitivity}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ae4af89a951921871de137f80900a3809}{cli\+::parse\+\_\+gain\+\_\+base\+\_\+iso\+\_\+sensitivity}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a6e7ddcdd772edeeee2068c3304bf8993}{cli\+::parse\+\_\+monitor\+\_\+lut\+\_\+setting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_abde6a08816b8f21e1c9f052f0762fd1b}{cli\+::parse\+\_\+exposure\+\_\+index}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a52e01bf3517ff89ce43c3613e7330e8d}{cli\+::parse\+\_\+baselook\+\_\+value}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ad3f326533b03abb7a6486441a8b00fb2}{cli\+::parse\+\_\+shutter\+\_\+mode\+\_\+setting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_aeade9869803eae2c2a3a04ad2fe9ed00}{cli\+::parse\+\_\+iris\+\_\+mode\+\_\+setting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a2ef7c1b26a37b2da4a9e8faaecce12b6}{cli\+::parse\+\_\+gain\+\_\+control\+\_\+setting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a19dcecc300638fdc17538d4274d9552d}{cli\+::parse\+\_\+exposure\+\_\+control\+\_\+type}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a5906cc9ff821334542966f76b5470ed1}{cli\+::parse\+\_\+recording\+\_\+setting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ac4d65552191620fde88926ed4b470fe0}{cli\+::parse\+\_\+dispmode\+\_\+candidate}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a03fdccf91430b910d524a255cead7f27}{cli\+::parse\+\_\+dispmode\+\_\+setting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_afdaee29b6b7cead0a4b1912ed470bd7b}{cli\+::parse\+\_\+dispmode}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::int8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a3b56936230adb37e238348e135037023}{cli\+::parse\+\_\+gain\+\_\+db\+\_\+value}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::int32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::int8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a7e63734825c94f51b318aae5a65e7b14}{cli\+::parse\+\_\+white\+\_\+balance\+\_\+tint}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::int32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::int16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ac6849bb4b3ba9570cdcb14e7f4f9d4e2}{cli\+::parse\+\_\+white\+\_\+balance\+\_\+tint\+\_\+step}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::int32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint64\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a3108c58d0910d0f60381576bd748eeb1}{cli\+::parse\+\_\+shutter\+\_\+speed\+\_\+value}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ae8f870e3ceb708bcb26e82a8c7a99a57}{cli\+::parse\+\_\+focus\+\_\+bracket\+\_\+shot\+\_\+num}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a82445c182f83a9847807ee0f55ecffad}{cli\+::parse\+\_\+focus\+\_\+bracket\+\_\+focus\+\_\+range}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a41511826af7fc9a03e7391488539d056}{cli\+::parse\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a1888a5fc605c09fb81896c6a7f1609fe}{cli\+::parse\+\_\+movie\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a10eb7d1b63cf7b8caa53b6196a5ac1a2}{cli\+::parse\+\_\+silent\+\_\+mode}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ae1a2287e684891c0fa6bc4aeb0ce7a81}{cli\+::parse\+\_\+silent\+\_\+mode\+\_\+aperture\+\_\+drive\+\_\+in\+\_\+af}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a86563839233455ad07371e0d7ca845b6}{cli\+::parse\+\_\+silent\+\_\+mode\+\_\+shutter\+\_\+when\+\_\+power\+\_\+off}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a488e1110163ed2b33d38eeab9bcbefcf}{cli\+::parse\+\_\+silent\+\_\+mode\+\_\+auto\+\_\+pixel\+\_\+mapping}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a1b731964bf72ac745a8680edd463aab2}{cli\+::parse\+\_\+shutter\+\_\+type}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_abd7348f16dbe7ceca78eba0675cf3c86}{cli\+::parse\+\_\+movie\+\_\+shooting\+\_\+mode}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a8651fa0bb995efb225e7e5aba88c81e6}{cli\+::parse\+\_\+customwb\+\_\+size\+\_\+setting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ae5ebefd1117165b9b426df78cc289902}{cli\+::parse\+\_\+time\+\_\+shift\+\_\+shooting}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_af0beb5ce4d78b876e9813e188c0f653b}{cli\+::parse\+\_\+focus\+\_\+position}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a119549831dc315fb21fe61e72ddbb9ba}{cli\+::parse\+\_\+movie\+\_\+recording\+\_\+media}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a61c72fb2fc7ad988a61fc99e52ddb70e}{cli\+::parse\+\_\+recorder\+\_\+main\+\_\+status}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_aab31cc0702713a05d8a5f69f28ef5a48}{cli\+::parse\+\_\+recording\+\_\+state}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a3d0c0b5f241d3975f2e392aa8fd38f00}{cli\+::parse\+\_\+focus\+\_\+driving\+\_\+status}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a171e87e472ec3d622711f95f98aa4bd4}{cli\+::parse\+\_\+zoom\+\_\+distance}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a6ba963b2b73dcf290a525d7aba76810f}{cli\+::parse\+\_\+slotx\+\_\+rec\+\_\+available}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a0495a244ee9e03e5a3ec60604d27fe0f}{cli\+::parse\+\_\+camera\+\_\+button\+\_\+function}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a9a50072398c121ac42e6802990e4f7f8}{cli\+::parse\+\_\+camera\+\_\+button\+\_\+function\+\_\+multi}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_af1b09a75382b0e7db3df467097de649a}{cli\+::parse\+\_\+camera\+\_\+dial\+\_\+function}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_af0f0930dcf2d2573cdc5950681fd6297}{cli\+::parse\+\_\+camera\+\_\+button\+\_\+function\+\_\+status}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a38e5f1aad29f0432149cb71eecac28ce}{cli\+::parse\+\_\+camera\+\_\+lever\+\_\+function}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint16\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a18dc88af69a6915e7fa67e8398b439e3}{cli\+::parse\+\_\+zoom\+\_\+position}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::int8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_ad0cc0bb27b1a5e8b0492c1ab4d192511}{cli\+::parse\+\_\+tele\+\_\+wide\+\_\+lever\+\_\+value\+\_\+capability}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+std\+::vector$<$ std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecli_a32473d2abae297cadc064fb72781b3e6}{cli\+::parse\+\_\+debugmode}} (unsigned char const \texorpdfstring{$\ast$}{*}buf, std\+::uint32\+\_\+t nval)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a5a01820ec159f69cac14b8daa90e0720}{cli\+::format\+\_\+f\+\_\+number}} (std\+::uint16\+\_\+t f\+\_\+number)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a4fad647efffcbf2d43aece1f65aeb993}{cli\+::format\+\_\+iso\+\_\+sensitivity}} (std\+::uint32\+\_\+t iso)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_aec5ff2b653a7cba20ede61909addbbb7}{cli\+::format\+\_\+shutter\+\_\+speed}} (std\+::uint32\+\_\+t shutter\+\_\+speed)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_af9cd44fd4cf8fe83792a6a72f709d9d4}{cli\+::format\+\_\+extended\+\_\+shutter\+\_\+speed}} (std\+::uint64\+\_\+t extended\+\_\+shutter\+\_\+speed)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ad29b558e9ee93d9bc04dc42f594454e2}{cli\+::format\+\_\+position\+\_\+key\+\_\+setting}} (std\+::uint16\+\_\+t position\+\_\+key\+\_\+setting)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a2183b481f126c67c9c6bb7ce6ac6b894}{cli\+::format\+\_\+exposure\+\_\+program\+\_\+mode}} (std\+::uint32\+\_\+t exposure\+\_\+program\+\_\+mode)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a799f72d7165d873396e2b03a811ed25d}{cli\+::format\+\_\+still\+\_\+capture\+\_\+mode}} (std\+::uint32\+\_\+t still\+\_\+capture\+\_\+mode)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a3a862011752a4fe11f636b66faf7cce7}{cli\+::format\+\_\+focus\+\_\+mode}} (std\+::uint16\+\_\+t focus\+\_\+mode)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_af887ff44bd80e58f124f9cc6f39dc5f8}{cli\+::format\+\_\+focus\+\_\+area}} (std\+::uint16\+\_\+t focus\+\_\+area)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a447f3f63df19a5ee01a5db10674e1594}{cli\+::format\+\_\+live\+\_\+view\+\_\+image\+\_\+quality}} (std\+::uint16\+\_\+t live\+\_\+view\+\_\+image\+\_\+quality)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a1367755a563878ea5e4dacb54350e671}{cli\+::format\+\_\+media\+\_\+slotx\+\_\+format\+\_\+enable\+\_\+status}} (std\+::uint8\+\_\+t media\+\_\+slotx\+\_\+format\+\_\+enable\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ae246f9e6d2c482d4b5a87de7385aac09}{cli\+::format\+\_\+white\+\_\+balance}} (std\+::uint16\+\_\+t value)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a9043b5c13a04746a4842157fa5604118}{cli\+::format\+\_\+customwb\+\_\+capture\+\_\+standby}} (std\+::uint16\+\_\+t customwb\+\_\+capture\+\_\+standby)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a7e56fa27737dd62e7799c8cad8de9cf5}{cli\+::format\+\_\+customwb\+\_\+capture\+\_\+standby\+\_\+cancel}} (std\+::uint16\+\_\+t customwb\+\_\+capture\+\_\+standby\+\_\+cancel)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_aeee9e5f450dd39b6d9e470bb42b75730}{cli\+::format\+\_\+customwb\+\_\+capture\+\_\+operation}} (std\+::uint16\+\_\+t customwb\+\_\+capture\+\_\+operation)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a9f52f6308965aef5c1efdc5908ca122e}{cli\+::format\+\_\+customwb\+\_\+capture\+\_\+execution\+\_\+state}} (std\+::uint16\+\_\+t customwb\+\_\+capture\+\_\+execution\+\_\+state)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a254a6299672b150c7a30d1aca4e0cb9a}{cli\+::format\+\_\+zoom\+\_\+operation\+\_\+status}} (std\+::uint8\+\_\+t zoom\+\_\+operation\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_adb71e194917cacdc7fdfa193a79934b4}{cli\+::format\+\_\+zoom\+\_\+setting\+\_\+type}} (std\+::uint8\+\_\+t zoom\+\_\+setting\+\_\+type)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a8584a6cd7350843c857cef60f3c750f9}{cli\+::format\+\_\+zoom\+\_\+types\+\_\+status}} (std\+::uint8\+\_\+t zoom\+\_\+types\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a6827d228ae703e68f1d2a34f80b8ec82}{cli\+::format\+\_\+remocon\+\_\+zoom\+\_\+speed\+\_\+type}} (std\+::uint8\+\_\+t remocon\+\_\+zoom\+\_\+speed\+\_\+type)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_abd80f092b3fad71b801970b76c0368c5}{cli\+::format\+\_\+camera\+\_\+setting\+\_\+save\+\_\+operation}} (std\+::uint16\+\_\+t camera\+\_\+setting\+\_\+save\+\_\+operation)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a25eee33000b2edb8516b57c00da89fc8}{cli\+::format\+\_\+camera\+\_\+setting\+\_\+read\+\_\+operation}} (std\+::uint16\+\_\+t camera\+\_\+setting\+\_\+read\+\_\+operation)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ae773443507d20307fff90b7bde10e8d5}{cli\+::format\+\_\+camera\+\_\+setting\+\_\+save\+\_\+read\+\_\+state}} (std\+::uint8\+\_\+t camera\+\_\+setting\+\_\+save\+\_\+read\+\_\+state)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a0f1ee2f3f7530655d7c5467b91074ee6}{cli\+::format\+\_\+aps\+\_\+c\+\_\+or\+\_\+full\+\_\+switching\+\_\+setting}} (std\+::uint8\+\_\+t aps\+\_\+c\+\_\+or\+\_\+full\+\_\+switching\+\_\+setting)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a60f00c4285e1000efbc1eada121146e3}{cli\+::format\+\_\+aps\+\_\+c\+\_\+or\+\_\+full\+\_\+switching\+\_\+enable\+\_\+status}} (std\+::uint8\+\_\+t aps\+\_\+c\+\_\+or\+\_\+full\+\_\+switching\+\_\+enable\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_aeb62e45480add61985af04e7f32a3d5e}{cli\+::format\+\_\+playback\+\_\+media}} (std\+::uint8\+\_\+t playback\+\_\+media)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a7a43f397a6e3ea615c3b79824b541167}{cli\+::format\+\_\+camera\+\_\+setting\+\_\+reset\+\_\+enable\+\_\+status}} (std\+::uint8\+\_\+t camera\+\_\+setting\+\_\+reset\+\_\+enable\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a043d472d67e488c7c1e1a35bed827438}{cli\+::format\+\_\+gain\+\_\+base\+\_\+sensitivity}} (std\+::uint8\+\_\+t gain\+\_\+base)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ac92a466d7b93576fcb9e3ae04781d563}{cli\+::format\+\_\+gain\+\_\+base\+\_\+iso\+\_\+sensitivity}} (std\+::uint8\+\_\+t gain\+\_\+base\+\_\+iso)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a5da0f3d8e3709a0c50f96b9d3c920c99}{cli\+::format\+\_\+monitor\+\_\+lut\+\_\+setting}} (std\+::uint8\+\_\+t monitor\+\_\+setup)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a6c0842c31a096e6cb54608df344b4496}{cli\+::format\+\_\+baselook\+\_\+value}} (std\+::uint8\+\_\+t baselook\+\_\+value)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a73796bcfe07d0c39cec94a267cf6381b}{cli\+::format\+\_\+shutter\+\_\+mode\+\_\+setting}} (std\+::uint8\+\_\+t shutter\+\_\+mode\+\_\+setting)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a944e82abce249ee8358638c1cc96ac6c}{cli\+::format\+\_\+iris\+\_\+mode\+\_\+setting}} (std\+::uint8\+\_\+t iris\+\_\+mode\+\_\+setting)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ab3db1f29e55d4abd335fe9b8756279fa}{cli\+::format\+\_\+exposure\+\_\+control\+\_\+type}} (std\+::uint8\+\_\+t exposure\+\_\+control\+\_\+type)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ad4e2c4fc34dda855a3b0a51f131a9e48}{cli\+::format\+\_\+gain\+\_\+control\+\_\+setting}} (std\+::uint8\+\_\+t gain\+\_\+control\+\_\+setting)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a6cdf0bb1407410250fcb93e8d3f62d7c}{cli\+::format\+\_\+recording\+\_\+setting}} (std\+::uint16\+\_\+t recording\+\_\+setting)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a94410281dae147a5de1931c4bfa32c5d}{cli\+::format\+\_\+dispmode}} (std\+::uint8\+\_\+t dispmode)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a223638b0fcc29ec38205fe932a29be88}{cli\+::format\+\_\+movie\+\_\+rec\+\_\+button\+\_\+toggle\+\_\+enable\+\_\+status}} (std\+::uint8\+\_\+t movie\+\_\+rec\+\_\+button\+\_\+toggle\+\_\+enable\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ae46007137222d83274636bf3e3ad87eb}{cli\+::format\+\_\+shutter\+\_\+speed\+\_\+value}} (std\+::uint64\+\_\+t shutter\+\_\+speed\+\_\+value)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a5c8b276236ead044aa36344df4f2acbd}{cli\+::format\+\_\+media\+\_\+slotx\+\_\+status}} (std\+::uint8\+\_\+t media\+\_\+slotx\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a948fe8130fa48ddde23be415b0b71e52}{cli\+::format\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot}} (std\+::uint8\+\_\+t image\+\_\+stabilization\+\_\+steady\+\_\+shot)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a1da2d52acdc1580a6a5b9638018d0db7}{cli\+::format\+\_\+movie\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot}} (std\+::uint8\+\_\+t movie\+\_\+image\+\_\+stabilization\+\_\+steady\+\_\+shot)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_af3442b07aaf1f965bcbac982d0147e53}{cli\+::format\+\_\+silent\+\_\+mode}} (std\+::uint8\+\_\+t silent\+\_\+mode)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a72719ff927187c5cabae9a6d84f17ac6}{cli\+::format\+\_\+silent\+\_\+mode\+\_\+aperture\+\_\+drive\+\_\+in\+\_\+af}} (std\+::uint8\+\_\+t aperture\+\_\+drive\+\_\+in\+\_\+af)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a1bc9cd3851ba6850d9b3b078598b1d2c}{cli\+::format\+\_\+silent\+\_\+mode\+\_\+shutter\+\_\+when\+\_\+power\+\_\+off}} (std\+::uint8\+\_\+t when\+\_\+power\+\_\+off)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_aa92759c629e659e71ad38d65b4e2c630}{cli\+::format\+\_\+silent\+\_\+mode\+\_\+auto\+\_\+pixel\+\_\+mapping}} (std\+::uint8\+\_\+t auto\+\_\+pixel\+\_\+mapping)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ab2980acd890d996e8367d9c87b983c8c}{cli\+::format\+\_\+shutter\+\_\+type}} (std\+::uint8\+\_\+t shutter\+\_\+type)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a829fad2583c87aa18746a2bff40760a3}{cli\+::format\+\_\+movie\+\_\+shooting\+\_\+mode}} (std\+::uint16\+\_\+t movie\+\_\+shooting\+\_\+mode)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a29f3e23eb9871ef5fedbc1546ee15959}{cli\+::format\+\_\+customwb\+\_\+size\+\_\+setting}} (std\+::uint8\+\_\+t customwb\+\_\+size\+\_\+setting)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ae46dbc4479af313ae563ce1d3fccee16}{cli\+::format\+\_\+time\+\_\+shift\+\_\+shooting}} (std\+::uint8\+\_\+t time\+\_\+shift\+\_\+shooting)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_af3ce7de7224410180e33eb494ca7b04c}{cli\+::format\+\_\+focus\+\_\+driving\+\_\+status}} (std\+::uint8\+\_\+t focus\+\_\+driving\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a127a52cdf63d157d9289474028ce376e}{cli\+::format\+\_\+media\+\_\+slotx\+\_\+rec\+\_\+available}} (std\+::uint8\+\_\+t rec\+\_\+available)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_afcc291c3d8f359baa44f81780fe39f7f}{cli\+::format\+\_\+monitoring\+\_\+is\+\_\+delivery}} (std\+::uint8\+\_\+t sts)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a04ce6a0a6a01f40658cc4928edc07320}{cli\+::format\+\_\+camera\+\_\+button\+\_\+function\+\_\+status}} (std\+::uint8\+\_\+t status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_acbe7d421d03cd4d025512918b5fa5afe}{cli\+::format\+\_\+camera\+\_\+button\+\_\+function}} (std\+::uint32\+\_\+t camera\+\_\+button\+\_\+function)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a8047a37d907745f377632172ab3bd43b}{cli\+::format\+\_\+camera\+\_\+dial\+\_\+function}} (std\+::uint32\+\_\+t camera\+\_\+dial\+\_\+function)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ab67efade4ac4358993a6bb4acf17a565}{cli\+::format\+\_\+camera\+\_\+lever\+\_\+function}} (std\+::uint32\+\_\+t camera\+\_\+lever\+\_\+function)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_aba1e48ff698261afc058ac36f2269fb3}{cli\+::format\+\_\+zoom\+\_\+driving\+\_\+status}} (std\+::uint8\+\_\+t zoom\+\_\+driving\+\_\+status)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a63c899947ce786cc374d5cb200d4ad46}{cli\+::format\+\_\+contents\+\_\+info\+\_\+content\+\_\+type}} (std\+::uint32\+\_\+t content\+\_\+type)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a16d8c1569e7adf7738c49b9ccc19d0cb}{cli\+::format\+\_\+contents\+\_\+info\+\_\+group\+\_\+type}} (std\+::uint32\+\_\+t group\+\_\+type)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a1d9cd6c2797ab369c759fa47d0cbf202}{cli\+::format\+\_\+contents\+\_\+info\+\_\+rating}} (std\+::int32\+\_\+t rating)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a6943748d2e511bc133b5d3551c71345d}{cli\+::format\+\_\+contents\+\_\+file\+\_\+file\+\_\+format}} (std\+::uint32\+\_\+t file\+\_\+format)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a4a8a975f458e5b7eb8e71ea731811224}{cli\+::format\+\_\+contents\+\_\+file\+\_\+video\+\_\+codec}} (std\+::uint32\+\_\+t video\+\_\+codec)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a3ec2eccb0a61b66791ea4eee760c1ac2}{cli\+::format\+\_\+contents\+\_\+file\+\_\+gop\+\_\+structure}} (std\+::uint32\+\_\+t gop\+\_\+structure)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_aebc1b7a65cc3ef71e0c68a1d51a668bb}{cli\+::format\+\_\+contents\+\_\+file\+\_\+aspect\+\_\+ratio}} (std\+::uint32\+\_\+t aspect\+\_\+ratio)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_aa49627b02759de20fa41c0f7f9628808}{cli\+::format\+\_\+contents\+\_\+file\+\_\+color\+\_\+format}} (std\+::uint32\+\_\+t color\+\_\+format)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a78efc06f2f77fe844a3e23a534334542}{cli\+::format\+\_\+contents\+\_\+file\+\_\+scan\+\_\+type}} (std\+::uint32\+\_\+t scan\+\_\+type)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a32b606380601b561ce709f9405dedf3d}{cli\+::format\+\_\+contents\+\_\+file\+\_\+profile\+\_\+indication}} (std\+::uint32\+\_\+t profile\+\_\+indication)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a06a9a61d4d619294f86ed207bfe26c47}{cli\+::format\+\_\+contents\+\_\+file\+\_\+rdd18meta\+\_\+capture\+\_\+gamma\+\_\+equation}} (std\+::uint32\+\_\+t rdd18meta\+\_\+capture\+\_\+gamma\+\_\+equation)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a938fed54a1b974576dcfcf4faa2cc234}{cli\+::format\+\_\+contents\+\_\+file\+\_\+rdd18meta\+\_\+color\+\_\+primaries}} (std\+::uint32\+\_\+t rdd18meta\+\_\+color\+\_\+primaries)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a1a79e9a498a694389634238dd3dd5c2e}{cli\+::format\+\_\+contents\+\_\+file\+\_\+rdd18meta\+\_\+coding\+\_\+equations}} (std\+::uint32\+\_\+t rdd18meta\+\_\+coding\+\_\+equations)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_ab8be48acd6dd0cf6fcc2b077bf1b591b}{cli\+::format\+\_\+contents\+\_\+file\+\_\+audio\+\_\+codec}} (std\+::uint32\+\_\+t audio\+\_\+codec)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_a1b999af043537922634e442a4a5e955e}{cli\+::format\+\_\+contents\+\_\+file\+\_\+number\+\_\+of\+\_\+channels}} (std\+::uint32\+\_\+t number\+\_\+of\+\_\+channels)
+\item 
+\mbox{\hyperlink{namespacecli_a2c92abe043545f8b709dc9f3437d1b8e}{text}} \mbox{\hyperlink{namespacecli_abe14fa9dd3d08a45ddad2dcfef2d00d3}{cli\+::format\+\_\+debug\+\_\+mode}} (std\+::uint8\+\_\+t debug\+\_\+mode)
+\end{DoxyCompactItemize}

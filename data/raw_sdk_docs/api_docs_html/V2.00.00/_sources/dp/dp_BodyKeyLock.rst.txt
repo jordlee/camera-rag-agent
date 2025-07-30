@@ -1,0 +1,24 @@
+﻿.. _dp-BodyKeyLock:
+
+CrDeviceProperty_BodyKeyLock
+============================
+
+Get/Set the Body Key Lock
+
+| Set cannot be performed while shooting.
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrBodyKey_Unlock
+    - | Unlock
+
+  * - CrBodyKey_Lock
+    - | Lock
+

@@ -1,0 +1,38 @@
+.. _sample-Eframing:
+
+sample code "set Eframing"
+==========================
+
+.. code-block:: cpp
+
+    usage:
+        set <horizontal_denominator> <vertical_denominator> <eframingType>
+        addarea <in/out> <areaNo> <x> <y> <width> <height>
+        removearea <in/out> <areaNo>
+        commit
+        update <in/out> <areaNo> <x> <y> <width> <height>
+        get
+    To exit, please enter 'q'.
+
+* About eframingType
+    - None
+    - Auto
+    - Single
+    - PTZ
+    - HoldCurrentPosition
+    - ForceZoomOut
+
+.. code-block:: cpp
+
+    sample:
+       set 640 480 PTZ
+       addarea in 0 1 1 640 480
+       addarea out 0 0 0 640 480
+       commit
+       update in 0 10 10 640 480
+
+Save the following code as "RemoteCli.cpp", replace "app/RemoteCli.cpp" in the SDK, then build.
+
+.. literalinclude:: /_static/Eframing.cpp
+   :language: cpp
+   :linenos:

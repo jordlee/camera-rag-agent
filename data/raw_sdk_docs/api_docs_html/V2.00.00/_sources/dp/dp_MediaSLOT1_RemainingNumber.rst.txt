@@ -1,0 +1,29 @@
+﻿.. _dp-MediaSLOT1_RemainingNumber:
+
+CrDeviceProperty_MediaSLOT1_RemainingNumber
+===========================================
+
+Get the Remaining number shots of Media (SLOT1)
+
+| Please set the function of camera “Rec. Media Settings: Recording Mode” to Standard when using ILCE-7RM4 and ILCE-7RM4A.
+
+    CrDataType: `CrDataType_UInt32Range`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Value
+    - Explanation
+
+  * - 0x00000000
+    - min
+
+  * - 0xFFFFFFFF
+    - max
+
+  * - 0x00000001
+    - step
+
+| Unit is the remaining number of shots.
+

@@ -1,0 +1,28 @@
+﻿.. _dp-AudioSignals:
+
+CrDeviceProperty_AudioSignals
+=============================
+
+Get/Set the Audio Signals 
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAudioSignals_Off
+    - | Off
+
+  * - CrAudioSignals_On
+    - | On
+
+  * - CrAudioSignals_OnShutterOnly
+    - | On:Shutter Only
+
+  * - CrAudioSignals_OnWithoutShutter
+    - | On:Without Shutter
+

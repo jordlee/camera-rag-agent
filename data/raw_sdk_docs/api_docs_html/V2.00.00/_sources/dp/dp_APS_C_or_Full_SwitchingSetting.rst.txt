@@ -1,0 +1,22 @@
+﻿.. _dp-APS_C_or_Full_SwitchingSetting:
+
+CrDeviceProperty_APS_C_or_Full_SwitchingSetting
+===============================================
+
+Get the APS-C or Full Switching Setting
+
+    CrDataType: `CrDataType_UInt8Array`
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Parameter Code
+    - Explanation
+
+  * - CrAPS_C_or_Full_SwitchingSetting_Full
+    - | Full
+
+  * - CrAPS_C_or_Full_SwitchingSetting_APS_C
+    - | APS-C
+

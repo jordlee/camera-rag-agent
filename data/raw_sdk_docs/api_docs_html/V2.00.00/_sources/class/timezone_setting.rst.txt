@@ -1,0 +1,150 @@
+.. _timezone-setting:
+
+TimeZone Setting
+================
+
+.. _cr-TimeZoneSetting:
+
+CrTimeZoneSetting
+-----------------
+
+Class describing timezone settings.
+
+Has a data of timezone settings information.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+  
+  * - dateTimeSetting
+    - CrDateTimeSetting
+    - DateTime settings.
+  * - areaSetting
+    - CrAreaSetting
+    - Area settings.
+  * - daylightSetting
+    - CrDaylightSetting
+    - Daylight settings.
+
+Member Functions
+  None
+
+.. _cr-DateTimeSetting:
+
+CrDateTimeSetting
+-----------------
+
+Struct describing date time parameter in CrTimeZoneSetting.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+
+  * - exists
+    - CrTimeZoneSettingExists
+    - parameter exists.
+  * - dateTime
+    - char[18]
+    - date time value.
+
+.. _cr-AreaSetting:
+
+CrAreaSetting
+-------------
+
+Struct describing area parameter in CrTimeZoneSetting.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+
+  * - exists
+    - CrTimeZoneSettingExists
+    - parameter exists.
+  * - area
+    - char[6]
+    - area value.
+
+.. _cr-DaylightSetting:
+
+CrDaylightSetting
+------------------
+
+Struct describing daylight parameter in CrTimeZoneSetting.
+
+Member Variables
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Summary
+
+  * - exists
+    - CrTimeZoneSettingExists
+    - parameter exists.
+  * - daylight
+    - CrDaylightSavings
+    - daylight value.
+
+.. _cr-TimeZoneSettingExists:
+
+CrTimeZoneSettingExists
+-----------------------
+
+Enumerate of kind of timezone settings exists.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrTimeZoneSettingExists_False
+    - False
+  * - CrTimeZoneSettingExists_True
+    - True
+
+.. _cr-DaylightSavings:
+
+CrDaylightSavings
+-----------------
+
+Enumerate of kind of daylight savings.
+
+Member Enumerations
+
+.. list-table::
+  :widths: auto
+  :header-rows: 1
+
+  * - Definition
+    - Summary
+  
+  * - CrDaylightSavings_Off
+    - off
+  * - CrDaylightSavings_On
+    - on
