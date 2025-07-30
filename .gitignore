@@ -1,0 +1,39 @@
+# Virtual Environment
+venv/
+.env/
+env/
+*.pyenv/
+
+# Data directories (generated/local, often large)
+data/
+!data/
+data/chroma_db/
+data/chunks.json
+data/parsed_data/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Operating System Files
+.DS_Store
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# IDE and Editor Files
+.idea/         # IntelliJ / PyCharm
+.vscode/       # VS Code (if you want to ignore workspace settings)
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+.ipynb_checkpoints/ # Jupyter notebooks
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
