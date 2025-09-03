@@ -1,10 +1,8 @@
 fastapi==0.116.1
 uvicorn[standard]==0.35.0
-pinecone==7.3.0
-torch==2.7.1
-transformers==4.54.1
-sentence-transformers==5.0.0
 python-dotenv==1.1.1
 pydantic==2.11.7
 httpx==0.28.1
+pinecone==7.3.0
+sentence-transformers==2.5.0
 mcp==1.13.1
