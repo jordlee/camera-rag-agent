@@ -1,0 +1,8 @@
+{
+  "name": "camera-sdk-rag-mcp-server",
+  "version": "1.0.0",
+  "description": "FastAPI MCP Server for Camera Remote SDK RAG System",
+  "scripts": {
+    "start": "python server.py"
+  }
+}
