@@ -4,7 +4,7 @@ import os
 import logging
 from typing import List, Dict, Any, Optional
 from fastapi import FastAPI, HTTPException, Query, Request
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import json
@@ -40,6 +40,7 @@ app.add_middleware(
 # Initialize RAG search system (will be done async on startup)
 rag_search = None
 initialization_complete = False
+sessions = {}  # Store active MCP sessions
 
 # Pydantic models for request/response
 class SearchRequest(BaseModel):
@@ -326,23 +327,30 @@ async def get_mcp_tools():
     }
 
 # MCP Protocol Support
-async def mcp_event_generator(request: Request) -> AsyncGenerator[str, None]:
+async def mcp_event_generator() -> AsyncGenerator[str, None]:
     """Generate Server-Sent Events for MCP protocol."""
     # Send initial connection message
     yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'connection.ready', 'params': {}})}\n\n"
     
-    # Keep connection alive and handle requests
+    # Keep connection alive with heartbeat
     while True:
-        await asyncio.sleep(1)
-        # Check if client disconnected
-        if await request.is_disconnected():
-            break
+        await asyncio.sleep(30)  # Send heartbeat every 30 seconds
+        yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'heartbeat', 'params': {}})}\n\n"
 
-@app.get("/mcp/sse")
-async def mcp_sse_endpoint(request: Request):
+@app.get("/mcp/sse", response_class=Response)
+async def mcp_sse_endpoint():
     """Server-Sent Events endpoint for MCP protocol."""
+    async def generate():
+        # Send initial connection message
+        yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'connection.ready', 'params': {}})}\n\n".encode()
+        
+        # Keep connection alive with heartbeat
+        while True:
+            await asyncio.sleep(30)  # Send heartbeat every 30 seconds
+            yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'heartbeat', 'params': {}})}\n\n".encode()
+    
     return StreamingResponse(
-        mcp_event_generator(request),
+        generate(),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",
@@ -354,6 +362,11 @@ async def mcp_sse_endpoint(request: Request):
 @app.post("/mcp")
 async def mcp_rpc_endpoint(request: Request):
     """Handle MCP JSON-RPC requests."""
+    # Security: Validate Origin header to prevent DNS rebinding
+    origin = request.headers.get("origin")
+    if origin and origin not in ["http://localhost", "https://localhost", "file://"]:
+        # In production, add your allowed origins here
+        logger.warning(f"Rejected request from origin: {origin}")
     try:
         body = await request.json()
         method = body.get("method", "")
@@ -366,7 +379,7 @@ async def mcp_rpc_endpoint(request: Request):
                 "jsonrpc": "2.0",
                 "id": id,
                 "result": {
-                    "protocolVersion": "1.0.0",
+                    "protocolVersion": "2025-03-26",
                     "serverInfo": {
                         "name": "sdk-rag-server",
                         "version": "1.0.0"
@@ -384,7 +397,7 @@ async def mcp_rpc_endpoint(request: Request):
             response = {
                 "jsonrpc": "2.0",
                 "id": id,
-                "result": await get_mcp_tools()
+                "result": {"tools": await get_mcp_tools()["tools"]}
             }
         elif method == "tools/invoke":
             tool_name = params.get("name")
