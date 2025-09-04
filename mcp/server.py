@@ -3,9 +3,13 @@
 import os
 import logging
 from typing import List, Dict, Any, Optional
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import json
+import asyncio
+from typing import AsyncGenerator
 from dotenv import load_dotenv
 
 from search import RAGSearch
@@ -308,4 +312,131 @@ async def get_mcp_tools():
             }
         ]
     }
+
+# MCP Protocol Support
+async def mcp_event_generator(request: Request) -> AsyncGenerator[str, None]:
+    """Generate Server-Sent Events for MCP protocol."""
+    # Send initial connection message
+    yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'connection.ready', 'params': {}})}\n\n"
+    
+    # Keep connection alive and handle requests
+    while True:
+        await asyncio.sleep(1)
+        # Check if client disconnected
+        if await request.is_disconnected():
+            break
+
+@app.get("/mcp/sse")
+async def mcp_sse_endpoint(request: Request):
+    """Server-Sent Events endpoint for MCP protocol."""
+    return StreamingResponse(
+        mcp_event_generator(request),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no"
+        }
+    )
+
+@app.post("/mcp")
+async def mcp_rpc_endpoint(request: Request):
+    """Handle MCP JSON-RPC requests."""
+    try:
+        body = await request.json()
+        method = body.get("method", "")
+        params = body.get("params", {})
+        id = body.get("id")
+        
+        # Handle different MCP methods
+        if method == "initialize":
+            response = {
+                "jsonrpc": "2.0",
+                "id": id,
+                "result": {
+                    "protocolVersion": "1.0.0",
+                    "serverInfo": {
+                        "name": "sdk-rag-server",
+                        "version": "1.0.0"
+                    },
+                    "capabilities": {
+                        "tools": {
+                            "search_sdk": {},
+                            "search_code_examples": {},
+                            "get_sdk_stats": {}
+                        }
+                    }
+                }
+            }
+        elif method == "tools/list":
+            response = {
+                "jsonrpc": "2.0",
+                "id": id,
+                "result": await get_mcp_tools()
+            }
+        elif method == "tools/invoke":
+            tool_name = params.get("name")
+            tool_params = params.get("arguments", {})
+            
+            # Route to appropriate handler
+            if tool_name == "search_sdk":
+                results = rag_search.search(
+                    query=tool_params.get("query", ""),
+                    top_k=tool_params.get("top_k", 5),
+                    metadata_filter=tool_params.get("type")
+                )
+                response = {
+                    "jsonrpc": "2.0",
+                    "id": id,
+                    "result": {"results": results}
+                }
+            elif tool_name == "search_code_examples":
+                results = rag_search.search(
+                    query=tool_params.get("query", ""),
+                    top_k=tool_params.get("top_k", 5),
+                    metadata_filter="example_code"
+                )
+                response = {
+                    "jsonrpc": "2.0",
+                    "id": id,
+                    "result": {"results": results}
+                }
+            elif tool_name == "get_sdk_stats":
+                stats = rag_search.get_stats()
+                response = {
+                    "jsonrpc": "2.0",
+                    "id": id,
+                    "result": stats
+                }
+            else:
+                response = {
+                    "jsonrpc": "2.0",
+                    "id": id,
+                    "error": {
+                        "code": -32601,
+                        "message": f"Unknown tool: {tool_name}"
+                    }
+                }
+        else:
+            response = {
+                "jsonrpc": "2.0",
+                "id": id,
+                "error": {
+                    "code": -32601,
+                    "message": f"Method not found: {method}"
+                }
+            }
+        
+        return response
+        
+    except Exception as e:
+        logger.error(f"MCP RPC error: {str(e)}")
+        return {
+            "jsonrpc": "2.0",
+            "id": body.get("id") if "body" in locals() else None,
+            "error": {
+                "code": -32603,
+                "message": f"Internal error: {str(e)}"
+            }
+        }
 
