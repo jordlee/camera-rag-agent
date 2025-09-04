@@ -1,10 +1,16 @@
-python>=3.11,<3.12
+# Install torch first to prevent version conflicts
+torch==2.4.0
+
+# Core dependencies
 fastapi==0.116.1
 uvicorn[standard]==0.35.0
 python-dotenv==1.1.1
 pydantic==2.11.7
 httpx==0.28.1
+
+# Vector DB and ML
 pinecone==7.3.0
-torch>=2.2.0,<2.8.0
-sentence-transformers>=2.7.0
+sentence-transformers==2.7.0
+
+# MCP
 mcp==1.13.1
