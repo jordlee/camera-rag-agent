@@ -4,7 +4,7 @@ buildCommand = "pip install --no-cache-dir -r requirements.txt"
 nixpacksPlan = { phases = { setup = { nixPkgs = ["python311", "gcc"] } } }
 
 [deploy]
-startCommand = "uvicorn server:app --host :: --port ${PORT:-3000}"
+startCommand = "hypercorn server:app --bind [::]:$PORT"
 healthcheckPath = "/health"
 healthcheckTimeout = 30
 restartPolicyType = "ON_FAILURE"
