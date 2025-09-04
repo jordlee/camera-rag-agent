@@ -37,13 +37,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize RAG search system
-try:
-    rag_search = RAGSearch()
-    logger.info("RAG Search system initialized successfully")
-except Exception as e:
-    logger.error(f"Failed to initialize RAG search: {e}")
-    rag_search = None
+# Initialize RAG search system (will be done async on startup)
+rag_search = None
+initialization_complete = False
 
 # Pydantic models for request/response
 class SearchRequest(BaseModel):
@@ -82,12 +78,28 @@ async def root():
         }
     }
 
+@app.on_event("startup")
+async def startup_event():
+    """Initialize RAG search system on startup."""
+    global rag_search, initialization_complete
+    try:
+        logger.info("Starting RAG search system initialization...")
+        rag_search = RAGSearch()
+        initialization_complete = True
+        logger.info("RAG Search system initialized successfully")
+    except Exception as e:
+        logger.error(f"Failed to initialize RAG search: {e}")
+        rag_search = None
+        initialization_complete = False
+
 @app.get("/health")
 async def health_check():
     """Health check endpoint for monitoring."""
-    # Simple health check - just verify the service is running
-    # Don't do expensive operations during health checks
-    return {"status": "healthy", "service": "mcp-server"}
+    if initialization_complete and rag_search:
+        return {"status": "healthy", "service": "mcp-server", "rag_initialized": True}
+    else:
+        # Still initializing - return healthy so Railway doesn't kill the deployment
+        return {"status": "initializing", "service": "mcp-server", "rag_initialized": False}
 
 @app.get("/stats")
 async def get_stats():
