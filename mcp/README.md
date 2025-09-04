@@ -57,13 +57,13 @@ python mcp/test_server.py
 
 ```bash
 # Search for connection examples
-curl "http://localhost:8000/search/code?q=camera%20connection"
+curl "http://localhost:$PORT/search/code?q=camera%20connection"
 
 # Find API documentation  
-curl "http://localhost:8000/search/docs?q=SDK%20initialization"
+curl "http://localhost:$PORT/search/docs?q=SDK%20initialization"
 
 # Search function definitions
-curl "http://localhost:8000/search/functions?q=capture%20image"
+curl "http://localhost:$PORT/search/functions?q=capture%20image"
 ```
 
 ## MCP Integration
@@ -117,7 +117,7 @@ Ready for Railway deployment with included configuration files:
 1. Ensure Pinecone API key is set in `.env`
 2. Start server: `python server.py`
 3. Run tests: `python test_server.py`
-4. Check health: `curl http://localhost:8000/health`
+4. Check health: `curl http://localhost:$PORT/health`
 
 ### Adding New Endpoints
 

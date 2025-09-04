@@ -315,17 +315,3 @@ async def get_mcp_tools():
         ]
     }
 
-if __name__ == "__main__":
-    import uvicorn
-    
-    # Railway provides PORT dynamically
-    port = int(os.getenv("PORT", 8080))
-    host = os.getenv("HOST", "0.0.0.0")
-    
-    uvicorn.run(
-        "server:app",
-        host=host,
-        port=port,
-        reload=False,  # Disable in production
-        log_level="info"
-    )
