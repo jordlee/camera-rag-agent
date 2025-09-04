@@ -6,7 +6,7 @@ nixpacksPlan = { phases = { setup = { nixPkgs = ["python311", "gcc"] } } }
 [deploy]
 startCommand = "hypercorn server:app --bind [::]:$PORT"
 healthcheckPath = "/health"
-healthcheckTimeout = 30
+healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
 
 [env]
