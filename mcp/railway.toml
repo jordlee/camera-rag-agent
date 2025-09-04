@@ -1,5 +1,6 @@
 [build]
 builder = "nixpacks"
+buildCommand = "pip install --no-cache-dir -r requirements.txt"
 nixpacksPlan = { phases = { setup = { nixPkgs = ["python311", "gcc"] } } }
 
 [deploy]
