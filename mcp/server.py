@@ -383,7 +383,7 @@ async def mcp_rpc_endpoint(request: Request):
                 results = rag_search.search(
                     query=tool_params.get("query", ""),
                     top_k=tool_params.get("top_k", 5),
-                    metadata_filter=tool_params.get("type")
+                    content_type_filter=tool_params.get("type")
                 )
                 response = {
                     "jsonrpc": "2.0",
@@ -394,7 +394,7 @@ async def mcp_rpc_endpoint(request: Request):
                 results = rag_search.search(
                     query=tool_params.get("query", ""),
                     top_k=tool_params.get("top_k", 5),
-                    metadata_filter="example_code"
+                    content_type_filter="example_code"
                 )
                 response = {
                     "jsonrpc": "2.0",
