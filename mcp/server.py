@@ -81,15 +81,9 @@ async def root():
 @app.get("/health")
 async def health_check():
     """Health check endpoint for monitoring."""
-    if not rag_search:
-        raise HTTPException(status_code=503, detail="RAG search system not initialized")
-    
-    health_status = rag_search.health_check()
-    
-    if health_status['status'] == 'healthy':
-        return health_status
-    else:
-        raise HTTPException(status_code=503, detail=health_status)
+    # Simple health check - just verify the service is running
+    # Don't do expensive operations during health checks
+    return {"status": "healthy", "service": "mcp-server"}
 
 @app.get("/stats")
 async def get_stats():
