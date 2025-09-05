@@ -152,96 +152,163 @@ The system handles multiple SDK versions (V1.14.00, V2.00.00) with version-speci
 - Local models for offline operation
 - Configurable chunk sizes for memory management
 
-## TODO: Create Proper MCP Server (Sept 5, 2025)
+## ✅ **COMPLETED: MCP Server Implementation & Railway Deployment** (Sept 5, 2025)
 
-### Current Status
-- ✅ Created FastAPI REST API with MCP-like endpoints
-- ✅ Successfully deployed to Railway
-- ✅ Working search endpoints accessible via HTTP
-- ❌ Not a true MCP server - LM Studio and Claude can't connect
-- ❌ FastAPI returns wrong content-type for SSE (application/json instead of text/event-stream)
+### **🎉 SUCCESS: Claude Web Can Now Access Our RAG System!**
 
-### The Problem
-We built a REST API with MCP-style endpoints, but MCP clients (LM Studio, Claude Desktop) expect:
-1. **True MCP protocol** - JSON-RPC 2.0 over stdio or SSE transport
-2. **Official MCP SDK** - Not custom FastAPI implementation
-3. **Proper message handling** - Bidirectional communication, session management
+After multiple failed attempts with custom implementations, I successfully created a proper MCP server using the official FastMCP SDK patterns. **Claude Web UI can now connect to our server and access the RAG system.**
 
-### Tomorrow's Plan: Build Proper MCP Server
+### **What Finally Worked: Official FastMCP Implementation**
 
-#### Step 1: Install Official MCP SDK
-```bash
-pip install mcp
-```
-
-#### Step 2: Create New MCP Server
-Create `mcp_server.py` using official SDK:
+#### **Key Implementation (`mcp_server_simple.py`):**
 ```python
-from mcp.server import Server, NotificationOptions
-from mcp.server.models import InitializeResult
-import mcp.server.stdio
-import mcp.types as types
+from mcp.server.fastmcp import FastMCP
+import contextlib
+from starlette.applications import Starlette
+from starlette.routing import Mount, Route
 
-# Initialize with our existing RAG search
-from search import RAGSearch
+# Create FastMCP server with stateless HTTP - CRITICAL for web deployment
+mcp = FastMCP("SDK RAG Server", stateless_http=True)
 
-server = Server("sdk-rag-server")
-rag_search = RAGSearch()
+# Proper lifespan management - handles RAG initialization and session management
+@contextlib.asynccontextmanager
+async def lifespan(app: Starlette):
+    global rag_search
+    async with contextlib.AsyncExitStack() as stack:
+        # Initialize RAG search system
+        rag_search = RAGSearch()
+        # Start MCP session manager - CRITICAL
+        await stack.enter_async_context(mcp.session_manager.run())
+        yield
 
-@server.list_tools()
-async def handle_list_tools():
-    return [
-        types.Tool(
-            name="search_sdk",
-            description="Search SDK documentation",
-            inputSchema={...}
-        ),
-        # Add other tools
-    ]
-
-@server.call_tool()
-async def handle_call_tool(name: str, arguments: dict):
-    if name == "search_sdk":
-        return rag_search.search(...)
-    # Handle other tools
-
-# Run with stdio transport
-async def main():
-    async with mcp.server.stdio.stdio_server() as (read_stream, write_stream):
-        await server.run(
-            read_stream,
-            write_stream,
-            InitializeResult(
-                protocol_version="2025-03-26",
-                capabilities=server.get_capabilities()
-            )
-        )
+# Clean Starlette mounting pattern from official examples
+app = Starlette(
+    routes=[
+        Route("/health", health_check),
+        Mount("/", mcp.streamable_http_app()),  # MCP at root - KEY INSIGHT
+    ],
+    lifespan=lifespan,
+)
 ```
 
-#### Step 3: Test Locally
+#### **6 MCP Tools Successfully Registered:**
+```python
+@mcp.tool()
+def search_sdk(query: str, top_k: int = 5) -> str:
+    """Search the Camera Remote SDK documentation and code examples."""
+
+@mcp.tool()  
+def search_code_examples(query: str, top_k: int = 5) -> str:
+    """Search specifically for C++ code examples and implementations."""
+
+@mcp.tool()
+def search_documentation(query: str, top_k: int = 5) -> str:
+    """Search SDK documentation text (guides, tutorials, explanations)."""
+
+@mcp.tool()
+def search_api_functions(query: str, top_k: int = 5) -> str:
+    """Search API function definitions and signatures."""
+
+@mcp.tool()
+def search_compatibility(query: str, top_k: int = 5) -> str:
+    """Search camera compatibility tables and structured data."""
+
+@mcp.tool()
+def get_sdk_stats() -> str:
+    """Get statistics about the SDK documentation database."""
+```
+
+### **Critical Success Factors:**
+
+#### **1. Used Official FastMCP SDK Patterns**
+- ❌ **Previous failures**: Custom FastAPI/SSE implementations
+- ✅ **What worked**: Official `mcp.server.fastmcp.FastMCP` with `stateless_http=True`
+- ✅ **Key insight**: Follow `/tmp/python-sdk/examples/streamable_starlette_mount.py` exactly
+
+#### **2. Proper Session Management**  
+- ✅ **Lifespan management**: `@contextlib.asynccontextmanager` for initialization
+- ✅ **Session manager**: `await stack.enter_async_context(mcp.session_manager.run())`
+- ✅ **RAG initialization**: Global `rag_search` properly initialized in lifespan
+
+#### **3. Correct Railway Deployment Configuration**
+```toml
+# railway.toml - Updated to use proper server
+[deploy]
+startCommand = "python3 mcp_server_simple.py"  # Changed from mcp_server.py
+healthcheckPath = "/health"
+```
+
+#### **4. Clean URL Structure**
+- ✅ **Health endpoint**: `https://sdk-rag-agent-production.up.railway.app/health`
+- ✅ **MCP endpoint**: `https://sdk-rag-agent-production.up.railway.app/mcp` 
+- ✅ **SSE transport**: Correctly requires `Accept: text/event-stream` header
+
+### **Deployment Success Verification:**
+
+#### **Health Check Working:**
 ```bash
-# Test with MCP client
-python mcp_server.py
-
-# Configure in Claude/LM Studio with command:
-# python /path/to/mcp_server.py
+$ curl https://sdk-rag-agent-production.up.railway.app/health
+{"status":"healthy","service":"fastmcp-server","rag_initialized":true,"mcp_path":"/mcp"}
 ```
 
-#### Step 4: Deploy Options
-1. **For Claude Desktop**: Run locally with stdio transport
-2. **For web access**: Deploy with SSE transport to Railway
-3. **Keep REST API**: Maintain current FastAPI for web dashboard
+#### **MCP Endpoint Working:**
+```bash
+$ curl -H "Accept: text/event-stream" https://sdk-rag-agent-production.up.railway.app/mcp
+# Returns SSE stream (correctly establishes persistent connection)
+```
 
-### Files to Keep
-- `search.py` - RAG search logic (works great!)
-- `server.py` - Keep as REST API for web access
-- All parsing/embedding code - Already complete
+#### **Claude Web Connection:**
+- ✅ **URL**: `https://sdk-rag-agent-production.up.railway.app`
+- ✅ **Tools detected**: All 6 MCP tools available
+- ✅ **RAG queries working**: Can search SDK documentation via Claude Web UI
 
-### Benefits of Proper MCP Server
-1. **Native compatibility** - Works with all MCP clients
-2. **Proper protocol** - Handles JSON-RPC correctly
-3. **Official support** - Uses Anthropic's SDK
-4. **Simpler code** - No manual SSE/protocol implementation
+### **What Didn't Work (For Future Reference):**
+
+#### **❌ Failed Approach 1: Custom FastAPI Implementation**
+```python
+# This approach failed - don't repeat
+app = FastAPI()
+@app.get("/sse")  
+async def custom_sse():
+    # Custom SSE implementation - wrong approach
+```
+
+#### **❌ Failed Approach 2: Complex ASGI Mounting**
+```python
+# This approach failed - over-complicated
+class MCPWithHealth:
+    def __init__(self, mcp_app):
+        # Custom ASGI wrapper - unnecessary complexity
+```
+
+#### **❌ Failed Approach 3: Wrong SDK Usage**
+```python
+# This approach failed - wrong SDK pattern
+from mcp.server import Server  # Wrong import
+server = Server("sdk-rag-server")  # Wrong initialization
+```
+
+### **Final Architecture (Working):**
+```
+Claude Web UI → HTTPS → Railway → FastMCP Server → Pinecone RAG (8,962 vectors)
+                           ↓
+                    6 MCP Tools Available:
+                    - search_sdk
+                    - search_code_examples  
+                    - search_documentation
+                    - search_api_functions
+                    - search_compatibility
+                    - get_sdk_stats
+```
+
+### **Key Lessons Learned:**
+1. **Always use official SDK patterns** - custom implementations waste time
+2. **Follow examples exactly** - `/tmp/python-sdk/examples/` are the source of truth
+3. **FastMCP with stateless_http=True** - essential for web deployment
+4. **Session manager is critical** - handles MCP protocol properly
+5. **Mount at root path** - MCP clients expect clean URL structure
+
+The MCP server is now **production-ready** and **working with Claude Web UI**! 🎉
 
 ## TODO: C++ Source Code Chunking Improvements
 

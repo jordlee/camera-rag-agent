@@ -1,6 +1,7 @@
 """Pinecone search functionality for the MCP server."""
 
 import os
+import re
 import logging
 from typing import List, Dict, Any, Optional
 from pinecone import Pinecone
@@ -219,6 +220,157 @@ class RAGSearch:
         """Alias for get_index_stats() for consistency."""
         return self.get_index_stats()
     
+    def search_exact_api(self, api_name: str, top_k: int = 10) -> List[Dict[str, Any]]:
+        """
+        Search for exact API function names using metadata filtering.
+        Addresses the semantic search limitation for specific API names like 'SetSaveInfo'.
+        """
+        try:
+            # Use a generic query vector since we're filtering by metadata
+            generic_query = self.embed_query("API function")
+            
+            # Search with exact metadata filtering
+            results = self.index.query(
+                vector=generic_query,
+                top_k=top_k,
+                include_metadata=True,
+                filter={
+                    "function_name": {"$in": [api_name]}  # Exact match in function_name list
+                }
+            )
+            
+            # Process results
+            processed_results = []
+            for match in results.get('matches', []):
+                result = {
+                    'id': match['id'],
+                    'score': 1.0,  # Set high relevance for exact matches
+                    'content': match['metadata'].get('content', ''),
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                }
+                processed_results.append(result)
+            
+            logger.info(f"Found {len(processed_results)} exact matches for API: {api_name}")
+            return processed_results
+            
+        except Exception as e:
+            logger.error(f"Exact API search error: {e}")
+            raise
+    
+    def search_error_codes(self, error_code: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        """Search for specific error codes like 'CrError_Connect_TimeOut'."""
+        try:
+            generic_query = self.embed_query("error code")
+            
+            results = self.index.query(
+                vector=generic_query,
+                top_k=top_k,
+                include_metadata=True,
+                filter={
+                    "error_codes": {"$in": [error_code]}
+                }
+            )
+            
+            processed_results = []
+            for match in results.get('matches', []):
+                result = {
+                    'id': match['id'],
+                    'score': 1.0,  # High relevance for exact matches
+                    'content': match['metadata'].get('content', ''),
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                }
+                processed_results.append(result)
+            
+            logger.info(f"Found {len(processed_results)} matches for error code: {error_code}")
+            return processed_results
+            
+        except Exception as e:
+            logger.error(f"Error code search failed: {e}")
+            raise
+    
+    def search_warning_codes(self, warning_code: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        """Search for specific warning codes like 'CrWarning_BatteryLow'."""
+        try:
+            generic_query = self.embed_query("warning code")
+            
+            results = self.index.query(
+                vector=generic_query,
+                top_k=top_k,
+                include_metadata=True,
+                filter={
+                    "warning_codes": {"$in": [warning_code]}
+                }
+            )
+            
+            processed_results = []
+            for match in results.get('matches', []):
+                result = {
+                    'id': match['id'],
+                    'score': 1.0,  # High relevance for exact matches
+                    'content': match['metadata'].get('content', ''),
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                }
+                processed_results.append(result)
+            
+            logger.info(f"Found {len(processed_results)} matches for warning code: {warning_code}")
+            return processed_results
+            
+        except Exception as e:
+            logger.error(f"Warning code search failed: {e}")
+            raise
+    
+    def search_hybrid(self, query: str, top_k: int = 10) -> List[Dict[str, Any]]:
+        """
+        Hybrid search combining exact API matching with semantic search.
+        First tries exact matches, then falls back to semantic search.
+        """
+        try:
+            # Check if query looks like an API name (starts with capital, has specific patterns)
+            api_patterns = [
+                r'^(Set|Get|Connect|Disconnect|Release|Download)[A-Z]\w*',  # SetSaveInfo, GetDeviceList
+                r'^CrDeviceProperty_\w+',  # CrDeviceProperty_*
+                r'^CrError_\w+',  # CrError_*
+                r'^CrWarning_\w+'  # CrWarning_*
+            ]
+            
+            is_likely_api = any(re.match(pattern, query) for pattern in api_patterns)
+            
+            if is_likely_api:
+                logger.info(f"Query '{query}' appears to be API name, trying exact match first")
+                
+                # Try exact API search first
+                if query.startswith('CrError_'):
+                    exact_results = self.search_error_codes(query, top_k//2)
+                elif query.startswith('CrWarning_'):
+                    exact_results = self.search_warning_codes(query, top_k//2)
+                else:
+                    exact_results = self.search_exact_api(query, top_k//2)
+                
+                # If we got exact matches, combine with semantic search for context
+                if exact_results:
+                    semantic_results = self.search(query, top_k=top_k//2)
+                    
+                    # Combine results, prioritizing exact matches
+                    all_results = exact_results + semantic_results
+                    
+                    # Remove duplicates by ID
+                    seen_ids = set()
+                    unique_results = []
+                    for result in all_results:
+                        if result['id'] not in seen_ids:
+                            unique_results.append(result)
+                            seen_ids.add(result['id'])
+                    
+                    return unique_results[:top_k]
+            
+            # Fallback to regular semantic search
+            return self.search(query, top_k)
+            
+        except Exception as e:
+            logger.error(f"Hybrid search error: {e}")
+            # Fallback to regular search if hybrid fails
+            return self.search(query, top_k)
+
     def health_check(self) -> Dict[str, Any]:
         """Check if the search system is healthy."""
         try:
