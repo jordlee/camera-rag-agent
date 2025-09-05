@@ -15,9 +15,12 @@ from dotenv import load_dotenv
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from mcp.server import Server
-from mcp.server.models import InitializationOptions
-import mcp.server.sse
 import mcp.types as types
+from starlette.applications import Starlette
+from starlette.responses import JSONResponse, StreamingResponse
+from starlette.routing import Route
+import uvicorn
+import json
 
 # Import our existing search functionality
 from search import RAGSearch
@@ -340,6 +343,73 @@ async def handle_call_tool(name: str, arguments: Dict[str, Any]) -> List[types.T
             text=f"Error executing tool: {str(e)}"
         )]
 
+async def mcp_sse_handler(_):
+    """Handle MCP over Server-Sent Events."""
+    async def event_stream():
+        try:
+            # Send initial connection message
+            yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'server.ready', 'params': {}})}\n\n"
+            
+            # Keep connection alive
+            while True:
+                await asyncio.sleep(30)
+                yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'heartbeat', 'params': {}})}\n\n"
+        except Exception as e:
+            logger.error(f"SSE stream error: {e}")
+    
+    return StreamingResponse(
+        event_stream(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "*",
+        }
+    )
+
+async def health_check(_):
+    """Health check endpoint."""
+    return JSONResponse({"status": "healthy", "service": "mcp-sse-server", "rag_initialized": rag_search is not None})
+
+async def mcp_tools_handler(_):
+    """Return available MCP tools."""
+    try:
+        tools = await handle_list_tools()
+        return JSONResponse({
+            "tools": [
+                {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "inputSchema": tool.inputSchema
+                } for tool in tools
+            ]
+        })
+    except Exception as e:
+        logger.error(f"Tools handler error: {e}")
+        return JSONResponse({"error": str(e)}, status_code=500)
+
+async def mcp_call_handler(request):
+    """Handle MCP tool calls."""
+    try:
+        data = await request.json()
+        tool_name = data.get("name")
+        arguments = data.get("arguments", {})
+        
+        results = await handle_call_tool(tool_name, arguments)
+        
+        return JSONResponse({
+            "results": [
+                {
+                    "type": result.type,
+                    "text": result.text
+                } for result in results
+            ]
+        })
+    except Exception as e:
+        logger.error(f"Call handler error: {e}")
+        return JSONResponse({"error": str(e)}, status_code=500)
+
 async def main():
     """Main entry point for the MCP SSE server."""
     global rag_search
@@ -356,34 +426,28 @@ async def main():
     # Get port from environment or default
     port = int(os.getenv("PORT", 8000))
     
-    # Add a simple health check endpoint
-    from starlette.applications import Starlette
-    from starlette.responses import JSONResponse
-    from starlette.routing import Route
+    # Create Starlette app with routes
+    app = Starlette(routes=[
+        Route("/health", health_check),
+        Route("/sse", mcp_sse_handler),
+        Route("/tools", mcp_tools_handler), 
+        Route("/call", mcp_call_handler, methods=["POST"]),
+    ])
     
-    async def health_check(request):
-        return JSONResponse({"status": "healthy", "service": "mcp-sse-server"})
+    # Run the server
+    logger.info(f"MCP SSE Server running on port {port}")
+    logger.info(f"Health check: http://0.0.0.0:{port}/health")
+    logger.info(f"SSE endpoint: http://0.0.0.0:{port}/sse")
+    logger.info(f"Tools endpoint: http://0.0.0.0:{port}/tools")
     
-    # Create simple health app
-    health_app = Starlette(routes=[Route("/health", health_check)])
-    
-    # Run the MCP server with SSE transport for cloud deployment
-    async with mcp.server.sse.sse_server(
+    config = uvicorn.Config(
+        app=app,
+        host="0.0.0.0",
         port=port,
-        host="0.0.0.0",  # Listen on all interfaces for cloud deployment
-        app=health_app  # Add health check route
-    ) as (read_stream, write_stream):
-        logger.info(f"MCP SSE Server running on port {port}")
-        logger.info(f"Connect at: http://localhost:{port}/sse")
-        
-        await server.run(
-            read_stream,
-            write_stream,
-            InitializationOptions(
-                server_name="sdk-rag-server",
-                server_version="1.0.0"
-            )
-        )
+        log_level="info"
+    )
+    server = uvicorn.Server(config)
+    await server.serve()
 
 if __name__ == "__main__":
     # Run the server
