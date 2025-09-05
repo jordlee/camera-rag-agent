@@ -4,7 +4,7 @@ buildCommand = "pip install --no-cache-dir -r requirements.txt"
 nixpacksPlan = { phases = { setup = { nixPkgs = ["python311", "gcc"] } } }
 
 [deploy]
-startCommand = "python3 mcp_server_sse.py"
+startCommand = "python3 mcp_server_proper_sse.py"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
