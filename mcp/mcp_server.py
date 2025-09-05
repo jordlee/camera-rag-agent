@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
 """
-MCP Server using FastMCP for Claude Web Connector
-Official implementation using the Python MCP SDK
+FastMCP Server following official SDK examples
+For Claude Web Connector
 """
 
 import os
 import sys
 import json
 import logging
+import contextlib
 from typing import Optional
-from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 
 # Add parent directory to path to import search module
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from mcp.server.fastmcp import FastMCP, Context
+from mcp.server.fastmcp import FastMCP
 from search import RAGSearch
+from starlette.applications import Starlette
+from starlette.routing import Mount, Route
+from starlette.responses import JSONResponse
 
 # Load environment variables
 load_dotenv()
@@ -28,56 +31,28 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Create FastMCP server with stateless HTTP - following official example
+mcp = FastMCP("SDK RAG Server", stateless_http=True)
+
 # Global RAG search instance
 rag_search: Optional[RAGSearch] = None
 
-@asynccontextmanager
-async def app_lifespan(server: FastMCP):
-    """Initialize and cleanup resources"""
-    global rag_search
-    try:
-        logger.info("Initializing RAG search system...")
-        rag_search = RAGSearch()
-        logger.info("RAG search system initialized successfully!")
-        yield
-    except Exception as e:
-        logger.error(f"Failed to initialize RAG search: {e}")
-        yield
-    finally:
-        logger.info("Shutting down MCP server")
-
-# Create FastMCP server with lifespan management
-mcp = FastMCP("SDK RAG Server", lifespan=app_lifespan)
-
 @mcp.tool()
-def search_sdk(query: str, top_k: int = 5, content_type: Optional[str] = None) -> str:
-    """
-    Search the Camera Remote SDK documentation and code examples.
-    
-    Args:
-        query: Search query for SDK information
-        top_k: Number of results to return (default: 5)
-        content_type: Filter by content type (example_code, documentation_text, documentation_table, function, enum, variable, summary, typedef, define)
-    """
+def search_sdk(query: str, top_k: int = 5) -> str:
+    """Search the Camera Remote SDK documentation and code examples using intelligent hybrid search for optimal results."""
     if rag_search is None:
         return "RAG search system not initialized"
     
     try:
-        results = rag_search.search(query, top_k=top_k, content_type_filter=content_type)
+        results = rag_search.search_hybrid(query, top_k=top_k)
         return json.dumps(results, indent=2)
     except Exception as e:
-        logger.error(f"Search error: {e}")
+        logger.exception("Search error")
         return f"Error performing search: {str(e)}"
 
 @mcp.tool()
 def search_code_examples(query: str, top_k: int = 5) -> str:
-    """
-    Search specifically for C++ code examples and implementations.
-    
-    Args:
-        query: Search query for C++ code examples
-        top_k: Number of results to return (default: 5)
-    """
+    """Search specifically for C++ code examples and implementations."""
     if rag_search is None:
         return "RAG search system not initialized"
     
@@ -85,18 +60,12 @@ def search_code_examples(query: str, top_k: int = 5) -> str:
         results = rag_search.search(query, top_k=top_k, content_type_filter="example_code")
         return json.dumps(results, indent=2)
     except Exception as e:
-        logger.error(f"Code search error: {e}")
+        logger.exception("Code search error")
         return f"Error searching code examples: {str(e)}"
 
 @mcp.tool()
 def search_documentation(query: str, top_k: int = 5) -> str:
-    """
-    Search SDK documentation text (guides, tutorials, explanations).
-    
-    Args:
-        query: Search query for documentation
-        top_k: Number of results to return (default: 5)
-    """
+    """Search SDK documentation text (guides, tutorials, explanations)."""
     if rag_search is None:
         return "RAG search system not initialized"
     
@@ -104,37 +73,12 @@ def search_documentation(query: str, top_k: int = 5) -> str:
         results = rag_search.search(query, top_k=top_k, content_type_filter="documentation_text")
         return json.dumps(results, indent=2)
     except Exception as e:
-        logger.error(f"Documentation search error: {e}")
+        logger.exception("Documentation search error")
         return f"Error searching documentation: {str(e)}"
 
 @mcp.tool()
-def search_compatibility(query: str, top_k: int = 5) -> str:
-    """
-    Search camera compatibility tables and structured data.
-    
-    Args:
-        query: Search query for camera compatibility
-        top_k: Number of results to return (default: 5)
-    """
-    if rag_search is None:
-        return "RAG search system not initialized"
-    
-    try:
-        results = rag_search.search(query, top_k=top_k, content_type_filter="documentation_table")
-        return json.dumps(results, indent=2)
-    except Exception as e:
-        logger.error(f"Compatibility search error: {e}")
-        return f"Error searching compatibility: {str(e)}"
-
-@mcp.tool()
 def search_api_functions(query: str, top_k: int = 5) -> str:
-    """
-    Search API function definitions and signatures.
-    
-    Args:
-        query: Search query for API functions
-        top_k: Number of results to return (default: 5)
-    """
+    """Search API function definitions and signatures."""
     if rag_search is None:
         return "RAG search system not initialized"
     
@@ -142,14 +86,25 @@ def search_api_functions(query: str, top_k: int = 5) -> str:
         results = rag_search.search(query, top_k=top_k, content_type_filter="function")
         return json.dumps(results, indent=2)
     except Exception as e:
-        logger.error(f"API function search error: {e}")
+        logger.exception("API function search error")
         return f"Error searching API functions: {str(e)}"
 
 @mcp.tool()
+def search_compatibility(query: str, top_k: int = 5) -> str:
+    """Search camera compatibility tables and structured data."""
+    if rag_search is None:
+        return "RAG search system not initialized"
+    
+    try:
+        results = rag_search.search(query, top_k=top_k, content_type_filter="documentation_table")
+        return json.dumps(results, indent=2)
+    except Exception as e:
+        logger.exception("Compatibility search error")
+        return f"Error searching compatibility: {str(e)}"
+
+@mcp.tool()
 def get_sdk_stats() -> str:
-    """
-    Get statistics about the SDK documentation database.
-    """
+    """Get statistics about the SDK documentation database."""
     if rag_search is None:
         return "RAG search system not initialized"
     
@@ -157,53 +112,132 @@ def get_sdk_stats() -> str:
         results = rag_search.get_stats()
         return json.dumps(results, indent=2)
     except Exception as e:
-        logger.error(f"Stats error: {e}")
+        logger.exception("Stats error")
         return f"Error getting stats: {str(e)}"
 
-# Create ASGI application for deployment
-from starlette.applications import Starlette
-from starlette.routing import Mount, Route
-from starlette.responses import JSONResponse
-from starlette.middleware.cors import CORSMiddleware
+@mcp.tool()
+def search_exact_api(api_name: str, top_k: int = 5) -> str:
+    """Search for exact API function names using metadata filtering. Perfect for finding specific functions like 'SetSaveInfo'."""
+    if rag_search is None:
+        return "RAG search system not initialized"
+    
+    try:
+        results = rag_search.search_exact_api(api_name, top_k=top_k)
+        return json.dumps(results, indent=2)
+    except Exception as e:
+        logger.exception("Exact API search error")
+        return f"Error searching exact API '{api_name}': {str(e)}"
 
+@mcp.tool()
+def search_error_codes(error_code: str, top_k: int = 5) -> str:
+    """Search for specific error codes like 'CrError_Connect_TimeOut' using exact metadata filtering."""
+    if rag_search is None:
+        return "RAG search system not initialized"
+    
+    try:
+        results = rag_search.search_error_codes(error_code, top_k=top_k)
+        return json.dumps(results, indent=2)
+    except Exception as e:
+        logger.exception("Error code search error")
+        return f"Error searching error code '{error_code}': {str(e)}"
+
+@mcp.tool()
+def search_warning_codes(warning_code: str, top_k: int = 5) -> str:
+    """Search for specific warning codes like 'CrWarning_BatteryLow' using exact metadata filtering."""
+    if rag_search is None:
+        return "RAG search system not initialized"
+    
+    try:
+        results = rag_search.search_warning_codes(warning_code, top_k=top_k)
+        return json.dumps(results, indent=2)
+    except Exception as e:
+        logger.exception("Warning code search error")
+        return f"Error searching warning code '{warning_code}': {str(e)}"
+
+@mcp.tool()
+def search_hybrid(query: str, top_k: int = 10) -> str:
+    """Smart hybrid search that automatically detects API names, error codes, and other patterns for optimal results."""
+    if rag_search is None:
+        return "RAG search system not initialized"
+    
+    try:
+        results = rag_search.search_hybrid(query, top_k=top_k)
+        return json.dumps(results, indent=2)
+    except Exception as e:
+        logger.exception("Hybrid search error")
+        return f"Error performing hybrid search for '{query}': {str(e)}"
+
+@mcp.tool()
+def search_by_source_file(file_name: str, query: str = "", top_k: int = 5) -> str:
+    """Search within a specific source file like 'CameraDevice.cpp' or 'CrDebugString.cpp'."""
+    if rag_search is None:
+        return "RAG search system not initialized"
+    
+    try:
+        # Use advanced filtering with source_file metadata
+        generic_query = rag_search.embed_query(query if query else "source code")
+        results = rag_search.index.query(
+            vector=generic_query,
+            top_k=top_k,
+            include_metadata=True,
+            filter={"source_file": {"$in": [file_name]}}
+        )
+        
+        # Process results in the same format as other functions
+        processed_results = []
+        for match in results.get('matches', []):
+            result = {
+                'id': match['id'],
+                'score': match['score'],
+                'content': match['metadata'].get('content', ''),
+                'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+            }
+            processed_results.append(result)
+        
+        return json.dumps(processed_results, indent=2)
+    except Exception as e:
+        logger.exception("Source file search error")
+        return f"Error searching in file '{file_name}': {str(e)}"
+
+# Combined lifespan to manage session manager and RAG initialization
+@contextlib.asynccontextmanager
+async def lifespan(app: Starlette):
+    global rag_search
+    async with contextlib.AsyncExitStack() as stack:
+        # Initialize RAG search
+        try:
+            logger.info("Initializing RAG search system...")
+            rag_search = RAGSearch()
+            logger.info("RAG search system initialized successfully!")
+        except Exception as e:
+            logger.exception("Failed to initialize RAG search")
+            rag_search = None
+        
+        # Start MCP session manager
+        await stack.enter_async_context(mcp.session_manager.run())
+        yield
+
+# Health check endpoint for Railway
 async def health_check(request):
-    """Health check endpoint for Railway"""
+    """Health check endpoint"""
     return JSONResponse({
         "status": "healthy",
         "service": "fastmcp-server", 
-        "rag_initialized": rag_search is not None
+        "rag_initialized": rag_search is not None,
+        "mcp_path": "/mcp"
     })
 
-# Create the FastMCP app first
-mcp_app = mcp.streamable_http_app()
-
-# Add health endpoint to the FastMCP app by wrapping it
-from starlette.applications import Starlette as StarletteApp
-from starlette.routing import Route as StarletteRoute
-
-# Create wrapper that adds health endpoint to FastMCP
-class MCPWithHealth:
-    def __init__(self, mcp_app):
-        self.mcp_app = mcp_app
-        self.health_app = StarletteApp(routes=[StarletteRoute("/health", health_check)])
-    
-    async def __call__(self, scope, receive, send):
-        if scope["path"] == "/health":
-            return await self.health_app(scope, receive, send)
-        else:
-            return await self.mcp_app(scope, receive, send)
-
-# Use the wrapper as our main app
-app = MCPWithHealth(mcp_app)
-
-# Add CORS middleware for Claude web
-app = CORSMiddleware(
-    app,
-    allow_origins=["https://claude.ai", "*"],  # Allow Claude and all origins for testing
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
-    allow_headers=["*"],
+# Create the Starlette app and mount the MCP server - following official example
+app = Starlette(
+    routes=[
+        Route("/health", health_check),
+        Mount("/", mcp.streamable_http_app()),
+    ],
+    lifespan=lifespan,
 )
+
+# Note: Claude web connects to the root URL
+# MCP endpoint will be at /mcp automatically by FastMCP
 
 if __name__ == "__main__":
     import uvicorn
@@ -212,7 +246,9 @@ if __name__ == "__main__":
     host = os.environ.get("HOST", "0.0.0.0")
     
     logger.info(f"Starting FastMCP server on {host}:{port}")
-    logger.info("Available tools: search_sdk, search_code_examples, search_documentation, search_compatibility, search_api_functions, get_sdk_stats")
+    logger.info("Available tools: search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file")
+    logger.info("Health check: /health")
+    logger.info("MCP endpoint: /mcp")
     
-    # Run ASGI app with uvicorn for Railway
+    # Run ASGI app with uvicorn
     uvicorn.run(app, host=host, port=port, log_level="info")
