@@ -162,12 +162,22 @@ def get_sdk_stats() -> str:
 
 # Create ASGI application for deployment
 from starlette.applications import Starlette
-from starlette.routing import Mount
+from starlette.routing import Mount, Route
+from starlette.responses import JSONResponse
 from starlette.middleware.cors import CORSMiddleware
+
+async def health_check(request):
+    """Health check endpoint for Railway"""
+    return JSONResponse({
+        "status": "healthy",
+        "service": "fastmcp-server", 
+        "rag_initialized": rag_search is not None
+    })
 
 # Mount FastMCP to Starlette for Railway deployment
 app = Starlette(
     routes=[
+        Route("/health", health_check),
         Mount("/", app=mcp.streamable_http_app()),
     ]
 )
