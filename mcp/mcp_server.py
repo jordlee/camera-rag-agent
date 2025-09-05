@@ -174,13 +174,27 @@ async def health_check(request):
         "rag_initialized": rag_search is not None
     })
 
-# Mount FastMCP to Starlette for Railway deployment  
-app = Starlette(
-    routes=[
-        Route("/health", health_check),
-        Mount("/mcp", app=mcp.streamable_http_app()),
-    ]
-)
+# Create the FastMCP app first
+mcp_app = mcp.streamable_http_app()
+
+# Add health endpoint to the FastMCP app by wrapping it
+from starlette.applications import Starlette as StarletteApp
+from starlette.routing import Route as StarletteRoute
+
+# Create wrapper that adds health endpoint to FastMCP
+class MCPWithHealth:
+    def __init__(self, mcp_app):
+        self.mcp_app = mcp_app
+        self.health_app = StarletteApp(routes=[StarletteRoute("/health", health_check)])
+    
+    async def __call__(self, scope, receive, send):
+        if scope["path"] == "/health":
+            return await self.health_app(scope, receive, send)
+        else:
+            return await self.mcp_app(scope, receive, send)
+
+# Use the wrapper as our main app
+app = MCPWithHealth(mcp_app)
 
 # Add CORS middleware for Claude web
 app = CORSMiddleware(
