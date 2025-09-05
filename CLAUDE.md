@@ -152,6 +152,97 @@ The system handles multiple SDK versions (V1.14.00, V2.00.00) with version-speci
 - Local models for offline operation
 - Configurable chunk sizes for memory management
 
+## TODO: Create Proper MCP Server (Sept 5, 2025)
+
+### Current Status
+- ✅ Created FastAPI REST API with MCP-like endpoints
+- ✅ Successfully deployed to Railway
+- ✅ Working search endpoints accessible via HTTP
+- ❌ Not a true MCP server - LM Studio and Claude can't connect
+- ❌ FastAPI returns wrong content-type for SSE (application/json instead of text/event-stream)
+
+### The Problem
+We built a REST API with MCP-style endpoints, but MCP clients (LM Studio, Claude Desktop) expect:
+1. **True MCP protocol** - JSON-RPC 2.0 over stdio or SSE transport
+2. **Official MCP SDK** - Not custom FastAPI implementation
+3. **Proper message handling** - Bidirectional communication, session management
+
+### Tomorrow's Plan: Build Proper MCP Server
+
+#### Step 1: Install Official MCP SDK
+```bash
+pip install mcp
+```
+
+#### Step 2: Create New MCP Server
+Create `mcp_server.py` using official SDK:
+```python
+from mcp.server import Server, NotificationOptions
+from mcp.server.models import InitializeResult
+import mcp.server.stdio
+import mcp.types as types
+
+# Initialize with our existing RAG search
+from search import RAGSearch
+
+server = Server("sdk-rag-server")
+rag_search = RAGSearch()
+
+@server.list_tools()
+async def handle_list_tools():
+    return [
+        types.Tool(
+            name="search_sdk",
+            description="Search SDK documentation",
+            inputSchema={...}
+        ),
+        # Add other tools
+    ]
+
+@server.call_tool()
+async def handle_call_tool(name: str, arguments: dict):
+    if name == "search_sdk":
+        return rag_search.search(...)
+    # Handle other tools
+
+# Run with stdio transport
+async def main():
+    async with mcp.server.stdio.stdio_server() as (read_stream, write_stream):
+        await server.run(
+            read_stream,
+            write_stream,
+            InitializeResult(
+                protocol_version="2025-03-26",
+                capabilities=server.get_capabilities()
+            )
+        )
+```
+
+#### Step 3: Test Locally
+```bash
+# Test with MCP client
+python mcp_server.py
+
+# Configure in Claude/LM Studio with command:
+# python /path/to/mcp_server.py
+```
+
+#### Step 4: Deploy Options
+1. **For Claude Desktop**: Run locally with stdio transport
+2. **For web access**: Deploy with SSE transport to Railway
+3. **Keep REST API**: Maintain current FastAPI for web dashboard
+
+### Files to Keep
+- `search.py` - RAG search logic (works great!)
+- `server.py` - Keep as REST API for web access
+- All parsing/embedding code - Already complete
+
+### Benefits of Proper MCP Server
+1. **Native compatibility** - Works with all MCP clients
+2. **Proper protocol** - Handles JSON-RPC correctly
+3. **Official support** - Uses Anthropic's SDK
+4. **Simpler code** - No manual SSE/protocol implementation
+
 ## TODO: C++ Source Code Chunking Improvements
 
 ### Current Status (as of Sept 2, 2025)

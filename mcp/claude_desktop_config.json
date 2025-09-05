@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "sdk-rag": {
+      "command": "python",
+      "args": ["/Users/jordanlee/Documents/GitHub/sdk-rag-agent/mcp/mcp_server.py"],
+      "env": {
+        "PINECONE_API_KEY": "${PINECONE_API_KEY}",
+        "PINECONE_INDEX_NAME": "sdk-rag-system"
+      }
+    }
+  }
+}

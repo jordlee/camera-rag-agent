@@ -215,6 +215,10 @@ class RAGSearch:
             logger.error(f"Error getting index stats: {e}")
             return {'error': str(e)}
     
+    def get_stats(self) -> Dict[str, Any]:
+        """Alias for get_index_stats() for consistency."""
+        return self.get_index_stats()
+    
     def health_check(self) -> Dict[str, Any]:
         """Check if the search system is healthy."""
         try:

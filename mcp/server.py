@@ -4,7 +4,7 @@ import os
 import logging
 from typing import List, Dict, Any, Optional
 from fastapi import FastAPI, HTTPException, Query, Request
-from fastapi.responses import StreamingResponse, Response
+from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import json
@@ -337,27 +337,25 @@ async def mcp_event_generator() -> AsyncGenerator[str, None]:
         await asyncio.sleep(30)  # Send heartbeat every 30 seconds
         yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'heartbeat', 'params': {}})}\n\n"
 
-@app.get("/mcp/sse", response_class=Response)
+@app.get("/mcp/sse")
 async def mcp_sse_endpoint():
     """Server-Sent Events endpoint for MCP protocol."""
     async def generate():
         # Send initial connection message
-        yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'connection.ready', 'params': {}})}\n\n".encode()
+        yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'connection.ready', 'params': {}})}\n\n".encode('utf-8')
         
         # Keep connection alive with heartbeat
         while True:
             await asyncio.sleep(30)  # Send heartbeat every 30 seconds
-            yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'heartbeat', 'params': {}})}\n\n".encode()
+            yield f"data: {json.dumps({'jsonrpc': '2.0', 'method': 'heartbeat', 'params': {}})}\n\n".encode('utf-8')
     
-    return StreamingResponse(
-        generate(),
-        media_type="text/event-stream",
-        headers={
-            "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
-            "X-Accel-Buffering": "no"
-        }
-    )
+    headers = {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        "Connection": "keep-alive",
+        "X-Accel-Buffering": "no"
+    }
+    return StreamingResponse(generate(), media_type="text/event-stream", headers=headers)
 
 @app.post("/mcp")
 async def mcp_rpc_endpoint(request: Request):

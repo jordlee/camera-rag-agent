@@ -5,10 +5,11 @@ nixpacksPlan = { phases = { setup = { nixPkgs = ["python311", "gcc"] } } }
 
 [deploy]
 startCommand = "python3 mcp_server_sse.py"
-healthcheckPath = "/health"
+healthcheckPath = "/sse"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
 
 [env]
 HOST = "0.0.0.0"
 ENVIRONMENT = "production"
+PORT = "$PORT"

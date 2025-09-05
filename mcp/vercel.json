@@ -1,0 +1,23 @@
+{
+  "functions": {
+    "mcp_server_sse.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "routes": [
+    {
+      "src": "/sse",
+      "dest": "/mcp_server_sse.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/mcp_server_sse.py"
+    }
+  ],
+  "env": {
+    "PINECONE_API_KEY": "@pinecone_api_key",
+    "PINECONE_INDEX_NAME": "sdk-rag-system"
+  },
+  "regions": ["iad1"],
+  "memory": 1024
+}
