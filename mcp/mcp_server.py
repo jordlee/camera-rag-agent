@@ -174,11 +174,11 @@ async def health_check(request):
         "rag_initialized": rag_search is not None
     })
 
-# Mount FastMCP to Starlette for Railway deployment
+# Mount FastMCP to Starlette for Railway deployment  
 app = Starlette(
     routes=[
         Route("/health", health_check),
-        Mount("/", app=mcp.streamable_http_app()),
+        Mount("/mcp", app=mcp.streamable_http_app()),
     ]
 )
 
