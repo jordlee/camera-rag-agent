@@ -14,5 +14,10 @@ pinecone==7.3.0
 torch==2.4.0
 sentence-transformers==2.7.0
 
+# LLM support for intent mapping
+transformers==4.44.0
+accelerate==0.33.0
+numpy>=1.21.0
+
 # MCP
 mcp==1.13.1

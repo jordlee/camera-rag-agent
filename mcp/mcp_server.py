@@ -50,37 +50,37 @@ CONNECTION_TIMEOUT = 10.0  # seconds
 
 @mcp.tool()
 async def search_sdk(query: str, top_k: int = 5) -> str:
-    """Search the Camera Remote SDK documentation and code examples using intelligent hybrid search for optimal results."""
+    """Search the Camera Remote SDK documentation and code examples using intelligent LLM-based intent mapping and multi-modal search for optimal results."""
     if rag_search is None:
         return json.dumps({"error": "RAG search system not initialized"})
     
     try:
-        # Track request start time
-        start_time = time.time()
+        # Use the new intelligent search with intent mapping
+        results = await rag_search.search_with_intent(
+            query, 
+            top_k=top_k,
+            progress_callback=lambda p: logger.info(f"Search progress: {p}")
+        )
         
-        # Use async search if query might be slow
-        if len(query) > 50 or top_k > 10:
-            # Use async search with progress tracking
-            results = await rag_search.search_async(
-                query, 
-                top_k=top_k,
-                progress_callback=lambda p: logger.info(f"Search progress: {p}")
-            )
-        else:
-            # Use regular search for simple queries
-            results = rag_search.search_hybrid(query, top_k=top_k)
+        # Add timestamp
+        results["timestamp"] = datetime.now().isoformat()
         
-        elapsed = time.time() - start_time
-        logger.info(f"Search completed in {elapsed:.2f}s")
+        logger.info(f"Intelligent search completed in {results['search_metadata']['total_time']:.2f}s")
         
-        return json.dumps({
-            "results": results,
-            "query_time": elapsed,
-            "timestamp": datetime.now().isoformat()
-        }, indent=2)
+        return json.dumps(results, indent=2)
     except Exception as e:
-        logger.exception("Search error")
-        return json.dumps({"error": str(e)})
+        logger.exception("Intelligent search error")
+        # Fallback to hybrid search
+        try:
+            fallback_results = rag_search.search_hybrid(query, top_k=top_k)
+            return json.dumps({
+                "results": fallback_results,
+                "fallback": True,
+                "error": f"LLM search failed: {str(e)}",
+                "timestamp": datetime.now().isoformat()
+            }, indent=2)
+        except Exception as fallback_error:
+            return json.dumps({"error": str(fallback_error)})
 
 @mcp.tool()
 def search_code_examples(query: str, top_k: int = 5) -> str:
@@ -242,6 +242,44 @@ def search_by_source_file(file_name: str, query: str = "", top_k: int = 5) -> st
     except Exception as e:
         logger.exception("Source file search error")
         return f"Error searching in file '{file_name}': {str(e)}"
+
+@mcp.tool() 
+async def search_with_intent_analysis(query: str, top_k: int = 10, explain_intent: bool = True) -> str:
+    """Advanced search with detailed intent analysis, suggestions, and multi-modal results. Perfect for complex natural language queries."""
+    if rag_search is None:
+        return json.dumps({"error": "RAG search system not initialized"})
+    
+    try:
+        # Use full intent-based search with detailed analysis
+        results = await rag_search.search_with_intent(
+            query, 
+            top_k=top_k,
+            use_intent_mapping=True
+        )
+        
+        # Add explanation if requested
+        if explain_intent:
+            intent_analysis = results.get("intent_analysis", {})
+            primary_intent = intent_analysis.get("primary_intent")
+            
+            explanation = {
+                "query_understanding": f"I interpreted your query '{query}' as related to {primary_intent.get('category', 'general SDK usage') if primary_intent else 'general SDK usage'}",
+                "api_recommendation": primary_intent.get('api_function') if primary_intent else "No specific API identified",
+                "confidence": f"{intent_analysis.get('confidence', 0) * 100:.1f}% confidence in intent detection",
+                "reasoning": primary_intent.get('reasoning') if primary_intent else "No specific reasoning available"
+            }
+            results["explanation"] = explanation
+        
+        results["timestamp"] = datetime.now().isoformat()
+        
+        return json.dumps(results, indent=2)
+        
+    except Exception as e:
+        logger.exception("Intent analysis search error")
+        return json.dumps({
+            "error": str(e),
+            "suggestion": "Try a simpler query or use the regular search_sdk tool"
+        })
 
 # Keepalive task
 async def keepalive_task():

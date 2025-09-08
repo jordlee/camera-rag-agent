@@ -532,3 +532,262 @@ class RAGSearch:
             'cache_max_size': cache_info.maxsize,
             'cache_hit_rate': cache_info.hits / (cache_info.hits + cache_info.misses) if (cache_info.hits + cache_info.misses) > 0 else 0
         }
+    
+    async def search_with_intent(self, 
+                                query: str, 
+                                top_k: int = 10,
+                                use_intent_mapping: bool = True,
+                                progress_callback=None) -> Dict[str, Any]:
+        """
+        Multi-modal search with LLM-based intent mapping.
+        
+        This is the new primary search method that combines:
+        1. LLM intent extraction
+        2. Exact API matching
+        3. Semantic search
+        4. Result fusion and re-ranking
+        
+        Args:
+            query: Natural language query
+            top_k: Number of results to return
+            use_intent_mapping: Whether to use LLM intent mapping
+            progress_callback: Optional progress tracking function
+            
+        Returns:
+            Dictionary with results, intent analysis, and metadata
+        """
+        start_time = time.time()
+        
+        if progress_callback:
+            await progress_callback({"status": "analyzing_intent", "progress": 0.1})
+        
+        # Step 1: Intent Analysis
+        intent_matches = []
+        if use_intent_mapping:
+            try:
+                # Import here to avoid circular dependency
+                from intent_mapper import get_intent_mapper
+                mapper = get_intent_mapper()
+                intent_matches = await mapper.extract_intent(query)
+                logger.info(f"Found {len(intent_matches)} intent matches")
+            except Exception as e:
+                logger.warning(f"Intent mapping failed: {e}")
+        
+        if progress_callback:
+            await progress_callback({"status": "searching", "progress": 0.3})
+        
+        # Step 2: Multi-modal parallel search
+        search_results = await self._parallel_search(query, top_k, intent_matches, progress_callback)
+        
+        if progress_callback:
+            await progress_callback({"status": "fusing_results", "progress": 0.8})
+        
+        # Step 3: Result fusion and re-ranking
+        fused_results = self._fuse_and_rank_results(
+            search_results, 
+            intent_matches, 
+            query,
+            top_k
+        )
+        
+        if progress_callback:
+            await progress_callback({"status": "complete", "progress": 1.0})
+        
+        elapsed = time.time() - start_time
+        
+        return {
+            "results": fused_results[:top_k],
+            "intent_analysis": {
+                "matches": [match.to_dict() for match in intent_matches[:3]],
+                "primary_intent": intent_matches[0].to_dict() if intent_matches else None,
+                "confidence": intent_matches[0].confidence if intent_matches else 0.0
+            },
+            "search_metadata": {
+                "query": query,
+                "total_time": elapsed,
+                "search_strategies_used": list(search_results.keys()),
+                "total_candidates": sum(len(results) for results in search_results.values())
+            },
+            "suggestions": self._generate_suggestions(query, intent_matches, fused_results)
+        }
+    
+    async def _parallel_search(self, 
+                              query: str, 
+                              top_k: int, 
+                              intent_matches: List,
+                              progress_callback=None) -> Dict[str, List[Dict[str, Any]]]:
+        """Run multiple search strategies in parallel."""
+        search_tasks = {}
+        
+        # Strategy 1: Exact API matching (if we have high-confidence intent)
+        if intent_matches and intent_matches[0].confidence > 0.7:
+            api_function = intent_matches[0].api_function
+            search_tasks["exact_api"] = self._search_exact_api_async(api_function, top_k//3)
+        
+        # Strategy 2: Semantic search on all content
+        search_tasks["semantic_all"] = self.search_async(query, top_k//2)
+        
+        # Strategy 3: Content-type specific searches based on intent category
+        if intent_matches:
+            primary_category = intent_matches[0].category
+            content_type = self._map_category_to_content_type(primary_category)
+            if content_type:
+                search_tasks[f"category_{primary_category}"] = self.search_async(
+                    query, top_k//3, content_type_filter=content_type
+                )
+        
+        # Strategy 4: Keyword-based search (fallback)
+        search_tasks["keyword"] = self._keyword_search_async(query, top_k//3)
+        
+        # Run all searches in parallel
+        results = {}
+        try:
+            search_results = await asyncio.gather(
+                *search_tasks.values(),
+                return_exceptions=True
+            )
+            
+            for i, (strategy, result) in enumerate(zip(search_tasks.keys(), search_results)):
+                if isinstance(result, Exception):
+                    logger.error(f"Search strategy {strategy} failed: {result}")
+                    results[strategy] = []
+                else:
+                    results[strategy] = result
+                    
+        except Exception as e:
+            logger.error(f"Parallel search error: {e}")
+            # Fallback to regular search
+            results["fallback"] = await self.search_async(query, top_k)
+        
+        return results
+    
+    async def _search_exact_api_async(self, api_function: str, top_k: int) -> List[Dict[str, Any]]:
+        """Async wrapper for exact API search."""
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(
+            self.executor,
+            lambda: self.search_exact_api(api_function, top_k)
+        )
+    
+    async def _keyword_search_async(self, query: str, top_k: int) -> List[Dict[str, Any]]:
+        """Simple keyword-based search as fallback."""
+        # Extract keywords and search with simple embeddings
+        keywords = query.lower().split()
+        keyword_query = " ".join(keywords[:5])  # Use first 5 words
+        return await self.search_async(keyword_query, top_k)
+    
+    def _map_category_to_content_type(self, category: str) -> Optional[str]:
+        """Map intent categories to content types for targeted search."""
+        category_mapping = {
+            "connection": "function",
+            "file_operations": "function", 
+            "camera_settings": "function",
+            "focus_control": "function",
+            "zoom_control": "function",
+            "exposure_control": "function",
+            "error_handling": "enum",
+        }
+        return category_mapping.get(category)
+    
+    def _fuse_and_rank_results(self, 
+                              search_results: Dict[str, List[Dict[str, Any]]], 
+                              intent_matches: List,
+                              query: str,
+                              top_k: int) -> List[Dict[str, Any]]:
+        """
+        Fuse results from multiple search strategies and re-rank them.
+        
+        Uses weighted scoring based on:
+        1. Intent confidence
+        2. Search strategy reliability
+        3. Content relevance score
+        4. Result uniqueness
+        """
+        # Strategy weights (higher = more trustworthy)
+        strategy_weights = {
+            "exact_api": 1.0,      # Highest weight for exact API matches
+            "semantic_all": 0.8,    # High weight for semantic search
+            "category_": 0.7,       # Good weight for category-specific search
+            "keyword": 0.4,         # Lower weight for keyword search
+            "fallback": 0.3         # Lowest weight for fallback
+        }
+        
+        # Collect all unique results with weighted scores
+        scored_results = {}
+        
+        for strategy_name, results in search_results.items():
+            # Determine strategy weight
+            strategy_weight = strategy_weights.get(strategy_name, 0.5)
+            for partial_key in strategy_weights.keys():
+                if strategy_name.startswith(partial_key):
+                    strategy_weight = strategy_weights[partial_key]
+                    break
+            
+            for result in results:
+                result_id = result.get('id', '')
+                if not result_id:
+                    continue
+                
+                # Calculate composite score
+                base_score = result.get('score', 0.0)
+                intent_bonus = 0.0
+                
+                # Bonus for intent-related content
+                if intent_matches:
+                    primary_intent = intent_matches[0]
+                    content = result.get('content', '').lower()
+                    if primary_intent.api_function.lower() in content:
+                        intent_bonus = 0.3 * primary_intent.confidence
+                
+                # Final weighted score
+                final_score = (base_score * strategy_weight) + intent_bonus
+                
+                # Keep the highest scoring version of each result
+                if result_id not in scored_results or final_score > scored_results[result_id]['final_score']:
+                    scored_results[result_id] = {
+                        **result,
+                        'final_score': final_score,
+                        'strategy': strategy_name,
+                        'intent_bonus': intent_bonus,
+                        'strategy_weight': strategy_weight
+                    }
+        
+        # Sort by final score and return top results
+        ranked_results = sorted(
+            scored_results.values(), 
+            key=lambda x: x['final_score'], 
+            reverse=True
+        )
+        
+        return ranked_results
+    
+    def _generate_suggestions(self, 
+                            query: str, 
+                            intent_matches: List,
+                            results: List[Dict[str, Any]]) -> List[str]:
+        """Generate helpful suggestions for improving queries."""
+        suggestions = []
+        
+        # If no good matches found
+        if not results or (results and results[0].get('final_score', 0) < 0.5):
+            suggestions.extend([
+                "Try using more specific technical terms",
+                "Include the action you want to perform (e.g., 'connect', 'save', 'set')",
+                "Specify the camera component (e.g., 'focus', 'zoom', 'exposure')"
+            ])
+        
+        # If intent was unclear
+        if not intent_matches or (intent_matches and intent_matches[0].confidence < 0.6):
+            suggestions.extend([
+                "Try rephrasing your query with common SDK terms",
+                "Be more specific about what you want to accomplish"
+            ])
+        
+        # Suggest related functions if we have intent matches
+        if intent_matches:
+            primary_intent = intent_matches[0]
+            if hasattr(primary_intent, 'related_functions') and primary_intent.related_functions:
+                related = primary_intent.related_functions[:2]
+                suggestions.append(f"Related functions you might need: {', '.join(related)}")
+        
+        return suggestions[:3]  # Return top 3 suggestions
