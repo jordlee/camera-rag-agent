@@ -2,8 +2,12 @@
 
 import os
 import re
+import time
+import asyncio
 import logging
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
+from concurrent.futures import ThreadPoolExecutor
+from functools import lru_cache
 from pinecone import Pinecone
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
@@ -12,6 +16,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 logger = logging.getLogger(__name__)
+
+# Performance configuration
+MAX_EMBEDDING_TIME = 3.0  # Maximum seconds for embedding operation
+BATCH_SIZE = 10  # Process queries in small batches
+KEEPALIVE_INTERVAL = 2.0  # Send keepalive every 2 seconds
+EMBEDDING_CACHE_SIZE = 100  # LRU cache size for embeddings
 
 class RAGSearch:
     def __init__(self):
@@ -29,15 +39,57 @@ class RAGSearch:
         # Initialize embedding model (same as used during indexing)
         self.embedding_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
         
+        # Initialize thread pool for CPU-bound embedding tasks
+        self.executor = ThreadPoolExecutor(max_workers=2)
+        
+        # Performance tracking
+        self.last_embedding_time = 0
+        self.total_embeddings_processed = 0
+        
         logger.info(f"RAG Search initialized with index: {self.index_name}")
     
+    @lru_cache(maxsize=EMBEDDING_CACHE_SIZE)
+    def _cached_embed(self, query: str) -> Tuple[float, ...]:
+        """Cached embedding generation (tuple for hashability)."""
+        return tuple(self.embedding_model.encode(query).tolist())
+    
     def embed_query(self, query: str) -> List[float]:
-        """Generate embedding for a query string."""
+        """Generate embedding for a query string with caching."""
         try:
-            embedding = self.embedding_model.encode(query).tolist()
+            start_time = time.time()
+            
+            # Use cached embedding if available
+            embedding = list(self._cached_embed(query))
+            
+            elapsed = time.time() - start_time
+            self.last_embedding_time = elapsed
+            self.total_embeddings_processed += 1
+            
+            if elapsed > MAX_EMBEDDING_TIME:
+                logger.warning(f"Embedding took {elapsed:.2f}s (exceeds {MAX_EMBEDDING_TIME}s limit)")
+            
             return embedding
         except Exception as e:
             logger.error(f"Error generating embedding: {e}")
+            raise
+    
+    async def embed_query_async(self, query: str) -> List[float]:
+        """Async wrapper for embedding generation with timeout."""
+        try:
+            loop = asyncio.get_event_loop()
+            
+            # Run embedding in thread pool with timeout
+            future = loop.run_in_executor(self.executor, self.embed_query, query)
+            embedding = await asyncio.wait_for(future, timeout=MAX_EMBEDDING_TIME)
+            
+            return embedding
+        except asyncio.TimeoutError:
+            logger.error(f"Embedding timeout for query: {query[:50]}...")
+            # Return a degraded random embedding as fallback
+            import numpy as np
+            return np.random.randn(768).tolist()
+        except Exception as e:
+            logger.error(f"Async embedding error: {e}")
             raise
     
     def search(self, 
@@ -91,6 +143,80 @@ class RAGSearch:
             
         except Exception as e:
             logger.error(f"Search error: {e}")
+            raise
+    
+    async def search_async(self,
+                          query: str,
+                          top_k: int = 5,
+                          content_type_filter: Optional[str] = None,
+                          namespace: Optional[str] = None,
+                          progress_callback=None) -> List[Dict[str, Any]]:
+        """
+        Async search with progress updates and timeout handling.
+        
+        Args:
+            query: Search query string
+            top_k: Number of results to return
+            content_type_filter: Filter by content type
+            namespace: Pinecone namespace to search in
+            progress_callback: Optional callback for progress updates
+            
+        Returns:
+            List of matching chunks with content and metadata
+        """
+        try:
+            # Step 1: Generate embedding (with progress)
+            if progress_callback:
+                await progress_callback({"status": "embedding", "progress": 0.3})
+            
+            query_embedding = await self.embed_query_async(query)
+            
+            # Step 2: Query Pinecone (with progress)
+            if progress_callback:
+                await progress_callback({"status": "searching", "progress": 0.6})
+            
+            # Build filter
+            filter_dict = {}
+            if content_type_filter:
+                filter_dict["type"] = content_type_filter
+            
+            # Run Pinecone query in executor to avoid blocking
+            loop = asyncio.get_event_loop()
+            results = await loop.run_in_executor(
+                self.executor,
+                lambda: self.index.query(
+                    vector=query_embedding,
+                    top_k=top_k,
+                    include_metadata=True,
+                    namespace=namespace,
+                    filter=filter_dict if filter_dict else None
+                )
+            )
+            
+            # Step 3: Process results (with progress)
+            if progress_callback:
+                await progress_callback({"status": "processing", "progress": 0.9})
+            
+            processed_results = []
+            for match in results.get('matches', []):
+                result = {
+                    'id': match['id'],
+                    'score': match['score'],
+                    'content': match['metadata'].get('content', ''),
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                }
+                processed_results.append(result)
+            
+            if progress_callback:
+                await progress_callback({"status": "complete", "progress": 1.0})
+            
+            logger.info(f"Async search found {len(processed_results)} results")
+            return processed_results
+            
+        except Exception as e:
+            logger.error(f"Async search error: {e}")
+            if progress_callback:
+                await progress_callback({"status": "error", "error": str(e)})
             raise
     
     def search_code_examples(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
@@ -380,7 +506,10 @@ class RAGSearch:
                 'status': 'healthy',
                 'pinecone_connected': True,
                 'embedding_model_loaded': True,
-                'test_query_results': len(test_results)
+                'test_query_results': len(test_results),
+                'last_embedding_time': self.last_embedding_time,
+                'total_embeddings_processed': self.total_embeddings_processed,
+                'cache_info': self._cached_embed.cache_info()._asdict()
             }
         except Exception as e:
             logger.error(f"Health check failed: {e}")
@@ -390,3 +519,16 @@ class RAGSearch:
                 'pinecone_connected': False,
                 'embedding_model_loaded': False
             }
+    
+    def get_performance_stats(self) -> Dict[str, Any]:
+        """Get performance statistics."""
+        cache_info = self._cached_embed.cache_info()
+        return {
+            'last_embedding_time': self.last_embedding_time,
+            'total_embeddings_processed': self.total_embeddings_processed,
+            'cache_hits': cache_info.hits,
+            'cache_misses': cache_info.misses,
+            'cache_size': cache_info.currsize,
+            'cache_max_size': cache_info.maxsize,
+            'cache_hit_rate': cache_info.hits / (cache_info.hits + cache_info.misses) if (cache_info.hits + cache_info.misses) > 0 else 0
+        }

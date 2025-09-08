@@ -7,9 +7,12 @@ For Claude Web Connector
 import os
 import sys
 import json
+import time
+import asyncio
 import logging
 import contextlib
-from typing import Optional
+from typing import Optional, Dict
+from datetime import datetime
 from dotenv import load_dotenv
 
 # Add parent directory to path to import search module
@@ -19,7 +22,7 @@ from mcp.server.fastmcp import FastMCP
 from search import RAGSearch
 from starlette.applications import Starlette
 from starlette.routing import Mount, Route
-from starlette.responses import JSONResponse
+from starlette.responses import JSONResponse, StreamingResponse
 
 # Load environment variables
 load_dotenv()
@@ -37,18 +40,47 @@ mcp = FastMCP("SDK RAG Server", stateless_http=True)
 # Global RAG search instance
 rag_search: Optional[RAGSearch] = None
 
+# Connection tracking
+active_connections: Dict[str, datetime] = {}
+last_heartbeat: datetime = datetime.now()
+
+# Keepalive configuration
+KEEPALIVE_INTERVAL = 2.0  # seconds
+CONNECTION_TIMEOUT = 10.0  # seconds
+
 @mcp.tool()
-def search_sdk(query: str, top_k: int = 5) -> str:
+async def search_sdk(query: str, top_k: int = 5) -> str:
     """Search the Camera Remote SDK documentation and code examples using intelligent hybrid search for optimal results."""
     if rag_search is None:
-        return "RAG search system not initialized"
+        return json.dumps({"error": "RAG search system not initialized"})
     
     try:
-        results = rag_search.search_hybrid(query, top_k=top_k)
-        return json.dumps(results, indent=2)
+        # Track request start time
+        start_time = time.time()
+        
+        # Use async search if query might be slow
+        if len(query) > 50 or top_k > 10:
+            # Use async search with progress tracking
+            results = await rag_search.search_async(
+                query, 
+                top_k=top_k,
+                progress_callback=lambda p: logger.info(f"Search progress: {p}")
+            )
+        else:
+            # Use regular search for simple queries
+            results = rag_search.search_hybrid(query, top_k=top_k)
+        
+        elapsed = time.time() - start_time
+        logger.info(f"Search completed in {elapsed:.2f}s")
+        
+        return json.dumps({
+            "results": results,
+            "query_time": elapsed,
+            "timestamp": datetime.now().isoformat()
+        }, indent=2)
     except Exception as e:
         logger.exception("Search error")
-        return f"Error performing search: {str(e)}"
+        return json.dumps({"error": str(e)})
 
 @mcp.tool()
 def search_code_examples(query: str, top_k: int = 5) -> str:
@@ -106,14 +138,26 @@ def search_compatibility(query: str, top_k: int = 5) -> str:
 def get_sdk_stats() -> str:
     """Get statistics about the SDK documentation database."""
     if rag_search is None:
-        return "RAG search system not initialized"
+        return json.dumps({"error": "RAG search system not initialized"})
     
     try:
-        results = rag_search.get_stats()
-        return json.dumps(results, indent=2)
+        db_stats = rag_search.get_stats()
+        perf_stats = rag_search.get_performance_stats()
+        
+        combined_stats = {
+            "database": db_stats,
+            "performance": perf_stats,
+            "server": {
+                "active_connections": len(active_connections),
+                "last_heartbeat": last_heartbeat.isoformat(),
+                "uptime_seconds": (datetime.now() - last_heartbeat).total_seconds()
+            }
+        }
+        
+        return json.dumps(combined_stats, indent=2)
     except Exception as e:
         logger.exception("Stats error")
-        return f"Error getting stats: {str(e)}"
+        return json.dumps({"error": str(e)})
 
 @mcp.tool()
 def search_exact_api(api_name: str, top_k: int = 5) -> str:
@@ -199,6 +243,31 @@ def search_by_source_file(file_name: str, query: str = "", top_k: int = 5) -> st
         logger.exception("Source file search error")
         return f"Error searching in file '{file_name}': {str(e)}"
 
+# Keepalive task
+async def keepalive_task():
+    """Send periodic keepalive messages to maintain connection."""
+    global last_heartbeat
+    while True:
+        try:
+            await asyncio.sleep(KEEPALIVE_INTERVAL)
+            last_heartbeat = datetime.now()
+            
+            # Clean up stale connections
+            now = datetime.now()
+            stale_connections = [
+                conn_id for conn_id, last_seen in active_connections.items()
+                if (now - last_seen).total_seconds() > CONNECTION_TIMEOUT
+            ]
+            for conn_id in stale_connections:
+                del active_connections[conn_id]
+                logger.info(f"Removed stale connection: {conn_id}")
+            
+            # Log heartbeat
+            if active_connections:
+                logger.debug(f"Heartbeat: {len(active_connections)} active connections")
+        except Exception as e:
+            logger.error(f"Keepalive error: {e}")
+
 # Combined lifespan to manage session manager and RAG initialization
 @contextlib.asynccontextmanager
 async def lifespan(app: Starlette):
@@ -213,24 +282,86 @@ async def lifespan(app: Starlette):
             logger.exception("Failed to initialize RAG search")
             rag_search = None
         
+        # Start keepalive task
+        keepalive = asyncio.create_task(keepalive_task())
+        
         # Start MCP session manager
         await stack.enter_async_context(mcp.session_manager.run())
-        yield
+        
+        try:
+            yield
+        finally:
+            # Cancel keepalive task
+            keepalive.cancel()
+            try:
+                await keepalive
+            except asyncio.CancelledError:
+                pass
 
 # Health check endpoint for Railway
 async def health_check(request):
-    """Health check endpoint"""
-    return JSONResponse({
+    """Health check endpoint with detailed status."""
+    health_status = {
         "status": "healthy",
         "service": "fastmcp-server", 
         "rag_initialized": rag_search is not None,
-        "mcp_path": "/mcp"
-    })
+        "mcp_path": "/mcp",
+        "timestamp": datetime.now().isoformat(),
+        "active_connections": len(active_connections),
+        "last_heartbeat": last_heartbeat.isoformat()
+    }
+    
+    # Add performance metrics if available
+    if rag_search:
+        try:
+            perf_stats = rag_search.get_performance_stats()
+            health_status["performance"] = {
+                "last_embedding_time": perf_stats.get("last_embedding_time", 0),
+                "cache_hit_rate": perf_stats.get("cache_hit_rate", 0),
+                "total_embeddings": perf_stats.get("total_embeddings_processed", 0)
+            }
+        except:
+            pass
+    
+    return JSONResponse(health_status)
+
+# SSE endpoint for streaming responses
+async def sse_endpoint(request):
+    """Server-Sent Events endpoint for streaming responses."""
+    async def event_generator():
+        connection_id = str(time.time())
+        active_connections[connection_id] = datetime.now()
+        
+        try:
+            while True:
+                # Send heartbeat
+                yield f"data: {{\"type\": \"heartbeat\", \"timestamp\": \"{datetime.now().isoformat()}\"}}\n\n"
+                
+                # Update connection timestamp
+                active_connections[connection_id] = datetime.now()
+                
+                await asyncio.sleep(KEEPALIVE_INTERVAL)
+        except asyncio.CancelledError:
+            # Clean up on disconnect
+            if connection_id in active_connections:
+                del active_connections[connection_id]
+            raise
+    
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no"
+        }
+    )
 
 # Create the Starlette app and mount the MCP server - following official example
 app = Starlette(
     routes=[
         Route("/health", health_check),
+        Route("/sse", sse_endpoint),  # SSE endpoint for keepalive
         Mount("/", mcp.streamable_http_app()),
     ],
     lifespan=lifespan,
@@ -248,7 +379,10 @@ if __name__ == "__main__":
     logger.info(f"Starting FastMCP server on {host}:{port}")
     logger.info("Available tools: search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file")
     logger.info("Health check: /health")
+    logger.info("SSE endpoint: /sse")
     logger.info("MCP endpoint: /mcp")
+    logger.info(f"Keepalive interval: {KEEPALIVE_INTERVAL}s")
+    logger.info(f"Connection timeout: {CONNECTION_TIMEOUT}s")
     
     # Run ASGI app with uvicorn
     uvicorn.run(app, host=host, port=port, log_level="info")
