@@ -561,23 +561,34 @@ class RAGSearch:
         if progress_callback:
             await progress_callback({"status": "analyzing_intent", "progress": 0.1})
         
-        # Step 1: Intent Analysis
-        intent_matches = []
+        # Step 1: Query Expansion (instead of intent extraction)
+        expanded_query = query
+        intent_context = {}
         if use_intent_mapping:
             try:
                 # Import here to avoid circular dependency
                 from intent_mapper import get_intent_mapper
                 mapper = get_intent_mapper()
-                intent_matches = await mapper.extract_intent(query)
-                logger.info(f"Found {len(intent_matches)} intent matches")
+                expanded_query = await mapper.expand_query_for_search(query)
+                
+                # Also get some semantic matches for context (but don't use for API generation)
+                semantic_matches = await mapper.extract_intent(query)
+                intent_context = {
+                    "expanded_query": expanded_query,
+                    "original_query": query,
+                    "expansion_successful": expanded_query != query,
+                    "semantic_categories": [match.category for match in semantic_matches[:2]]
+                }
+                logger.info(f"Query expansion: '{query}' → '{expanded_query}'")
             except Exception as e:
-                logger.warning(f"Intent mapping failed: {e}")
+                logger.warning(f"Query expansion failed: {e}")
+                expanded_query = query
         
         if progress_callback:
             await progress_callback({"status": "searching", "progress": 0.3})
         
-        # Step 2: Multi-modal parallel search
-        search_results = await self._parallel_search(query, top_k, intent_matches, progress_callback)
+        # Step 2: Multi-modal parallel search with expanded query
+        search_results = await self._parallel_search(expanded_query, top_k, intent_context, progress_callback)
         
         if progress_callback:
             await progress_callback({"status": "fusing_results", "progress": 0.8})
@@ -585,7 +596,7 @@ class RAGSearch:
         # Step 3: Result fusion and re-ranking
         fused_results = self._fuse_and_rank_results(
             search_results, 
-            intent_matches, 
+            intent_context, 
             query,
             top_k
         )
@@ -598,38 +609,42 @@ class RAGSearch:
         return {
             "results": fused_results[:top_k],
             "intent_analysis": {
-                "matches": [match.to_dict() for match in intent_matches[:3]],
-                "primary_intent": intent_matches[0].to_dict() if intent_matches else None,
-                "confidence": intent_matches[0].confidence if intent_matches else 0.0
+                "original_query": query,
+                "expanded_query": intent_context.get("expanded_query", query),
+                "expansion_successful": intent_context.get("expansion_successful", False),
+                "semantic_categories": intent_context.get("semantic_categories", []),
+                "llm_expansion_used": use_intent_mapping and intent_context.get("expansion_successful", False)
             },
             "search_metadata": {
                 "query": query,
+                "expanded_query": intent_context.get("expanded_query", query),
                 "total_time": elapsed,
                 "search_strategies_used": list(search_results.keys()),
                 "total_candidates": sum(len(results) for results in search_results.values())
             },
-            "suggestions": self._generate_suggestions(query, intent_matches, fused_results)
+            "suggestions": self._generate_suggestions(query, intent_context, fused_results)
         }
     
     async def _parallel_search(self, 
                               query: str, 
                               top_k: int, 
-                              intent_matches: List,
+                              intent_context: Dict,
                               progress_callback=None) -> Dict[str, List[Dict[str, Any]]]:
-        """Run multiple search strategies in parallel."""
+        """Run multiple search strategies in parallel using expanded query."""
         search_tasks = {}
         
-        # Strategy 1: Exact API matching (if we have high-confidence intent)
-        if intent_matches and intent_matches[0].confidence > 0.7:
-            api_function = intent_matches[0].api_function
-            search_tasks["exact_api"] = self._search_exact_api_async(api_function, top_k//3)
+        # Strategy 1: Enhanced semantic search with expanded query
+        search_tasks["semantic_expanded"] = self.search_async(query, top_k//2)
         
-        # Strategy 2: Semantic search on all content
-        search_tasks["semantic_all"] = self.search_async(query, top_k//2)
+        # Strategy 2: Original query search (for comparison/fallback)
+        original_query = intent_context.get("original_query", query)
+        if original_query != query:
+            search_tasks["semantic_original"] = self.search_async(original_query, top_k//3)
         
-        # Strategy 3: Content-type specific searches based on intent category
-        if intent_matches:
-            primary_category = intent_matches[0].category
+        # Strategy 3: Content-type specific searches based on semantic categories
+        semantic_categories = intent_context.get("semantic_categories", [])
+        if semantic_categories:
+            primary_category = semantic_categories[0]
             content_type = self._map_category_to_content_type(primary_category)
             if content_type:
                 search_tasks[f"category_{primary_category}"] = self.search_async(
@@ -691,7 +706,7 @@ class RAGSearch:
     
     def _fuse_and_rank_results(self, 
                               search_results: Dict[str, List[Dict[str, Any]]], 
-                              intent_matches: List,
+                              intent_context: Dict,
                               query: str,
                               top_k: int) -> List[Dict[str, Any]]:
         """
@@ -705,11 +720,11 @@ class RAGSearch:
         """
         # Strategy weights (higher = more trustworthy)
         strategy_weights = {
-            "exact_api": 1.0,      # Highest weight for exact API matches
-            "semantic_all": 0.8,    # High weight for semantic search
-            "category_": 0.7,       # Good weight for category-specific search
-            "keyword": 0.4,         # Lower weight for keyword search
-            "fallback": 0.3         # Lowest weight for fallback
+            "semantic_expanded": 1.0,   # Highest weight for LLM-expanded queries
+            "semantic_original": 0.8,   # High weight for original semantic search
+            "category_": 0.7,           # Good weight for category-specific search
+            "keyword": 0.4,             # Lower weight for keyword search
+            "fallback": 0.3             # Lowest weight for fallback
         }
         
         # Collect all unique results with weighted scores
@@ -730,17 +745,16 @@ class RAGSearch:
                 
                 # Calculate composite score
                 base_score = result.get('score', 0.0)
-                intent_bonus = 0.0
+                expansion_bonus = 0.0
                 
-                # Bonus for intent-related content
-                if intent_matches:
-                    primary_intent = intent_matches[0]
-                    content = result.get('content', '').lower()
-                    if primary_intent.api_function.lower() in content:
-                        intent_bonus = 0.3 * primary_intent.confidence
+                # Bonus for queries that benefited from expansion
+                if intent_context.get("expansion_successful", False):
+                    # Give slight bonus to results from expanded queries
+                    if strategy_name == "semantic_expanded":
+                        expansion_bonus = 0.1
                 
                 # Final weighted score
-                final_score = (base_score * strategy_weight) + intent_bonus
+                final_score = (base_score * strategy_weight) + expansion_bonus
                 
                 # Keep the highest scoring version of each result
                 if result_id not in scored_results or final_score > scored_results[result_id]['final_score']:
@@ -748,7 +762,7 @@ class RAGSearch:
                         **result,
                         'final_score': final_score,
                         'strategy': strategy_name,
-                        'intent_bonus': intent_bonus,
+                        'expansion_bonus': expansion_bonus,
                         'strategy_weight': strategy_weight
                     }
         
@@ -763,31 +777,28 @@ class RAGSearch:
     
     def _generate_suggestions(self, 
                             query: str, 
-                            intent_matches: List,
+                            intent_context: Dict,
                             results: List[Dict[str, Any]]) -> List[str]:
         """Generate helpful suggestions for improving queries."""
         suggestions = []
         
-        # If no good matches found
-        if not results or (results and results[0].get('final_score', 0) < 0.5):
+        # If query expansion failed or wasn't used
+        if not intent_context.get("expansion_successful", False):
             suggestions.extend([
                 "Try using more specific technical terms",
                 "Include the action you want to perform (e.g., 'connect', 'save', 'set')",
                 "Specify the camera component (e.g., 'focus', 'zoom', 'exposure')"
             ])
         
-        # If intent was unclear
-        if not intent_matches or (intent_matches and intent_matches[0].confidence < 0.6):
+        # If no good matches found even with expansion
+        if not results or (results and results[0].get('final_score', 0) < 0.5):
             suggestions.extend([
-                "Try rephrasing your query with common SDK terms",
-                "Be more specific about what you want to accomplish"
+                "Try breaking your query into simpler parts",
+                "Use exact SDK terminology if known"
             ])
-        
-        # Suggest related functions if we have intent matches
-        if intent_matches:
-            primary_intent = intent_matches[0]
-            if hasattr(primary_intent, 'related_functions') and primary_intent.related_functions:
-                related = primary_intent.related_functions[:2]
-                suggestions.append(f"Related functions you might need: {', '.join(related)}")
+        elif intent_context.get("expansion_successful", False):
+            # Query expansion worked
+            expanded = intent_context.get("expanded_query", "")
+            suggestions.append(f"Query was enhanced with terms: {expanded}")
         
         return suggestions[:3]  # Return top 3 suggestions

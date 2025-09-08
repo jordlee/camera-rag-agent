@@ -69,15 +69,17 @@ class LLMIntentMapper:
             return
         
         try:
-            model_name = "microsoft/Phi-3-mini-4k-instruct"
-            logger.info(f"Loading LLM model: {model_name}")
+            model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+            logger.info(f"Loading TinyLlama model: {model_name}")
             
-            self.llm_tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+            self.llm_tokenizer = AutoTokenizer.from_pretrained(model_name)
+            if self.llm_tokenizer.pad_token is None:
+                self.llm_tokenizer.pad_token = self.llm_tokenizer.eos_token
+            
             self.llm_model = AutoModelForCausalLM.from_pretrained(
                 model_name,
                 torch_dtype=torch.float16 if self.use_gpu else torch.float32,
                 device_map="auto" if self.use_gpu else None,
-                trust_remote_code=True,
                 low_cpu_mem_usage=True
             )
             
@@ -281,64 +283,59 @@ class LLMIntentMapper:
         }
     
     def _create_llm_prompt(self, query: str) -> str:
-        """Create structured prompt for LLM intent extraction."""
-        api_list = []
-        for api_func, info in self.api_knowledge_base.items():
-            use_cases = ", ".join(info["use_cases"][:3])  # First 3 use cases
-            api_list.append(f"- {api_func}: {info['description']} (use cases: {use_cases})")
-        
-        api_functions = "\n".join(api_list)
-        
+        """Create prompt for query expansion (NO API function generation)."""
         prompt = f"""<|system|>
-You are an expert in Sony Camera Remote SDK. Your task is to map user queries to the most relevant API functions.
+You are a technical query expansion expert for Sony Camera SDK documentation search.
 
-Available API Functions:
-{api_functions}
+Your task: Expand user queries with related technical terms to improve search results.
+IMPORTANT: Do NOT generate specific API function names. Only expand with related concepts and synonyms.
 
-Instructions:
-1. Analyze the user query for intent and technical requirements
-2. Select the most relevant API function(s)
-3. Provide confidence score (0.0-1.0)
-4. Explain your reasoning
-5. Respond in valid JSON format only
+Examples:
+- "connect to camera" → "connect establish link pair attach camera device communication setup initialize"
+- "save file location" → "save store download file location path directory destination folder output"
+- "get camera settings" → "get retrieve read fetch camera settings properties configuration parameters status"
+- "focus control" → "focus autofocus AF manual focus area selection position control"
 
 <|end|>
 <|user|>
-User query: "{query}"
+Expand this query with related technical terms for better search: "{query}"
 
-Please map this query to the most relevant API function and respond with JSON in this exact format:
-{{
-  "api_function": "function_name",
-  "confidence": 0.85,
-  "reasoning": "explanation of why this function matches",
-  "category": "category_name"
-}}
+Respond with only the expanded query terms (space-separated words):
 <|end|>
 <|assistant|>"""
         
         return prompt
     
-    async def _query_llm_async(self, query: str) -> Optional[IntentMatch]:
-        """Query LLM for intent extraction asynchronously."""
+    async def _expand_query_async(self, query: str) -> str:
+        """Use LLM to expand query with related technical terms."""
         if not self.llm_model or not self.llm_tokenizer:
-            return None
+            # Fallback to original query if LLM unavailable
+            return query
         
         try:
             prompt = self._create_llm_prompt(query)
             
             # Run LLM inference in thread pool
             loop = asyncio.get_event_loop()
-            result = await loop.run_in_executor(
+            expanded_terms = await loop.run_in_executor(
                 self.executor,
                 self._run_llm_inference,
                 prompt
             )
             
-            return self._parse_llm_response(result)
+            # Clean and validate expansion
+            if expanded_terms and len(expanded_terms.strip()) > len(query):
+                # Combine original query with expanded terms
+                combined_query = f"{query} {expanded_terms.strip()}"
+                logger.info(f"Query expanded: '{query}' → '{combined_query}'")
+                return combined_query
+            else:
+                logger.warning(f"LLM expansion failed, using original query: '{query}'")
+                return query
             
         except Exception as e:
-            logger.error(f"LLM query error: {e}")
-            return None
+            logger.error(f"LLM query expansion error: {e}")
+            return query  # Fallback to original
     
     def _run_llm_inference(self, prompt: str) -> str:
         """Run LLM inference in thread."""
@@ -429,45 +426,43 @@ Please map this query to the most relevant API function and respond with JSON in
             logger.error(f"Semantic search error: {e}")
             return []
     
-    async def extract_intent(self, query: str) -> List[IntentMatch]:
+    async def expand_query_for_search(self, query: str) -> str:
         """
-        Extract API function intents from natural language query.
+        Expand query with related technical terms for better vector search.
         
         Args:
-            query: Natural language query
+            query: Original natural language query
             
         Returns:
-            List of IntentMatch objects sorted by confidence
+            Expanded query with additional relevant terms
+        """
+        query = query.strip()
+        if not query:
+            return query
+        
+        start_time = time.time()
+        
+        # Use LLM to expand query with related terms
+        expanded_query = await self._expand_query_async(query)
+        
+        elapsed = time.time() - start_time
+        logger.info(f"Query expansion completed in {elapsed:.3f}s")
+        
+        return expanded_query
+    
+    async def extract_intent(self, query: str) -> List[IntentMatch]:
+        """
+        DEPRECATED: Use expand_query_for_search() instead.
+        This method now only provides semantic similarity matching for backward compatibility.
         """
         query = query.strip()
         if not query:
             return []
         
-        start_time = time.time()
-        matches = []
-        
-        # Try LLM first (most accurate but slower)
-        llm_match = await self._query_llm_async(query)
-        if llm_match and llm_match.confidence > 0.6:
-            matches.append(llm_match)
-            logger.info(f"LLM match: {llm_match.api_function} (confidence: {llm_match.confidence:.2f})")
-        
-        # Add semantic similarity matches
+        # Only use semantic similarity (no API generation to avoid hallucination)
         semantic_matches = self._semantic_similarity_search(query)
         
-        # Combine results, avoiding duplicates
-        seen_functions = {match.api_function for match in matches}
-        for match in semantic_matches:
-            if match.api_function not in seen_functions:
-                matches.append(match)
-        
-        # Sort by confidence
-        matches.sort(key=lambda x: x.confidence, reverse=True)
-        
-        elapsed = time.time() - start_time
-        logger.info(f"Intent extraction completed in {elapsed:.3f}s, found {len(matches)} matches")
-        
-        return matches[:5]  # Return top 5 matches
+        return semantic_matches[:3]  # Return top 3 matches
     
     def get_api_info(self, api_function: str) -> Optional[Dict]:
         """Get detailed information about an API function."""

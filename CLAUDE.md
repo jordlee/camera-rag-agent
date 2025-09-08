@@ -450,3 +450,4 @@ ChatGPT/Claude ↔️ MCP Server (Railway) ↔️ Pinecone (8,962 vectors)
 ```
 
 The Camera Remote SDK RAG system is now **cloud-ready** with comprehensive content type support and MCP protocol integration!
+- The search with intent tool is failing according to Claude web. I've attached the railway logs in railway-logs.md. Pleease examine the logs and provide a diagnositc

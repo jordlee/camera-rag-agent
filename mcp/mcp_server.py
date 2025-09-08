@@ -245,12 +245,12 @@ def search_by_source_file(file_name: str, query: str = "", top_k: int = 5) -> st
 
 @mcp.tool() 
 async def search_with_intent_analysis(query: str, top_k: int = 10, explain_intent: bool = True) -> str:
-    """Advanced search with detailed intent analysis, suggestions, and multi-modal results. Perfect for complex natural language queries."""
+    """Advanced search with query expansion using TinyLlama to add related technical terms for better results. Perfect for natural language queries."""
     if rag_search is None:
         return json.dumps({"error": "RAG search system not initialized"})
     
     try:
-        # Use full intent-based search with detailed analysis
+        # Use full intent-based search with query expansion
         results = await rag_search.search_with_intent(
             query, 
             top_k=top_k,
@@ -260,13 +260,14 @@ async def search_with_intent_analysis(query: str, top_k: int = 10, explain_inten
         # Add explanation if requested
         if explain_intent:
             intent_analysis = results.get("intent_analysis", {})
-            primary_intent = intent_analysis.get("primary_intent")
             
             explanation = {
-                "query_understanding": f"I interpreted your query '{query}' as related to {primary_intent.get('category', 'general SDK usage') if primary_intent else 'general SDK usage'}",
-                "api_recommendation": primary_intent.get('api_function') if primary_intent else "No specific API identified",
-                "confidence": f"{intent_analysis.get('confidence', 0) * 100:.1f}% confidence in intent detection",
-                "reasoning": primary_intent.get('reasoning') if primary_intent else "No specific reasoning available"
+                "query_processing": "Query expanded with related technical terms for better search",
+                "original_query": query,
+                "expanded_query": intent_analysis.get("expanded_query", query),
+                "expansion_successful": intent_analysis.get("expansion_successful", False),
+                "terms_added": "Query enhanced with related technical terms" if intent_analysis.get("expansion_successful") else "No expansion performed",
+                "semantic_categories": intent_analysis.get("semantic_categories", [])
             }
             results["explanation"] = explanation
         
@@ -275,7 +276,7 @@ async def search_with_intent_analysis(query: str, top_k: int = 10, explain_inten
         return json.dumps(results, indent=2)
         
     except Exception as e:
-        logger.exception("Intent analysis search error")
+        logger.exception("Query expansion search error")
         return json.dumps({
             "error": str(e),
             "suggestion": "Try a simpler query or use the regular search_sdk tool"

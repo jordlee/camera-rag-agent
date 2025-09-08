@@ -1,0 +1,253 @@
+{
+  "test_suite_name": "Sony Camera SDK RAG System - Phase 2 Query Expansion Validation", 
+  "description": "Test queries to validate TinyLlama-based query expansion and enhanced semantic search. These queries previously had ~25% success rate and should now achieve 70%+ accuracy through intelligent query expansion (NO API hallucination).",
+  
+  "critical_failing_queries": {
+    "description": "These are the exact queries from FEEDBACK.md that were failing with low scores",
+    "queries": [
+      {
+        "id": "critical_1",
+        "query": "connect to camera",
+        "expected_api": "SCRSDK::Connect",
+        "expected_category": "connection",
+        "previous_result": "Found camera code, missed Connect API (score: 0.05)",
+        "success_criteria": "Should find SCRSDK::Connect documentation via expanded query terms"
+      },
+      {
+        "id": "critical_2", 
+        "query": "save file location",
+        "expected_api": "SetSaveInfo",
+        "expected_category": "file_operations",
+        "previous_result": "Found video streaming, missed SetSaveInfo (score: 0.01)",
+        "success_criteria": "Should find SetSaveInfo documentation via expanded query terms"
+      },
+      {
+        "id": "critical_3",
+        "query": "get camera settings",
+        "expected_api": "GetDeviceProperties",
+        "expected_category": "camera_settings", 
+        "previous_result": "Found misc docs, missed GetDeviceProperties (score: 0.02)",
+        "success_criteria": "Should find GetDeviceProperties documentation via expanded query terms"
+      }
+    ]
+  },
+
+  "natural_language_queries": {
+    "description": "More conversational queries that should work with LLM-based intent mapping",
+    "queries": [
+      {
+        "id": "natural_1",
+        "query": "How do I establish a connection with my Sony camera?",
+        "expected_api": "SCRSDK::Connect",
+        "test_type": "conversational_connection"
+      },
+      {
+        "id": "natural_2",
+        "query": "I want to change where images are saved on my computer",
+        "expected_api": "SetSaveInfo", 
+        "test_type": "conversational_file_ops"
+      },
+      {
+        "id": "natural_3",
+        "query": "What's the best way to read the current camera configuration?",
+        "expected_api": "GetDeviceProperties",
+        "test_type": "conversational_settings"
+      },
+      {
+        "id": "natural_4",
+        "query": "I need to store my current focus position as a preset",
+        "expected_api": "CrDeviceProperty_ZoomAndFocusPosition_Save",
+        "test_type": "conversational_focus_control"
+      },
+      {
+        "id": "natural_5",
+        "query": "My camera connection keeps timing out, what error is this?",
+        "expected_api": "CrError_Connect_TimeOut",
+        "test_type": "error_identification"
+      }
+    ]
+  },
+
+  "synonym_and_variation_queries": {
+    "description": "Test synonym understanding and query variations",
+    "queries": [
+      {
+        "id": "synonym_1",
+        "query": "pair with camera device",
+        "expected_api": "SCRSDK::Connect",
+        "test_type": "synonym_connection"
+      },
+      {
+        "id": "synonym_2",
+        "query": "set download folder",
+        "expected_api": "SetSaveInfo",
+        "test_type": "synonym_file_ops"
+      },
+      {
+        "id": "synonym_3", 
+        "query": "retrieve device properties",
+        "expected_api": "GetDeviceProperties",
+        "test_type": "synonym_settings"
+      },
+      {
+        "id": "synonym_4",
+        "query": "zoom control operation",
+        "expected_api": "CrDeviceProperty_Zoom_Operation",
+        "test_type": "synonym_zoom"
+      },
+      {
+        "id": "synonym_5",
+        "query": "transfer captured images",
+        "expected_api": "DownloadContents",
+        "test_type": "synonym_download"
+      }
+    ]
+  },
+
+  "technical_queries": {
+    "description": "More technical queries using SDK-specific terminology",
+    "queries": [
+      {
+        "id": "tech_1",
+        "query": "SCRSDK Connect function parameters",
+        "expected_api": "SCRSDK::Connect",
+        "test_type": "exact_api_search"
+      },
+      {
+        "id": "tech_2",
+        "query": "CrDeviceProperty exposure mode setting",
+        "expected_api": "CrDeviceProperty_ExposureMode",
+        "test_type": "property_search"
+      },
+      {
+        "id": "tech_3",
+        "query": "autofocus area position control",
+        "expected_api": "CrDeviceProperty_AF_AreaPosition", 
+        "test_type": "focus_technical"
+      },
+      {
+        "id": "tech_4",
+        "query": "camera busy error handling",
+        "expected_api": "CrError_Busy",
+        "test_type": "error_technical"
+      }
+    ]
+  },
+
+  "complex_multi_intent_queries": {
+    "description": "Queries that might have multiple intents or require reasoning",
+    "queries": [
+      {
+        "id": "complex_1",
+        "query": "After connecting to camera, how do I save images to a specific folder?",
+        "primary_expected_api": "SetSaveInfo",
+        "secondary_expected_api": "SCRSDK::Connect",
+        "test_type": "multi_step_workflow"
+      },
+      {
+        "id": "complex_2", 
+        "query": "I want to set manual exposure and save the focus position",
+        "primary_expected_api": "CrDeviceProperty_ExposureMode",
+        "secondary_expected_api": "CrDeviceProperty_ZoomAndFocusPosition_Save",
+        "test_type": "multi_setting_workflow"
+      },
+      {
+        "id": "complex_3",
+        "query": "What camera compatibility issues should I check for the ILX-LR1?",
+        "expected_content_type": "documentation_table",
+        "test_type": "compatibility_query"
+      }
+    ]
+  },
+
+  "test_instructions": {
+    "for_claude_web": [
+      "1. Connect to your MCP server URL in Claude Web",
+      "2. Use the search_sdk tool (new intelligent search) for each query",
+      "3. Also try search_with_intent_analysis for detailed explanations",
+      "4. Look for these improvements:",
+      "   - High confidence scores (>0.7) for critical queries",
+      "   - Correct API function identification", 
+      "   - Relevant intent analysis and reasoning",
+      "   - Helpful suggestions when queries are unclear",
+      "   - Fast response times (<5 seconds)",
+      "5. Compare results with the 'previous_result' baselines"
+    ],
+    "success_indicators": [
+      "✅ Critical queries now return correct APIs with high confidence",
+      "✅ Natural language queries work as well as technical terms", 
+      "✅ Intent analysis explains the reasoning clearly",
+      "✅ Suggestions help improve unclear queries",
+      "✅ No connection timeouts or crashes",
+      "✅ Response times under 5 seconds"
+    ],
+    "failure_indicators": [
+      "❌ Still getting incorrect APIs for critical queries",
+      "❌ Low confidence scores (<0.5) for clear queries",
+      "❌ Connection timeouts during search",
+      "❌ No intent analysis or reasoning provided",
+      "❌ Poor suggestions or no suggestions when needed"
+    ]
+  },
+
+  "sample_test_commands": {
+    "description": "Copy-paste these commands directly into Claude Web",
+    "commands": [
+      {
+        "command": "search_sdk",
+        "query": "connect to camera",
+        "note": "Test the main failing query from FEEDBACK.md"
+      },
+      {
+        "command": "search_with_intent_analysis", 
+        "query": "save file location",
+        "note": "Test with detailed intent explanation"
+      },
+      {
+        "command": "search_sdk",
+        "query": "How do I establish a connection with my Sony camera?",
+        "note": "Test natural language understanding"
+      },
+      {
+        "command": "search_with_intent_analysis",
+        "query": "I want to change where images are saved on my computer", 
+        "note": "Test conversational query with explanation"
+      },
+      {
+        "command": "search_sdk",
+        "query": "After connecting to camera, how do I save images to a specific folder?",
+        "note": "Test complex multi-step query"
+      }
+    ]
+  },
+
+  "validation_checklist": {
+    "phase_2_improvements": [
+      {
+        "feature": "TinyLlama Query Expansion",
+        "test": "Check intent_analysis shows expanded_query different from original",
+        "pass_criteria": "expansion_successful: true, expanded_query contains additional terms"
+      },
+      {
+        "feature": "Multi-Modal Search", 
+        "test": "Check search_metadata shows multiple strategies used",
+        "pass_criteria": "semantic_expanded strategy used, 2+ search strategies total"
+      },
+      {
+        "feature": "Result Fusion",
+        "test": "Results prioritize expanded query results over original",
+        "pass_criteria": "Top results have strategy: semantic_expanded"
+      },
+      {
+        "feature": "No API Hallucination",
+        "test": "intent_analysis should NOT contain api_function field",
+        "pass_criteria": "No hallucinated API names, only query expansion"
+      },
+      {
+        "feature": "Performance",
+        "test": "All queries complete within 5 seconds despite TinyLlama processing",
+        "pass_criteria": "search_metadata.total_time < 5.0"
+      }
+    ]
+  }
+}
