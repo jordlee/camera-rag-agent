@@ -37,7 +37,7 @@ BATCH_SIZE = 100  # Pinecone batch size
 # Pinecone configuration
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_INDEX_NAME = "sdk-rag-system"
-PINECONE_DIMENSION = 768  # all-mpnet-base-v2 dimension
+PINECONE_DIMENSION = 768  # GTE-ModernBERT dimension
 PINECONE_METRIC = "cosine"
 PINECONE_CLOUD = "aws"
 PINECONE_REGION = "us-east-1"
@@ -48,52 +48,52 @@ LOCAL_PINECONE_HOST = "http://localhost:5080"
 LOCAL_PINECONE_API_KEY = "pclocal"  # Standard for local development
 
 # --- Model Configuration for Different Data Types ---
-# Using CodeBERT for ALL types for better technical/API search
+# Using GTE-ModernBERT for ALL types for better semantic search without overfitting
 MODEL_CONFIG = {
     "example_code": {
-        "model_name": "microsoft/codebert-base",
-        "model_type": "codebert",
-        "description": "CodeBERT for code examples"
+        "model_name": "Alibaba-NLP/gte-modernbert-base",
+        "model_type": "sentence_transformer",
+        "description": "GTE-ModernBERT for code examples"
     },
     "summary": {
-        "model_name": "microsoft/codebert-base", 
-        "model_type": "codebert",
-        "description": "CodeBERT for API summaries"
+        "model_name": "Alibaba-NLP/gte-modernbert-base", 
+        "model_type": "sentence_transformer",
+        "description": "GTE-ModernBERT for API summaries"
     },
     "member": {
-        "model_name": "microsoft/codebert-base",
-        "model_type": "codebert",
-        "description": "CodeBERT for API members"
+        "model_name": "Alibaba-NLP/gte-modernbert-base",
+        "model_type": "sentence_transformer",
+        "description": "GTE-ModernBERT for API members"
     },
     "enum": {
-        "model_name": "microsoft/codebert-base",
-        "model_type": "codebert",
-        "description": "CodeBERT for enum definitions"
+        "model_name": "Alibaba-NLP/gte-modernbert-base",
+        "model_type": "sentence_transformer",
+        "description": "GTE-ModernBERT for enum definitions"
     },
     "function": {
-        "model_name": "microsoft/codebert-base",
-        "model_type": "codebert",
-        "description": "CodeBERT for function definitions"
+        "model_name": "Alibaba-NLP/gte-modernbert-base",
+        "model_type": "sentence_transformer",
+        "description": "GTE-ModernBERT for function definitions"
     },
     "variable": {
-        "model_name": "microsoft/codebert-base",
-        "model_type": "codebert",
-        "description": "CodeBERT for variable definitions"
+        "model_name": "Alibaba-NLP/gte-modernbert-base",
+        "model_type": "sentence_transformer",
+        "description": "GTE-ModernBERT for variable definitions"
     },
     "documentation_text": {
-        "model_name": "microsoft/codebert-base",
-        "model_type": "codebert",
-        "description": "CodeBERT for documentation text"
+        "model_name": "Alibaba-NLP/gte-modernbert-base",
+        "model_type": "sentence_transformer",
+        "description": "GTE-ModernBERT for documentation text"
     },
     "documentation_table": {
-        "model_name": "microsoft/codebert-base",
-        "model_type": "codebert", 
-        "description": "CodeBERT for table data"
+        "model_name": "Alibaba-NLP/gte-modernbert-base",
+        "model_type": "sentence_transformer", 
+        "description": "GTE-ModernBERT for table data"
     },
     "default": {
-        "model_name": "microsoft/codebert-base",
-        "model_type": "codebert",
-        "description": "Default CodeBERT model"
+        "model_name": "Alibaba-NLP/gte-modernbert-base",
+        "model_type": "sentence_transformer",
+        "description": "Default GTE-ModernBERT model"
     }
 }
 
@@ -288,7 +288,10 @@ def get_model_for_chunk(chunk, models_cache):
         if config['model_type'] == 'codebert':
             models_cache[config_key] = CodeBERTEmbedder(config['model_name'])
         else:
-            models_cache[config_key] = SentenceTransformer(config['model_name'])
+            # Use CPU for GTE model to avoid memory issues
+            model = SentenceTransformer(config['model_name'])
+            model = model.to('cpu')
+            models_cache[config_key] = model
     
     return config_key, models_cache[config_key]
 
@@ -416,7 +419,10 @@ def main():
             if config['model_type'] == 'codebert':
                 models_cache[model_key] = CodeBERTEmbedder(config['model_name'])
             else:
-                models_cache[model_key] = SentenceTransformer(config['model_name'])
+                # Use CPU for GTE model to avoid memory issues
+                model = SentenceTransformer(config['model_name'])
+                model = model.to('cpu')
+                models_cache[model_key] = model
         
         model = models_cache[model_key]
         
@@ -502,7 +508,7 @@ def main():
     print(f"\\n🎯 Testing exact API search for 'SetSaveInfo' with native arrays...")
     try:
         # Use the same embedding model that was used for the chunks
-        test_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+        test_model = SentenceTransformer('Alibaba-NLP/gte-modernbert-base').to('cpu')
         test_embedding = test_model.encode("API function").tolist()
         
         # Test exact search with native array filtering - this should work now!

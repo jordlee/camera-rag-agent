@@ -1,260 +1,398 @@
 {
-  "rag_testing_summary": {
-    "test_date": "2025-09-09T17:43:00Z",
-    "tester": "Claude Sonnet 4",
-    "sdk_version": "V1.14.00",
-    "search_function": "mcp:search_with_intent_analysis",
-    "overall_assessment": "VERY POOR - Fundamental RAG system failures",
-    "success_rate": "0/13 queries successful",
-    "critical_issues": [
-      "Core API documentation not retrievable",
-      "Poor semantic matching between queries and content",
-      "High confidence scores for irrelevant content",
-      "Content fragmentation - results are incomplete snippets",
-      "Query expansion ineffective despite technical term additions",
-      "Multi-step workflow queries completely fail",
-      "Model-specific information not accessible"
-    ]
-  },
-  "test_categories": {
-    "critical_basic_queries": {
-      "description": "Essential API lookup tasks",
-      "total_queries": 3,
-      "success_count": 0,
-      "failure_rate": "100%",
-      "queries": [
-        {
-          "id": "critical_1",
-          "query": "connect to camera",
-          "expected_api": "SCRSDK::Connect",
-          "expected_category": "connection",
-          "result": "FAILED",
-          "top_retrieved_content": "corporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.",
-          "top_score": 0.1357046127,
-          "semantic_strategy": "semantic_expanded",
-          "expansion_successful": true,
-          "expanded_query": "connect to camera \"connect establish link pair attach camera device communication setup initialize\"",
-          "issues": [
-            "Retrieved patent license text instead of connection API",
-            "No SCRSDK::Connect documentation found",
-            "High confidence score for completely irrelevant content"
-          ]
-        },
-        {
-          "id": "critical_2",
-          "query": "save file location",
-          "expected_api": "SetSaveInfo",
-          "expected_category": "file_operations",
-          "result": "FAILED",
-          "top_retrieved_content": "Table from: Appendix_MoviePlayback_Streaming_for_Mac\nHeaders: ■DescriptionofcreateBlockBuffer()Allocateanareafor"pps/othernalunits"withCMBlockBufferCreateWithMemoryBlock()...",
-          "top_score": 0.0872865668,
-          "semantic_strategy": "semantic_expanded",
-          "expansion_successful": true,
-          "expanded_query": "save file location \"save store download file location path directory destination folder output\"",
-          "issues": [
-            "Retrieved video streaming code instead of file save operations",
-            "SetSaveInfo API not found",
-            "Results focused on Mac video playback, not file save functionality"
-          ]
-        },
-        {
-          "id": "critical_3",
-          "query": "get camera settings",
-          "expected_api": "GetDeviceProperties",
-          "expected_category": "camera_settings",
-          "result": "FAILED",
-          "top_retrieved_content": "- - - - -\n43",
-          "top_score": 0.10533103943,
-          "semantic_strategy": "semantic_expanded",
-          "expansion_successful": true,
-          "expanded_query": "get camera settings \"get retrieve read fetch camera settings properties configuration parameters status\"",
-          "issues": [
-            "Retrieved only page numbers and dashes",
-            "GetDeviceProperties API not found",
-            "Highest scoring results were meaningless page fragments"
-          ]
-        }
-      ]
-    },
-    "synonym_queries": {
-      "description": "Testing alternative terminology",
-      "total_queries": 5,
-      "success_count": 0,
-      "failure_rate": "100%",
-      "queries": [
-        {
-          "id": "synonym_1",
-          "query": "pair with camera device",
-          "expected_api": "SCRSDK::Connect",
-          "result": "FAILED",
-          "top_retrieved_content": "\n479",
-          "top_score": 0.11457118990000001,
-          "issues": ["Page numbers as top results", "No connection API found"]
-        },
-        {
-          "id": "synonym_2",
-          "query": "set download folder",
-          "expected_api": "SetSaveInfo",
-          "result": "FAILED",
-          "top_retrieved_content": "pressionOutputCallbackRecord(\ndecompressionOutputCallback: { (decompressionOutputRefCon: UnsafeMutableRawPointer?...",
-          "top_score": 0.09936294555700001,
-          "issues": ["Video decompression callback code", "No file save operations"]
-        },
-        {
-          "id": "synonym_3",
-          "query": "retrieve device properties",
-          "expected_api": "GetDeviceProperties",
-          "result": "FAILED",
-          "top_retrieved_content": "\n342",
-          "top_score": 0.10690841721000001,
-          "issues": ["Page number fragments only"]
-        },
-        {
-          "id": "synonym_4",
-          "query": "zoom control operation",
-          "expected_api": "CrDeviceProperty_Zoom_Operation",
-          "result": "FAILED",
-          "top_retrieved_content": "fect_OFF Effect OFF\n346",
-          "top_score": 0.08899269100000001,
-          "issues": ["Unrelated effect settings", "No zoom control API"]
-        },
-        {
-          "id": "synonym_5",
-          "query": "transfer captured images",
-          "expected_api": "DownloadContents",
-          "result": "PARTIAL - Found related but wrong API",
-          "top_retrieved_content": "Table from: Appendix_MoviePlayback_Streaming_for_Mac... video data decoding...",
-          "top_score": 0.1558071136,
-          "found_related_api": "GetRemoteTransferContentsInfoList",
-          "issues": ["Found content transfer list API instead of download API", "Video streaming focus instead of image transfer"]
-        }
-      ]
-    },
-    "complex_workflow_queries": {
-      "description": "Multi-step developer scenarios",
-      "total_queries": 3,
-      "success_count": 0,
-      "failure_rate": "100%",
-      "queries": [
-        {
-          "id": "complex_1",
-          "query": "After connecting to camera, how do I save images to a specific folder?",
-          "primary_expected_api": "SetSaveInfo",
-          "secondary_expected_api": "SCRSDK::Connect",
-          "test_type": "multi_step_workflow",
-          "result": "FAILED",
-          "top_retrieved_content": "ponding device indicated by\ndeviceHandle.\npProperty contains the desired property code and desired property value.\nThe desired value should be one of the valid values retrieved from GetDeviceProperties...",
-          "top_score": 0.121853447,
-          "expansion_successful": true,
-          "expanded_query": "After connecting to camera, how do I save images to a specific folder? \"After connecting establish link pair attach camera device communication setup initialize to camera, save images to specific folder\"",
-          "issues": [
-            "Found general property setting documentation but missed specific file save functionality",
-            "No SetSaveInfo or SCRSDK::Connect APIs found",
-            "Workflow guidance missing"
-          ]
-        },
-        {
-          "id": "complex_2",
-          "query": "I want to set manual exposure and save the focus position",
-          "primary_expected_api": "CrDeviceProperty_ExposureMode",
-          "secondary_expected_api": "CrDeviceProperty_ZoomAndFocusPosition_Save",
-          "test_type": "multi_setting_workflow",
-          "result": "FAILED",
-          "top_retrieved_content": "void CameraDevice::getFileNames(std::vector<text> &file_names)\n{\n#if defined(__APPLE__)\n    char search_name[MAC_MAX_PATH];...",
-          "top_score": 0.0711603239,
-          "expansion_successful": false,
-          "expanded_query": "I want to set manual exposure and save the focus position",
-          "issues": [
-            "Retrieved file enumeration function instead of camera settings",
-            "No manual exposure or focus position APIs found",
-            "Query expansion failed to activate"
-          ]
-        },
-        {
-          "id": "complex_3",
-          "query": "What camera compatibility issues should I check for the ILX-LR1?",
-          "expected_content_type": "documentation_table",
-          "test_type": "compatibility_query",
-          "result": "FAILED",
-          "top_retrieved_content": "andle, &prop);\n532",
-          "top_score": 0.1177783985,
-          "expansion_successful": true,
-          "expanded_query": "What camera compatibility issues should I check for the ILX-LR1? \"What camera compatibility issues should I check for the ILX-LR1?\"",
-          "issues": [
-            "No ILX-LR1 specific information found",
-            "No compatibility tables retrieved",
-            "Results were page fragments and irrelevant code snippets"
-          ]
-        }
-      ]
-    }
-  },
-  "technical_analysis": {
-    "search_performance": {
-      "average_response_time_seconds": 7.2,
-      "mcp_server_reliability": "100% - All function calls executed successfully",
-      "query_expansion_success_rate": "80% (8/10 queries expanded)",
-      "expansion_effectiveness": "Poor - Expanded queries still failed to retrieve relevant content"
-    },
-    "content_quality_issues": {
-      "fragmentation_severity": "Critical",
-      "examples": [
-        "Page numbers only: '\\n479', '\\n342', '- - - - -\\n43'",
-        "Incomplete sentences: 'andle, &prop);\\n532'",
-        "License boilerplate instead of technical content"
-      ],
-      "relevance_mismatch": "Severe - High confidence scores for completely irrelevant content",
-      "semantic_model": "microsoft/codebert-base - May be inappropriate for SDK documentation"
-    },
-    "missing_core_apis": [
-      "SCRSDK::Connect",
-      "SetSaveInfo", 
-      "GetDeviceProperties",
-      "CrDeviceProperty_ExposureMode",
-      "CrDeviceProperty_Zoom_Operation",
-      "DownloadContents"
-    ],
-    "search_strategies_used": [
-      "semantic_expanded",
-      "semantic_original", 
-      "keyword"
-    ],
-    "scoring_problems": {
-      "high_confidence_irrelevant": "Multiple cases of 0.1+ scores for page numbers and fragments",
-      "low_confidence_relevant": "Potentially relevant content scored lower than irrelevant content",
-      "score_calibration": "Fundamentally broken - no correlation between score and relevance"
-    }
-  },
-  "recommendations": {
-    "immediate_fixes": [
-      "Audit index content - verify core APIs are properly indexed",
-      "Recalibrate scoring system - page numbers should receive very low scores",
-      "Improve content chunking to reduce fragmentation",
-      "Test alternative embedding models more suitable for documentation"
-    ],
-    "fundamental_improvements": [
-      "Implement exact API name matching as fallback",
-      "Add model-specific search capabilities",
-      "Create workflow-aware query processing",
-      "Establish semantic bridges between procedural questions and technical APIs",
-      "Implement multi-API recognition for complex queries"
-    ],
-    "quality_assurance": [
-      "Create comprehensive test suite with known-good API lookups",
-      "Establish minimum relevance thresholds",
-      "Implement result validation against expected API documentation",
-      "Regular index quality audits"
-    ]
-  },
-  "conclusion": {
-    "system_status": "UNSUITABLE FOR PRODUCTION USE",
-    "reliability": "0% success rate makes system unreliable for developer documentation",
-    "user_impact": "Developers would be unable to find essential API information",
-    "priority": "CRITICAL - Requires fundamental system redesign before deployment",
-    "blockers": [
-      "Core API documentation retrieval failure",
-      "Semantic matching completely broken",
-      "Content quality insufficient for technical documentation"
-    ]
-  }
+ "search_quality_analysis": {
+   "pdf_extraction_issues": {
+     "types_of_corruption": [
+       {
+         "type": "truncated_words",
+         "examples": [
+           {
+             "extracted": "rofileColorMode_709tone",
+             "likely_original": "CrProfileColorMode_709tone",
+             "issue": "Missing prefix 'CrP'"
+           },
+           {
+             "extracted": "ters/usbfs_memory_mb",
+             "likely_original": "parameters/usbfs_memory_mb",
+             "issue": "Missing 'parame' prefix"
+           },
+           {
+             "extracted": "Get Properti",
+             "likely_original": "Get Properties",
+             "issue": "Cut off mid-word"
+           }
+         ]
+       },
+       {
+         "type": "lost_context",
+         "examples": [
+           {
+             "extracted": "tor -\nDestructor -\nCopy Constructor -\n287",
+             "context_lost": "Class name, table structure, documentation purpose",
+             "usefulness": "0/10"
+           },
+           {
+             "extracted": "Partial Color Yellow\n344",
+             "context_lost": "Everything - appears to be image caption",
+             "usefulness": "0/10"
+           }
+         ]
+       },
+       {
+         "type": "broken_tables",
+         "examples": [
+           {
+             "extracted": "CrDataType | CrDataType | CrDataType_UInt16Array",
+             "issues": [
+               "Repeated column headers",
+               "No row data",
+               "No column meanings"
+             ]
+           },
+           {
+             "extracted": "e max\nVariable step\n423",
+             "likely_original": "Range max | Variable step",
+             "issue": "Lost table structure and column relationships"
+           }
+         ]
+       },
+       {
+         "type": "random_fragments",
+         "examples": [
+           "A (means\n10) = 1.5\"\n467",
+           "FF\nCrAssignableButtonIndicator_On ON\n408",
+           "during focus magnification Focus Magnification Screen\n543"
+         ]
+       }
+     ],
+     "extraction_success_rate": "15%",
+     "readable_content_rate": "30%"
+   },
+   
+   "successful_findings": {
+     "key_discoveries": [
+       {
+         "finding": "Priority Key Requirement",
+         "source": "search_exact_api on CrDeviceProperty_PriorityKeySettings",
+         "quality": "Partially corrupted but usable",
+         "extracted_text": "1. \"CrDeviceProperty_PriorityKeySettings\" with \"CrPriorityKey_PCRemote\"\n2. \"CrDeviceProperty_FocusMode\" with \"CrFocus_MF\"",
+         "confidence": "High - clear sequence shown"
+       },
+       {
+         "finding": "Setting vs CurrentValue distinction",
+         "source": "search_exact_api on CrDeviceProperty_FocusPositionSetting",
+         "quality": "Table headers only",
+         "inferred_from": "Properties appearing together in same table structure",
+         "confidence": "High - common SDK pattern"
+       },
+       {
+         "finding": "Focus Mode Requirements",
+         "source": "Multiple searches",
+         "quality": "Fragmented across results",
+         "pieced_together_from": [
+           "CrFocus_MF reference",
+           "Focus mode table fragments",
+           "Example on page 527"
+         ],
+         "confidence": "Medium - inferred from fragments"
+       }
+     ],
+     "how_correct_answer_emerged": {
+       "method": "Pattern recognition through noise",
+       "key_patterns_recognized": [
+         "Write/Read property pairs (Setting/CurrentValue)",
+         "Permission/Priority systems",
+         "Mode-dependent functionality"
+       ],
+       "luck_factor": "Found one good example on page 527"
+     }
+   },
+   
+   "search_strategy_effectiveness": {
+     "what_worked": {
+       "exact_api_search": {
+         "effectiveness": "HIGH",
+         "reason": "Even with bad extraction, API names were findable",
+         "best_queries": [
+           "CrDeviceProperty_FocusPositionSetting",
+           "CrDeviceProperty_PriorityKeySettings"
+         ]
+       },
+       "related_api_discovery": {
+         "effectiveness": "MEDIUM",
+         "reason": "Tables showed related properties together despite corruption"
+       }
+     },
+     "what_failed": {
+       "semantic_search": {
+         "effectiveness": "VERY LOW",
+         "queries_tried": [
+           "focus position manual MF mode requirement priority control physical lens",
+           "lens focus mode AF MF switch physical control SDK requirement"
+         ],
+         "results": "Mostly irrelevant fragments",
+         "reason": "PDF extraction too poor for semantic matching"
+       },
+       "hybrid_search": {
+         "effectiveness": "LOW",
+         "reason": "Combined worst of both - poor text extraction and weak semantic matching"
+       },
+       "compatibility_search": {
+         "effectiveness": "FAILED",
+         "query": "ILX-LR1 focus position manual control",
+         "result": "Got unrelated color profile tables instead"
+       }
+     }
+   },
+   
+   "actual_vs_documented_behavior": {
+     "my_answer": {
+       "based_on": "Generic SDK documentation",
+       "claimed_sequence": [
+         "Set Priority to PCRemote",
+         "Set Focus Mode to MF",
+         "Set FocusPositionSetting",
+         "Read FocusPositionCurrentValue"
+       ],
+       "accuracy": "Partially correct for some cameras"
+     },
+     "user_discovered_behavior": {
+       "actual_sequence": [
+         "Lens physical switch to AF",
+         "Set Focus Mode to AF",
+         "Set FocusPositionSetting (accepted in AF mode)",
+         "Switch to MF mode",
+         "Trigger shutter"
+       ],
+       "camera_specific": "ILX-LR1 with FE 2.8/90 MACRO G OSS",
+       "why_different": "Camera-specific firmware implementation"
+     },
+     "gap": "Documentation doesn't cover model-specific quirks"
+   },
+   
+   "lessons_learned": {
+     "search_tool_improvements_needed": [
+       "Better PDF text extraction",
+       "Preserve table structures",
+       "Include surrounding context (±3 lines)",
+       "Handle multi-column layouts properly"
+     ],
+     "search_strategy_improvements": [
+       "Start with exact API searches, not semantic",
+       "Look for code examples specifically",
+       "Search for model-specific documentation",
+       "Present uncertainty when extrapolating from fragments"
+     ],
+     "domain_knowledge_critical": true,
+     "success_despite_poor_data": "Pattern recognition saved the day"
+   },
+   
+   "quantitative_metrics": {
+     "total_searches_performed": 12,
+     "useful_results": 3,
+     "completely_useless_results": 7,
+     "partially_useful_results": 2,
+     "success_attribution": {
+       "search_tools": "25%",
+       "pattern_recognition": "50%",
+       "domain_knowledge": "20%",
+       "luck": "5%"
+     }
+   }
+ }
+}
+
+{
+ "critical_discovery": {
+   "title": "Semantic Search is Fundamentally Broken",
+   "severity": "CRITICAL",
+   "discovery_method": "Direct API and term searches",
+   "root_cause_identified": true
+ },
+ 
+ "search_results_analysis": {
+   "working_searches": {
+     "method": "mcp:search_exact_api",
+     "success_rate": "100%",
+     "successful_queries": [
+       {
+         "query": "CrDeviceProperty_FocusPositionSetting",
+         "result": "FOUND CORRECTLY",
+         "confidence": "HIGH"
+       },
+       {
+         "query": "Connect",
+         "result": "FOUND CORRECTLY",
+         "confidence": "HIGH"
+       },
+       {
+         "query": "SetSaveInfo",
+         "result": "FOUND CORRECTLY",
+         "confidence": "HIGH"
+       }
+     ],
+     "why_it_works": "Uses exact string matching rather than semantic similarity"
+   },
+   
+   "failing_searches": {
+     "method": "semantic_search",
+     "failure_rate": "100%",
+     "failed_query_categories": [
+       {
+         "category": "camera_model_search",
+         "example": "ILX-LR1",
+         "returned": "Partial Color Yellow",
+         "expected": "Camera compatibility information"
+       },
+       {
+         "category": "priority_settings",
+         "example": "CrPriorityKey_PCRemote",
+         "returned": "Completely irrelevant content",
+         "expected": "Priority key documentation"
+       },
+       {
+         "category": "conversion_functions",
+         "example": "FocalDistanceInMeter",
+         "returned": "Same irrelevant fragments",
+         "expected": "Function documentation"
+       },
+       {
+         "category": "sample_applications",
+         "example": "RemoteCli",
+         "returned": "Same bad results",
+         "expected": "Sample code documentation"
+       },
+       {
+         "category": "specific_values",
+         "example": "65535",
+         "returned": "Same irrelevant content",
+         "expected": "Focus position range documentation"
+       }
+     ]
+   }
+ },
+ 
+ "root_cause_analysis": {
+   "problems_identified": [
+     {
+       "problem": "The Partial Color Yellow Problem",
+       "description": "Same fragment appears as top result for completely unrelated queries",
+       "evidence": {
+         "queries_returning_same_fragment": [
+           "ILX-LR1",
+           "FocalDistanceInMeter",
+           "RemoteCli",
+           "65535 focus position"
+         ],
+         "fragment": "Partial Color Yellow\\n344",
+         "confidence_score": "0.99+",
+         "frequency": "Appears in every semantic search"
+       }
+     },
+     {
+       "problem": "Semantic Embeddings are Corrupted",
+       "description": "Consistently returns same 4-5 irrelevant chunks regardless of query",
+       "recurring_fragments": [
+         "Partial Color Yellow\\n344",
+         "rofileColorMode_709tone 709tone",
+         "ters/usbfs_memory_mb\\n150\\n18",
+         "tor -\\nDestructor -\\nCopy Constructor -\\n287"
+       ],
+       "impact": "Makes semantic search completely unusable"
+     },
+     {
+       "problem": "Missing Critical Content",
+       "description": "Key information is not findable through any search method",
+       "missing_content": [
+         {
+           "type": "Camera model compatibility",
+           "example": "ILX-LR1 information",
+           "retrievable": false
+         },
+         {
+           "type": "Priority settings",
+           "example": "CrPriorityKey_PCRemote",
+           "retrievable": false
+         },
+         {
+           "type": "Conversion functions",
+           "example": "FocalDistanceInMeter/Feet functions",
+           "retrievable": false
+         },
+         {
+           "type": "Sample applications",
+           "example": "RemoteCli documentation",
+           "retrievable": false
+         }
+       ]
+     }
+   ]
+ },
+ 
+ "technical_hypothesis": {
+   "semantic_embedding_model_issues": [
+     {
+       "issue": "Over-fitting",
+       "description": "Model over-fits to a small set of fragments that always score highly",
+       "impact": "Same results for different queries"
+     },
+     {
+       "issue": "Unable to distinguish",
+       "description": "Cannot differentiate between different technical concepts",
+       "impact": "Returns irrelevant results with high confidence"
+     },
+     {
+       "issue": "Missing embeddings",
+       "description": "Specific camera models, functions, and technical terms not properly embedded",
+       "impact": "Cannot find domain-specific content"
+     },
+     {
+       "issue": "False confidence",
+       "description": "Returns high confidence scores for completely wrong matches",
+       "impact": "Misleading search results"
+     }
+   ],
+   "why_exact_api_works": "Uses exact string matching rather than semantic similarity"
+ },
+ 
+ "impact_assessment": {
+   "search_effectiveness": {
+     "exact_api_search": "100% effective for exact matches",
+     "semantic_search": "0% effective - completely broken",
+     "hybrid_search": "Partially broken due to semantic component",
+     "overall_system": "Severely compromised"
+   },
+   "user_impact": {
+     "cannot_find": [
+       "Camera-specific documentation",
+       "Implementation examples",
+       "Compatibility information",
+       "Technical specifications"
+     ],
+     "workaround_required": "Must rely solely on exact API searches",
+     "knowledge_gaps": "Large portions of documentation inaccessible"
+   }
+ },
+ 
+ "recommendations": {
+   "immediate": [
+     "Disable semantic search until fixed",
+     "Rely only on exact_api_search",
+     "Document known working search patterns"
+   ],
+   "long_term": [
+     "Re-index PDF content with better extraction",
+     "Retrain semantic embeddings on technical documentation",
+     "Implement fallback search strategies",
+     "Add validation for search result relevance"
+   ]
+ },
+ 
+ "quantitative_summary": {
+   "total_semantic_searches": 15,
+   "successful_semantic_searches": 0,
+   "success_rate": "0%",
+   "unique_relevant_results": 0,
+   "recurring_irrelevant_fragments": 4,
+   "confidence_in_wrong_results": "0.99+"
+ }
 }

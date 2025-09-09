@@ -82,8 +82,10 @@ class RAGSearch:
         self.index = self.pc.Index(self.index_name)
         
         # Initialize embedding model (same as used during indexing)
-        # Using CodeBERT to match the indexing model
-        self.embedding_model = CodeBERTEmbedder('microsoft/codebert-base')
+        # Using GTE-ModernBERT to match the new indexing model  
+        from sentence_transformers import SentenceTransformer
+        self.embedding_model = SentenceTransformer('Alibaba-NLP/gte-modernbert-base')
+        self.embedding_model = self.embedding_model.to('cpu')  # Force CPU to avoid memory issues
         
         # Initialize thread pool for CPU-bound embedding tasks
         self.executor = ThreadPoolExecutor(max_workers=2)
@@ -97,8 +99,8 @@ class RAGSearch:
     @lru_cache(maxsize=EMBEDDING_CACHE_SIZE)
     def _cached_embed(self, query: str) -> Tuple[float, ...]:
         """Cached embedding generation (tuple for hashability)."""
-        # CodeBERT returns numpy array, convert to list then tuple
-        embedding = self.embedding_model.encode(query)[0]  # Get first element since we pass single string
+        # GTE model via SentenceTransformer returns numpy array for single string
+        embedding = self.embedding_model.encode([query], convert_to_tensor=False, device='cpu')[0]
         return tuple(embedding.tolist())
     
     def embed_query(self, query: str) -> List[float]:
