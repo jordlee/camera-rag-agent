@@ -19,7 +19,31 @@ CHUNK_OVERLAP = 100
 BOILERPLATE_PATTERNS = [
     r"Information EditSDKInfo Contents Transfer GetDateFolderList GetContentsHandleList GetContentsDetailInfo ReleaseDateFolderList ReleaseContentsHandleList PullContentsFile GetContentsThumbnailImage Contents Transfer with remote control GetRemoteTransferCapturedDateList GetRemoteTransferContentsInfoList GetRemoteTransferContentsData GetRemoteTransferContentsDataFile ControlGetRemoteTransferContentsDataFile GetRemoteTransferContentsCompressedData GetRemoteTransferContentsCompressedDataFile",
     r"Camera Remote SDK API Reference \d+\.\d+\.\d+ documentation",
-    r"1\.13\.00, added new openMode parameter “RemoteTransfer”",
+    r"1\.13\.00, added new openMode parameter \"RemoteTransfer\"",
+    # Apache License patterns
+    r'"Work" shall mean the work of authorship.*?Object form.*?copyright notice',
+    r'Grant of Copyright License\..*?Object form',
+    r'Redistribution\..*?Object form.*?conditions:',
+    r'Object form\.',
+    # Generic license boilerplate
+    r'copyright license to reproduce.*?prepare Derivative Works',
+    r'Subject to the terms and conditions of this License',
+    # Page fragments and navigation
+    r'^\.\n\d+$',
+    r'^\d+$',
+    r'^- - - -?\n\d+$',
+    r'^}\n\d+$',
+    r'^\);\n}\n\d+$',
+]
+
+# Quality content validation patterns
+INVALID_CONTENT_PATTERNS = [
+    r'^Object form\.$',  # Exact match for license fragment
+    r'^ails:$',  # Broken function fragment
+    r'^\d{1,4}$',  # Pure page numbers
+    r'^[.\s\-\n]*$',  # Only punctuation and whitespace
+    r'^[{}();,\s\n]*$',  # Only code punctuation
+    r'^[\-\s]*\n\d+$',  # Dash fragments with numbers
 ]
 
 
@@ -27,6 +51,45 @@ def create_chunk_id(content: str, parent_id: str, index: int) -> str:
     """Creates a unique, repeatable ID for a chunk."""
     content_hash = hashlib.md5(content.encode()).hexdigest()[:8]
     return f"{parent_id}_{index}_{content_hash}"
+
+def is_quality_content(content: str) -> bool:
+    """
+    Validate if content meets quality standards for chunking.
+    
+    Returns False for:
+    - Content shorter than 20 characters
+    - Pure page numbers or fragments  
+    - License boilerplate text
+    - Broken function fragments
+    """
+    if not content or len(content.strip()) < 20:
+        return False
+    
+    content_stripped = content.strip()
+    
+    # Check against invalid patterns
+    for pattern in INVALID_CONTENT_PATTERNS:
+        if re.match(pattern, content_stripped, re.MULTILINE | re.DOTALL):
+            return False
+    
+    # Additional quality checks
+    # Check if content is mostly non-alphanumeric (fragments)
+    alphanumeric_chars = sum(1 for c in content_stripped if c.isalnum())
+    if len(content_stripped) > 0 and alphanumeric_chars / len(content_stripped) < 0.3:
+        return False
+    
+    # Check for Apache License specific text
+    license_indicators = [
+        'Object form',
+        'copyright license to reproduce',
+        'Grant of Copyright License',
+        'Subject to the terms and conditions of this License'
+    ]
+    for indicator in license_indicators:
+        if indicator in content:
+            return False
+    
+    return True
 
 def should_split_chunk(metadata: dict, content_size: int) -> bool:
     """
@@ -233,24 +296,43 @@ def add_sdk_metadata(chunk_metadata: dict, content: str, member_name: str = None
 def split_content(text: str, parent_id: str) -> list[dict]:
     """
     Splits content using a sliding window with overlap.
+    Now includes quality filtering to remove problematic content.
     """
+    # Clean boilerplate patterns first
     cleaned_text = text
     for pattern in BOILERPLATE_PATTERNS:
-        cleaned_text = re.sub(pattern, '', cleaned_text, flags=re.IGNORECASE).strip()
+        cleaned_text = re.sub(pattern, '', cleaned_text, flags=re.IGNORECASE | re.DOTALL).strip()
     
-    if not cleaned_text or len(cleaned_text) < 50:
+    # Basic length check
+    if not cleaned_text or len(cleaned_text) < 20:
+        return []
+
+    # Quality check on the entire text
+    if not is_quality_content(cleaned_text):
         return []
 
     chunks = []
     start = 0
     while start < len(cleaned_text):
         end = start + CHUNK_SIZE
-        chunk_content = cleaned_text[start:end]
+        chunk_content = cleaned_text[start:end].strip()
         
-        chunks.append({"id": create_chunk_id(chunk_content, parent_id, len(chunks)), "content": chunk_content})
+        # Apply quality filter to each chunk
+        if is_quality_content(chunk_content):
+            chunks.append({
+                "id": create_chunk_id(chunk_content, parent_id, len(chunks)), 
+                "content": chunk_content
+            })
+        else:
+            # Skip this chunk but continue processing (might be a bad fragment in otherwise good content)
+            pass
         
         start += CHUNK_SIZE - CHUNK_OVERLAP
         
+        # Safety break if we're not making progress
+        if start >= len(cleaned_text):
+            break
+    
     return chunks
 
 def chunk_api_file(data: dict) -> list:

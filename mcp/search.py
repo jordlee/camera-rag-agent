@@ -5,11 +5,13 @@ import re
 import time
 import asyncio
 import logging
+import torch
+import numpy as np
 from typing import List, Dict, Any, Optional, Tuple
 from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
 from pinecone import Pinecone
-from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer, AutoModel
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -22,6 +24,49 @@ MAX_EMBEDDING_TIME = 3.0  # Maximum seconds for embedding operation
 BATCH_SIZE = 10  # Process queries in small batches
 KEEPALIVE_INTERVAL = 2.0  # Send keepalive every 2 seconds
 EMBEDDING_CACHE_SIZE = 100  # LRU cache size for embeddings
+
+class CodeBERTEmbedder:
+    """Wrapper for CodeBERT model to generate embeddings for code."""
+    
+    def __init__(self, model_name="microsoft/codebert-base"):
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model = AutoModel.from_pretrained(model_name).to(self.device)
+        self.model.eval()
+    
+    def encode(self, texts, batch_size=32, show_progress_bar=False, normalize_embeddings=True):
+        """Generate embeddings for a list of texts using CodeBERT."""
+        # Handle single string input
+        if isinstance(texts, str):
+            texts = [texts]
+        
+        embeddings = []
+        
+        for i in range(0, len(texts), batch_size):
+            batch_texts = texts[i:i + batch_size]
+            
+            # Tokenize with truncation and padding
+            inputs = self.tokenizer(
+                batch_texts,
+                padding=True,
+                truncation=True,
+                max_length=512,
+                return_tensors="pt"
+            ).to(self.device)
+            
+            # Generate embeddings
+            with torch.no_grad():
+                outputs = self.model(**inputs)
+                # Use CLS token embedding as the sentence embedding
+                batch_embeddings = outputs.last_hidden_state[:, 0, :].cpu().numpy()
+            
+            if normalize_embeddings:
+                # L2 normalize embeddings
+                batch_embeddings = batch_embeddings / np.linalg.norm(batch_embeddings, axis=1, keepdims=True)
+            
+            embeddings.extend(batch_embeddings)
+        
+        return np.array(embeddings)
 
 class RAGSearch:
     def __init__(self):
@@ -37,7 +82,8 @@ class RAGSearch:
         self.index = self.pc.Index(self.index_name)
         
         # Initialize embedding model (same as used during indexing)
-        self.embedding_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+        # Using CodeBERT to match the indexing model
+        self.embedding_model = CodeBERTEmbedder('microsoft/codebert-base')
         
         # Initialize thread pool for CPU-bound embedding tasks
         self.executor = ThreadPoolExecutor(max_workers=2)
@@ -51,7 +97,9 @@ class RAGSearch:
     @lru_cache(maxsize=EMBEDDING_CACHE_SIZE)
     def _cached_embed(self, query: str) -> Tuple[float, ...]:
         """Cached embedding generation (tuple for hashability)."""
-        return tuple(self.embedding_model.encode(query).tolist())
+        # CodeBERT returns numpy array, convert to list then tuple
+        embedding = self.embedding_model.encode(query)[0]  # Get first element since we pass single string
+        return tuple(embedding.tolist())
     
     def embed_query(self, query: str) -> List[float]:
         """Generate embedding for a query string with caching."""
@@ -370,7 +418,7 @@ class RAGSearch:
             for match in results.get('matches', []):
                 result = {
                     'id': match['id'],
-                    'score': 1.0,  # Set high relevance for exact matches
+                    'score': match['score'],  # Use actual Pinecone score
                     'content': match['metadata'].get('content', ''),
                     'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
                 }
@@ -401,7 +449,7 @@ class RAGSearch:
             for match in results.get('matches', []):
                 result = {
                     'id': match['id'],
-                    'score': 1.0,  # High relevance for exact matches
+                    'score': match['score'],  # Use actual Pinecone score
                     'content': match['metadata'].get('content', ''),
                     'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
                 }
@@ -432,7 +480,7 @@ class RAGSearch:
             for match in results.get('matches', []):
                 result = {
                     'id': match['id'],
-                    'score': 1.0,  # High relevance for exact matches
+                    'score': match['score'],  # Use actual Pinecone score
                     'content': match['metadata'].get('content', ''),
                     'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
                 }
@@ -630,31 +678,23 @@ class RAGSearch:
                               top_k: int, 
                               intent_context: Dict,
                               progress_callback=None) -> Dict[str, List[Dict[str, Any]]]:
-        """Run multiple search strategies in parallel using expanded query."""
+        """Run simplified search strategy - just semantic search with optional filtering."""
         search_tasks = {}
         
-        # Strategy 1: Enhanced semantic search with expanded query
-        search_tasks["semantic_expanded"] = self.search_async(query, top_k//2)
+        # Primary strategy: Simple semantic search with the expanded query
+        search_tasks["semantic"] = self.search_async(query, top_k)
         
-        # Strategy 2: Original query search (for comparison/fallback)
-        original_query = intent_context.get("original_query", query)
-        if original_query != query:
-            search_tasks["semantic_original"] = self.search_async(original_query, top_k//3)
-        
-        # Strategy 3: Content-type specific searches based on semantic categories
+        # Optional: If we have a clear category, also do a filtered search
         semantic_categories = intent_context.get("semantic_categories", [])
-        if semantic_categories:
+        if semantic_categories and len(semantic_categories) > 0:
             primary_category = semantic_categories[0]
             content_type = self._map_category_to_content_type(primary_category)
             if content_type:
-                search_tasks[f"category_{primary_category}"] = self.search_async(
-                    query, top_k//3, content_type_filter=content_type
+                search_tasks[f"filtered_{content_type}"] = self.search_async(
+                    query, top_k//2, content_type_filter=content_type
                 )
         
-        # Strategy 4: Keyword-based search (fallback)
-        search_tasks["keyword"] = self._keyword_search_async(query, top_k//3)
-        
-        # Run all searches in parallel
+        # Run searches (simplified - fewer parallel searches)
         results = {}
         try:
             search_results = await asyncio.gather(
@@ -706,72 +746,54 @@ class RAGSearch:
     
     def _fuse_and_rank_results(self, 
                               search_results: Dict[str, List[Dict[str, Any]]], 
-                              intent_context: Dict,
-                              query: str,
+                              intent_context: Dict,  # Keep for compatibility
+                              query: str,  # Keep for compatibility
                               top_k: int) -> List[Dict[str, Any]]:
         """
         Fuse results from multiple search strategies and re-rank them.
         
-        Uses weighted scoring based on:
-        1. Intent confidence
-        2. Search strategy reliability
-        3. Content relevance score
-        4. Result uniqueness
+        Now uses actual Pinecone scores without artificial boosting.
+        Applies minimum score threshold to filter out poor matches.
         """
-        # Strategy weights (higher = more trustworthy)
-        strategy_weights = {
-            "semantic_expanded": 1.0,   # Highest weight for LLM-expanded queries
-            "semantic_original": 0.8,   # High weight for original semantic search
-            "category_": 0.7,           # Good weight for category-specific search
-            "keyword": 0.4,             # Lower weight for keyword search
-            "fallback": 0.3             # Lowest weight for fallback
-        }
+        # Minimum score threshold - filter out poor matches
+        MIN_SCORE_THRESHOLD = 0.3
         
-        # Collect all unique results with weighted scores
+        # Collect all unique results, keeping the highest natural score
         scored_results = {}
         
         for strategy_name, results in search_results.items():
-            # Determine strategy weight
-            strategy_weight = strategy_weights.get(strategy_name, 0.5)
-            for partial_key in strategy_weights.keys():
-                if strategy_name.startswith(partial_key):
-                    strategy_weight = strategy_weights[partial_key]
-                    break
-            
             for result in results:
                 result_id = result.get('id', '')
                 if not result_id:
                     continue
                 
-                # Calculate composite score
+                # Use the actual Pinecone score
                 base_score = result.get('score', 0.0)
-                expansion_bonus = 0.0
                 
-                # Bonus for queries that benefited from expansion
-                if intent_context.get("expansion_successful", False):
-                    # Give slight bonus to results from expanded queries
-                    if strategy_name == "semantic_expanded":
-                        expansion_bonus = 0.1
+                # Filter out low-quality results
+                if base_score < MIN_SCORE_THRESHOLD:
+                    continue
                 
-                # Final weighted score
-                final_score = (base_score * strategy_weight) + expansion_bonus
-                
-                # Keep the highest scoring version of each result
-                if result_id not in scored_results or final_score > scored_results[result_id]['final_score']:
+                # Keep the highest scoring version of each result (no artificial boosting)
+                if result_id not in scored_results or base_score > scored_results[result_id]['score']:
                     scored_results[result_id] = {
                         **result,
-                        'final_score': final_score,
+                        'score': base_score,  # Use original score field
                         'strategy': strategy_name,
-                        'expansion_bonus': expansion_bonus,
-                        'strategy_weight': strategy_weight
+                        'original_score': base_score  # Track for debugging
                     }
         
-        # Sort by final score and return top results
+        # Sort by actual score and return top results
         ranked_results = sorted(
             scored_results.values(), 
-            key=lambda x: x['final_score'], 
+            key=lambda x: x['score'], 
             reverse=True
         )
+        
+        # Log if we filtered out many results
+        total_candidates = sum(len(results) for results in search_results.values())
+        if len(ranked_results) < total_candidates * 0.5:
+            logger.info(f"Filtered {total_candidates - len(ranked_results)} low-scoring results (below {MIN_SCORE_THRESHOLD})")
         
         return ranked_results
     
