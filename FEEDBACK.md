@@ -1,199 +1,210 @@
 {
- "project_title": "Sony Camera SDK RAG System: Critical Issues & Improvement Plan",
- "project_description": "MCP server with RAG system for Sony Camera Remote SDK documentation search. Currently has connection stability issues and poor semantic search performance that need immediate fixes.",
- 
- "current_system_overview": {
-   "technology_stack": [
-     "Python MCP server",
-     "FastAPI/Uvicorn backend", 
-     "Vector embeddings with microsoft/codebert-base",
-     "Railway cloud deployment",
-     "Multiple search tools: search_exact_api, search_hybrid, search_documentation"
-   ],
-   "strengths": [
-     "Excellent exact API search (100% success rate for known function names)",
-     "Rich metadata extraction (function names, error codes, compatibility tables)",
-     "Stable performance with controlled parameters (top_k=5, targeted queries)",
-     "Multiple content types: documentation text, code examples, tables"
-   ]
+ "test_report": {
+   "timestamp": "2025-09-09T00:02:30.490253",
+   "test_suite": "Sony Camera SDK RAG System - Phase 2 Validation",
+   "testing_session": "Critical Query Validation with Intent Analysis",
+   "overall_status": "FAILED - System Degraded with Programming Errors"
  },
 
- "critical_issues": {
-   "issue_1_connection_timeouts": {
-     "severity": "CRITICAL",
-     "description": "Embedding operations >7 seconds cause MCP connection timeouts and server crashes",
-     "evidence": "Batches: 100%|██████████| 1/1 [00:07<00:00, 7.31s/it] → Multiple rapid session terminations",
-     "impact": "Railway deployment becomes unresponsive, users lose connection during complex searches",
-     "root_cause": "Long-running embedding computations block event loop, exceed Railway timeout thresholds"
+ "tool_execution_results": {
+   "mcp_search_sdk": {
+     "status": "PARTIAL_SUCCESS",
+     "execution_time": "~3 seconds",
+     "response_received": true,
+     "primary_function": "FAILED",
+     "fallback_function": "WORKING",
+     "critical_error": {
+       "message": "LLM search failed: object NoneType can't be used in 'await' expression",
+       "type": "async_await_programming_error",
+       "impact": "Intent-based search completely broken"
+     },
+     "fallback_activated": true,
+     "semantic_performance": {
+       "score": 0.0535593033,
+       "accuracy": "POOR",
+       "improvement_from_baseline": "NONE",
+       "expected_api": "SCRSDK::Connect",
+       "actual_results": [
+         "CameraDevice::format_display_string_type",
+         "CameraDevice::OnNotifyRemoteFirmwareUpdateResult", 
+         "CameraDevice::OnWarning"
+       ],
+       "target_missed": true
+     }
    },
    
-   "issue_2_semantic_search_failure": {
-     "severity": "HIGH", 
-     "description": "Natural language queries have ~25% success rate vs 100% for exact API names",
-     "evidence": {
-       "failed_queries": [
-         "connect to camera → Found camera code, missed Connect API (score: 0.05)",
-         "save file location → Found video streaming, missed SetSaveInfo (score: 0.01)", 
-         "get camera settings → Found misc docs, missed GetDeviceProperties (score: 0.02)"
-       ]
-     },
-     "root_cause": "microsoft/codebert-base not specialized for API documentation, missing intent→API mapping"
-   },
-
-   "issue_3_table_parsing_corruption": {
-     "severity": "HIGH",
-     "description": "Compatibility tables show systematic data corruption with wrong camera compatibility",
-     "evidence": "ILX-LR1 should be compatible but consistently shows as not-compatible across all files",
-     "impact": "Developers get incorrect compatibility information for camera models",
-     "root_cause": "PDF extraction misaligns table columns during chunking process"
+   "mcp_search_with_intent_analysis": {
+     "status": "FAILED",
+     "execution_time": "TIMEOUT/HANGING",
+     "response_received": false,
+     "error_type": "tool_hanging_or_crashing",
+     "symptoms": [
+       "Tool call initiated but never returned",
+       "No error message received",
+       "Suggests infinite loop or crash during LLM processing"
+     ]
    }
  },
 
- "priority_tasks": [
-   {
-     "task_id": "TASK_1_FIX_TIMEOUTS",
-     "priority": "CRITICAL",
-     "timeline": "Week 1",
-     "title": "Implement Connection Timeout Prevention",
-     "description": "Fix 7+ second embedding operations causing MCP disconnections",
-     "technical_requirements": [
-       "Add async processing with progress updates for long operations",
-       "Implement connection keepalive during embedding computations", 
-       "Reduce batch processing time to <3 seconds per operation",
-       "Add graceful degradation for complex queries",
-       "Monitor memory usage and add resource limits"
-     ],
-     "implementation_options": [
-       {
-         "option": "async_streaming",
-         "code_pattern": "async def search_with_streaming(query): yield {'status': 'processing'}; for chunk in process_in_small_chunks(query): yield {'progress': chunk.completion_percent}; yield {'results': final_results}"
+ "critical_test_query_results": {
+   "query_1": {
+     "query": "connect to camera",
+     "expected_api": "SCRSDK::Connect",
+     "expected_category": "connection",
+     "success_criteria": "confidence > 0.7",
+     "actual_results": {
+       "mcp_search_sdk": {
+         "status": "FAILED",
+         "confidence_score": 0.0535593033,
+         "correct_api_found": false,
+         "improvement": "NO_CHANGE",
+         "vs_baseline": "Same poor performance as before improvements"
        },
-       {
-         "option": "keepalive_heartbeat", 
-         "code_pattern": "async def search_with_keepalive(query): keepalive_task = asyncio.create_task(heartbeat_every_2_seconds()); try: return await embedding_search(query); finally: keepalive_task.cancel()"
-       },
-       {
-         "option": "batch_size_limiting",
-         "code_pattern": "def limit_embedding_batch_size(max_time_per_batch=3.0): # Keep individual operations under Railway timeout threshold"
+       "mcp_search_with_intent_analysis": {
+         "status": "TOOL_FAILURE",
+         "error": "Tool hanging/timeout",
+         "confidence_score": "N/A",
+         "correct_api_found": "N/A"
        }
-     ],
-     "success_criteria": "0 crashes during normal operations, all queries complete in <5 seconds"
-   },
-
-   {
-     "task_id": "TASK_2_FIX_TABLE_PARSING", 
-     "priority": "HIGH",
-     "timeline": "Week 2",
-     "title": "Repair Table Data Extraction Accuracy",
-     "description": "Fix systematic corruption in compatibility table parsing",
-     "technical_requirements": [
-       "Implement table-specific parsing logic for PDF extraction",
-       "Add data validation for compatibility tables",
-       "Cross-reference multiple table instances for consistency", 
-       "Add confidence scores for structured data extraction"
-     ],
-     "success_criteria": "100% accuracy for camera compatibility tables, correct alignment of camera models with compatibility status"
-   },
-
-   {
-     "task_id": "TASK_3_IMPROVE_SEMANTIC_SEARCH",
-     "priority": "HIGH", 
-     "timeline": "Week 3",
-     "title": "Implement Multi-Modal Semantic Search",
-     "description": "Bridge gap between natural language queries and API function names",
-     "technical_requirements": [
-       "Create intent→API mapping for common developer workflows",
-       "Implement query expansion with technical synonyms",
-       "Add hierarchical search with fallbacks (semantic → keyword → fuzzy → suggestions)",
-       "Enhance embeddings with API metadata",
-       "Build evaluation framework with test cases"
-     ],
-     "semantic_search_architecture": {
-       "phase_1_intent_extraction": "Extract technical terms from natural language",
-       "phase_2_multi_modal_retrieval": "Run semantic + metadata + pattern + workflow searches in parallel", 
-       "phase_3_result_fusion": "Combine and rank results from multiple search modes"
-     },
-     "intent_mappings": {
-       "connect.*camera": ["SCRSDK::Connect", "EnumCameraObjects"],
-       "save.*focus.*position": ["CrDeviceProperty_ZoomAndFocusPosition_Save"],
-       "get.*camera.*settings": ["GetDeviceProperties", "GetSelectDeviceProperties"],
-       "save.*file.*location": ["SetSaveInfo"]
-     },
-     "success_criteria": ">80% accuracy for natural language queries, robust fallback suggestions"
-   },
-
-   {
-     "task_id": "TASK_4_API_AWARE_CHUNKING",
-     "priority": "MEDIUM",
-     "timeline": "Week 4", 
-     "title": "Implement Context-Preserving Chunking",
-     "description": "Keep complete API definitions together during document processing",
-     "technical_requirements": [
-       "Detect API boundaries (function signatures, parameters, examples)",
-       "Ensure complete API definitions stay in single chunks",
-       "Generate semantic tags for better searchability",
-       "Maintain cross-references between related functions"
-     ],
-     "success_criteria": "Complete API context preserved, improved semantic signal strength"
-   }
- ],
-
- "testing_framework": {
-   "semantic_test_cases": [
-     {"query": "how do I connect to a camera", "expected_api": "SCRSDK::Connect"},
-     {"query": "connect camera", "expected_api": "SCRSDK::Connect"},
-     {"query": "save image location", "expected_api": "SetSaveInfo"},
-     {"query": "set file save path", "expected_api": "SetSaveInfo"},
-     {"query": "get camera settings", "expected_api": "GetDeviceProperties"},
-     {"query": "save focus position", "expected_api": "CrDeviceProperty_ZoomAndFocusPosition_Save"},
-     {"query": "store zoom preset", "expected_api": "CrDeviceProperty_ZoomAndFocusPosition_Save"}
-   ],
-   "performance_benchmarks": {
-     "connection_stability": "0 crashes during normal operations",
-     "search_accuracy": ">80% success rate for natural language queries", 
-     "response_time": "<5 seconds for all operations",
-     "data_quality": "100% accuracy for compatibility tables"
+     }
    }
  },
 
- "deployment_considerations": {
-   "railway_constraints": [
-     "Connection timeout thresholds (~5-7 seconds)",
-     "Memory limitations requiring efficient batch processing",
-     "Need for graceful degradation under resource pressure"
+ "technical_issues_identified": {
+   "programming_errors": [
+     {
+       "error_type": "async_await_bug",
+       "location": "LLM integration code",
+       "message": "object NoneType can't be used in 'await' expression",
+       "description": "Attempting to await a None value instead of valid async operation",
+       "severity": "CRITICAL",
+       "impact": "Breaks entire intent-based search system"
+     }
    ],
-   "monitoring_requirements": [
-     "Track embedding operation duration",
-     "Monitor memory usage during search operations",
-     "Log semantic search accuracy metrics",
-     "Alert on connection timeout patterns"
+   
+   "infrastructure_issues": [
+     {
+       "issue": "intent_analysis_tool_hanging",
+       "description": "mcp:search_with_intent_analysis never returns results",
+       "possible_causes": [
+         "Infinite loop in LLM processing",
+         "Unhandled exception causing crash",
+         "Timeout in async operations",
+         "Resource exhaustion during model inference"
+       ],
+       "severity": "HIGH"
+     }
+   ],
+
+   "system_architecture_issues": [
+     {
+       "issue": "llm_integration_unstable",
+       "description": "LLM-based query expansion causing system instability",
+       "evidence": [
+         "Async/await errors",
+         "Tool timeouts",
+         "Fallback system activation"
+       ]
+     }
    ]
  },
 
- "success_metrics": {
-   "immediate_goals": [
-     "Eliminate server crashes during search operations",
-     "Fix data corruption in compatibility tables", 
-     "Achieve >80% accuracy for common developer queries"
+ "system_status_assessment": {
+   "connection_stability": {
+     "status": "WORKING",
+     "performance": "GOOD", 
+     "notes": "No crashes or timeouts during basic operations"
+   },
+   
+   "basic_search_functionality": {
+     "status": "WORKING",
+     "performance": "POOR_ACCURACY",
+     "notes": "Embedding-based search works but semantic accuracy remains low"
+   },
+
+   "intent_based_search": {
+     "status": "BROKEN",
+     "performance": "FAILED",
+     "notes": "Programming errors prevent LLM integration from working"
+   },
+
+   "fallback_mechanisms": {
+     "status": "WORKING", 
+     "performance": "GOOD",
+     "notes": "System gracefully falls back to basic search when LLM fails"
+   }
+ },
+
+ "comparison_with_baseline": {
+   "phase_1_baseline": {
+     "connection_stability": "FIXED (was crashing, now stable)",
+     "semantic_accuracy": "NO_IMPROVEMENT (still ~0.05 confidence)",
+     "tool_reliability": "DEGRADED (new tools broken)"
+   },
+   
+   "expected_phase_2_goals": {
+     "semantic_accuracy_target": "> 0.7 confidence",
+     "actual_result": "0.0535593033 confidence", 
+     "achievement": "FAILED - No improvement",
+     "intent_analysis_target": "Working LLM-based query expansion",
+     "actual_result": "Broken due to programming errors",
+     "achievement": "FAILED - Tool non-functional"
+   }
+ },
+
+ "immediate_action_items": {
+   "critical_fixes": [
+     {
+       "priority": "P0",
+       "task": "Fix async/await bug in LLM integration",
+       "description": "Resolve 'NoneType can't be used in await' error",
+       "estimated_effort": "1-2 hours"
+     },
+     {
+       "priority": "P0", 
+       "task": "Debug hanging intent analysis tool",
+       "description": "Identify why mcp:search_with_intent_analysis never returns",
+       "estimated_effort": "2-4 hours"
+     }
    ],
-   "longer_term_goals": [
-     "Handle all major Sony SDK workflows via natural language",
-     "Provide helpful suggestions even when exact matches fail",
-     "Maintain sub-3 second response times under load"
+
+   "validation_tasks": [
+     {
+       "priority": "P1",
+       "task": "Test LLM integration separately",
+       "description": "Validate LLM prompt and model work outside MCP context"
+     },
+     {
+       "priority": "P1",
+       "task": "Add comprehensive error handling",
+       "description": "Prevent LLM failures from breaking entire system"
+     }
    ]
  },
 
- "file_structure_context": {
-   "likely_files_to_modify": [
-     "search.py (embedding and retrieval logic)",
-     "mcp_server.py (connection handling and timeouts)",
-     "table_parser.py (PDF extraction and table processing)",
-     "semantic_search.py (query understanding and intent mapping)"
-   ],
-   "new_files_to_create": [
-     "intent_mapper.py (natural language → API mapping)",
-     "connection_manager.py (async processing and keepalive)",
-     "evaluation.py (semantic search test framework)"
+ "recommended_rollback_strategy": {
+   "if_fixes_take_too_long": [
+     "Revert to Phase 1 stable version",
+     "Maintain connection stability improvements",
+     "Remove broken LLM integration",
+     "Focus on simpler semantic improvements first"
    ]
+ },
+
+ "next_test_plan": {
+   "after_fixes": [
+     "Re-test critical query: 'connect to camera'",
+     "Test remaining critical queries: 'save file location', 'get camera settings'",
+     "Validate intent analysis provides useful explanations",
+     "Confirm confidence scores > 0.7 for clear queries",
+     "Test natural language queries from test suite"
+   ]
+ },
+
+ "confidence_assessment": {
+   "current_system_reliability": "LOW",
+   "readiness_for_production": "NO", 
+   "estimated_time_to_working_state": "4-8 hours of debugging",
+   "risk_level": "HIGH - New features broken, system dependent on fallbacks"
  }
 }

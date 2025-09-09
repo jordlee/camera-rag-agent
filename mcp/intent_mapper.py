@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 LLM-based intent mapping system for Sony Camera SDK queries.
-Uses Phi-3-mini for natural language understanding with semantic similarity fallback.
+Uses TinyLlama for natural language understanding with semantic similarity fallback.
 """
 
 import os
@@ -40,7 +40,7 @@ class IntentMatch:
         return asdict(self)
 
 class LLMIntentMapper:
-    """LLM-based intent mapping using Phi-3-mini for natural language understanding."""
+    """LLM-based intent mapping using TinyLlama for natural language understanding."""
     
     def __init__(self, use_gpu: bool = False):
         """
@@ -61,7 +61,7 @@ class LLMIntentMapper:
         logger.info(f"Intent mapper initialized (device: {self.device}, LLM: {HAS_TRANSFORMERS})")
     
     def _load_llm_model(self):
-        """Load Phi-3-mini model for natural language understanding."""
+        """Load TinyLlama model for natural language understanding."""
         if not HAS_TRANSFORMERS:
             self.llm_model = None
             self.llm_tokenizer = None

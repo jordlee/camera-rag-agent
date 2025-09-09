@@ -55,11 +55,15 @@ async def search_sdk(query: str, top_k: int = 5) -> str:
         return json.dumps({"error": "RAG search system not initialized"})
     
     try:
+        # Create async progress callback
+        async def progress_logger(p):
+            logger.info(f"Search progress: {p}")
+        
         # Use the new intelligent search with intent mapping
         results = await rag_search.search_with_intent(
             query, 
             top_k=top_k,
-            progress_callback=lambda p: logger.info(f"Search progress: {p}")
+            progress_callback=progress_logger
         )
         
         # Add timestamp
