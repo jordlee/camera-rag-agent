@@ -319,10 +319,25 @@ async def lifespan(app: Starlette):
         # Initialize RAG search
         try:
             logger.info("Initializing RAG search system...")
-            rag_search = RAGSearch()
-            logger.info("RAG search system initialized successfully!")
+            
+            # Check environment variables first
+            import os
+            pinecone_key = os.getenv("PINECONE_API_KEY")
+            if not pinecone_key:
+                logger.error("PINECONE_API_KEY environment variable not set")
+                rag_search = None
+            else:
+                logger.info("PINECONE_API_KEY found, proceeding with RAG initialization...")
+                rag_search = RAGSearch()
+                logger.info("RAG search system initialized successfully!")
+                
+        except ImportError as e:
+            logger.error(f"Missing dependency for RAG search: {e}")
+            rag_search = None
         except Exception as e:
-            logger.exception("Failed to initialize RAG search")
+            logger.exception(f"Failed to initialize RAG search: {e}")
+            logger.error(f"Error type: {type(e).__name__}")
+            logger.error(f"Error details: {str(e)}")
             rag_search = None
         
         # Start keepalive task

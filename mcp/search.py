@@ -12,6 +12,7 @@ from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
 from pinecone import Pinecone
 from transformers import AutoTokenizer, AutoModel
+from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -83,9 +84,14 @@ class RAGSearch:
         
         # Initialize embedding model (same as used during indexing)
         # Using GTE-ModernBERT to match the new indexing model  
-        from sentence_transformers import SentenceTransformer
-        self.embedding_model = SentenceTransformer('Alibaba-NLP/gte-modernbert-base')
-        self.embedding_model = self.embedding_model.to('cpu')  # Force CPU to avoid memory issues
+        try:
+            logger.info("Loading GTE-ModernBERT embedding model...")
+            self.embedding_model = SentenceTransformer('Alibaba-NLP/gte-modernbert-base')
+            self.embedding_model = self.embedding_model.to('cpu')  # Force CPU to avoid memory issues
+            logger.info("GTE-ModernBERT model loaded successfully")
+        except Exception as e:
+            logger.error(f"Failed to load GTE embedding model: {e}")
+            raise RuntimeError(f"Could not initialize embedding model: {e}")
         
         # Initialize thread pool for CPU-bound embedding tasks
         self.executor = ThreadPoolExecutor(max_workers=2)
