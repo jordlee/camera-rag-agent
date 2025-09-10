@@ -7,6 +7,8 @@ import asyncio
 import logging
 import torch
 import numpy as np
+import psutil
+import traceback
 from typing import List, Dict, Any, Optional, Tuple
 from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
@@ -72,35 +74,109 @@ class CodeBERTEmbedder:
 class RAGSearch:
     def __init__(self):
         """Initialize the RAG search system."""
+        logger.info("=== Starting RAG Search Initialization ===")
+        
+        # Log system resources
+        try:
+            memory = psutil.virtual_memory()
+            disk = psutil.disk_usage('/')
+            logger.info(f"System Resources - RAM: {memory.total // (1024**3)}GB (Available: {memory.available // (1024**3)}GB), "
+                       f"Disk: {disk.total // (1024**3)}GB (Free: {disk.free // (1024**3)}GB)")
+        except Exception as e:
+            logger.warning(f"Could not get system resources: {e}")
+        
+        logger.info("Step 1: Checking environment variables...")
         self.pinecone_api_key = os.getenv("PINECONE_API_KEY")
         self.index_name = os.getenv("PINECONE_INDEX_NAME", "sdk-rag-system")
         
         if not self.pinecone_api_key:
+            logger.error("PINECONE_API_KEY environment variable not set")
             raise ValueError("PINECONE_API_KEY environment variable not set")
+        logger.info(f"Environment variables OK - Index name: {self.index_name}")
         
-        # Initialize Pinecone
-        self.pc = Pinecone(api_key=self.pinecone_api_key)
-        self.index = self.pc.Index(self.index_name)
+        logger.info("Step 2: Initializing Pinecone connection...")
+        try:
+            self.pc = Pinecone(api_key=self.pinecone_api_key)
+            self.index = self.pc.Index(self.index_name)
+            logger.info("Pinecone connection established successfully")
+        except Exception as e:
+            logger.error(f"Failed to connect to Pinecone: {e}")
+            logger.error(f"Pinecone error traceback: {traceback.format_exc()}")
+            raise
         
+        logger.info("Step 3: Loading GTE-ModernBERT embedding model...")
         # Initialize embedding model (same as used during indexing)
         # Using GTE-ModernBERT to match the new indexing model  
         try:
-            logger.info("Loading GTE-ModernBERT embedding model...")
+            start_time = time.time()
+            logger.info("Attempting to load SentenceTransformer('Alibaba-NLP/gte-modernbert-base')...")
+            
+            # Check if model is cached locally
+            try:
+                cache_dir = os.path.expanduser("~/.cache/huggingface/hub")
+                logger.info(f"HuggingFace cache directory: {cache_dir}")
+                if os.path.exists(cache_dir):
+                    cache_contents = os.listdir(cache_dir)[:5]  # First 5 items
+                    logger.info(f"Cache contents (first 5): {cache_contents}")
+                else:
+                    logger.info("HuggingFace cache directory does not exist")
+            except Exception as cache_e:
+                logger.warning(f"Could not check cache: {cache_e}")
+            
+            logger.info("Creating SentenceTransformer instance...")
             self.embedding_model = SentenceTransformer('Alibaba-NLP/gte-modernbert-base')
+            
+            load_time = time.time() - start_time
+            logger.info(f"Model instance created in {load_time:.2f}s, moving to CPU...")
+            
             self.embedding_model = self.embedding_model.to('cpu')  # Force CPU to avoid memory issues
-            logger.info("GTE-ModernBERT model loaded successfully")
+            
+            total_time = time.time() - start_time
+            logger.info(f"GTE-ModernBERT model loaded successfully in {total_time:.2f}s")
+            
+            # Test the model with a simple query
+            logger.info("Testing model with simple query...")
+            test_embedding = self.embedding_model.encode("test query")
+            logger.info(f"Test embedding shape: {test_embedding.shape}, type: {type(test_embedding)}")
+            
         except Exception as e:
             logger.error(f"Failed to load GTE embedding model: {e}")
-            raise RuntimeError(f"Could not initialize embedding model: {e}")
+            logger.error(f"Full error traceback: {traceback.format_exc()}")
+            logger.error(f"Error type: {type(e).__name__}")
+            
+            # Log more details about the specific error
+            if hasattr(e, 'args') and e.args:
+                logger.error(f"Error args: {e.args}")
+            
+            # Check if it's a network/download issue
+            if "connection" in str(e).lower() or "timeout" in str(e).lower() or "download" in str(e).lower():
+                logger.error("This appears to be a network/download issue")
+            elif "memory" in str(e).lower() or "cuda" in str(e).lower():
+                logger.error("This appears to be a memory/GPU issue")
+            elif "not found" in str(e).lower() or "repository" in str(e).lower():
+                logger.error("This appears to be a model repository issue")
+            
+            raise RuntimeError(f"Could not initialize GTE-ModernBERT embedding model: {e}")
         
+        logger.info("Step 4: Setting up thread pool...")
         # Initialize thread pool for CPU-bound embedding tasks
         self.executor = ThreadPoolExecutor(max_workers=2)
         
+        logger.info("Step 5: Initializing performance tracking...")
         # Performance tracking
         self.last_embedding_time = 0
         self.total_embeddings_processed = 0
         
-        logger.info(f"RAG Search initialized with index: {self.index_name}")
+        logger.info(f"Step 6: RAG Search initialization completed successfully!")
+        logger.info(f"✅ RAG Search ready - Index: {self.index_name}, Model: GTE-ModernBERT")
+        logger.info("=== RAG Search Initialization Complete ===")
+        
+        # Log final memory state
+        try:
+            memory = psutil.virtual_memory()
+            logger.info(f"Post-initialization RAM usage: {memory.percent}% ({memory.used // (1024**3)}GB used)")
+        except Exception as e:
+            logger.warning(f"Could not get final memory stats: {e}")
     
     @lru_cache(maxsize=EMBEDDING_CACHE_SIZE)
     def _cached_embed(self, query: str) -> Tuple[float, ...]:
