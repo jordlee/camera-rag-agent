@@ -6,7 +6,7 @@ python-dotenv==1.1.1
 pydantic==2.11.7
 httpx==0.28.1
 starlette
-psutil==6.1.2
+psutil==6.1.1
 
 # Vector DB and ML
 pinecone==7.3.0
