@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/data/raw_sdk_docs/sdk_source",
-                "${workspaceFolder}/data/raw_sdk_docs/sdk_source/CRSDK"
+                "${workspaceFolder}/data/raw_sdk_docs/sdk_source/V1.14.00/CRSDK",
+                "${workspaceFolder}/data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

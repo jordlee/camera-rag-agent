@@ -85,34 +85,133 @@ def extract_from_pdf(pdf_path, output_dir, sdk_version):
                     num_cols = len(raw_table[0])
 
                     # --- ADVANCED HEADER PROCESSING ---
-                    # 1. Horizontally propagate headers that span multiple columns
-                    propagated_headers = []
-                    for h_row in header_rows:
-                        # Ensure row is padded to the full table width before processing
-                        filled_row = h_row[:] + [None] * (num_cols - len(h_row))
-                        last_val = ""
-                        for col_idx in range(num_cols):
-                            cell_val = filled_row[col_idx]
-                            if cell_val is not None and cell_val.strip() != "":
-                                last_val = cell_val
-                            else:
-                                filled_row[col_idx] = last_val
-                        propagated_headers.append(filled_row)
-                    
-                    # 2. Vertically combine the propagated headers
+                    # Special handling for multi-line camera model headers
+                    # These appear as separate cells but are actually one camera name split across lines
                     final_headers = []
-                    for col_idx in range(num_cols):
-                        parts = []
-                        for row in propagated_headers:
-                            if col_idx < len(row) and row[col_idx]:
-                                cleaned_part = str(row[col_idx]).replace('\n', ' ').strip()
-                                if cleaned_part not in parts: # Avoid duplicating parent headers
-                                    parts.append(cleaned_part)
-                        
-                        full_header = " ".join(parts)
-                        # Normalize names like "ILX- LR1" to "ILX-LR1"
-                        full_header = re.sub(r'\s+', '', full_header)
-                        final_headers.append(full_header)
+
+                    # First, reconstruct camera names from multi-line cells in header rows
+                    if header_row_count > 0:
+                        # Combine all header rows to reconstruct full names
+                        for col_idx in range(num_cols):
+                            header_parts = []
+                            for h_row in header_rows:
+                                if col_idx < len(h_row) and h_row[col_idx] is not None:
+                                    part = str(h_row[col_idx]).strip()
+                                    if part:
+                                        header_parts.append(part)
+
+                            if header_parts:
+                                # Join parts and clean up newlines
+                                full_header = "".join(header_parts).replace('\n', '')
+                                # Clean up spaces in camera model names
+                                if any(model in full_header for model in ['ILX', 'ILCE', 'ILME', 'ZV', 'HXR', 'PXW', 'MPC']):
+                                    full_header = full_header.replace(' ', '')
+                            else:
+                                full_header = ""
+
+                            final_headers.append(full_header)
+
+                    # Extract only the actual data columns, preserving real values
+                    # Camera data appears every 3rd column starting from position 5: 5, 8, 11, 14, etc.
+                    # Positions 6, 7, 9, 10, 12, 13, etc. are None artifacts from multi-line header splitting
+
+                    merged_headers = []
+                    merged_data_rows = []
+
+                    # Build correct headers: first 4 columns (No., APIs, Outline, Mode)
+                    for i in range(min(4, len(final_headers))):
+                        merged_headers.append(final_headers[i])
+
+                    # Detect column pattern: consecutive vs every-3rd
+                    camera_positions = []
+                    camera_headers_found = []
+
+                    # Check if cameras are in consecutive positions starting from 4
+                    # Allow for gaps but stop after a significant gap (more than 3 empty columns)
+                    consecutive_cameras = []
+                    last_camera_pos = -1
+                    gap_count = 0
+
+                    for pos in range(4, len(final_headers)):
+                        header = final_headers[pos]
+                        if header and header.strip() and any(model in header for model in ['ILX', 'ILCE', 'ILME', 'ZV', 'HXR', 'PXW', 'MPC', 'DSC']):
+                            consecutive_cameras.append((pos, header))
+                            last_camera_pos = pos
+                            gap_count = 0  # Reset gap counter
+                        elif len(consecutive_cameras) > 0:
+                            gap_count += 1
+                            # Stop if we hit a significant gap (more than 3 positions) after finding cameras
+                            if gap_count > 3:
+                                break
+
+                    # Check if cameras are in every-3rd positions - try different starting positions
+                    every_third_cameras = []
+
+                    # Try starting from positions 5, 6, 7, 8 to find the best every-3rd pattern
+                    best_every_third = []
+                    for start_pos in range(5, 9):
+                        current_pattern = []
+                        for pos in range(start_pos, len(final_headers), 3):
+                            if pos < len(final_headers):
+                                header = final_headers[pos]
+                                if header and header.strip() and any(model in header for model in ['ILX', 'ILCE', 'ILME', 'ZV', 'HXR', 'PXW', 'MPC', 'DSC']):
+                                    current_pattern.append((pos, header))
+
+                        # Keep the pattern that finds the most cameras
+                        if len(current_pattern) > len(best_every_third):
+                            best_every_third = current_pattern
+
+                    every_third_cameras = best_every_third
+
+                    # Choose the pattern that found more cameras
+                    if len(consecutive_cameras) > len(every_third_cameras):
+                        camera_headers_found = consecutive_cameras
+                        print(f"  Using consecutive column pattern: found {len(consecutive_cameras)} cameras")
+                    else:
+                        camera_headers_found = every_third_cameras
+                        print(f"  Using every-3rd column pattern: found {len(every_third_cameras)} cameras")
+
+                    # Add camera headers and positions
+                    for pos, header in camera_headers_found:
+                        merged_headers.append(header)
+                        camera_positions.append(pos)
+
+                    # Determine which pattern to use for data extraction
+                    using_consecutive_pattern = len(consecutive_cameras) > len(every_third_cameras)
+
+                    # Extract data using the same pattern
+                    for row in data_rows:
+                        merged_row = []
+
+                        # First 4 columns (No., APIs, Outline, Mode)
+                        for i in range(min(4, len(row))):
+                            merged_row.append(row[i] if row[i] is not None else "")
+
+                        # Camera column data extraction - pattern depends on how headers were found
+                        for header_pos in camera_positions:
+                            # For consecutive pattern, data is at the same position as header
+                            # For every-3rd pattern, data is one position before the header
+                            if using_consecutive_pattern:
+                                # Consecutive pattern: data at same position as header
+                                data_pos = header_pos
+                            else:
+                                # Every-3rd pattern: data one position before header
+                                data_pos = header_pos - 1
+
+                            if data_pos < len(row):
+                                value = row[data_pos]
+                                # Preserve the actual value: "" for compatible, "-" for incompatible, None becomes ""
+                                if value is None:
+                                    merged_row.append("")
+                                else:
+                                    merged_row.append(value)
+                            else:
+                                merged_row.append("")
+
+                        merged_data_rows.append(merged_row)
+
+                    final_headers = merged_headers
+                    data_rows = merged_data_rows
                     # --- END ADVANCED HEADER PROCESSING ---
 
                     df = pd.DataFrame(data_rows, columns=final_headers)

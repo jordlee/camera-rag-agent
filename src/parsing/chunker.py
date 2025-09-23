@@ -527,39 +527,44 @@ def chunk_structured_table_file(data: dict) -> list:
         table_data = table.get("data", [])
         notes = table.get("notes", "") # Get the notes for this table, if they exist
         
-        header_str = " | ".join(str(h) for h in headers if h is not None)
+        header_str = " | ".join(str(h) for h in headers if h is not None and str(h).strip() != '')
         
         for row_index, row in enumerate(table_data):
             # Replace YES/NO and other indicators with context-aware semantic equivalents
             processed_row = []
             for col_index, cell in enumerate(row):
                 cell_str = str(cell).strip()
-                
+
                 # Get column header to determine context
                 col_header = headers[col_index] if col_index < len(headers) else ""
-                
+
+                # Skip empty header columns entirely - they're artifacts from PDF extraction
+                if col_header.strip() == '':
+                    continue
+
                 # Context-aware replacements
-                if cell_str in ['', '✔']:  # Empty or checkmark
-                    if col_header == 'Mode':
-                        processed_row.append('not-applicable')  # For Mode column
-                    else:
-                        processed_row.append('is-compatible')  # For camera model columns
-                elif cell_str in ['\\-', '\\\\-', '-']:  # Various dash formats
-                    if col_header == 'Mode':
-                        processed_row.append('not-applicable')  # For Mode column
-                    else:
-                        processed_row.append('not-compatible')  # For camera model columns
-                elif cell_str.upper() in ['YES', 'Y']:
-                    processed_row.append('is-compatible')
-                elif cell_str.upper() in ['NO', 'N']:
-                    processed_row.append('not-compatible')
-                elif cell_str in ['nan', 'NaN', 'None']:  # Handle stringified NaN values
-                    if col_header == 'Mode':
-                        processed_row.append('not-applicable')
-                    else:
-                        processed_row.append('not-compatible')
+                # For camera model columns: empty string = checkmark = compatible, dash = not compatible
+                if col_header in ['Mode', 'Outline', 'APIs', 'No.']:  # Non-camera columns
+                    # Keep original value for these columns
+                    processed_row.append(cell_str if cell_str else 'not-applicable')
                 else:
-                    processed_row.append(cell_str)
+                    # Camera model columns - process compatibility
+                    api_name = row[1] if len(row) > 1 else ""
+
+                    # Use actual symbols from PDF extraction
+                    if cell_str in ['', '✔']:  # Empty string or checkmark means compatible
+                        processed_row.append('is-compatible')
+                    elif cell_str in ['\\-', '\\\\-', '-']:  # Dash means not compatible
+                        processed_row.append('not-compatible')
+                    elif cell_str.upper() in ['YES', 'Y']:
+                        processed_row.append('is-compatible')
+                    elif cell_str.upper() in ['NO', 'N']:
+                        processed_row.append('not-compatible')
+                    elif cell_str in ['nan', 'NaN', 'None']:  # Handle stringified NaN values
+                        processed_row.append('not-compatible')
+                    else:
+                        # Keep original value if it's something else
+                        processed_row.append(cell_str)
             row_str = " | ".join(processed_row)
             
             content = (
