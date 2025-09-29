@@ -450,4 +450,80 @@ ChatGPT/Claude ↔️ MCP Server (Railway) ↔️ Pinecone (8,962 vectors)
 ```
 
 The Camera Remote SDK RAG system is now **cloud-ready** with comprehensive content type support and MCP protocol integration!
+
+## 🔧 **TODO: MCP Server Stability Improvements** (Sept 23, 2025)
+
+### **Issues Identified in Production**
+After deploying to Railway, the MCP server experienced connection stability issues during Claude Web sessions:
+
+#### **Primary Issues:**
+1. **Connection Drops** - `anyio.ClosedResourceError` causing tool disconnections
+2. **Slow Embeddings** - Operations taking 6-7s (exceeds 3s limit), causing client timeouts
+3. **Race Conditions** - Unsafe concurrent access to `active_connections` dictionary
+4. **Inconsistent Async** - Mix of sync/async tool functions confusing FastMCP
+
+#### **Error Log Sample:**
+```
+2025-09-23 20:49:43,402 - ERROR - Error in message router
+anyio.ClosedResourceError
+2025-09-23 20:50:10,745 - WARNING - Embedding took 6.62s (exceeds 3.0s limit)
+```
+
+### **Required Fixes (Priority Order)**
+
+#### **1. Embedding Timeout Protection** 🚨 **Critical**
+- **File**: `mcp/mcp_server.py` (lines 52-87, 251-287)
+- **Fix**: Wrap embedding calls in `asyncio.wait_for(timeout=5.0)`
+- **Fallback**: Use simpler search if timeout occurs
+- **Add**: Progress streaming for long operations
+
+#### **2. Thread-Safe Connection Tracking** 🔒 **High**
+- **File**: `mcp/mcp_server.py` (lines 44, 290-313, 387-416)
+- **Fix**: Add `asyncio.Lock` for all `active_connections` modifications
+- **Cleanup**: Proper exception handling in keepalive task
+
+#### **3. SSE Endpoint Hardening** 🛡️ **High**
+- **File**: `mcp/mcp_server.py` (lines 387-416)
+- **Fix**: Detect client disconnections gracefully
+- **Add**: Try/except for `StreamingResponse` writes
+- **Limit**: Max connection duration (30s)
+
+#### **4. Async Consistency** ⚡ **Medium**
+- **File**: `mcp/mcp_server.py` (lines 89-248)
+- **Fix**: Convert all `def` tools to `async def`
+- **Ensure**: Proper `await` for blocking operations
+
+#### **5. Circuit Breaker Pattern** 🔌 **Low**
+- **Add**: Track consecutive timeout failures
+- **Disable**: Slow operations after 3 failures
+- **Recovery**: Auto-enable after 60s cooldown
+
+### **Implementation Checklist:**
+- [ ] Add `asyncio.Lock` for connection safety
+- [ ] Implement 5s timeout for embeddings
+- [ ] Fix SSE error handling
+- [ ] Convert sync tools to async
+- [ ] Add circuit breaker logic
+- [ ] Test locally with extended sessions
+- [ ] Deploy to Railway staging
+- [ ] Monitor logs for 24h stability
+
+### **Testing Commands:**
+```bash
+# Local testing
+cd mcp
+python mcp_server.py
+
+# Check for errors
+curl http://localhost:8000/health
+
+# Monitor logs for timeout warnings
+grep "WARNING.*Embedding took" logs.txt
+```
+
+### **Success Criteria:**
+- No `ClosedResourceError` in 24h period
+- All embedding operations < 5s
+- Zero connection drops during 30min sessions
+- Claude Web maintains stable tool access
 - The search with intent tool is failing according to Claude web. I've attached the railway logs in railway-logs.md. Pleease examine the logs and provide a diagnositc

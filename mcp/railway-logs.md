@@ -1,97 +1,78 @@
-{"message":"Starting Container","attributes":{"level":"info"},"timestamp":"2025-09-10T17:59:12.000000000Z"}
-{"message":"2025-09-10 17:59:15,941 - __main__ - INFO - Starting FastMCP server on 0.0.0.0:3000","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338792194Z"}
-{"message":"2025-09-10 17:59:15,941 - __main__ - INFO - Available tools: search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338796643Z"}
-{"message":"2025-09-10 17:59:15,941 - __main__ - INFO - Health check: /health","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338800660Z"}
-{"message":"2025-09-10 17:59:15,941 - __main__ - INFO - SSE endpoint: /sse","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338805010Z"}
-{"message":"2025-09-10 17:59:15,941 - __main__ - INFO - MCP endpoint: /mcp","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338808993Z"}
-{"message":"2025-09-10 17:59:15,941 - __main__ - INFO - Keepalive interval: 2.0s","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338813754Z"}
-{"message":"2025-09-10 17:59:15,941 - __main__ - INFO - Connection timeout: 10.0s","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338817340Z"}
-{"message":"INFO:     Started server process [1]","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338821101Z"}
-{"message":"INFO:     Waiting for application startup.","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338825076Z"}
-{"message":"2025-09-10 17:59:15,962 - __main__ - INFO - Initializing RAG search system...","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338828688Z"}
-{"message":"2025-09-10 17:59:15,962 - __main__ - INFO - PINECONE_API_KEY found, proceeding with RAG initialization...","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338833073Z"}
-{"message":"2025-09-10 17:59:15,962 - search - INFO - === Starting RAG Search Initialization ===","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338836883Z"}
-{"message":"2025-09-10 17:59:15,962 - search - INFO - System Resources - RAM: 384GB (Available: 173GB), Disk: 2221GB (Free: 1021GB)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338842340Z"}
-{"message":"2025-09-10 17:59:15,962 - search - INFO - Step 1: Checking environment variables...","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338846311Z"}
-{"message":"2025-09-10 17:59:15,962 - search - INFO - Environment variables OK - Index name: sdk-rag-system","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338850571Z"}
-{"message":"2025-09-10 17:59:15,962 - search - INFO - Step 2: Initializing Pinecone connection...","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338854401Z"}
-{"message":"2025-09-10 17:59:16,168 - search - INFO - Pinecone connection established successfully","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338859171Z"}
-{"message":"2025-09-10 17:59:16,168 - search - INFO - Step 3: Loading GTE-ModernBERT embedding model...","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338863469Z"}
-{"message":"2025-09-10 17:59:16,168 - search - INFO - Attempting to load SentenceTransformer('Alibaba-NLP/gte-modernbert-base')...","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338867345Z"}
-{"message":"2025-09-10 17:59:16,168 - search - INFO - HuggingFace cache directory: /root/.cache/huggingface/hub","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338871020Z"}
-{"message":"2025-09-10 17:59:16,168 - search - INFO - Cache contents (first 5): ['version.txt']","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338874722Z"}
-{"message":"2025-09-10 17:59:16,168 - search - INFO - Creating SentenceTransformer instance...","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338878485Z"}
-{"message":"2025-09-10 17:59:16,168 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: Alibaba-NLP/gte-modernbert-base","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:16.338882338Z"}
-{"message":"2025-09-10 17:59:17,693 - search - ERROR - Failed to load GTE embedding model: The checkpoint you are trying to load has model type `modernbert` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728029766Z"}
-{"message":"2025-09-10 17:59:17,694 - search - ERROR - Full error traceback: Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728033727Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/transformers/models/auto/configuration_auto.py\", line 993, in from_pretrained","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728037554Z"}
-{"message":"    config_class = CONFIG_MAPPING[config_dict[\"model_type\"]]","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728042179Z"}
-{"message":"                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728046426Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/transformers/models/auto/configuration_auto.py\", line 695, in __getitem__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728050078Z"}
-{"message":"    raise KeyError(key)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728053914Z"}
-{"message":"KeyError: 'modernbert'","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728057908Z"}
-{"message":"","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728062124Z"}
-{"message":"During handling of the above exception, another exception occurred:","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728065901Z"}
-{"message":"","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728069733Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728073482Z"}
-{"message":"  File \"/app/search.py\", line 127, in __init__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728077542Z"}
-{"message":"    self.embedding_model = SentenceTransformer('Alibaba-NLP/gte-modernbert-base')","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728081583Z"}
-{"message":"                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728085716Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py\", line 197, in __init__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728089618Z"}
-{"message":"    modules = self._load_sbert_model(","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728093837Z"}
-{"message":"              ^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728097870Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py\", line 1296, in _load_sbert_model","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728102424Z"}
-{"message":"    module = Transformer(model_name_or_path, cache_dir=cache_folder, **kwargs)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728107039Z"}
-{"message":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728111185Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py\", line 35, in __init__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728115128Z"}
-{"message":"    config = AutoConfig.from_pretrained(model_name_or_path, **model_args, cache_dir=cache_dir)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728119360Z"}
-{"message":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728123956Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/transformers/models/auto/configuration_auto.py\", line 995, in from_pretrained","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728128211Z"}
-{"message":"    raise ValueError(","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728132541Z"}
-{"message":"ValueError: The checkpoint you are trying to load has model type `modernbert` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728136808Z"}
-{"message":"","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728140936Z"}
-{"message":"2025-09-10 17:59:17,697 - search - ERROR - Error type: ValueError","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728144868Z"}
-{"message":"2025-09-10 17:59:17,697 - search - ERROR - Error args: ('The checkpoint you are trying to load has model type `modernbert` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.',)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728148842Z"}
-{"message":"2025-09-10 17:59:17,697 - __main__ - ERROR - Failed to initialize RAG search: Could not initialize GTE-ModernBERT embedding model: The checkpoint you are trying to load has model type `modernbert` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728153659Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728157494Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/transformers/models/auto/configuration_auto.py\", line 993, in from_pretrained","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728161650Z"}
-{"message":"    config_class = CONFIG_MAPPING[config_dict[\"model_type\"]]","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728166274Z"}
-{"message":"                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728170254Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/transformers/models/auto/configuration_auto.py\", line 695, in __getitem__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728174020Z"}
-{"message":"    raise KeyError(key)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728177775Z"}
-{"message":"KeyError: 'modernbert'","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728183074Z"}
-{"message":"","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728188379Z"}
-{"message":"During handling of the above exception, another exception occurred:","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728192264Z"}
-{"message":"","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728196163Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728199913Z"}
-{"message":"  File \"/app/search.py\", line 127, in __init__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728204484Z"}
-{"message":"    self.embedding_model = SentenceTransformer('Alibaba-NLP/gte-modernbert-base')","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728920067Z"}
-{"message":"                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728926523Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py\", line 197, in __init__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728930627Z"}
-{"message":"    modules = self._load_sbert_model(","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728935296Z"}
-{"message":"              ^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728939051Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py\", line 1296, in _load_sbert_model","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728942816Z"}
-{"message":"    module = Transformer(model_name_or_path, cache_dir=cache_folder, **kwargs)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728946552Z"}
-{"message":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728950484Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py\", line 35, in __init__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728954805Z"}
-{"message":"    config = AutoConfig.from_pretrained(model_name_or_path, **model_args, cache_dir=cache_dir)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728960490Z"}
-{"message":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728966619Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/transformers/models/auto/configuration_auto.py\", line 995, in from_pretrained","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728973930Z"}
-{"message":"    raise ValueError(","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728979745Z"}
-{"message":"ValueError: The checkpoint you are trying to load has model type `modernbert` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728984983Z"}
-{"message":"","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728990313Z"}
-{"message":"During handling of the above exception, another exception occurred:","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.728995757Z"}
-{"message":"","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729003587Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729010835Z"}
-{"message":"  File \"/app/mcp_server.py\", line 331, in lifespan","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729015579Z"}
-{"message":"    rag_search = RAGSearch()","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729020910Z"}
-{"message":"                 ^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729025743Z"}
-{"message":"  File \"/app/search.py\", line 159, in __init__","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729031545Z"}
-{"message":"    raise RuntimeError(f\"Could not initialize GTE-ModernBERT embedding model: {e}\")","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729037135Z"}
-{"message":"RuntimeError: Could not initialize GTE-ModernBERT embedding model: The checkpoint you are trying to load has model type `modernbert` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729044277Z"}
-{"message":"2025-09-10 17:59:17,699 - __main__ - ERROR - Error type: RuntimeError","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729050086Z"}
-{"message":"2025-09-10 17:59:17,699 - __main__ - ERROR - Error details: Could not initialize GTE-ModernBERT embedding model: The checkpoint you are trying to load has model type `modernbert` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729055342Z"}
-{"message":"2025-09-10 17:59:17,708 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729060354Z"}
-{"message":"INFO:     Application startup complete.","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729066459Z"}
-{"message":"INFO:     Uvicorn running on http://0.0.0.0:3000 (Press CTRL+C to quit)","attributes":{"level":"error"},"timestamp":"2025-09-10T17:59:17.729071658Z"}
-{"message":"INFO:     100.64.0.2:41597 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-10T17:59:18.223540660Z"}
+{"message":"2025-09-23 20:49:43,402 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729309541Z"}
+{"message":"2025-09-23 20:49:43,402 - mcp.server.streamable_http - ERROR - Error in message router","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729314153Z"}
+{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729318354Z"}
+{"message":"  File \"/usr/local/lib/python3.11/site-packages/mcp/server/streamable_http.py\", line 831, in message_router","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729323259Z"}
+{"message":"    async for session_message in write_stream_reader:","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729328549Z"}
+{"message":"  File \"/usr/local/lib/python3.11/site-packages/anyio/abc/_streams.py\", line 41, in __anext__","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729332890Z"}
+{"message":"    return await self.receive()","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729337139Z"}
+{"message":"           ^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729341571Z"}
+{"message":"  File \"/usr/local/lib/python3.11/site-packages/anyio/streams/memory.py\", line 111, in receive","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729345528Z"}
+{"message":"    return self.receive_nowait()","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729350661Z"}
+{"message":"           ^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729356223Z"}
+{"message":"  File \"/usr/local/lib/python3.11/site-packages/anyio/streams/memory.py\", line 93, in receive_nowait","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729362779Z"}
+{"message":"    raise ClosedResourceError","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729370160Z"}
+{"message":"anyio.ClosedResourceError","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729375686Z"}
+{"message":"INFO:     100.64.0.7:42524 - \"GET /.well-known/oauth-protected-resource/mcp HTTP/1.1\" 404 Not Found","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729381583Z"}
+{"message":"INFO:     100.64.0.3:26802 - \"GET /.well-known/oauth-authorization-server/mcp HTTP/1.1\" 404 Not Found","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729387299Z"}
+{"message":"INFO:     100.64.0.3:26802 - \"GET /.well-known/oauth-authorization-server HTTP/1.1\" 404 Not Found","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729392025Z"}
+{"message":"INFO:     100.64.0.5:47952 - \"GET /.well-known/oauth-authorization-server/mcp HTTP/1.1\" 404 Not Found","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729396591Z"}
+{"message":"INFO:     100.64.0.5:47952 - \"GET /.well-known/oauth-authorization-server HTTP/1.1\" 404 Not Found","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729465885Z"}
+{"message":"INFO:     100.64.0.3:26802 - \"POST /register HTTP/1.1\" 404 Not Found","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729471771Z"}
+{"message":"INFO:     100.64.0.10:43352 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729477423Z"}
+{"message":"2025-09-23 20:49:46,453 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729483425Z"}
+{"message":"INFO:     100.64.0.4:32344 - \"POST /mcp HTTP/1.1\" 202 Accepted","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729489292Z"}
+{"message":"2025-09-23 20:49:46,803 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729496022Z"}
+{"message":"INFO:     100.64.0.7:42524 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729501974Z"}
+{"message":"2025-09-23 20:49:46,928 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729508357Z"}
+{"message":"2025-09-23 20:49:46,929 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729515116Z"}
+{"message":"INFO:     100.64.0.10:43352 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729522198Z"}
+{"message":"2025-09-23 20:49:46,933 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729528959Z"}
+{"message":"2025-09-23 20:49:46,934 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729535109Z"}
+{"message":"INFO:     100.64.0.7:42532 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:49:50.729541395Z"}
+{"message":"2025-09-23 20:49:46,998 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729545824Z"}
+{"message":"2025-09-23 20:49:46,999 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:49:50.729549965Z"}
+{"message":"INFO:     100.64.0.8:61518 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:50:11.069317248Z"}
+{"message":"2025-09-23 20:50:03,730 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:11.069324033Z"}
+{"message":"2025-09-23 20:50:03,730 - search - INFO - Query 'GetOSDImage DownloadSettingFile ImportLUTFile' appears to be API name, trying exact match first","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:11.069329516Z"}
+{"message":"2025-09-23 20:50:04,127 - search - INFO - Found 0 exact matches for API: GetOSDImage DownloadSettingFile ImportLUTFile","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:11.069334471Z"}
+{"message":"\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:06<00:00,  6.61s/it]\rBatches: 100%|██████████| 1/1 [00:06<00:00,  6.61s/it]","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:11.069630941Z"}
+{"message":"2025-09-23 20:50:10,745 - search - WARNING - Embedding took 6.62s (exceeds 3.0s limit)","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:11.069636464Z"}
+{"message":"2025-09-23 20:50:10,968 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:11.072476112Z"}
+{"message":"2025-09-23 20:50:10,965 - search - INFO - Found 10 results for query: GetOSDImage DownloadSettingFile ImportLUTFile...","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:11.072547643Z"}
+{"message":"INFO:     100.64.0.7:54440 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:50:18.628608329Z"}
+{"message":"2025-09-23 20:50:18,627 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:18.628617110Z"}
+{"message":"\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:07<00:00,  7.13s/it]\rBatches: 100%|██████████| 1/1 [00:07<00:00,  7.13s/it]","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:25.770996727Z"}
+{"message":"2025-09-23 20:50:25,765 - search - WARNING - Embedding took 7.14s (exceeds 3.0s limit)","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:25.771004358Z"}
+{"message":"2025-09-23 20:50:25,995 - search - INFO - Found 10 results for query: ImportLUTFile LUT camera support compatibility...","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:26.022342562Z"}
+{"message":"2025-09-23 20:50:25,997 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:26.022354243Z"}
+{"message":"INFO:     100.64.0.10:50006 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:50:33.578654157Z"}
+{"message":"2025-09-23 20:50:33,576 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:33.578660988Z"}
+{"message":"\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:07<00:00,  7.18s/it]\rBatches: 100%|██████████| 1/1 [00:07<00:00,  7.18s/it]","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:40.760551444Z"}
+{"message":"2025-09-23 20:50:40,759 - search - WARNING - Embedding took 7.18s (exceeds 3.0s limit)","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:40.760558741Z"}
+{"message":"2025-09-23 20:50:40,909 - search - INFO - Found 10 results for query: GetOSDImage DownloadSettingFile camera compatibili...","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:40.910590968Z"}
+{"message":"2025-09-23 20:50:40,912 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:50:40.914230118Z"}
+{"message":"INFO:     100.64.0.5:31792 - \"GET /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:51:50.906941289Z"}
+{"message":"2025-09-23 20:52:11,240 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:52:20.910137278Z"}
+{"message":"INFO:     100.64.0.8:56956 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:54:10.930686686Z"}
+{"message":"2025-09-23 20:54:07,321 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930694477Z"}
+{"message":"INFO:     100.64.0.7:34758 - \"POST /mcp HTTP/1.1\" 202 Accepted","attributes":{"level":"info"},"timestamp":"2025-09-23T20:54:10.930699643Z"}
+{"message":"2025-09-23 20:54:07,637 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930703707Z"}
+{"message":"INFO:     100.64.0.3:26802 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:54:10.930707832Z"}
+{"message":"2025-09-23 20:54:07,770 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930725049Z"}
+{"message":"2025-09-23 20:54:07,771 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930729108Z"}
+{"message":"INFO:     100.64.0.3:26802 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:54:10.930733617Z"}
+{"message":"2025-09-23 20:54:07,847 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930738987Z"}
+{"message":"2025-09-23 20:54:08,232 - search - INFO - Found 0 exact matches for API: FocalDistanceInFeet","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930743271Z"}
+{"message":"INFO:     100.64.0.5:23082 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:54:10.930747039Z"}
+{"message":"2025-09-23 20:54:08,236 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930750984Z"}
+{"message":"INFO:     100.64.0.6:10010 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:54:10.930754663Z"}
+{"message":"2025-09-23 20:54:08,237 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930758508Z"}
+{"message":"2025-09-23 20:54:08,238 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930762643Z"}
+{"message":"2025-09-23 20:54:08,238 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930766685Z"}
+{"message":"2025-09-23 20:54:08,238 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:10.930771066Z"}
+{"message":"INFO:     100.64.0.5:23092 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:54:14.675049975Z"}
+{"message":"2025-09-23 20:54:14,672 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:14.675061346Z"}
+{"message":"2025-09-23 20:54:14,850 - search - INFO - Found 5 exact matches for API: CrDeviceProperty_FocalDistanceInFeet","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:14.851668431Z"}
+{"message":"2025-09-23 20:54:14,852 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:54:14.855200751Z"}
+{"message":"INFO:     100.64.0.3:55426 - \"GET /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-09-23T20:55:24.883939380Z"}
+{"message":"2025-09-23 20:55:45,094 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-09-23T20:55:54.885782122Z"}
