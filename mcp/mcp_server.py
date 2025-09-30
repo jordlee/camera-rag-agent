@@ -53,25 +53,41 @@ async def search_sdk(query: str, top_k: int = 5) -> str:
     """Search the Camera Remote SDK documentation and code examples using intelligent LLM-based intent mapping and multi-modal search for optimal results."""
     if rag_search is None:
         return json.dumps({"error": "RAG search system not initialized"})
-    
+
     try:
         # Create async progress callback
         async def progress_logger(p):
             logger.info(f"Search progress: {p}")
-        
-        # Use the new intelligent search with intent mapping
-        results = await rag_search.search_with_intent(
-            query, 
-            top_k=top_k,
-            progress_callback=progress_logger
-        )
-        
-        # Add timestamp
-        results["timestamp"] = datetime.now().isoformat()
-        
-        logger.info(f"Intelligent search completed in {results['search_metadata']['total_time']:.2f}s")
-        
-        return json.dumps(results, indent=2)
+
+        # Use the new intelligent search with intent mapping, with 8s timeout
+        try:
+            results = await asyncio.wait_for(
+                rag_search.search_with_intent(
+                    query,
+                    top_k=top_k,
+                    progress_callback=progress_logger
+                ),
+                timeout=8.0  # 8 second timeout for the entire operation
+            )
+
+            # Add timestamp
+            results["timestamp"] = datetime.now().isoformat()
+
+            logger.info(f"Intelligent search completed in {results['search_metadata']['total_time']:.2f}s")
+
+            return json.dumps(results, indent=2)
+
+        except asyncio.TimeoutError:
+            logger.warning(f"Intent search timed out after 8s for query: {query[:50]}...")
+            # Immediate fallback to faster hybrid search
+            fallback_results = rag_search.search_hybrid(query, top_k=top_k)
+            return json.dumps({
+                "results": fallback_results,
+                "fallback": True,
+                "reason": "Intent search timed out (>8s), used faster hybrid search",
+                "timestamp": datetime.now().isoformat()
+            }, indent=2)
+
     except Exception as e:
         logger.exception("Intelligent search error")
         # Fallback to hybrid search
