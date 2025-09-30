@@ -24,5 +24,4 @@ numpy>=1.21.0
 mcp==1.13.1
 
 # Rate limiting
-slowapi==0.1.9
 redis==5.0.1

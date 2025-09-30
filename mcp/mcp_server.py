@@ -23,8 +23,8 @@ from search import RAGSearch
 from starlette.applications import Starlette
 from starlette.routing import Mount, Route
 from starlette.responses import JSONResponse, StreamingResponse
-from rate_limiter import limiter, rate_limit_exceeded_handler, get_rate_limit_stats, RATE_LIMIT_PER_MINUTE
-from slowapi.errors import RateLimitExceeded
+from starlette.middleware import Middleware
+from rate_limiter import RateLimitMiddleware, get_rate_limit_stats
 
 # Load environment variables
 load_dotenv()
@@ -51,7 +51,6 @@ KEEPALIVE_INTERVAL = 2.0  # seconds
 CONNECTION_TIMEOUT = 10.0  # seconds
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 async def search_sdk(query: str, top_k: int = 5) -> str:
     """Search the Camera Remote SDK documentation and code examples using intelligent LLM-based intent mapping and multi-modal search for optimal results."""
     if rag_search is None:
@@ -106,7 +105,6 @@ async def search_sdk(query: str, top_k: int = 5) -> str:
             return json.dumps({"error": str(fallback_error)})
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_code_examples(query: str, top_k: int = 5) -> str:
     """Search specifically for C++ code examples and implementations."""
     if rag_search is None:
@@ -120,7 +118,6 @@ def search_code_examples(query: str, top_k: int = 5) -> str:
         return f"Error searching code examples: {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_documentation(query: str, top_k: int = 5) -> str:
     """Search SDK documentation text (guides, tutorials, explanations)."""
     if rag_search is None:
@@ -134,7 +131,6 @@ def search_documentation(query: str, top_k: int = 5) -> str:
         return f"Error searching documentation: {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_api_functions(query: str, top_k: int = 5) -> str:
     """Search API function definitions and signatures."""
     if rag_search is None:
@@ -148,7 +144,6 @@ def search_api_functions(query: str, top_k: int = 5) -> str:
         return f"Error searching API functions: {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_compatibility(query: str, top_k: int = 5) -> str:
     """Search camera compatibility tables and structured data."""
     if rag_search is None:
@@ -162,7 +157,6 @@ def search_compatibility(query: str, top_k: int = 5) -> str:
         return f"Error searching compatibility: {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def get_sdk_stats() -> str:
     """Get statistics about the SDK documentation database."""
     if rag_search is None:
@@ -188,7 +182,6 @@ def get_sdk_stats() -> str:
         return json.dumps({"error": str(e)})
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_exact_api(api_name: str, top_k: int = 5) -> str:
     """Search for exact API function names using metadata filtering. Perfect for finding specific functions like 'SetSaveInfo'."""
     if rag_search is None:
@@ -202,7 +195,6 @@ def search_exact_api(api_name: str, top_k: int = 5) -> str:
         return f"Error searching exact API '{api_name}': {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_error_codes(error_code: str, top_k: int = 5) -> str:
     """Search for specific error codes like 'CrError_Connect_TimeOut' using exact metadata filtering."""
     if rag_search is None:
@@ -216,7 +208,6 @@ def search_error_codes(error_code: str, top_k: int = 5) -> str:
         return f"Error searching error code '{error_code}': {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_warning_codes(warning_code: str, top_k: int = 5) -> str:
     """Search for specific warning codes like 'CrWarning_BatteryLow' using exact metadata filtering."""
     if rag_search is None:
@@ -230,7 +221,6 @@ def search_warning_codes(warning_code: str, top_k: int = 5) -> str:
         return f"Error searching warning code '{warning_code}': {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_hybrid(query: str, top_k: int = 10) -> str:
     """Smart hybrid search that automatically detects API names, error codes, and other patterns for optimal results."""
     if rag_search is None:
@@ -244,7 +234,6 @@ def search_hybrid(query: str, top_k: int = 10) -> str:
         return f"Error performing hybrid search for '{query}': {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 def search_by_source_file(file_name: str, query: str = "", top_k: int = 5) -> str:
     """Search within a specific source file like 'CameraDevice.cpp' or 'CrDebugString.cpp'."""
     if rag_search is None:
@@ -277,7 +266,6 @@ def search_by_source_file(file_name: str, query: str = "", top_k: int = 5) -> st
         return f"Error searching in file '{file_name}': {str(e)}"
 
 @mcp.tool()
-@limiter.limit(f"{RATE_LIMIT_PER_MINUTE}/minute")
 async def search_with_intent_analysis(query: str, top_k: int = 10, explain_intent: bool = True) -> str:
     """Advanced search with query expansion using TinyLlama to add related technical terms for better results. Perfect for natural language queries."""
     if rag_search is None:
@@ -460,14 +448,11 @@ app = Starlette(
         Route("/sse", sse_endpoint),  # SSE endpoint for keepalive
         Mount("/", mcp.streamable_http_app()),
     ],
+    middleware=[
+        Middleware(RateLimitMiddleware)
+    ],
     lifespan=lifespan,
-    exception_handlers={
-        RateLimitExceeded: rate_limit_exceeded_handler
-    }
 )
-
-# Register rate limiter with app
-limiter._app = app
 
 # Note: Claude web connects to the root URL
 # MCP endpoint will be at /mcp automatically by FastMCP

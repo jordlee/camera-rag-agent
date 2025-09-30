@@ -1,15 +1,14 @@
 """
 Rate limiting middleware for MCP server using Redis.
-Implements distributed rate limiting across Railway containers.
+Implements distributed rate limiting at the HTTP layer before FastMCP.
 """
 
 import os
 import logging
+import time
 from typing import Optional
 from datetime import datetime
-from slowapi import Limiter
-from slowapi.util import get_remote_address
-from slowapi.errors import RateLimitExceeded
+from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 import redis
@@ -19,10 +18,10 @@ logger = logging.getLogger(__name__)
 # Rate limiting configuration
 RATE_LIMIT_ENABLED = os.getenv("RATE_LIMIT_ENABLED", "true").lower() == "true"
 RATE_LIMIT_PER_MINUTE = int(os.getenv("RATE_LIMIT_PER_MINUTE", "10"))
+RATE_LIMIT_WINDOW = 60  # seconds
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 
-# Global rate limiter instance
-limiter: Optional[Limiter] = None
+# Global Redis client
 redis_client: Optional[redis.Redis] = None
 
 def get_real_client_ip(request: Request) -> str:
@@ -45,15 +44,18 @@ def get_real_client_ip(request: Request) -> str:
         return real_ip.strip()
 
     # Fallback to direct connection IP
-    return get_remote_address(request)
+    if request.client:
+        return request.client.host
+
+    return "unknown"
 
 def init_redis_connection() -> Optional[redis.Redis]:
     """
     Initialize Redis connection for distributed rate limiting.
-    Returns None if Redis unavailable (will fallback to in-memory).
+    Returns None if Redis unavailable (will disable rate limiting).
     """
     try:
-        logger.info(f"[RATE_LIMIT_INIT] Attempting Redis connection: {REDIS_URL.split('@')[-1]}")  # Hide password
+        logger.info(f"[RATE_LIMIT_INIT] Attempting Redis connection...")
 
         # Parse Redis URL and create client
         client = redis.from_url(
@@ -71,88 +73,144 @@ def init_redis_connection() -> Optional[redis.Redis]:
         return client
 
     except redis.ConnectionError as e:
-        logger.warning(f"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: {e}")
-        logger.warning("[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)")
+        logger.warning(f"[RATE_LIMIT_INIT] ⚠️  Redis connection failed: {e}")
+        logger.warning("[RATE_LIMIT_INIT] Rate limiting DISABLED (no Redis)")
         return None
     except Exception as e:
         logger.error(f"[RATE_LIMIT_INIT] ❌ Unexpected Redis error: {e}")
         return None
 
-def init_rate_limiter() -> Limiter:
+class RateLimitMiddleware(BaseHTTPMiddleware):
     """
-    Initialize SlowAPI rate limiter with Redis backend (or in-memory fallback).
-
-    Returns configured Limiter instance ready for use as decorator.
+    Starlette middleware for rate limiting at HTTP layer.
+    Intercepts requests before they reach FastMCP.
     """
-    global limiter, redis_client
 
-    if not RATE_LIMIT_ENABLED:
-        logger.info("[RATE_LIMIT_INIT] Rate limiting DISABLED via environment variable")
-        # Return a no-op limiter
-        return Limiter(key_func=get_real_client_ip, enabled=False)
+    def __init__(self, app):
+        super().__init__(app)
+        global redis_client
 
-    # Try to connect to Redis
-    redis_client = init_redis_connection()
+        # Initialize Redis connection
+        if not redis_client and RATE_LIMIT_ENABLED:
+            redis_client = init_redis_connection()
 
-    if redis_client:
-        # Use Redis for distributed rate limiting
-        logger.info(f"[RATE_LIMIT_INIT] Configuring distributed rate limiting: {RATE_LIMIT_PER_MINUTE} req/min per IP")
+            if redis_client:
+                logger.info(f"[RATE_LIMIT_INIT] Middleware active: {RATE_LIMIT_PER_MINUTE} req/min per IP")
+            else:
+                logger.warning("[RATE_LIMIT_INIT] Middleware running without Redis (rate limiting disabled)")
 
-        limiter = Limiter(
-            key_func=get_real_client_ip,
-            storage_uri=REDIS_URL,
-            default_limits=[],  # No default limits, we'll use decorators
-            enabled=True,
-            headers_enabled=True,  # Add X-RateLimit-* headers
-            swallow_errors=True  # Don't crash if Redis fails mid-request
-        )
-    else:
-        # Fallback to in-memory (per-container)
-        logger.warning(f"[RATE_LIMIT_INIT] Using in-memory rate limiting: {RATE_LIMIT_PER_MINUTE} req/min per IP (per container)")
-        logger.warning("[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!")
+        self.redis = redis_client
 
-        limiter = Limiter(
-            key_func=get_real_client_ip,
-            default_limits=[],
-            enabled=True,
-            headers_enabled=True
-        )
+    async def dispatch(self, request: Request, call_next):
+        """
+        Intercept all HTTP requests and apply rate limiting.
+        """
+        # Exempt health and SSE endpoints from rate limiting
+        if request.url.path in ["/health", "/sse"]:
+            return await call_next(request)
 
-    logger.info("[RATE_LIMIT_INIT] Rate limiter initialized successfully")
-    return limiter
+        # Only rate limit MCP endpoint
+        if not request.url.path.startswith("/mcp") and request.url.path != "/":
+            return await call_next(request)
 
-def rate_limit_exceeded_handler(request: Request, exc: RateLimitExceeded) -> JSONResponse:
-    """
-    Custom error handler for rate limit exceeded (429).
-    Returns helpful JSON response with retry information.
-    """
-    client_ip = get_real_client_ip(request)
-    endpoint = request.url.path
+        # If Redis not available or rate limiting disabled, allow all requests
+        if not self.redis or not RATE_LIMIT_ENABLED:
+            return await call_next(request)
 
-    # Extract retry_after from exception (seconds until reset)
-    retry_after = int(exc.detail.split("Retry after ")[1].split(" seconds")[0]) if "Retry after" in exc.detail else 60
+        # Extract client IP
+        client_ip = get_real_client_ip(request)
 
-    logger.warning(f"[RATE_LIMIT] IP {client_ip} exceeded {RATE_LIMIT_PER_MINUTE}/min on {endpoint}")
+        # Check rate limit
+        try:
+            is_allowed, retry_after = self._check_rate_limit(client_ip)
 
-    error_response = {
-        "error": "Rate limit exceeded",
-        "message": f"You have exceeded {RATE_LIMIT_PER_MINUTE} requests per minute. Please try again in {retry_after} seconds.",
-        "retry_after": retry_after,
-        "limit": f"{RATE_LIMIT_PER_MINUTE} per minute",
-        "ip": client_ip,
-        "endpoint": endpoint,
-        "timestamp": datetime.now().isoformat()
-    }
+            if not is_allowed:
+                # Rate limit exceeded
+                logger.warning(f"[RATE_LIMIT] IP {client_ip} exceeded {RATE_LIMIT_PER_MINUTE}/min on {request.url.path}")
 
-    return JSONResponse(
-        status_code=429,
-        content=error_response,
-        headers={
-            "Retry-After": str(retry_after),
-            "X-RateLimit-Limit": str(RATE_LIMIT_PER_MINUTE),
-            "X-RateLimit-Remaining": "0",
-        }
-    )
+                return JSONResponse(
+                    status_code=429,
+                    content={
+                        "error": "Rate limit exceeded",
+                        "message": f"You have exceeded {RATE_LIMIT_PER_MINUTE} requests per minute. Please try again in {retry_after} seconds.",
+                        "retry_after": retry_after,
+                        "limit": f"{RATE_LIMIT_PER_MINUTE} per minute",
+                        "ip": client_ip,
+                        "endpoint": request.url.path,
+                        "timestamp": datetime.now().isoformat()
+                    },
+                    headers={
+                        "Retry-After": str(retry_after),
+                        "X-RateLimit-Limit": str(RATE_LIMIT_PER_MINUTE),
+                        "X-RateLimit-Remaining": "0",
+                    }
+                )
+
+            # Request allowed - continue to FastMCP
+            response = await call_next(request)
+
+            # Add rate limit headers to successful responses
+            remaining = self._get_remaining_requests(client_ip)
+            response.headers["X-RateLimit-Limit"] = str(RATE_LIMIT_PER_MINUTE)
+            response.headers["X-RateLimit-Remaining"] = str(remaining)
+
+            return response
+
+        except Exception as e:
+            logger.error(f"[RATE_LIMIT] Error checking rate limit: {e}")
+            # On error, allow request (fail open)
+            return await call_next(request)
+
+    def _check_rate_limit(self, client_ip: str) -> tuple[bool, int]:
+        """
+        Check if client IP is within rate limit using Redis.
+
+        Returns:
+            (is_allowed, retry_after_seconds)
+        """
+        try:
+            key = f"rate_limit:{client_ip}"
+
+            # Get current count
+            current_count = self.redis.get(key)
+
+            if current_count is None:
+                # First request in window - initialize
+                self.redis.setex(key, RATE_LIMIT_WINDOW, 1)
+                return (True, 0)
+
+            current_count = int(current_count)
+
+            if current_count >= RATE_LIMIT_PER_MINUTE:
+                # Limit exceeded
+                ttl = self.redis.ttl(key)
+                retry_after = max(ttl, 1) if ttl > 0 else RATE_LIMIT_WINDOW
+                return (False, retry_after)
+
+            # Increment counter
+            self.redis.incr(key)
+            return (True, 0)
+
+        except Exception as e:
+            logger.error(f"[RATE_LIMIT] Redis error: {e}")
+            # On Redis error, allow request (fail open)
+            return (True, 0)
+
+    def _get_remaining_requests(self, client_ip: str) -> int:
+        """Get remaining requests in current window for client IP."""
+        try:
+            key = f"rate_limit:{client_ip}"
+            current_count = self.redis.get(key)
+
+            if current_count is None:
+                return RATE_LIMIT_PER_MINUTE
+
+            remaining = RATE_LIMIT_PER_MINUTE - int(current_count)
+            return max(remaining, 0)
+
+        except Exception as e:
+            logger.error(f"[RATE_LIMIT] Error getting remaining requests: {e}")
+            return RATE_LIMIT_PER_MINUTE
 
 def get_rate_limit_stats() -> dict:
     """
@@ -163,10 +221,9 @@ def get_rate_limit_stats() -> dict:
         stats = {
             "enabled": RATE_LIMIT_ENABLED,
             "limit": f"{RATE_LIMIT_PER_MINUTE} per minute",
-            "backend": "redis" if redis_client else "in-memory",
+            "backend": "redis" if redis_client else "disabled",
             "redis_connected": False,
-            "total_keys": 0,
-            "violations_tracked": 0
+            "total_keys": 0
         }
 
         if redis_client:
@@ -175,17 +232,16 @@ def get_rate_limit_stats() -> dict:
             stats["redis_connected"] = True
 
             # Count rate limit keys in Redis
-            slowapi_keys = redis_client.keys("slowapi:*")
-            stats["total_keys"] = len(slowapi_keys) if slowapi_keys else 0
+            rate_limit_keys = redis_client.keys("rate_limit:*")
+            stats["total_keys"] = len(rate_limit_keys) if rate_limit_keys else 0
 
-            # Count IPs being tracked (unique prefixes)
-            if slowapi_keys:
+            # Count unique IPs being tracked
+            if rate_limit_keys:
                 unique_ips = set()
-                for key in slowapi_keys:
-                    # Key format: slowapi:{ip}:{endpoint}
-                    parts = key.split(":")
-                    if len(parts) >= 2:
-                        unique_ips.add(parts[1])
+                for key in rate_limit_keys:
+                    # Key format: rate_limit:{ip}
+                    ip = key.replace("rate_limit:", "")
+                    unique_ips.add(ip)
                 stats["unique_ips_tracked"] = len(unique_ips)
 
         return stats
@@ -197,6 +253,5 @@ def get_rate_limit_stats() -> dict:
             "error": str(e)
         }
 
-# Initialize on module import
-logger.info("[RATE_LIMIT_INIT] Initializing rate limiting module...")
-limiter = init_rate_limiter()
+# Log initialization
+logger.info("[RATE_LIMIT_INIT] Rate limiter module loaded")
