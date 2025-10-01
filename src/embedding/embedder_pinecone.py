@@ -31,12 +31,13 @@ load_dotenv()
 
 # --- Configuration ---
 PROJECT_ROOT = Path(__file__).parent.parent.parent
-CHUNKS_FILE = PROJECT_ROOT / "data/chunks.json"
+CHUNKS_FILE = PROJECT_ROOT / "data/chunks_v2.json"  # V2.00.00 chunks
 BATCH_SIZE = 100  # Pinecone batch size
 
-# Pinecone configuration
+# Pinecone configuration for V2 index
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_INDEX_NAME = "sdk-rag-system"
+PINECONE_INDEX_NAME = "sdk-rag-system-v2"  # V2.00.00 index
+PINECONE_HOST = "https://sdk-rag-system-v2-algcc92.svc.aped-4627-b74a.pinecone.io"  # V2 index host
 PINECONE_DIMENSION = 768  # GTE-ModernBERT dimension
 PINECONE_METRIC = "cosine"
 PINECONE_CLOUD = "aws"
@@ -176,8 +177,11 @@ def setup_pinecone():
         print("☁️ Using Cloud Pinecone for production...")
         if not PINECONE_API_KEY:
             raise ValueError("PINECONE_API_KEY environment variable not set for cloud usage")
-        
+
+        # Connect to V2 index with specific host
         pc = Pinecone(api_key=PINECONE_API_KEY)
+        print(f"Connecting to index: {PINECONE_INDEX_NAME}")
+        print(f"Host: {PINECONE_HOST}")
     
     # Handle index creation/management
     if USE_LOCAL_PINECONE:
@@ -203,8 +207,9 @@ def setup_pinecone():
             print("✅ Index created successfully")
         else:
             print(f"✅ Using existing index: {PINECONE_INDEX_NAME}")
-        
-        index = pc.Index(PINECONE_INDEX_NAME)
+
+        # Connect to index using the specific host
+        index = pc.Index(PINECONE_INDEX_NAME, host=PINECONE_HOST)
         
         # Clear existing index for clean upload (handle empty index gracefully)
         print("🗑️ Clearing existing index...")

@@ -13,6 +13,15 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..
 SDK_PDF_SOURCE_BASE_DIR = os.path.join(PROJECT_ROOT, "data/raw_sdk_docs/docs")
 PARSED_PDF_OUTPUT_BASE_DIR = os.path.join(PROJECT_ROOT, "data/parsed_data/pdf")
 
+
+def format_version_tag(sdk_version):
+    """Convert SDK version to friendly format: V2.00.00 -> V2"""
+    if sdk_version.startswith('V'):
+        major = sdk_version.split('.')[0]  # "V2.00.00" -> "V2"
+        return major
+    return sdk_version
+
+
 def extract_from_pdf(pdf_path, output_dir, sdk_version):
     """
     Extracts text and tables from a PDF document.
@@ -228,9 +237,9 @@ def extract_from_pdf(pdf_path, output_dir, sdk_version):
 
         # --- Saving Logic ---
         clean_name = re.sub(r'[^a-zA-Z0-9_]', '_', file_name)
-        version_tag = sdk_version.replace('.', '_')
+        version_tag = format_version_tag(sdk_version)
 
-        text_output_filename = f"{clean_name}_v{version_tag}_text.json"
+        text_output_filename = f"{clean_name}_{version_tag}_text.json"
         text_output_path = os.path.join(output_dir, text_output_filename)
         text_data = {
             "source_file": pdf_path, "file_type": "pdf_text", "content": all_text.strip(),
@@ -241,7 +250,7 @@ def extract_from_pdf(pdf_path, output_dir, sdk_version):
         print(f"Extracted PDF text saved to: {text_output_path}")
 
         if extracted_tables_data:
-            tables_output_filename = f"{clean_name}_v{version_tag}_tables.json"
+            tables_output_filename = f"{clean_name}_{version_tag}_tables.json"
             tables_output_path = os.path.join(output_dir, tables_output_filename)
             tables_data = {
                 "source_file": pdf_path, "file_type": "pdf_tables", "content": extracted_tables_data,

@@ -270,19 +270,19 @@ async def search_with_intent_analysis(query: str, top_k: int = 10, explain_inten
     """Advanced search with query expansion using TinyLlama to add related technical terms for better results. Perfect for natural language queries."""
     if rag_search is None:
         return json.dumps({"error": "RAG search system not initialized"})
-    
+
     try:
         # Use full intent-based search with query expansion
         results = await rag_search.search_with_intent(
-            query, 
+            query,
             top_k=top_k,
             use_intent_mapping=True
         )
-        
+
         # Add explanation if requested
         if explain_intent:
             intent_analysis = results.get("intent_analysis", {})
-            
+
             explanation = {
                 "query_processing": "Query expanded with related technical terms for better search",
                 "original_query": query,
@@ -292,17 +292,73 @@ async def search_with_intent_analysis(query: str, top_k: int = 10, explain_inten
                 "semantic_categories": intent_analysis.get("semantic_categories", [])
             }
             results["explanation"] = explanation
-        
+
         results["timestamp"] = datetime.now().isoformat()
-        
+
         return json.dumps(results, indent=2)
-        
+
     except Exception as e:
         logger.exception("Query expansion search error")
         return json.dumps({
             "error": str(e),
             "suggestion": "Try a simpler query or use the regular search_sdk tool"
         })
+
+@mcp.tool()
+def set_sdk_version(version: str) -> str:
+    """
+    Set the SDK version for all subsequent searches in this session.
+
+    Args:
+        version: SDK version to use ("V1.14.00" or "V2.00.00")
+
+    Returns:
+        Confirmation message with the new version
+
+    Example:
+        set_sdk_version("V2.00.00")  # Switch to latest SDK
+        set_sdk_version("V1.14.00")  # Switch to older SDK
+    """
+    if rag_search is None:
+        return json.dumps({"error": "RAG search system not initialized"})
+
+    try:
+        result = rag_search.set_version(version)
+
+        # Include helpful context
+        version_info = rag_search.list_versions()
+
+        return json.dumps({
+            "message": result,
+            "active_version": rag_search.get_version(),
+            "available_versions": version_info["available"],
+            "note": "All search tools will now use this version until changed again."
+        }, indent=2)
+    except Exception as e:
+        logger.exception("Set version error")
+        return json.dumps({"error": str(e)})
+
+@mcp.tool()
+def get_current_sdk_version() -> str:
+    """
+    Get the currently active SDK version for this session.
+
+    Returns:
+        Current SDK version and list of available versions
+    """
+    if rag_search is None:
+        return json.dumps({"error": "RAG search system not initialized"})
+
+    try:
+        version_info = rag_search.list_versions()
+        return json.dumps({
+            "current_version": rag_search.get_version(),
+            "available_versions": version_info["available"],
+            "help": "Use set_sdk_version() to switch versions"
+        }, indent=2)
+    except Exception as e:
+        logger.exception("Get version error")
+        return json.dumps({"error": str(e)})
 
 # Keepalive task
 async def keepalive_task():
@@ -464,7 +520,8 @@ if __name__ == "__main__":
     host = os.environ.get("HOST", "0.0.0.0")
     
     logger.info(f"Starting FastMCP server on {host}:{port}")
-    logger.info("Available tools: search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file")
+    logger.info("Available tools: search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, set_sdk_version, get_current_sdk_version")
+    logger.info("Version management: Multi-SDK support (V1.14.00, V2.00.00)")
     logger.info("Health check: /health")
     logger.info("SSE endpoint: /sse")
     logger.info("MCP endpoint: /mcp")

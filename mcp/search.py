@@ -73,9 +73,9 @@ class CodeBERTEmbedder:
 
 class RAGSearch:
     def __init__(self):
-        """Initialize the RAG search system."""
+        """Initialize the RAG search system with multi-version support."""
         logger.info("=== Starting RAG Search Initialization ===")
-        
+
         # Log system resources
         try:
             memory = psutil.virtual_memory()
@@ -84,21 +84,34 @@ class RAGSearch:
                        f"Disk: {disk.total // (1024**3)}GB (Free: {disk.free // (1024**3)}GB)")
         except Exception as e:
             logger.warning(f"Could not get system resources: {e}")
-        
+
         logger.info("Step 1: Checking environment variables...")
         self.pinecone_api_key = os.getenv("PINECONE_API_KEY")
-        self.index_name = os.getenv("PINECONE_INDEX_NAME", "sdk-rag-system")
-        
+
         if not self.pinecone_api_key:
             logger.error("PINECONE_API_KEY environment variable not set")
             raise ValueError("PINECONE_API_KEY environment variable not set")
-        logger.info(f"Environment variables OK - Index name: {self.index_name}")
-        
-        logger.info("Step 2: Initializing Pinecone connection...")
+        logger.info("Environment variables OK")
+
+        logger.info("Step 2: Initializing Pinecone connection with multi-version support...")
         try:
             self.pc = Pinecone(api_key=self.pinecone_api_key)
-            self.index = self.pc.Index(self.index_name)
-            logger.info("Pinecone connection established successfully")
+
+            # Load both SDK version indexes
+            logger.info("Loading V1.14.00 index (sdk-rag-system)...")
+            self.index_v1 = self.pc.Index("sdk-rag-system")
+            logger.info("✅ V1.14.00 index loaded")
+
+            logger.info("Loading V2.00.00 index (sdk-rag-system-v2)...")
+            self.index_v2 = self.pc.Index("sdk-rag-system-v2")
+            logger.info("✅ V2.00.00 index loaded")
+
+            # Default to V2.00.00 (latest), can be changed via set_version()
+            default_version = os.getenv("DEFAULT_SDK_VERSION", "V2.00.00")
+            self.current_version = default_version
+
+            logger.info(f"Pinecone multi-version connection established successfully")
+            logger.info(f"Default SDK version: {self.current_version}")
         except Exception as e:
             logger.error(f"Failed to connect to Pinecone: {e}")
             logger.error(f"Pinecone error traceback: {traceback.format_exc()}")
@@ -168,15 +181,62 @@ class RAGSearch:
         self.total_embeddings_processed = 0
         
         logger.info(f"Step 6: RAG Search initialization completed successfully!")
-        logger.info(f"✅ RAG Search ready - Index: {self.index_name}, Model: GTE-ModernBERT")
+        logger.info(f"✅ RAG Search ready - Multi-version support: V1.14.00 + V2.00.00 (active: {self.current_version})")
+        logger.info(f"   Model: GTE-ModernBERT, Indexes: sdk-rag-system (V1), sdk-rag-system-v2 (V2)")
         logger.info("=== RAG Search Initialization Complete ===")
-        
+
         # Log final memory state
         try:
             memory = psutil.virtual_memory()
             logger.info(f"Post-initialization RAM usage: {memory.percent}% ({memory.used // (1024**3)}GB used)")
         except Exception as e:
             logger.warning(f"Could not get final memory stats: {e}")
+
+    @property
+    def index(self):
+        """Return the active Pinecone index based on current version."""
+        if self.current_version == "V1.14.00":
+            return self.index_v1
+        elif self.current_version == "V2.00.00":
+            return self.index_v2
+        else:
+            logger.warning(f"Unknown version '{self.current_version}', defaulting to V2.00.00")
+            return self.index_v2
+
+    def set_version(self, version: str) -> str:
+        """Change the active SDK version for this RAG instance."""
+        if version not in ["V1.14.00", "V2.00.00"]:
+            return f"❌ Invalid version '{version}'. Available: V1.14.00, V2.00.00"
+
+        old_version = self.current_version
+        self.current_version = version
+        logger.info(f"🔄 SDK version changed: {old_version} → {version}")
+        return f"✅ SDK version set to {version}"
+
+    def get_version(self) -> str:
+        """Get the current SDK version."""
+        return self.current_version
+
+    def list_versions(self) -> dict:
+        """List all available SDK versions with details."""
+        return {
+            "current": self.current_version,
+            "available": [
+                {
+                    "version": "V1.14.00",
+                    "index": "sdk-rag-system",
+                    "status": "stable",
+                    "is_active": self.current_version == "V1.14.00"
+                },
+                {
+                    "version": "V2.00.00",
+                    "index": "sdk-rag-system-v2",
+                    "status": "latest",
+                    "is_active": self.current_version == "V2.00.00"
+                }
+            ]
+        }
+
     
     @lru_cache(maxsize=EMBEDDING_CACHE_SIZE)
     def _cached_embed(self, query: str) -> Tuple[float, ...]:
@@ -266,11 +326,12 @@ class RAGSearch:
                     'id': match['id'],
                     'score': match['score'],
                     'content': match['metadata'].get('content', ''),
-                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'},
+                    'sdk_version': self.current_version
                 }
                 processed_results.append(result)
-            
-            logger.info(f"Found {len(processed_results)} results for query: {query[:50]}...")
+
+            logger.info(f"Found {len(processed_results)} results for query: {query[:50]}... (SDK: {self.current_version})")
             return processed_results
             
         except Exception as e:
@@ -335,14 +396,15 @@ class RAGSearch:
                     'id': match['id'],
                     'score': match['score'],
                     'content': match['metadata'].get('content', ''),
-                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'},
+                    'sdk_version': self.current_version
                 }
                 processed_results.append(result)
-            
+
             if progress_callback:
                 await progress_callback({"status": "complete", "progress": 1.0})
-            
-            logger.info(f"Async search found {len(processed_results)} results")
+
+            logger.info(f"Async search found {len(processed_results)} results (SDK: {self.current_version})")
             return processed_results
             
         except Exception as e:
@@ -504,11 +566,12 @@ class RAGSearch:
                     'id': match['id'],
                     'score': match['score'],  # Use actual Pinecone score
                     'content': match['metadata'].get('content', ''),
-                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'},
+                    'sdk_version': self.current_version
                 }
                 processed_results.append(result)
-            
-            logger.info(f"Found {len(processed_results)} exact matches for API: {api_name}")
+
+            logger.info(f"Found {len(processed_results)} exact matches for API: {api_name} (SDK: {self.current_version})")
             return processed_results
             
         except Exception as e:
@@ -535,11 +598,12 @@ class RAGSearch:
                     'id': match['id'],
                     'score': match['score'],  # Use actual Pinecone score
                     'content': match['metadata'].get('content', ''),
-                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'},
+                    'sdk_version': self.current_version
                 }
                 processed_results.append(result)
-            
-            logger.info(f"Found {len(processed_results)} matches for error code: {error_code}")
+
+            logger.info(f"Found {len(processed_results)} matches for error code: {error_code} (SDK: {self.current_version})")
             return processed_results
             
         except Exception as e:
@@ -566,11 +630,12 @@ class RAGSearch:
                     'id': match['id'],
                     'score': match['score'],  # Use actual Pinecone score
                     'content': match['metadata'].get('content', ''),
-                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'}
+                    'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'},
+                    'sdk_version': self.current_version
                 }
                 processed_results.append(result)
-            
-            logger.info(f"Found {len(processed_results)} matches for warning code: {warning_code}")
+
+            logger.info(f"Found {len(processed_results)} matches for warning code: {warning_code} (SDK: {self.current_version})")
             return processed_results
             
         except Exception as e:

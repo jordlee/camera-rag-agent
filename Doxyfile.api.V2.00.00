@@ -2,7 +2,7 @@
     PROJECT_NAME     = "SDK Documentation - V2.00.00"
     PROJECT_BRIEF    = "Parsed C++ SDK API for RAG - V2.00.00"
     PROJECT_LOGO     = ""
-    OUTPUT_DIRECTORY = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/doxygen_xml_output/V2.00.00"
+    OUTPUT_DIRECTORY = "/Users/jordanlee/Documents/Github/sdk-rag-agent/data/doxygen_xml_output/V2.00.00"
     GENERATE_XML     = YES
     GENERATE_HTML    = NO
     GENERATE_LATEX   = NO
@@ -13,14 +13,14 @@
 
     # Input settings
     # INPUT is set directly to the CRSDK folder for the current version
-    INPUT            = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK"
+    INPUT            = "/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK"
     # Only process header files (*.h, *.hpp)
     FILE_PATTERNS    = *.h *.hpp
     RECURSIVE        = YES # Recurse within the CRSDK input directory
 
     # Explicitly add include paths for resolving types.
     # The source_dir_for_doxygen_input (CRSDK) is the primary include path.
-    INCLUDE_PATH     = "/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK"
+    INCLUDE_PATH     = "/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/V2.00.00/CRSDK"
 
     # Exclude directories (e.g., OpenCV, build folders, etc.)
     EXCLUDE_PATTERNS = */opencv2/* */build/* */temp/* */test/* */examples/*

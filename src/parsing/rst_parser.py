@@ -17,6 +17,14 @@ SDK_RST_SOURCE_BASE_DIR = os.path.join(PROJECT_ROOT, "data/raw_sdk_docs/api_docs
 PARSED_RST_OUTPUT_BASE_DIR = os.path.join(PROJECT_ROOT, "data/parsed_data/rst")
 
 
+def format_version_tag(sdk_version):
+    """Convert SDK version to friendly format: V2.00.00 -> V2"""
+    if sdk_version.startswith('V'):
+        major = sdk_version.split('.')[0]  # "V2.00.00" -> "V2"
+        return major
+    return sdk_version
+
+
 def extract_from_rst(rst_path, output_dir, sdk_version):
     """
     Extracts raw text content from a reStructuredText (.rst or .rst.txt) file.
@@ -46,8 +54,8 @@ def extract_from_rst(rst_path, output_dir, sdk_version):
         
         # Create a clean filename from the base name and include version
         clean_name = re.sub(r'[^a-zA-Z0-9_]', '_', file_name_base)
-        version_tag = sdk_version.replace('.', '_')
-        output_json_filename = f"{clean_name}_rst_v{version_tag}_parsed.json"
+        version_tag = format_version_tag(sdk_version)
+        output_json_filename = f"{clean_name}_rst_{version_tag}.json"
 
         output_path = os.path.join(output_dir, output_json_filename)
 

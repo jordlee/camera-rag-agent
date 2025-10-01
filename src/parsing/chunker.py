@@ -429,36 +429,38 @@ def extract_page_number(content: str) -> int:
     return 0
 
 def chunk_text_file(data: dict) -> list:
-    """Chunks plain text-based documents by splitting into paragraphs."""
+    """Chunks plain text-based documents using sliding window across entire content."""
     chunks = []
-    parent_metadata = data.get("metadata", {}) 
+    parent_metadata = data.get("metadata", {})
     source_file = data.get("source_file", "")
     source_filename = Path(source_file).name if source_file else ""
     parent_id_base = hashlib.md5(source_file.encode()).hexdigest()
-    
-    text_blocks = data.get("content", "").split('\n\n')
-    
-    for i, block in enumerate(text_blocks):
-        clean_block = block.strip()
-        if not clean_block:
-            continue
-            
-        # Extract page number from the block content
-        page_number = extract_page_number(clean_block)
-        
-        split_chunks = split_content(clean_block, f"{parent_id_base}_block_{i}")
-        for chunk_data in split_chunks:
-            chunk_metadata = {
-                **parent_metadata, "source_file": source_filename,
-                "type": "documentation_text",
-                "page": page_number
-            }
-            # Add SDK-specific metadata
-            chunk_metadata = add_sdk_metadata(chunk_metadata, chunk_data["content"])
-            chunks.append({
-                "id": chunk_data["id"], "content": chunk_data["content"],
-                "metadata": {k: _sanitize_metadata_value(v) for k, v in chunk_metadata.items()}
-            })
+
+    # Get entire content as one string (don't split by paragraphs)
+    full_content = data.get("content", "").strip()
+
+    if not full_content:
+        return chunks
+
+    # Apply sliding window to entire document
+    split_chunks = split_content(full_content, parent_id_base)
+
+    for chunk_data in split_chunks:
+        # Extract page number from this chunk's content
+        page_number = extract_page_number(chunk_data["content"])
+
+        chunk_metadata = {
+            **parent_metadata, "source_file": source_filename,
+            "type": "documentation_text",
+            "page": page_number
+        }
+        # Add SDK-specific metadata
+        chunk_metadata = add_sdk_metadata(chunk_metadata, chunk_data["content"])
+        chunks.append({
+            "id": chunk_data["id"], "content": chunk_data["content"],
+            "metadata": {k: _sanitize_metadata_value(v) for k, v in chunk_metadata.items()}
+        })
+
     return chunks
 
 def chunk_example_file(data: dict) -> list:
@@ -596,6 +598,75 @@ def chunk_structured_table_file(data: dict) -> list:
                 "metadata": {k: _sanitize_metadata_value(v) for k, v in chunk_metadata.items()}
             })
             
+    return chunks
+
+def chunk_complete_table_file(data: dict) -> list:
+    """
+    Chunks table data ROW-BY-ROW with headers and notes repeated for each row.
+    Each chunk = table caption + headers + ONE row + notes.
+
+    Used for HTML tables to make each row independently searchable.
+    """
+    chunks = []
+    parent_metadata = data.get("metadata", {})
+    source_file = data.get("source_file", "")
+    source_filename = Path(source_file).name if source_file else ""
+    parent_id_base = hashlib.md5(source_file.encode()).hexdigest()
+
+    for i, table in enumerate(data.get("content", [])):
+        headers = table.get("headers", [])
+        table_data = table.get("data", [])
+        notes = table.get("notes", "")
+        caption = table.get("table_caption", "")
+
+        # Format headers once
+        header_str = " | ".join(str(h) for h in headers if h is not None and str(h).strip() != '')
+
+        # Create one chunk per row
+        for row_index, row in enumerate(table_data):
+            processed_row = []
+            for cell in row:
+                cell_str = str(cell) if cell is not None else ""
+
+                # Convert compatibility symbols to text for better embeddings
+                if cell_str == '✔' or cell_str == '✓':
+                    processed_row.append('is-compatible')
+                elif cell_str == '-' or cell_str == '':
+                    processed_row.append('not-compatible')
+                else:
+                    processed_row.append(cell_str)
+
+            row_str = " | ".join(processed_row)
+
+            # Build content: caption + headers + this row + notes
+            content = f"Table: {caption}\n" if caption else "Table\n"
+            content += f"Headers: {header_str}\n"
+            content += f"Row: {row_str}"
+
+            if notes:
+                content += f"\n---\nNotes: {notes}"
+
+            chunk_id = create_chunk_id(content, f"{parent_id_base}_table_{i}", row_index)
+
+            chunk_metadata = {
+                **parent_metadata,
+                "source_file": source_filename,
+                "type": "documentation_table",
+                "table_index": i,
+                "table_caption": caption,
+                "row_index": row_index,
+                "num_columns": len(headers)
+            }
+
+            # Add SDK-specific metadata (extracts API names, error codes, etc.)
+            chunk_metadata = add_sdk_metadata(chunk_metadata, content)
+
+            chunks.append({
+                "id": chunk_id,
+                "content": content,
+                "metadata": {k: _sanitize_metadata_value(v) for k, v in chunk_metadata.items()}
+            })
+
     return chunks
 
 # === C++ Source File Processing Functions ===
@@ -984,6 +1055,10 @@ def main():
             elif file_type in ["pdf_tables", "csv"]:
                 chunks = chunk_structured_table_file(data)
                 print(f"  [Table] Chunked '{file_path.name}' into {len(chunks)} chunks.")
+            elif file_type == "html_tables":
+                # Use NEW complete table chunker (not row-by-row)
+                chunks = chunk_complete_table_file(data)
+                print(f"  [HTML Table] Chunked '{file_path.name}' into {len(chunks)} chunks.")
             elif data.get("kind") in ["class", "struct", "namespace", "file"]:
                 # Process C++ API files
                 chunks = chunk_api_file(data)

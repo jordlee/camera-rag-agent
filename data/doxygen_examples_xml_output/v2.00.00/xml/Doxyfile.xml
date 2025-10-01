@@ -6,7 +6,7 @@
   <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["Parsed C++ SDK Examples for RAG v2.00.00"]]></value></option>
   <option  id='PROJECT_LOGO' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='PROJECT_ICON' default='yes' type='string'><value><![CDATA[]]></value></option>
-  <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/doxygen_examples_xml_output/v2.00.00]]></value></option>
+  <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/doxygen_examples_xml_output/v2.00.00]]></value></option>
   <option  id='CREATE_SUBDIRS' default='yes' type='bool'><value>NO</value></option>
   <option  id='CREATE_SUBDIRS_LEVEL' default='yes' type='int'><value>8</value></option>
   <option  id='ALLOW_UNICODE_NAMES' default='yes' type='bool'><value>NO</value></option>
@@ -128,21 +128,21 @@
   <option  id='WARN_LINE_FORMAT' default='yes' type='string'><value><![CDATA["at line $line of file $file"]]></value></option>
   <option  id='WARN_LOGFILE' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='INPUT' default='no' type='stringlist'>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.cpp]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.h]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/Text.cpp]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/Text.h]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/RemoteCli.cpp]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.cpp]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.h]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.cpp]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.h]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/OpenCVWrapper.cpp]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/OpenCVWrapper.h]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.cpp]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/PropertyValueTable.h]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.cpp]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/ConnectionInfo.h]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/Text.cpp]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/Text.h]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.cpp]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CrDebugString.h]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/RemoteCli.cpp]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.cpp]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/MessageDefine.h]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.cpp]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CameraDevice.h]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/OpenCVWrapper.cpp]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/OpenCVWrapper.h]]></value>
   </option>
   <option  id='INPUT_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='INPUT_FILE_ENCODING' default='yes' type='stringlist'>
@@ -313,8 +313,8 @@
   <option  id='EXPAND_ONLY_PREDEF' default='yes' type='bool'><value>NO</value></option>
   <option  id='SEARCH_INCLUDES' default='yes' type='bool'><value>YES</value></option>
   <option  id='INCLUDE_PATH' default='no' type='stringlist'>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00]]></value>
-    <value><![CDATA[/Users/jordanlee/Documents/GitHub/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CRSDK]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00]]></value>
+    <value><![CDATA[/Users/jordanlee/Documents/Github/sdk-rag-agent/data/raw_sdk_docs/sdk_source/v2.00.00/CRSDK]]></value>
   </option>
   <option  id='INCLUDE_FILE_PATTERNS' default='yes' type='stringlist'>
   </option>
