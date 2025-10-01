@@ -333,11 +333,43 @@ class RAGSearch:
 
             logger.info(f"Found {len(processed_results)} results for query: {query[:50]}... (SDK: {self.current_version})")
             return processed_results
-            
+
         except Exception as e:
             logger.error(f"Search error: {e}")
             raise
-    
+
+    def fetch_by_id(self, doc_id: str) -> Optional[Dict[str, Any]]:
+        """
+        Fetch a specific document by ID from Pinecone.
+        Used by ChatGPT's fetch tool.
+
+        Args:
+            doc_id: Pinecone document ID
+
+        Returns:
+            Document with full content and metadata, or None if not found
+        """
+        try:
+            result = self.index.fetch(ids=[doc_id])
+
+            # Pinecone returns a FetchResponse object with .vectors attribute
+            if not hasattr(result, 'vectors') or doc_id not in result.vectors:
+                logger.warning(f"Document ID not found: {doc_id}")
+                return None
+
+            vector_data = result.vectors[doc_id]
+
+            return {
+                "id": doc_id,
+                "content": vector_data.metadata.get("content", "") if vector_data.metadata else "",
+                "metadata": {k: v for k, v in vector_data.metadata.items() if k != "content"} if vector_data.metadata else {},
+                "sdk_version": self.current_version
+            }
+
+        except Exception as e:
+            logger.error(f"Error fetching document {doc_id}: {e}")
+            return None
+
     async def search_async(self,
                           query: str,
                           top_k: int = 5,

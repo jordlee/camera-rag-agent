@@ -360,6 +360,142 @@ def get_current_sdk_version() -> str:
         logger.exception("Get version error")
         return json.dumps({"error": str(e)})
 
+@mcp.tool()
+async def search(query: str) -> str:
+    """
+    Search the Camera Remote SDK documentation and return document IDs.
+
+    This tool implements OpenAI's search specification for ChatGPT Deep Research.
+    Uses intelligent intent-based routing to automatically select the best search strategy.
+
+    Args:
+        query: Natural language search query
+
+    Returns:
+        JSON string with MCP content format containing result IDs, titles, and URLs
+    """
+    if rag_search is None:
+        error_response = {
+            "content": [{
+                "type": "text",
+                "text": json.dumps({"error": "RAG search system not initialized"})
+            }]
+        }
+        return json.dumps(error_response)
+
+    try:
+        # Use intelligent search with intent detection (same as search_sdk)
+        search_results = await rag_search.search_with_intent(
+            query,
+            top_k=10,
+            use_intent_mapping=True
+        )
+
+        # Extract results from intent search response
+        result_list = search_results.get("results", [])
+
+        # Format results according to OpenAI specification
+        chatgpt_results = {
+            "results": [
+                {
+                    "id": r["id"],
+                    "title": (r["content"][:100] + "...") if len(r.get("content", "")) > 100 else r.get("content", "No content"),
+                    "url": f"https://sdk-rag-agent-production.up.railway.app/doc/{r['id']}"
+                }
+                for r in result_list
+            ]
+        }
+
+        # Return in MCP content array format (OpenAI requirement)
+        mcp_response = {
+            "content": [{
+                "type": "text",
+                "text": json.dumps(chatgpt_results)
+            }]
+        }
+
+        logger.info(f"ChatGPT search: found {len(result_list)} results for '{query[:50]}...'")
+        return json.dumps(mcp_response)
+
+    except Exception as e:
+        logger.exception("ChatGPT search tool error")
+        error_response = {
+            "content": [{
+                "type": "text",
+                "text": json.dumps({"error": str(e), "query": query})
+            }]
+        }
+        return json.dumps(error_response)
+
+@mcp.tool()
+def fetch(id: str) -> str:
+    """
+    Fetch full content of a specific SDK document by ID.
+
+    This tool implements OpenAI's fetch specification for ChatGPT Deep Research.
+    Retrieves the complete document content for a given ID returned by the search tool.
+
+    Args:
+        id: Document ID from search results
+
+    Returns:
+        JSON string with MCP content format containing full document text and metadata
+    """
+    if rag_search is None:
+        error_response = {
+            "content": [{
+                "type": "text",
+                "text": json.dumps({"error": "RAG search system not initialized"})
+            }]
+        }
+        return json.dumps(error_response)
+
+    try:
+        # Fetch document from Pinecone by ID
+        doc = rag_search.fetch_by_id(id)
+
+        if doc is None:
+            error_response = {
+                "content": [{
+                    "type": "text",
+                    "text": json.dumps({"error": f"Document not found: {id}"})
+                }]
+            }
+            return json.dumps(error_response)
+
+        # Format according to OpenAI specification
+        chatgpt_doc = {
+            "id": doc["id"],
+            "title": (doc["content"][:100] + "...") if len(doc["content"]) > 100 else doc["content"],
+            "text": doc["content"],
+            "url": f"https://sdk-rag-agent-production.up.railway.app/doc/{doc['id']}",
+            "metadata": {
+                **doc["metadata"],
+                "sdk_version": doc["sdk_version"]
+            }
+        }
+
+        # Return in MCP content array format (OpenAI requirement)
+        mcp_response = {
+            "content": [{
+                "type": "text",
+                "text": json.dumps(chatgpt_doc)
+            }]
+        }
+
+        logger.info(f"ChatGPT fetch: retrieved document {id}")
+        return json.dumps(mcp_response)
+
+    except Exception as e:
+        logger.exception(f"ChatGPT fetch tool error for ID: {id}")
+        error_response = {
+            "content": [{
+                "type": "text",
+                "text": json.dumps({"error": str(e), "id": id})
+            }]
+        }
+        return json.dumps(error_response)
+
 # Keepalive task
 async def keepalive_task():
     """Send periodic keepalive messages to maintain connection."""
@@ -520,8 +656,12 @@ if __name__ == "__main__":
     host = os.environ.get("HOST", "0.0.0.0")
     
     logger.info(f"Starting FastMCP server on {host}:{port}")
-    logger.info("Available tools: search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, set_sdk_version, get_current_sdk_version")
+    logger.info("=== MCP Tools Available ===")
+    logger.info("Claude-compatible tools (14): search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, search_with_intent_analysis, set_sdk_version, get_current_sdk_version")
+    logger.info("ChatGPT-compatible tools (2): search, fetch")
+    logger.info("Total: 16 MCP tools registered")
     logger.info("Version management: Multi-SDK support (V1.14.00, V2.00.00)")
+    logger.info("ChatGPT Deep Research: Compatible ✓")
     logger.info("Health check: /health")
     logger.info("SSE endpoint: /sse")
     logger.info("MCP endpoint: /mcp")
