@@ -17,7 +17,8 @@ logger = logging.getLogger(__name__)
 
 # Rate limiting configuration
 RATE_LIMIT_ENABLED = os.getenv("RATE_LIMIT_ENABLED", "true").lower() == "true"
-RATE_LIMIT_PER_MINUTE = int(os.getenv("RATE_LIMIT_PER_MINUTE", "10"))
+RATE_LIMIT_PER_MINUTE = int(os.getenv("RATE_LIMIT_PER_MINUTE", "100"))
+RATE_LIMIT_PER_SECOND = int(os.getenv("RATE_LIMIT_PER_SECOND", "20"))
 RATE_LIMIT_WINDOW = 60  # seconds
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 
@@ -126,15 +127,16 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
 
             if not is_allowed:
                 # Rate limit exceeded
-                logger.warning(f"[RATE_LIMIT] IP {client_ip} exceeded {RATE_LIMIT_PER_MINUTE}/min on {request.url.path}")
+                limit_type = "per-second burst" if retry_after == 1 else "per-minute"
+                logger.warning(f"[RATE_LIMIT] IP {client_ip} exceeded limits ({limit_type}) on {request.url.path}")
 
                 return JSONResponse(
                     status_code=429,
                     content={
                         "error": "Rate limit exceeded",
-                        "message": f"You have exceeded {RATE_LIMIT_PER_MINUTE} requests per minute. Please try again in {retry_after} seconds.",
+                        "message": f"Rate limit exceeded. Please try again in {retry_after} seconds.",
                         "retry_after": retry_after,
-                        "limit": f"{RATE_LIMIT_PER_MINUTE} per minute",
+                        "limit": f"{RATE_LIMIT_PER_MINUTE}/min, {RATE_LIMIT_PER_SECOND}/sec",
                         "ip": client_ip,
                         "endpoint": request.url.path,
                         "timestamp": datetime.now().isoformat()
@@ -169,6 +171,20 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
             (is_allowed, retry_after_seconds)
         """
         try:
+            # Check per-second limit first (burst protection)
+            second_key = f"rate_limit:{client_ip}:second"
+            second_count = self.redis.get(second_key)
+
+            if second_count is None:
+                self.redis.setex(second_key, 1, 1)
+            else:
+                second_count = int(second_count)
+                if second_count >= RATE_LIMIT_PER_SECOND:
+                    logger.warning(f"[RATE_LIMIT] IP {client_ip} exceeded {RATE_LIMIT_PER_SECOND}/sec (burst protection)")
+                    return (False, 1)
+                self.redis.incr(second_key)
+
+            # Check per-minute limit
             key = f"rate_limit:{client_ip}"
 
             # Get current count
