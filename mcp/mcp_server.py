@@ -52,7 +52,15 @@ CONNECTION_TIMEOUT = 10.0  # seconds
 
 @mcp.tool()
 async def search_sdk(query: str, top_k: int = 5) -> str:
-    """Search the Camera Remote SDK documentation and code examples using intelligent LLM-based intent mapping and multi-modal search for optimal results."""
+    """
+    Search the Camera Remote SDK documentation and C++ code examples.
+
+    NOTE FOR C# DEVELOPERS: This returns documentation with C++ examples by default.
+    After getting results, use search_code_examples(query, language="csharp")
+    to find C# implementations of the same SDK concepts.
+
+    Uses intelligent LLM-based intent mapping and multi-modal search for optimal results.
+    """
     if rag_search is None:
         return json.dumps({"error": "RAG search system not initialized"})
 
@@ -105,13 +113,34 @@ async def search_sdk(query: str, top_k: int = 5) -> str:
             return json.dumps({"error": str(fallback_error)})
 
 @mcp.tool()
-def search_code_examples(query: str, top_k: int = 5) -> str:
-    """Search specifically for C++ code examples and implementations."""
+def search_code_examples(query: str, language: str = "cpp", top_k: int = 5) -> str:
+    """
+    Search SDK code examples by programming language.
+
+    Args:
+        query: Search query (e.g., "connect to camera", "OnConnected callback")
+        language: "cpp" (default), "csharp", or "all"
+        top_k: Number of results to return
+
+    For C# developers: Set language="csharp" to get C# implementations
+    of SDK concepts found in documentation.
+
+    Examples:
+        - search_code_examples("connect to camera") → C++ examples
+        - search_code_examples("OnConnected callback", language="csharp") → C# examples
+        - search_code_examples("property handling", language="all") → Both C++ and C#
+    """
     if rag_search is None:
         return "RAG search system not initialized"
-    
+
     try:
-        results = rag_search.search(query, top_k=top_k, content_type_filter="example_code")
+        # Build filter for code examples with language
+        filter_dict = {"type": "example_code"}
+
+        if language != "all":
+            filter_dict["language"] = language
+
+        results = rag_search.search(query, top_k=top_k, metadata_filter=filter_dict)
         return json.dumps(results, indent=2)
     except Exception as e:
         logger.exception("Code search error")

@@ -284,32 +284,41 @@ class RAGSearch:
             logger.error(f"Async embedding error: {e}")
             raise
     
-    def search(self, 
-               query: str, 
+    def search(self,
+               query: str,
                top_k: int = 5,
                content_type_filter: Optional[str] = None,
+               metadata_filter: Optional[Dict[str, Any]] = None,
                namespace: Optional[str] = None) -> List[Dict[str, Any]]:
         """
         Search for relevant chunks in Pinecone.
-        
+
         Args:
             query: Search query string
             top_k: Number of results to return
             content_type_filter: Filter by content type (example_code, documentation_text, etc.)
+            metadata_filter: Custom metadata filter dict (overrides content_type_filter if provided)
             namespace: Pinecone namespace to search in
-            
+
         Returns:
             List of matching chunks with content and metadata
         """
         try:
             # Generate query embedding
             query_embedding = self.embed_query(query)
-            
-            # Build filter for content type if specified
-            filter_dict = {}
-            if content_type_filter:
-                filter_dict["type"] = content_type_filter
-            
+
+            # Build filter - metadata_filter takes precedence
+            if metadata_filter:
+                filter_dict = metadata_filter
+            elif content_type_filter:
+                filter_dict = {"type": content_type_filter}
+            else:
+                filter_dict = {}
+
+            # Add SDK version to filter
+            if filter_dict and self.current_version:
+                filter_dict["sdk_version"] = self.current_version
+
             # Search in Pinecone
             results = self.index.query(
                 vector=query_embedding,
@@ -445,14 +454,26 @@ class RAGSearch:
                 await progress_callback({"status": "error", "error": str(e)})
             raise
     
-    def search_code_examples(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+    def search_code_examples(self, query: str, language: str = "cpp", top_k: int = 5) -> List[Dict[str, Any]]:
         """
-        Search C++ code examples and implementations (229 chunks).
-        
-        These are actual C++ function implementations, static maps, and code structures
-        extracted from the SDK source code files.
+        Search code examples and implementations by language.
+
+        Args:
+            query: Search query
+            language: "cpp" (default), "csharp", or "all"
+            top_k: Number of results
+
+        Examples:
+            - C++ code (229 chunks): search_code_examples("connect", language="cpp")
+            - C# code (233 chunks): search_code_examples("OnConnected", language="csharp")
+            - Both languages: search_code_examples("property handling", language="all")
         """
-        return self.search(query, top_k=top_k, content_type_filter="example_code")
+        filter_dict = {"type": "example_code"}
+
+        if language != "all":
+            filter_dict["language"] = language
+
+        return self.search(query, top_k=top_k, metadata_filter=filter_dict)
     
     def search_documentation(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
         """

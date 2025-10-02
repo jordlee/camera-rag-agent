@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{015FE221-96B2-289B-A0E8-6E7354784A75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "raw_sdk_docs", "raw_sdk_docs", "{68E63FF8-D4AD-0E85-7403-9CE8DAF9821A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sdk_source", "sdk_source", "{E4F0555A-AAAA-CA6E-001C-A4BC0FFD3394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleFormsApp", "data\raw_sdk_docs\sdk_source\V2.00.00-C#\SampleFormsApp.csproj", "{7B86644D-9E9B-34D7-C799-95CB1E4D15ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B86644D-9E9B-34D7-C799-95CB1E4D15ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B86644D-9E9B-34D7-C799-95CB1E4D15ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B86644D-9E9B-34D7-C799-95CB1E4D15ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B86644D-9E9B-34D7-C799-95CB1E4D15ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68E63FF8-D4AD-0E85-7403-9CE8DAF9821A} = {015FE221-96B2-289B-A0E8-6E7354784A75}
+		{E4F0555A-AAAA-CA6E-001C-A4BC0FFD3394} = {68E63FF8-D4AD-0E85-7403-9CE8DAF9821A}
+		{7B86644D-9E9B-34D7-C799-95CB1E4D15ED} = {E4F0555A-AAAA-CA6E-001C-A4BC0FFD3394}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80396ACB-6B45-4084-8A92-9EFDC11F9BBB}
+	EndGlobalSection
+EndGlobal
