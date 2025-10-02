@@ -132,6 +132,112 @@ def create_chunk_from_method(method: Dict[str, Any], file_data: Dict[str, Any]) 
 
     return chunks
 
+def create_chunk_from_field(field: Dict[str, Any], file_data: Dict[str, Any]) -> Dict[str, Any]:
+    """Convert field declaration to chunk."""
+    # Build content: full field declaration
+    content = f"{field['visibility']} "
+    if field['is_static']:
+        content += "static "
+    if field['is_readonly']:
+        content += "readonly "
+    content += f"{field['data_type']} {field['name']}"
+    if field['initializer']:
+        content += f" = {field['initializer']}"
+    content += ";"
+
+    # Build metadata (consistent with method chunks)
+    metadata = {
+        "type": "example_code",
+        "original_type": "class_field",
+        "member_name": field['name'],
+        "field_type": field['data_type'],
+        "is_array": field['is_array'],
+        "is_static": field['is_static'],
+        "is_readonly": field['is_readonly'],
+        "visibility": field['visibility'],
+        "line_number": field['line_number'],
+        "class_name": field['class_name'],
+        "source_file": file_data['filename'],
+        "sdk_version": "V2.00.00",
+        "language": "csharp"
+    }
+
+    # Add SDK types if present
+    if field.get('sdk_types_used'):
+        metadata['sdk_types_used'] = field['sdk_types_used']
+
+    # Generate chunk ID
+    chunk_id = generate_chunk_id(content, prefix="csharp_field")
+
+    return {
+        "id": chunk_id,
+        "content": content,
+        "metadata": metadata
+    }
+
+def create_chunk_from_delegate(delegate: Dict[str, Any], file_data: Dict[str, Any]) -> Dict[str, Any]:
+    """Convert delegate declaration to chunk."""
+    # Build content: full delegate declaration
+    content = f"{delegate['visibility']} delegate {delegate['return_type']} {delegate['name']}({delegate['parameters']});"
+
+    # Build metadata (consistent with method chunks)
+    metadata = {
+        "type": "example_code",
+        "original_type": "delegate_declaration",
+        "member_name": delegate['name'],
+        "return_type": delegate['return_type'],
+        "parameters": delegate['parameters'],
+        "visibility": delegate['visibility'],
+        "line_number": delegate['line_number'],
+        "class_name": delegate['class_name'],
+        "source_file": file_data['filename'],
+        "sdk_version": "V2.00.00",
+        "language": "csharp"
+    }
+
+    # Generate chunk ID
+    chunk_id = generate_chunk_id(content, prefix="csharp_delegate")
+
+    return {
+        "id": chunk_id,
+        "content": content,
+        "metadata": metadata
+    }
+
+def create_chunk_from_constant(constant: Dict[str, Any], file_data: Dict[str, Any]) -> Dict[str, Any]:
+    """Convert constant declaration to chunk."""
+    # Build content: full constant declaration with comment
+    content = f"{constant['visibility']} const {constant['data_type']} {constant['name']} = {constant['value']};"
+    if constant.get('comment'):
+        content += f" // {constant['comment']}"
+
+    # Build metadata (consistent with method chunks)
+    metadata = {
+        "type": "example_code",
+        "original_type": "constant",
+        "member_name": constant['name'],
+        "data_type": constant['data_type'],
+        "value": constant['value'],
+        "visibility": constant['visibility'],
+        "line_number": constant['line_number'],
+        "class_name": constant['class_name'],
+        "source_file": file_data['filename'],
+        "sdk_version": "V2.00.00",
+        "language": "csharp"
+    }
+
+    if constant.get('comment'):
+        metadata['comment'] = constant['comment']
+
+    # Generate chunk ID
+    chunk_id = generate_chunk_id(content, prefix="csharp_const")
+
+    return {
+        "id": chunk_id,
+        "content": content,
+        "metadata": metadata
+    }
+
 def load_parsed_csharp_files() -> List[Dict[str, Any]]:
     """Load all parsed C# JSON files."""
     parsed_files = []
@@ -152,7 +258,7 @@ def load_parsed_csharp_files() -> List[Dict[str, Any]]:
     return parsed_files
 
 def chunk_csharp_code() -> List[Dict[str, Any]]:
-    """Convert all parsed C# methods to chunks."""
+    """Convert all parsed C# content (methods, fields, delegates, constants) to chunks."""
     chunks = []
     split_count = 0
 
@@ -161,9 +267,13 @@ def chunk_csharp_code() -> List[Dict[str, Any]]:
     for file_data in parsed_files:
         filename = file_data['filename']
         methods = file_data.get('methods', [])
+        fields = file_data.get('fields', [])
+        delegates = file_data.get('delegates', [])
+        constants = file_data.get('constants', [])
 
-        print(f"Processing {filename}: {len(methods)} methods")
+        print(f"Processing {filename}: {len(methods)} methods, {len(fields)} fields, {len(delegates)} delegates, {len(constants)} constants")
 
+        # Process methods
         for method in methods:
             method_chunks = create_chunk_from_method(method, file_data)
             chunks.extend(method_chunks)
@@ -171,6 +281,18 @@ def chunk_csharp_code() -> List[Dict[str, Any]]:
             if len(method_chunks) > 1:
                 split_count += 1
                 print(f"  Split {method['name']}: {len(method_chunks)} parts")
+
+        # Process fields
+        for field in fields:
+            chunks.append(create_chunk_from_field(field, file_data))
+
+        # Process delegates
+        for delegate in delegates:
+            chunks.append(create_chunk_from_delegate(delegate, file_data))
+
+        # Process constants
+        for constant in constants:
+            chunks.append(create_chunk_from_constant(constant, file_data))
 
     if split_count > 0:
         print(f"\nTotal methods split: {split_count}")
@@ -186,11 +308,17 @@ def save_chunks(chunks: List[Dict[str, Any]]):
 
 def print_chunk_stats(chunks: List[Dict[str, Any]]):
     """Print statistics about chunks."""
-    # Count by original_type
+    # Count by type (methods use 'original_type', others use 'type')
     type_counts = {}
     for chunk in chunks:
-        orig_type = chunk['metadata'].get('original_type', 'unknown')
-        type_counts[orig_type] = type_counts.get(orig_type, 0) + 1
+        metadata = chunk['metadata']
+        chunk_type = metadata.get('type', 'unknown')
+
+        # For example_code chunks, use original_type for more detail
+        if chunk_type == 'example_code':
+            chunk_type = metadata.get('original_type', 'example_code')
+
+        type_counts[chunk_type] = type_counts.get(chunk_type, 0) + 1
 
     # Count by file
     file_counts = {}

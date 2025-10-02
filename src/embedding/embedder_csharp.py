@@ -117,6 +117,9 @@ def prepare_pinecone_vectors(chunks, embeddings):
         # Convert metadata arrays to strings for Pinecone
         metadata = chunk['metadata'].copy()
 
+        # CRITICAL: Add content to metadata so it can be retrieved during search
+        metadata['content'] = chunk['content']
+
         # Handle array fields
         if 'function_name' in metadata and isinstance(metadata['function_name'], list):
             metadata['function_name'] = ','.join(metadata['function_name'])
@@ -137,10 +140,55 @@ def prepare_pinecone_vectors(chunks, embeddings):
 
     return vectors
 
+def delete_csharp_chunks(index):
+    """Delete existing C# chunks from Pinecone before re-embedding."""
+    print("\n🗑️  Deleting existing C# chunks...")
+
+    try:
+        # Query for all C# chunks (using dummy vector since we're filtering by metadata)
+        dummy_vector = [0.0] * 768  # GTE-ModernBERT dimension
+
+        # Fetch all C# chunk IDs in batches
+        all_csharp_ids = []
+        batch_size = 10000
+
+        results = index.query(
+            vector=dummy_vector,
+            top_k=batch_size,
+            include_metadata=True,
+            filter={"language": "csharp"}
+        )
+
+        for match in results.get('matches', []):
+            all_csharp_ids.append(match['id'])
+
+        if not all_csharp_ids:
+            print("  No existing C# chunks found")
+            return 0
+
+        print(f"  Found {len(all_csharp_ids)} C# chunks to delete")
+
+        # Delete in batches (Pinecone limit is 1000 per delete)
+        deleted_count = 0
+        delete_batch_size = 1000
+
+        for i in range(0, len(all_csharp_ids), delete_batch_size):
+            batch_ids = all_csharp_ids[i:i + delete_batch_size]
+            index.delete(ids=batch_ids)
+            deleted_count += len(batch_ids)
+            print(f"  Deleted {deleted_count}/{len(all_csharp_ids)} chunks", end='\r')
+
+        print(f"\n✅ Deleted {deleted_count} old C# chunks")
+        return deleted_count
+
+    except Exception as e:
+        print(f"\n⚠️  Warning: Could not delete old chunks: {e}")
+        print("  Continuing with upsert (will overwrite existing IDs)...")
+        return 0
+
 def upsert_to_pinecone(index, vectors):
-    """Upsert vectors to Pinecone in batches (append only)."""
+    """Upsert vectors to Pinecone in batches."""
     print(f"\nUpserting {len(vectors)} vectors to Pinecone...")
-    print("⚠️  APPEND-ONLY MODE: Existing data will NOT be deleted")
 
     total_upserted = 0
 
@@ -198,22 +246,26 @@ def main():
     # 2. Connect to Pinecone
     index, initial_count = init_pinecone()
 
-    # 3. Load embedding model
+    # 3. Delete existing C# chunks
+    deleted_count = delete_csharp_chunks(index)
+
+    # 4. Load embedding model
     model = load_embedding_model()
 
-    # 4. Create embeddings
+    # 5. Create embeddings
     embeddings = create_embeddings(chunks, model)
 
-    # 5. Prepare vectors
+    # 6. Prepare vectors
     print("\nPreparing vectors for Pinecone...")
     vectors = prepare_pinecone_vectors(chunks, embeddings)
     print(f"Prepared {len(vectors)} vectors")
 
-    # 6. Upsert to Pinecone (append only)
+    # 7. Upsert to Pinecone
     total_upserted = upsert_to_pinecone(index, vectors)
 
-    # 7. Verify
-    final_count = verify_upsert(index, initial_count, total_upserted)
+    # 8. Verify (expected change = upserted - deleted)
+    expected_change = total_upserted - deleted_count
+    final_count = verify_upsert(index, initial_count, expected_change)
 
     print("\n" + "=" * 70)
     print("COMPLETE")

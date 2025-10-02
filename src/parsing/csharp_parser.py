@@ -172,6 +172,104 @@ def extract_function_calls(code: str) -> List[str]:
 
     return sorted(list(calls))
 
+def extract_fields(content: str, class_name: str) -> List[Dict[str, Any]]:
+    """Extract class-level field declarations."""
+    fields = []
+    lines = content.split('\n')
+
+    # Pattern for field declarations (handles generics and arrays)
+    # Matches: private/public/protected [static] [readonly] Type fieldName = initializer;
+    pattern = r'^\s*(public|private|protected|internal)\s+(static\s+)?(readonly\s+)?([\w<>,\s\[\]]+)\s+(\w+)\s*(=\s*(.+?))?;'
+
+    for i, line in enumerate(lines):
+        match = re.match(pattern, line)
+        if match:
+            visibility = match.group(1)
+            is_static = match.group(2) is not None
+            is_readonly = match.group(3) is not None
+            data_type = match.group(4).strip()
+            field_name = match.group(5)
+            initializer = match.group(7).strip() if match.group(7) else None
+
+            # Check if it's an array type
+            is_array = '[]' in data_type
+
+            # Extract SDK types used in field declaration
+            sdk_types = extract_sdk_types(line)
+
+            fields.append({
+                "name": field_name,
+                "visibility": visibility,
+                "is_static": is_static,
+                "is_readonly": is_readonly,
+                "data_type": data_type,
+                "is_array": is_array,
+                "initializer": initializer,
+                "line_number": i + 1,
+                "sdk_types_used": sdk_types,
+                "class_name": class_name
+            })
+
+    return fields
+
+def extract_delegates(content: str, class_name: str) -> List[Dict[str, Any]]:
+    """Extract delegate declarations."""
+    delegates = []
+    lines = content.split('\n')
+
+    # Pattern for delegate declarations
+    # Matches: private/public delegate ReturnType DelegateName(params);
+    pattern = r'^\s*(public|private|protected)\s+delegate\s+(\w+)\s+(\w+)\s*\(([^)]*)\);'
+
+    for i, line in enumerate(lines):
+        match = re.match(pattern, line)
+        if match:
+            visibility = match.group(1)
+            return_type = match.group(2)
+            delegate_name = match.group(3)
+            parameters = match.group(4)
+
+            delegates.append({
+                "name": delegate_name,
+                "visibility": visibility,
+                "return_type": return_type,
+                "parameters": parameters,
+                "line_number": i + 1,
+                "class_name": class_name
+            })
+
+    return delegates
+
+def extract_constants(content: str, class_name: str) -> List[Dict[str, Any]]:
+    """Extract constant declarations."""
+    constants = []
+    lines = content.split('\n')
+
+    # Pattern for const declarations
+    # Matches: private/public const Type NAME = value; // comment
+    pattern = r'^\s*(public|private|protected)\s+const\s+(\w+)\s+(\w+)\s*=\s*(.+?);(?:\s*//(.+))?'
+
+    for i, line in enumerate(lines):
+        match = re.match(pattern, line)
+        if match:
+            visibility = match.group(1)
+            data_type = match.group(2)
+            const_name = match.group(3)
+            value = match.group(4).strip()
+            comment = match.group(5).strip() if match.group(5) else None
+
+            constants.append({
+                "name": const_name,
+                "visibility": visibility,
+                "data_type": data_type,
+                "value": value,
+                "comment": comment,
+                "line_number": i + 1,
+                "class_name": class_name
+            })
+
+    return constants
+
 def parse_csharp_file(filepath: str) -> Dict[str, Any]:
     """Parse a single C# file."""
     with open(filepath, 'r', encoding='utf-8-sig') as f:
@@ -181,13 +279,30 @@ def parse_csharp_file(filepath: str) -> Dict[str, Any]:
     namespace = extract_namespace(content)
     classes = extract_class_info(content)
 
-    # Extract methods for each class
+    # Extract methods, fields, delegates, and constants for each class
     all_methods = []
+    all_fields = []
+    all_delegates = []
+    all_constants = []
+
     for cls in classes:
+        # Methods
         methods = extract_methods(content, cls["name"])
         for method in methods:
             method["implements"] = cls.get("implements")
         all_methods.extend(methods)
+
+        # Fields
+        fields = extract_fields(content, cls["name"])
+        all_fields.extend(fields)
+
+        # Delegates
+        delegates = extract_delegates(content, cls["name"])
+        all_delegates.extend(delegates)
+
+        # Constants
+        constants = extract_constants(content, cls["name"])
+        all_constants.extend(constants)
 
     return {
         "filename": filename,
@@ -195,6 +310,9 @@ def parse_csharp_file(filepath: str) -> Dict[str, Any]:
         "namespace": namespace,
         "classes": classes,
         "methods": all_methods,
+        "fields": all_fields,
+        "delegates": all_delegates,
+        "constants": all_constants,
         "sdk_version": SDK_VERSION,
         "language": "csharp"
     }
@@ -230,8 +348,11 @@ def parse_all_csharp_files() -> List[Dict[str, Any]]:
 
             # Print stats
             num_methods = len(parsed_data['methods'])
+            num_fields = len(parsed_data['fields'])
+            num_delegates = len(parsed_data['delegates'])
+            num_constants = len(parsed_data['constants'])
             num_classes = len(parsed_data['classes'])
-            print(f"  Found {num_classes} classes, {num_methods} methods")
+            print(f"  Found {num_classes} classes, {num_methods} methods, {num_fields} fields, {num_delegates} delegates, {num_constants} constants")
 
         except Exception as e:
             print(f"  ERROR parsing {filename}: {e}")
@@ -264,6 +385,9 @@ def main():
 
         # Print summary
         total_methods = sum(len(f['methods']) for f in parsed_files)
+        total_fields = sum(len(f['fields']) for f in parsed_files)
+        total_delegates = sum(len(f['delegates']) for f in parsed_files)
+        total_constants = sum(len(f['constants']) for f in parsed_files)
         total_classes = sum(len(f['classes']) for f in parsed_files)
 
         print("\n" + "=" * 60)
@@ -272,6 +396,9 @@ def main():
         print(f"Files parsed: {len(parsed_files)}")
         print(f"Total classes: {total_classes}")
         print(f"Total methods: {total_methods}")
+        print(f"Total fields: {total_fields}")
+        print(f"Total delegates: {total_delegates}")
+        print(f"Total constants: {total_constants}")
         print(f"Output directory: {PARSED_OUTPUT_DIR}")
     else:
         print("\nNo files parsed.")
