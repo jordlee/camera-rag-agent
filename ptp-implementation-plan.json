@@ -1,0 +1,401 @@
+{
+  "title": "PTP SDK Integration - Implementation Plan",
+  "scope": "Add PTP SDK support via metadata filter tools (per system-design.md)",
+  "overview": {
+    "approach": "Add 4 new metadata filter tools that work with all existing search tools",
+    "new_mcp_tools": [
+      "set_sdk_type",
+      "set_sdk_language",
+      "set_sdk_subtype",
+      "set_sdk_os"
+    ],
+    "existing_mcp_tools_unchanged": [
+      "set_sdk_version (extend)",
+      "search_sdk()",
+      "search_code_examples()",
+      "search_documentation()",
+      "search_api_functions()",
+      "search_compatibility()",
+      "get_sdk_stats()"
+    ],
+    "new_pinecone_index": "sdk-rag-system-v2-ptp"
+  },
+  "metadata_schema": {
+    "ptp_sdk_metadata": {
+      "sdk_version": "V2.00.00",
+      "sdk_type": "ptp",
+      "sdk_language": "cpp",
+      "sdk_subtype": "ptp-2 or ptp-3",
+      "sdk_os": "linux or windows or cross-platform",
+      "type": "example_code or documentation_text etc.",
+      "source_file": "socc_ptp.cpp"
+    },
+    "field_descriptions": {
+      "sdk_version": "Existing field - V1.14.00 or V2.00.00",
+      "sdk_type": "NEW - camera-remote, ptp, or client",
+      "sdk_language": "NEW - cpp, csharp, python, or typescript",
+      "sdk_subtype": "NEW - ptp-2, ptp-3, or none (only for PTP SDK)",
+      "sdk_os": "NEW - linux, windows, or cross-platform"
+    }
+  },
+  "filter_rules_from_system_design": {
+    "camera_remote_sdk": {
+      "code_types": "Filter by sdk_language",
+      "non_code_types": "No language filter (same for all languages)"
+    },
+    "ptp_sdk": {
+      "code_types": "Filter by sdk_language AND sdk_subtype AND sdk_os",
+      "non_code_types": "Filter by sdk_subtype and sdk_type only"
+    },
+    "client_sdk": {
+      "code_types": "Filter by sdk_language",
+      "non_code_types": "No language filter (same for all languages)"
+    }
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Parser Updates - Add PTP Metadata",
+      "estimated_time": "2 hours",
+      "files_to_modify": [
+        "src/parsing/pdf_parser.py",
+        "src/parsing/cpp_parser.py",
+        "src/parsing/chunker.py"
+      ],
+      "changes": {
+        "pdf_parser.py": {
+          "summary": "Add optional ptp_metadata parameter to extract_from_pdf()",
+          "main_execution_changes": "Add PTP configs for V2.00.00-PTP/PTP-2 and V2.00.00-PTP/PTP-3",
+          "ptp_configs": [
+            {
+              "sdk_version": "V2.00.00",
+              "ptp_metadata": {
+                "sdk_type": "ptp",
+                "sdk_language": "cpp",
+                "sdk_subtype": "ptp-2",
+                "sdk_os": "cross-platform"
+              },
+              "path": "V2.00.00-PTP/PTP-2"
+            },
+            {
+              "sdk_version": "V2.00.00",
+              "ptp_metadata": {
+                "sdk_type": "ptp",
+                "sdk_language": "cpp",
+                "sdk_subtype": "ptp-3",
+                "sdk_os": "cross-platform"
+              },
+              "path": "V2.00.00-PTP/PTP-3"
+            }
+          ],
+          "output_example": "data/parsed_data/pdf/V2.00.00-PTP/PTP-2/*.json with PTP metadata"
+        },
+        "cpp_parser.py": {
+          "summary": "Add ptp_metadata parameter to generate_doxygen_xml() and save_parsed_cpp_data()",
+          "doxygen_input_paths": [
+            "V2.00.00-PTP/PTP-2/Linux/libcameracontrolptp/include",
+            "V2.00.00-PTP/PTP-3/Linux/libcameracontrolptp/include"
+          ],
+          "headers_to_parse": [
+            "socc_ptp.h",
+            "socc_types.h",
+            "parser.h"
+          ],
+          "output_example": "data/parsed_data/cpp/V2.00.00-PTP/PTP-2/*.json"
+        },
+        "chunker.py": {
+          "summary": "Preserve PTP metadata fields in chunks",
+          "metadata_fields_to_preserve": [
+            "sdk_version",
+            "sdk_type",
+            "sdk_language",
+            "sdk_subtype",
+            "sdk_os"
+          ],
+          "run_command": "python src/parsing/chunker.py --version V2.00.00 --output chunks_ptp.json"
+        }
+      }
+    },
+    {
+      "phase": 2,
+      "name": "MCP Server - Add Metadata Filter Tools",
+      "estimated_time": "1.5 hours",
+      "files_to_modify": [
+        "mcp/search.py",
+        "mcp/mcp_server.py"
+      ],
+      "changes": {
+        "search.py": {
+          "summary": "Add MetadataFilters class for session state",
+          "new_class": "MetadataFilters",
+          "class_attributes": {
+            "sdk_version": "str = 'V2.00.00'",
+            "sdk_type": "Optional[str] = None",
+            "sdk_language": "Optional[str] = None",
+            "sdk_subtype": "Optional[str] = None",
+            "sdk_os": "Optional[str] = None"
+          },
+          "key_methods": [
+            {
+              "name": "get_pinecone_index()",
+              "description": "Returns index name based on sdk_version and sdk_type",
+              "index_mapping": {
+                "V1.14.00": "sdk-rag-system",
+                "V2.00.00 + camera-remote": "sdk-rag-system-v2",
+                "V2.00.00 + ptp": "sdk-rag-system-v2-ptp",
+                "V2.00.00 + client": "sdk-rag-system-v2-client"
+              }
+            },
+            {
+              "name": "to_pinecone_filters(content_type)",
+              "description": "Builds Pinecone metadata filters based on SDK type and content type",
+              "filter_logic": {
+                "camera_remote": {
+                  "example_code": "Filter by sdk_language if set",
+                  "other_types": "No language filter"
+                },
+                "ptp": {
+                  "example_code": "Filter by sdk_language, sdk_subtype, sdk_os if set",
+                  "other_types": "Filter by sdk_subtype only if set"
+                },
+                "client": {
+                  "example_code": "Filter by sdk_language if set",
+                  "other_types": "No language filter"
+                }
+              }
+            }
+          ],
+          "global_variable": "current_filters = MetadataFilters()"
+        },
+        "mcp_server.py": {
+          "summary": "Add 4 new metadata filter tools",
+          "new_tools": [
+            {
+              "name": "set_sdk_type",
+              "args": "sdk_type: str (camera-remote | ptp | client)",
+              "description": "Set SDK type filter for all subsequent searches",
+              "example": "set_sdk_type('ptp')",
+              "side_effects": "Resets sdk_subtype if switching away from PTP"
+            },
+            {
+              "name": "set_sdk_language",
+              "args": "language: str (cpp | csharp | python | typescript)",
+              "description": "Set language filter for code examples only",
+              "example": "set_sdk_language('cpp')",
+              "applies_to": "Code types only per system-design.md"
+            },
+            {
+              "name": "set_sdk_subtype",
+              "args": "subtype: str (ptp-2 | ptp-3 | none)",
+              "description": "Set PTP subversion filter (only for PTP SDK)",
+              "example": "set_sdk_subtype('ptp-2')",
+              "validation": "Only works when sdk_type is 'ptp'"
+            },
+            {
+              "name": "set_sdk_os",
+              "args": "os_platform: str (linux | windows | cross-platform)",
+              "description": "Set OS filter for PTP code examples",
+              "example": "set_sdk_os('linux')",
+              "applies_to": "PTP code types only"
+            }
+          ],
+          "existing_tools_modified": [
+            {
+              "name": "get_current_sdk_version",
+              "change": "Extended to show all metadata filters"
+            },
+            {
+              "name": "search_code_examples",
+              "change": "Now passes content_types=['example_code'] to apply smart filtering"
+            },
+            {
+              "name": "search_documentation",
+              "change": "Now passes content_types=['documentation_text', 'documentation_table']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "phase": 3,
+      "name": "Pinecone Upload",
+      "estimated_time": "30 minutes",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Create new Pinecone index",
+          "command": "python scripts/create_pinecone_index.py --name sdk-rag-system-v2-ptp",
+          "index_name": "sdk-rag-system-v2-ptp"
+        },
+        {
+          "step": 2,
+          "action": "Upload PTP chunks to new index",
+          "command": "python src/embedding/embedder_pinecone.py --input chunks_ptp.json --index sdk-rag-system-v2-ptp",
+          "note": "Filter chunks where sdk_type='ptp' before uploading"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Testing",
+      "estimated_time": "1 hour",
+      "test_cases": [
+        {
+          "test": "Parse PTP PDFs",
+          "command": "python src/parsing/pdf_parser.py",
+          "verify": [
+            "data/parsed_data/pdf/V2.00.00-PTP/PTP-2/Camera_Control_PTP_2_Reference_*.json exists",
+            "Metadata has sdk_type='ptp' and sdk_subtype='ptp-2'"
+          ]
+        },
+        {
+          "test": "Parse PTP Headers",
+          "command": "python src/parsing/cpp_parser.py",
+          "verify": [
+            "data/parsed_data/cpp/V2.00.00-PTP/PTP-2/*.json exists",
+            "socc_ptp.h, socc_types.h, parser.h parsed"
+          ]
+        },
+        {
+          "test": "Chunk PTP Content",
+          "command": "python src/parsing/chunker.py --version V2.00.00 --output chunks_ptp.json",
+          "verify": [
+            "PTP chunks have all 5 metadata fields",
+            "sdk_type, sdk_language, sdk_subtype, sdk_os populated"
+          ]
+        },
+        {
+          "test": "MCP Tool - set_sdk_type",
+          "action": "Call set_sdk_type('ptp')",
+          "verify": "Returns index name: sdk-rag-system-v2-ptp"
+        },
+        {
+          "test": "MCP Tool - set_sdk_subtype",
+          "action": "Call set_sdk_subtype('ptp-2')",
+          "verify": "Filter applied to subsequent searches"
+        },
+        {
+          "test": "MCP Tool - search_code_examples with filters",
+          "action": "set_sdk_type('ptp'), set_sdk_subtype('ptp-2'), set_sdk_os('linux'), search_code_examples('connect')",
+          "verify": "Returns ONLY PTP-2 Linux code examples",
+          "expected_filters": {
+            "sdk_version": "V2.00.00",
+            "sdk_type": "ptp",
+            "sdk_subtype": "ptp-2",
+            "sdk_os": "linux",
+            "type": "example_code"
+          }
+        },
+        {
+          "test": "MCP Tool - search_documentation with filters",
+          "action": "set_sdk_type('ptp'), set_sdk_subtype('ptp-2'), search_documentation('events')",
+          "verify": "Returns PTP-2 documentation (no OS filter per system-design.md)",
+          "expected_filters": {
+            "sdk_version": "V2.00.00",
+            "sdk_type": "ptp",
+            "sdk_subtype": "ptp-2",
+            "type": ["documentation_text", "documentation_table"]
+          }
+        }
+      ]
+    }
+  ],
+  "user_interaction_examples": [
+    {
+      "scenario": "Search PTP-2 Linux code examples",
+      "user_request": "Show me PTP-2 Linux authentication examples",
+      "claude_tool_calls": [
+        "set_sdk_type('ptp')",
+        "set_sdk_subtype('ptp-2')",
+        "set_sdk_os('linux')",
+        "search_code_examples('authentication')"
+      ],
+      "pinecone_filters": {
+        "sdk_version": "V2.00.00",
+        "sdk_type": "ptp",
+        "sdk_subtype": "ptp-2",
+        "sdk_os": "linux",
+        "type": "example_code"
+      },
+      "result": "Returns ONLY PTP-2 Linux code examples"
+    },
+    {
+      "scenario": "Search PTP-2 documentation (no OS filter)",
+      "user_request": "Show me PTP-2 documentation on event handling",
+      "claude_tool_calls": [
+        "set_sdk_type('ptp')",
+        "set_sdk_subtype('ptp-2')",
+        "search_documentation('event handling')"
+      ],
+      "pinecone_filters": {
+        "sdk_version": "V2.00.00",
+        "sdk_type": "ptp",
+        "sdk_subtype": "ptp-2",
+        "type": ["documentation_text", "documentation_table"]
+      },
+      "note": "NO sdk_os filter per system-design.md (non-code types don't filter by OS)",
+      "result": "Returns PTP-2 documentation from all platforms"
+    },
+    {
+      "scenario": "Compare PTP-2 vs PTP-3",
+      "user_request": "Compare PTP-2 and PTP-3 connection handling",
+      "claude_tool_calls": [
+        "set_sdk_type('ptp')",
+        "set_sdk_subtype('ptp-2')",
+        "search_code_examples('connect')",
+        "set_sdk_subtype('ptp-3')",
+        "search_code_examples('connect')"
+      ],
+      "result": "Returns PTP-2 examples, then PTP-3 examples for comparison"
+    }
+  ],
+  "directory_structure": {
+    "input_files": {
+      "pdfs": [
+        "data/raw_sdk_docs/docs/V2.00.00-PTP/PTP-2/*.pdf",
+        "data/raw_sdk_docs/docs/V2.00.00-PTP/PTP-3/*.pdf"
+      ],
+      "headers": [
+        "data/raw_sdk_docs/sdk_source/V2.00.00-PTP/PTP-2/Linux/libcameracontrolptp/include/*.h",
+        "data/raw_sdk_docs/sdk_source/V2.00.00-PTP/PTP-3/Linux/libcameracontrolptp/include/*.h"
+      ],
+      "cpp_source": [
+        "data/raw_sdk_docs/sdk_source/V2.00.00-PTP/PTP-2/Linux/frontend/sources/*.cpp",
+        "data/raw_sdk_docs/sdk_source/V2.00.00-PTP/PTP-2/Windows/CameraControlPTP/*.cpp"
+      ],
+      "shell_scripts": [
+        "data/raw_sdk_docs/sdk_source/V2.00.00-PTP/PTP-2/Linux/frontend/scripts/*.sh"
+      ]
+    },
+    "output_files": {
+      "parsed_pdfs": "data/parsed_data/pdf/V2.00.00-PTP/PTP-{2,3}/*.json",
+      "parsed_cpp": "data/parsed_data/cpp/V2.00.00-PTP/PTP-{2,3}/*.json",
+      "chunks": "data/chunks_ptp.json"
+    }
+  },
+  "summary": {
+    "new_components": [
+      "4 new MCP tools (set_sdk_type, set_sdk_language, set_sdk_subtype, set_sdk_os)",
+      "MetadataFilters class for session state",
+      "Smart filter logic based on SDK type and content type",
+      "New Pinecone index: sdk-rag-system-v2-ptp"
+    ],
+    "unchanged_components": [
+      "All 6 existing search tools work unchanged",
+      "Existing Camera Remote SDK indexes unchanged",
+      "Existing chunks backward compatible"
+    ],
+    "total_estimated_time": "5 hours",
+    "breakdown": {
+      "phase_1_parsers": "2 hours",
+      "phase_2_mcp_filters": "1.5 hours",
+      "phase_3_upload": "0.5 hours",
+      "phase_4_testing": "1 hour"
+    }
+  },
+  "notes": {
+    "approach": "This implementation follows system-design.md exactly: metadata filter tools control searches, not dedicated search tools.",
+    "backward_compatibility": "Existing Camera Remote SDK functionality completely unchanged",
+    "future_work": "Client library SDK can be added using the same pattern (set_sdk_type('client'))"
+  }
+}

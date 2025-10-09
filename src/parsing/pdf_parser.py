@@ -22,21 +22,28 @@ def format_version_tag(sdk_version):
     return sdk_version
 
 
-def extract_from_pdf(pdf_path, output_dir, sdk_version):
+def extract_from_pdf(pdf_path, output_dir, sdk_version, sdk_type="camera-remote", sdk_subtype=None):
     """
     Extracts text and tables from a PDF document.
     Saves extracted text and tables as JSON files.
     This version includes robust handling for multi-level and complex table headers.
+
+    Args:
+        pdf_path: Path to PDF file
+        output_dir: Output directory
+        sdk_version: SDK version (e.g., "V2.00.00")
+        sdk_type: SDK type (e.g., "camera-remote", "ptp")
+        sdk_subtype: SDK subtype for PTP (e.g., "ptp-2", "ptp-3")
     """
     os.makedirs(output_dir, exist_ok=True)
-    
+
     file_name_raw = os.path.basename(pdf_path)
     file_name = os.path.splitext(file_name_raw)[0]
 
     all_text = ""
     extracted_tables_data = []
 
-    print(f"Processing PDF: {pdf_path} for SDK version {sdk_version}")
+    print(f"Processing PDF: {pdf_path} for SDK version {sdk_version} ({sdk_type}{f'/{sdk_subtype}' if sdk_subtype else ''})")
     try:
         with pdfplumber.open(pdf_path) as pdf:
             for i, page in enumerate(pdf.pages):
@@ -239,11 +246,25 @@ def extract_from_pdf(pdf_path, output_dir, sdk_version):
         clean_name = re.sub(r'[^a-zA-Z0-9_]', '_', file_name)
         version_tag = format_version_tag(sdk_version)
 
+        # Build metadata with SDK context
+        base_metadata = {
+            "title": file_name,
+            "sdk_version": sdk_version,
+            "sdk_type": sdk_type,
+            "sdk_os": "cross-platform"  # PDFs are OS-agnostic
+        }
+
+        # Add subtype for PTP
+        if sdk_subtype:
+            base_metadata["sdk_subtype"] = sdk_subtype
+
         text_output_filename = f"{clean_name}_{version_tag}_text.json"
         text_output_path = os.path.join(output_dir, text_output_filename)
         text_data = {
-            "source_file": pdf_path, "file_type": "pdf_text", "content": all_text.strip(),
-            "metadata": {"title": file_name, "sdk_version": sdk_version, "extracted_type": "text"}
+            "source_file": pdf_path,
+            "file_type": "pdf_text",
+            "content": all_text.strip(),
+            "metadata": {**base_metadata, "extracted_type": "text"}
         }
         with open(text_output_path, "w", encoding="utf-8") as f:
             json.dump(text_data, f, indent=4, ensure_ascii=False)
@@ -253,8 +274,10 @@ def extract_from_pdf(pdf_path, output_dir, sdk_version):
             tables_output_filename = f"{clean_name}_{version_tag}_tables.json"
             tables_output_path = os.path.join(output_dir, tables_output_filename)
             tables_data = {
-                "source_file": pdf_path, "file_type": "pdf_tables", "content": extracted_tables_data,
-                "metadata": {"title": file_name, "sdk_version": sdk_version, "extracted_type": "tables", "num_tables": len(extracted_tables_data)}
+                "source_file": pdf_path,
+                "file_type": "pdf_tables",
+                "content": extracted_tables_data,
+                "metadata": {**base_metadata, "extracted_type": "tables", "num_tables": len(extracted_tables_data)}
             }
             with open(tables_output_path, "w", encoding="utf-8") as f:
                 json.dump(tables_data, f, indent=4, ensure_ascii=False)
@@ -265,7 +288,7 @@ def extract_from_pdf(pdf_path, output_dir, sdk_version):
 
 # --- Main execution logic ---
 if __name__ == "__main__":
-    sdk_versions_to_parse = ["V1.14.00", "V2.00.00"] 
+    sdk_versions_to_parse = ["V1.14.00", "V2.00.00", "V2.00.00-PTP"]
 
     for version in sdk_versions_to_parse:
         print(f"\n--- Processing PDF Docs for SDK Version: {version} ---")
@@ -277,6 +300,9 @@ if __name__ == "__main__":
             print(f"Error: PDF source directory '{current_sdk_pdfs_dir}' for version {version} not found. Skipping.")
             continue
 
+        # Determine SDK type from version
+        sdk_type = "ptp" if "PTP" in version else "camera-remote"
+
         pdf_files_found = False
         processed_count = 0
         for root, _, files in os.walk(current_sdk_pdfs_dir):
@@ -284,10 +310,22 @@ if __name__ == "__main__":
                 if file_name.lower().endswith(".pdf"):
                     pdf_files_found = True
                     pdf_path = os.path.join(root, file_name)
-                    extract_from_pdf(pdf_path, current_parsed_pdf_output_dir, version)
+
+                    # Detect SDK subtype from directory path for PTP
+                    sdk_subtype = None
+                    if sdk_type == "ptp":
+                        if "PTP-2" in root:
+                            sdk_subtype = "ptp-2"
+                        elif "PTP-3" in root:
+                            sdk_subtype = "ptp-3"
+
+                    # Clean version for parsing (V2.00.00-PTP → V2.00.00)
+                    clean_version = version.replace("-PTP", "")
+
+                    extract_from_pdf(pdf_path, current_parsed_pdf_output_dir, clean_version, sdk_type, sdk_subtype)
                     processed_count += 1
                     print("=" * 50)
-        
+
         if not pdf_files_found:
             print(f"No PDF files found in '{current_sdk_pdfs_dir}'.")
         else:
