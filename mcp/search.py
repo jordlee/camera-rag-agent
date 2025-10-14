@@ -106,12 +106,23 @@ class RAGSearch:
             self.index_v2 = self.pc.Index("sdk-rag-system-v2")
             logger.info("✅ V2.00.00 index loaded")
 
+            logger.info("Loading V2.00.00-PTP index (sdk-rag-system-v2-ptp)...")
+            self.index_ptp = self.pc.Index("sdk-rag-system-v2-ptp")
+            logger.info("✅ V2.00.00-PTP index loaded")
+
             # Default to V2.00.00 (latest), can be changed via set_version()
             default_version = os.getenv("DEFAULT_SDK_VERSION", "V2.00.00")
             self.current_version = default_version
 
+            # SDK context for multi-SDK support (PTP, Camera Remote, Client)
+            self.current_sdk_type = "camera-remote"  # Default: camera-remote
+            self.current_sdk_language = "cpp"  # Default: cpp
+            self.current_sdk_subtype = None  # For PTP: ptp-2, ptp-3
+            self.current_sdk_os = None  # For PTP: linux, windows, cross-platform
+
             logger.info(f"Pinecone multi-version connection established successfully")
             logger.info(f"Default SDK version: {self.current_version}")
+            logger.info(f"Default SDK type: {self.current_sdk_type} (language: {self.current_sdk_language})")
         except Exception as e:
             logger.error(f"Failed to connect to Pinecone: {e}")
             logger.error(f"Pinecone error traceback: {traceback.format_exc()}")
@@ -194,7 +205,12 @@ class RAGSearch:
 
     @property
     def index(self):
-        """Return the active Pinecone index based on current version."""
+        """Return the active Pinecone index based on current SDK type and version."""
+        # PTP SDK uses dedicated PTP index (always V2.00.00)
+        if self.current_sdk_type == "ptp":
+            return self.index_ptp
+
+        # Camera Remote SDK uses version-based indexes
         if self.current_version == "V1.14.00":
             return self.index_v1
         elif self.current_version == "V2.00.00":
@@ -237,7 +253,105 @@ class RAGSearch:
             ]
         }
 
-    
+    def set_sdk_type(self, sdk_type: str) -> str:
+        """
+        Set the SDK type for searches.
+
+        Args:
+            sdk_type: "camera-remote" or "ptp"
+
+        Returns:
+            Success message
+        """
+        valid_types = ["camera-remote", "ptp"]
+        if sdk_type not in valid_types:
+            return f"❌ Invalid SDK type '{sdk_type}'. Valid options: {valid_types}"
+
+        old_type = self.current_sdk_type
+        self.current_sdk_type = sdk_type
+        logger.info(f"🔄 SDK type changed: {old_type} → {sdk_type}")
+
+        # Auto-reset subtype and OS when switching away from PTP
+        if sdk_type != "ptp":
+            self.current_sdk_subtype = None
+            self.current_sdk_os = None
+
+        return f"✅ SDK type set to {sdk_type}"
+
+    def set_sdk_subtype(self, subtype: Optional[str]) -> str:
+        """
+        Set the SDK subtype (for PTP: ptp-2, ptp-3).
+
+        Args:
+            subtype: "ptp-2", "ptp-3", or None
+
+        Returns:
+            Success message
+        """
+        valid_subtypes = ["ptp-2", "ptp-3", None]
+        if subtype not in valid_subtypes:
+            return f"❌ Invalid SDK subtype '{subtype}'. Valid options: ptp-2, ptp-3, or None"
+
+        old_subtype = self.current_sdk_subtype
+        self.current_sdk_subtype = subtype
+        logger.info(f"🔄 SDK subtype changed: {old_subtype} → {subtype}")
+        return f"✅ SDK subtype set to {subtype}"
+
+    def set_sdk_os(self, os: Optional[str]) -> str:
+        """
+        Set the SDK OS filter (for PTP: linux, windows, cross-platform).
+
+        Args:
+            os: "linux", "windows", "cross-platform", or None
+
+        Returns:
+            Success message
+        """
+        valid_os = ["linux", "windows", "cross-platform", None]
+        if os not in valid_os:
+            return f"❌ Invalid SDK OS '{os}'. Valid options: linux, windows, cross-platform, or None"
+
+        old_os = self.current_sdk_os
+        self.current_sdk_os = os
+        logger.info(f"🔄 SDK OS changed: {old_os} → {os}")
+        return f"✅ SDK OS set to {os}"
+
+    def set_sdk_language(self, language: Optional[str]) -> str:
+        """
+        Set the SDK language filter.
+
+        Args:
+            language: "cpp", "csharp", "bash", or None
+
+        Returns:
+            Success message
+        """
+        valid_languages = ["cpp", "csharp", "bash", None]
+        if language not in valid_languages:
+            return f"❌ Invalid SDK language '{language}'. Valid options: cpp, csharp, bash, or None"
+
+        old_language = self.current_sdk_language
+        self.current_sdk_language = language
+        logger.info(f"🔄 SDK language changed: {old_language} → {language}")
+        return f"✅ SDK language set to {language}"
+
+    def get_sdk_context(self) -> dict:
+        """
+        Get the current SDK context configuration.
+
+        Returns:
+            Dictionary with current SDK settings
+        """
+        return {
+            "sdk_type": self.current_sdk_type,
+            "sdk_version": self.current_version,
+            "sdk_language": self.current_sdk_language,
+            "sdk_subtype": self.current_sdk_subtype,
+            "sdk_os": self.current_sdk_os,
+            "active_index": "sdk-rag-system-v2-ptp" if self.current_sdk_type == "ptp" else f"sdk-rag-system{'-v2' if self.current_version == 'V2.00.00' else ''}"
+        }
+
+
     @lru_cache(maxsize=EMBEDDING_CACHE_SIZE)
     def _cached_embed(self, query: str) -> Tuple[float, ...]:
         """Cached embedding generation (tuple for hashability)."""
@@ -291,13 +405,13 @@ class RAGSearch:
                metadata_filter: Optional[Dict[str, Any]] = None,
                namespace: Optional[str] = None) -> List[Dict[str, Any]]:
         """
-        Search for relevant chunks in Pinecone.
+        Search for relevant chunks in Pinecone with smart SDK context filtering.
 
         Args:
             query: Search query string
             top_k: Number of results to return
             content_type_filter: Filter by content type (example_code, documentation_text, etc.)
-            metadata_filter: Custom metadata filter dict (overrides content_type_filter if provided)
+            metadata_filter: Custom metadata filter dict (overrides content_type_filter and SDK context if provided)
             namespace: Pinecone namespace to search in
 
         Returns:
@@ -307,17 +421,46 @@ class RAGSearch:
             # Generate query embedding
             query_embedding = self.embed_query(query)
 
-            # Build filter - metadata_filter takes precedence
+            # Build filter - metadata_filter takes full precedence
             if metadata_filter:
                 filter_dict = metadata_filter
-            elif content_type_filter:
-                filter_dict = {"type": content_type_filter}
             else:
+                # Start with content type filter if provided
                 filter_dict = {}
+                if content_type_filter:
+                    filter_dict["type"] = content_type_filter
 
-            # Add SDK version to filter
-            if filter_dict and self.current_version:
-                filter_dict["sdk_version"] = self.current_version
+                # Apply smart SDK context filtering based on SDK type and content type
+                is_code_search = content_type_filter == "example_code"
+
+                if self.current_sdk_type == "ptp":
+                    # PTP SDK filtering logic
+                    filter_dict["sdk_type"] = "ptp"
+
+                    if is_code_search:
+                        # PTP code: filter by language + subtype + OS
+                        if self.current_sdk_language:
+                            filter_dict["sdk_language"] = self.current_sdk_language
+                        if self.current_sdk_subtype:
+                            filter_dict["sdk_subtype"] = self.current_sdk_subtype
+                        if self.current_sdk_os:
+                            filter_dict["sdk_os"] = self.current_sdk_os
+                    else:
+                        # PTP docs/tables: filter by subtype only
+                        if self.current_sdk_subtype:
+                            filter_dict["sdk_subtype"] = self.current_sdk_subtype
+
+                elif self.current_sdk_type == "camera-remote":
+                    # Camera Remote SDK filtering logic
+                    if is_code_search:
+                        # Camera Remote code: filter by language only
+                        if self.current_sdk_language:
+                            filter_dict["language"] = self.current_sdk_language
+                    # Camera Remote docs/tables: no additional filtering beyond content type
+
+                    # Add SDK version for camera-remote
+                    if self.current_version:
+                        filter_dict["sdk_version"] = self.current_version
 
             # Search in Pinecone
             results = self.index.query(
@@ -327,7 +470,7 @@ class RAGSearch:
                 namespace=namespace,
                 filter=filter_dict if filter_dict else None
             )
-            
+
             # Process and return results
             processed_results = []
             for match in results.get('matches', []):
@@ -336,11 +479,11 @@ class RAGSearch:
                     'score': match['score'],
                     'content': match['metadata'].get('content', ''),
                     'metadata': {k: v for k, v in match['metadata'].items() if k != 'content'},
-                    'sdk_version': self.current_version
+                    'sdk_context': self.get_sdk_context()
                 }
                 processed_results.append(result)
 
-            logger.info(f"Found {len(processed_results)} results for query: {query[:50]}... (SDK: {self.current_version})")
+            logger.info(f"Found {len(processed_results)} results for query: {query[:50]}... (SDK: {self.current_sdk_type}/{self.current_version})")
             return processed_results
 
         except Exception as e:
@@ -460,20 +603,31 @@ class RAGSearch:
 
         Args:
             query: Search query
-            language: "cpp" (default), "csharp", or "all"
+            language: "cpp" (default), "csharp", "bash", or "all"
             top_k: Number of results
 
         Examples:
-            - C++ code (229 chunks): search_code_examples("connect", language="cpp")
-            - C# code (233 chunks): search_code_examples("OnConnected", language="csharp")
-            - Both languages: search_code_examples("property handling", language="all")
+            - C++ code: search_code_examples("connect", language="cpp")
+            - C# code: search_code_examples("OnConnected", language="csharp")
+            - Bash scripts (PTP): search_code_examples("auth", language="bash")
+            - All languages: search_code_examples("property handling", language="all")
+
+        Note: This method respects SDK context (set via set_sdk_type, set_sdk_subtype, etc.)
         """
-        filter_dict = {"type": "example_code"}
+        # Temporarily store SDK language context
+        original_language = self.current_sdk_language
 
+        # Override language for this search
         if language != "all":
-            filter_dict["language"] = language
+            self.current_sdk_language = language
 
-        return self.search(query, top_k=top_k, metadata_filter=filter_dict)
+        try:
+            # Use main search with content_type_filter (SDK context will be applied automatically)
+            results = self.search(query, top_k=top_k, content_type_filter="example_code")
+            return results
+        finally:
+            # Restore original language context
+            self.current_sdk_language = original_language
     
     def search_documentation(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
         """

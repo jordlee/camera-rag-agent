@@ -390,6 +390,170 @@ def get_current_sdk_version() -> str:
         return json.dumps({"error": str(e)})
 
 @mcp.tool()
+def set_sdk_type(sdk_type: str) -> str:
+    """
+    Set the SDK type for all subsequent searches in this session.
+
+    Args:
+        sdk_type: SDK type to use ("camera-remote" or "ptp")
+
+    Returns:
+        Confirmation message with the new SDK type
+
+    Example:
+        set_sdk_type("ptp")  # Switch to PTP SDK
+        set_sdk_type("camera-remote")  # Switch back to Camera Remote SDK
+    """
+    if rag_search is None:
+        return json.dumps({"error": "RAG search system not initialized"})
+
+    try:
+        result = rag_search.set_sdk_type(sdk_type)
+        context = rag_search.get_sdk_context()
+
+        return json.dumps({
+            "message": result,
+            "sdk_context": context,
+            "note": "All search tools will now use this SDK type. Use set_sdk_subtype() and set_sdk_os() for PTP filtering."
+        }, indent=2)
+    except Exception as e:
+        logger.exception("Set SDK type error")
+        return json.dumps({"error": str(e)})
+
+@mcp.tool()
+def set_sdk_subtype(subtype: str) -> str:
+    """
+    Set the SDK subtype for PTP searches (ptp-2 or ptp-3).
+
+    Args:
+        subtype: SDK subtype ("ptp-2", "ptp-3", or "none" to clear)
+
+    Returns:
+        Confirmation message with the new subtype
+
+    Example:
+        set_sdk_subtype("ptp-2")  # Filter for PTP-2 only
+        set_sdk_subtype("ptp-3")  # Filter for PTP-3 only
+        set_sdk_subtype("none")   # Clear subtype filter
+    """
+    if rag_search is None:
+        return json.dumps({"error": "RAG search system not initialized"})
+
+    try:
+        # Convert "none" string to None
+        actual_subtype = None if subtype.lower() == "none" else subtype
+        result = rag_search.set_sdk_subtype(actual_subtype)
+        context = rag_search.get_sdk_context()
+
+        return json.dumps({
+            "message": result,
+            "sdk_context": context,
+            "note": "Subtype filter applies to PTP SDK searches only."
+        }, indent=2)
+    except Exception as e:
+        logger.exception("Set SDK subtype error")
+        return json.dumps({"error": str(e)})
+
+@mcp.tool()
+def set_sdk_os(os: str) -> str:
+    """
+    Set the SDK OS filter for PTP code searches (linux, windows, or cross-platform).
+
+    Args:
+        os: Operating system ("linux", "windows", "cross-platform", or "none" to clear)
+
+    Returns:
+        Confirmation message with the new OS filter
+
+    Example:
+        set_sdk_os("linux")           # Filter for Linux code only
+        set_sdk_os("windows")         # Filter for Windows code only
+        set_sdk_os("cross-platform")  # Filter for cross-platform docs
+        set_sdk_os("none")            # Clear OS filter
+    """
+    if rag_search is None:
+        return json.dumps({"error": "RAG search system not initialized"})
+
+    try:
+        # Convert "none" string to None
+        actual_os = None if os.lower() == "none" else os
+        result = rag_search.set_sdk_os(actual_os)
+        context = rag_search.get_sdk_context()
+
+        return json.dumps({
+            "message": result,
+            "sdk_context": context,
+            "note": "OS filter applies to PTP SDK code searches only."
+        }, indent=2)
+    except Exception as e:
+        logger.exception("Set SDK OS error")
+        return json.dumps({"error": str(e)})
+
+@mcp.tool()
+def set_sdk_language(language: str) -> str:
+    """
+    Set the SDK language filter for code searches.
+
+    Args:
+        language: Programming language ("cpp", "csharp", "bash", or "none" to clear)
+
+    Returns:
+        Confirmation message with the new language filter
+
+    Example:
+        set_sdk_language("cpp")     # Filter for C++ code
+        set_sdk_language("csharp")  # Filter for C# code
+        set_sdk_language("bash")    # Filter for bash scripts (PTP)
+        set_sdk_language("none")    # Clear language filter
+    """
+    if rag_search is None:
+        return json.dumps({"error": "RAG search system not initialized"})
+
+    try:
+        # Convert "none" string to None
+        actual_language = None if language.lower() == "none" else language
+        result = rag_search.set_sdk_language(actual_language)
+        context = rag_search.get_sdk_context()
+
+        return json.dumps({
+            "message": result,
+            "sdk_context": context,
+            "note": "Language filter applies to code searches (search_code_examples)."
+        }, indent=2)
+    except Exception as e:
+        logger.exception("Set SDK language error")
+        return json.dumps({"error": str(e)})
+
+@mcp.tool()
+def get_sdk_context() -> str:
+    """
+    Get the current SDK context configuration for this session.
+
+    Returns:
+        Current SDK type, version, language, subtype, OS, and active index
+
+    Use this to verify your current SDK settings before searching.
+    """
+    if rag_search is None:
+        return json.dumps({"error": "RAG search system not initialized"})
+
+    try:
+        context = rag_search.get_sdk_context()
+        return json.dumps({
+            "sdk_context": context,
+            "help": {
+                "set_sdk_type": "Switch between 'camera-remote' and 'ptp'",
+                "set_sdk_version": "Switch between 'V1.14.00' and 'V2.00.00' (camera-remote only)",
+                "set_sdk_language": "Filter code by language (cpp, csharp, bash)",
+                "set_sdk_subtype": "Filter PTP by subtype (ptp-2, ptp-3)",
+                "set_sdk_os": "Filter PTP code by OS (linux, windows, cross-platform)"
+            }
+        }, indent=2)
+    except Exception as e:
+        logger.exception("Get SDK context error")
+        return json.dumps({"error": str(e)})
+
+@mcp.tool()
 async def search(query: str) -> str:
     """
     Search the Camera Remote SDK documentation and return document IDs.
@@ -686,10 +850,15 @@ if __name__ == "__main__":
     
     logger.info(f"Starting FastMCP server on {host}:{port}")
     logger.info("=== MCP Tools Available ===")
-    logger.info("Claude-compatible tools (14): search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, search_with_intent_analysis, set_sdk_version, get_current_sdk_version")
+    logger.info("Claude-compatible tools (19):")
+    logger.info("  Search: search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility")
+    logger.info("  Advanced: search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, search_with_intent_analysis")
+    logger.info("  Context: set_sdk_type, set_sdk_subtype, set_sdk_os, set_sdk_language, get_sdk_context")
+    logger.info("  Versions: set_sdk_version, get_current_sdk_version")
+    logger.info("  Stats: get_sdk_stats")
     logger.info("ChatGPT-compatible tools (2): search, fetch")
-    logger.info("Total: 16 MCP tools registered")
-    logger.info("Version management: Multi-SDK support (V1.14.00, V2.00.00)")
+    logger.info("Total: 21 MCP tools registered")
+    logger.info("Multi-SDK support: Camera Remote (V1.14.00, V2.00.00) + PTP (V2.00.00)")
     logger.info("ChatGPT Deep Research: Compatible ✓")
     logger.info("Health check: /health")
     logger.info("SSE endpoint: /sse")
