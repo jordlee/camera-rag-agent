@@ -29,10 +29,11 @@ from rate_limiter import RateLimitMiddleware, get_rate_limit_stats
 # Load environment variables
 load_dotenv()
 
-# Configure logging
+# Configure logging (force stdout so Railway logs show correct level)
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    stream=sys.stdout  # Force stdout instead of stderr for proper Railway log levels
 )
 logger = logging.getLogger(__name__)
 
@@ -293,45 +294,6 @@ def search_by_source_file(file_name: str, query: str = "", top_k: int = 5) -> st
     except Exception as e:
         logger.exception("Source file search error")
         return f"Error searching in file '{file_name}': {str(e)}"
-
-@mcp.tool()
-async def search_with_intent_analysis(query: str, top_k: int = 10, explain_intent: bool = True) -> str:
-    """Advanced search with query expansion using TinyLlama to add related technical terms for better results. Perfect for natural language queries."""
-    if rag_search is None:
-        return json.dumps({"error": "RAG search system not initialized"})
-
-    try:
-        # Use full intent-based search with query expansion
-        results = await rag_search.search_with_intent(
-            query,
-            top_k=top_k,
-            use_intent_mapping=True
-        )
-
-        # Add explanation if requested
-        if explain_intent:
-            intent_analysis = results.get("intent_analysis", {})
-
-            explanation = {
-                "query_processing": "Query expanded with related technical terms for better search",
-                "original_query": query,
-                "expanded_query": intent_analysis.get("expanded_query", query),
-                "expansion_successful": intent_analysis.get("expansion_successful", False),
-                "terms_added": "Query enhanced with related technical terms" if intent_analysis.get("expansion_successful") else "No expansion performed",
-                "semantic_categories": intent_analysis.get("semantic_categories", [])
-            }
-            results["explanation"] = explanation
-
-        results["timestamp"] = datetime.now().isoformat()
-
-        return json.dumps(results, indent=2)
-
-    except Exception as e:
-        logger.exception("Query expansion search error")
-        return json.dumps({
-            "error": str(e),
-            "suggestion": "Try a simpler query or use the regular search_sdk tool"
-        })
 
 @mcp.tool()
 def set_sdk_version(version: str) -> str:
@@ -752,6 +714,8 @@ async def lifespan(app: Starlette):
         try:
             yield
         finally:
+            logger.info("Shutting down server - cleaning up resources...")
+
             # Cancel keepalive task
             keepalive.cancel()
             try:
@@ -759,9 +723,37 @@ async def lifespan(app: Starlette):
             except asyncio.CancelledError:
                 pass
 
+            # Cleanup RAG search instance
+            if rag_search is not None:
+                try:
+                    logger.info("Cleaning up RAG search instance...")
+                    # Trigger __del__ explicitly
+                    del rag_search
+                except Exception as e:
+                    logger.error(f"Error cleaning up RAG search: {e}")
+
+            # Cleanup intent mapper singleton
+            try:
+                from intent_mapper import _intent_mapper
+                if _intent_mapper is not None:
+                    logger.info("Cleaning up intent mapper...")
+                    del _intent_mapper
+            except Exception as e:
+                logger.error(f"Error cleaning up intent mapper: {e}")
+
+            logger.info("Server shutdown cleanup complete")
+
 # Health check endpoint for Railway
 async def health_check(request):
     """Health check endpoint with detailed status."""
+    import psutil
+    import os
+
+    # Get memory usage
+    process = psutil.Process(os.getpid())
+    memory_info = process.memory_info()
+    memory_mb = memory_info.rss / (1024 * 1024)  # Convert to MB
+
     health_status = {
         "status": "healthy",
         "service": "fastmcp-server",
@@ -769,7 +761,12 @@ async def health_check(request):
         "mcp_path": "/mcp",
         "timestamp": datetime.now().isoformat(),
         "active_connections": len(active_connections),
-        "last_heartbeat": last_heartbeat.isoformat()
+        "last_heartbeat": last_heartbeat.isoformat(),
+        "memory": {
+            "rss_mb": round(memory_mb, 2),
+            "rss_gb": round(memory_mb / 1024, 2),
+            "warning": "high" if memory_mb > 1500 else "normal"  # Warn if >1.5GB
+        }
     }
 
     # Add performance metrics if available
@@ -852,7 +849,7 @@ if __name__ == "__main__":
     logger.info("=== MCP Tools Available ===")
     logger.info("Claude-compatible tools (19):")
     logger.info("  Search: search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility")
-    logger.info("  Advanced: search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, search_with_intent_analysis")
+    logger.info("  Advanced: search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file")
     logger.info("  Context: set_sdk_type, set_sdk_subtype, set_sdk_os, set_sdk_language, get_sdk_context")
     logger.info("  Versions: set_sdk_version, get_current_sdk_version")
     logger.info("  Stats: get_sdk_stats")

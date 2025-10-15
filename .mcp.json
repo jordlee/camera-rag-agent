@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "iris-debug": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://sdk-rag-agent-debugging.up.railway.app/mcp"
+      ],
+      "env": {}
+    }
+  }
+}
