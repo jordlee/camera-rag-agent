@@ -1,112 +1,110 @@
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7fe64427f7e0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:40.809217884Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628942709Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628950411Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628958519Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628963091Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628968377Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628973256Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628979320Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628984318Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628988350Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628992687Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7fec5f40cea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:45.628997008Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.917271625Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.917279619Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.917285436Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.917291045Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.921024724Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.921034106Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.921044114Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.921062822Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.921069681Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.921076886Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7f334f05cea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:50.921082775Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.301953867Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.301961855Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.301967153Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.301972335Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.305573120Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.305582689Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.305588846Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.305594997Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.305601144Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.305607866Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7f4ec7c5cea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:43:56.305614244Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.533501776Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.533508330Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.533512779Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.533517309Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.537240897Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.537249474Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.537256786Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.537263323Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.537270612Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.537276495Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7f49f7e60ea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:01.537282904Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.793701166Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.793708175Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.793712883Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.793718867Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.797279017Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.797288527Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.797295177Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.797301120Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.797305677Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.797310060Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7f79a2b3cea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:06.797323866Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067319881Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067324591Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067329105Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067334707Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067339324Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067343750Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067348094Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067352680Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067357246Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067362061Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7fe9feb60ea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:12.067366045Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.303715727Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.303722184Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.303726799Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.303731475Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.306820933Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.306826674Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.306831143Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.306836412Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.306842098Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.306847596Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7f04a415cea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:17.306851877Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431720255Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431724934Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431740689Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431750527Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431754653Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431758577Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431762324Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431767556Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431774267Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431778889Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7fadd1748ea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:22.431783491Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608709297Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608715932Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608722576Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608729749Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608735916Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608741797Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608748056Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608754078Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608761448Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608767184Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7faacf844ea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:27.608773323Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ Redis connection failed: Error 111 connecting to localhost:6379. Connection refused.","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.899338779Z"}
-{"message":"[RATE_LIMIT_INIT] Falling back to in-memory rate limiting (per-container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.899345231Z"}
-{"message":"[RATE_LIMIT_INIT] Using in-memory rate limiting: 10 req/min per IP (per container)","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.899349257Z"}
-{"message":"[RATE_LIMIT_INIT] ⚠️ WARNING: Multiple Railway containers will have separate limits!","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.899353334Z"}
-{"message":"Traceback (most recent call last):","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.908791587Z"}
-{"message":"  File \"/app/mcp_server.py\", line 54, in <module>","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.908797723Z"}
-{"message":"    @limiter.limit(f\"{RATE_LIMIT_PER_MINUTE}/minute\")","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.908803102Z"}
-{"message":"     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.908808388Z"}
-{"message":"  File \"/usr/local/lib/python3.11/site-packages/slowapi/extension.py\", line 713, in decorator","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.908813298Z"}
-{"message":"    raise Exception(","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.908819319Z"}
-{"message":"Exception: No \"request\" or \"websocket\" argument on function \"<function search_sdk at 0x7f6218674ea0>\"","attributes":{"level":"error"},"timestamp":"2025-09-30T20:44:32.908825933Z"}
-T
+{"message":"Starting Container","attributes":{"level":"info"},"timestamp":"2025-10-15T18:10:46.000000000Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - Starting FastMCP server on 0.0.0.0:3000","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102917390Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - === MCP Tools Available ===","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102925637Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - Claude-compatible tools (14): search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, search_with_intent_analysis, set_sdk_version, get_current_sdk_version","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102930997Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - ChatGPT-compatible tools (2): search, fetch","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102939017Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - Total: 16 MCP tools registered","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102943889Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - Version management: Multi-SDK support (V1.14.00, V2.00.00)","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102949988Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - ChatGPT Deep Research: Compatible ✓","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102955431Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - Health check: /health","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102960978Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - SSE endpoint: /sse","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102966496Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - MCP endpoint: /mcp","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102972243Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - Keepalive interval: 2.0s","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102976856Z"}
+{"message":"2025-10-15 18:10:50,168 - __main__ - INFO - Connection timeout: 10.0s","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102981466Z"}
+{"message":"INFO:     Started server process [1]","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102987329Z"}
+{"message":"INFO:     Waiting for application startup.","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102992035Z"}
+{"message":"2025-10-15 18:10:50,192 - rate_limiter - INFO - [RATE_LIMIT_INIT] Attempting Redis connection...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.102997245Z"}
+{"message":"2025-10-15 18:10:50,214 - rate_limiter - INFO - [RATE_LIMIT_INIT] ✅ Redis connected successfully","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103001859Z"}
+{"message":"2025-10-15 18:10:50,214 - rate_limiter - INFO - [RATE_LIMIT_INIT] Middleware active: 100 req/min per IP","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103023825Z"}
+{"message":"2025-10-15 18:10:50,214 - __main__ - INFO - Initializing RAG search system...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103028944Z"}
+{"message":"2025-10-15 18:10:50,214 - __main__ - INFO - PINECONE_API_KEY found, proceeding with RAG initialization...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103035534Z"}
+{"message":"2025-10-15 18:10:50,214 - search - INFO - === Starting RAG Search Initialization ===","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103041114Z"}
+{"message":"2025-10-15 18:10:50,215 - search - INFO - System Resources - RAM: 384GB (Available: 145GB), Disk: 2363GB (Free: 1185GB)","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103047160Z"}
+{"message":"2025-10-15 18:10:50,215 - search - INFO - Step 1: Checking environment variables...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103052840Z"}
+{"message":"2025-10-15 18:10:50,215 - search - INFO - Environment variables OK","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103058140Z"}
+{"message":"2025-10-15 18:10:50,215 - search - INFO - Step 2: Initializing Pinecone connection with multi-version support...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103063889Z"}
+{"message":"2025-10-15 18:10:50,215 - search - INFO - Loading V1.14.00 index (sdk-rag-system)...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103068773Z"}
+{"message":"2025-10-15 18:10:50,584 - search - INFO - ✅ V1.14.00 index loaded","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103074352Z"}
+{"message":"2025-10-15 18:10:50,584 - search - INFO - Loading V2.00.00 index (sdk-rag-system-v2)...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103079224Z"}
+{"message":"2025-10-15 18:10:50,838 - search - INFO - ✅ V2.00.00 index loaded","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103083907Z"}
+{"message":"2025-10-15 18:10:50,838 - search - INFO - Pinecone multi-version connection established successfully","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103089547Z"}
+{"message":"2025-10-15 18:10:50,838 - search - INFO - Default SDK version: V2.00.00","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103094481Z"}
+{"message":"2025-10-15 18:10:50,838 - search - INFO - Step 3: Loading GTE-ModernBERT embedding model...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103100266Z"}
+{"message":"2025-10-15 18:10:50,838 - search - INFO - Attempting to load SentenceTransformer('Alibaba-NLP/gte-modernbert-base')...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103105380Z"}
+{"message":"2025-10-15 18:10:50,838 - search - INFO - HuggingFace cache directory: /root/.cache/huggingface/hub","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103111062Z"}
+{"message":"2025-10-15 18:10:50,838 - search - INFO - HuggingFace cache directory does not exist","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103116567Z"}
+{"message":"2025-10-15 18:10:50,838 - search - INFO - Creating SentenceTransformer instance...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103122674Z"}
+{"message":"2025-10-15 18:10:50,838 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: Alibaba-NLP/gte-modernbert-base","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:51.103128831Z"}
+{"message":"2025-10-15 18:10:57,349 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:57.350968021Z"}
+{"message":"2025-10-15 18:10:57,351 - search - INFO - Model instance created in 6.51s, moving to CPU...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:57.354368235Z"}
+{"message":"2025-10-15 18:10:57,352 - search - INFO - GTE-ModernBERT model loaded successfully in 6.51s","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:57.354373377Z"}
+{"message":"2025-10-15 18:10:57,352 - search - INFO - Testing model with simple query...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:57.354378860Z"}
+{"message":"\rBatches:   0%|          | 0/1 [00:00<?, ?it/s]\rBatches: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]\rBatches: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062743655Z"}
+{"message":"2025-10-15 18:10:59,061 - search - INFO - Test embedding shape: (768,), type: <class 'numpy.ndarray'>","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062749116Z"}
+{"message":"2025-10-15 18:10:59,061 - search - INFO - Step 4: Setting up thread pool...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062753989Z"}
+{"message":"2025-10-15 18:10:59,061 - search - INFO - Step 5: Initializing performance tracking...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062758806Z"}
+{"message":"2025-10-15 18:10:59,061 - search - INFO - Step 6: RAG Search initialization completed successfully!","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062763493Z"}
+{"message":"2025-10-15 18:10:59,061 - search - INFO - ✅ RAG Search ready - Multi-version support: V1.14.00 + V2.00.00 (active: V2.00.00)","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062768748Z"}
+{"message":"2025-10-15 18:10:59,061 - search - INFO -    Model: GTE-ModernBERT, Indexes: sdk-rag-system (V1), sdk-rag-system-v2 (V2)","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062808445Z"}
+{"message":"2025-10-15 18:10:59,061 - search - INFO - === RAG Search Initialization Complete ===","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062814071Z"}
+{"message":"2025-10-15 18:10:59,061 - search - INFO - Post-initialization RAM usage: 62.5% (238GB used)","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062825778Z"}
+{"message":"2025-10-15 18:10:59,061 - __main__ - INFO - RAG search system initialized successfully!","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.062830941Z"}
+{"message":"2025-10-15 18:10:59,076 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.078566006Z"}
+{"message":"INFO:     Application startup complete.","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.078571699Z"}
+{"message":"INFO:     Uvicorn running on http://0.0.0.0:3000 (Press CTRL+C to quit)","attributes":{"level":"error"},"timestamp":"2025-10-15T18:10:59.078577851Z"}
+{"message":"INFO:     100.64.0.2:39363 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:10:59.739538019Z"}
+{"message":"INFO:     100.64.0.3:28562 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:34:10.586582936Z"}
+{"message":"INFO:     100.64.0.4:28314 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:34:10.586590187Z"}
+{"message":"INFO:     100.64.0.5:39306 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:34:30.587867658Z"}
+{"message":"INFO:     100.64.0.6:41974 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:34:50.584120720Z"}
+{"message":"INFO:     100.64.0.7:18376 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:34:50.584129581Z"}
+{"message":"INFO:     100.64.0.8:28532 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:34:50.584136418Z"}
+{"message":"INFO:     100.64.0.4:46428 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:35:40.588164164Z"}
+{"message":"INFO:     100.64.0.8:62406 - \"GET /health HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:35:46.490106177Z"}
+{"message":"INFO:     100.64.0.8:33936 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694355351Z"}
+{"message":"2025-10-15 18:41:04,038 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694365509Z"}
+{"message":"INFO:     100.64.0.8:33936 - \"POST /mcp HTTP/1.1\" 202 Accepted","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694373630Z"}
+{"message":"2025-10-15 18:41:04,078 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694379531Z"}
+{"message":"INFO:     100.64.0.8:33936 - \"GET /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694384818Z"}
+{"message":"INFO:     100.64.0.4:19964 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694390462Z"}
+{"message":"2025-10-15 18:41:04,405 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694395836Z"}
+{"message":"INFO:     100.64.0.4:19964 - \"POST /mcp HTTP/1.1\" 202 Accepted","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694400776Z"}
+{"message":"2025-10-15 18:41:04,446 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694407114Z"}
+{"message":"INFO:     100.64.0.4:19964 - \"GET /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694414570Z"}
+{"message":"INFO:     100.64.0.7:30486 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694420410Z"}
+{"message":"2025-10-15 18:41:04,519 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694425867Z"}
+{"message":"INFO:     100.64.0.7:30496 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694432486Z"}
+{"message":"2025-10-15 18:41:04,521 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694439542Z"}
+{"message":"INFO:     100.64.0.9:36070 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:41:06.694445418Z"}
+{"message":"2025-10-15 18:41:04,530 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694451087Z"}
+{"message":"2025-10-15 18:41:04,531 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694456277Z"}
+{"message":"2025-10-15 18:41:04,531 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694461281Z"}
+{"message":"2025-10-15 18:41:04,532 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-10-15T18:41:06.694479303Z"}
+{"message":"INFO:     100.64.0.5:18902 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:42:36.715219286Z"}
+{"message":"2025-10-15 18:42:29,946 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest","attributes":{"level":"error"},"timestamp":"2025-10-15T18:42:36.715231069Z"}
+{"message":"2025-10-15 18:42:30,364 - search - ERROR - Error getting index stats: 'NoneType' object is not callable","attributes":{"level":"error"},"timestamp":"2025-10-15T18:42:36.715239431Z"}
+{"message":"2025-10-15 18:42:30,367 - mcp.server.streamable_http - INFO - Terminating session: None","attributes":{"level":"error"},"timestamp":"2025-10-15T18:42:36.715247736Z"}
+{"message":"INFO:     100.64.0.3:29872 - \"POST /mcp HTTP/1.1\" 200 OK","attributes":{"level":"info"},"timestamp":"2025-10-15T18:42:45.671028103Z"}
+{"message":"2025-10-15 18:42:45,669 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest","attributes":{"level":"error"},"timestamp":"2025-10-15T18:42:45.671034576Z"}
+{"message":"2025-10-15 18:42:45,670 - __main__ - INFO - Search progress: {'status': 'analyzing_intent', 'progress': 0.1}","attributes":{"level":"error"},"timestamp":"2025-10-15T18:42:45.671040390Z"}
+{"message":"2025-10-15 18:42:45,741 - intent_mapper - INFO - Loading TinyLlama model: TinyLlama/TinyLlama-1.1B-Chat-v1.0","attributes":{"level":"error"},"timestamp":"2025-10-15T18:42:45.742131396Z"}
+{"message":"`torch_dtype` is deprecated! Use `dtype` instead!","attributes":{"level":"error"},"timestamp":"2025-10-15T18:42:47.221992146Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - Starting FastMCP server on 0.0.0.0:3000","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228284249Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - === MCP Tools Available ===","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228291691Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - Claude-compatible tools (14): search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, search_with_intent_analysis, set_sdk_version, get_current_sdk_version","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228296438Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - ChatGPT-compatible tools (2): search, fetch","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228300673Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - Total: 16 MCP tools registered","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228304236Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - Version management: Multi-SDK support (V1.14.00, V2.00.00)","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228308137Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - ChatGPT Deep Research: Compatible ✓","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228313055Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - Health check: /health","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228316887Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - SSE endpoint: /sse","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228320707Z"}
+{"message":"2025-10-15 18:43:05,664 - __main__ - INFO - MCP endpoint: /mcp","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228324748Z"}
+{"message":"2025-10-15 18:43:05,665 - __main__ - INFO - Keepalive interval: 2.0s","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228328609Z"}
+{"message":"2025-10-15 18:43:05,665 - __main__ - INFO - Connection timeout: 10.0s","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228332304Z"}
+{"message":"INFO:     Started server process [1]","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228335970Z"}
+{"message":"INFO:     Waiting for application startup.","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228339825Z"}
+{"message":"2025-10-15 18:43:05,690 - rate_limiter - INFO - [RATE_LIMIT_INIT] Attempting Redis connection...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228343409Z"}
+{"message":"2025-10-15 18:43:05,713 - rate_limiter - INFO - [RATE_LIMIT_INIT] ✅ Redis connected successfully","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228346930Z"}
+{"message":"2025-10-15 18:43:05,713 - rate_limiter - INFO - [RATE_LIMIT_INIT] Middleware active: 100 req/min per IP","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228398462Z"}
+{"message":"2025-10-15 18:43:05,713 - __main__ - INFO - Initializing RAG search system...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228402085Z"}
+{"message":"2025-10-15 18:43:05,713 - __main__ - INFO - PINECONE_API_KEY found, proceeding with RAG initialization...","attributes":{"level":"error"},"timestamp":"2025-10-15T18:43:07.228405742Z"}

@@ -295,45 +295,6 @@ def search_by_source_file(file_name: str, query: str = "", top_k: int = 5) -> st
         return f"Error searching in file '{file_name}': {str(e)}"
 
 @mcp.tool()
-async def search_with_intent_analysis(query: str, top_k: int = 10, explain_intent: bool = True) -> str:
-    """Advanced search with query expansion using TinyLlama to add related technical terms for better results. Perfect for natural language queries."""
-    if rag_search is None:
-        return json.dumps({"error": "RAG search system not initialized"})
-
-    try:
-        # Use full intent-based search with query expansion
-        results = await rag_search.search_with_intent(
-            query,
-            top_k=top_k,
-            use_intent_mapping=True
-        )
-
-        # Add explanation if requested
-        if explain_intent:
-            intent_analysis = results.get("intent_analysis", {})
-
-            explanation = {
-                "query_processing": "Query expanded with related technical terms for better search",
-                "original_query": query,
-                "expanded_query": intent_analysis.get("expanded_query", query),
-                "expansion_successful": intent_analysis.get("expansion_successful", False),
-                "terms_added": "Query enhanced with related technical terms" if intent_analysis.get("expansion_successful") else "No expansion performed",
-                "semantic_categories": intent_analysis.get("semantic_categories", [])
-            }
-            results["explanation"] = explanation
-
-        results["timestamp"] = datetime.now().isoformat()
-
-        return json.dumps(results, indent=2)
-
-    except Exception as e:
-        logger.exception("Query expansion search error")
-        return json.dumps({
-            "error": str(e),
-            "suggestion": "Try a simpler query or use the regular search_sdk tool"
-        })
-
-@mcp.tool()
 def set_sdk_version(version: str) -> str:
     """
     Set the SDK version for all subsequent searches in this session.
@@ -721,9 +682,10 @@ if __name__ == "__main__":
     
     logger.info(f"Starting FastMCP server on {host}:{port}")
     logger.info("=== MCP Tools Available ===")
-    logger.info("Claude-compatible tools (14): search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, search_with_intent_analysis, set_sdk_version, get_current_sdk_version")
+    logger.info("Claude-compatible tools (13): search_sdk, search_code_examples, search_documentation, search_api_functions, search_compatibility, get_sdk_stats, search_exact_api, search_error_codes, search_warning_codes, search_hybrid, search_by_source_file, set_sdk_version, get_current_sdk_version")
     logger.info("ChatGPT-compatible tools (2): search, fetch")
-    logger.info("Total: 16 MCP tools registered")
+    logger.info("Total: 15 MCP tools registered")
+    logger.info("⚠️  search_with_intent_analysis REMOVED - TinyLlama caused memory leaks (4-6GB RAM)")
     logger.info("Version management: Multi-SDK support (V1.14.00, V2.00.00)")
     logger.info("ChatGPT Deep Research: Compatible ✓")
     logger.info("Health check: /health")

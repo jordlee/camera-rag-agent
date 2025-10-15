@@ -85,35 +85,13 @@ class LLMIntentMapper:
 
     def _load_llm_model(self):
         """Load TinyLlama model for natural language understanding."""
-        if not HAS_TRANSFORMERS:
-            self.llm_model = None
-            self.llm_tokenizer = None
-            logger.warning("LLM model not available, using semantic fallback only")
-            return
-        
-        try:
-            model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
-            logger.info(f"Loading TinyLlama model: {model_name}")
-            
-            self.llm_tokenizer = AutoTokenizer.from_pretrained(model_name)
-            if self.llm_tokenizer.pad_token is None:
-                self.llm_tokenizer.pad_token = self.llm_tokenizer.eos_token
-            
-            self.llm_model = AutoModelForCausalLM.from_pretrained(
-                model_name,
-                torch_dtype=torch.float16 if self.use_gpu else torch.float32,
-                device_map="auto" if self.use_gpu else None,
-                low_cpu_mem_usage=True
-            )
-            
-            if not self.use_gpu:
-                self.llm_model = self.llm_model.to(self.device)
-            
-            logger.info("LLM model loaded successfully")
-        except Exception as e:
-            logger.error(f"Failed to load LLM model: {e}")
-            self.llm_model = None
-            self.llm_tokenizer = None
+        # DISABLED: TinyLlama (1.1B params, 4.4GB model + 1-2GB overhead = 4-6GB RAM)
+        # Causes OOM crashes on Railway. Semantic search with GTE-ModernBERT works better.
+        self.llm_model = None
+        self.llm_tokenizer = None
+        logger.info("TinyLlama loading DISABLED - prevents memory leak (4-6GB RAM required)")
+        logger.info("Using semantic search only (fast and accurate)")
+        return
     
     def _load_semantic_model(self):
         """Load sentence transformer for semantic similarity matching."""
