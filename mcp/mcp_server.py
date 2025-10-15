@@ -29,10 +29,11 @@ from rate_limiter import RateLimitMiddleware, get_rate_limit_stats
 # Load environment variables
 load_dotenv()
 
-# Configure logging
+# Configure logging (force stdout so Railway logs show correct level)
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    stream=sys.stdout  # Force stdout instead of stderr for proper Railway log levels
 )
 logger = logging.getLogger(__name__)
 
