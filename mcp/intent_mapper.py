@@ -59,7 +59,30 @@ class LLMIntentMapper:
         self._build_api_knowledge_base()
         
         logger.info(f"Intent mapper initialized (device: {self.device}, LLM: {HAS_TRANSFORMERS})")
-    
+
+    def __del__(self):
+        """Cleanup resources on deletion to prevent memory leaks."""
+        try:
+            logger.info("LLMIntentMapper cleanup: shutting down thread pool executor")
+            if hasattr(self, 'executor') and self.executor:
+                self.executor.shutdown(wait=False, cancel_futures=True)
+
+            # Explicitly delete large models to free memory
+            if hasattr(self, 'llm_model') and self.llm_model:
+                logger.info("LLMIntentMapper cleanup: releasing TinyLlama model")
+                del self.llm_model
+
+            if hasattr(self, 'llm_tokenizer'):
+                del self.llm_tokenizer
+
+            if hasattr(self, 'semantic_model'):
+                logger.info("LLMIntentMapper cleanup: releasing semantic model")
+                del self.semantic_model
+
+            logger.info("LLMIntentMapper cleanup complete")
+        except Exception as e:
+            logger.error(f"Error during LLMIntentMapper cleanup: {e}")
+
     def _load_llm_model(self):
         """Load TinyLlama model for natural language understanding."""
         if not HAS_TRANSFORMERS:

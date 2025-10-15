@@ -192,6 +192,22 @@ class RAGSearch:
         except Exception as e:
             logger.warning(f"Could not get final memory stats: {e}")
 
+    def __del__(self):
+        """Cleanup resources on deletion to prevent memory leaks."""
+        try:
+            logger.info("RAGSearch cleanup: shutting down thread pool executor")
+            if hasattr(self, 'executor') and self.executor:
+                self.executor.shutdown(wait=False, cancel_futures=True)
+
+            # Explicitly delete large model to free memory
+            if hasattr(self, 'embedding_model'):
+                logger.info("RAGSearch cleanup: releasing embedding model")
+                del self.embedding_model
+
+            logger.info("RAGSearch cleanup complete")
+        except Exception as e:
+            logger.error(f"Error during RAGSearch cleanup: {e}")
+
     @property
     def index(self):
         """Return the active Pinecone index based on current version."""

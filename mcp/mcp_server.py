@@ -588,6 +588,8 @@ async def lifespan(app: Starlette):
         try:
             yield
         finally:
+            logger.info("Shutting down server - cleaning up resources...")
+
             # Cancel keepalive task
             keepalive.cancel()
             try:
@@ -595,9 +597,37 @@ async def lifespan(app: Starlette):
             except asyncio.CancelledError:
                 pass
 
+            # Cleanup RAG search instance
+            if rag_search is not None:
+                try:
+                    logger.info("Cleaning up RAG search instance...")
+                    # Trigger __del__ explicitly
+                    del rag_search
+                except Exception as e:
+                    logger.error(f"Error cleaning up RAG search: {e}")
+
+            # Cleanup intent mapper singleton
+            try:
+                from intent_mapper import _intent_mapper
+                if _intent_mapper is not None:
+                    logger.info("Cleaning up intent mapper...")
+                    del _intent_mapper
+            except Exception as e:
+                logger.error(f"Error cleaning up intent mapper: {e}")
+
+            logger.info("Server shutdown cleanup complete")
+
 # Health check endpoint for Railway
 async def health_check(request):
     """Health check endpoint with detailed status."""
+    import psutil
+    import os
+
+    # Get memory usage
+    process = psutil.Process(os.getpid())
+    memory_info = process.memory_info()
+    memory_mb = memory_info.rss / (1024 * 1024)  # Convert to MB
+
     health_status = {
         "status": "healthy",
         "service": "fastmcp-server",
@@ -605,7 +635,12 @@ async def health_check(request):
         "mcp_path": "/mcp",
         "timestamp": datetime.now().isoformat(),
         "active_connections": len(active_connections),
-        "last_heartbeat": last_heartbeat.isoformat()
+        "last_heartbeat": last_heartbeat.isoformat(),
+        "memory": {
+            "rss_mb": round(memory_mb, 2),
+            "rss_gb": round(memory_mb / 1024, 2),
+            "warning": "high" if memory_mb > 1500 else "normal"  # Warn if >1.5GB
+        }
     }
 
     # Add performance metrics if available
