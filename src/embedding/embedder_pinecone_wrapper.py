@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-C# Embedder for Camera Remote SDK V2.00.00
+Camera Remote SDK V2.00.00 Embedder
 
 Thin wrapper around unified_embedder.py for backward compatibility.
-Processes chunks_csharp_v2.json and upserts to Pinecone (appends, does not clear).
+Processes chunks_v2.json and upserts to Pinecone index sdk-rag-system-crsdk-v2.
 """
 
 import argparse
 from unified_embedder import UnifiedEmbedder
 
-# Configuration (C#-specific)
-CHUNKS_FILE = "data/v2.00.00/csharp/chunks.json"
-INDEX_NAME = "sdk-rag-system-crsdk-v2"  # V2 index for Camera Remote SDK
+# Configuration (Camera Remote V2.00.00)
+CHUNKS_FILE = "data/v2.00.00/camera-remote/chunks.json"
+INDEX_NAME = "sdk-rag-system-crsdk-v2"
 SDK_TYPE = "camera-remote"
 SDK_VERSION = "V2.00.00"
 MODEL_NAME = "Alibaba-NLP/gte-modernbert-base"
@@ -19,12 +19,12 @@ BATCH_SIZE = 100
 
 # Test mode
 TEST_MODE = False
-TEST_LIMIT = 10
+TEST_LIMIT = 100
 
 
 def main():
-    """Run C# embedder using unified embedder."""
-    parser = argparse.ArgumentParser(description="C# Embedder for Camera Remote SDK V2.00.00")
+    """Run Camera Remote SDK embedder using unified embedder."""
+    parser = argparse.ArgumentParser(description="Camera Remote SDK V2.00.00 Embedder")
     parser.add_argument("--env", "--environment", type=str, default="production",
                         choices=["staging", "production"],
                         help="Target environment (staging or production). Default: production")
@@ -39,7 +39,7 @@ def main():
         model_name=MODEL_NAME,
         test_mode=TEST_MODE,
         test_limit=TEST_LIMIT,
-        clear_existing=False,  # Append mode for C#
+        clear_existing=False,  # Set to True if you want to wipe and re-upload
         environment=args.env
     )
 
