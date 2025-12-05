@@ -378,22 +378,24 @@ async def rate_limit_stats(request):
 
 
 # Get MCP ASGI app (this initializes the session manager)
+# MCP protocol is served at root - clients should connect to base URL
 mcp_app = mcp.streamable_http_app()
 
-# Create Starlette app with middleware
+# Create wrapper app to add custom routes and middleware
+from starlette.applications import Starlette
+from starlette.routing import Mount
+
 app = Starlette(
     routes=[
-        Route("/health", health_check),
-        Route("/rate-limit-stats", rate_limit_stats),
+        Route("/health", health_check, methods=["GET"]),
+        Route("/rate-limit-stats", rate_limit_stats, methods=["GET"]),
+        Mount("/", app=mcp_app),  # Mount MCP at root (handles all MCP protocol routes)
     ],
     lifespan=lifespan
 )
 
 # Add rate limiting middleware
 app.add_middleware(RateLimitMiddleware)
-
-# Mount MCP under /mcp
-app.mount("/mcp", mcp_app)
 
 # Entry point
 if __name__ == "__main__":
@@ -403,7 +405,7 @@ if __name__ == "__main__":
 
     logger.info(f"Starting Help Guide MCP Server on port {port}")
     logger.info("Endpoints:")
-    logger.info(f"  - MCP: http://0.0.0.0:{port}/mcp")
+    logger.info(f"  - MCP: http://0.0.0.0:{port}/ (root)")
     logger.info(f"  - Health: http://0.0.0.0:{port}/health")
     logger.info(f"  - Rate Limit Stats: http://0.0.0.0:{port}/rate-limit-stats")
 
