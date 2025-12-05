@@ -393,7 +393,7 @@ app = Starlette(
 app.add_middleware(RateLimitMiddleware)
 
 # Mount MCP under /mcp
-app.mount("/mcp", mcp.get_asgi())
+app.mount("/mcp", mcp.streamable_http_app)
 
 # Entry point
 if __name__ == "__main__":
