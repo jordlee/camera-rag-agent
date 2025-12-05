@@ -358,18 +358,6 @@ async def health_check(request):
         "last_heartbeat": last_heartbeat.isoformat()
     }
 
-    # Add help guide stats if initialized
-    if help_guide_search is not None:
-        try:
-            stats = help_guide_search.get_stats()
-            status["help_guide_stats"] = {
-                "total_cameras": stats.get("total_cameras", 0),
-                "total_chunks": stats.get("total_chunks", 0),
-                "embedding_model": stats.get("embedding_model", "unknown")
-            }
-        except Exception as e:
-            logger.error(f"Error getting help guide stats for health check: {e}")
-
     return JSONResponse(status)
 
 
