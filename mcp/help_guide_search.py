@@ -315,40 +315,42 @@ class HelpGuideSearch:
         Returns:
             List of dictionaries with product_id and chunk_count
         """
-        try:
-            # Query a sample to get unique cameras from metadata
-            # Use a generic query to get diverse results
-            sample_results = self.index.query(
-                vector=[0.0] * EMBEDDING_DIMENSION,
-                top_k=10000,  # Get large sample
-                include_metadata=True
-            )
+        # Static list of all cameras with help guide PDFs indexed
+        # Based on data/help-guides/ directory structure
+        all_cameras = [
+            "BRC-AM7", "DSC-RX0M2", "ILCE-1", "ILCE-1M2", "ILCE-6700",
+            "ILCE-7C", "ILCE-7CM2", "ILCE-7CR", "ILCE-7M4", "ILCE-7RM4",
+            "ILCE-7RM4A", "ILCE-7RM5", "ILCE-7SM3", "ILCE-9M2", "ILCE-9M3",
+            "ILME-FR7", "ILME-FX2", "ILME-FX3", "ILME-FX30", "ILME-FX3A",
+            "ILX-LR1", "PXW-Z200, HXR-NX800", "ZV-E1", "ZV-E10M2"
+        ]
 
-            # Count chunks per camera
-            camera_counts = defaultdict(int)
-            for match in sample_results.get('matches', []):
-                product_id = match['metadata'].get('product_id', 'unknown')
-                camera_counts[product_id] += 1
+        cameras = []
+        for camera_id in all_cameras:
+            try:
+                # Query each camera to get accurate chunk count
+                results = self.index.query(
+                    vector=[0.0] * EMBEDDING_DIMENSION,
+                    top_k=10000,  # Large enough to get all chunks for one camera
+                    include_metadata=True,
+                    filter={'product_id': camera_id}
+                )
 
-            # Format as list
-            cameras = [
-                {'product_id': product_id, 'chunk_count': count}
-                for product_id, count in sorted(camera_counts.items())
-            ]
+                chunk_count = len(results.get('matches', []))
+                cameras.append({
+                    'product_id': camera_id,
+                    'chunk_count': chunk_count
+                })
 
-            return cameras
+            except Exception as e:
+                logger.warning(f"Error querying camera {camera_id}: {e}")
+                # Include camera even if query fails, with 0 count
+                cameras.append({
+                    'product_id': camera_id,
+                    'chunk_count': 0
+                })
 
-        except Exception as e:
-            logger.error(f"List cameras error: {e}")
-            # Return known cameras as fallback
-            known_cameras = [
-                "BRC-AM7", "DSC-RX0M2", "ILCE-1", "ILCE-1M2", "ILCE-6700",
-                "ILCE-7C", "ILCE-7CM2", "ILCE-7CR", "ILCE-7M4", "ILCE-7RM4",
-                "ILCE-7RM4A", "ILCE-7RM5", "ILCE-7SM3", "ILCE-9M2", "ILCE-9M3",
-                "ILME-FR7", "ILME-FX2", "ILME-FX3", "ILME-FX30", "ILME-FX3A",
-                "ILX-LR1", "PXW-Z200, HXR-NX800", "ZV-E1", "ZV-E10M2"
-            ]
-            return [{'product_id': cam, 'chunk_count': 0} for cam in known_cameras]
+        return cameras
 
     def list_topics(self, camera_model: Optional[str] = None) -> List[str]:
         """
