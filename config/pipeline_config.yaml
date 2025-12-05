@@ -1,0 +1,139 @@
+# Pipeline Configuration for SDK RAG System
+# Defines parsers, chunkers, and embedders for each SDK variant
+
+# Camera Remote SDK V2.00.00 (C++)
+camera-remote:
+  V2.00.00:
+    parsers:
+      - name: html_parser
+        script: src/parsing/html_parser.py
+        description: Parse HTML API documentation
+
+      - name: pdf_parser
+        script: src/parsing/pdf_parser.py
+        description: Parse PDF user guides
+        args: ["--version", "V2.00.00"]
+
+      - name: cpp_parser
+        script: src/parsing/cpp_parser.py
+        description: Parse C++ headers via Doxygen
+        args: ["--version", "V2.00.00"]
+
+      - name: example_parser
+        script: src/parsing/example_parser.py
+        description: Parse Doxygen code examples
+        args: ["--version", "V2.00.00"]
+
+      - name: markdown_parser
+        script: src/parsing/markdown_parser.py
+        description: Parse markdown documentation
+        args: ["--version", "V2.00.00"]
+
+      - name: rst_parser
+        script: src/parsing/rst_parser.py
+        description: Parse restructured text files
+
+      - name: text_parser
+        script: src/parsing/text_parser.py
+        description: Parse text/CSV compatibility tables
+
+    chunker:
+      script: src/parsing/chunker.py
+      output: data/v2.00.00/camera-remote/chunks.json
+      description: Chunk Camera Remote SDK parsed data
+
+    embedder:
+      script: src/embedding/embedder_pinecone_wrapper.py
+      index: sdk-rag-system-crsdk-v2
+      chunks_file: data/v2.00.00/camera-remote/chunks.json
+      description: Embed Camera Remote SDK chunks
+
+# PTP SDK V2.00.00
+ptp:
+  V2.00.00:
+    parsers:
+      - name: pdf_parser
+        script: src/parsing/pdf_parser.py
+        description: Parse PTP PDF documentation
+        args: ["--version", "V2.00.00-PTP"]
+
+      - name: cpp_source_parser_ptp
+        script: src/parsing/cpp_source_parser_ptp.py
+        description: Parse PTP C++ source files
+
+      - name: shell_parser
+        script: src/parsing/shell_parser.py
+        description: Parse shell script examples
+
+    chunker:
+      script: src/parsing/ptp_chunker.py
+      output: data/v2.00.00/ptp/chunks.json
+      description: Chunk PTP SDK parsed data
+
+    embedder:
+      script: src/embedding/embedder_ptp.py
+      index: sdk-rag-system-v2-ptp
+      chunks_file: data/v2.00.00/ptp/chunks.json
+      description: Embed PTP SDK chunks
+
+# C# SDK V2.00.00
+csharp:
+  V2.00.00:
+    parsers:
+      - name: csharp_parser
+        script: src/parsing/csharp_parser.py
+        description: Parse C# source files
+
+    chunker:
+      script: src/parsing/chunker_csharp.py
+      output: data/v2.00.00/csharp/chunks.json
+      description: Chunk C# SDK parsed data
+
+    embedder:
+      script: src/embedding/embedder_csharp.py
+      index: sdk-rag-system-crsdk-v2  # Same index as Camera Remote V2
+      chunks_file: data/v2.00.00/csharp/chunks.json
+      description: Embed C# SDK chunks
+
+# Legacy (V1.14.00) - kept for reference but not actively maintained
+camera-remote-legacy:
+  V1.14.00:
+    parsers:
+      - name: pdf_parser
+        script: src/parsing/pdf_parser.py
+        description: Parse V1.14.00 PDF documentation
+        args: ["--version", "V1.14.00"]
+
+      - name: cpp_parser
+        script: src/parsing/cpp_parser.py
+        description: Parse V1.14.00 C++ headers
+        args: ["--version", "V1.14.00"]
+
+      - name: example_parser
+        script: src/parsing/example_parser.py
+        description: Parse V1.14.00 examples
+        args: ["--version", "V1.14.00"]
+
+      - name: markdown_parser
+        script: src/parsing/markdown_parser.py
+        description: Parse V1.14.00 markdown
+        args: ["--version", "V1.14.00"]
+
+    chunker:
+      script: src/parsing/chunker.py
+      output: data/v1.14.00/camera-remote/chunks.json
+      description: Chunk V1.14.00 parsed data
+
+    embedder:
+      script: src/embedding/unified_embedder.py
+      index: sdk-rag-system-crsdk-v1
+      chunks_file: data/v1.14.00/camera-remote/chunks.json
+      description: Embed V1.14.00 chunks
+      notes: "Legacy - embeddings exist but not actively updated"
+
+# Global settings
+settings:
+  embedding_model: "Alibaba-NLP/gte-modernbert-base"
+  batch_size: 100
+  chunk_size: 500
+  chunk_overlap: 100
