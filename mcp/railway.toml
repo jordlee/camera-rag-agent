@@ -1,14 +1,31 @@
 [build]
 builder = "nixpacks"
 buildCommand = "pip install --no-cache-dir -r requirements.txt"
-nixpacksPlan = { phases = { setup = { nixPkgs = ["python311", "gcc"] } } }
+
+[build.nixpacksPlan.phases.setup]
+nixPkgs = ["python311", "gcc", "g++"]
 
 [deploy]
-startCommand = "python3 mcp_server.py"
+startCommand = "python3 help_guide_mcp_server.py"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
 
-[env]
-HOST = "0.0.0.0"
-ENVIRONMENT = "production"
+[deploy.healthcheck]
+path = "/health"
+timeout = 300
+
+[[deploy.environmentVariables]]
+name = "HOST"
+value = "0.0.0.0"
+
+[[deploy.environmentVariables]]
+name = "ENVIRONMENT"
+value = "production"
+
+[[deploy.environmentVariables]]
+name = "PORT"
+value = "8001"
+
+# Note: PINECONE_API_KEY and other secrets must be set in Railway UI

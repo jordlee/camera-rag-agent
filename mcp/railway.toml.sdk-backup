@@ -1,0 +1,14 @@
+[build]
+builder = "nixpacks"
+buildCommand = "pip install --no-cache-dir -r requirements.txt"
+nixpacksPlan = { phases = { setup = { nixPkgs = ["python311", "gcc"] } } }
+
+[deploy]
+startCommand = "python3 mcp_server.py"
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+
+[env]
+HOST = "0.0.0.0"
+ENVIRONMENT = "production"
