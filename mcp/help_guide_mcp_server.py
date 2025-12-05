@@ -290,57 +290,60 @@ async def keepalive_task():
             logger.error(f"Keepalive error: {e}")
 
 
-# Combined lifespan to manage help guide search initialization
+# Combined lifespan to manage session manager and help guide search initialization
 @contextlib.asynccontextmanager
 async def lifespan(app: Starlette):
     global help_guide_search
-
-    # Initialize help guide search
-    try:
-        logger.info("Initializing Help Guide search system...")
-
-        # Check environment variables first
-        pinecone_key = os.getenv("PINECONE_API_KEY")
-        if not pinecone_key:
-            logger.error("PINECONE_API_KEY environment variable not set")
-            help_guide_search = None
-        else:
-            logger.info("PINECONE_API_KEY found, proceeding with Help Guide search initialization...")
-            help_guide_search = HelpGuideSearch()
-            logger.info("Help Guide search system initialized successfully!")
-
-    except ImportError as e:
-        logger.error(f"Missing dependency for help guide search: {e}")
-        help_guide_search = None
-    except Exception as e:
-        logger.exception(f"Failed to initialize help guide search: {e}")
-        logger.error(f"Error type: {type(e).__name__}")
-        logger.error(f"Error details: {str(e)}")
-        help_guide_search = None
-
-    # Start keepalive task
-    keepalive = asyncio.create_task(keepalive_task())
-
-    try:
-        yield
-    finally:
-        logger.info("Shutting down server - cleaning up resources...")
-
-        # Cancel keepalive task
-        keepalive.cancel()
+    async with contextlib.AsyncExitStack() as stack:
+        # Initialize help guide search
         try:
-            await keepalive
-        except asyncio.CancelledError:
-            pass
+            logger.info("Initializing Help Guide search system...")
 
-        # Cleanup help guide search instance
-        if help_guide_search is not None:
+            # Check environment variables first
+            pinecone_key = os.getenv("PINECONE_API_KEY")
+            if not pinecone_key:
+                logger.error("PINECONE_API_KEY environment variable not set")
+                help_guide_search = None
+            else:
+                logger.info("PINECONE_API_KEY found, proceeding with Help Guide search initialization...")
+                help_guide_search = HelpGuideSearch()
+                logger.info("Help Guide search system initialized successfully!")
+
+        except ImportError as e:
+            logger.error(f"Missing dependency for help guide search: {e}")
+            help_guide_search = None
+        except Exception as e:
+            logger.exception(f"Failed to initialize help guide search: {e}")
+            logger.error(f"Error type: {type(e).__name__}")
+            logger.error(f"Error details: {str(e)}")
+            help_guide_search = None
+
+        # Start keepalive task
+        keepalive = asyncio.create_task(keepalive_task())
+
+        # Start MCP session manager
+        await stack.enter_async_context(mcp.session_manager.run())
+
+        try:
+            yield
+        finally:
+            logger.info("Shutting down server - cleaning up resources...")
+
+            # Cancel keepalive task
+            keepalive.cancel()
             try:
-                logger.info("Cleaning up help guide search instance...")
-                del help_guide_search
-                logger.info("Help guide search cleanup complete")
-            except Exception as e:
-                logger.error(f"Error during help guide search cleanup: {e}")
+                await keepalive
+            except asyncio.CancelledError:
+                pass
+
+            # Cleanup help guide search instance
+            if help_guide_search is not None:
+                try:
+                    logger.info("Cleaning up help guide search instance...")
+                    del help_guide_search
+                    logger.info("Help guide search cleanup complete")
+                except Exception as e:
+                    logger.error(f"Error during help guide search cleanup: {e}")
 
 
 # Health check endpoint
@@ -377,25 +380,21 @@ async def rate_limit_stats(request):
     return JSONResponse(stats)
 
 
-# Get MCP ASGI app (this initializes the session manager)
-# MCP protocol is served at root - clients should connect to base URL
-mcp_app = mcp.streamable_http_app()
-
-# Create wrapper app to add custom routes and middleware
-from starlette.applications import Starlette
+# Create the Starlette app and mount the MCP server - following SDK server pattern
 from starlette.routing import Mount
+from starlette.middleware import Middleware
 
 app = Starlette(
     routes=[
-        Route("/health", health_check, methods=["GET"]),
-        Route("/rate-limit-stats", rate_limit_stats, methods=["GET"]),
-        Mount("/", app=mcp_app),  # Mount MCP at root (handles all MCP protocol routes)
+        Route("/health", health_check),
+        Route("/rate-limit-stats", rate_limit_stats),
+        Mount("/", mcp.streamable_http_app()),  # Mount MCP at root
     ],
-    lifespan=lifespan
+    middleware=[
+        Middleware(RateLimitMiddleware)
+    ],
+    lifespan=lifespan,
 )
-
-# Add rate limiting middleware
-app.add_middleware(RateLimitMiddleware)
 
 # Entry point
 if __name__ == "__main__":
