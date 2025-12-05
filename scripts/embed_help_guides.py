@@ -186,7 +186,10 @@ class HelpGuideEmbedder:
             for i, chunk in enumerate(batch):
                 chunk_id = chunk['id']
                 embedding = embeddings[i].tolist()
+
+                # Include content field along with metadata
                 metadata = self.prepare_metadata_for_pinecone(chunk['metadata'])
+                metadata['content'] = chunk['content']  # Add content field to metadata
 
                 vectors.append((chunk_id, embedding, metadata))
 
