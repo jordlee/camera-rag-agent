@@ -224,6 +224,13 @@ class HelpGuideSearch:
             logger.error(f"Search error: {e}")
             raise
 
+    # Mapping of individual camera models to their shared product_id in Pinecone.
+    # Some cameras share a single help guide and are stored under a combined product_id.
+    CAMERA_ALIAS_MAP = {
+        "PXW-Z200": "PXW-Z200, HXR-NX800",
+        "HXR-NX800": "PXW-Z200, HXR-NX800",
+    }
+
     def search_by_camera(self, camera_model: str, query: str, top_k: int = 10) -> Dict:
         """
         Search within a specific camera's help guide.
@@ -236,7 +243,10 @@ class HelpGuideSearch:
         Returns:
             Dictionary with camera-specific search results
         """
-        metadata_filter = {"product_id": camera_model}
+        # Resolve aliases for cameras that share a help guide
+        resolved_id = self.CAMERA_ALIAS_MAP.get(camera_model.upper(),
+                       self.CAMERA_ALIAS_MAP.get(camera_model, camera_model))
+        metadata_filter = {"product_id": resolved_id}
         results = self.search(query, top_k=top_k, metadata_filter=metadata_filter)
         results['camera_model'] = camera_model
         return results
@@ -265,10 +275,12 @@ class HelpGuideSearch:
 
         # Add camera filter if specified
         if camera_model:
+            resolved_id = self.CAMERA_ALIAS_MAP.get(camera_model.upper(),
+                           self.CAMERA_ALIAS_MAP.get(camera_model, camera_model))
             filter_dict = {
                 "$and": [
                     filter_dict,
-                    {"product_id": camera_model}
+                    {"product_id": resolved_id}
                 ]
             }
 
