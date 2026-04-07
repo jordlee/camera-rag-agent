@@ -50,6 +50,35 @@ def get_real_client_ip(request: Request) -> str:
 
     return "unknown"
 
+def get_rate_limit_key(request: Request) -> tuple[str, str]:
+    """
+    Build a rate-limit key that distinguishes MCP clients sharing one egress IP.
+
+    Many users on the same corporate / VPN network appear with the same public
+    IP, so keying rate limits on IP alone causes false 429s when multiple
+    coworkers use the assistant at once. The MCP Streamable HTTP transport
+    assigns each client an `Mcp-Session-Id` header after the initialize
+    handshake — combining that with the IP gives each client its own counter.
+
+    Falls back to IP-only when there is no session id (the initialize call
+    itself), which is fine because that request happens at most once per
+    client per session and is nowhere near any rate limit.
+
+    Note: a malicious client could rotate Mcp-Session-Id per request to evade
+    the per-session counter. Acceptable for the internal beta threat model
+    ("honest users sharing a NAT"); revisit if exposed to untrusted clients.
+
+    Returns:
+        (rate_key, client_ip) — rate_key is for Redis, client_ip is for logs.
+    """
+    ip = get_real_client_ip(request)
+    session_id = (
+        request.headers.get("Mcp-Session-Id")
+        or request.headers.get("mcp-session-id")
+    )
+    rate_key = f"{ip}:{session_id}" if session_id else ip
+    return rate_key, ip
+
 def init_redis_connection() -> Optional[redis.Redis]:
     """
     Initialize Redis connection for distributed rate limiting.
@@ -123,12 +152,14 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         if not self.redis or not RATE_LIMIT_ENABLED:
             return await call_next(request)
 
-        # Extract client IP
-        client_ip = get_real_client_ip(request)
+        # Extract client IP and per-session rate-limit key.
+        # rate_key disambiguates MCP clients behind a shared corporate IP;
+        # client_ip is kept separately for logging and the 429 response body.
+        rate_key, client_ip = get_rate_limit_key(request)
 
         # Check rate limit
         try:
-            is_allowed, retry_after = self._check_rate_limit(client_ip)
+            is_allowed, retry_after = self._check_rate_limit(rate_key)
 
             if not is_allowed:
                 # Rate limit exceeded
@@ -157,7 +188,7 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
             response = await call_next(request)
 
             # Add rate limit headers to successful responses
-            remaining = self._get_remaining_requests(client_ip)
+            remaining = self._get_remaining_requests(rate_key)
             response.headers["X-RateLimit-Limit"] = str(RATE_LIMIT_PER_MINUTE)
             response.headers["X-RateLimit-Remaining"] = str(remaining)
 
@@ -168,9 +199,9 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
             # On error, allow request (fail open)
             return await call_next(request)
 
-    def _check_rate_limit(self, client_ip: str) -> tuple[bool, int]:
+    def _check_rate_limit(self, rate_key: str) -> tuple[bool, int]:
         """
-        Check if client IP is within rate limit using Redis.
+        Check if a rate-limit key is within its budget using Redis.
         Uses atomic INCR + conditional EXPIRE to avoid TOCTOU race conditions
         where a key loses its TTL and accumulates forever.
 
@@ -179,16 +210,16 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         """
         try:
             # Check per-second limit (burst protection)
-            second_key = f"rate_limit:{client_ip}:second"
+            second_key = f"rate_limit:{rate_key}:second"
             second_count = self.redis.incr(second_key)
             if second_count == 1:
                 self.redis.expire(second_key, 1)
             if second_count > RATE_LIMIT_PER_SECOND:
-                logger.warning(f"[RATE_LIMIT] IP {client_ip} exceeded {RATE_LIMIT_PER_SECOND}/sec (burst protection)")
+                logger.warning(f"[RATE_LIMIT] {rate_key} exceeded {RATE_LIMIT_PER_SECOND}/sec (burst protection)")
                 return (False, 1)
 
             # Check per-minute limit
-            key = f"rate_limit:{client_ip}"
+            key = f"rate_limit:{rate_key}"
             current_count = self.redis.incr(key)
             if current_count == 1:
                 self.redis.expire(key, RATE_LIMIT_WINDOW)
@@ -205,10 +236,10 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
             # On Redis error, allow request (fail open)
             return (True, 0)
 
-    def _get_remaining_requests(self, client_ip: str) -> int:
-        """Get remaining requests in current window for client IP."""
+    def _get_remaining_requests(self, rate_key: str) -> int:
+        """Get remaining requests in current window for a rate-limit key."""
         try:
-            key = f"rate_limit:{client_ip}"
+            key = f"rate_limit:{rate_key}"
             current_count = self.redis.get(key)
 
             if current_count is None:
